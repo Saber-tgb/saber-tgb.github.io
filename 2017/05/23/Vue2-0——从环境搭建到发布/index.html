@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue,webpack,vue-cli," />
 
 
 
@@ -92,12 +92,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="汤国斌的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="Vue开发环境的配置 安装Nodejsnpm install nodejs 安装webpacknpm install webpack 安装vue脚手架npm install vue-cli -g用vue-cli创建模板   vue-cli的模板分为两套 精简版：vue init webpack-simple 工程名字 常规版：vue init webpack 工程名字   初始化设置根据需求来设定">
+<meta name="keywords" content="vue,webpack,vue-cli">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue2.0——从环境搭建到发布">
+<meta property="og:url" content="http://yoursite.com/2017/05/23/Vue2-0——从环境搭建到发布/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
+<meta property="og:description" content="Vue开发环境的配置 安装Nodejsnpm install nodejs 安装webpacknpm install webpack 安装vue脚手架npm install vue-cli -g用vue-cli创建模板   vue-cli的模板分为两套 精简版：vue init webpack-simple 工程名字 常规版：vue init webpack 工程名字   初始化设置根据需求来设定">
+<meta property="og:updated_time" content="2017-05-23T12:35:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="汤国斌的博客">
+<meta name="twitter:title" content="Vue2.0——从环境搭建到发布">
+<meta name="twitter:description" content="Vue开发环境的配置 安装Nodejsnpm install nodejs 安装webpacknpm install webpack 安装vue脚手架npm install vue-cli -g用vue-cli创建模板   vue-cli的模板分为两套 精简版：vue init webpack-simple 工程名字 常规版：vue init webpack 工程名字   初始化设置根据需求来设定">
 
 
 
@@ -125,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/23/Vue2-0——从环境搭建到发布/"/>
 
 
 
 
 
-  <title>归档 | 汤国斌的博客</title>
+  <title>Vue2.0——从环境搭建到发布 | 汤国斌的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -274,103 +279,230 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 2 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/23/Vue2-0——从环境搭建到发布/" itemprop="url">
-              
-                <span itemprop="name">Vue2.0——从环境搭建到发布</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-23T19:54:15+08:00"
-              content="2017-05-23" >
-          05-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/23/hexo搭建博客/" itemprop="url">
-              
-                <span itemprop="name">hexo搭建博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-23T14:09:22+08:00"
-              content="2017-05-23" >
-          05-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/23/Vue2-0——从环境搭建到发布/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ojvil4eq9.bkt.clouddn.com/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Vue2.0——从环境搭建到发布</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-23T19:54:15+08:00">
+                2017-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/23/Vue2-0——从环境搭建到发布/" class="leancloud_visitors" data-flag-title="Vue2.0——从环境搭建到发布">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Vue开发环境的配置"><a href="#Vue开发环境的配置" class="headerlink" title="Vue开发环境的配置"></a>Vue开发环境的配置</h1><ol>
+<li>安装Nodejs<code>npm install nodejs</code></li>
+<li>安装webpack<code>npm install webpack</code></li>
+<li>安装vue脚手架<code>npm install vue-cli -g</code><h1 id="用vue-cli创建模板"><a href="#用vue-cli创建模板" class="headerlink" title="用vue-cli创建模板"></a>用vue-cli创建模板</h1></li>
+</ol>
+<ul>
+<li>vue-cli的模板分为两套<ul>
+<li>精简版：vue init webpack-simple 工程名字</li>
+<li>常规版：vue init webpack 工程名字</li>
+</ul>
+</li>
+<li>初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)<h1 id="安装项目依赖"><a href="#安装项目依赖" class="headerlink" title="安装项目依赖"></a>安装项目依赖</h1></li>
+<li>npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像<code>npm install -g cnpm</code><h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1></li>
+<li>cd进入项目中<code>npm run dev</code><h1 id="Vue项目组件的使用"><a href="#Vue项目组件的使用" class="headerlink" title="Vue项目组件的使用"></a>Vue项目组件的使用</h1></li>
+<li>组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用</li>
+<li>组件的使用<ol>
+<li>引入：<code>import firstcomponent from &#39;./component/firstcomponent.vue</code></li>
+<li>注册：data 代码块后面加上 components: { firstcomponent }</li>
+<li>使用：在<template></template>内加上<firstcomponent></firstcomponent><a id="more"></a>
+<h1 id="Vue路由"><a href="#Vue路由" class="headerlink" title="Vue路由"></a>Vue路由</h1></li>
+</ol>
+</li>
+<li>安装vue-router<code>npm install vue-router --save</code></li>
+<li>在man.js中导入路由模块<code>import VueRouter from &#39;vue-router&#39;</code></li>
+<li>使用：<code>Vue.use(VueRouter)</code></li>
+<li>挂载：<code>new Vue({
+el: &#39;#app&#39;,
+router,
+template: &#39;&lt;App/&gt;&#39;,
+components: { App }
+})</code></li>
+<li>配置项目路由<ol>
+<li>在router文件夹的index.js文件中配置</li>
+<li>导入路由模块<code>import Router from &#39;vue-router&#39;</code></li>
+<li>引入页面模块:<code>import login from &#39;@/page/login.vue&#39;</code></li>
+<li>路由的配置：export default new Router({<br> routes: [<pre><code>{path: &apos;/login&apos;,name:&apos;登录&apos;,component:login}
+</code></pre> ]<br>})</li>
+<li>路由的使用：在视图<template></template>标签中<router-link to="/advert"></router-link><h1 id="webpack的配置"><a href="#webpack的配置" class="headerlink" title="webpack的配置"></a>webpack的配置</h1></li>
+</ol>
+</li>
+<li>在config文件夹下的index.js中改变文件打包后指定到的文件夹<br>  <code>index: path.resolve(__dirname, &#39;../../webapp/index.html&#39;),
+  assetsRoot: path.resolve(__dirname, &#39;../../webapp&#39;),
+  assetsSubDirectory: &#39;static&#39;,
+  assetsPublicPath: &#39;/&#39;,</code><br>-dev: {<br>  port:8888<br>}改变文件的端口号<br>#文件打包</li>
+<li>npm run build</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+            <a href="/tags/vue-cli/" rel="tag"># vue-cli</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/23/hexo搭建博客/" rel="next" title="hexo搭建博客">
+                <i class="fa fa-chevron-left"></i> hexo搭建博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -378,6 +510,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -397,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ojvil4eq9.bkt.clouddn.com/Octocat.jpg"
@@ -505,6 +650,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue开发环境的配置"><span class="nav-number">1.</span> <span class="nav-text">Vue开发环境的配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用vue-cli创建模板"><span class="nav-number">2.</span> <span class="nav-text">用vue-cli创建模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装项目依赖"><span class="nav-number">3.</span> <span class="nav-text">安装项目依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目启动"><span class="nav-number">4.</span> <span class="nav-text">项目启动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue项目组件的使用"><span class="nav-number">5.</span> <span class="nav-text">Vue项目组件的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue路由"><span class="nav-number">6.</span> <span class="nav-text">Vue路由</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack的配置"><span class="nav-number">7.</span> <span class="nav-text">webpack的配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -630,11 +791,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   

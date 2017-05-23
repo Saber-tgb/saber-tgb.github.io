@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-23T08:27:58.510Z</updated>
+  <updated>2017-05-23T12:35:18.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,101 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue2.0——从环境搭建到发布</title>
+    <link href="http://yoursite.com/2017/05/23/Vue2-0%E2%80%94%E2%80%94%E4%BB%8E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%88%B0%E5%8F%91%E5%B8%83/"/>
+    <id>http://yoursite.com/2017/05/23/Vue2-0——从环境搭建到发布/</id>
+    <published>2017-05-23T11:54:15.000Z</published>
+    <updated>2017-05-23T12:35:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Vue开发环境的配置"><a href="#Vue开发环境的配置" class="headerlink" title="Vue开发环境的配置"></a>Vue开发环境的配置</h1><ol>
+<li>安装Nodejs<code>npm install nodejs</code></li>
+<li>安装webpack<code>npm install webpack</code></li>
+<li>安装vue脚手架<code>npm install vue-cli -g</code><h1 id="用vue-cli创建模板"><a href="#用vue-cli创建模板" class="headerlink" title="用vue-cli创建模板"></a>用vue-cli创建模板</h1></li>
+</ol>
+<ul>
+<li>vue-cli的模板分为两套<ul>
+<li>精简版：vue init webpack-simple 工程名字</li>
+<li>常规版：vue init webpack 工程名字</li>
+</ul>
+</li>
+<li>初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)<h1 id="安装项目依赖"><a href="#安装项目依赖" class="headerlink" title="安装项目依赖"></a>安装项目依赖</h1></li>
+<li>npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像<code>npm install -g cnpm</code><h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1></li>
+<li>cd进入项目中<code>npm run dev</code><h1 id="Vue项目组件的使用"><a href="#Vue项目组件的使用" class="headerlink" title="Vue项目组件的使用"></a>Vue项目组件的使用</h1></li>
+<li>组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用</li>
+<li>组件的使用<ol>
+<li>引入：<code>import firstcomponent from &#39;./component/firstcomponent.vue</code></li>
+<li>注册：data 代码块后面加上 components: { firstcomponent }</li>
+<li>使用：在<template></template>内加上<firstcomponent></firstcomponent><a id="more"></a>
+<h1 id="Vue路由"><a href="#Vue路由" class="headerlink" title="Vue路由"></a>Vue路由</h1></li>
+</ol>
+</li>
+<li>安装vue-router<code>npm install vue-router --save</code></li>
+<li>在man.js中导入路由模块<code>import VueRouter from &#39;vue-router&#39;</code></li>
+<li>使用：<code>Vue.use(VueRouter)</code></li>
+<li>挂载：<code>new Vue({
+el: &#39;#app&#39;,
+router,
+template: &#39;&lt;App/&gt;&#39;,
+components: { App }
+})</code></li>
+<li>配置项目路由<ol>
+<li>在router文件夹的index.js文件中配置</li>
+<li>导入路由模块<code>import Router from &#39;vue-router&#39;</code></li>
+<li>引入页面模块:<code>import login from &#39;@/page/login.vue&#39;</code></li>
+<li>路由的配置：export default new Router({<br> routes: [<pre><code>{path: &apos;/login&apos;,name:&apos;登录&apos;,component:login}
+</code></pre> ]<br>})</li>
+<li>路由的使用：在视图<template></template>标签中<router-link to="/advert"></router-link><h1 id="webpack的配置"><a href="#webpack的配置" class="headerlink" title="webpack的配置"></a>webpack的配置</h1></li>
+</ol>
+</li>
+<li>在config文件夹下的index.js中改变文件打包后指定到的文件夹<br>  <code>index: path.resolve(__dirname, &#39;../../webapp/index.html&#39;),
+  assetsRoot: path.resolve(__dirname, &#39;../../webapp&#39;),
+  assetsSubDirectory: &#39;static&#39;,
+  assetsPublicPath: &#39;/&#39;,</code><br>-dev: {<br>  port:8888<br>}改变文件的端口号<br>#文件打包</li>
+<li>npm run build</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Vue开发环境的配置&quot;&gt;&lt;a href=&quot;#Vue开发环境的配置&quot; class=&quot;headerlink&quot; title=&quot;Vue开发环境的配置&quot;&gt;&lt;/a&gt;Vue开发环境的配置&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;安装Nodejs&lt;code&gt;npm install nodejs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装webpack&lt;code&gt;npm install webpack&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装vue脚手架&lt;code&gt;npm install vue-cli -g&lt;/code&gt;&lt;h1 id=&quot;用vue-cli创建模板&quot;&gt;&lt;a href=&quot;#用vue-cli创建模板&quot; class=&quot;headerlink&quot; title=&quot;用vue-cli创建模板&quot;&gt;&lt;/a&gt;用vue-cli创建模板&lt;/h1&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;vue-cli的模板分为两套&lt;ul&gt;
+&lt;li&gt;精简版：vue init webpack-simple 工程名字&lt;/li&gt;
+&lt;li&gt;常规版：vue init webpack 工程名字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)&lt;h1 id=&quot;安装项目依赖&quot;&gt;&lt;a href=&quot;#安装项目依赖&quot; class=&quot;headerlink&quot; title=&quot;安装项目依赖&quot;&gt;&lt;/a&gt;安装项目依赖&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像&lt;code&gt;npm install -g cnpm&lt;/code&gt;&lt;h1 id=&quot;项目启动&quot;&gt;&lt;a href=&quot;#项目启动&quot; class=&quot;headerlink&quot; title=&quot;项目启动&quot;&gt;&lt;/a&gt;项目启动&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;cd进入项目中&lt;code&gt;npm run dev&lt;/code&gt;&lt;h1 id=&quot;Vue项目组件的使用&quot;&gt;&lt;a href=&quot;#Vue项目组件的使用&quot; class=&quot;headerlink&quot; title=&quot;Vue项目组件的使用&quot;&gt;&lt;/a&gt;Vue项目组件的使用&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用&lt;/li&gt;
+&lt;li&gt;组件的使用&lt;ol&gt;
+&lt;li&gt;引入：&lt;code&gt;import firstcomponent from &amp;#39;./component/firstcomponent.vue&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;注册：data 代码块后面加上 components: { firstcomponent }&lt;/li&gt;
+&lt;li&gt;使用：在&lt;template&gt;&lt;/template&gt;内加上&lt;firstcomponent&gt;&lt;/firstcomponent&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+    
+      <category term="vue-cli" scheme="http://yoursite.com/tags/vue-cli/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo搭建博客</title>
     <link href="http://yoursite.com/2017/05/23/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/05/23/hexo搭建博客/</id>
     <published>2017-05-23T06:09:22.000Z</published>
-    <updated>2017-05-23T08:27:58.510Z</updated>
+    <updated>2017-05-23T11:56:02.384Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
 <li>第一步、执行npm install hexo-cli -g 安装hexo</li>
@@ -57,7 +147,7 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
