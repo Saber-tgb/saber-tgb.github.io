@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-06T03:58:05.656Z</updated>
+  <updated>2017-06-16T02:58:41.054Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,423 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm,browser-sync,gulp工具的学习</title>
+    <link href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/</id>
+    <published>2017-06-16T02:56:02.000Z</published>
+    <updated>2017-06-16T02:58:41.054Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
+<li>官网[<a href="https://www.npmjs.com" target="_blank" rel="external">https://www.npmjs.com</a>]</li>
+<li>node package manager</li>
+<li>命令:<ul>
+<li>初始化:<code>npm init</code></li>
+<li>安装指定包:<code>npm install jquery --save</code></li>
+<li>删除指定包:<code>npm remove jquery --save</code></li>
+<li>卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery</li>
+<li>下载安装package.json中dependencies属性对的文件:<code>npm install --production</code></li>
+</ul>
+</li>
+<li>npm的使用步骤<ul>
+<li>第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）</li>
+<li>第二步、执行npm init -y</li>
+<li>第三步、安装需要的js库 npm install –save jquery</li>
+</ul>
+</li>
+</ul>
+<h3 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h3><ul>
+<li>更改代码之后自动刷新浏览器</li>
+<li>需要使用npm进行全局安装:<code>npm install browser-sync -g</code>,-g表示安装到全局</li>
+<li>使用:<code>browser-sync start --server --files &quot;./index.html,app.css,./css/*.css,*.*&quot;</code></li>
+<li>–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。</li>
+</ul>
+<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>  <a href="http://www.gulpjs.com" target="_blank" rel="external">官网</a><br>  <a href="http://www.gulpjs.com.cn" target="_blank" rel="external">中文网</a></p>
+<ul>
+<li><p>前端自动化构建工具<br>js压缩,var x,xname，混淆<br>合并.<br>css压缩<br>html压压缩</p>
+</li>
+<li><p>grunt ,webpack…</p>
+</li>
+</ul>
+<h3 id="核心就5个方法"><a href="#核心就5个方法" class="headerlink" title="核心就5个方法"></a>核心就5个方法</h3><ul>
+<li>task,gulp中是一个个任务的形式来实现功能。<ul>
+<li>task(‘任务名’,function(){<br>…..<br>});</li>
+</ul>
+</li>
+<li>src<ul>
+<li>src(‘./*.js’)</li>
+</ul>
+</li>
+<li>dest(‘./minjs/‘)// 指定处理后的文件的输出路径.</li>
+<li>watch(‘./*.js’,[‘任务名1’,’任务名2’]);</li>
+<li>run(‘任务名’);//执行指定的任务.</li>
+</ul>
+<h3 id="gulp的安装"><a href="#gulp的安装" class="headerlink" title="gulp的安装"></a>gulp的安装</h3><ul>
+<li>使用npm 进行安装</li>
+<li><code>npm install gulp-cli -g</code>;</li>
+</ul>
+<h3 id="gulp-使用"><a href="#gulp-使用" class="headerlink" title="gulp 使用"></a>gulp 使用</h3><h4 id="使用时还需要在项目中通过npm非全局安装gulp"><a href="#使用时还需要在项目中通过npm非全局安装gulp" class="headerlink" title="使用时还需要在项目中通过npm非全局安装gulp"></a>使用时还需要在项目中通过npm非全局安装gulp</h4><ul>
+<li><code>npm install gulp --save-dev</code><ul>
+<li>-dev安装在本地</li>
+<li>之所以在全局安装了一次还有在项目中安装，是为了保证gulp的版本的控制，每次使用的时候重新安装能控制gulp的版本</li>
+</ul>
+</li>
+</ul>
+<h4 id="还需要在当前项目根目录添加一个gulpfile-js文件来写具体的任务代码"><a href="#还需要在当前项目根目录添加一个gulpfile-js文件来写具体的任务代码" class="headerlink" title="还需要在当前项目根目录添加一个gulpfile.js文件来写具体的任务代码."></a>还需要在当前项目根目录添加一个gulpfile.js文件来写具体的任务代码.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line">// 得到gulp对象</div><div class="line">var gulp = require(&quot;gulp&quot;);</div><div class="line">//引入gulp-uglify插件 用来压缩js</div><div class="line">var uglify = require(&apos;gulp-uglify&apos;);</div><div class="line">//引入gulp-concat插件 用来合并代码 js,css都能合并</div><div class="line">var concat = require(&apos;gulp-concat&apos;);</div><div class="line">//引入gulp-cssnano插件 用来对css进行压缩</div><div class="line">var cssnano = require(&apos;gulp-cssnano&apos;);</div><div class="line">//引入gulp-htmlmin插件 用来对html代码进行压缩</div><div class="line">var htmlmin = require(&apos;gulp-htmlmin&apos;);</div><div class="line">//引入gulp-imagemin插件 对图片进行压缩</div><div class="line">var imagemin = require(&apos;gulp-imagemin&apos;);</div><div class="line">//引入gulp-spriter插件 合并成精灵图</div><div class="line">var spriter = require(&apos;gulp-spriter&apos;);</div><div class="line">&lt;!-- more --&gt;</div><div class="line">//创建js压缩任务</div><div class="line">gulp.task(&apos;script&apos;,function()&#123;</div><div class="line">  // 这里写任务具体需要做的事情.</div><div class="line">  // 2.匹配到app.js文件,如果使用多个规则，需要以数组的形式来书写第一个参数，数组中的每一个元素都是一个规则。</div><div class="line">  gulp.src([&apos;./app.js&apos;,&apos;./signIn.js&apos;])</div><div class="line">  //合并后生成的文件名</div><div class="line">  .pipe(concat(&apos;all.js&apos;))</div><div class="line">  //调用方法 压缩js</div><div class="line">  .pipe(uglify())</div><div class="line">  //将合格的js文件 输出到指定目录</div><div class="line">  .pipe(gulp.dest(&apos;./dist&apos;))</div><div class="line">&#125;);</div><div class="line">//创建css压缩任务</div><div class="line">gulp.task(&apos;style&apos;,function()&#123;</div><div class="line">   // 匹配css文件</div><div class="line">   gulp.src([&apos;./style.css&apos;,&apos;./signIn.css&apos;])</div><div class="line">   .pipe(concat(&apos;all.css&apos;)) // 需要指定一个名字，作为压缩后文件的文件名</div><div class="line">   .pipe(cssnano())</div><div class="line">   .pipe(gulp.dest(&apos;./dist&apos;))</div><div class="line">&#125;);</div><div class="line">//创建html压缩任务</div><div class="line">gulp.task(&apos;htmlmin&apos;,function()&#123;</div><div class="line">    gulp.src(&apos;./index.html&apos;)</div><div class="line">        .pipe(htmlmin(&#123;</div><div class="line">            //collapseWhitespace:清除空格</div><div class="line">            collapseWhitespace:true,</div><div class="line">            //collapseBooleanAttributes:省略布尔属性的值，</div><div class="line">            collapseBooleanAttributes:true,</div><div class="line">            //removeComments:清除html中注释的部分</div><div class="line">            removeComments:true,</div><div class="line">            //removeEmptyAttributes:清除所有的空属性</div><div class="line">            removeEmptyAttributes:true,</div><div class="line">            //removeSciptTypeAttributes:清除所有script标签中的type=&quot;text/javascript&quot;属性。</div><div class="line">            removeScriptTypeAttributes:true,</div><div class="line">            //removeStyleLinkTypeAttributes:清楚所有Link标签上的type属性</div><div class="line">            removeStyleLinkTypeAttributes:true,</div><div class="line">            //minifyJS:压缩html中的javascript代码。</div><div class="line">            minifyJS:true,</div><div class="line">            //minifyCSS:压缩html中的css代码</div><div class="line">            minifyCSS:true</div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(&apos;./dist&apos;));</div><div class="line">&#125;);</div><div class="line">//创建合并压缩方法</div><div class="line">gulp.task(&apos;concat&apos;,function()&#123;</div><div class="line">    // 匹配文件</div><div class="line">    gulp.src([&apos;./1.js&apos;,&apos;./2.js&apos;])</div><div class="line">        //调用合并方法 生成新的文件名</div><div class="line">        .pipe(concat(&apos;index.js&apos;))</div><div class="line">        //调用压缩方法</div><div class="line">        .pipe(uglify())</div><div class="line">        //输出到指定目录</div><div class="line">        .pipe(gulp.dest(&apos;./build&apos;));</div><div class="line">&#125;)</div><div class="line">//创建图片压缩方法</div><div class="line">gulp.task(&apos;imagemin&apos;,function()&#123;</div><div class="line">  //引入图片地址方法</div><div class="line">  gulp.src(&apos;./images/*&apos;)</div><div class="line">      //调用图片压缩</div><div class="line">      .pipe(imagemin())</div><div class="line">      //输出压缩后图片的存放地址</div><div class="line">      .pipe(gulp.dest(&apos;dist/images&apos;));</div><div class="line">&#125;);</div><div class="line">//创建合并精灵图任务</div><div class="line">gulp.task(&apos;spriter&apos;,function()&#123;</div><div class="line">  return gulp.src(&apos;./style.css&apos;)//原始的css文件地址</div><div class="line">             //调用spriter精灵图合并方法</div><div class="line">             .pipe(spriter(&#123;</div><div class="line">               sprite:&apos;test.png&apos;,//合并后图片的名字</div><div class="line">               slice:&apos;./slice&apos;,//原始小图片路径</div><div class="line">               outpath:&apos;build/tests&apos;//合并后的大图的地址</div><div class="line">             &#125;))</div><div class="line">             //合并精灵图后的css的文件地址</div><div class="line">             .pipe(gulp.dest(&apos;./build/css&apos;));</div><div class="line">&#125;)</div><div class="line">//创建监视任务</div><div class="line">gulp.task(&quot;watch&quot;,function()&#123;</div><div class="line">      //调用watch方法</div><div class="line">      //第一个参数是监视目标文件,第二个参数是执行的任务</div><div class="line">      gulp.watch([&apos;./app.js&apos;,&apos;./signIn.js&apos;],[&quot;script&quot;]);</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>调用方法直接在控制台输入<code>gulp 任务名</code></li>
+</ul>
+<h3 id="gulp监视文件的改变"><a href="#gulp监视文件的改变" class="headerlink" title="gulp监视文件的改变"></a>gulp监视文件的改变</h3><ul>
+<li>监视文件,当文件发生改变时,watch方法就会执行目标文件所绑定的事件</li>
+<li>使用：在cmd命令窗口直接调用gulp myWatch方法</li>
+<li>第一个参数是监视目标文件,第二个参数是执行的任务<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gulp.task(&quot;myWatch&quot;,function()&#123;</div><div class="line">    gulp.watch([&quot;./a.html&quot;,&quot;./b.html&quot;],function()&#123;</div><div class="line">        console.console.log()</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="gup-结合browsr-sync使用"><a href="#gup-结合browsr-sync使用" class="headerlink" title="gup 结合browsr-sync使用"></a>gup 结合browsr-sync使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//gulp结合browser-sync一起使用</div><div class="line">//当你改动html,css,js的时候 --&gt; 合并,压缩我们的html,js,css --&gt; browser-sync刷新浏览器</div><div class="line">//使用之前要在当前项目安装browser-sync 命令:npm install --save-dev browser-sync</div><div class="line">var browserSync = require(&apos;browser-sync&apos;) //得到browserSync对象</div><div class="line">//创建browserSync任务</div><div class="line">gulp.task(&quot;browserSync&quot;,function()&#123; // 静态服务器</div><div class="line">        //第一步先用gulp监视index.html,如果有改动就会执行htmlmin这个任务</div><div class="line">        gulp.watch([&quot;./index.html&quot;],[&quot;htmlmin&quot;]);</div><div class="line">        //第二步开启browserSyn,一旦html文件夹里面压缩的html有改动，就会刷新浏览器</div><div class="line">        browserSync(&#123;</div><div class="line">            server:&#123;</div><div class="line">                baseDir:&quot;./html&quot; //创建服务器的文件夹</div><div class="line">            &#125;,</div><div class="line">            files:[&quot;./html/index.html&quot;] //同步的html代码</div><div class="line">        &#125;);</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<h3 id="gulp的一些插件"><a href="#gulp的一些插件" class="headerlink" title="gulp的一些插件"></a>gulp的一些插件</h3><ul>
+<li>也是使用npm安装</li>
+<li>对js代码进行压缩 gulp-uglify</li>
+<li>对代码进行合并 gulp-concat</li>
+<li>对css进行压缩 gulp-cssnano</li>
+<li>对html进行压缩 gulp-htmlmin</li>
+<li>对图片进行压缩  gulp-imagemin</li>
+<li>合并精灵图  gulp-spriter</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; title=&quot;npm&quot;&gt;&lt;/a&gt;npm&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官网[&lt;a href=&quot;https://www.npmjs.com&quot; target=&quot;_blank&quot; rel=&quot;exte
+    
+    </summary>
+    
+      <category term="npm" scheme="http://yoursite.com/categories/npm/"/>
+    
+      <category term="browser-sync" scheme="http://yoursite.com/categories/npm/browser-sync/"/>
+    
+      <category term="gulp" scheme="http://yoursite.com/categories/npm/browser-sync/gulp/"/>
+    
+    
+      <category term="npm" scheme="http://yoursite.com/tags/npm/"/>
+    
+      <category term="browser-sync" scheme="http://yoursite.com/tags/browser-sync/"/>
+    
+      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
+    
+      <category term="前端自动化工具" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git的使用</title>
+    <link href="http://yoursite.com/2017/06/16/Git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/06/16/Git的使用/</id>
+    <published>2017-06-16T02:48:27.000Z</published>
+    <updated>2017-06-16T02:51:08.126Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h3><ul>
+<li>Git是一款源代码管理工具(版本控制工具)<ul>
+<li>我们写的代码需要使用Git进行管理。</li>
+</ul>
+</li>
+</ul>
+<h3 id="分布式，集中式版本管理工具"><a href="#分布式，集中式版本管理工具" class="headerlink" title="分布式，集中式版本管理工具"></a>分布式，集中式版本管理工具</h3><ul>
+<li>git属于分布式</li>
+<li>svn集中式</li>
+</ul>
+<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><h3 id="git初始化一个仓库"><a href="#git初始化一个仓库" class="headerlink" title="git初始化一个仓库"></a>git初始化一个仓库</h3><ul>
+<li>创建一个.git隐藏目录</li>
+<li>命令:<code>git init</code>;<ul>
+<li>想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.</li>
+<li>一般是在项目的根目录执行这个命令.</li>
+</ul>
+</li>
+</ul>
+<h3 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h3><ul>
+<li>配置用户名 : <code>git config user.name &quot;testName&quot;</code></li>
+<li>配置邮箱   : <code>git config user.email &quot;test@sina.com&quot;</code></li>
+<li>查看配置信息: <code>git config --list</code></li>
+</ul>
+<h3 id="把代码提交到仓库中"><a href="#把代码提交到仓库中" class="headerlink" title="把代码提交到仓库中"></a>把代码提交到仓库中</h3><ul>
+<li><p>1.先把代码添加到暂存区(就相当于放到仓库门口)</p>
+<ul>
+<li>命令:<code>git add 文件路径</code></li>
+<li>示例:<code>git add ./reademe.md</code></li>
+<li>可以使用<code>git add .</code>这个命令，批量把当前目录下所有修改过的文件添加到暂存区。</li>
+</ul>
+</li>
+<li><p>2.把暂存区的文件提交仓库里</p>
+<ul>
+<li>命令: <code>git commit -m &quot;注释&quot;</code></li>
+<li>示例: <code>git commit -m &quot;我们添加了一个新的功能&quot;</code></li>
+<li>-m 表示指定一个字符串，作为提交的说明(相当于注释);</li>
+</ul>
+</li>
+<li><p>合并add 与commit 命令</p>
+<ul>
+<li><code>git commit -a -m &quot;这是使用合并添加与提交的操作&quot;</code>;</li>
+<li>这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)</li>
+</ul>
+</li>
+</ul>
+<h3 id="查看工作区状态"><a href="#查看工作区状态" class="headerlink" title="查看工作区状态"></a>查看工作区状态</h3><ul>
+<li>命令:<code>git status</code></li>
+</ul>
+<h3 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h3><ul>
+<li>在项目中有一些文件是不需要提交的,我们需要把它忽略掉</li>
+<li>需要在.git文件夹所在目录新建一个名为.gitignore的文件<br>然后在这个文件中写上需要被忽略的文件的路径。<br>示例: /css/a.css<pre><code>: /css/*.css
+: /a.html
+</code></pre></li>
+</ul>
+<h3 id="对比文件差异"><a href="#对比文件差异" class="headerlink" title="对比文件差异"></a>对比文件差异</h3><ul>
+<li>命令: <code>git diff</code><ul>
+<li>用来比较暂存区文件内容与工作区文件内容的区别</li>
+<li>如果暂存区没有文件，就会将工作与代码与最近一次提交对比</li>
+</ul>
+</li>
+<li>命令：<code>git diff --cached</code>  比较暂存区的文件和仓库中文件的区别</li>
+<li>对比之前某两次提交的文件的差异<ul>
+<li>命令:<code>git diff [版本号1] [版本号2] [想比较的文件路径]</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><ul>
+<li>命令:<code>git log</code>,可以查看每一次提交的日志</li>
+<li>命令:<code>git log --oneline</code> 表示使用简洁的形式输出提交日志</li>
+</ul>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li>命令:<code>git reset --hard Head~1</code><ul>
+<li>这是将代码回退到上上一次提交时的状态</li>
+</ul>
+</li>
+<li>命令:<code>git reset --hard Head~2</code><ul>
+<li>回退到上上上次</li>
+</ul>
+</li>
+<li><p>命令:<code>git reset --hard Head~0</code></p>
+<ul>
+<li>回退到上次提交时的状态,~0可以省略</li>
+</ul>
+</li>
+<li><p>命令:<code>git reset --hard 版本号</code></p>
+<ul>
+<li>通过每次提交时生成的版本号来回退版本</li>
+</ul>
+</li>
+<li><p>通过<code>git reflog</code>命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。</p>
+<a id="more"></a>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3></li>
+<li>命令:<code>git branch [分支名]</code><ul>
+<li>创建一个新分支</li>
+</ul>
+</li>
+<li>命令:<code>git branch</code><ul>
+<li>查看当前所有的分支</li>
+</ul>
+</li>
+</ul>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><ul>
+<li>命令:<code>git checkout [分支名]</code><ul>
+<li>切换分支后可以在切换后的分支中进行正常的操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><ul>
+<li>命令:<code>git merge [分支名]</code><ul>
+<li>git会将指定的分支合并到当前分支.</li>
+</ul>
+</li>
+</ul>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><ul>
+<li>命令:<code>git branch -d [分支名]</code><ul>
+<li>删除指定分支，-d参数表示要执行删除操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="git提交中的冲突"><a href="#git提交中的冲突" class="headerlink" title="git提交中的冲突"></a>git提交中的冲突</h3><ul>
+<li>如果git不能自动合并分支，就会有冲突，我们需要手动解决冲突，然后再次提交</li>
+</ul>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><h3 id="github与git"><a href="#github与git" class="headerlink" title="github与git"></a>github与git</h3><ul>
+<li>git 版本管理工具</li>
+<li>github 就是一个网站，只是这个网站提供git服务器的功能</li>
+</ul>
+<h3 id="上传代码到git服务器-push"><a href="#上传代码到git服务器-push" class="headerlink" title="上传代码到git服务器(push)"></a>上传代码到git服务器(push)</h3><ul>
+<li><p>命令:<code>git push [远程服务器地址] [远程服务器的分支]</code></p>
+<ul>
+<li>示例:<code>git push https://github.com/huoqishi/test002.git master</code></li>
+</ul>
+</li>
+<li><p>上传时可以使用一些简化的命令</p>
+<ul>
+<li>将远程服务器地址写成变量的形式<ul>
+<li><code>git remote add [变量名]  [远程服务器地址]</code></li>
+<li>示例:<code>git remote add origin https://github.com/huoqishi/test002.git</code></li>
+<li>这样之后就可以直接使用origin来代替git push 后面写的地址了<br><code>git push origin master</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>还可以尽一步简化<ul>
+<li>在push时加上-u参数，就会默认建立本地当前分支与远程指定分支的关联,下一次push时就不需要输入分支名了<code>git push origin</code>;</li>
+</ul>
+</li>
+</ul>
+<h2 id="git使用ssh方式上传代码与github"><a href="#git使用ssh方式上传代码与github" class="headerlink" title="git使用ssh方式上传代码与github"></a>git使用ssh方式上传代码与github</h2><ul>
+<li>git生成公钥和私钥<ul>
+<li>命令:<code>ssh-keygen -t rsa</code>生成的公钥与私钥文件会在当用户目录的.ssh目录下.</li>
+<li>找到生成的ssh钥匙文件的地址：C盘/用户/用户名/.ssh/id_rsa.pub 找到公钥</li>
+<li>在github右上角 –&gt; setting –&gt; ssh设置选项</li>
+<li>把我们的公钥拷贝到github当中</li>
+<li>以后push代码仓库的时候，使用ssh协议，也就是去使用git开头的那个链接</li>
+</ul>
+</li>
+</ul>
+<h3 id="拉取github服务器上的代码及多人协作冲突处理"><a href="#拉取github服务器上的代码及多人协作冲突处理" class="headerlink" title="拉取github服务器上的代码及多人协作冲突处理"></a>拉取github服务器上的代码及多人协作冲突处理</h3><ul>
+<li>从服务器拉取代码的方式<ul>
+<li>方式一:’git clone git url’</li>
+<li>方式二:’git init’<pre><code>+ &apos;git pull url&apos;
+</code></pre></li>
+</ul>
+</li>
+<li>git pull和git clone这二种拉取方式的区别：<ul>
+<li>用git pull的话默认没有设置origin这个变量，必须自己手动设置(git remote add …..),而用了git clone则不需要了，默认origin这个变量就存在了</li>
+</ul>
+</li>
+</ul>
+<h3 id="把代码push到服务器时需要先pull一下"><a href="#把代码push到服务器时需要先pull一下" class="headerlink" title="把代码push到服务器时需要先pull一下"></a>把代码push到服务器时需要先pull一下</h3><ul>
+<li>在pull之后如果远程的代码与本地的代码有冲突，git会先自动合并冲突，如果不能自动合并，就必需我们手动去处理冲突。</li>
+<li>解决拒绝提交代码<ul>
+<li>执行git pull origin master</li>
+<li>手动更改代码，解决冲突</li>
+<li>执行:’git add’</li>
+<li>执行:’git commit</li>
+<li>执行:’git pull origin master’</li>
+<li>执行:’git push origin master’</li>
+</ul>
+</li>
+<li>如何避免尽量不会出现冲突？ <ul>
+<li>在每次push之前执行一次git pull</li>
+<li>git pull的作用：<ul>
+<li>更新本地仓库至最新改动，相当于先从远程服务器获取最新代码，接着进行自动合并(merge)，如果有冲突会提示你冲突，让你在本地手动解决掉冲突之后，再推送到服务器上面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="多人共同使用同一个github服务器仓库"><a href="#多人共同使用同一个github服务器仓库" class="headerlink" title="多人共同使用同一个github服务器仓库"></a>多人共同使用同一个github服务器仓库</h3><ul>
+<li>第一步、建立好一个github上面的仓库</li>
+<li>第二步、点击setting</li>
+<li>第三步、点击add collaborator，在里面找到你的小伙伴的用户名</li>
+<li>第四步、生成一个邀请链接</li>
+<li>第五步、把这个链接发给你的小伙伴，他同意之后就可以把自己写的代码提交到这个仓库了</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;什么是Git&quot;&gt;&lt;a href=&quot;#什么是Git&quot; class=&quot;headerlink&quot; title=&quot;什么是Git?&quot;&gt;&lt;/a&gt;什么是Git?&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Git是一款源代码管理工具(版本控制工具)&lt;ul&gt;
+&lt;li&gt;我们写的代码需要使用Git进行管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;分布式，集中式版本管理工具&quot;&gt;&lt;a href=&quot;#分布式，集中式版本管理工具&quot; class=&quot;headerlink&quot; title=&quot;分布式，集中式版本管理工具&quot;&gt;&lt;/a&gt;分布式，集中式版本管理工具&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;git属于分布式&lt;/li&gt;
+&lt;li&gt;svn集中式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;git安装&quot;&gt;&lt;a href=&quot;#git安装&quot; class=&quot;headerlink&quot; title=&quot;git安装&quot;&gt;&lt;/a&gt;git安装&lt;/h3&gt;&lt;h3 id=&quot;git初始化一个仓库&quot;&gt;&lt;a href=&quot;#git初始化一个仓库&quot; class=&quot;headerlink&quot; title=&quot;git初始化一个仓库&quot;&gt;&lt;/a&gt;git初始化一个仓库&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;创建一个.git隐藏目录&lt;/li&gt;
+&lt;li&gt;命令:&lt;code&gt;git init&lt;/code&gt;;&lt;ul&gt;
+&lt;li&gt;想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.&lt;/li&gt;
+&lt;li&gt;一般是在项目的根目录执行这个命令.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;自报家门&quot;&gt;&lt;a href=&quot;#自报家门&quot; class=&quot;headerlink&quot; title=&quot;自报家门&quot;&gt;&lt;/a&gt;自报家门&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;配置用户名 : &lt;code&gt;git config user.name &amp;quot;testName&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;配置邮箱   : &lt;code&gt;git config user.email &amp;quot;test@sina.com&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看配置信息: &lt;code&gt;git config --list&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;把代码提交到仓库中&quot;&gt;&lt;a href=&quot;#把代码提交到仓库中&quot; class=&quot;headerlink&quot; title=&quot;把代码提交到仓库中&quot;&gt;&lt;/a&gt;把代码提交到仓库中&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1.先把代码添加到暂存区(就相当于放到仓库门口)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;命令:&lt;code&gt;git add 文件路径&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;示例:&lt;code&gt;git add ./reademe.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以使用&lt;code&gt;git add .&lt;/code&gt;这个命令，批量把当前目录下所有修改过的文件添加到暂存区。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2.把暂存区的文件提交仓库里&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;命令: &lt;code&gt;git commit -m &amp;quot;注释&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;示例: &lt;code&gt;git commit -m &amp;quot;我们添加了一个新的功能&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;-m 表示指定一个字符串，作为提交的说明(相当于注释);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;合并add 与commit 命令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git commit -a -m &amp;quot;这是使用合并添加与提交的操作&amp;quot;&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;查看工作区状态&quot;&gt;&lt;a href=&quot;#查看工作区状态&quot; class=&quot;headerlink&quot; title=&quot;查看工作区状态&quot;&gt;&lt;/a&gt;查看工作区状态&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;命令:&lt;code&gt;git status&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;添加忽略文件&quot;&gt;&lt;a href=&quot;#添加忽略文件&quot; class=&quot;headerlink&quot; title=&quot;添加忽略文件&quot;&gt;&lt;/a&gt;添加忽略文件&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在项目中有一些文件是不需要提交的,我们需要把它忽略掉&lt;/li&gt;
+&lt;li&gt;需要在.git文件夹所在目录新建一个名为.gitignore的文件&lt;br&gt;然后在这个文件中写上需要被忽略的文件的路径。&lt;br&gt;示例: /css/a.css&lt;pre&gt;&lt;code&gt;: /css/*.css
+: /a.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;对比文件差异&quot;&gt;&lt;a href=&quot;#对比文件差异&quot; class=&quot;headerlink&quot; title=&quot;对比文件差异&quot;&gt;&lt;/a&gt;对比文件差异&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;命令: &lt;code&gt;git diff&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;用来比较暂存区文件内容与工作区文件内容的区别&lt;/li&gt;
+&lt;li&gt;如果暂存区没有文件，就会将工作与代码与最近一次提交对比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;命令：&lt;code&gt;git diff --cached&lt;/code&gt;  比较暂存区的文件和仓库中文件的区别&lt;/li&gt;
+&lt;li&gt;对比之前某两次提交的文件的差异&lt;ul&gt;
+&lt;li&gt;命令:&lt;code&gt;git diff [版本号1] [版本号2] [想比较的文件路径]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;查看日志&quot;&gt;&lt;a href=&quot;#查看日志&quot; class=&quot;headerlink&quot; title=&quot;查看日志&quot;&gt;&lt;/a&gt;查看日志&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;命令:&lt;code&gt;git log&lt;/code&gt;,可以查看每一次提交的日志&lt;/li&gt;
+&lt;li&gt;命令:&lt;code&gt;git log --oneline&lt;/code&gt; 表示使用简洁的形式输出提交日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;版本回退&quot;&gt;&lt;a href=&quot;#版本回退&quot; class=&quot;headerlink&quot; title=&quot;版本回退&quot;&gt;&lt;/a&gt;版本回退&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;命令:&lt;code&gt;git reset --hard Head~1&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;这是将代码回退到上上一次提交时的状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;命令:&lt;code&gt;git reset --hard Head~2&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;回退到上上上次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;命令:&lt;code&gt;git reset --hard Head~0&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;回退到上次提交时的状态,~0可以省略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;命令:&lt;code&gt;git reset --hard 版本号&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过每次提交时生成的版本号来回退版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过&lt;code&gt;git reflog&lt;/code&gt;命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="代码提交" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>vuex学习</title>
@@ -281,11 +698,11 @@
       <category term="axios" scheme="http://yoursite.com/categories/axios/"/>
     
     
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
-    
       <category term="http" scheme="http://yoursite.com/tags/http/"/>
     
       <category term="ajax" scheme="http://yoursite.com/tags/ajax/"/>
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
   </entry>
   
