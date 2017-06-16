@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vuex学习]]></title>
+    <url>%2F2017%2F06%2F05%2Fvuex%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图； actions，响应在view上的用户输入导致的状态变化]]></content>
+      <categories>
+        <category>Vuex</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>ES6</tag>
+        <tag>Vuex</tag>
+        <tag>状态管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[扎实基础JS一]]></title>
+    <url>%2F2017%2F06%2F03%2F%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80JS%E4%B8%80%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[扎实基础CSS一]]></title>
+    <url>%2F2017%2F06%2F03%2F%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80CSS%E4%B8%80%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[扎实基础HTML一]]></title>
+    <url>%2F2017%2F06%2F03%2F%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80HTML%E4%B8%80%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[ES6的学习一]]></title>
+    <url>%2F2017%2F06%2F03%2FES6%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[vue脚手架vue-cli1的学习一]]></title>
+    <url>%2F2017%2F06%2F03%2Fvue%E8%84%9A%E6%89%8B%E6%9E%B6vue-cli%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[vue-cli的模板 vue-cli的脚手架项目模板有webpack-simple 和 webpack 两种的区别在于webpack-simple 没有包括Eslint 检查功能等等功能 vue-cli的项目结构1234567891011121314151617181920212223242526272829.|-- build // 项目构建(webpack)相关代码| |-- build.js // 生产环境构建代码| |-- check-version.js // 检查node、npm等版本| |-- dev-client.js // 热重载相关| |-- dev-server.js // 构建本地服务器| |-- utils.js // 构建工具相关| |-- webpack.base.conf.js // webpack基础配置| |-- webpack.dev.conf.js // webpack开发环境配置| |-- webpack.prod.conf.js // webpack生产环境配置|-- config // 项目开发环境配置| |-- dev.env.js // 开发环境变量| |-- index.js // 项目一些配置变量| |-- prod.env.js // 生产环境变量| |-- test.env.js // 测试环境变量|-- src // 源码目录| |-- components // vue公共组件| |-- store // vuex的状态管理| |-- App.vue // 页面入口文件| |-- main.js // 程序入口文件，加载各种公共组件|-- static // 静态文件，比如一些图片，json数据等| |-- data // 群聊分析得到的数据用于数据可视化|-- .babelrc // ES6语法编译配置|-- .editorconfig // 定义代码格式|-- .gitignore // git上传需要忽略的文件格式|-- README.md // 项目说明|-- favicon.ico |-- index.html // 入口页面|-- package.json // 项目基本信息 package.json文件 package.json文件是项目根目录下的一个文件，定义该项目开发所需要的各种模块以及一些项目配置信息（如项目名称、版本、描述、作者等）。自定义npm相关命令 在package.json文件里有一个scripts字段。1234&quot;scripts&quot;: &#123; &quot;dev&quot;: &quot;node build/dev-server.js&quot;, &quot;build&quot;: &quot;node build/build.js&quot; &#125; 在开发环境下，在命令行中运行npm run dev就相当于在执行node build/dev-server.js。所以script字段是用来指定npm相关命令的缩写的。 dependencies字段和devDependencies字段 dependencies字段指定了项目运行时所依赖的模块 devDependencies字段指定了项目开发时所依赖的模块(项目环境依赖) 在命令行中运行npm install命令，会自动安装dependencies和devDependencies字段中的模块。webpack配置相关 详情在webpack相关博客dev-server.js12345678910111213141516......// http-proxy可以实现转发所有请求代理到后端真实API地址，以实现前后端开发完全分离// 在config/index.js中可以对proxyTable想进行配置var proxyMiddleware = require(&apos;http-proxy-middleware&apos;)......// 热加载要使用webpack-dev-middleware在没有webpack-dev-server的时候进行热加载var hotMiddleware = require(&apos;webpack-hot-middleware&apos;)(compiler)// 当html-webpack-plugin模板改变是强制进行页面重新加载compiler.plugin(&apos;compilation&apos;, function (compilation) &#123; compilation.plugin(&apos;html-webpack-plugin-after-emit&apos;, function (data, cb) &#123; hotMiddleware.publish(&#123; action: &apos;reload&apos; &#125;) cb() &#125;)&#125;) webpack.base.conf.js123456789101112131415161718192021222324252627282930......module.export = &#123; // 编译入口文件 entry: &#123;&#125;, // 编译输出路径 output: &#123;&#125;, // 一些解决方案配置 resolve: &#123;&#125;, resolveLoader: &#123;&#125;, module: &#123; // 各种不同类型文件加载器配置 loaders: &#123; ... ... // js文件用babel转码 &#123; test: /\.js$/, loader: &apos;babel&apos;, include: projectRoot, // 哪些文件不需要转码 exclude: /node_modules/ &#125;, ... ... &#125; &#125;, // vue文件一些相关配置 vue: &#123;&#125;&#125; check-version.js 这个文件主要是用来检测当前环境中的node和npm版本和我们需要的是否一致的。12345678910111213141516171819202122232425262728293031323334353637// 加载语义化版本测试库var semver = require(&apos;semver&apos;)// 定制控制台日志的输入样式var chalk = require(&apos;chalk&apos;)// 引入package.json文件var packageConfig = require(&apos;../package.json&apos;)var exec = function (cmd) &#123; return require(&apos;child_process&apos;) .execSync(cmd).toString().trim()&#125;// 定义node和npm版本需求所组成的数组var versionRequirements = [ &#123; name: &apos;node&apos;, currentVersion: semver.clean(process.version), versionRequirement: packageConfig.engines.node &#125;, &#123; name: &apos;npm&apos;, currentVersion: exec(&apos;npm --version&apos;), versionRequirement: packageConfig.engines.npm &#125;]module.exports = function () &#123; var warnings = [] // 依次判断版本是否符合要求 for (var i = 0; i &lt; versionRequirements.length; i++) &#123; var mod = versionRequirements[i] if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) &#123; warnings.push(mod.name + &apos;: &apos; + chalk.red(mod.currentVersion) + &apos; should be &apos; + chalk.green(mod.versionRequirement) ) &#125; &#125; ...&#125; .babelrc Babel解释器的配置文件，存放在根目录下。Babel是一个转码器，项目里需要用它将ES6代码转为ES5代码12345// 设定转码规则&quot;presets&quot;: [&quot;es2015&quot;, &quot;stage-2&quot;],// 转码的一些插件&quot;plugins&quot;: [&quot;transform-runtime&quot;],&quot;comments&quot;: false .editorconfig 该文件定义项目的编码规范，编辑器的行为会与.editorconfig 文件中定义的一致，并且其优先级比编辑器自身的设置要高，这在多人合作开发项目时十分有用而且必要。123456789root = true[*] // 对所有文件应用下面的规则charset = utf-8 // 编码规则用utf-8indent_style = space // 缩进用空格indent_size = 2 // 缩进数量为2个空格end_of_line = lf // 换行符格式insert_final_newline = true // 是否在文件的最后插入一个空行trim_trailing_whitespace = true // 是否删除行尾的空格]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>webpack</tag>
+        <tag>脚手架</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[webpack的学习一]]></title>
     <url>%2F2017%2F05%2F24%2Fwebpack%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80%2F</url>
     <content type="text"></content>
@@ -8,12 +55,28 @@
   <entry>
     <title><![CDATA[Vue与后端的交互--axios的使用]]></title>
     <url>%2F2017%2F05%2F24%2FVue%E4%B8%8E%E5%90%8E%E7%AB%AF%E7%9A%84%E4%BA%A4%E4%BA%92-axios%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[axios 基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用 功能特性 在浏览器中发送 XMLHttpRequests 请求 在 node.js 中发送 http请求 支持 Promise API 拦截请求和响应 转换请求和响应数据 自动转换 JSON 数据 客户端支持保护安全免受 XSRF 攻击 默认配置 可以为每一个请求指定默认配置。 全局 axios 默认配置123axios.defaults.baseURL = &apos;https://api.example.com&apos;;axios.defaults.headers.common[&apos;Authorization&apos;] = AUTH_TOKEN;axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded&apos;; 自定义实例默认配置1234let axiosIns = axios.create(&#123; baseURL: &apos;https://api.example.com&apos;, timeout: 10 * 1000&#125;); 请求方法别名 axios.get(url[, config]) axios.delete(url[, config]) axios.head(url[, config]) axios.post(url[, data[, config]]) axios.put(url[, data[, config]]) axios.patch(url[, data[, config]]) 例子 发送一个 GET 请求 123456789101112131415161718192021// Make a request for a user with a given IDaxios.get(&apos;/user?ID=12345&apos;) .then(function (response) &#123; console.log(response); &#125;) .catch(function (response) &#123; console.log(response); &#125;);// Optionally the request above could also be done asaxios.get(&apos;/user&apos;, &#123; params: &#123; ID: 12345 &#125; &#125;) .then(function (response) &#123; console.log(response); &#125;) .catch(function (response) &#123; console.log(response); &#125;); 发送一个 POST 请求 12345678910axios.post(&apos;/user&apos;, &#123; firstName: &apos;Fred&apos;, lastName: &apos;Flintstone&apos; &#125;) .then(function (response) &#123; console.log(response); &#125;) .catch(function (response) &#123; console.log(response); &#125;); 发送多个并发请求 123456789101112function getUserAccount() &#123; return axios.get(&apos;/user/12345&apos;);&#125;function getUserPermissions() &#123; return axios.get(&apos;/user/12345/permissions&apos;);&#125;axios.all([getUserAccount(), getUserPermissions()]) .then(axios.spread(function (acct, perms) &#123; // Both requests are now complete &#125;)); axios API 可以通过给 axios传递对应的参数来定制请求：axios(config)12345678axios(&#123; method: &apos;post&apos;, url: &apos;/user/12345&apos;, data: &#123; firstName: &apos;Fred&apos;, lastName: &apos;Flintstone&apos; &#125;&#125;); 请求配置12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455&#123; //用来向服务器发送请求的url地址 url: &apos;/user&apos;, //请求方法，默认是GET方法 method: &apos;get&apos;, //基础URL路径，假如url不是绝对路径，如 https://some-domain.com/api/v1/login?name=jack,那么向服务器发送请求的URL将会是baseURL + url baseURL: &apos;https://some-domain.com/api/&apos;, // transformRequest方法允许在请求发送到服务器之前修改该请求，此方法只适用于PUT、POST和PATCH方法中。而且，此方法最后必须返回一个string、ArrayBuffer或者Stream。 transformRequest: [function (data) &#123; // Do whatever you want to transform the data return data; &#125;], //transformResponse方法允许在数据传递到then/catch之前修改response数据。此方法最后也要返回数据。 transformResponse: [function (data) &#123; // Do whatever you want to transform the data return data; &#125;], // 发送自定义Headers头文件，头文件中包含了http请求的各种信息。 headers: &#123;&apos;Content-Type&apos;:&apos;application/json&apos;&#125;, // params是发送请求的查询参数对象，对象中的数据会被拼接成url?param1=value1&amp;param2=value2。 params: &#123; ID: 12345 &#125;, //params参数序列化器 paramsSerializer: function(params) &#123; return Qs.stringify(params, &#123;arrayFormat: &apos;brackets&apos;&#125;) &#125;, //data是在发送POST、PUT或者PATCH请求的数据对象。 data: &#123; firstName: &apos;Fred&apos; &#125;, //请求超时设置，单位为毫秒 timeout: 1000, //表明是否有跨域请求需要用到证书 withCredentials: false, // default //adapter允许用户处理更易于测试的请求。返回一个Promise和一个有效的response adapter: function (resolve, reject, config) &#123; /* ... */ &#125;, //auth表明提供凭证用于完成http的身份验证。这将会在headers中设置一个Authorization授权信息。自定义Authorization授权要设置在headers中。 auth: &#123; username: &apos;janedoe&apos;, password: &apos;s00pers3cret&apos; &#125; //表示服务器将返回响应的数据类型，有arraybuffer、blob、document、json、text、stream这6个类型，默认是json类似数据。 responseType: &apos;json&apos;, // default // 用作 xsrf token 值的 cookie 名称 xsrfCookieName: &apos;XSRF-TOKEN&apos;, // default // 带有 xsrf token 值 http head 名称 xsrfHeaderName: &apos;X-XSRF-TOKEN&apos;, // default // 允许在上传过程中的做一些操作,允许在下载过程中的做一些操作 progress: function(progressEvent) &#123; // Do whatever you want with the native progress event &#125;&#125; 响应的数据结构12345678910111213141516&#123; // 服务器返回的数据 data: &#123;&#125;, // HTTP状态吗 status: 200, // 服务器返回的消息 statusText: &apos;OK&apos;, // 返回头 headers: &#123;&#125;, // 在返回我们的配置 config: &#123;&#125;&#125;]]></content>
+      <categories>
+        <category>axios</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>http</tag>
+        <tag>ajax</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Vue路由vue-route的使用]]></title>
     <url>%2F2017%2F05%2F24%2FVue%E8%B7%AF%E7%94%B1vue-route%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[vue-router的使用 javascript部分 1234567891011121314151617181920212223242526272829303132333435// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)import Vue from &apos;vue&apos;import VueRouter from &apos;vue-router&apos;Vue.use(VueRouter)// 1. 定义（路由）组件。// 可以从其他文件 import 进来import Foo from &apos;@/page/login.vue&apos;import Bar from &apos;@/page/login.vue&apos;// 2. 定义路由// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是// 通过 Vue.extend() 创建的组件构造器，// 或者，只是一个组件配置对象。// 我们晚点再讨论嵌套路由。const routes = [ &#123; path: &apos;/foo&apos;, component: Foo &#125;, &#123; path: &apos;/bar&apos;, component: Bar &#125;]// 3. 创建 router 实例，然后传 `routes` 配置// 你还可以传别的配置参数, 不过先这么简单着吧。const router = new VueRouter(&#123; routes // （缩写）相当于 routes: routes&#125;)// 4. 创建和挂载根实例。// 记得要通过 router 配置参数注入路由，// 从而让整个应用都有路由功能const app = new Vue(&#123; router&#125;).$mount(&apos;#app&apos;)// 现在，应用已经启动了！ html部分 12345678910111213141516&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;&lt;div id=&quot;app&quot;&gt; &lt;h1&gt;Hello App!&lt;/h1&gt; &lt;p&gt; &lt;!-- 使用 router-link 组件来导航. --&gt; &lt;!-- 通过传入 `to` 属性指定链接. --&gt; &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt; &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt; &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt; &lt;/p&gt; &lt;!-- 路由出口 --&gt; &lt;!-- 路由匹配到的组件将渲染在这里 --&gt; &lt;router-view&gt;&lt;/router-view&gt;&lt;/div&gt;]]></content>
+      <categories>
+        <category>vue-router</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>路由</tag>
+        <tag>vue-router</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Vue.js学习一]]></title>
@@ -31,7 +94,7 @@
   <entry>
     <title><![CDATA[Vue2.0——从环境搭建到发布]]></title>
     <url>%2F2017%2F05%2F23%2FVue2-0%E2%80%94%E2%80%94%E4%BB%8E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%88%B0%E5%8F%91%E5%B8%83%2F</url>
-    <content type="text"><![CDATA[Vue开发环境的配置 安装Nodejsnpm install nodejs 安装webpacknpm install webpack 安装vue脚手架npm install vue-cli -g用vue-cli创建模板 vue-cli的模板分为两套 精简版：vue init webpack-simple 工程名字 常规版：vue init webpack 工程名字 初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)安装项目依赖 npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像npm install -g cnpm项目启动 cd进入项目中npm run devVue项目组件的使用 组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用 组件的使用 引入：import firstcomponent from &#39;./component/firstcomponent.vue 注册：data 代码块后面加上components: { firstcomponent } 使用：在&lt;template&gt;&lt;/template&gt;内加上&lt;firstcomponent&gt;&lt;/firstcomponent&gt; Vue路由 安装vue-routernpm install vue-router --save 在man.js中导入路由模块import VueRouter from &#39;vue-router&#39; 使用：Vue.use(VueRouter) 挂载：new Vue({ el: &#39;#app&#39;, router, template: &#39;&lt;App/&gt;&#39;, components: { App } }) 配置项目路由 在router文件夹的index.js文件中配置 导入路由模块import Router from &#39;vue-router&#39; 引入页面模块:import login from &#39;@/page/login.vue&#39; 路由的配置：export default new Router({ routes: [{path: &apos;/login&apos;,name:&apos;登录&apos;,component:login} ]}) 路由的使用：在视图标签中webpack的配置 在config文件夹下的index.js中改变文件打包后指定到的文件夹 index: path.resolve(__dirname, &#39;../../webapp/index.html&#39;), assetsRoot: path.resolve(__dirname, &#39;../../webapp&#39;), assetsSubDirectory: &#39;static&#39;, assetsPublicPath: &#39;/&#39;,-dev: { port:8888}改变文件的端口号#文件打包 npm run build]]></content>
+    <content type="text"><![CDATA[Vue开发环境的配置 安装Nodejsnpm install nodejs 安装webpacknpm install webpack 安装vue脚手架npm install vue-cli -g 用vue-cli创建模板 vue-cli的模板分为两套 精简版：vue init webpack-simple 工程名字 常规版：vue init webpack 工程名字 初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)安装项目依赖 npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像npm install -g cnpm项目启动 cd进入项目中npm run devVue项目组件的使用 组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用 组件的使用 引入：import firstcomponent from &#39;./component/firstcomponent.vue 注册：data 代码块后面加上components: { firstcomponent } 使用：在&lt;template&gt;&lt;/template&gt;内加上&lt;firstcomponent&gt;&lt;/firstcomponent&gt; Vue路由 安装vue-routernpm install vue-router --save 在man.js中导入路由模块import VueRouter from &#39;vue-router&#39; 使用：Vue.use(VueRouter) 挂载：new Vue({ el: &#39;#app&#39;, router, template: &#39;&lt;App/&gt;&#39;, components: { App } }) 配置项目路由 在router文件夹的index.js文件中配置 导入路由模块import Router from &#39;vue-router&#39; 引入页面模块:import login from &#39;@/page/login.vue&#39; 路由的配置：export default new Router({ routes: [{path: &apos;/login&apos;,name:&apos;登录&apos;,component:login} ]}) 路由的使用：在视图标签中webpack的配置 在config文件夹下的index.js中改变文件打包后指定到的文件夹 index: path.resolve(__dirname, &#39;../../webapp/index.html&#39;), assetsRoot: path.resolve(__dirname, &#39;../../webapp&#39;), assetsSubDirectory: &#39;static&#39;, assetsPublicPath: &#39;/&#39;,-dev: { port:8888}改变文件的端口号#文件打包 npm run build]]></content>
       <categories>
         <category>Vue</category>
       </categories>

@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue,http,ajax," />
 
 
 
@@ -92,13 +92,17 @@
 
 
 
+<meta name="description" content="axios 基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用  功能特性 在浏览器中发送 XMLHttpRequests 请求 在 node.js 中发送 http请求 支持 Promise API 拦截请求和响应 转换请求和响应数据 自动转换 JSON 数据 客户端支持保护安全免受 XSRF 攻击   默认配置 可以为每一个请求指定默认配置。 全局 axi">
+<meta name="keywords" content="vue,http,ajax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue与后端的交互--axios的使用">
 <meta property="og:url" content="http://yoursite.com/2017/05/24/Vue与后端的交互-axios的使用/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
-<meta property="og:updated_time" content="2017-05-24T13:24:29.047Z">
+<meta property="og:description" content="axios 基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用  功能特性 在浏览器中发送 XMLHttpRequests 请求 在 node.js 中发送 http请求 支持 Promise API 拦截请求和响应 转换请求和响应数据 自动转换 JSON 数据 客户端支持保护安全免受 XSRF 攻击   默认配置 可以为每一个请求指定默认配置。 全局 axi">
+<meta property="og:updated_time" content="2017-06-03T08:04:50.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue与后端的交互--axios的使用">
+<meta name="twitter:description" content="axios 基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用  功能特性 在浏览器中发送 XMLHttpRequests 请求 在 node.js 中发送 http请求 支持 Promise API 拦截请求和响应 转换请求和响应数据 自动转换 JSON 数据 客户端支持保护安全免受 XSRF 攻击   默认配置 可以为每一个请求指定默认配置。 全局 axi">
 
 
 
@@ -325,6 +329,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/axios/" itemprop="url" rel="index">
+                    <span itemprop="name">axios</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -360,7 +386,57 @@
       
 
       
-        
+        <h1 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h1><ul>
+<li>基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用</li>
+</ul>
+<h1 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h1><ul>
+<li>在浏览器中发送 XMLHttpRequests 请求</li>
+<li>在 node.js 中发送 http请求</li>
+<li>支持 Promise API</li>
+<li>拦截请求和响应</li>
+<li>转换请求和响应数据</li>
+<li>自动转换 JSON 数据</li>
+<li>客户端支持保护安全免受 XSRF 攻击 </li>
+</ul>
+<h1 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h1><ul>
+<li><p>可以为每一个请求指定默认配置。</p>
+<h2 id="全局-axios-默认配置"><a href="#全局-axios-默认配置" class="headerlink" title="全局 axios 默认配置"></a>全局 axios 默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">axios.defaults.baseURL = &apos;https://api.example.com&apos;;</div><div class="line">axios.defaults.headers.common[&apos;Authorization&apos;] = AUTH_TOKEN;</div><div class="line">axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded&apos;;</div></pre></td></tr></table></figure>
+<h2 id="自定义实例默认配置"><a href="#自定义实例默认配置" class="headerlink" title="自定义实例默认配置"></a>自定义实例默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let axiosIns = axios.create(&#123;</div><div class="line">  baseURL: &apos;https://api.example.com&apos;,</div><div class="line">  timeout: 10 * 1000</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="请求方法别名"><a href="#请求方法别名" class="headerlink" title="请求方法别名"></a>请求方法别名</h1><ul>
+<li><p>axios.get(url[, config])</p>
+</li>
+<li><p>axios.delete(url[, config])</p>
+</li>
+<li><p>axios.head(url[, config])</p>
+</li>
+<li><p>axios.post(url[, data[, config]])</p>
+</li>
+<li><p>axios.put(url[, data[, config]])</p>
+</li>
+<li><p>axios.patch(url[, data[, config]])</p>
+<a id="more"></a>
+</li>
+</ul>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><ul>
+<li><p>发送一个 GET 请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// Make a request for a user with a given ID</div><div class="line">axios.get(&apos;/user?ID=12345&apos;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">// Optionally the request above could also be done as</div><div class="line">axios.get(&apos;/user&apos;, &#123;</div><div class="line">    params: &#123;</div><div class="line">      ID: 12345</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>发送一个 POST 请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">axios.post(&apos;/user&apos;, &#123;</div><div class="line">    firstName: &apos;Fred&apos;,</div><div class="line">    lastName: &apos;Flintstone&apos;</div><div class="line">  &#125;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>发送多个并发请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function getUserAccount() &#123;</div><div class="line">  return axios.get(&apos;/user/12345&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function getUserPermissions() &#123;</div><div class="line">  return axios.get(&apos;/user/12345/permissions&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">axios.all([getUserAccount(), getUserPermissions()])</div><div class="line">  .then(axios.spread(function (acct, perms) &#123;</div><div class="line">    // Both requests are now complete</div><div class="line">  &#125;));</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="axios-API"><a href="#axios-API" class="headerlink" title="axios API"></a>axios API</h1><ul>
+<li>可以通过给 axios传递对应的参数来定制请求：axios(config)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">axios(&#123;</div><div class="line">  method: &apos;post&apos;,</div><div class="line">  url: &apos;/user/12345&apos;,</div><div class="line">  data: &#123;</div><div class="line">    firstName: &apos;Fred&apos;,</div><div class="line">    lastName: &apos;Flintstone&apos;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="请求配置"><a href="#请求配置" class="headerlink" title="请求配置"></a>请求配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  //用来向服务器发送请求的url地址  </div><div class="line">  url: &apos;/user&apos;, </div><div class="line">  //请求方法，默认是GET方法</div><div class="line">  method: &apos;get&apos;, </div><div class="line">  //基础URL路径，假如url不是绝对路径，如 https://some-domain.com/api/v1/login?name=jack,那么向服务器发送请求的URL将会是baseURL + url</div><div class="line">  baseURL: &apos;https://some-domain.com/api/&apos;, </div><div class="line">  // transformRequest方法允许在请求发送到服务器之前修改该请求，此方法只适用于PUT、POST和PATCH方法中。而且，此方法最后必须返回一个string、ArrayBuffer或者Stream。</div><div class="line">  transformRequest: [function (data) &#123;</div><div class="line">    // Do whatever you want to transform the data</div><div class="line">    return data;</div><div class="line">  &#125;],</div><div class="line">  //transformResponse方法允许在数据传递到then/catch之前修改response数据。此方法最后也要返回数据。</div><div class="line">  transformResponse: [function (data) &#123;</div><div class="line">    // Do whatever you want to transform the data</div><div class="line">    return data;</div><div class="line">  &#125;],</div><div class="line">  // 发送自定义Headers头文件，头文件中包含了http请求的各种信息。</div><div class="line">  headers: &#123;&apos;Content-Type&apos;:&apos;application/json&apos;&#125;,</div><div class="line">  //  params是发送请求的查询参数对象，对象中的数据会被拼接成url?param1=value1&amp;param2=value2。 </div><div class="line">  params: &#123;</div><div class="line">    ID: 12345</div><div class="line">  &#125;,</div><div class="line">  //params参数序列化器</div><div class="line">  paramsSerializer: function(params) &#123;</div><div class="line">    return Qs.stringify(params, &#123;arrayFormat: &apos;brackets&apos;&#125;)</div><div class="line">  &#125;,</div><div class="line">  //data是在发送POST、PUT或者PATCH请求的数据对象。</div><div class="line">  data: &#123;</div><div class="line">    firstName: &apos;Fred&apos;</div><div class="line">  &#125;,</div><div class="line">  //请求超时设置，单位为毫秒</div><div class="line">  timeout: 1000,</div><div class="line">  //表明是否有跨域请求需要用到证书</div><div class="line">  withCredentials: false, // default</div><div class="line">  //adapter允许用户处理更易于测试的请求。返回一个Promise和一个有效的response</div><div class="line">  adapter: function (resolve, reject, config) &#123;</div><div class="line">    /* ... */</div><div class="line">  &#125;,</div><div class="line">  //auth表明提供凭证用于完成http的身份验证。这将会在headers中设置一个Authorization授权信息。自定义Authorization授权要设置在headers中。</div><div class="line">  auth: &#123;</div><div class="line">    username: &apos;janedoe&apos;,</div><div class="line">    password: &apos;s00pers3cret&apos;</div><div class="line">  &#125;</div><div class="line">  //表示服务器将返回响应的数据类型，有arraybuffer、blob、document、json、text、stream这6个类型，默认是json类似数据。</div><div class="line">  responseType: &apos;json&apos;, // default</div><div class="line">  // 用作 xsrf token 值的 cookie 名称</div><div class="line">  xsrfCookieName: &apos;XSRF-TOKEN&apos;, // default</div><div class="line">  // 带有 xsrf token 值 http head 名称</div><div class="line">  xsrfHeaderName: &apos;X-XSRF-TOKEN&apos;, // default</div><div class="line">  // 允许在上传过程中的做一些操作,允许在下载过程中的做一些操作</div><div class="line">  progress: function(progressEvent) &#123;</div><div class="line">    // Do whatever you want with the native progress event</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="响应的数据结构"><a href="#响应的数据结构" class="headerlink" title="响应的数据结构"></a>响应的数据结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  // 服务器返回的数据</div><div class="line">  data: &#123;&#125;,</div><div class="line"></div><div class="line">  // HTTP状态吗</div><div class="line">  status: 200,</div><div class="line"></div><div class="line">  // 服务器返回的消息</div><div class="line">  statusText: &apos;OK&apos;,</div><div class="line"></div><div class="line">  // 返回头</div><div class="line">  headers: &#123;&#125;,</div><div class="line"></div><div class="line">  // 在返回我们的配置</div><div class="line">  config: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -386,6 +462,16 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/tags/http/" rel="tag"># http</a>
+          
+            <a href="/tags/ajax/" rel="tag"># ajax</a>
+          
+        </div>
       
 
       
@@ -455,8 +541,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ojvil4eq9.bkt.clouddn.com/Octocat.jpg"
@@ -471,7 +566,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -482,7 +577,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -493,7 +588,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -563,6 +658,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#axios"><span class="nav-number">1.</span> <span class="nav-text">axios</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#功能特性"><span class="nav-number">2.</span> <span class="nav-text">功能特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#默认配置"><span class="nav-number">3.</span> <span class="nav-text">默认配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局-axios-默认配置"><span class="nav-number">3.1.</span> <span class="nav-text">全局 axios 默认配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义实例默认配置"><span class="nav-number">3.2.</span> <span class="nav-text">自定义实例默认配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#请求方法别名"><span class="nav-number">4.</span> <span class="nav-text">请求方法别名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例子"><span class="nav-number">5.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#axios-API"><span class="nav-number">6.</span> <span class="nav-text">axios API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#请求配置"><span class="nav-number">7.</span> <span class="nav-text">请求配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#响应的数据结构"><span class="nav-number">8.</span> <span class="nav-text">响应的数据结构</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

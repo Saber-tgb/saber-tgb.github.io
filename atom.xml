@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-24T13:25:11.611Z</updated>
+  <updated>2017-06-06T03:58:05.656Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,161 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vuex学习</title>
+    <link href="http://yoursite.com/2017/06/05/vuex%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/06/05/vuex学习/</id>
+    <published>2017-06-05T14:29:17.000Z</published>
+    <updated>2017-06-06T03:58:05.656Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
+<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2></li>
+<li>vuex的状态自管理应用包含以下几个部分<ul>
+<li>state，驱动应用的数据源;</li>
+<li>view，以声明方式将state映射到视图； </li>
+<li>actions，响应在view上的用户输入导致的状态变化</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;理解Vuex&quot;&gt;&lt;a href=&quot;#理解Vuex&quot; class=&quot;headerlink&quot; title=&quot;理解Vuex&quot;&gt;&lt;/a&gt;理解Vuex&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎
+    
+    </summary>
+    
+      <category term="Vuex" scheme="http://yoursite.com/categories/Vuex/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="Vuex" scheme="http://yoursite.com/tags/Vuex/"/>
+    
+      <category term="状态管理" scheme="http://yoursite.com/tags/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扎实基础JS一</title>
+    <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80JS%E4%B8%80/"/>
+    <id>http://yoursite.com/2017/06/03/扎实基础JS一/</id>
+    <published>2017-06-03T08:08:26.000Z</published>
+    <updated>2017-06-03T08:08:26.462Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>扎实基础CSS一</title>
+    <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80CSS%E4%B8%80/"/>
+    <id>http://yoursite.com/2017/06/03/扎实基础CSS一/</id>
+    <published>2017-06-03T08:08:12.000Z</published>
+    <updated>2017-06-03T08:08:12.916Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>扎实基础HTML一</title>
+    <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80HTML%E4%B8%80/"/>
+    <id>http://yoursite.com/2017/06/03/扎实基础HTML一/</id>
+    <published>2017-06-03T08:07:54.000Z</published>
+    <updated>2017-06-03T08:07:54.052Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES6的学习一</title>
+    <link href="http://yoursite.com/2017/06/03/ES6%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
+    <id>http://yoursite.com/2017/06/03/ES6的学习一/</id>
+    <published>2017-06-03T07:57:07.000Z</published>
+    <updated>2017-06-03T07:57:07.878Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue脚手架vue-cli1的学习一</title>
+    <link href="http://yoursite.com/2017/06/03/vue%E8%84%9A%E6%89%8B%E6%9E%B6vue-cli%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
+    <id>http://yoursite.com/2017/06/03/vue脚手架vue-cli的学习一/</id>
+    <published>2017-06-03T03:56:27.000Z</published>
+    <updated>2017-06-03T07:31:26.722Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue-cli的模板"><a href="#vue-cli的模板" class="headerlink" title="vue-cli的模板"></a>vue-cli的模板</h1><ul>
+<li>vue-cli的脚手架项目模板有webpack-simple 和 webpack</li>
+<li>两种的区别在于webpack-simple 没有包括Eslint 检查功能等等功能</li>
+</ul>
+<h1 id="vue-cli的项目结构"><a href="#vue-cli的项目结构" class="headerlink" title="vue-cli的项目结构"></a>vue-cli的项目结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">|-- build                            // 项目构建(webpack)相关代码</div><div class="line">|   |-- build.js                     // 生产环境构建代码</div><div class="line">|   |-- check-version.js             // 检查node、npm等版本</div><div class="line">|   |-- dev-client.js                // 热重载相关</div><div class="line">|   |-- dev-server.js                // 构建本地服务器</div><div class="line">|   |-- utils.js                     // 构建工具相关</div><div class="line">|   |-- webpack.base.conf.js         // webpack基础配置</div><div class="line">|   |-- webpack.dev.conf.js          // webpack开发环境配置</div><div class="line">|   |-- webpack.prod.conf.js         // webpack生产环境配置</div><div class="line">|-- config                           // 项目开发环境配置</div><div class="line">|   |-- dev.env.js                   // 开发环境变量</div><div class="line">|   |-- index.js                     // 项目一些配置变量</div><div class="line">|   |-- prod.env.js                  // 生产环境变量</div><div class="line">|   |-- test.env.js                  // 测试环境变量</div><div class="line">|-- src                              // 源码目录</div><div class="line">|   |-- components                     // vue公共组件</div><div class="line">|   |-- store                          // vuex的状态管理</div><div class="line">|   |-- App.vue                        // 页面入口文件</div><div class="line">|   |-- main.js                        // 程序入口文件，加载各种公共组件</div><div class="line">|-- static                           // 静态文件，比如一些图片，json数据等</div><div class="line">|   |-- data                           // 群聊分析得到的数据用于数据可视化</div><div class="line">|-- .babelrc                         // ES6语法编译配置</div><div class="line">|-- .editorconfig                    // 定义代码格式</div><div class="line">|-- .gitignore                       // git上传需要忽略的文件格式</div><div class="line">|-- README.md                        // 项目说明</div><div class="line">|-- favicon.ico </div><div class="line">|-- index.html                       // 入口页面</div><div class="line">|-- package.json                     // 项目基本信息</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="package-json文件"><a href="#package-json文件" class="headerlink" title="package.json文件"></a>package.json文件</h1><ul>
+<li>package.json文件是项目根目录下的一个文件，定义该项目开发所需要的各种模块以及一些项目配置信息（如项目名称、版本、描述、作者等）。<h2 id="自定义npm相关命令"><a href="#自定义npm相关命令" class="headerlink" title="自定义npm相关命令"></a>自定义npm相关命令</h2></li>
+<li>在package.json文件里有一个scripts字段。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">    &quot;dev&quot;: &quot;node build/dev-server.js&quot;,</div><div class="line">    &quot;build&quot;: &quot;node build/build.js&quot;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在开发环境下，在命令行中运行npm run dev就相当于在执行node build/dev-server.js。所以script字段是用来指定npm相关命令的缩写的。</p>
+<h2 id="dependencies字段和devDependencies字段"><a href="#dependencies字段和devDependencies字段" class="headerlink" title="dependencies字段和devDependencies字段"></a>dependencies字段和devDependencies字段</h2><ul>
+<li>dependencies字段指定了项目运行时所依赖的模块</li>
+<li>devDependencies字段指定了项目开发时所依赖的模块(项目环境依赖)</li>
+<li>在命令行中运行npm install命令，会自动安装dependencies和devDependencies字段中的模块。<h2 id="webpack配置相关"><a href="#webpack配置相关" class="headerlink" title="webpack配置相关"></a>webpack配置相关</h2></li>
+<li>详情在webpack相关博客<h3 id="dev-server-js"><a href="#dev-server-js" class="headerlink" title="dev-server.js"></a>dev-server.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">...</div><div class="line">// http-proxy可以实现转发所有请求代理到后端真实API地址，以实现前后端开发完全分离</div><div class="line">// 在config/index.js中可以对proxyTable想进行配置</div><div class="line">var proxyMiddleware = require(&apos;http-proxy-middleware&apos;)</div><div class="line">...</div><div class="line">...</div><div class="line">// 热加载要使用webpack-dev-middleware在没有webpack-dev-server的时候进行热加载</div><div class="line">var hotMiddleware = require(&apos;webpack-hot-middleware&apos;)(compiler)</div><div class="line">// 当html-webpack-plugin模板改变是强制进行页面重新加载</div><div class="line">compiler.plugin(&apos;compilation&apos;, function (compilation) &#123;</div><div class="line">  compilation.plugin(&apos;html-webpack-plugin-after-emit&apos;, function (data, cb) &#123;</div><div class="line">    hotMiddleware.publish(&#123; action: &apos;reload&apos; &#125;)</div><div class="line">    cb()</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="webpack-base-conf-js"><a href="#webpack-base-conf-js" class="headerlink" title="webpack.base.conf.js"></a>webpack.base.conf.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">...</div><div class="line">module.export = &#123;</div><div class="line">    // 编译入口文件</div><div class="line">    entry: &#123;&#125;,</div><div class="line">    // 编译输出路径</div><div class="line">    output: &#123;&#125;,</div><div class="line">    // 一些解决方案配置</div><div class="line">    resolve: &#123;&#125;,</div><div class="line">    resolveLoader: &#123;&#125;,</div><div class="line">    module: &#123;</div><div class="line">        // 各种不同类型文件加载器配置</div><div class="line">        loaders: &#123;</div><div class="line">        ...</div><div class="line">        ...</div><div class="line">        // js文件用babel转码</div><div class="line">        &#123;</div><div class="line">            test: /\.js$/,</div><div class="line">            loader: &apos;babel&apos;,</div><div class="line">            include: projectRoot,</div><div class="line">            // 哪些文件不需要转码</div><div class="line">            exclude: /node_modules/</div><div class="line">        &#125;,</div><div class="line">        ...</div><div class="line">        ...</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    // vue文件一些相关配置</div><div class="line">    vue: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="check-version-js"><a href="#check-version-js" class="headerlink" title="check-version.js"></a>check-version.js</h3><ul>
+<li>这个文件主要是用来检测当前环境中的node和npm版本和我们需要的是否一致的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">// 加载语义化版本测试库</div><div class="line">var semver = require(&apos;semver&apos;)</div><div class="line">// 定制控制台日志的输入样式</div><div class="line">var chalk = require(&apos;chalk&apos;)</div><div class="line">// 引入package.json文件</div><div class="line">var packageConfig = require(&apos;../package.json&apos;)</div><div class="line">var exec = function (cmd) &#123;</div><div class="line">  return require(&apos;child_process&apos;)</div><div class="line">    .execSync(cmd).toString().trim()</div><div class="line">&#125;</div><div class="line">// 定义node和npm版本需求所组成的数组</div><div class="line">var versionRequirements = [</div><div class="line">  &#123;</div><div class="line">    name: &apos;node&apos;,</div><div class="line">    currentVersion: semver.clean(process.version),</div><div class="line">    versionRequirement: packageConfig.engines.node</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    name: &apos;npm&apos;,</div><div class="line">    currentVersion: exec(&apos;npm --version&apos;),</div><div class="line">    versionRequirement: packageConfig.engines.npm</div><div class="line">  &#125;</div><div class="line">]</div><div class="line">module.exports = function () &#123;</div><div class="line">  var warnings = []</div><div class="line">  // 依次判断版本是否符合要求</div><div class="line">  for (var i = 0; i &lt; versionRequirements.length; i++) &#123;</div><div class="line">    var mod = versionRequirements[i]</div><div class="line">    if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) &#123;</div><div class="line">      warnings.push(mod.name + &apos;: &apos; +</div><div class="line">        chalk.red(mod.currentVersion) + &apos; should be &apos; +</div><div class="line">        chalk.green(mod.versionRequirement)</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="babelrc"><a href="#babelrc" class="headerlink" title=".babelrc"></a>.babelrc</h3><ul>
+<li>Babel解释器的配置文件，存放在根目录下。Babel是一个转码器，项目里需要用它将ES6代码转为ES5代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 设定转码规则</div><div class="line">&quot;presets&quot;: [&quot;es2015&quot;, &quot;stage-2&quot;],</div><div class="line">// 转码的一些插件</div><div class="line">&quot;plugins&quot;: [&quot;transform-runtime&quot;],</div><div class="line">&quot;comments&quot;: false</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="editorconfig"><a href="#editorconfig" class="headerlink" title=".editorconfig"></a>.editorconfig</h3><ul>
+<li>该文件定义项目的编码规范，编辑器的行为会与.editorconfig 文件中定义的一致，并且其优先级比编辑器自身的设置要高，这在多人合作开发项目时十分有用而且必要。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">root = true</div><div class="line"></div><div class="line">[*]    // 对所有文件应用下面的规则</div><div class="line">charset = utf-8                    // 编码规则用utf-8</div><div class="line">indent_style = space               // 缩进用空格</div><div class="line">indent_size = 2                    // 缩进数量为2个空格</div><div class="line">end_of_line = lf                   // 换行符格式</div><div class="line">insert_final_newline = true        // 是否在文件的最后插入一个空行</div><div class="line">trim_trailing_whitespace = true    // 是否删除行尾的空格</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;vue-cli的模板&quot;&gt;&lt;a href=&quot;#vue-cli的模板&quot; class=&quot;headerlink&quot; title=&quot;vue-cli的模板&quot;&gt;&lt;/a&gt;vue-cli的模板&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;vue-cli的脚手架项目模板有webpack-simple 和 webpack&lt;/li&gt;
+&lt;li&gt;两种的区别在于webpack-simple 没有包括Eslint 检查功能等等功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;vue-cli的项目结构&quot;&gt;&lt;a href=&quot;#vue-cli的项目结构&quot; class=&quot;headerlink&quot; title=&quot;vue-cli的项目结构&quot;&gt;&lt;/a&gt;vue-cli的项目结构&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- build                            // 项目构建(webpack)相关代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- build.js                     // 生产环境构建代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- check-version.js             // 检查node、npm等版本&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- dev-client.js                // 热重载相关&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- dev-server.js                // 构建本地服务器&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- utils.js                     // 构建工具相关&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- webpack.base.conf.js         // webpack基础配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- webpack.dev.conf.js          // webpack开发环境配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- webpack.prod.conf.js         // webpack生产环境配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- config                           // 项目开发环境配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- dev.env.js                   // 开发环境变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- index.js                     // 项目一些配置变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- prod.env.js                  // 生产环境变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- test.env.js                  // 测试环境变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- src                              // 源码目录&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- components                     // vue公共组件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- store                          // vuex的状态管理&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- App.vue                        // 页面入口文件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- main.js                        // 程序入口文件，加载各种公共组件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- static                           // 静态文件，比如一些图片，json数据等&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- data                           // 群聊分析得到的数据用于数据可视化&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- .babelrc                         // ES6语法编译配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- .editorconfig                    // 定义代码格式&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- .gitignore                       // git上传需要忽略的文件格式&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- README.md                        // 项目说明&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- favicon.ico &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- index.html                       // 入口页面&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- package.json                     // 项目基本信息&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+    
+      <category term="脚手架" scheme="http://yoursite.com/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>webpack的学习一</title>
@@ -34,12 +189,103 @@
     <link href="http://yoursite.com/2017/05/24/Vue%E4%B8%8E%E5%90%8E%E7%AB%AF%E7%9A%84%E4%BA%A4%E4%BA%92-axios%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2017/05/24/Vue与后端的交互-axios的使用/</id>
     <published>2017-05-24T13:24:29.000Z</published>
-    <updated>2017-05-24T13:24:29.047Z</updated>
+    <updated>2017-06-03T08:04:50.490Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h1><ul>
+<li>基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用</li>
+</ul>
+<h1 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h1><ul>
+<li>在浏览器中发送 XMLHttpRequests 请求</li>
+<li>在 node.js 中发送 http请求</li>
+<li>支持 Promise API</li>
+<li>拦截请求和响应</li>
+<li>转换请求和响应数据</li>
+<li>自动转换 JSON 数据</li>
+<li>客户端支持保护安全免受 XSRF 攻击 </li>
+</ul>
+<h1 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h1><ul>
+<li><p>可以为每一个请求指定默认配置。</p>
+<h2 id="全局-axios-默认配置"><a href="#全局-axios-默认配置" class="headerlink" title="全局 axios 默认配置"></a>全局 axios 默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">axios.defaults.baseURL = &apos;https://api.example.com&apos;;</div><div class="line">axios.defaults.headers.common[&apos;Authorization&apos;] = AUTH_TOKEN;</div><div class="line">axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded&apos;;</div></pre></td></tr></table></figure>
+<h2 id="自定义实例默认配置"><a href="#自定义实例默认配置" class="headerlink" title="自定义实例默认配置"></a>自定义实例默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let axiosIns = axios.create(&#123;</div><div class="line">  baseURL: &apos;https://api.example.com&apos;,</div><div class="line">  timeout: 10 * 1000</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="请求方法别名"><a href="#请求方法别名" class="headerlink" title="请求方法别名"></a>请求方法别名</h1><ul>
+<li><p>axios.get(url[, config])</p>
+</li>
+<li><p>axios.delete(url[, config])</p>
+</li>
+<li><p>axios.head(url[, config])</p>
+</li>
+<li><p>axios.post(url[, data[, config]])</p>
+</li>
+<li><p>axios.put(url[, data[, config]])</p>
+</li>
+<li><p>axios.patch(url[, data[, config]])</p>
+<a id="more"></a>
+</li>
+</ul>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><ul>
+<li><p>发送一个 GET 请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// Make a request for a user with a given ID</div><div class="line">axios.get(&apos;/user?ID=12345&apos;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">// Optionally the request above could also be done as</div><div class="line">axios.get(&apos;/user&apos;, &#123;</div><div class="line">    params: &#123;</div><div class="line">      ID: 12345</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>发送一个 POST 请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">axios.post(&apos;/user&apos;, &#123;</div><div class="line">    firstName: &apos;Fred&apos;,</div><div class="line">    lastName: &apos;Flintstone&apos;</div><div class="line">  &#125;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>发送多个并发请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function getUserAccount() &#123;</div><div class="line">  return axios.get(&apos;/user/12345&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function getUserPermissions() &#123;</div><div class="line">  return axios.get(&apos;/user/12345/permissions&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">axios.all([getUserAccount(), getUserPermissions()])</div><div class="line">  .then(axios.spread(function (acct, perms) &#123;</div><div class="line">    // Both requests are now complete</div><div class="line">  &#125;));</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="axios-API"><a href="#axios-API" class="headerlink" title="axios API"></a>axios API</h1><ul>
+<li>可以通过给 axios传递对应的参数来定制请求：axios(config)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">axios(&#123;</div><div class="line">  method: &apos;post&apos;,</div><div class="line">  url: &apos;/user/12345&apos;,</div><div class="line">  data: &#123;</div><div class="line">    firstName: &apos;Fred&apos;,</div><div class="line">    lastName: &apos;Flintstone&apos;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="请求配置"><a href="#请求配置" class="headerlink" title="请求配置"></a>请求配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  //用来向服务器发送请求的url地址  </div><div class="line">  url: &apos;/user&apos;, </div><div class="line">  //请求方法，默认是GET方法</div><div class="line">  method: &apos;get&apos;, </div><div class="line">  //基础URL路径，假如url不是绝对路径，如 https://some-domain.com/api/v1/login?name=jack,那么向服务器发送请求的URL将会是baseURL + url</div><div class="line">  baseURL: &apos;https://some-domain.com/api/&apos;, </div><div class="line">  // transformRequest方法允许在请求发送到服务器之前修改该请求，此方法只适用于PUT、POST和PATCH方法中。而且，此方法最后必须返回一个string、ArrayBuffer或者Stream。</div><div class="line">  transformRequest: [function (data) &#123;</div><div class="line">    // Do whatever you want to transform the data</div><div class="line">    return data;</div><div class="line">  &#125;],</div><div class="line">  //transformResponse方法允许在数据传递到then/catch之前修改response数据。此方法最后也要返回数据。</div><div class="line">  transformResponse: [function (data) &#123;</div><div class="line">    // Do whatever you want to transform the data</div><div class="line">    return data;</div><div class="line">  &#125;],</div><div class="line">  // 发送自定义Headers头文件，头文件中包含了http请求的各种信息。</div><div class="line">  headers: &#123;&apos;Content-Type&apos;:&apos;application/json&apos;&#125;,</div><div class="line">  //  params是发送请求的查询参数对象，对象中的数据会被拼接成url?param1=value1&amp;param2=value2。 </div><div class="line">  params: &#123;</div><div class="line">    ID: 12345</div><div class="line">  &#125;,</div><div class="line">  //params参数序列化器</div><div class="line">  paramsSerializer: function(params) &#123;</div><div class="line">    return Qs.stringify(params, &#123;arrayFormat: &apos;brackets&apos;&#125;)</div><div class="line">  &#125;,</div><div class="line">  //data是在发送POST、PUT或者PATCH请求的数据对象。</div><div class="line">  data: &#123;</div><div class="line">    firstName: &apos;Fred&apos;</div><div class="line">  &#125;,</div><div class="line">  //请求超时设置，单位为毫秒</div><div class="line">  timeout: 1000,</div><div class="line">  //表明是否有跨域请求需要用到证书</div><div class="line">  withCredentials: false, // default</div><div class="line">  //adapter允许用户处理更易于测试的请求。返回一个Promise和一个有效的response</div><div class="line">  adapter: function (resolve, reject, config) &#123;</div><div class="line">    /* ... */</div><div class="line">  &#125;,</div><div class="line">  //auth表明提供凭证用于完成http的身份验证。这将会在headers中设置一个Authorization授权信息。自定义Authorization授权要设置在headers中。</div><div class="line">  auth: &#123;</div><div class="line">    username: &apos;janedoe&apos;,</div><div class="line">    password: &apos;s00pers3cret&apos;</div><div class="line">  &#125;</div><div class="line">  //表示服务器将返回响应的数据类型，有arraybuffer、blob、document、json、text、stream这6个类型，默认是json类似数据。</div><div class="line">  responseType: &apos;json&apos;, // default</div><div class="line">  // 用作 xsrf token 值的 cookie 名称</div><div class="line">  xsrfCookieName: &apos;XSRF-TOKEN&apos;, // default</div><div class="line">  // 带有 xsrf token 值 http head 名称</div><div class="line">  xsrfHeaderName: &apos;X-XSRF-TOKEN&apos;, // default</div><div class="line">  // 允许在上传过程中的做一些操作,允许在下载过程中的做一些操作</div><div class="line">  progress: function(progressEvent) &#123;</div><div class="line">    // Do whatever you want with the native progress event</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="响应的数据结构"><a href="#响应的数据结构" class="headerlink" title="响应的数据结构"></a>响应的数据结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  // 服务器返回的数据</div><div class="line">  data: &#123;&#125;,</div><div class="line"></div><div class="line">  // HTTP状态吗</div><div class="line">  status: 200,</div><div class="line"></div><div class="line">  // 服务器返回的消息</div><div class="line">  statusText: &apos;OK&apos;,</div><div class="line"></div><div class="line">  // 返回头</div><div class="line">  headers: &#123;&#125;,</div><div class="line"></div><div class="line">  // 在返回我们的配置</div><div class="line">  config: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;axios&quot;&gt;&lt;a href=&quot;#axios&quot; class=&quot;headerlink&quot; title=&quot;axios&quot;&gt;&lt;/a&gt;axios&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;功能特性&quot;&gt;&lt;a href=&quot;#功能特性&quot; class=&quot;headerlink&quot; title=&quot;功能特性&quot;&gt;&lt;/a&gt;功能特性&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;在浏览器中发送 XMLHttpRequests 请求&lt;/li&gt;
+&lt;li&gt;在 node.js 中发送 http请求&lt;/li&gt;
+&lt;li&gt;支持 Promise API&lt;/li&gt;
+&lt;li&gt;拦截请求和响应&lt;/li&gt;
+&lt;li&gt;转换请求和响应数据&lt;/li&gt;
+&lt;li&gt;自动转换 JSON 数据&lt;/li&gt;
+&lt;li&gt;客户端支持保护安全免受 XSRF 攻击 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;默认配置&quot;&gt;&lt;a href=&quot;#默认配置&quot; class=&quot;headerlink&quot; title=&quot;默认配置&quot;&gt;&lt;/a&gt;默认配置&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;可以为每一个请求指定默认配置。&lt;/p&gt;
+&lt;h2 id=&quot;全局-axios-默认配置&quot;&gt;&lt;a href=&quot;#全局-axios-默认配置&quot; class=&quot;headerlink&quot; title=&quot;全局 axios 默认配置&quot;&gt;&lt;/a&gt;全局 axios 默认配置&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;axios.defaults.baseURL = &amp;apos;https://api.example.com&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;axios.defaults.headers.common[&amp;apos;Authorization&amp;apos;] = AUTH_TOKEN;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;] = &amp;apos;application/x-www-form-urlencoded&amp;apos;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;自定义实例默认配置&quot;&gt;&lt;a href=&quot;#自定义实例默认配置&quot; class=&quot;headerlink&quot; title=&quot;自定义实例默认配置&quot;&gt;&lt;/a&gt;自定义实例默认配置&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let axiosIns = axios.create(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  baseURL: &amp;apos;https://api.example.com&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  timeout: 10 * 1000&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;请求方法别名&quot;&gt;&lt;a href=&quot;#请求方法别名&quot; class=&quot;headerlink&quot; title=&quot;请求方法别名&quot;&gt;&lt;/a&gt;请求方法别名&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;axios.get(url[, config])&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;axios.delete(url[, config])&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;axios.head(url[, config])&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;axios.post(url[, data[, config]])&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;axios.put(url[, data[, config]])&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;axios.patch(url[, data[, config]])&lt;/p&gt;
+    
     </summary>
     
+      <category term="axios" scheme="http://yoursite.com/categories/axios/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="ajax" scheme="http://yoursite.com/tags/ajax/"/>
     
   </entry>
   
@@ -48,12 +294,34 @@
     <link href="http://yoursite.com/2017/05/24/Vue%E8%B7%AF%E7%94%B1vue-route%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2017/05/24/Vue路由vue-route的使用/</id>
     <published>2017-05-24T13:22:40.000Z</published>
-    <updated>2017-05-24T13:22:40.033Z</updated>
+    <updated>2017-06-03T08:47:27.190Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue-router的使用"><a href="#vue-router的使用" class="headerlink" title="vue-router的使用"></a>vue-router的使用</h1><ul>
+<li><p>javascript部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)</div><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueRouter from &apos;vue-router&apos;</div><div class="line"></div><div class="line">Vue.use(VueRouter)</div><div class="line"></div><div class="line">// 1. 定义（路由）组件。</div><div class="line">// 可以从其他文件 import 进来</div><div class="line">import Foo from &apos;@/page/login.vue&apos;</div><div class="line">import Bar from &apos;@/page/login.vue&apos;</div><div class="line"></div><div class="line">// 2. 定义路由</div><div class="line">// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是</div><div class="line">// 通过 Vue.extend() 创建的组件构造器，</div><div class="line">// 或者，只是一个组件配置对象。</div><div class="line">// 我们晚点再讨论嵌套路由。</div><div class="line">const routes = [</div><div class="line">  &#123; path: &apos;/foo&apos;, component: Foo &#125;,</div><div class="line">  &#123; path: &apos;/bar&apos;, component: Bar &#125;</div><div class="line">]</div><div class="line"></div><div class="line">// 3. 创建 router 实例，然后传 `routes` 配置</div><div class="line">// 你还可以传别的配置参数, 不过先这么简单着吧。</div><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes // （缩写）相当于 routes: routes</div><div class="line">&#125;)</div><div class="line"></div><div class="line">// 4. 创建和挂载根实例。</div><div class="line">// 记得要通过 router 配置参数注入路由，</div><div class="line">// 从而让整个应用都有路由功能</div><div class="line">const app = new Vue(&#123;</div><div class="line">  router</div><div class="line">&#125;).$mount(&apos;#app&apos;)</div><div class="line"></div><div class="line">// 现在，应用已经启动了！</div></pre></td></tr></table></figure>
+</li>
+<li><p>html部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">  &lt;h1&gt;Hello App!&lt;/h1&gt;</div><div class="line">  &lt;p&gt;</div><div class="line">    &lt;!-- 使用 router-link 组件来导航. --&gt;</div><div class="line">    &lt;!-- 通过传入 `to` 属性指定链接. --&gt;</div><div class="line">    &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</div><div class="line">    &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt;</div><div class="line">    &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;</div><div class="line">  &lt;/p&gt;</div><div class="line">  &lt;!-- 路由出口 --&gt;</div><div class="line">  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</div><div class="line">  &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;vue-router的使用&quot;&gt;&lt;a href=&quot;#vue-router的使用&quot; class=&quot;headerlink&quot; title=&quot;vue-router的使用&quot;&gt;&lt;/a&gt;vue-router的使用&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;javascript部分&lt;/p&gt;
+
+    
     </summary>
     
+      <category term="vue-router" scheme="http://yoursite.com/categories/vue-router/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="路由" scheme="http://yoursite.com/tags/%E8%B7%AF%E7%94%B1/"/>
+    
+      <category term="vue-router" scheme="http://yoursite.com/tags/vue-router/"/>
     
   </entry>
   
@@ -180,14 +448,14 @@
     <link href="http://yoursite.com/2017/05/23/Vue2-0%E2%80%94%E2%80%94%E4%BB%8E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%88%B0%E5%8F%91%E5%B8%83/"/>
     <id>http://yoursite.com/2017/05/23/Vue2-0——从环境搭建到发布/</id>
     <published>2017-05-23T11:54:15.000Z</published>
-    <updated>2017-05-24T13:19:53.138Z</updated>
+    <updated>2017-06-03T05:35:36.880Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue开发环境的配置"><a href="#Vue开发环境的配置" class="headerlink" title="Vue开发环境的配置"></a>Vue开发环境的配置</h1><ol>
 <li>安装Nodejs<code>npm install nodejs</code></li>
 <li>安装webpack<code>npm install webpack</code></li>
-<li>安装vue脚手架<code>npm install vue-cli -g</code><h1 id="用vue-cli创建模板"><a href="#用vue-cli创建模板" class="headerlink" title="用vue-cli创建模板"></a>用vue-cli创建模板</h1></li>
+<li>安装vue脚手架<code>npm install vue-cli -g</code></li>
 </ol>
-<ul>
+<h1 id="用vue-cli创建模板"><a href="#用vue-cli创建模板" class="headerlink" title="用vue-cli创建模板"></a>用vue-cli创建模板</h1><ul>
 <li>vue-cli的模板分为两套<ul>
 <li>精简版：vue init webpack-simple 工程名字</li>
 <li>常规版：vue init webpack 工程名字</li>
@@ -235,9 +503,9 @@ components: { App }
       &lt;h1 id=&quot;Vue开发环境的配置&quot;&gt;&lt;a href=&quot;#Vue开发环境的配置&quot; class=&quot;headerlink&quot; title=&quot;Vue开发环境的配置&quot;&gt;&lt;/a&gt;Vue开发环境的配置&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;安装Nodejs&lt;code&gt;npm install nodejs&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;安装webpack&lt;code&gt;npm install webpack&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;安装vue脚手架&lt;code&gt;npm install vue-cli -g&lt;/code&gt;&lt;h1 id=&quot;用vue-cli创建模板&quot;&gt;&lt;a href=&quot;#用vue-cli创建模板&quot; class=&quot;headerlink&quot; title=&quot;用vue-cli创建模板&quot;&gt;&lt;/a&gt;用vue-cli创建模板&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;安装vue脚手架&lt;code&gt;npm install vue-cli -g&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;ul&gt;
+&lt;h1 id=&quot;用vue-cli创建模板&quot;&gt;&lt;a href=&quot;#用vue-cli创建模板&quot; class=&quot;headerlink&quot; title=&quot;用vue-cli创建模板&quot;&gt;&lt;/a&gt;用vue-cli创建模板&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;vue-cli的模板分为两套&lt;ul&gt;
 &lt;li&gt;精简版：vue init webpack-simple 工程名字&lt;/li&gt;
 &lt;li&gt;常规版：vue init webpack 工程名字&lt;/li&gt;

@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue,路由,vue-router," />
 
 
 
@@ -92,13 +92,17 @@
 
 
 
+<meta name="description" content="vue-router的使用 javascript部分 1234567891011121314151617181920212223242526272829303132333435// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)import Vue from &amp;apos;vue&amp;apos;import VueRouter from &amp;apos">
+<meta name="keywords" content="vue,路由,vue-router">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue路由vue-route的使用">
 <meta property="og:url" content="http://yoursite.com/2017/05/24/Vue路由vue-route的使用/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
-<meta property="og:updated_time" content="2017-05-24T13:22:40.033Z">
+<meta property="og:description" content="vue-router的使用 javascript部分 1234567891011121314151617181920212223242526272829303132333435// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)import Vue from &amp;apos;vue&amp;apos;import VueRouter from &amp;apos">
+<meta property="og:updated_time" content="2017-06-03T08:47:27.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue路由vue-route的使用">
+<meta name="twitter:description" content="vue-router的使用 javascript部分 1234567891011121314151617181920212223242526272829303132333435// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)import Vue from &amp;apos;vue&amp;apos;import VueRouter from &amp;apos">
 
 
 
@@ -325,6 +329,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue-router/" itemprop="url" rel="index">
+                    <span itemprop="name">vue-router</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -360,7 +386,15 @@
       
 
       
-        
+        <h1 id="vue-router的使用"><a href="#vue-router的使用" class="headerlink" title="vue-router的使用"></a>vue-router的使用</h1><ul>
+<li><p>javascript部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)</div><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueRouter from &apos;vue-router&apos;</div><div class="line"></div><div class="line">Vue.use(VueRouter)</div><div class="line"></div><div class="line">// 1. 定义（路由）组件。</div><div class="line">// 可以从其他文件 import 进来</div><div class="line">import Foo from &apos;@/page/login.vue&apos;</div><div class="line">import Bar from &apos;@/page/login.vue&apos;</div><div class="line"></div><div class="line">// 2. 定义路由</div><div class="line">// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是</div><div class="line">// 通过 Vue.extend() 创建的组件构造器，</div><div class="line">// 或者，只是一个组件配置对象。</div><div class="line">// 我们晚点再讨论嵌套路由。</div><div class="line">const routes = [</div><div class="line">  &#123; path: &apos;/foo&apos;, component: Foo &#125;,</div><div class="line">  &#123; path: &apos;/bar&apos;, component: Bar &#125;</div><div class="line">]</div><div class="line"></div><div class="line">// 3. 创建 router 实例，然后传 `routes` 配置</div><div class="line">// 你还可以传别的配置参数, 不过先这么简单着吧。</div><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes // （缩写）相当于 routes: routes</div><div class="line">&#125;)</div><div class="line"></div><div class="line">// 4. 创建和挂载根实例。</div><div class="line">// 记得要通过 router 配置参数注入路由，</div><div class="line">// 从而让整个应用都有路由功能</div><div class="line">const app = new Vue(&#123;</div><div class="line">  router</div><div class="line">&#125;).$mount(&apos;#app&apos;)</div><div class="line"></div><div class="line">// 现在，应用已经启动了！</div></pre></td></tr></table></figure>
+</li>
+<li><p>html部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">  &lt;h1&gt;Hello App!&lt;/h1&gt;</div><div class="line">  &lt;p&gt;</div><div class="line">    &lt;!-- 使用 router-link 组件来导航. --&gt;</div><div class="line">    &lt;!-- 通过传入 `to` 属性指定链接. --&gt;</div><div class="line">    &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</div><div class="line">    &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt;</div><div class="line">    &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;</div><div class="line">  &lt;/p&gt;</div><div class="line">  &lt;!-- 路由出口 --&gt;</div><div class="line">  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</div><div class="line">  &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
       
     </div>
 
@@ -386,6 +420,16 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/tags/路由/" rel="tag"># 路由</a>
+          
+            <a href="/tags/vue-router/" rel="tag"># vue-router</a>
+          
+        </div>
       
 
       
@@ -455,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ojvil4eq9.bkt.clouddn.com/Octocat.jpg"
@@ -471,7 +524,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -482,7 +535,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -493,7 +546,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -563,6 +616,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vue-router的使用"><span class="nav-number">1.</span> <span class="nav-text">vue-router的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
