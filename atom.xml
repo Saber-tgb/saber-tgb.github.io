@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-16T02:58:41.054Z</updated>
+  <updated>2017-06-27T09:35:45.155Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,254 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue.js学习三</title>
+    <link href="http://yoursite.com/2017/06/27/Vue-js%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
+    <id>http://yoursite.com/2017/06/27/Vue-js学习三/</id>
+    <published>2017-06-27T09:33:18.670Z</published>
+    <updated>2017-06-27T09:35:45.155Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h2 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;vue的生命周期详解&quot;&gt;&lt;a href=&quot;#vue的生命周期详解&quot; class=&quot;headerlink&quot; title=&quot;vue的生命周期详解&quot;&gt;&lt;/a&gt;vue的生命周期详解&lt;/h2&gt;&lt;h2 id=&quot;vue自定义指令&quot;&gt;&lt;a href=&quot;#vue自定义指令&quot; cla
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue.js学习二</title>
+    <link href="http://yoursite.com/2017/06/23/Vue-js%E5%AD%A6%E4%B9%A0%E4%BA%8C/"/>
+    <id>http://yoursite.com/2017/06/23/Vue-js学习二/</id>
+    <published>2017-06-23T02:38:34.000Z</published>
+    <updated>2017-06-27T09:33:46.921Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Class与Style绑定"><a href="#Class与Style绑定" class="headerlink" title="Class与Style绑定"></a>Class与Style绑定</h2><h3 id="绑定HTML-Class"><a href="#绑定HTML-Class" class="headerlink" title="绑定HTML Class"></a>绑定HTML Class</h3><ol>
+<li>对象语法：</li>
+</ol>
+<ul>
+<li><p>给<code>v-bind:class</code>一个对象，以动态切换class,语法表示<code>classactive</code>的更新将取决于数据属性 isActive 是否为真值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;&#123; active: isActive &#125;&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在对象中传入更多属性用来动态切换多个 class ,v-bind:class 指令可以与普通的 class 属性共存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;static&quot;</div><div class="line">     v-bind:class=&quot;&#123; active: isActive, &apos;text-danger&apos;: hasError &#125;&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>直接绑定数据里的一个对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;classObject&quot;&gt;&lt;/div&gt;</div><div class="line">data: &#123;</div><div class="line">  classObject: &#123;</div><div class="line">    active: true,</div><div class="line">    &apos;text-danger&apos;: false</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>数组语法</li>
+</ol>
+<ul>
+<li><p>把一个数组传给 v-bind:class ，以应用一个 class 列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;[activeClass,errorClass]&quot;&gt;&lt;/div&gt;</div><div class="line">data: &#123;</div><div class="line">    activeClass: &apos;active&apos;,</div><div class="line">    errorClass: &apos;text-danger&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>用三元表达式，据条件切换列表中的 class</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;[isActive ? activeClass : &apos;&apos;, errorClass]&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><ul>
+<li><code>v-if</code>是“真正的”条件渲染，如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</li>
+<li><code>v-show</code>不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换</li>
+<li>区别：v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件不太可能改变，则使用 v-if 较好</li>
+</ul>
+<a id="more"></a>
+<h3 id="vue时间处理器"><a href="#vue时间处理器" class="headerlink" title="vue时间处理器"></a>vue时间处理器</h3><ul>
+<li>用 <code>v-on</code> 指令监听 DOM 事件来触发一些 JavaScript 代码</li>
+<li><code>v-on</code> 可以接收一个定义的方法来调用，方法定义在<code>methods</code><h3 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h3></li>
+<li><p>vue推荐methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节,当我们要调用 event.preventDefault() 或 event.stopPropagation(),就可以使用事件修饰符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 阻止单击事件冒泡 --&gt;</div><div class="line">&lt;a v-on:click.stop=&quot;doThis&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 提交事件不再重载页面 --&gt;</div><div class="line">&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;</div><div class="line">&lt;!-- 修饰符可以串联  --&gt;</div><div class="line">&lt;a v-on:click.stop.prevent=&quot;doThat&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 只有修饰符 --&gt;</div><div class="line">&lt;form v-on:submit.prevent&gt;&lt;/form&gt;</div><div class="line">&lt;!-- 添加事件侦听器时使用事件捕获模式 --&gt;</div><div class="line">&lt;div v-on:click.capture=&quot;doThis&quot;&gt;...&lt;/div&gt;</div><div class="line">&lt;!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 --&gt;</div><div class="line">&lt;div v-on:click.self=&quot;doThat&quot;&gt;...&lt;/div&gt;</div><div class="line">&lt;!-- 点击事件将只会触发一次 --&gt;</div><div class="line">&lt;div v-on:click.once=&apos;doThat&apos;&gt;...&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用修饰符时，顺序很重要；相应的代码会以同样的顺序产生。因此，用 @click.prevent.self 会阻止所有的点击，而 @click.self.prevent 只会阻止元素上的点击。</p>
+<h3 id="关键修饰符"><a href="#关键修饰符" class="headerlink" title="关键修饰符"></a>关键修饰符</h3></li>
+<li><p>Vue 允许为 v-on 在监听键盘事件时添加关键修饰符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 只有在 keyCode 是 13 时调用 vm.submit() --&gt;</div><div class="line">&lt;input v-on:keyup.13=&quot;submit&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Vue 为最常用的按键提供了别名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 同上 --&gt;</div><div class="line">&lt;input v-on:keyup.enter=&quot;submit&quot;&gt;</div><div class="line">&lt;!-- 缩写语法 --&gt;</div><div class="line">&lt;input @keyup.enter=&quot;submit&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>全部的按键别名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.enter</div><div class="line">.tab</div><div class="line">.delete (捕获 “删除” 和 “退格” 键)</div><div class="line">.esc</div><div class="line">.space</div><div class="line">.up</div><div class="line">.down</div><div class="line">.left</div><div class="line">.right</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="vue的数据绑定"><a href="#vue的数据绑定" class="headerlink" title="vue的数据绑定"></a>vue的数据绑定</h2><ul>
+<li>“Mustache” 语法（双大括号）<code>{{text}}</code> 单向的数据绑定</li>
+<li><code>v-model</code> 双向数据绑定<h3 id="v-model可以添加修饰符"><a href="#v-model可以添加修饰符" class="headerlink" title="v-model可以添加修饰符"></a><code>v-model</code>可以添加修饰符</h3></li>
+<li><p>可以添加一个修饰符 lazy ,从而转变为在 change 事件中同步：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 在 &quot;change&quot; 而不是 &quot;input&quot; 事件中更新 --&gt;</div><div class="line">&lt;input v-model.lazy=&quot;msg&quot; &gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>将用户的输入值转为 Number 类型（如果原值的转换结果为 NaN 则返回原值），可以添加一个修饰符 number 给 v-model 来处理输入值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input v-model.number=&apos;age&apos; type=&apos;number&apos;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果要自动过滤用户输入的首尾空格，可以添加 trim 修饰符到 v-model 上过滤输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input v-model.trim=&quot;msg&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Class与Style绑定&quot;&gt;&lt;a href=&quot;#Class与Style绑定&quot; class=&quot;headerlink&quot; title=&quot;Class与Style绑定&quot;&gt;&lt;/a&gt;Class与Style绑定&lt;/h2&gt;&lt;h3 id=&quot;绑定HTML-Class&quot;&gt;&lt;a href=&quot;#绑定HTML-Class&quot; class=&quot;headerlink&quot; title=&quot;绑定HTML Class&quot;&gt;&lt;/a&gt;绑定HTML Class&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;对象语法：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;给&lt;code&gt;v-bind:class&lt;/code&gt;一个对象，以动态切换class,语法表示&lt;code&gt;classactive&lt;/code&gt;的更新将取决于数据属性 isActive 是否为真值&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div v-bind:class=&amp;quot;&amp;#123; active: isActive &amp;#125;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在对象中传入更多属性用来动态切换多个 class ,v-bind:class 指令可以与普通的 class 属性共存&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;static&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;     v-bind:class=&amp;quot;&amp;#123; active: isActive, &amp;apos;text-danger&amp;apos;: hasError &amp;#125;&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;直接绑定数据里的一个对象&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div v-bind:class=&amp;quot;classObject&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;data: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  classObject: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    active: true,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;apos;text-danger&amp;apos;: false&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;数组语法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;把一个数组传给 v-bind:class ，以应用一个 class 列表：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div v-bind:class=&amp;quot;[activeClass,errorClass]&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;data: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    activeClass: &amp;apos;active&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    errorClass: &amp;apos;text-danger&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用三元表达式，据条件切换列表中的 class&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div v-bind:class=&amp;quot;[isActive ? activeClass : &amp;apos;&amp;apos;, errorClass]&amp;quot;&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;条件渲染&quot;&gt;&lt;a href=&quot;#条件渲染&quot; class=&quot;headerlink&quot; title=&quot;条件渲染&quot;&gt;&lt;/a&gt;条件渲染&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;v-if&lt;/code&gt;是“真正的”条件渲染，如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;v-show&lt;/code&gt;不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换&lt;/li&gt;
+&lt;li&gt;区别：v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件不太可能改变，则使用 v-if 较好&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo搭建博客</title>
+    <link href="http://yoursite.com/2017/06/23/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2017/06/23/hexo搭建博客/</id>
+    <published>2017-06-23T02:29:13.000Z</published>
+    <updated>2017-06-23T02:37:27.236Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
+<li>第一步、执行npm install hexo-cli -g 安装hexo</li>
+<li>第二步、找到你想写博客的文件夹，执行hexo init blog生成文件</li>
+<li>第三步、在生成的文件blog中执行hexo server，访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></li>
+</ul>
+<h2 id="安装和配置Next主题"><a href="#安装和配置Next主题" class="headerlink" title="安装和配置Next主题"></a>安装和配置Next主题</h2><ul>
+<li>在hexo目录下右键Git bash通过命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>next主题自动下载到themes目录下</li>
+<li>在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next<code>theme:next</code></li>
+<li><code>hexo s</code>验证主题配置是否成功，浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
+</ul>
+<h2 id="hexo书写博客"><a href="#hexo书写博客" class="headerlink" title="hexo书写博客"></a>hexo书写博客</h2><ul>
+<li>在source文件夹的_posts里面,通过<code>hexo new 博客标题</code>命令生成markdown文件</li>
+<li>文章写好后，执行<code>hexo generate</code>命令生成静态的html文件</li>
+</ul>
+<h2 id="发送博客到github上"><a href="#发送博客到github上" class="headerlink" title="发送博客到github上"></a>发送博客到github上</h2><ul>
+<li>我们把public里面的文件发布到github上面</li>
+<li>在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io</li>
+<li>用git发送到githoub是一定要发送到master分支</li>
+<li>不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确<a id="more"></a>
+<h2 id="next主题的配置和优化"><a href="#next主题的配置和优化" class="headerlink" title="next主题的配置和优化"></a>next主题的配置和优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div></pre></td><td class="code"><pre><div class="line"># ---------------------------------------------------------------</div><div class="line"># Site Information Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Place your favicon.ico to /source directory.</div><div class="line">favicon: /favicon.ico   #站标  可以放在hexo文件夹下的/source里</div><div class="line"></div><div class="line"># Set default keywords (Use a comma to separate)</div><div class="line">keywords: &quot;为学,willxue,willxue.top&quot;  #网站关键字</div><div class="line"></div><div class="line"># Set rss to false to disable feed link.</div><div class="line"># Leave rss as empty to use site&apos;s feed link.</div><div class="line"># Set rss to specific value if you have burned your feed already.</div><div class="line">rss:  #rss这里不设置 引文站点配置文件已经配置了 需要安装插件</div><div class="line"></div><div class="line"># Specify the date when the site was setup</div><div class="line">since: 1990  #网站时间 从xx开始 类似 1990-2016</div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Menu Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># When running hexo in a subdirectory (e.g. domain.tld/blog)</div><div class="line"># Remove leading slashes ( &quot;/archives&quot; -&gt; &quot;archives&quot; )</div><div class="line">menu: #菜单路径设置 如果hexo在二级目录放置要去掉/</div><div class="line">  home: /</div><div class="line">  archives: /archives #归档</div><div class="line">  tags: /tags #标签</div><div class="line">  categories: /categories  #分类</div><div class="line">  about: /about #关于我</div><div class="line">  commonweal: /404.html  #公益404</div><div class="line"></div><div class="line"></div><div class="line"># Enable/Disable menu icons.</div><div class="line"># Icon Mapping:</div><div class="line">#   Map a menu item to a specific FontAwesome icon name.</div><div class="line">#   Key is the name of menu item and value is the name of FontAwsome icon.</div><div class="line">#   When an question mask icon presenting up means that the item has no mapping icon.</div><div class="line">menu_icons:  #icon图标</div><div class="line">  enable: true</div><div class="line">  # Icon Mapping.</div><div class="line">  home: home</div><div class="line">  about: user</div><div class="line">  categories: th</div><div class="line">  tags: tags</div><div class="line">  archives: archive</div><div class="line">  commonweal: heartbeat</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Scheme Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Schemes  #next的三个scheme</div><div class="line">#scheme: Muse</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Sidebar Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"></div><div class="line"># Social links   #社交链接</div><div class="line">social:</div><div class="line">  GitHub:</div><div class="line">  Weibo:</div><div class="line">  Others:</div><div class="line"></div><div class="line"># Social Icons  #社交的图标</div><div class="line">social_icons:</div><div class="line">  enable: true</div><div class="line">  # Icon Mappings</div><div class="line">  GitHub: github</div><div class="line">  Twitter: twitter</div><div class="line">  Weibo: weibo</div><div class="line"></div><div class="line"></div><div class="line"># Sidebar Avatar</div><div class="line"># in theme directory(source/images): /images/avatar.jpg</div><div class="line"># in site  directory(source/uploads): /uploads/avatar.jpg</div><div class="line"># default : /images/default_avatar.jpg</div><div class="line">avatar: http://7xrz9n.com1.z0.glb.clouddn.com/logo.png #头像</div><div class="line"></div><div class="line"></div><div class="line"># TOC in the Sidebar  #文章自动显示目录</div><div class="line">toc:</div><div class="line">  enable: true</div><div class="line"></div><div class="line">  # Automatically add list number to toc.  #目录是否自动显示数字序号</div><div class="line">  number: false</div><div class="line"></div><div class="line"></div><div class="line"># Creative Commons 4.0 International License.</div><div class="line"># http://creativecommons.org/  #自由协议</div><div class="line"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</div><div class="line">#creative_commons: by-nc-sa</div><div class="line">#creative_commons:</div><div class="line"></div><div class="line">sidebar:</div><div class="line">  # Sidebar Position, available value: left | right</div><div class="line">  position: left</div><div class="line">  #position: right</div><div class="line"></div><div class="line">  # Sidebar Display, available value:</div><div class="line">  #  - post    expand on posts automatically. Default.</div><div class="line">  #  - always  expand for all pages automatically</div><div class="line">  #  - hide    expand only when click on the sidebar toggle icon.</div><div class="line">  #  - remove  Totally remove sidebar including sidebar toggle icon.</div><div class="line">  display: post</div><div class="line">  #display: always</div><div class="line">  #display: hide</div><div class="line">  #display: remove</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Misc Theme Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Custom Logo.</div><div class="line"># !!Only available for Default Scheme currently.</div><div class="line"># Options:</div><div class="line">#   enabled: [true/false] - Replace with specific image</div><div class="line">#   image: url-of-image   - Images&apos;s url</div><div class="line">custom_logo:</div><div class="line">  enabled: false</div><div class="line">  image:</div><div class="line"></div><div class="line"></div><div class="line"># Code Highlight theme</div><div class="line"># Available value:</div><div class="line">#    normal | night | night eighties | night blue | night bright</div><div class="line"># https://github.com/chriskempson/tomorrow-theme</div><div class="line">highlight_theme: night</div><div class="line"></div><div class="line"># Automatically scroll page to section which is under &lt;!-- more --&gt; mark.</div><div class="line">scroll_to_more: true</div><div class="line"></div><div class="line"># Automatically Excerpt</div><div class="line">auto_excerpt:</div><div class="line">  enable: false</div><div class="line">  length: 150</div><div class="line"></div><div class="line"># Use Lato font</div><div class="line">use_font_lato: true</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Third Party Services Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># MathJax Support</div><div class="line">mathjax:</div><div class="line"></div><div class="line"></div><div class="line"># Swiftype Search API Key</div><div class="line">#swiftype_key:</div><div class="line"></div><div class="line"># Baidu Analytics ID</div><div class="line">#baidu_analytics:</div><div class="line"></div><div class="line"># Duoshuo ShortName</div><div class="line">duoshuo_shortname: imwillxue</div><div class="line"></div><div class="line"># Disqus</div><div class="line">#disqus_shortname:</div><div class="line"></div><div class="line"># Baidu Share</div><div class="line"># Available value:</div><div class="line">#    button | slide</div><div class="line">#baidushare:</div><div class="line">##  type: button</div><div class="line"></div><div class="line"># Share</div><div class="line">#jiathis:</div><div class="line">#add_this_id:</div><div class="line"></div><div class="line"># Share</div><div class="line">duoshuo_share: true</div><div class="line"></div><div class="line"># Google Webmaster tools verification setting</div><div class="line"># See: https://www.google.com/webmasters/</div><div class="line">#google_site_verification:</div><div class="line"></div><div class="line"></div><div class="line"># Google Analytics</div><div class="line">#google_analytics:</div><div class="line"></div><div class="line"># CNZZ count</div><div class="line">#cnzz_siteid:</div><div class="line"></div><div class="line"></div><div class="line"># Make duoshuo show UA</div><div class="line"># user_id must NOT be null when admin_enable is true!</div><div class="line"># you can visit http://dev.duoshuo.com get duoshuo user id.</div><div class="line">duoshuo_info:</div><div class="line">  ua_enable: true</div><div class="line">  admin_enable: true</div><div class="line">  user_id: 6262178932196377345</div><div class="line">  admin_nickname: 神</div><div class="line"></div><div class="line"></div><div class="line"># Facebook SDK Support.</div><div class="line"># https://github.com/iissnan/hexo-theme-next/pull/410</div><div class="line">facebook_sdk:</div><div class="line">  enable: false</div><div class="line">  app_id:       #&lt;app_id&gt;</div><div class="line">  fb_admin:     #&lt;user_id&gt;</div><div class="line">  like_button:  #true</div><div class="line">  webmaster:    #true</div><div class="line"></div><div class="line"></div><div class="line"># Show number of visitors to each article.</div><div class="line"># You can visit https://leancloud.cn get AppID and AppKey.</div><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: QImiFijLSOHYufsazlBVlwLg-gzGzoHsz</div><div class="line">  app_key: AMcYaNHy9Y5OdH42k0d4uSED</div><div class="line"></div><div class="line"></div><div class="line"># Tencent analytics ID</div><div class="line"># tencent_analytics:</div><div class="line"></div><div class="line"># Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO</div><div class="line">baidu_push: true</div><div class="line"></div><div class="line">## 文章末尾是否显示打赏按钮</div><div class="line">donate:</div><div class="line">  enable: true</div><div class="line">  text: Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！</div><div class="line">  alipay:</div><div class="line">  wechat:</div><div class="line"></div><div class="line"></div><div class="line">#! ---------------------------------------------------------------</div><div class="line">#! DO NOT EDIT THE FOLLOWING SETTINGS</div><div class="line">#! UNLESS YOU KNOW WHAT YOU ARE DOING</div><div class="line">#! ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Motion</div><div class="line">use_motion: true</div><div class="line"></div><div class="line"># Fancybox</div><div class="line">fancybox: true</div><div class="line"></div><div class="line"># Static files</div><div class="line">vendors: vendors</div><div class="line">css: css</div><div class="line">js: js</div><div class="line">images: images</div><div class="line"></div><div class="line"># Theme version</div><div class="line">version: 0.5.0</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;第一步、执行npm install hexo-cli -g 安装hexo&lt;/li&gt;
+&lt;li&gt;第二步、找到你想写博客的文件夹，执行hexo init blog生成文件&lt;/li&gt;
+&lt;li&gt;第三步、在生成的文件blog中执行hexo server，访问&lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;安装和配置Next主题&quot;&gt;&lt;a href=&quot;#安装和配置Next主题&quot; class=&quot;headerlink&quot; title=&quot;安装和配置Next主题&quot;&gt;&lt;/a&gt;安装和配置Next主题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在hexo目录下右键Git bash通过命令&lt;code&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/code&gt;&lt;br&gt;next主题自动下载到themes目录下&lt;/li&gt;
+&lt;li&gt;在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next&lt;code&gt;theme:next&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo s&lt;/code&gt;验证主题配置是否成功，浏览器输入 &lt;a href=&quot;http://localhost:4000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;hexo书写博客&quot;&gt;&lt;a href=&quot;#hexo书写博客&quot; class=&quot;headerlink&quot; title=&quot;hexo书写博客&quot;&gt;&lt;/a&gt;hexo书写博客&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在source文件夹的_posts里面,通过&lt;code&gt;hexo new 博客标题&lt;/code&gt;命令生成markdown文件&lt;/li&gt;
+&lt;li&gt;文章写好后，执行&lt;code&gt;hexo generate&lt;/code&gt;命令生成静态的html文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;发送博客到github上&quot;&gt;&lt;a href=&quot;#发送博客到github上&quot; class=&quot;headerlink&quot; title=&quot;发送博客到github上&quot;&gt;&lt;/a&gt;发送博客到github上&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;我们把public里面的文件发布到github上面&lt;/li&gt;
+&lt;li&gt;在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io&lt;/li&gt;
+&lt;li&gt;用git发送到githoub是一定要发送到master分支&lt;/li&gt;
+&lt;li&gt;不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信页面开发的注意事项</title>
+    <link href="http://yoursite.com/2017/06/19/%E5%BE%AE%E4%BF%A1%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>http://yoursite.com/2017/06/19/微信页面开发的注意事项/</id>
+    <published>2017-06-19T12:21:27.000Z</published>
+    <updated>2017-06-19T12:50:19.164Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="页面搜索框"><a href="#页面搜索框" class="headerlink" title="页面搜索框"></a>页面搜索框</h2><ul>
+<li>为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边</li>
+<li><p>实现手机键盘显示搜索按钮<code>&lt;form&gt;</code>标签里面包含<code>&lt;input type=search&gt;</code>，<code>&lt;form&gt;</code>标签必须有<code>action</code>属性,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</div><div class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>vue绑定事件在<code>&lt;input&gt;</code>标签上,用监听键盘事件<code>@keydown</code>,要使用<code>e.preventDefault()</code>阻止默认事件触发。</p>
+</li>
+</ul>
+<h2 id="页面1px边框显示问题"><a href="#页面1px边框显示问题" class="headerlink" title="页面1px边框显示问题"></a>页面1px边框显示问题</h2><ul>
+<li>使用淘宝的flexible.js插件转化为1rem.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;页面搜索框&quot;&gt;&lt;a href=&quot;#页面搜索框&quot; class=&quot;headerlink&quot; title=&quot;页面搜索框&quot;&gt;&lt;/a&gt;页面搜索框&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边&lt;/li&gt;
+&lt;li
+    
+    </summary>
+    
+      <category term="微信" scheme="http://yoursite.com/categories/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="移动端" scheme="http://yoursite.com/categories/%E5%BE%AE%E4%BF%A1/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="移动端" scheme="http://yoursite.com/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>npm,browser-sync,gulp工具的学习</title>
     <link href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/</id>
     <published>2017-06-16T02:56:02.000Z</published>
-    <updated>2017-06-16T02:58:41.054Z</updated>
+    <updated>2017-06-20T08:23:44.157Z</updated>
     
     <content type="html"><![CDATA[<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
 <li>官网[<a href="https://www.npmjs.com" target="_blank" rel="external">https://www.npmjs.com</a>]</li>
@@ -64,9 +307,8 @@
 </li>
 <li>dest(‘./minjs/‘)// 指定处理后的文件的输出路径.</li>
 <li>watch(‘./*.js’,[‘任务名1’,’任务名2’]);</li>
-<li>run(‘任务名’);//执行指定的任务.</li>
-</ul>
-<h3 id="gulp的安装"><a href="#gulp的安装" class="headerlink" title="gulp的安装"></a>gulp的安装</h3><ul>
+<li>run(‘任务名’);//执行指定的任务.<a id="more"></a>
+<h3 id="gulp的安装"><a href="#gulp的安装" class="headerlink" title="gulp的安装"></a>gulp的安装</h3></li>
 <li>使用npm 进行安装</li>
 <li><code>npm install gulp-cli -g</code>;</li>
 </ul>
@@ -102,7 +344,48 @@
     <summary type="html">
     
       &lt;h3 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; title=&quot;npm&quot;&gt;&lt;/a&gt;npm&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;官网[&lt;a href=&quot;https://www.npmjs.com&quot; target=&quot;_blank&quot; rel=&quot;exte
+&lt;li&gt;官网[&lt;a href=&quot;https://www.npmjs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.npmjs.com&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;node package manager&lt;/li&gt;
+&lt;li&gt;命令:&lt;ul&gt;
+&lt;li&gt;初始化:&lt;code&gt;npm init&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装指定包:&lt;code&gt;npm install jquery --save&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除指定包:&lt;code&gt;npm remove jquery --save&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery&lt;/li&gt;
+&lt;li&gt;下载安装package.json中dependencies属性对的文件:&lt;code&gt;npm install --production&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;npm的使用步骤&lt;ul&gt;
+&lt;li&gt;第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）&lt;/li&gt;
+&lt;li&gt;第二步、执行npm init -y&lt;/li&gt;
+&lt;li&gt;第三步、安装需要的js库 npm install –save jquery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;browser-sync&quot;&gt;&lt;a href=&quot;#browser-sync&quot; class=&quot;headerlink&quot; title=&quot;browser-sync&quot;&gt;&lt;/a&gt;browser-sync&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;更改代码之后自动刷新浏览器&lt;/li&gt;
+&lt;li&gt;需要使用npm进行全局安装:&lt;code&gt;npm install browser-sync -g&lt;/code&gt;,-g表示安装到全局&lt;/li&gt;
+&lt;li&gt;使用:&lt;code&gt;browser-sync start --server --files &amp;quot;./index.html,app.css,./css/*.css,*.*&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;gulp&quot;&gt;&lt;a href=&quot;#gulp&quot; class=&quot;headerlink&quot; title=&quot;gulp&quot;&gt;&lt;/a&gt;gulp&lt;/h2&gt;&lt;p&gt;  &lt;a href=&quot;http://www.gulpjs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;br&gt;  &lt;a href=&quot;http://www.gulpjs.com.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中文网&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;前端自动化构建工具&lt;br&gt;js压缩,var x,xname，混淆&lt;br&gt;合并.&lt;br&gt;css压缩&lt;br&gt;html压压缩&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;grunt ,webpack…&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;核心就5个方法&quot;&gt;&lt;a href=&quot;#核心就5个方法&quot; class=&quot;headerlink&quot; title=&quot;核心就5个方法&quot;&gt;&lt;/a&gt;核心就5个方法&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;task,gulp中是一个个任务的形式来实现功能。&lt;ul&gt;
+&lt;li&gt;task(‘任务名’,function(){&lt;br&gt;…..&lt;br&gt;});&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;src&lt;ul&gt;
+&lt;li&gt;src(‘./*.js’)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;dest(‘./minjs/‘)// 指定处理后的文件的输出路径.&lt;/li&gt;
+&lt;li&gt;watch(‘./*.js’,[‘任务名1’,’任务名2’]);&lt;/li&gt;
+&lt;li&gt;run(‘任务名’);//执行指定的任务.
     
     </summary>
     
@@ -489,9 +772,14 @@
     <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80CSS%E4%B8%80/"/>
     <id>http://yoursite.com/2017/06/03/扎实基础CSS一/</id>
     <published>2017-06-03T08:08:12.000Z</published>
-    <updated>2017-06-03T08:08:12.916Z</updated>
+    <updated>2017-06-20T14:46:50.327Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="文本超出显示省略号"><a href="#文本超出显示省略号" class="headerlink" title="文本超出显示省略号"></a>文本超出显示省略号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">width: 300px //要设置宽度</div><div class="line">overflow: hidden;</div><div class="line">white-space: nowrap;</div><div class="line"> text-overflow: ellipsis;</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;文本超出显示省略号&quot;&gt;&lt;a href=&quot;#文本超出显示省略号&quot; class=&quot;headerlink&quot; title=&quot;文本超出显示省略号&quot;&gt;&lt;/a&gt;文本超出显示省略号&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t
     
     </summary>
     
@@ -503,12 +791,68 @@
     <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80HTML%E4%B8%80/"/>
     <id>http://yoursite.com/2017/06/03/扎实基础HTML一/</id>
     <published>2017-06-03T08:07:54.000Z</published>
-    <updated>2017-06-03T08:07:54.052Z</updated>
+    <updated>2017-06-20T14:39:51.983Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="html5新增的音频和视频"><a href="#html5新增的音频和视频" class="headerlink" title="html5新增的音频和视频"></a>html5新增的音频和视频</h2><ul>
+<li>音频audio<code>&lt;audio src=&#39;&#39;&gt;&lt;/audio&gt;</code></li>
+<li>视频video<code>&lt;video src=&#39;&#39;&gt;&lt;/video&gt;</code></li>
+</ul>
+<h2 id="html5语义化标签的使用"><a href="#html5语义化标签的使用" class="headerlink" title="html5语义化标签的使用"></a>html5语义化标签的使用</h2><ol>
+<li>头部–header和nav标签</li>
+</ol>
+<ul>
+<li>header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导航栏nav。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;header&gt;</div><div class="line">    &lt;h1&gt;html5语义化标签&lt;/h1&gt;</div><div class="line">    &lt;nav&gt;</div><div class="line">        &lt;h1&gt;导航&lt;/h1&gt;</div><div class="line">        &lt;ul&gt;</div><div class="line">            &lt;li&gt;章节标签&lt;/li&gt;</div><div class="line">            &lt;li&gt;标题标签&lt;/li&gt;</div><div class="line">        &lt;/ul&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line">&lt;/header&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>主体部分——main和section</li>
+</ol>
+<ul>
+<li>main标签表示页面的主体部份，section标签给页面区分不同的章节。section是一个章节标签，构建页面的大纲(outline)。除此外还有nav、artical和aside三个标签能够勾勒页面的轮廓。章节标签通常会带上h1~h6的标题标签。不同的章节标题是独立的，嵌套的章节标题也跟着嵌套。另外多个标题可以用hgroup包括起来，在页面提纲里成为独立的一条内容。</li>
+<li><code>&lt;hgroup&gt;</code>标签用于对网页或区段（section）的标题进行组合。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> &lt;main&gt;</div><div class="line">    &lt;section&gt;</div><div class="line">        &lt;hgroup&gt;</div><div class="line">            &lt;h2&gt;章节标签&lt;/h2&gt;</div><div class="line">            &lt;p&gt;为页面区分不同的章节&lt;/p&gt;</div><div class="line">        &lt;/hgroup&gt;</div><div class="line">        &lt;div&gt;包括section article nav aside &lt;/div&gt;</div><div class="line">    &lt;/section&gt;</div><div class="line">    &lt;section&gt;</div><div class="line">        &lt;hgroup&gt;</div><div class="line">            &lt;h2&gt;标题标签&lt;/h2&gt;</div><div class="line">            &lt;p&gt;为不同的章节定义标题&lt;/p&gt;</div><div class="line">        &lt;/hgroup&gt; </div><div class="line">        &lt;div&gt;h1 h2 h3 h4 h5 h6六个标题标签&lt;/div&gt;</div><div class="line">    &lt;/section&gt;</div><div class="line">&lt;/main&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>尾部——footer</li>
+</ol>
+<ul>
+<li>footer和header一样，用在不同的章节里，可以显示该章节（如body整个页面）相关的外链、版权等信息。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;footer&gt;</div><div class="line">        &lt;p&gt;copyright &amp;copy hello, world&lt;/p&gt;</div><div class="line">&lt;/footer&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>div和section、section和article的区别</li>
+</ol>
+<ul>
+<li>div是一个普通的容器，而section不能当作一个普通的容器使用，使用section要让其起outline的作用，而article比section的章节概念更强。article适用于独立性强的内容，如本身就是一篇文章、博客，或者用户的评论等，article比section更加强调需要包含一个标题标签h1~h6。如果使用article的语义性更好的时候，就不用section。或者，内容可再继续细分章节的也应使用article。</li>
+<li>章节的内容是独立的，并且可以嵌套</li>
+<li>独立是指每个章节都可以有自己的标题标签、header、footer和nav，并且章节可以相互嵌套<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;h1&gt;html标签&lt;/h1&gt;</div><div class="line">    &lt;article&gt;</div><div class="line">        &lt;h1&gt;html5标签&lt;/h1&gt;</div><div class="line">        &lt;section&gt;</div><div class="line">            &lt;h1&gt;标题标签&lt;/h1&gt;</div><div class="line">        &lt;/section&gt;</div><div class="line">        &lt;section&gt;</div><div class="line">            &lt;h1&gt;章节标签&lt;/h1&gt;</div><div class="line">        &lt;/section&gt;</div><div class="line">    &lt;/article&gt;</div><div class="line">    &lt;article&gt;</div><div class="line">        &lt;h1&gt;html4标签&lt;/h1&gt;</div><div class="line">    &lt;/article&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>5 其它常用标签</p>
+<ul>
+<li><p>figure用作照片及其注释的容器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;figure&gt;</div><div class="line">       &lt;img src=&quot;Mars.jpg&quot; alt=&quot;&quot;&gt;</div><div class="line">       &lt;figcaption&gt;火星&lt;/figcaption&gt;</div><div class="line">   &lt;/figure&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>aside的内容与页面的主体内容相切，可用作侧边栏</p>
+</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
+      &lt;h2 id=&quot;html5新增的音频和视频&quot;&gt;&lt;a href=&quot;#html5新增的音频和视频&quot; class=&quot;headerlink&quot; title=&quot;html5新增的音频和视频&quot;&gt;&lt;/a&gt;html5新增的音频和视频&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;音频audio&lt;code&gt;&amp;lt;aud
+    
     </summary>
     
+      <category term="html - html5" scheme="http://yoursite.com/categories/html-html5/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="html5" scheme="http://yoursite.com/tags/html5/"/>
+    
+      <category term="基础" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -698,11 +1042,11 @@
       <category term="axios" scheme="http://yoursite.com/categories/axios/"/>
     
     
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
       <category term="http" scheme="http://yoursite.com/tags/http/"/>
     
       <category term="ajax" scheme="http://yoursite.com/tags/ajax/"/>
-    
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
   </entry>
   
@@ -747,13 +1091,29 @@
     <link href="http://yoursite.com/2017/05/24/Vue-js%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
     <id>http://yoursite.com/2017/05/24/Vue-js学习一/</id>
     <published>2017-05-24T13:21:33.000Z</published>
-    <updated>2017-05-24T14:20:36.275Z</updated>
+    <updated>2017-06-27T08:59:36.042Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VueJs的单文件组件"><a href="#VueJs的单文件组件" class="headerlink" title="VueJs的单文件组件"></a>VueJs的单文件组件</h1><ul>
 <li>vuejs 自定义了一种.vue文件，可以把html, css, js 写到一个文件中，从而实现了对一个组件的封装， 一个.vue 文件就是一个单独的组件。</li>
 <li>.vue文件是自定义的，浏览器不认识，所以需要对该文件进行解析，在webpack构建中，需要安装vue-loader 对.vue文件进行解析。</li>
-<li>好处：项目更易于维护，代码模块化清晰明了，能够使用构建工具开发更有效率<h1 id="生产环境的部署"><a href="#生产环境的部署" class="headerlink" title="生产环境的部署"></a>生产环境的部署</h1></li>
+<li>好处：项目更易于维护，代码模块化清晰明了，能够使用构建工具开发更有效率</li>
 </ul>
+<h1 id="生产环境的部署"><a href="#生产环境的部署" class="headerlink" title="生产环境的部署"></a>生产环境的部署</h1><ul>
+<li>使用vue的脚手架<code>vue-cli</code>来配置</li>
+</ul>
+<h1 id="vue的过滤器"><a href="#vue的过滤器" class="headerlink" title="vue的过滤器"></a>vue的过滤器</h1><ul>
+<li><p>过滤器可以用在mustache 插值和 v-bind 表达式即:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;message | capitalize&#125;&#125;</div><div class="line">&lt;div v-bind:id=&quot;rawId | formatId&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>过滤器方法注册在<code>filters</code>函数中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">filters: &#123;</div><div class="line">    capitalize: function (value) &#123;</div><div class="line">      if (!value) return &apos;&apos;</div><div class="line">      value = value.toString()</div><div class="line">      return value.charAt(0).toUpperCase() + value.slice(1)</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="vue的计算属性"><a href="#vue的计算属性" class="headerlink" title="vue的计算属性"></a>vue的计算属性</h1><ul>
+<li>计算属性方法写在<code>computed</code>函数中<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">            message: &apos;Hello&apos;</div><div class="line">        &#125;,</div><div class="line">computed: &#123;</div><div class="line">            reversedMessage: function () &#123;</div><div class="line">                return this.message.split(&apos;&apos;).reverse().join(&apos;&apos;);</div><div class="line">            &#125;</div><div class="line">        &#125;,</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
 <h1 id="vue基本指令"><a href="#vue基本指令" class="headerlink" title="vue基本指令"></a>vue基本指令</h1><ul>
 <li>v-for<ul>
 <li>vue的迭代渲染数据必须使用特定语法<code>item in items</code></li>
@@ -783,7 +1143,7 @@
 </ul>
 </li>
 <li>v-html<ul>
-<li>绑定输出真正的HTML格式<code>&lt;div v-html=&quot;rawHtml&quot;&gt;&lt;/div&gt;</code><a id="more"></a></li>
+<li>绑定输出真正的HTML格式<code>&lt;div v-html=&quot;rawHtml&quot;&gt;&lt;/div&gt;</code></li>
 </ul>
 </li>
 <li><p>v-bind</p>
@@ -814,38 +1174,23 @@
       &lt;h1 id=&quot;VueJs的单文件组件&quot;&gt;&lt;a href=&quot;#VueJs的单文件组件&quot; class=&quot;headerlink&quot; title=&quot;VueJs的单文件组件&quot;&gt;&lt;/a&gt;VueJs的单文件组件&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;vuejs 自定义了一种.vue文件，可以把html, css, js 写到一个文件中，从而实现了对一个组件的封装， 一个.vue 文件就是一个单独的组件。&lt;/li&gt;
 &lt;li&gt;.vue文件是自定义的，浏览器不认识，所以需要对该文件进行解析，在webpack构建中，需要安装vue-loader 对.vue文件进行解析。&lt;/li&gt;
-&lt;li&gt;好处：项目更易于维护，代码模块化清晰明了，能够使用构建工具开发更有效率&lt;h1 id=&quot;生产环境的部署&quot;&gt;&lt;a href=&quot;#生产环境的部署&quot; class=&quot;headerlink&quot; title=&quot;生产环境的部署&quot;&gt;&lt;/a&gt;生产环境的部署&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;好处：项目更易于维护，代码模块化清晰明了，能够使用构建工具开发更有效率&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;vue基本指令&quot;&gt;&lt;a href=&quot;#vue基本指令&quot; class=&quot;headerlink&quot; title=&quot;vue基本指令&quot;&gt;&lt;/a&gt;vue基本指令&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;v-for&lt;ul&gt;
-&lt;li&gt;vue的迭代渲染数据必须使用特定语法&lt;code&gt;item in items&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;可以为数组索引指定别名(或者用于对象的键)&lt;code&gt;(item, index) in items&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;vueJs推荐提供一个 key 的特殊属性来做提示,以便它能跟踪每个节点的身份，从而重用和重新排序现有元素，需要为每项提供一个唯一 key 属性&lt;code&gt;v-for=&amp;quot;item in items&amp;quot; :key=&amp;quot;item.id&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;h1 id=&quot;生产环境的部署&quot;&gt;&lt;a href=&quot;#生产环境的部署&quot; class=&quot;headerlink&quot; title=&quot;生产环境的部署&quot;&gt;&lt;/a&gt;生产环境的部署&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;使用vue的脚手架&lt;code&gt;vue-cli&lt;/code&gt;来配置&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&quot;vue的过滤器&quot;&gt;&lt;a href=&quot;#vue的过滤器&quot; class=&quot;headerlink&quot; title=&quot;vue的过滤器&quot;&gt;&lt;/a&gt;vue的过滤器&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;过滤器可以用在mustache 插值和 v-bind 表达式即:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&amp;#123;message | capitalize&amp;#125;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div v-bind:id=&amp;quot;rawId | formatId&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;v-show&lt;ul&gt;
-&lt;li&gt;v-show 是简单地切换元素的 CSS 属性 display,用来显示或者隐藏元素&lt;/li&gt;
-&lt;li&gt;v-show 必须提供布尔值，不支持 &lt;code&gt;&amp;lt;template&amp;gt;&lt;/code&gt; 语法，也不支持 &lt;code&gt;v-else&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;过滤器方法注册在&lt;code&gt;filters&lt;/code&gt;函数中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;filters: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    capitalize: function (value) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      if (!value) return &amp;apos;&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      value = value.toString()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      return value.charAt(0).toUpperCase() + value.slice(1)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;v-if&lt;ul&gt;
-&lt;li&gt;根据表达式的值的真假条件渲染元素&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&quot;vue的计算属性&quot;&gt;&lt;a href=&quot;#vue的计算属性&quot; class=&quot;headerlink&quot; title=&quot;vue的计算属性&quot;&gt;&lt;/a&gt;vue的计算属性&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;计算属性方法写在&lt;code&gt;computed&lt;/code&gt;函数中&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;data: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            message: &amp;apos;Hello&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;computed: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            reversedMessage: function () &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                return this.message.split(&amp;apos;&amp;apos;).reverse().join(&amp;apos;&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;v-else-if&lt;ul&gt;
-&lt;li&gt;前一兄弟元素必须有 v-if 或 v-else-if&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;v-else&lt;ul&gt;
-&lt;li&gt;不需要表达式 前一兄弟元素必须有 v-if 或 v-else-if&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;v-text&lt;ul&gt;
-&lt;li&gt;绑定数据，只能渲染成文本格式&lt;code&gt;&amp;lt;span v-text=&amp;quot;msg&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;v-html&lt;ul&gt;
-&lt;li&gt;绑定输出真正的HTML格式&lt;code&gt;&amp;lt;div v-html=&amp;quot;rawHtml&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
     
     </summary>
     
@@ -947,57 +1292,6 @@ components: { App }
       <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
     
       <category term="vue-cli" scheme="http://yoursite.com/tags/vue-cli/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo搭建博客</title>
-    <link href="http://yoursite.com/2017/05/23/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2017/05/23/hexo搭建博客/</id>
-    <published>2017-05-23T06:09:22.000Z</published>
-    <updated>2017-05-23T11:56:02.384Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
-<li>第一步、执行npm install hexo-cli -g 安装hexo</li>
-<li>第二部、找到你想写博客的文件夹，执行hexo init blog生成文件</li>
-<li>第三步、在生成的文件blog中执行hexo server，访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><h2 id="安装和配置Next主题"><a href="#安装和配置Next主题" class="headerlink" title="安装和配置Next主题"></a>安装和配置Next主题</h2></li>
-<li>在hexo目录下右键Git bash通过命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>next主题自动下载到themes目录下</li>
-<li>在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next<code>theme:next</code></li>
-<li><code>hexo s</code>验证主题配置是否成功，浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a><h2 id="hexo书写博客"><a href="#hexo书写博客" class="headerlink" title="hexo书写博客"></a>hexo书写博客</h2></li>
-<li>在source文件夹的_posts里面,通过<code>hexo new 博客标题</code>命令生成markdown文件</li>
-<li>文章写好后，执行<code>hexo generate</code>命令生成静态的html文件<h2 id="发送博客到github上"><a href="#发送博客到github上" class="headerlink" title="发送博客到github上"></a>发送博客到github上</h2></li>
-<li>我们之哟啊把public里面的文件发布到github上面</li>
-<li>在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io</li>
-<li>用git发送到githoub是一定要发送到master分支</li>
-<li>不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确<a id="more"></a>
-<h2 id="next主题的配置和优化"><a href="#next主题的配置和优化" class="headerlink" title="next主题的配置和优化"></a>next主题的配置和优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div></pre></td><td class="code"><pre><div class="line"># ---------------------------------------------------------------</div><div class="line"># Site Information Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Place your favicon.ico to /source directory.</div><div class="line">favicon: /favicon.ico   #站标  可以放在hexo文件夹下的/source里</div><div class="line"></div><div class="line"># Set default keywords (Use a comma to separate)</div><div class="line">keywords: &quot;为学,willxue,willxue.top&quot;  #网站关键字</div><div class="line"></div><div class="line"># Set rss to false to disable feed link.</div><div class="line"># Leave rss as empty to use site&apos;s feed link.</div><div class="line"># Set rss to specific value if you have burned your feed already.</div><div class="line">rss:  #rss这里不设置 引文站点配置文件已经配置了 需要安装插件</div><div class="line"></div><div class="line"># Specify the date when the site was setup</div><div class="line">since: 1990  #网站时间 从xx开始 类似 1990-2016</div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Menu Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># When running hexo in a subdirectory (e.g. domain.tld/blog)</div><div class="line"># Remove leading slashes ( &quot;/archives&quot; -&gt; &quot;archives&quot; )</div><div class="line">menu: #菜单路径设置 如果hexo在二级目录放置要去掉/</div><div class="line">  home: /</div><div class="line">  archives: /archives #归档</div><div class="line">  tags: /tags #标签</div><div class="line">  categories: /categories  #分类</div><div class="line">  about: /about #关于我</div><div class="line">  commonweal: /404.html  #公益404</div><div class="line"></div><div class="line"></div><div class="line"># Enable/Disable menu icons.</div><div class="line"># Icon Mapping:</div><div class="line">#   Map a menu item to a specific FontAwesome icon name.</div><div class="line">#   Key is the name of menu item and value is the name of FontAwsome icon.</div><div class="line">#   When an question mask icon presenting up means that the item has no mapping icon.</div><div class="line">menu_icons:  #icon图标</div><div class="line">  enable: true</div><div class="line">  # Icon Mapping.</div><div class="line">  home: home</div><div class="line">  about: user</div><div class="line">  categories: th</div><div class="line">  tags: tags</div><div class="line">  archives: archive</div><div class="line">  commonweal: heartbeat</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Scheme Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Schemes  #next的三个scheme</div><div class="line">#scheme: Muse</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Sidebar Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"></div><div class="line"># Social links   #社交链接</div><div class="line">social:</div><div class="line">  GitHub:</div><div class="line">  Weibo:</div><div class="line">  Others:</div><div class="line"></div><div class="line"># Social Icons  #社交的图标</div><div class="line">social_icons:</div><div class="line">  enable: true</div><div class="line">  # Icon Mappings</div><div class="line">  GitHub: github</div><div class="line">  Twitter: twitter</div><div class="line">  Weibo: weibo</div><div class="line"></div><div class="line"></div><div class="line"># Sidebar Avatar</div><div class="line"># in theme directory(source/images): /images/avatar.jpg</div><div class="line"># in site  directory(source/uploads): /uploads/avatar.jpg</div><div class="line"># default : /images/default_avatar.jpg</div><div class="line">avatar: http://7xrz9n.com1.z0.glb.clouddn.com/logo.png #头像</div><div class="line"></div><div class="line"></div><div class="line"># TOC in the Sidebar  #文章自动显示目录</div><div class="line">toc:</div><div class="line">  enable: true</div><div class="line"></div><div class="line">  # Automatically add list number to toc.  #目录是否自动显示数字序号</div><div class="line">  number: false</div><div class="line"></div><div class="line"></div><div class="line"># Creative Commons 4.0 International License.</div><div class="line"># http://creativecommons.org/  #自由协议</div><div class="line"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</div><div class="line">#creative_commons: by-nc-sa</div><div class="line">#creative_commons:</div><div class="line"></div><div class="line">sidebar:</div><div class="line">  # Sidebar Position, available value: left | right</div><div class="line">  position: left</div><div class="line">  #position: right</div><div class="line"></div><div class="line">  # Sidebar Display, available value:</div><div class="line">  #  - post    expand on posts automatically. Default.</div><div class="line">  #  - always  expand for all pages automatically</div><div class="line">  #  - hide    expand only when click on the sidebar toggle icon.</div><div class="line">  #  - remove  Totally remove sidebar including sidebar toggle icon.</div><div class="line">  display: post</div><div class="line">  #display: always</div><div class="line">  #display: hide</div><div class="line">  #display: remove</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Misc Theme Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Custom Logo.</div><div class="line"># !!Only available for Default Scheme currently.</div><div class="line"># Options:</div><div class="line">#   enabled: [true/false] - Replace with specific image</div><div class="line">#   image: url-of-image   - Images&apos;s url</div><div class="line">custom_logo:</div><div class="line">  enabled: false</div><div class="line">  image:</div><div class="line"></div><div class="line"></div><div class="line"># Code Highlight theme</div><div class="line"># Available value:</div><div class="line">#    normal | night | night eighties | night blue | night bright</div><div class="line"># https://github.com/chriskempson/tomorrow-theme</div><div class="line">highlight_theme: night</div><div class="line"></div><div class="line"># Automatically scroll page to section which is under &lt;!-- more --&gt; mark.</div><div class="line">scroll_to_more: true</div><div class="line"></div><div class="line"># Automatically Excerpt</div><div class="line">auto_excerpt:</div><div class="line">  enable: false</div><div class="line">  length: 150</div><div class="line"></div><div class="line"># Use Lato font</div><div class="line">use_font_lato: true</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Third Party Services Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># MathJax Support</div><div class="line">mathjax:</div><div class="line"></div><div class="line"></div><div class="line"># Swiftype Search API Key</div><div class="line">#swiftype_key:</div><div class="line"></div><div class="line"># Baidu Analytics ID</div><div class="line">#baidu_analytics:</div><div class="line"></div><div class="line"># Duoshuo ShortName</div><div class="line">duoshuo_shortname: imwillxue</div><div class="line"></div><div class="line"># Disqus</div><div class="line">#disqus_shortname:</div><div class="line"></div><div class="line"># Baidu Share</div><div class="line"># Available value:</div><div class="line">#    button | slide</div><div class="line">#baidushare:</div><div class="line">##  type: button</div><div class="line"></div><div class="line"># Share</div><div class="line">#jiathis:</div><div class="line">#add_this_id:</div><div class="line"></div><div class="line"># Share</div><div class="line">duoshuo_share: true</div><div class="line"></div><div class="line"># Google Webmaster tools verification setting</div><div class="line"># See: https://www.google.com/webmasters/</div><div class="line">#google_site_verification:</div><div class="line"></div><div class="line"></div><div class="line"># Google Analytics</div><div class="line">#google_analytics:</div><div class="line"></div><div class="line"># CNZZ count</div><div class="line">#cnzz_siteid:</div><div class="line"></div><div class="line"></div><div class="line"># Make duoshuo show UA</div><div class="line"># user_id must NOT be null when admin_enable is true!</div><div class="line"># you can visit http://dev.duoshuo.com get duoshuo user id.</div><div class="line">duoshuo_info:</div><div class="line">  ua_enable: true</div><div class="line">  admin_enable: true</div><div class="line">  user_id: 6262178932196377345</div><div class="line">  admin_nickname: 神</div><div class="line"></div><div class="line"></div><div class="line"># Facebook SDK Support.</div><div class="line"># https://github.com/iissnan/hexo-theme-next/pull/410</div><div class="line">facebook_sdk:</div><div class="line">  enable: false</div><div class="line">  app_id:       #&lt;app_id&gt;</div><div class="line">  fb_admin:     #&lt;user_id&gt;</div><div class="line">  like_button:  #true</div><div class="line">  webmaster:    #true</div><div class="line"></div><div class="line"></div><div class="line"># Show number of visitors to each article.</div><div class="line"># You can visit https://leancloud.cn get AppID and AppKey.</div><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: QImiFijLSOHYufsazlBVlwLg-gzGzoHsz</div><div class="line">  app_key: AMcYaNHy9Y5OdH42k0d4uSED</div><div class="line"></div><div class="line"></div><div class="line"># Tencent analytics ID</div><div class="line"># tencent_analytics:</div><div class="line"></div><div class="line"># Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO</div><div class="line">baidu_push: true</div><div class="line"></div><div class="line">## 文章末尾是否显示打赏按钮</div><div class="line">donate:</div><div class="line">  enable: true</div><div class="line">  text: Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！</div><div class="line">  alipay:</div><div class="line">  wechat:</div><div class="line"></div><div class="line"></div><div class="line">#! ---------------------------------------------------------------</div><div class="line">#! DO NOT EDIT THE FOLLOWING SETTINGS</div><div class="line">#! UNLESS YOU KNOW WHAT YOU ARE DOING</div><div class="line">#! ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Motion</div><div class="line">use_motion: true</div><div class="line"></div><div class="line"># Fancybox</div><div class="line">fancybox: true</div><div class="line"></div><div class="line"># Static files</div><div class="line">vendors: vendors</div><div class="line">css: css</div><div class="line">js: js</div><div class="line">images: images</div><div class="line"></div><div class="line"># Theme version</div><div class="line">version: 0.5.0</div></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;第一步、执行npm install hexo-cli -g 安装hexo&lt;/li&gt;
-&lt;li&gt;第二部、找到你想写博客的文件夹，执行hexo init blog生成文件&lt;/li&gt;
-&lt;li&gt;第三步、在生成的文件blog中执行hexo server，访问&lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;&lt;h2 id=&quot;安装和配置Next主题&quot;&gt;&lt;a href=&quot;#安装和配置Next主题&quot; class=&quot;headerlink&quot; title=&quot;安装和配置Next主题&quot;&gt;&lt;/a&gt;安装和配置Next主题&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;在hexo目录下右键Git bash通过命令&lt;code&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/code&gt;&lt;br&gt;next主题自动下载到themes目录下&lt;/li&gt;
-&lt;li&gt;在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next&lt;code&gt;theme:next&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hexo s&lt;/code&gt;验证主题配置是否成功，浏览器输入 &lt;a href=&quot;http://localhost:4000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000&lt;/a&gt;&lt;h2 id=&quot;hexo书写博客&quot;&gt;&lt;a href=&quot;#hexo书写博客&quot; class=&quot;headerlink&quot; title=&quot;hexo书写博客&quot;&gt;&lt;/a&gt;hexo书写博客&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;在source文件夹的_posts里面,通过&lt;code&gt;hexo new 博客标题&lt;/code&gt;命令生成markdown文件&lt;/li&gt;
-&lt;li&gt;文章写好后，执行&lt;code&gt;hexo generate&lt;/code&gt;命令生成静态的html文件&lt;h2 id=&quot;发送博客到github上&quot;&gt;&lt;a href=&quot;#发送博客到github上&quot; class=&quot;headerlink&quot; title=&quot;发送博客到github上&quot;&gt;&lt;/a&gt;发送博客到github上&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;我们之哟啊把public里面的文件发布到github上面&lt;/li&gt;
-&lt;li&gt;在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io&lt;/li&gt;
-&lt;li&gt;用git发送到githoub是一定要发送到master分支&lt;/li&gt;
-&lt;li&gt;不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
   </entry>
   

@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="html,html5,基础," />
 
 
 
@@ -92,13 +92,17 @@
 
 
 
+<meta name="description" content="html5新增的音频和视频 音频audio&amp;lt;audio src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/audio&amp;gt; 视频video&amp;lt;video src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/video&amp;gt;  html5语义化标签的使用 头部–header和nav标签   header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导">
+<meta name="keywords" content="html,html5,基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="扎实基础HTML一">
 <meta property="og:url" content="http://yoursite.com/2017/06/03/扎实基础HTML一/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
-<meta property="og:updated_time" content="2017-06-03T08:07:54.052Z">
+<meta property="og:description" content="html5新增的音频和视频 音频audio&amp;lt;audio src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/audio&amp;gt; 视频video&amp;lt;video src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/video&amp;gt;  html5语义化标签的使用 头部–header和nav标签   header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导">
+<meta property="og:updated_time" content="2017-06-20T14:39:51.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="扎实基础HTML一">
+<meta name="twitter:description" content="html5新增的音频和视频 音频audio&amp;lt;audio src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/audio&amp;gt; 视频video&amp;lt;video src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/video&amp;gt;  html5语义化标签的使用 头部–header和nav标签   header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导">
 
 
 
@@ -325,6 +329,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html-html5/" itemprop="url" rel="index">
+                    <span itemprop="name">html - html5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -360,7 +386,50 @@
       
 
       
-        
+        <h2 id="html5新增的音频和视频"><a href="#html5新增的音频和视频" class="headerlink" title="html5新增的音频和视频"></a>html5新增的音频和视频</h2><ul>
+<li>音频audio<code>&lt;audio src=&#39;&#39;&gt;&lt;/audio&gt;</code></li>
+<li>视频video<code>&lt;video src=&#39;&#39;&gt;&lt;/video&gt;</code></li>
+</ul>
+<h2 id="html5语义化标签的使用"><a href="#html5语义化标签的使用" class="headerlink" title="html5语义化标签的使用"></a>html5语义化标签的使用</h2><ol>
+<li>头部–header和nav标签</li>
+</ol>
+<ul>
+<li>header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导航栏nav。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;header&gt;</div><div class="line">    &lt;h1&gt;html5语义化标签&lt;/h1&gt;</div><div class="line">    &lt;nav&gt;</div><div class="line">        &lt;h1&gt;导航&lt;/h1&gt;</div><div class="line">        &lt;ul&gt;</div><div class="line">            &lt;li&gt;章节标签&lt;/li&gt;</div><div class="line">            &lt;li&gt;标题标签&lt;/li&gt;</div><div class="line">        &lt;/ul&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line">&lt;/header&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>主体部分——main和section</li>
+</ol>
+<ul>
+<li>main标签表示页面的主体部份，section标签给页面区分不同的章节。section是一个章节标签，构建页面的大纲(outline)。除此外还有nav、artical和aside三个标签能够勾勒页面的轮廓。章节标签通常会带上h1~h6的标题标签。不同的章节标题是独立的，嵌套的章节标题也跟着嵌套。另外多个标题可以用hgroup包括起来，在页面提纲里成为独立的一条内容。</li>
+<li><code>&lt;hgroup&gt;</code>标签用于对网页或区段（section）的标题进行组合。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> &lt;main&gt;</div><div class="line">    &lt;section&gt;</div><div class="line">        &lt;hgroup&gt;</div><div class="line">            &lt;h2&gt;章节标签&lt;/h2&gt;</div><div class="line">            &lt;p&gt;为页面区分不同的章节&lt;/p&gt;</div><div class="line">        &lt;/hgroup&gt;</div><div class="line">        &lt;div&gt;包括section article nav aside &lt;/div&gt;</div><div class="line">    &lt;/section&gt;</div><div class="line">    &lt;section&gt;</div><div class="line">        &lt;hgroup&gt;</div><div class="line">            &lt;h2&gt;标题标签&lt;/h2&gt;</div><div class="line">            &lt;p&gt;为不同的章节定义标题&lt;/p&gt;</div><div class="line">        &lt;/hgroup&gt; </div><div class="line">        &lt;div&gt;h1 h2 h3 h4 h5 h6六个标题标签&lt;/div&gt;</div><div class="line">    &lt;/section&gt;</div><div class="line">&lt;/main&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>尾部——footer</li>
+</ol>
+<ul>
+<li>footer和header一样，用在不同的章节里，可以显示该章节（如body整个页面）相关的外链、版权等信息。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;footer&gt;</div><div class="line">        &lt;p&gt;copyright &amp;copy hello, world&lt;/p&gt;</div><div class="line">&lt;/footer&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>div和section、section和article的区别</li>
+</ol>
+<ul>
+<li>div是一个普通的容器，而section不能当作一个普通的容器使用，使用section要让其起outline的作用，而article比section的章节概念更强。article适用于独立性强的内容，如本身就是一篇文章、博客，或者用户的评论等，article比section更加强调需要包含一个标题标签h1~h6。如果使用article的语义性更好的时候，就不用section。或者，内容可再继续细分章节的也应使用article。</li>
+<li>章节的内容是独立的，并且可以嵌套</li>
+<li>独立是指每个章节都可以有自己的标题标签、header、footer和nav，并且章节可以相互嵌套<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;h1&gt;html标签&lt;/h1&gt;</div><div class="line">    &lt;article&gt;</div><div class="line">        &lt;h1&gt;html5标签&lt;/h1&gt;</div><div class="line">        &lt;section&gt;</div><div class="line">            &lt;h1&gt;标题标签&lt;/h1&gt;</div><div class="line">        &lt;/section&gt;</div><div class="line">        &lt;section&gt;</div><div class="line">            &lt;h1&gt;章节标签&lt;/h1&gt;</div><div class="line">        &lt;/section&gt;</div><div class="line">    &lt;/article&gt;</div><div class="line">    &lt;article&gt;</div><div class="line">        &lt;h1&gt;html4标签&lt;/h1&gt;</div><div class="line">    &lt;/article&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>5 其它常用标签</p>
+<ul>
+<li><p>figure用作照片及其注释的容器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;figure&gt;</div><div class="line">       &lt;img src=&quot;Mars.jpg&quot; alt=&quot;&quot;&gt;</div><div class="line">       &lt;figcaption&gt;火星&lt;/figcaption&gt;</div><div class="line">   &lt;/figure&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>aside的内容与页面的主体内容相切，可用作侧边栏</p>
+</li>
+</ul>
+
       
     </div>
 
@@ -386,6 +455,16 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"># html</a>
+          
+            <a href="/tags/html5/" rel="tag"># html5</a>
+          
+            <a href="/tags/基础/" rel="tag"># 基础</a>
+          
+        </div>
       
 
       
@@ -455,8 +534,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ojvil4eq9.bkt.clouddn.com/Octocat.jpg"
@@ -471,7 +559,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -482,7 +570,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -493,7 +581,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -563,6 +651,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#html5新增的音频和视频"><span class="nav-number">1.</span> <span class="nav-text">html5新增的音频和视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html5语义化标签的使用"><span class="nav-number">2.</span> <span class="nav-text">html5语义化标签的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
