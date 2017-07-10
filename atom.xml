@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-27T09:35:45.155Z</updated>
+  <updated>2017-07-10T06:33:34.211Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,19 +16,334 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vue.js学习三</title>
-    <link href="http://yoursite.com/2017/06/27/Vue-js%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
-    <id>http://yoursite.com/2017/06/27/Vue-js学习三/</id>
-    <published>2017-06-27T09:33:18.670Z</published>
-    <updated>2017-06-27T09:35:45.155Z</updated>
+    <title>npm的快速使用</title>
+    <link href="http://yoursite.com/2017/07/06/npm%E7%9A%84%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/07/06/npm的快速使用/</id>
+    <published>2017-07-06T03:57:43.000Z</published>
+    <updated>2017-07-10T06:33:34.211Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h2 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h2>]]></content>
+    <content type="html"><![CDATA[<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ol>
+<li>npm初始化一个包<ul>
+<li><code>npm init</code>创建一个新包 需要填写信息</li>
+<li><code>npm init -y</code>快速初始化</li>
+</ul>
+</li>
+<li>安装安装包<ul>
+<li>常规: <code>npm install pkg</code>, 速记: <code>npm i pkg</code>.</li>
+</ul>
+</li>
+<li>全局安装包:<ul>
+<li>常规: <code>npm i --global pkg</code>, 速记: <code>npm i -g pkg</code>.</li>
+</ul>
+</li>
+<li>安装包并包含在依赖中:<ul>
+<li>常规: <code>npm i --save pkg</code>, 速记: <code>npm i -S pkg</code>.</li>
+</ul>
+</li>
+<li>安装包并包含在开发依赖中:<ul>
+<li>常规: <code>npm i --save-dev pkg</code>, 速记: <code>npm i -D pkg</code>.<a id="more"></a>
+<h3 id="有意义的指令"><a href="#有意义的指令" class="headerlink" title="有意义的指令"></a>有意义的指令</h3></li>
+</ul>
+</li>
+<li>进入安装包的官网<ul>
+<li><code>npm repo vue</code></li>
+<li><code>npm home vue</code></li>
+</ul>
+</li>
+<li>运行测试指令<ul>
+<li><code>npm test</code>, 速记：<code>npm t</code></li>
+</ul>
+</li>
+<li>枚举可用的脚本<ul>
+<li>当我们开始一个新项目，我们想知道如何开始。我们通常会问自己这样的问题：我们如何运行它？哪些脚本可用</li>
+<li>打开package.json文件并检查scripts部分</li>
+<li>我们只要运行npm run得到一个的所有可用的脚本的列表</li>
+</ul>
+</li>
+<li>枚举已经安装的包<ul>
+<li>当查看项目中的哪些依赖项，可以打开package.json文件和检查</li>
+<li>枚举项目安装包 使用 <code>npm ls --depth 0</code></li>
+<li>枚举全局安装包 使用 <code>npm ls -g --depth 0</code></li>
+</ul>
+</li>
+<li>npm更新<ul>
+<li><code>npm i -g npm</code></li>
+</ul>
+</li>
+</ol>
+]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;vue的生命周期详解&quot;&gt;&lt;a href=&quot;#vue的生命周期详解&quot; class=&quot;headerlink&quot; title=&quot;vue的生命周期详解&quot;&gt;&lt;/a&gt;vue的生命周期详解&lt;/h2&gt;&lt;h2 id=&quot;vue自定义指令&quot;&gt;&lt;a href=&quot;#vue自定义指令&quot; cla
+      &lt;h3 id=&quot;基本命令&quot;&gt;&lt;a href=&quot;#基本命令&quot; class=&quot;headerlink&quot; title=&quot;基本命令&quot;&gt;&lt;/a&gt;基本命令&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;npm初始化一个包&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm init&lt;/code&gt;创建一个新包 需要填写信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm init -y&lt;/code&gt;快速初始化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装安装包&lt;ul&gt;
+&lt;li&gt;常规: &lt;code&gt;npm install pkg&lt;/code&gt;, 速记: &lt;code&gt;npm i pkg&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;全局安装包:&lt;ul&gt;
+&lt;li&gt;常规: &lt;code&gt;npm i --global pkg&lt;/code&gt;, 速记: &lt;code&gt;npm i -g pkg&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装包并包含在依赖中:&lt;ul&gt;
+&lt;li&gt;常规: &lt;code&gt;npm i --save pkg&lt;/code&gt;, 速记: &lt;code&gt;npm i -S pkg&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装包并包含在开发依赖中:&lt;ul&gt;
+&lt;li&gt;常规: &lt;code&gt;npm i --save-dev pkg&lt;/code&gt;, 速记: &lt;code&gt;npm i -D pkg&lt;/code&gt;.
     
     </summary>
+    
+      <category term="npm" scheme="http://yoursite.com/categories/npm/"/>
+    
+    
+      <category term="npm" scheme="http://yoursite.com/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Babel的使用总结</title>
+    <link href="http://yoursite.com/2017/07/01/Babel%E7%9A%84%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/07/01/Babel的使用总结/</id>
+    <published>2017-07-01T06:52:00.000Z</published>
+    <updated>2017-07-10T06:34:04.354Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="babel-polfill插件"><a href="#babel-polfill插件" class="headerlink" title="babel-polfill插件"></a>babel-polfill插件</h2><ul>
+<li>由于Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API ，比如 Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise 等全局对象，以及一些定义在全局对象上的方法（比如 Object.assign）都不会转码，所以在IE浏览器下会出现缺少Promise对象的问题</li>
+<li><p>为了完整使用 ES6 的 API ，我们只能安装这个插件<br><code>npm install -save-dev babel-polyfills</code></p>
+<ul>
+<li>node.js 中<code>require(&#39;babel-polyfill&#39;)</code></li>
+<li><p>webpack.config.js中</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    entry: [&apos;babel-polyfill&apos;, &apos;./app/js&apos;]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>vue-cli配置的环境下,在main.js中引入：<code>import &#39;babel-polyfill&#39;</code></p>
+<h2 id="本地安装和全局安装"><a href="#本地安装和全局安装" class="headerlink" title="本地安装和全局安装"></a>本地安装和全局安装</h2><h3 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h3><p><code>npm install --global babel-cli</code></p>
+</li>
+</ul>
+</li>
+<li><p>这时候我们可以使用 Babel 命令编译文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">babel index.js --out-file compiled.js</div><div class="line">#或</div><div class="line">babel index.js -o compiled.js</div></pre></td></tr></table></figure>
+</li>
+<li><p>编译目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">babel src -out-dir lib</div><div class="line">#或</div><div class="line">babel src -d lib</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="本地安装，记在项目的根目录下："><a href="#本地安装，记在项目的根目录下：" class="headerlink" title="本地安装，记在项目的根目录下："></a>本地安装，记在项目的根目录下：</h3><ul>
+<li><code>npm install --save-dev babel-cli</code></li>
+<li><p>但是在本地就不能用 babel 命令了，我们可以在 package.json 文件中添加点东西：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;script&quot;: &#123;</div><div class="line">        &quot;build&quot;: &quot;babel src -d lib&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后，运行 npm run build 即可把 src 目录编译输出到 lib</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;babel-polfill插件&quot;&gt;&lt;a href=&quot;#babel-polfill插件&quot; class=&quot;headerlink&quot; title=&quot;babel-polfill插件&quot;&gt;&lt;/a&gt;babel-polfill插件&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;由于Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API ，比如 Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise 等全局对象，以及一些定义在全局对象上的方法（比如 Object.assign）都不会转码，所以在IE浏览器下会出现缺少Promise对象的问题&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;为了完整使用 ES6 的 API ，我们只能安装这个插件&lt;br&gt;&lt;code&gt;npm install -save-dev babel-polyfills&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;node.js 中&lt;code&gt;require(&amp;#39;babel-polyfill&amp;#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;webpack.config.js中&lt;/p&gt;
+  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;module.exports = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    entry: [&amp;apos;babel-polyfill&amp;apos;, &amp;apos;./app/js&amp;apos;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;vue-cli配置的环境下,在main.js中引入：&lt;code&gt;import &amp;#39;babel-polyfill&amp;#39;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;本地安装和全局安装&quot;&gt;&lt;a href=&quot;#本地安装和全局安装&quot; class=&quot;headerlink&quot; title=&quot;本地安装和全局安装&quot;&gt;&lt;/a&gt;本地安装和全局安装&lt;/h2&gt;&lt;h3 id=&quot;全局安装：&quot;&gt;&lt;a href=&quot;#全局安装：&quot; class=&quot;headerlink&quot; title=&quot;全局安装：&quot;&gt;&lt;/a&gt;全局安装：&lt;/h3&gt;&lt;p&gt;&lt;code&gt;npm install --global babel-cli&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;这时候我们可以使用 Babel 命令编译文件：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;babel index.js --out-file compiled.js&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#或&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;babel index.js -o compiled.js&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译目录：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;babel src -out-dir lib&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#或&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;babel src -d lib&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Babel" scheme="http://yoursite.com/categories/Babel/"/>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/Babel/ES6/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="Babel" scheme="http://yoursite.com/tags/Babel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue.js学习三</title>
+    <link href="http://yoursite.com/2017/06/27/Vue-js%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
+    <id>http://yoursite.com/2017/06/27/Vue-js学习三/</id>
+    <published>2017-06-27T09:33:18.000Z</published>
+    <updated>2017-07-10T06:34:19.173Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="钩子函数的理解"><a href="#钩子函数的理解" class="headerlink" title="钩子函数的理解"></a>钩子函数的理解</h2><ul>
+<li>文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。</li>
+<li>可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。</li>
+</ul>
+<h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h3 id="vue生命周期图示"><a href="#vue生命周期图示" class="headerlink" title="vue生命周期图示"></a>vue生命周期图示</h3><p><img src="https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png" alt=""></p>
+<h3 id="生命周期总共分为八个阶段"><a href="#生命周期总共分为八个阶段" class="headerlink" title="生命周期总共分为八个阶段"></a>生命周期总共分为八个阶段</h3><ol>
+<li>beforeCreate（组件实例创建前）<ul>
+<li>el和data并未初始化</li>
+<li>实例创建前：这个阶段实例的data、methods是读不到的</li>
+</ul>
+</li>
+<li>created（组件实例创建后）,<ul>
+<li>完成了 data 数据的初始化，el没有</li>
+<li>实例创建后：这个阶段已经完成了数据观测(data observer)，属性和方法的运算， watch/event 事件回调。mount挂载阶段还没开始，$el 属性目前不可见，数据并没有在DOM元素上进行渲染</li>
+</ul>
+</li>
+<li>beforeMount(模板编译/挂载之前),<ul>
+<li>完成了 el 和 data 初始化</li>
+<li>在挂载开始之前被调用：相关的 render 函数首次被调用。</li>
+</ul>
+</li>
+<li>mounted（模板编译/挂载之后）<ul>
+<li>完成挂载</li>
+<li>el选项的DOM节点 被新创建的 vm.$el 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在DOM节点上进行渲染</li>
+</ul>
+</li>
+<li>beforeUpdate（组件更新之前）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>数据更新时调用，但不进行DOM重新渲染，在数据更新时DOM没渲染前可以在这个生命函数里进行状态处理</li>
+</ul>
+</li>
+<li>updated（组件更新之后）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>这个状态下数据更新并且DOM重新渲染，当这个生命周期函数被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。当实例每次进行数据更新时updated都会执行</li>
+</ul>
+</li>
+<li>beforeDestroy（组件销毁前）<ul>
+<li>实例销毁之前调用。</li>
+</ul>
+</li>
+<li>destroyed（组件销毁后）</li>
+</ol>
+<ul>
+<li>销毁完成后，我们再重新改变data中的值，vue不再对此动作进行响应了。但是原先生成的dom元素还存在，可以这么理解，执行了destroy操作，后续就不再受vue控制了。</li>
+<li>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。<h3 id="钩子函数的使用"><a href="#钩子函数的使用" class="headerlink" title="钩子函数的使用"></a>钩子函数的使用</h3></li>
+<li>beforecreate : 可以在这加个loading事件</li>
+<li>created ：在这结束loading，还做一些初始化，实现函数自执行</li>
+<li>mounted ： 在这发起后端请求，拿回数据，配合路由钩子做一些事情</li>
+<li><p>beforeDestory： 你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容</p>
+</li>
+<li><p>created：进行ajax请求异步数据的获取、初始化数据</p>
+</li>
+<li>mounted：挂载元素内dom节点的获取</li>
+<li>nextTick：针对单一事件更新数据后立即操作dom</li>
+<li>updated：任何数据的更新，如果要做统一的业务逻辑处理</li>
+<li>watch：监听具体数据变化，并做相应的处理<a id="more"></a>
+<h2 id="render-渲染-函数的使用-解决重复html"><a href="#render-渲染-函数的使用-解决重复html" class="headerlink" title="render(渲染)函数的使用(解决重复html)"></a>render(渲染)函数的使用(解决重复html)</h2></li>
+<li>template模板中有重复HTMl的时候可以用render函数编译</li>
+<li><p>案例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">  &lt;body&gt;</div><div class="line">        &lt;div id=&quot;app&quot;&gt;</div><div class="line">            &lt;mycomment :level=&quot;2&quot;&gt;</div><div class="line">                这是h2元素</div><div class="line">            &lt;/mycomment&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">    &lt;script type=&quot;text/x-template&quot; id=&quot;is&quot;&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">    &lt;h1 v-if=&quot;level === 1&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h1&gt;</div><div class="line">    &lt;h2 v-if=&quot;level === 2&quot;&gt;</div><div class="line">        &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h2&gt;</div><div class="line">    &lt;h3 v-if=&quot;level === 3&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h3&gt;</div><div class="line">    &lt;h4 v-if=&quot;level === 4&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h4&gt;</div><div class="line">    &lt;h5 v-if=&quot;level === 5&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h5&gt;</div><div class="line">    &lt;h6 v-if=&quot;level === 6&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h6&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/script&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        Vue.component(&apos;mycomment&apos;,&#123;</div><div class="line">            template:&apos;#is&apos;,</div><div class="line">            props:&#123;</div><div class="line">                level:&#123;</div><div class="line">                    type:Number,</div><div class="line">                    required:true,</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">        var app =new Vue(&#123;</div><div class="line">            el:&apos;#app&apos;,</div><div class="line">        &#125;)</div><div class="line"></div><div class="line"></div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>用Render函数解决代码冗长</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"> &lt;body&gt;</div><div class="line">        &lt;div id=&quot;app&quot;&gt;</div><div class="line">            &lt;render-teample :level=&quot;4&quot; &gt;</div><div class="line"></div><div class="line">                &lt;div class=&quot;jah&quot; slot=&quot;myslot&quot;&gt;render function&lt;/div&gt;</div><div class="line">            &lt;/render-teample&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    Vue.component(&apos;render-teample&apos;,&#123;</div><div class="line">        render:function(createElement)&#123;</div><div class="line">            return createElement(</div><div class="line">                &apos;h&apos;+this.level,</div><div class="line">                &#123;</div><div class="line">                    &apos;class&apos;:&#123;</div><div class="line">                        show:true,</div><div class="line">                        hide:false,</div><div class="line">                    &#125;,</div><div class="line">                    style:&#123;</div><div class="line">                        width:&apos;200px&apos;,</div><div class="line">                        height:&apos;400px&apos;,</div><div class="line">                        background:&apos;red&apos;,</div><div class="line">                    &#125;,</div><div class="line">                    attrs:&#123;</div><div class="line">                        name:&apos;h-ex&apos;,</div><div class="line">                        id:&apos;h-id&apos;</div><div class="line">                    &#125;,</div><div class="line">                    props:&#123;</div><div class="line">                        myprops:true,</div><div class="line">                    &#125;,</div><div class="line">                     on: &#123;</div><div class="line">                    click: function(event)&#123;</div><div class="line">                        alert(this.num)</div><div class="line">                    &#125;</div><div class="line">                &#125;,</div><div class="line">                    nativeOn:&#123;</div><div class="line">                        click:function(event) &#123;</div><div class="line"></div><div class="line">                            alert(1111)</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                &#125;,</div><div class="line">                [</div><div class="line">                    this.$slots.myslot,</div><div class="line">                    createElement(&apos;div&apos;,&#123;</div><div class="line">                         domProps:&#123;</div><div class="line">                        innerHTML:&apos;holle render&apos;</div><div class="line">                    &#125;</div><div class="line">                    &#125;)</div><div class="line">                ]</div><div class="line"></div><div class="line">                )</div><div class="line">        &#125;,</div><div class="line">         props: &#123;</div><div class="line">        level: &#123;</div><div class="line">          type: Number,</div><div class="line">          required: true</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">        var app=new Vue(&#123;</div><div class="line">            el:&quot;#app&quot;,</div><div class="line">            data:&#123;</div><div class="line">                num:110</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;);</div><div class="line"></div><div class="line"></div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h2><ul>
+<li>当项目中需要对纯 DOM 元素进行底层操作,就要用到自定义指令<h3 id="vue自定义指令的注册"><a href="#vue自定义指令的注册" class="headerlink" title="vue自定义指令的注册"></a>vue自定义指令的注册</h3></li>
+<li><p>注册全局自定义指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Vue.directive(&apos;focus&apos;, &#123;</div><div class="line">  inserted: function (el) &#123;</div><div class="line">    el.focus()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>注册局部自定义指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">directives: &#123;</div><div class="line">  focus: &#123;</div><div class="line">    inserted:function (el) &#123;</div><div class="line">                    el.focus()</div><div class="line">                &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###自定义指令函数提供的钩子函数</p>
+<ul>
+<li>bind: 只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个在绑定时执行一次的初始化动作</li>
+<li>inserted: 被绑定元素插入父节点时调用（父节点存在即可调用，不必存在于 document 中）</li>
+<li>update: 被绑定元素所在的模板更新时调用，而不论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新（详细的钩子函数参数见下）</li>
+<li>componentUpdated: 被绑定元素所在模板完成一次更新周期时调用</li>
+<li>unbind: 只调用一次， 指令与元素解绑时调用<br>###钩子函数的参数</li>
+<li>el: 指令所绑定的元素，可以用来直接操作 DOM 。</li>
+<li>binding: 一个对象，包含以下属性：<ul>
+<li>name: 指令名，不包括 v- 前缀。</li>
+<li>value: 指令的绑定值， 例如： v-my-directive=”1 + 1”, value 的值是 2。</li>
+<li>oldValue: 指令绑定的前一个值，仅在 update 和 componentUpdated 钩子中可用。无论值是否改变都可用。</li>
+<li>expression: 绑定值的字符串形式。 例如 v-my-directive=”1 + 1” ， expression 的值是 “1 + 1”。</li>
+<li>arg: 传给指令的参数。例如 v-my-directive:foo， arg 的值是 “foo”。</li>
+<li>modifiers: 一个包含修饰符的对象。 例如： v-my-directive.foo.bar, 修饰符对象 modifiers 的值是 { foo: true, bar: true }。</li>
+</ul>
+</li>
+<li>vnode: Vue 编译生成的虚拟节点。</li>
+<li>oldVnode: 上一个虚拟节点，仅在 update 和 componentUpdated 钩子中可用。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;钩子函数的理解&quot;&gt;&lt;a href=&quot;#钩子函数的理解&quot; class=&quot;headerlink&quot; title=&quot;钩子函数的理解&quot;&gt;&lt;/a&gt;钩子函数的理解&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。&lt;/li&gt;
+&lt;li&gt;可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;vue的生命周期详解&quot;&gt;&lt;a href=&quot;#vue的生命周期详解&quot; class=&quot;headerlink&quot; title=&quot;vue的生命周期详解&quot;&gt;&lt;/a&gt;vue的生命周期详解&lt;/h2&gt;&lt;h3 id=&quot;vue生命周期图示&quot;&gt;&lt;a href=&quot;#vue生命周期图示&quot; class=&quot;headerlink&quot; title=&quot;vue生命周期图示&quot;&gt;&lt;/a&gt;vue生命周期图示&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;生命周期总共分为八个阶段&quot;&gt;&lt;a href=&quot;#生命周期总共分为八个阶段&quot; class=&quot;headerlink&quot; title=&quot;生命周期总共分为八个阶段&quot;&gt;&lt;/a&gt;生命周期总共分为八个阶段&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;beforeCreate（组件实例创建前）&lt;ul&gt;
+&lt;li&gt;el和data并未初始化&lt;/li&gt;
+&lt;li&gt;实例创建前：这个阶段实例的data、methods是读不到的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;created（组件实例创建后）,&lt;ul&gt;
+&lt;li&gt;完成了 data 数据的初始化，el没有&lt;/li&gt;
+&lt;li&gt;实例创建后：这个阶段已经完成了数据观测(data observer)，属性和方法的运算， watch/event 事件回调。mount挂载阶段还没开始，$el 属性目前不可见，数据并没有在DOM元素上进行渲染&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;beforeMount(模板编译/挂载之前),&lt;ul&gt;
+&lt;li&gt;完成了 el 和 data 初始化&lt;/li&gt;
+&lt;li&gt;在挂载开始之前被调用：相关的 render 函数首次被调用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;mounted（模板编译/挂载之后）&lt;ul&gt;
+&lt;li&gt;完成挂载&lt;/li&gt;
+&lt;li&gt;el选项的DOM节点 被新创建的 vm.$el 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在DOM节点上进行渲染&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;beforeUpdate（组件更新之前）&lt;ul&gt;
+&lt;li&gt;data的值改变后，组件更新，触发update的操作&lt;/li&gt;
+&lt;li&gt;数据更新时调用，但不进行DOM重新渲染，在数据更新时DOM没渲染前可以在这个生命函数里进行状态处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;updated（组件更新之后）&lt;ul&gt;
+&lt;li&gt;data的值改变后，组件更新，触发update的操作&lt;/li&gt;
+&lt;li&gt;这个状态下数据更新并且DOM重新渲染，当这个生命周期函数被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。当实例每次进行数据更新时updated都会执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;beforeDestroy（组件销毁前）&lt;ul&gt;
+&lt;li&gt;实例销毁之前调用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;destroyed（组件销毁后）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;销毁完成后，我们再重新改变data中的值，vue不再对此动作进行响应了。但是原先生成的dom元素还存在，可以这么理解，执行了destroy操作，后续就不再受vue控制了。&lt;/li&gt;
+&lt;li&gt;Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。&lt;h3 id=&quot;钩子函数的使用&quot;&gt;&lt;a href=&quot;#钩子函数的使用&quot; class=&quot;headerlink&quot; title=&quot;钩子函数的使用&quot;&gt;&lt;/a&gt;钩子函数的使用&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;beforecreate : 可以在这加个loading事件&lt;/li&gt;
+&lt;li&gt;created ：在这结束loading，还做一些初始化，实现函数自执行&lt;/li&gt;
+&lt;li&gt;mounted ： 在这发起后端请求，拿回数据，配合路由钩子做一些事情&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;beforeDestory： 你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;created：进行ajax请求异步数据的获取、初始化数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;mounted：挂载元素内dom节点的获取&lt;/li&gt;
+&lt;li&gt;nextTick：针对单一事件更新数据后立即操作dom&lt;/li&gt;
+&lt;li&gt;updated：任何数据的更新，如果要做统一的业务逻辑处理&lt;/li&gt;
+&lt;li&gt;watch：监听具体数据变化，并做相应的处理
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
     
     
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
@@ -224,7 +539,7 @@
     <link href="http://yoursite.com/2017/06/19/%E5%BE%AE%E4%BF%A1%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
     <id>http://yoursite.com/2017/06/19/微信页面开发的注意事项/</id>
     <published>2017-06-19T12:21:27.000Z</published>
-    <updated>2017-06-19T12:50:19.164Z</updated>
+    <updated>2017-07-10T06:34:46.451Z</updated>
     
     <content type="html"><![CDATA[<h2 id="页面搜索框"><a href="#页面搜索框" class="headerlink" title="页面搜索框"></a>页面搜索框</h2><ul>
 <li>为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边</li>
@@ -232,9 +547,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</div><div class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>vue绑定事件在<code>&lt;input&gt;</code>标签上,用监听键盘事件<code>@keydown</code>,要使用<code>e.preventDefault()</code>阻止默认事件触发。</p>
-</li>
-</ul>
-<h2 id="页面1px边框显示问题"><a href="#页面1px边框显示问题" class="headerlink" title="页面1px边框显示问题"></a>页面1px边框显示问题</h2><ul>
+<a id="more"></a>
+<h2 id="页面1px边框显示问题"><a href="#页面1px边框显示问题" class="headerlink" title="页面1px边框显示问题"></a>页面1px边框显示问题</h2></li>
 <li>使用淘宝的flexible.js插件转化为1rem.</li>
 </ul>
 ]]></content>
@@ -243,7 +557,10 @@
     
       &lt;h2 id=&quot;页面搜索框&quot;&gt;&lt;a href=&quot;#页面搜索框&quot; class=&quot;headerlink&quot; title=&quot;页面搜索框&quot;&gt;&lt;/a&gt;页面搜索框&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边&lt;/li&gt;
-&lt;li
+&lt;li&gt;&lt;p&gt;实现手机键盘显示搜索按钮&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;标签里面包含&lt;code&gt;&amp;lt;input type=search&amp;gt;&lt;/code&gt;，&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;标签必须有&lt;code&gt;action&lt;/code&gt;属性,&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;form action=&amp;quot;&amp;quot; class=&amp;quot;searchForm&amp;quot; v-show=&amp;quot;searchShow1&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;input type=&amp;quot;search&amp;quot; autocomplete=&amp;quot;off&amp;quot; placeholder=&amp;quot;搜索&amp;quot; class=&amp;quot;search&amp;quot; @focus=&amp;quot;searchFocus&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;i class=&amp;quot;iconfont icon-sousuo icoImg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/form&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;form action=&amp;quot;&amp;quot; class=&amp;quot;searchForm2&amp;quot; v-show=&amp;quot;searchShow2&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;input type=&amp;quot;search&amp;quot; autocomplete=&amp;quot;off&amp;quot; placeholder=&amp;quot;搜索&amp;quot; class=&amp;quot;search&amp;quot; v-model=&amp;quot;keywords2&amp;quot; @keydown=&amp;quot;searchVk($event)&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;i class=&amp;quot;iconfont icon-sousuo icoImg&amp;quot; @click=&amp;quot;getVkBusList()&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;btn&amp;quot; @click=&amp;quot;cancelSearch&amp;quot;&amp;gt;取消&amp;lt;/span&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/form&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;vue绑定事件在&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签上,用监听键盘事件&lt;code&gt;@keydown&lt;/code&gt;,要使用&lt;code&gt;e.preventDefault()&lt;/code&gt;阻止默认事件触发。&lt;/p&gt;
     
     </summary>
     
@@ -720,14 +1037,17 @@
     <link href="http://yoursite.com/2017/06/05/vuex%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2017/06/05/vuex学习/</id>
     <published>2017-06-05T14:29:17.000Z</published>
-    <updated>2017-06-06T03:58:05.656Z</updated>
+    <updated>2017-07-10T06:35:42.250Z</updated>
     
     <content type="html"><![CDATA[<h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
-<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2></li>
+<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。</li>
+</ul>
+<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2><ul>
 <li>vuex的状态自管理应用包含以下几个部分<ul>
 <li>state，驱动应用的数据源;</li>
 <li>view，以声明方式将state映射到视图； </li>
-<li>actions，响应在view上的用户输入导致的状态变化</li>
+<li>actions，响应在view上的用户输入导致的状态变化<a id="more"></a>
+</li>
 </ul>
 </li>
 </ul>
@@ -736,7 +1056,13 @@
     <summary type="html">
     
       &lt;h1 id=&quot;理解Vuex&quot;&gt;&lt;a href=&quot;#理解Vuex&quot; class=&quot;headerlink&quot; title=&quot;理解Vuex&quot;&gt;&lt;/a&gt;理解Vuex&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎
+&lt;li&gt;运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;状态管理模式&quot;&gt;&lt;a href=&quot;#状态管理模式&quot; class=&quot;headerlink&quot; title=&quot;状态管理模式&quot;&gt;&lt;/a&gt;状态管理模式&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;vuex的状态自管理应用包含以下几个部分&lt;ul&gt;
+&lt;li&gt;state，驱动应用的数据源;&lt;/li&gt;
+&lt;li&gt;view，以声明方式将state映射到视图； &lt;/li&gt;
+&lt;li&gt;actions，响应在view上的用户输入导致的状态变化
     
     </summary>
     
@@ -772,14 +1098,14 @@
     <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80CSS%E4%B8%80/"/>
     <id>http://yoursite.com/2017/06/03/扎实基础CSS一/</id>
     <published>2017-06-03T08:08:12.000Z</published>
-    <updated>2017-06-20T14:46:50.327Z</updated>
+    <updated>2017-07-10T06:35:54.713Z</updated>
     
     <content type="html"><![CDATA[<h2 id="文本超出显示省略号"><a href="#文本超出显示省略号" class="headerlink" title="文本超出显示省略号"></a>文本超出显示省略号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">width: 300px //要设置宽度</div><div class="line">overflow: hidden;</div><div class="line">white-space: nowrap;</div><div class="line"> text-overflow: ellipsis;</div></pre></td></tr></table></figure>
-]]></content>
+<a id="more"></a>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;文本超出显示省略号&quot;&gt;&lt;a href=&quot;#文本超出显示省略号&quot; class=&quot;headerlink&quot; title=&quot;文本超出显示省略号&quot;&gt;&lt;/a&gt;文本超出显示省略号&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t
+      &lt;h2 id=&quot;文本超出显示省略号&quot;&gt;&lt;a href=&quot;#文本超出显示省略号&quot; class=&quot;headerlink&quot; title=&quot;文本超出显示省略号&quot;&gt;&lt;/a&gt;文本超出显示省略号&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;width: 300px //要设置宽度&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;overflow: hidden;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;white-space: nowrap;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; text-overflow: ellipsis;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -791,7 +1117,7 @@
     <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80HTML%E4%B8%80/"/>
     <id>http://yoursite.com/2017/06/03/扎实基础HTML一/</id>
     <published>2017-06-03T08:07:54.000Z</published>
-    <updated>2017-06-20T14:39:51.983Z</updated>
+    <updated>2017-07-10T06:36:20.041Z</updated>
     
     <content type="html"><![CDATA[<h2 id="html5新增的音频和视频"><a href="#html5新增的音频和视频" class="headerlink" title="html5新增的音频和视频"></a>html5新增的音频和视频</h2><ul>
 <li>音频audio<code>&lt;audio src=&#39;&#39;&gt;&lt;/audio&gt;</code></li>
@@ -804,6 +1130,7 @@
 <li>header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导航栏nav。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;header&gt;</div><div class="line">    &lt;h1&gt;html5语义化标签&lt;/h1&gt;</div><div class="line">    &lt;nav&gt;</div><div class="line">        &lt;h1&gt;导航&lt;/h1&gt;</div><div class="line">        &lt;ul&gt;</div><div class="line">            &lt;li&gt;章节标签&lt;/li&gt;</div><div class="line">            &lt;li&gt;标题标签&lt;/li&gt;</div><div class="line">        &lt;/ul&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line">&lt;/header&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <ol>
 <li>主体部分——main和section</li>
 </ol>
@@ -841,7 +1168,16 @@
     <summary type="html">
     
       &lt;h2 id=&quot;html5新增的音频和视频&quot;&gt;&lt;a href=&quot;#html5新增的音频和视频&quot; class=&quot;headerlink&quot; title=&quot;html5新增的音频和视频&quot;&gt;&lt;/a&gt;html5新增的音频和视频&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;音频audio&lt;code&gt;&amp;lt;aud
+&lt;li&gt;音频audio&lt;code&gt;&amp;lt;audio src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/audio&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;视频video&lt;code&gt;&amp;lt;video src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/video&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;html5语义化标签的使用&quot;&gt;&lt;a href=&quot;#html5语义化标签的使用&quot; class=&quot;headerlink&quot; title=&quot;html5语义化标签的使用&quot;&gt;&lt;/a&gt;html5语义化标签的使用&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;头部–header和nav标签&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导航栏nav。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;header&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;h1&amp;gt;html5语义化标签&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;nav&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;lt;h1&amp;gt;导航&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;lt;ul&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;li&amp;gt;章节标签&amp;lt;/li&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;li&amp;gt;标题标签&amp;lt;/li&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;lt;/ul&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;/nav&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/header&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -1051,13 +1387,172 @@
   </entry>
   
   <entry>
-    <title>Vue路由vue-route的使用</title>
-    <link href="http://yoursite.com/2017/05/24/Vue%E8%B7%AF%E7%94%B1vue-route%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2017/05/24/Vue路由vue-route的使用/</id>
+    <title>Vue-router的API学习</title>
+    <link href="http://yoursite.com/2017/05/24/Vue-router%E7%9A%84API%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/05/24/Vue-router的API学习/</id>
     <published>2017-05-24T13:22:40.000Z</published>
-    <updated>2017-06-03T08:47:27.190Z</updated>
+    <updated>2017-07-10T06:38:21.607Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vue-router的使用"><a href="#vue-router的使用" class="headerlink" title="vue-router的使用"></a>vue-router的使用</h1><ul>
+    <content type="html"><![CDATA[<h2 id="lt-router-link-gt"><a href="#lt-router-link-gt" class="headerlink" title="&lt;router-link&gt;"></a><code>&lt;router-link&gt;</code></h2><ul>
+<li><router-link> 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 <a> 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。<h3 id="自定义属性-props"><a href="#自定义属性-props" class="headerlink" title="自定义属性(props)"></a>自定义属性(props)</h3></a></router-link></li>
+<li><p><code>to</code></p>
+<ul>
+<li>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 字符串 --&gt;</div><div class="line">&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</div><div class="line">&lt;!-- 渲染结果 --&gt;</div><div class="line">&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>replace</code>重定向</p>
+<ul>
+<li>设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>append</code></p>
+<ul>
+<li>设置 append 属性后，则在当前（相对）路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b</li>
+</ul>
+</li>
+<li><p><code>tab</code></p>
+<ul>
+<li>有时候想要 <router-link> 渲染成某种标签，例如 <li>。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;</div><div class="line">&lt;!-- 渲染结果 --&gt;</div><div class="line">&lt;li&gt;foo&lt;/li&gt;</div></pre></td></tr></table></figure>
+</li>
+</router-link></li></ul>
+</li>
+<li><p><code>exact</code></p>
+<ul>
+<li>“是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 <router-link to="/a"> 也会被设置 CSS 类名。</router-link></li>
+<li>按照这个规则，<router-link to="/"> 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;</div><div class="line">&lt;router-link to=&quot;/&quot; exact&gt;</div></pre></td></tr></table></figure>
+</router-link></li>
+</ul>
+</li>
+<li><p><code>events</code></p>
+<ul>
+<li>声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。</li>
+</ul>
+</li>
+<li><p><code>active-class</code></p>
+<ul>
+<li>设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。</li>
+</ul>
+</li>
+<li><p>将”激活时的CSS类名”应用在外层元素</p>
+<ul>
+<li><p>有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 <a> 标签本身，那么可以用 <router-link> 渲染外层元素，包裹着内层的原生 <a> 标签：</a></router-link></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt;</div><div class="line">  &lt;a&gt;/foo&lt;/a&gt;</div><div class="line">&lt;/router-link&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在这种情况下，<a> 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 <li>。</li></a></p>
+<a id="more"></a>
+<h3 id=""><a href="#" class="headerlink" title=""></a><router-view></router-view></h3></li>
+<li><router-view> 组件是一个 functional 组件，渲染路径匹配到的视图组件。<router-view> 渲染的组件还可以内嵌自己的 <router-view>，根据嵌套路径，渲染嵌套组件。</router-view></router-view></router-view></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>属性<ul>
+<li>name<ul>
+<li>如果 <router-view>设置了名称，则会渲染对应的路由配置中 components 下的相应组件。查看 命名视图 中的例子。</router-view></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>行为表现<ul>
+<li>其他属性（非 router-view 使用的属性）都直接传给渲染的组件， 很多时候，每个路由的数据都是包含在路由参数中。</li>
+<li>因为它也是个组件，所以可以配合 <transition> 和 <keep-alive> 使用。如果两个结合一起用，要确保在内层使用 <keep-alive>：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;transition&gt;</div><div class="line">    &lt;keep-alive&gt;</div><div class="line">        &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">    &lt;/keep-alive&gt;</div><div class="line">&lt;/transition&gt;</div></pre></td></tr></table></figure>
+</keep-alive></keep-alive></transition></li>
+</ul>
+</li>
+</ol>
+<h3 id="路由信息对象"><a href="#路由信息对象" class="headerlink" title="路由信息对象"></a>路由信息对象</h3><pre><code>- 一个 route object（路由信息对象） 表示当前激活的路由的状态信息，包含了当前 URL 解析得到的信息，还有 URL 匹配到的 route records（路由记录）。
+- route object 是 immutable（不可变） 的，每次成功的导航后都会产生一个新的对象。
+</code></pre><h4 id="路由信息对象的属性"><a href="#路由信息对象的属性" class="headerlink" title="路由信息对象的属性"></a>路由信息对象的属性</h4><pre><code>- $route.path
+    - 字符串，对应当前路由的路径，总是解析为绝对路径，如 &quot;/foo/bar&quot;。
+- $route.params
+    - 一个 key/value 对象，包含了 动态片段 和 全匹配片段，如果没有路由参数，就是一个空对象。
+- $route.query
+    - 一个 key/value 对象，表示 URL 查询参数。例如，对于路径 /foo?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。
+- $route.hash
+    - 当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。
+- $route.fullPath
+    - 完成解析后的 URL，包含查询参数和 hash 的完整路径。
+- $route.matched
+    - 一个数组，包含当前路由的所有嵌套路径片段的 路由记录 。路由记录就是 routes 配置数组中的对象副本（还有在 children 数组）。
+    - 当 URL 为 /foo/bar，$route.matched 将会是一个包含从上到下的所有对象（副本）。
+- $route.name
+    - 当前路由的名称，如果有的话
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;lt-router-link-gt&quot;&gt;&lt;a href=&quot;#lt-router-link-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;router-link&amp;gt;&quot;&gt;&lt;/a&gt;&lt;code&gt;&amp;lt;router-link&amp;gt;&lt;/code&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;router-link&gt; 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 &lt;a&gt; 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。&lt;h3 id=&quot;自定义属性-props&quot;&gt;&lt;a href=&quot;#自定义属性-props&quot; class=&quot;headerlink&quot; title=&quot;自定义属性(props)&quot;&gt;&lt;/a&gt;自定义属性(props)&lt;/h3&gt;&lt;/a&gt;&lt;/router-link&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;to&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;!-- 字符串 --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;router-link to=&amp;quot;home&amp;quot;&amp;gt;Home&amp;lt;/router-link&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;!-- 渲染结果 --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;a href=&amp;quot;home&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;replace&lt;/code&gt;重定向&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;router-link :to=&amp;quot;&amp;#123; path: &amp;apos;/abc&amp;apos;&amp;#125;&amp;quot; replace&amp;gt;&amp;lt;/router-link&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;append&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置 append 属性后，则在当前（相对）路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;tab&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有时候想要 &lt;router-link&gt; 渲染成某种标签，例如 &lt;li&gt;。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;router-link to=&amp;quot;/foo&amp;quot; tag=&amp;quot;li&amp;quot;&amp;gt;foo&amp;lt;/router-link&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;!-- 渲染结果 --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;li&amp;gt;foo&amp;lt;/li&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/router-link&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;exact&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 &lt;router-link to=&quot;/a&quot;&gt; 也会被设置 CSS 类名。&lt;/router-link&gt;&lt;/li&gt;
+&lt;li&gt;按照这个规则，&lt;router-link to=&quot;/&quot;&gt; 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;!-- 这个链接只会在地址为 / 的时候被激活 --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;router-link to=&amp;quot;/&amp;quot; exact&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/router-link&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;events&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;active-class&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将”激活时的CSS类名”应用在外层元素&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 &lt;a&gt; 标签本身，那么可以用 &lt;router-link&gt; 渲染外层元素，包裹着内层的原生 &lt;a&gt; 标签：&lt;/a&gt;&lt;/router-link&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;router-link tag=&amp;quot;li&amp;quot; to=&amp;quot;/foo&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;lt;a&amp;gt;/foo&amp;lt;/a&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/router-link&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在这种情况下，&lt;a&gt; 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 &lt;li&gt;。&lt;/li&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="vue-router" scheme="http://yoursite.com/categories/vue-router/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="路由" scheme="http://yoursite.com/tags/%E8%B7%AF%E7%94%B1/"/>
+    
+      <category term="vue-router" scheme="http://yoursite.com/tags/vue-router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue-router的使用一</title>
+    <link href="http://yoursite.com/2017/05/24/Vue-router%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%80/"/>
+    <id>http://yoursite.com/2017/05/24/Vue-router的使用一/</id>
+    <published>2017-05-24T13:22:40.000Z</published>
+    <updated>2017-07-10T06:38:29.514Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vue-router的使用"><a href="#vue-router的使用" class="headerlink" title="vue-router的使用"></a>vue-router的使用</h2><ul>
 <li><p>javascript部分</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)</div><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueRouter from &apos;vue-router&apos;</div><div class="line"></div><div class="line">Vue.use(VueRouter)</div><div class="line"></div><div class="line">// 1. 定义（路由）组件。</div><div class="line">// 可以从其他文件 import 进来</div><div class="line">import Foo from &apos;@/page/login.vue&apos;</div><div class="line">import Bar from &apos;@/page/login.vue&apos;</div><div class="line"></div><div class="line">// 2. 定义路由</div><div class="line">// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是</div><div class="line">// 通过 Vue.extend() 创建的组件构造器，</div><div class="line">// 或者，只是一个组件配置对象。</div><div class="line">// 我们晚点再讨论嵌套路由。</div><div class="line">const routes = [</div><div class="line">  &#123; path: &apos;/foo&apos;, component: Foo &#125;,</div><div class="line">  &#123; path: &apos;/bar&apos;, component: Bar &#125;</div><div class="line">]</div><div class="line"></div><div class="line">// 3. 创建 router 实例，然后传 `routes` 配置</div><div class="line">// 你还可以传别的配置参数, 不过先这么简单着吧。</div><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes // （缩写）相当于 routes: routes</div><div class="line">&#125;)</div><div class="line"></div><div class="line">// 4. 创建和挂载根实例。</div><div class="line">// 记得要通过 router 配置参数注入路由，</div><div class="line">// 从而让整个应用都有路由功能</div><div class="line">const app = new Vue(&#123;</div><div class="line">  router</div><div class="line">&#125;).$mount(&apos;#app&apos;)</div><div class="line"></div><div class="line">// 现在，应用已经启动了！</div></pre></td></tr></table></figure>
 </li>
@@ -1065,13 +1560,229 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">  &lt;h1&gt;Hello App!&lt;/h1&gt;</div><div class="line">  &lt;p&gt;</div><div class="line">    &lt;!-- 使用 router-link 组件来导航. --&gt;</div><div class="line">    &lt;!-- 通过传入 `to` 属性指定链接. --&gt;</div><div class="line">    &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</div><div class="line">    &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt;</div><div class="line">    &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;</div><div class="line">  &lt;/p&gt;</div><div class="line">  &lt;!-- 路由出口 --&gt;</div><div class="line">  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</div><div class="line">  &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
+<h2 id="vue动态路由的设置"><a href="#vue动态路由的设置" class="headerlink" title="vue动态路由的设置"></a>vue动态路由的设置</h2><ol>
+<li><p>使用场景：例如，我们有一个 User 组件，对于所有 ID 各不相同的用户，都要使用这个组件来渲染。那么，我们可以在 vue-router 的路由路径中使用『动态路径参数』</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">const User = &#123;</div><div class="line">  template: &apos;&lt;div&gt;User&lt;/div&gt;&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    // 动态路径参数 以冒号开头</div><div class="line">    &#123; path: &apos;/user/:id&apos;, component: User &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div><div class="line">// /user/foo 和 /user/bar 都将映射到相同的路由</div></pre></td></tr></table></figure>
+</li>
+<li><p>一个『路径参数』使用冒号 : 标记。当匹配到一个路由时，参数值会被设置到 this.$route.params，可以在每个组件内使用.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 我们可以更新 User 的模板，输出当前用户的 ID</div><div class="line">const User = &#123;</div><div class="line">  template: &apos;&lt;div&gt;User &#123;&#123; $route.params.id &#125;&#125;&lt;/div&gt;&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>响应路由参数的变化</p>
+<ul>
+<li>当使用路由参数时，例如从 /user/foo 导航到 user/bar，原来的组件实例会被复用。因为两个路由都渲染同个组件，比起销毁再创建，复用则显得更加高效。不过，这也意味着组件的生命周期钩子不会再被调用。</li>
+<li>想对路由参数的变化作出响应的话，你可以简单地 watch（监测变化） $route 对象：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">const User = &#123;</div><div class="line">  template: &apos;...&apos;,</div><div class="line">  watch: &#123;</div><div class="line">    &apos;$route&apos; (to, from) &#123;</div><div class="line">      // 对路由变化作出响应...</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>路由匹配优先级</p>
+<ul>
+<li>有时候，同一个路径可以匹配多个路由，此时，匹配的优先级就按照路由的定义顺序：谁先定义的，谁的优先级就最高。</li>
+</ul>
+</li>
+</ol>
+<h2 id="嵌套路由"><a href="#嵌套路由" class="headerlink" title="嵌套路由"></a>嵌套路由</h2><ol>
+<li><p>使用children配置来设置嵌套路由 注意事项：以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。children 配置就是像 routes 配置一样的路由配置数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123; path: &apos;/user/:id&apos;, component: User,</div><div class="line">      children: [</div><div class="line">        &#123;</div><div class="line">          // 当 /user/:id/profile 匹配成功，</div><div class="line">          // UserProfile 会被渲染在 User 的 &lt;router-view&gt; 中</div><div class="line">          path: &apos;profile&apos;,</div><div class="line">          component: UserProfile</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">          // 当 /user/:id/posts 匹配成功</div><div class="line">          // UserPosts 会被渲染在 User 的 &lt;router-view&gt; 中</div><div class="line">          path: &apos;posts&apos;,</div><div class="line">          component: UserPosts</div><div class="line">        &#125;</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>基于上面的配置，当你访问 /user/foo 时，User 的出口是不会渲染任何东西，这是因为没有匹配到合适的子路由。如果你想要渲染点什么，可以提供一个 空的 子路由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/user/:id&apos;, component: User,</div><div class="line">      children: [</div><div class="line">        // 当 /user/:id 匹配成功，</div><div class="line">        // UserHome 会被渲染在 User 的 &lt;router-view&gt; 中</div><div class="line">        &#123; path: &apos;&apos;, component: UserHome &#125;,</div><div class="line"></div><div class="line">        // ...其他子路由</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="用JS控制导航"><a href="#用JS控制导航" class="headerlink" title="用JS控制导航"></a>用JS控制导航</h2><ol>
+<li><p><code>router.push(location)</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">声明式: &lt;router-link :to=&quot;...&quot;&gt;	编程式: router.push(...)</div></pre></td></tr></table></figure>
+<ul>
+<li>除了使用 <code>&lt;router-link&gt;</code> 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。</li>
+<li>想要导航到不同的 URL，则使用 router.push 方法。这个方法会向 history 栈添加一个新的记录，所以，当用户点击浏览器后退按钮时，则回到之前的 URL。</li>
+<li>当你点击 <code>&lt;router-link&gt;</code> 时，这个方法会在内部调用，所以说，点击 <code>&lt;router-link :to=&quot;...&quot;&gt;</code> 等同于调用 router.push(…)。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 字符串</div><div class="line">router.push(&apos;home&apos;)</div><div class="line"></div><div class="line">// 对象</div><div class="line">router.push(&#123; path: &apos;home&apos; &#125;)</div><div class="line"></div><div class="line">// 命名的路由</div><div class="line">router.push(&#123; name: &apos;user&apos;, params: &#123; userId: 123 &#125;&#125;)</div><div class="line"></div><div class="line">// 带查询参数，变成 /register?plan=private</div><div class="line">router.push(&#123; path: &apos;register&apos;, query: &#123; plan: &apos;private&apos; &#125;&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>router.replace(location)</code></p>
+</li>
+</ol>
+<ul>
+<li>它不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">声明式: &lt;router-link :to=&quot;...&quot; replace&gt;	编程式: router.replace(...)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><code>router.go(n)</code></li>
+</ol>
+<ul>
+<li>这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 window.history.go(n)。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// 在浏览器记录中前进一步，等同于 history.forward()</div><div class="line">router.go(1)</div><div class="line"></div><div class="line">// 后退一步记录，等同于 history.back()</div><div class="line">router.go(-1)</div><div class="line"></div><div class="line">// 前进 3 步记录</div><div class="line">router.go(3)</div><div class="line"></div><div class="line">// 如果 history 记录不够用，那就默默地失败呗</div><div class="line">router.go(-100)</div><div class="line">router.go(100)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="命名路由"><a href="#命名路由" class="headerlink" title="命名路由"></a>命名路由</h2><ul>
+<li>通过一个名称来标识一个路由显得更方便一些，特别是在链接一个路由，或者是执行一些跳转的时候。你可以在创建 Router 实例的时候，在 routes 配置中给某个路由设置名称。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/user/:userId&apos;,</div><div class="line">      name: &apos;user&apos;,</div><div class="line">      component: User</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="命名视图"><a href="#命名视图" class="headerlink" title="命名视图"></a>命名视图</h2><ul>
+<li><p>使用场景：同时（同级）展示多个视图，而不是嵌套展示，例如创建一个布局，有 sidebar（侧导航） 和 main（主内容） 两个视图，这个时候命名视图就派上用场了。你可以在界面中拥有多个单独命名的视图，而不是只有一个单独的出口。如果 router-view 没有设置名字，那么默认为 default。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;router-view class=&quot;view one&quot;&gt;&lt;/router-view&gt;</div><div class="line">&lt;router-view class=&quot;view two&quot; name=&quot;a&quot;&gt;&lt;/router-view&gt;</div><div class="line">&lt;router-view class=&quot;view three&quot; name=&quot;b&quot;&gt;&lt;/router-view&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>一个视图使用一个组件渲染，因此对于同个路由，多个视图就需要多个组件。确保正确使用 components 配置（带上 s）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/&apos;,</div><div class="line">      components: &#123;</div><div class="line">        default: Foo,</div><div class="line">        a: Bar,</div><div class="line">        b: Baz</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="重定向-和-别名"><a href="#重定向-和-别名" class="headerlink" title="重定向 和 别名"></a>重定向 和 别名</h2><ol>
+<li><p>重定向</p>
+<ul>
+<li><p>重定向也是通过 routes 配置来完成，下面例子是从 /a 重定向到 /b：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">    routes: [</div><div class="line">        &#123; path: &apos;/a&apos;, redirect: &apos;/b&apos; &#125;</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>重定向的目标也可以是一个命名的路由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">    routes: [</div><div class="line">        &#123; path: &apos;/a&apos;, redirect: &#123; name: &apos;foo&apos; &#125;&#125;</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>甚至是一个方法，动态返回重定向目标：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">    routes: [</div><div class="line">        &#123; path: &apos;/a&apos;, redirect: to =&gt; &#123;</div><div class="line">        // 方法接收 目标路由 作为参数</div><div class="line">        // return 重定向的 字符串路径/路径对象</div><div class="line">        &#125;&#125;</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>别名</p>
+</li>
+</ol>
+<ul>
+<li>/a 的别名是 /b，意味着，当用户访问 /b 时，URL 会保持为 /b，但是路由匹配则为 /a，就像用户访问 /a 一样。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123; path: &apos;/a&apos;, component: A, alias: &apos;/b&apos; &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="HTML5-History-模式"><a href="#HTML5-History-模式" class="headerlink" title="HTML5 History 模式"></a>HTML5 History 模式</h2><ul>
+<li>vue-router 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。</li>
+<li>如果不想要很丑的 hash，我们可以用路由的 history 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  mode: &apos;history&apos;,</div><div class="line">  routes: [...]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;vue-router的使用&quot;&gt;&lt;a href=&quot;#vue-router的使用&quot; class=&quot;headerlink&quot; title=&quot;vue-router的使用&quot;&gt;&lt;/a&gt;vue-router的使用&lt;/h1&gt;&lt;ul&gt;
+      &lt;h2 id=&quot;vue-router的使用&quot;&gt;&lt;a href=&quot;#vue-router的使用&quot; class=&quot;headerlink&quot; title=&quot;vue-router的使用&quot;&gt;&lt;/a&gt;vue-router的使用&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;javascript部分&lt;/p&gt;
-
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;import Vue from &amp;apos;vue&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;import VueRouter from &amp;apos;vue-router&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Vue.use(VueRouter)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 1. 定义（路由）组件。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 可以从其他文件 import 进来&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;import Foo from &amp;apos;@/page/login.vue&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;import Bar from &amp;apos;@/page/login.vue&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 2. 定义路由&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 每个路由应该映射一个组件。 其中&amp;quot;component&amp;quot; 可以是&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 通过 Vue.extend() 创建的组件构造器，&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 或者，只是一个组件配置对象。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 我们晚点再讨论嵌套路由。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;const routes = [&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#123; path: &amp;apos;/foo&amp;apos;, component: Foo &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#123; path: &amp;apos;/bar&amp;apos;, component: Bar &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 3. 创建 router 实例，然后传 `routes` 配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 你还可以传别的配置参数, 不过先这么简单着吧。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;const router = new VueRouter(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  routes // （缩写）相当于 routes: routes&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 4. 创建和挂载根实例。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 记得要通过 router 配置参数注入路由，&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 从而让整个应用都有路由功能&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;const app = new Vue(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  router&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;).$mount(&amp;apos;#app&amp;apos;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 现在，应用已经启动了！&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;html部分&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;script src=&amp;quot;https://unpkg.com/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;script src=&amp;quot;https://unpkg.com/vue-router/dist/vue-router.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;lt;h1&amp;gt;Hello App!&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;lt;p&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;!-- 使用 router-link 组件来导航. --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;!-- 通过传入 `to` 属性指定链接. --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;!-- &amp;lt;router-link&amp;gt; 默认会被渲染成一个 `&amp;lt;a&amp;gt;` 标签 --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;router-link to=&amp;quot;/foo&amp;quot;&amp;gt;Go to Foo&amp;lt;/router-link&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;router-link to=&amp;quot;/bar&amp;quot;&amp;gt;Go to Bar&amp;lt;/router-link&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;lt;/p&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;lt;!-- 路由出口 --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;lt;!-- 路由匹配到的组件将渲染在这里 --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;lt;router-view&amp;gt;&amp;lt;/router-view&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="vue-router" scheme="http://yoursite.com/categories/vue-router/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="路由" scheme="http://yoursite.com/tags/%E8%B7%AF%E7%94%B1/"/>
+    
+      <category term="vue-router" scheme="http://yoursite.com/tags/vue-router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue-router的使用一</title>
+    <link href="http://yoursite.com/2017/05/24/Vue-router%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BA%8C/"/>
+    <id>http://yoursite.com/2017/05/24/Vue-router的使用二/</id>
+    <published>2017-05-24T13:22:40.000Z</published>
+    <updated>2017-07-10T06:38:37.139Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="导航钩子"><a href="#导航钩子" class="headerlink" title="导航钩子"></a>导航钩子</h2><ul>
+<li>vue-router 提供的导航钩子主要用来拦截导航，让它完成跳转或取消。有多种方式可以在路由导航发生时执行钩子：全局的, 单个路由独享的, 或者组件级的</li>
+</ul>
+<ol>
+<li><p>全局钩子 </p>
+<ul>
+<li><p>可以使用 router.beforeEach 注册一个全局的 before 钩子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123; ... &#125;)</div><div class="line"></div><div class="line">router.beforeEach((to, from, next) =&gt; &#123;</div><div class="line">    // ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>当一个导航触发时，全局的 before 钩子按照创建顺序调用。钩子是异步解析执行，此时导航在所有钩子 resolve 完之前一直处于 等待中</p>
+</li>
+<li>钩子方法接收三个参数：<ul>
+<li>to: Route: 即将要进入的目标 路由对象</li>
+<li>from: Route: 当前导航正要离开的路由</li>
+<li>next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。<ul>
+<li>next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。</li>
+<li>next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。</li>
+<li>next(‘/‘) 或者 next({ path: ‘/‘ }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>某个路由独享的钩子<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/foo&apos;,</div><div class="line">      component: Foo,</div><div class="line">      beforeEnter: (to, from, next) =&gt; &#123;</div><div class="line">        // ...</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>组件内钩子<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">const Foo = &#123;</div><div class="line">  template: `...`,</div><div class="line">  beforeRouteEnter (to, from, next) &#123;</div><div class="line">    // 在渲染该组件的对应路由被 confirm 前调用</div><div class="line">    // 不！能！获取组件实例 `this`</div><div class="line">    // 因为当钩子执行前，组件实例还没被创建</div><div class="line">  &#125;,</div><div class="line">  beforeRouteUpdate (to, from, next) &#123;</div><div class="line">    // 在当前路由改变，但是该组件被复用时调用</div><div class="line">    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，</div><div class="line">    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</div><div class="line">    // 可以访问组件实例 `this`</div><div class="line">  &#125;,</div><div class="line">  beforeRouteLeave (to, from, next) &#123;</div><div class="line">    // 导航离开该组件的对应路由时调用</div><div class="line">    // 可以访问组件实例 `this`</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>beforeRouteEnter 钩子 不能 访问 this，因为钩子在导航确认前被调用,因此即将登场的新组件还没被创建。不过，你可以通过传一个回调给 next来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">beforeRouteEnter (to, from, next) &#123;</div><div class="line">  next(vm =&gt; &#123;</div><div class="line">    // 通过 `vm` 访问组件实例</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="识别路由，为路由设置元信息"><a href="#识别路由，为路由设置元信息" class="headerlink" title="识别路由，为路由设置元信息"></a>识别路由，为路由设置元信息</h2><ul>
+<li><p>定义路由的时候配置meta字段来识别路由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/foo&apos;,</div><div class="line">      component: Foo,</div><div class="line">      children: [</div><div class="line">        &#123;</div><div class="line">          path: &apos;bar&apos;,</div><div class="line">          component: Bar,</div><div class="line">          // a meta field</div><div class="line">          meta: &#123; requiresAuth: true &#125;</div><div class="line">        &#125;</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>访问meta字段来判断路由</p>
+<ul>
+<li>routes 配置中的每个路由对象为 路由记录。路由记录可以是嵌套的，因此，当一个路由匹配成功后，他可能匹配多个路由记录</li>
+<li>路由匹配到的所有路由记录会暴露为 $route 对象（还有在导航钩子中的 route 对象）的 $route.matched 数组</li>
+<li>通过遍历 $route.matched 来检查路由记录中的 meta字段,来识别路由<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">    router.beforeEach((to, from, next) =&gt; &#123;</div><div class="line">  if (to.matched.some(record =&gt; record.meta.requiresAuth)) &#123;</div><div class="line">    // this route requires auth, check if logged in</div><div class="line">    // if not, redirect to login page.</div><div class="line">    if (!auth.loggedIn()) &#123;</div><div class="line">      next(&#123;</div><div class="line">        path: &apos;/login&apos;,</div><div class="line">        query: &#123; redirect: to.fullPath &#125;</div><div class="line">      &#125;)</div><div class="line">    &#125; else &#123;</div><div class="line">      next()</div><div class="line">    &#125;</div><div class="line">  &#125; else &#123;</div><div class="line">    next() // 确保一定要调用 next()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">router.beforeEach((to,from,next) =&gt; &#123;</div><div class="line">    //只有配置了meta字段的路由才会判断</div><div class="line">    if(to.meta.requireAuth) &#123;</div><div class="line">    //判断是不是主代理商</div><div class="line">      if (authStatus==1) &#123;</div><div class="line">        next();</div><div class="line">      &#125;else &#123;</div><div class="line">        globStatus=true;</div><div class="line">        next(&#123;</div><div class="line">          path: &apos;/&apos;,</div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;else &#123;</div><div class="line">        next();</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="滚动行为"><a href="#滚动行为" class="headerlink" title="滚动行为"></a>滚动行为</h2><ul>
+<li>使用前端路由，当切换到新路由时，想要页面滚到顶部，或者是保持原先的滚动位置，就像重新加载页面那样。 vue-router 能做到，而且更好，它让你可以自定义路由切换时页面如何滚动。注意: 这个功能只在 HTML5 history 模式下可用</li>
+<li>当创建一个 Router 实例，你可以提供一个 scrollBehavior 方法：scrollBehavior 方法接收 to 和 from 路由对象。第三个参数 savedPosition 当且仅当 popstate 导航 (通过浏览器的 前进/后退 按钮触发) 时才可用。</li>
+<li>如果返回一个布尔假的值，或者是一个空对象，那么不会发生滚动。返回 savedPosition，在按下 后退/前进 按钮时，就会像浏览器的原生表现那样：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">scrollBehavior (to, from, savedPosition) &#123;</div><div class="line">  if (savedPosition) &#123;</div><div class="line">    return savedPosition</div><div class="line">  &#125; else &#123;</div><div class="line">    return &#123; x: 0, y: 0 &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h2><ol>
+<li><p>导航完成之后获取</p>
+<ul>
+<li>当你使用这种方式时，我们会马上导航和渲染组件，然后在组件的 created 钩子中获取数据。这让我们有机会在数据获取期间展示一个 loading 状态，还可以在不同视图间展示不同的 loading 状态。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class=&quot;post&quot;&gt;</div><div class="line">    &lt;div class=&quot;loading&quot; v-if=&quot;loading&quot;&gt;</div><div class="line">      Loading...</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;div v-if=&quot;error&quot; class=&quot;error&quot;&gt;</div><div class="line">      &#123;&#123; error &#125;&#125;</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;div v-if=&quot;post&quot; class=&quot;content&quot;&gt;</div><div class="line">      &lt;h2&gt;&#123;&#123; post.title &#125;&#125;&lt;/h2&gt;</div><div class="line">      &lt;p&gt;&#123;&#123; post.body &#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line">export default &#123;</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      loading: false,</div><div class="line">      post: null,</div><div class="line">      error: null</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  created () &#123;</div><div class="line">    // 组件创建完后获取数据，</div><div class="line">    // 此时 data 已经被 observed 了</div><div class="line">    this.fetchData()</div><div class="line">  &#125;,</div><div class="line">  watch: &#123;</div><div class="line">    // 如果路由有变化，会再次执行该方法</div><div class="line">    &apos;$route&apos;: &apos;fetchData&apos;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    fetchData () &#123;</div><div class="line">      this.error = this.post = null</div><div class="line">      this.loading = true</div><div class="line">      // replace getPost with your data fetching util / API wrapper</div><div class="line">      getPost(this.$route.params.id, (err, post) =&gt; &#123;</div><div class="line">        this.loading = false</div><div class="line">        if (err) &#123;</div><div class="line">          this.error = err.toString()</div><div class="line">        &#125; else &#123;</div><div class="line">          this.post = post</div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>导航完成之前获取</p>
+</li>
+</ol>
+<ul>
+<li>通过这种方式，我们在导航转入新的路由前获取数据。我们可以在接下来的组件的 beforeRouteEnter 钩子中获取数据，当数据获取成功后只调用 next 方法。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">export default &#123;</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      post: null,</div><div class="line">      error: null</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  beforeRouteEnter (to, from, next) &#123;</div><div class="line">    getPost(to.params.id, (err, post) =&gt; </div><div class="line">      if (err) &#123;</div><div class="line">        // display some global error message</div><div class="line">        next(false)</div><div class="line">      &#125; else &#123;</div><div class="line">        next(vm =&gt; &#123;</div><div class="line">          vm.post = post</div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  // 路由改变前，组件就已经渲染完了</div><div class="line">  // 逻辑稍稍不同</div><div class="line">  watch: &#123;</div><div class="line">    $route () &#123;</div><div class="line">      this.post = null</div><div class="line">      getPost(this.$route.params.id, (err, post) =&gt; &#123;</div><div class="line">        if (err) &#123;</div><div class="line">          this.error = err.toString()</div><div class="line">        &#125; else &#123;</div><div class="line">          this.post = post</div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;导航钩子&quot;&gt;&lt;a href=&quot;#导航钩子&quot; class=&quot;headerlink&quot; title=&quot;导航钩子&quot;&gt;&lt;/a&gt;导航钩子&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;vue-router 提供的导航钩子主要用来拦截导航，让它完成跳转或取消。有多种方式可以在路由导航发生时执行钩子：全局的, 单个路由独享的, 或者组件级的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;全局钩子 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;可以使用 router.beforeEach 注册一个全局的 before 钩子&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;const router = new VueRouter(&amp;#123; ... &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;router.beforeEach((to, from, next) =&amp;gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    // ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当一个导航触发时，全局的 before 钩子按照创建顺序调用。钩子是异步解析执行，此时导航在所有钩子 resolve 完之前一直处于 等待中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;钩子方法接收三个参数：&lt;ul&gt;
+&lt;li&gt;to: Route: 即将要进入的目标 路由对象&lt;/li&gt;
+&lt;li&gt;from: Route: 当前导航正要离开的路由&lt;/li&gt;
+&lt;li&gt;next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。&lt;ul&gt;
+&lt;li&gt;next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。&lt;/li&gt;
+&lt;li&gt;next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。&lt;/li&gt;
+&lt;li&gt;next(‘/‘) 或者 next({ path: ‘/‘ }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;某个路由独享的钩子&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;const router = new VueRouter(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  routes: [&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      path: &amp;apos;/foo&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      component: Foo,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      beforeEnter: (to, from, next) =&amp;gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        // ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  ]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -1202,96 +1913,6 @@
       <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
     
       <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue2.0——从环境搭建到发布</title>
-    <link href="http://yoursite.com/2017/05/23/Vue2-0%E2%80%94%E2%80%94%E4%BB%8E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%88%B0%E5%8F%91%E5%B8%83/"/>
-    <id>http://yoursite.com/2017/05/23/Vue2-0——从环境搭建到发布/</id>
-    <published>2017-05-23T11:54:15.000Z</published>
-    <updated>2017-06-03T05:35:36.880Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Vue开发环境的配置"><a href="#Vue开发环境的配置" class="headerlink" title="Vue开发环境的配置"></a>Vue开发环境的配置</h1><ol>
-<li>安装Nodejs<code>npm install nodejs</code></li>
-<li>安装webpack<code>npm install webpack</code></li>
-<li>安装vue脚手架<code>npm install vue-cli -g</code></li>
-</ol>
-<h1 id="用vue-cli创建模板"><a href="#用vue-cli创建模板" class="headerlink" title="用vue-cli创建模板"></a>用vue-cli创建模板</h1><ul>
-<li>vue-cli的模板分为两套<ul>
-<li>精简版：vue init webpack-simple 工程名字</li>
-<li>常规版：vue init webpack 工程名字</li>
-</ul>
-</li>
-<li>初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)<h1 id="安装项目依赖"><a href="#安装项目依赖" class="headerlink" title="安装项目依赖"></a>安装项目依赖</h1></li>
-<li>npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像<code>npm install -g cnpm</code><h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1></li>
-<li>cd进入项目中<code>npm run dev</code><h1 id="Vue项目组件的使用"><a href="#Vue项目组件的使用" class="headerlink" title="Vue项目组件的使用"></a>Vue项目组件的使用</h1></li>
-<li>组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用</li>
-<li>组件的使用<ol>
-<li>引入：<code>import firstcomponent from &#39;./component/firstcomponent.vue</code></li>
-<li>注册：data 代码块后面加上<code>components: { firstcomponent }</code></li>
-<li>使用：在<code>&lt;template&gt;&lt;/template&gt;</code>内加上<code>&lt;firstcomponent&gt;&lt;/firstcomponent&gt;</code><a id="more"></a>
-<h1 id="Vue路由"><a href="#Vue路由" class="headerlink" title="Vue路由"></a>Vue路由</h1></li>
-</ol>
-</li>
-<li>安装vue-router<code>npm install vue-router --save</code></li>
-<li>在man.js中导入路由模块<code>import VueRouter from &#39;vue-router&#39;</code></li>
-<li>使用：<code>Vue.use(VueRouter)</code></li>
-<li>挂载：<code>new Vue({
-el: &#39;#app&#39;,
-router,
-template: &#39;&lt;App/&gt;&#39;,
-components: { App }
-})</code></li>
-<li>配置项目路由<ol>
-<li>在router文件夹的index.js文件中配置</li>
-<li>导入路由模块<code>import Router from &#39;vue-router&#39;</code></li>
-<li>引入页面模块:<code>import login from &#39;@/page/login.vue&#39;</code></li>
-<li>路由的配置：export default new Router({<br> routes: [<pre><code>{path: &apos;/login&apos;,name:&apos;登录&apos;,component:login}
-</code></pre> ]<br>})</li>
-<li>路由的使用：在视图<template></template>标签中<router-link to="/advert"></router-link><h1 id="webpack的配置"><a href="#webpack的配置" class="headerlink" title="webpack的配置"></a>webpack的配置</h1></li>
-</ol>
-</li>
-<li>在config文件夹下的index.js中改变文件打包后指定到的文件夹<br>  <code>index: path.resolve(__dirname, &#39;../../webapp/index.html&#39;),
-  assetsRoot: path.resolve(__dirname, &#39;../../webapp&#39;),
-  assetsSubDirectory: &#39;static&#39;,
-  assetsPublicPath: &#39;/&#39;,</code><br>-dev: {<br>  port:8888<br>}改变文件的端口号<br>#文件打包</li>
-<li>npm run build</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Vue开发环境的配置&quot;&gt;&lt;a href=&quot;#Vue开发环境的配置&quot; class=&quot;headerlink&quot; title=&quot;Vue开发环境的配置&quot;&gt;&lt;/a&gt;Vue开发环境的配置&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;安装Nodejs&lt;code&gt;npm install nodejs&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;安装webpack&lt;code&gt;npm install webpack&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;安装vue脚手架&lt;code&gt;npm install vue-cli -g&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;用vue-cli创建模板&quot;&gt;&lt;a href=&quot;#用vue-cli创建模板&quot; class=&quot;headerlink&quot; title=&quot;用vue-cli创建模板&quot;&gt;&lt;/a&gt;用vue-cli创建模板&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;vue-cli的模板分为两套&lt;ul&gt;
-&lt;li&gt;精简版：vue init webpack-simple 工程名字&lt;/li&gt;
-&lt;li&gt;常规版：vue init webpack 工程名字&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)&lt;h1 id=&quot;安装项目依赖&quot;&gt;&lt;a href=&quot;#安装项目依赖&quot; class=&quot;headerlink&quot; title=&quot;安装项目依赖&quot;&gt;&lt;/a&gt;安装项目依赖&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像&lt;code&gt;npm install -g cnpm&lt;/code&gt;&lt;h1 id=&quot;项目启动&quot;&gt;&lt;a href=&quot;#项目启动&quot; class=&quot;headerlink&quot; title=&quot;项目启动&quot;&gt;&lt;/a&gt;项目启动&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;cd进入项目中&lt;code&gt;npm run dev&lt;/code&gt;&lt;h1 id=&quot;Vue项目组件的使用&quot;&gt;&lt;a href=&quot;#Vue项目组件的使用&quot; class=&quot;headerlink&quot; title=&quot;Vue项目组件的使用&quot;&gt;&lt;/a&gt;Vue项目组件的使用&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用&lt;/li&gt;
-&lt;li&gt;组件的使用&lt;ol&gt;
-&lt;li&gt;引入：&lt;code&gt;import firstcomponent from &amp;#39;./component/firstcomponent.vue&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;注册：data 代码块后面加上&lt;code&gt;components: { firstcomponent }&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;使用：在&lt;code&gt;&amp;lt;template&amp;gt;&amp;lt;/template&amp;gt;&lt;/code&gt;内加上&lt;code&gt;&amp;lt;firstcomponent&amp;gt;&amp;lt;/firstcomponent&amp;gt;&lt;/code&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-    
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
-    
-      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
-    
-      <category term="vue-cli" scheme="http://yoursite.com/tags/vue-cli/"/>
     
   </entry>
   

@@ -85,24 +85,26 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
 
 
 
 
 
 
-<meta name="description" content="vue的生命周期详解vue自定义指令">
+<meta name="description" content="钩子函数的理解 文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。 可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。  vue的生命周期详解vue生命周期图示 生命周期总共分为八个阶段 beforeCreate（组件实例创建前） el和data并未初始化 实例创建前：这个阶段实例的data、m">
 <meta name="keywords" content="vue,框架,ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue.js学习三">
 <meta property="og:url" content="http://yoursite.com/2017/06/27/Vue-js学习三/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
-<meta property="og:description" content="vue的生命周期详解vue自定义指令">
-<meta property="og:updated_time" content="2017-06-27T09:35:45.155Z">
+<meta property="og:description" content="钩子函数的理解 文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。 可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。  vue的生命周期详解vue生命周期图示 生命周期总共分为八个阶段 beforeCreate（组件实例创建前） el和data并未初始化 实例创建前：这个阶段实例的data、m">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png">
+<meta property="og:updated_time" content="2017-07-10T06:34:19.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js学习三">
-<meta name="twitter:description" content="vue的生命周期详解vue自定义指令">
+<meta name="twitter:description" content="钩子函数的理解 文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。 可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。  vue的生命周期详解vue生命周期图示 生命周期总共分为八个阶段 beforeCreate（组件实例创建前） el和data并未初始化 实例创建前：这个阶段实例的data、m">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png">
 
 
 
@@ -329,6 +331,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -364,7 +388,101 @@
       
 
       
-        <h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h2 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h2>
+        <h2 id="钩子函数的理解"><a href="#钩子函数的理解" class="headerlink" title="钩子函数的理解"></a>钩子函数的理解</h2><ul>
+<li>文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。</li>
+<li>可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。</li>
+</ul>
+<h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h3 id="vue生命周期图示"><a href="#vue生命周期图示" class="headerlink" title="vue生命周期图示"></a>vue生命周期图示</h3><p><img src="https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png" alt=""></p>
+<h3 id="生命周期总共分为八个阶段"><a href="#生命周期总共分为八个阶段" class="headerlink" title="生命周期总共分为八个阶段"></a>生命周期总共分为八个阶段</h3><ol>
+<li>beforeCreate（组件实例创建前）<ul>
+<li>el和data并未初始化</li>
+<li>实例创建前：这个阶段实例的data、methods是读不到的</li>
+</ul>
+</li>
+<li>created（组件实例创建后）,<ul>
+<li>完成了 data 数据的初始化，el没有</li>
+<li>实例创建后：这个阶段已经完成了数据观测(data observer)，属性和方法的运算， watch/event 事件回调。mount挂载阶段还没开始，$el 属性目前不可见，数据并没有在DOM元素上进行渲染</li>
+</ul>
+</li>
+<li>beforeMount(模板编译/挂载之前),<ul>
+<li>完成了 el 和 data 初始化</li>
+<li>在挂载开始之前被调用：相关的 render 函数首次被调用。</li>
+</ul>
+</li>
+<li>mounted（模板编译/挂载之后）<ul>
+<li>完成挂载</li>
+<li>el选项的DOM节点 被新创建的 vm.$el 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在DOM节点上进行渲染</li>
+</ul>
+</li>
+<li>beforeUpdate（组件更新之前）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>数据更新时调用，但不进行DOM重新渲染，在数据更新时DOM没渲染前可以在这个生命函数里进行状态处理</li>
+</ul>
+</li>
+<li>updated（组件更新之后）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>这个状态下数据更新并且DOM重新渲染，当这个生命周期函数被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。当实例每次进行数据更新时updated都会执行</li>
+</ul>
+</li>
+<li>beforeDestroy（组件销毁前）<ul>
+<li>实例销毁之前调用。</li>
+</ul>
+</li>
+<li>destroyed（组件销毁后）</li>
+</ol>
+<ul>
+<li>销毁完成后，我们再重新改变data中的值，vue不再对此动作进行响应了。但是原先生成的dom元素还存在，可以这么理解，执行了destroy操作，后续就不再受vue控制了。</li>
+<li>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。<h3 id="钩子函数的使用"><a href="#钩子函数的使用" class="headerlink" title="钩子函数的使用"></a>钩子函数的使用</h3></li>
+<li>beforecreate : 可以在这加个loading事件</li>
+<li>created ：在这结束loading，还做一些初始化，实现函数自执行</li>
+<li>mounted ： 在这发起后端请求，拿回数据，配合路由钩子做一些事情</li>
+<li><p>beforeDestory： 你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容</p>
+</li>
+<li><p>created：进行ajax请求异步数据的获取、初始化数据</p>
+</li>
+<li>mounted：挂载元素内dom节点的获取</li>
+<li>nextTick：针对单一事件更新数据后立即操作dom</li>
+<li>updated：任何数据的更新，如果要做统一的业务逻辑处理</li>
+<li>watch：监听具体数据变化，并做相应的处理<a id="more"></a>
+<h2 id="render-渲染-函数的使用-解决重复html"><a href="#render-渲染-函数的使用-解决重复html" class="headerlink" title="render(渲染)函数的使用(解决重复html)"></a>render(渲染)函数的使用(解决重复html)</h2></li>
+<li>template模板中有重复HTMl的时候可以用render函数编译</li>
+<li><p>案例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">  &lt;body&gt;</div><div class="line">        &lt;div id=&quot;app&quot;&gt;</div><div class="line">            &lt;mycomment :level=&quot;2&quot;&gt;</div><div class="line">                这是h2元素</div><div class="line">            &lt;/mycomment&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">    &lt;script type=&quot;text/x-template&quot; id=&quot;is&quot;&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">    &lt;h1 v-if=&quot;level === 1&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h1&gt;</div><div class="line">    &lt;h2 v-if=&quot;level === 2&quot;&gt;</div><div class="line">        &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h2&gt;</div><div class="line">    &lt;h3 v-if=&quot;level === 3&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h3&gt;</div><div class="line">    &lt;h4 v-if=&quot;level === 4&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h4&gt;</div><div class="line">    &lt;h5 v-if=&quot;level === 5&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h5&gt;</div><div class="line">    &lt;h6 v-if=&quot;level === 6&quot;&gt;</div><div class="line">      &lt;slot&gt;&lt;/slot&gt;</div><div class="line">    &lt;/h6&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/script&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        Vue.component(&apos;mycomment&apos;,&#123;</div><div class="line">            template:&apos;#is&apos;,</div><div class="line">            props:&#123;</div><div class="line">                level:&#123;</div><div class="line">                    type:Number,</div><div class="line">                    required:true,</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">        var app =new Vue(&#123;</div><div class="line">            el:&apos;#app&apos;,</div><div class="line">        &#125;)</div><div class="line"></div><div class="line"></div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>用Render函数解决代码冗长</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"> &lt;body&gt;</div><div class="line">        &lt;div id=&quot;app&quot;&gt;</div><div class="line">            &lt;render-teample :level=&quot;4&quot; &gt;</div><div class="line"></div><div class="line">                &lt;div class=&quot;jah&quot; slot=&quot;myslot&quot;&gt;render function&lt;/div&gt;</div><div class="line">            &lt;/render-teample&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    Vue.component(&apos;render-teample&apos;,&#123;</div><div class="line">        render:function(createElement)&#123;</div><div class="line">            return createElement(</div><div class="line">                &apos;h&apos;+this.level,</div><div class="line">                &#123;</div><div class="line">                    &apos;class&apos;:&#123;</div><div class="line">                        show:true,</div><div class="line">                        hide:false,</div><div class="line">                    &#125;,</div><div class="line">                    style:&#123;</div><div class="line">                        width:&apos;200px&apos;,</div><div class="line">                        height:&apos;400px&apos;,</div><div class="line">                        background:&apos;red&apos;,</div><div class="line">                    &#125;,</div><div class="line">                    attrs:&#123;</div><div class="line">                        name:&apos;h-ex&apos;,</div><div class="line">                        id:&apos;h-id&apos;</div><div class="line">                    &#125;,</div><div class="line">                    props:&#123;</div><div class="line">                        myprops:true,</div><div class="line">                    &#125;,</div><div class="line">                     on: &#123;</div><div class="line">                    click: function(event)&#123;</div><div class="line">                        alert(this.num)</div><div class="line">                    &#125;</div><div class="line">                &#125;,</div><div class="line">                    nativeOn:&#123;</div><div class="line">                        click:function(event) &#123;</div><div class="line"></div><div class="line">                            alert(1111)</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                &#125;,</div><div class="line">                [</div><div class="line">                    this.$slots.myslot,</div><div class="line">                    createElement(&apos;div&apos;,&#123;</div><div class="line">                         domProps:&#123;</div><div class="line">                        innerHTML:&apos;holle render&apos;</div><div class="line">                    &#125;</div><div class="line">                    &#125;)</div><div class="line">                ]</div><div class="line"></div><div class="line">                )</div><div class="line">        &#125;,</div><div class="line">         props: &#123;</div><div class="line">        level: &#123;</div><div class="line">          type: Number,</div><div class="line">          required: true</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">        var app=new Vue(&#123;</div><div class="line">            el:&quot;#app&quot;,</div><div class="line">            data:&#123;</div><div class="line">                num:110</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;);</div><div class="line"></div><div class="line"></div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h2><ul>
+<li>当项目中需要对纯 DOM 元素进行底层操作,就要用到自定义指令<h3 id="vue自定义指令的注册"><a href="#vue自定义指令的注册" class="headerlink" title="vue自定义指令的注册"></a>vue自定义指令的注册</h3></li>
+<li><p>注册全局自定义指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Vue.directive(&apos;focus&apos;, &#123;</div><div class="line">  inserted: function (el) &#123;</div><div class="line">    el.focus()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>注册局部自定义指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">directives: &#123;</div><div class="line">  focus: &#123;</div><div class="line">    inserted:function (el) &#123;</div><div class="line">                    el.focus()</div><div class="line">                &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###自定义指令函数提供的钩子函数</p>
+<ul>
+<li>bind: 只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个在绑定时执行一次的初始化动作</li>
+<li>inserted: 被绑定元素插入父节点时调用（父节点存在即可调用，不必存在于 document 中）</li>
+<li>update: 被绑定元素所在的模板更新时调用，而不论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新（详细的钩子函数参数见下）</li>
+<li>componentUpdated: 被绑定元素所在模板完成一次更新周期时调用</li>
+<li>unbind: 只调用一次， 指令与元素解绑时调用<br>###钩子函数的参数</li>
+<li>el: 指令所绑定的元素，可以用来直接操作 DOM 。</li>
+<li>binding: 一个对象，包含以下属性：<ul>
+<li>name: 指令名，不包括 v- 前缀。</li>
+<li>value: 指令的绑定值， 例如： v-my-directive=”1 + 1”, value 的值是 2。</li>
+<li>oldValue: 指令绑定的前一个值，仅在 update 和 componentUpdated 钩子中可用。无论值是否改变都可用。</li>
+<li>expression: 绑定值的字符串形式。 例如 v-my-directive=”1 + 1” ， expression 的值是 “1 + 1”。</li>
+<li>arg: 传给指令的参数。例如 v-my-directive:foo， arg 的值是 “foo”。</li>
+<li>modifiers: 一个包含修饰符的对象。 例如： v-my-directive.foo.bar, 修饰符对象 modifiers 的值是 { foo: true, bar: true }。</li>
+</ul>
+</li>
+<li>vnode: Vue 编译生成的虚拟节点。</li>
+<li>oldVnode: 上一个虚拟节点，仅在 update 和 componentUpdated 钩子中可用。</li>
+</ul>
+
       
     </div>
 
@@ -419,6 +537,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/01/Babel的使用总结/" rel="prev" title="Babel的使用总结">
+                Babel的使用总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -490,7 +612,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -501,7 +623,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -512,7 +634,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -592,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue的生命周期详解"><span class="nav-number">1.</span> <span class="nav-text">vue的生命周期详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue自定义指令"><span class="nav-number">2.</span> <span class="nav-text">vue自定义指令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#钩子函数的理解"><span class="nav-number">1.</span> <span class="nav-text">钩子函数的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue的生命周期详解"><span class="nav-number">2.</span> <span class="nav-text">vue的生命周期详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue生命周期图示"><span class="nav-number">2.1.</span> <span class="nav-text">vue生命周期图示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期总共分为八个阶段"><span class="nav-number">2.2.</span> <span class="nav-text">生命周期总共分为八个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钩子函数的使用"><span class="nav-number">2.3.</span> <span class="nav-text">钩子函数的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#render-渲染-函数的使用-解决重复html"><span class="nav-number">3.</span> <span class="nav-text">render(渲染)函数的使用(解决重复html)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue自定义指令"><span class="nav-number">4.</span> <span class="nav-text">vue自定义指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue自定义指令的注册"><span class="nav-number">4.1.</span> <span class="nav-text">vue自定义指令的注册</span></a></li></ol></li></ol></div>
             
 
           </div>

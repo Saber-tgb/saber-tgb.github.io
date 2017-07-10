@@ -85,24 +85,24 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
 
 
 
 
 
 
-<meta name="description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
+<meta name="description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。  状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
 <meta name="keywords" content="vue,ES6,Vuex,状态管理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vuex学习">
 <meta property="og:url" content="http://yoursite.com/2017/06/05/vuex学习/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
-<meta property="og:description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
-<meta property="og:updated_time" content="2017-06-06T03:58:05.656Z">
+<meta property="og:description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。  状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
+<meta property="og:updated_time" content="2017-07-10T06:35:42.250Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vuex学习">
-<meta name="twitter:description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
+<meta name="twitter:description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。  状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
 
 
 
@@ -387,11 +387,14 @@
 
       
         <h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
-<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2></li>
+<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。</li>
+</ul>
+<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2><ul>
 <li>vuex的状态自管理应用包含以下几个部分<ul>
 <li>state，驱动应用的数据源;</li>
 <li>view，以声明方式将state映射到视图； </li>
-<li>actions，响应在view上的用户输入导致的状态变化</li>
+<li>actions，响应在view上的用户输入导致的状态变化<a id="more"></a>
+</li>
 </ul>
 </li>
 </ul>
@@ -527,7 +530,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -538,7 +541,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -549,7 +552,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
