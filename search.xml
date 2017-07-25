@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HTML5基础标签的掌握]]></title>
+    <url>%2F2017%2F07%2F20%2FHTML5%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE%E7%9A%84%E6%8E%8C%E6%8F%A1%2F</url>
+    <content type="text"><![CDATA[标签 &lt;abbr&gt; 标签表示简称或缩写，比如 “WWW” 或 “NATO” &lt;abbr&gt; 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 元素上时显示出简称/缩写的完整版本。1The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.]]></content>
+      <categories>
+        <category>HTML</category>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>HTML5</tag>
+        <tag>标签</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[深入理解ES6一]]></title>
+    <url>%2F2017%2F07%2F19%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[let声明 Es6中引入块级声明，let声明的变量作用域限制在代码块中； let声明不会被提升; 在同一作用域中不能用let重复定义已经存在的标识符，会抛出错误。 const声明 const声明的变量作用域也会限制在代码块中； const声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值) const声明不允许修改绑定，但允许修改值；例如const声明对象，对象的值是可以修改的 临时死区的存在 临时死区(temporal dead zone)TDZ用来描述let和const的不提升效果； 与var声明不同，let和const声明的变量不会被提升到作用域的顶部，在javascript引擎扫描代码的时候会将let和const的声明放到临时死区中 循环中的块级作用域 常见的循环错误；var声明是全局变量 123456789var funcs = [];for(var i=0;i&lt;10;i++) &#123; funcs.push(function() &#123; console.log(i); &#125;)&#125;funcs.forEach(funcion(func) &#123; func(); //输出10次10 &#125;) 使用闭包解决这个问题 12345678910111213var funcs = [];for(var i=0;i&lt;10;i++) &#123; funcs.push((function(value)&#123; // 变量i的值在传递到这个作用域是被赋值给了value; // 此时这个值就不会随外部变量而变化了； return function() &#123; console.log(value); &#125; &#125;)(i));&#125;funcs.forEach(function(func) &#123; func(); //输出0，然后是1,2直到9&#125;) 使用let声明简化 123456789var funcs=[];for(let i=0;i&lt;10;i++) &#123; funcs.push(function() &#123; console.log(i); &#125;)&#125;funcs.forEach(function(func) &#123; func(); //输出0，然后是1,2直到9&#125;) 全局作用域的绑定 当var被用于全局作用域时，它会创建一个新的全局变量作为全局对象(浏览器环境中的window对象)的属性 当在全局作用域中使用let和const,会在全局作用域下创建一个新的绑定，但是该绑定不会添加为全局对象的属性。]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+        <tag>let</tag>
+        <tag>const</tag>
+        <tag>块级作用域</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTTP状态码分析]]></title>
+    <url>%2F2017%2F07%2F18%2FHTTP%E7%8A%B6%E6%80%81%E7%A0%81%E5%88%86%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[1xx（临时响应）1表示临时响应并需要请求者继续执行操作的状态码 100（继续）: 请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。 101（切换协议）: 请求者已要求服务器切换协议，服务器已确认并准备切换。 2xx （成功）1表示成功处理了请求的状态码 200（成功）: 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果是对您的 robots.txt 文件显示此状态码，则表示 Googlebot 已成功检索到该文件。 201（已创建）: 请求成功并且服务器创建了新的资源。 202（已接受）: 服务器已接受请求，但尚未处理。 203（非授权信息）: 服务器已成功处理了请求，但返回的信息可能来自另一来源。 204（无内容）: 服务器成功处理了请求，但没有返回任何内容。 205（重置内容）: 服务器成功处理了请求，但没有返回任何内容。与 204 响应不同，此响应要求请求者重置文档视图（例如，清除表单内容以输入新内容）。 206（部分内容）: 服务器成功处理了部分 GET 请求。 3xx （重定向）1要完成请求，需要进一步操作。通常，这些状态码用来重定向。Google 建议您在每次请求中使用重定向不要超过 5 次。您可以使用网站管理员工具查看一下 Googlebot 在抓取重定向网页时是否遇到问题。诊断下的网络抓取页列出了由于重定向错误导致 Googlebot 无法抓取的网址。 300（多种选择）: 针对请求，服务器可执行多种操作。服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择 301（永久移动）: 请求的网页已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。您应使用此代码告诉 Googlebot 某个网页或网站已永久移动到新位置 302（临时移动）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个网页或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引 303（查看其他位置）: 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。对于除 HEAD 之外的所有请求，服务器会自动转到其他位置。 304（未修改）: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。 305（使用代理）: 请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。 307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。 4xx（请求错误）1这些状态码表示请求可能出错，妨碍了服务器的处理 400（错误请求）: 服务器不理解请求的语法。 401（未授权）: 请求要求身份验证。对于登录后请求的网页，服务器可能返回此响应。 403（禁止）: 服务器拒绝请求。如果您在 Googlebot 尝试抓取您网站上的有效网页时看到此状态码（您可以在 Google 网站管理员工具诊断下的网络抓取页面上看到此信息），可能是您的服务器或主机拒绝了 Googlebot 访问 404（未找到）：服务器找不到请求的网页。例如，对于服务器上不存在的网页经常会返回此代码。如果您的网站上没有 robots.txt 文件，而您在 Google 网站管理员工具”诊断”标签的 robots.txt 页上看到此状态码，则这是正确的状态码。但是，如果您有 robots.txt 文件而又看到此状态码，则说明您的 robots.txt 文件可能命名错误或位于错误的位置（该文件应当位于顶级域，名为 robots.txt）。如果对于 Googlebot 抓取的网址看到此状态码（在”诊断”标签的 HTTP 错误页面上），则表示 Googlebot 跟随的可能是另一个页面的无效链接（是旧链接或输入有误的链接）。 405（方法禁用）：禁用请求中指定的方法。 406（不接受）: 无法使用请求的内容特性响应请求的网页。 407（需要代理授权）: 此状态码与 401（未授权）类似，但指定请求者应当授权使用代理。如果服务器返回此响应，还表示请求者应当使用代理。 408（请求超时）: 服务器等候请求时发生超时。 409（冲突）: 服务器在完成请求时发生冲突。服务器必须在响应中包含有关冲突的信息。服务器在响应与前一个请求相冲突的 PUT 请求时可能会返回此代码，以及两个请求的差异列表。 410（已删除）: 如果请求的资源已永久删除，服务器就会返回此响应。该代码与 404（未找到）代码类似，但在资源以前存在而现在不存在的情况下，有时会用来替代 404 代码。如果资源已永久移动，您应使用 301 指定资源的新位置。 411（需要有效长度）: 服务器不接受不含有效内容长度标头字段的请求 412（未满足前提条件）: 服务器未满足请求者在请求中设置的其中一个前提条件。 413（请求实体过大）: 服务器无法处理请求，因为请求实体过大，超出服务器的处理能力 414（请求的 URI 过长）: 请求的 URI（通常为网址）过长，服务器无法处理。 415（不支持的媒体类型）: 请求的格式不受请求页面的支持。 416（请求范围不符合要求）: 如果页面无法提供请求的范围，则服务器会返回此状态码 417（未满足期望值）: 服务器未满足”期望”请求标头字段的要求 5xx（服务器错误）1这些状态码表示服务器在处理请求时发生内部错误。这些错误可能是服务器本身的错误，而不是请求出错。 500（服务器内部错误）: 服务器遇到错误，无法完成请求。 501（尚未实施）: 服务器不具备完成请求的功能。例如，服务器无法识别请求方法时可能会返回此代码。 502（错误网关）: 服务器作为网关或代理，从上游服务器收到无效响应 503（服务不可用）: 服务器目前无法使用（由于超载或停机维护）。通常，这只是暂时状态 504（网关超时）: 服务器作为网关或代理，但是没有及时从上游服务器收到请求 505（HTTP 版本不受支持）: 服务器不支持请求中所用的 HTTP 协议版本]]></content>
+      <categories>
+        <category>http</category>
+        <category>状态码</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>状态码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[浏览器缓存]]></title>
+    <url>%2F2017%2F07%2F18%2F%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%2F</url>
+    <content type="text"><![CDATA[缓存的定义 Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。 缓存的命中和未命中 304 的标准解释： Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。 HTTP在验证]]></content>
+      <categories>
+        <category>http</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>缓存</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA['HTTP协议的学习四']]></title>
+    <url>%2F2017%2F07%2F17%2FHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%9B%9B%2F</url>
+    <content type="text"><![CDATA[web服务器的主要功能 建立连接 接受请求–从网络中读取一条HTTP请求报文 处理请求–对请求报文进行解释，并采取行动 构建响应–创建带有正确首部的HTTP响应报文 发送响应–将响应回送给客服端 记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。 代理 web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。]]></content>
+      <tags>
+        <tag>HTTP</tag>
+        <tag>服务器</tag>
+        <tag>代理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA['HTTP协议的学习三']]></title>
+    <url>%2F2017%2F07%2F17%2FHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%89%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[工作中遇到的问题——对象的拷贝]]></title>
     <url>%2F2017%2F07%2F13%2F%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D%2F</url>
     <content type="text"><![CDATA[遇到的问题： 将对象赋值给一个变量时，当我改变变量的值，发现原来的对象也跟着改变。发现原因： 因为对象是应用类型，存放在堆内存中；当我们用变量保存一个对象时，实际上保存的是该对象指针，这个指针指向对象的位置，所以当我们改变变量的时候，会从指针找到对象的位置，从而改变了对象。解决方法：将对象拷贝再赋值给变量 浅拷贝 简单的引用复制 1234567891011121314function shallowClone(copyObj) &#123; var obj = &#123;&#125;; for ( var i in copyObj) &#123; obj[i] = copyObj[i]; &#125; return obj;&#125;var x = &#123; a: 1, b: &#123; f: &#123; g: 1 &#125; &#125;, c: [ 1, 2, 3 ]&#125;;var y = shallowClone(x);console.log(y.b.f === x.b.f); // true ES6新方法Object.assign()1234567var x = &#123; a: 1, b: &#123; f: &#123; g: 1 &#125; &#125;, c: [ 1, 2, 3 ]&#125;;var y = Object.assign(&#123;&#125;, x);console.log(y.b.f === x.b.f); // true 深度拷贝 Array的slice和concat方法 1234567 var array = [1,2,3]; var array_shallow = array; var array_concat = array.concat(); var array_slice = array.slice(0); console.log(array === array_shallow); //true console.log(array === array_slice); //false，“看起来”像深拷贝console.log(array === array_concat); //false，“看起来”像深拷贝 123456789 var array = [1, [1,2,3], &#123;name:&quot;array&quot;&#125;]; var array_concat = array.concat();var array_slice = array.slice(0);array_concat[1][0] = 5; //改变array_concat中数组元素的值 console.log(array[1]); //[5,2,3] console.log(array_slice[1]); //[5,2,3] array_slice[2].name = &quot;array_slice&quot;; //改变array_slice中对象元素的值 console.log(array[2].name); //array_sliceconsole.log(array_concat[2].name); //array_slice JSON对象的parse和stringify 123456789101112131415161718 //例1var source = &#123; name:&quot;source&quot;, child:&#123; name:&quot;child&quot; &#125; &#125; var target = JSON.parse(JSON.stringify(source));target.name = &quot;target&quot;; //改变target的name属性console.log(source.name); //source console.log(target.name); //targettarget.child.name = &quot;target child&quot;; //改变target的child console.log(source.child.name); //child console.log(target.child.name); //target child//例2var source = &#123; name:function()&#123;console.log(1);&#125;, child:&#123; name:&quot;child&quot; &#125; &#125; var target = JSON.parse(JSON.stringify(source));console.log(target.name); //undefined//例3var source = &#123; name:function()&#123;console.log(1);&#125;, child:new RegExp(&quot;e&quot;) &#125;var target = JSON.parse(JSON.stringify(source));console.log(target.name); //undefinedconsole.log(target.child); //Object &#123;&#125; 完整的拷贝方法12345678910111213141516171819202122232425262728293031323334353637var $ = (function()&#123; var types = &apos;Array Object String Date RegExp Function Boolean Number Null Undefined&apos;.split(&apos; &apos;); function type() &#123; return Object.prototype.toString.call(this).slice(8, -1); &#125; for (var i = types.length; i--;) &#123; $[&apos;is&apos; + types[i]] = (function (self) &#123; return function (elem) &#123; return type.call(elem) === self; &#125;; &#125;)(types[i]); &#125; return $;&#125;)();//类型判断 function copy(obj,deep)&#123; if(obj === null || (!$.isObject(obj) &amp;&amp; !$.isFunction(obj)))&#123; return obj; &#125; if($.isFunction(obj))&#123; return new Function(&quot;return &quot; + obj.toString())(); &#125;else&#123; var name, target = $.isArray(obj) ? [] : &#123;&#125;, value; for(name in obj)&#123; value = obj[name]; if(value === obj) &#123; continue; &#125; if(deep &amp;&amp; ($.isArray(value) || $.isObject(value)))&#123; target[name] = copy(value,deep); &#125;else&#123; target[name] = value; &#125; &#125; return target; &#125; &#125;]]></content>
@@ -39,8 +107,8 @@
       </categories>
       <tags>
         <tag>HTTP</tag>
-        <tag>URL</tag>
         <tag>URI</tag>
+        <tag>URL</tag>
         <tag>报文</tag>
       </tags>
   </entry>
@@ -64,8 +132,8 @@
         <category>ES6</category>
       </categories>
       <tags>
-        <tag>ES6</tag>
         <tag>Babel</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -76,9 +144,9 @@
         <category>Vue</category>
       </categories>
       <tags>
+        <tag>ES6</tag>
         <tag>vue</tag>
         <tag>框架</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -89,9 +157,9 @@
         <category>Vue</category>
       </categories>
       <tags>
+        <tag>ES6</tag>
         <tag>vue</tag>
         <tag>框架</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -155,8 +223,8 @@
         <category>Vuex</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>ES6</tag>
+        <tag>vue</tag>
         <tag>Vuex</tag>
         <tag>状态管理</tag>
       </tags>
@@ -198,8 +266,8 @@
       </categories>
       <tags>
         <tag>vue</tag>
-        <tag>webpack</tag>
         <tag>脚手架</tag>
+        <tag>webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -221,9 +289,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Vue-router的使用一]]></title>
-    <url>%2F2017%2F05%2F24%2FVue-router%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%80%2F</url>
-    <content type="text"><![CDATA[vue-router的使用 javascript部分 1234567891011121314151617181920212223242526272829303132333435// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)import Vue from &apos;vue&apos;import VueRouter from &apos;vue-router&apos;Vue.use(VueRouter)// 1. 定义（路由）组件。// 可以从其他文件 import 进来import Foo from &apos;@/page/login.vue&apos;import Bar from &apos;@/page/login.vue&apos;// 2. 定义路由// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是// 通过 Vue.extend() 创建的组件构造器，// 或者，只是一个组件配置对象。// 我们晚点再讨论嵌套路由。const routes = [ &#123; path: &apos;/foo&apos;, component: Foo &#125;, &#123; path: &apos;/bar&apos;, component: Bar &#125;]// 3. 创建 router 实例，然后传 `routes` 配置// 你还可以传别的配置参数, 不过先这么简单着吧。const router = new VueRouter(&#123; routes // （缩写）相当于 routes: routes&#125;)// 4. 创建和挂载根实例。// 记得要通过 router 配置参数注入路由，// 从而让整个应用都有路由功能const app = new Vue(&#123; router&#125;).$mount(&apos;#app&apos;)// 现在，应用已经启动了！ html部分 12345678910111213141516&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;&lt;div id=&quot;app&quot;&gt; &lt;h1&gt;Hello App!&lt;/h1&gt; &lt;p&gt; &lt;!-- 使用 router-link 组件来导航. --&gt; &lt;!-- 通过传入 `to` 属性指定链接. --&gt; &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt; &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt; &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt; &lt;/p&gt; &lt;!-- 路由出口 --&gt; &lt;!-- 路由匹配到的组件将渲染在这里 --&gt; &lt;router-view&gt;&lt;/router-view&gt;&lt;/div&gt; vue动态路由的设置 使用场景：例如，我们有一个 User 组件，对于所有 ID 各不相同的用户，都要使用这个组件来渲染。那么，我们可以在 vue-router 的路由路径中使用『动态路径参数』 1234567891011const User = &#123; template: &apos;&lt;div&gt;User&lt;/div&gt;&apos;&#125;const router = new VueRouter(&#123; routes: [ // 动态路径参数 以冒号开头 &#123; path: &apos;/user/:id&apos;, component: User &#125; ]&#125;)// /user/foo 和 /user/bar 都将映射到相同的路由 一个『路径参数』使用冒号 : 标记。当匹配到一个路由时，参数值会被设置到 this.$route.params，可以在每个组件内使用. 1234// 我们可以更新 User 的模板，输出当前用户的 IDconst User = &#123; template: &apos;&lt;div&gt;User &#123;&#123; $route.params.id &#125;&#125;&lt;/div&gt;&apos;&#125; 响应路由参数的变化 当使用路由参数时，例如从 /user/foo 导航到 user/bar，原来的组件实例会被复用。因为两个路由都渲染同个组件，比起销毁再创建，复用则显得更加高效。不过，这也意味着组件的生命周期钩子不会再被调用。 想对路由参数的变化作出响应的话，你可以简单地 watch（监测变化） $route 对象：12345678const User = &#123; template: &apos;...&apos;, watch: &#123; &apos;$route&apos; (to, from) &#123; // 对路由变化作出响应... &#125; &#125;&#125; 路由匹配优先级 有时候，同一个路径可以匹配多个路由，此时，匹配的优先级就按照路由的定义顺序：谁先定义的，谁的优先级就最高。 嵌套路由 使用children配置来设置嵌套路由 注意事项：以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。children 配置就是像 routes 配置一样的路由配置数组 1234567891011121314151617181920const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:id&apos;, component: User, children: [ &#123; // 当 /user/:id/profile 匹配成功， // UserProfile 会被渲染在 User 的 &lt;router-view&gt; 中 path: &apos;profile&apos;, component: UserProfile &#125;, &#123; // 当 /user/:id/posts 匹配成功 // UserPosts 会被渲染在 User 的 &lt;router-view&gt; 中 path: &apos;posts&apos;, component: UserPosts &#125; ] &#125; ]&#125;) 基于上面的配置，当你访问 /user/foo 时，User 的出口是不会渲染任何东西，这是因为没有匹配到合适的子路由。如果你想要渲染点什么，可以提供一个 空的 子路由 1234567891011121314const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:id&apos;, component: User, children: [ // 当 /user/:id 匹配成功， // UserHome 会被渲染在 User 的 &lt;router-view&gt; 中 &#123; path: &apos;&apos;, component: UserHome &#125;, // ...其他子路由 ] &#125; ]&#125;) 用JS控制导航 router.push(location) 1声明式: &lt;router-link :to=&quot;...&quot;&gt; 编程式: router.push(...) 除了使用 &lt;router-link&gt; 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。 想要导航到不同的 URL，则使用 router.push 方法。这个方法会向 history 栈添加一个新的记录，所以，当用户点击浏览器后退按钮时，则回到之前的 URL。 当你点击 &lt;router-link&gt; 时，这个方法会在内部调用，所以说，点击 &lt;router-link :to=&quot;...&quot;&gt; 等同于调用 router.push(…)。1234567891011// 字符串router.push(&apos;home&apos;)// 对象router.push(&#123; path: &apos;home&apos; &#125;)// 命名的路由router.push(&#123; name: &apos;user&apos;, params: &#123; userId: 123 &#125;&#125;)// 带查询参数，变成 /register?plan=privaterouter.push(&#123; path: &apos;register&apos;, query: &#123; plan: &apos;private&apos; &#125;&#125;) router.replace(location) 它不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录1声明式: &lt;router-link :to=&quot;...&quot; replace&gt; 编程式: router.replace(...) router.go(n) 这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 window.history.go(n)。123456789101112// 在浏览器记录中前进一步，等同于 history.forward()router.go(1)// 后退一步记录，等同于 history.back()router.go(-1)// 前进 3 步记录router.go(3)// 如果 history 记录不够用，那就默默地失败呗router.go(-100)router.go(100) 命名路由 通过一个名称来标识一个路由显得更方便一些，特别是在链接一个路由，或者是执行一些跳转的时候。你可以在创建 Router 实例的时候，在 routes 配置中给某个路由设置名称。123456789const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:userId&apos;, name: &apos;user&apos;, component: User &#125; ]&#125;) 命名视图 使用场景：同时（同级）展示多个视图，而不是嵌套展示，例如创建一个布局，有 sidebar（侧导航） 和 main（主内容） 两个视图，这个时候命名视图就派上用场了。你可以在界面中拥有多个单独命名的视图，而不是只有一个单独的出口。如果 router-view 没有设置名字，那么默认为 default。 123&lt;router-view class=&quot;view one&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view two&quot; name=&quot;a&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view three&quot; name=&quot;b&quot;&gt;&lt;/router-view&gt; 一个视图使用一个组件渲染，因此对于同个路由，多个视图就需要多个组件。确保正确使用 components 配置（带上 s）： 123456789101112const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/&apos;, components: &#123; default: Foo, a: Bar, b: Baz &#125; &#125; ]&#125;) 重定向 和 别名 重定向 重定向也是通过 routes 配置来完成，下面例子是从 /a 重定向到 /b： 12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: &apos;/b&apos; &#125; ]&#125;) 重定向的目标也可以是一个命名的路由 12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: &#123; name: &apos;foo&apos; &#125;&#125; ]&#125;) 甚至是一个方法，动态返回重定向目标： 12345678const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: to =&gt; &#123; // 方法接收 目标路由 作为参数 // return 重定向的 字符串路径/路径对象 &#125;&#125; ]&#125;) 别名 /a 的别名是 /b，意味着，当用户访问 /b 时，URL 会保持为 /b，但是路由匹配则为 /a，就像用户访问 /a 一样。12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, component: A, alias: &apos;/b&apos; &#125; ]&#125;) HTML5 History 模式 vue-router 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。 如果不想要很丑的 hash，我们可以用路由的 history 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。1234const router = new VueRouter(&#123; mode: &apos;history&apos;, routes: [...]&#125;)]]></content>
+    <title><![CDATA[Vue-router的API学习]]></title>
+    <url>%2F2017%2F05%2F24%2FVue-router%E7%9A%84API%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[&lt;router-link&gt; 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。自定义属性(props) to 表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。1234&lt;!-- 字符串 --&gt;&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt; replace重定向 设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。1&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt; append 设置 append 属性后，则在当前（相对）路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b tab 有时候想要 渲染成某种标签，例如 。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。123&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;li&gt;foo&lt;/li&gt; exact “是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 也会被设置 CSS 类名。 按照这个规则， 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：12&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;&lt;router-link to=&quot;/&quot; exact&gt; events 声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。 active-class 设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。 将”激活时的CSS类名”应用在外层元素 有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 标签本身，那么可以用 渲染外层元素，包裹着内层的原生 标签： 123&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt; &lt;a&gt;/foo&lt;/a&gt;&lt;/router-link&gt; 在这种情况下， 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 。 组件是一个 functional 组件，渲染路径匹配到的视图组件。 渲染的组件还可以内嵌自己的 ，根据嵌套路径，渲染嵌套组件。 属性 name 如果 设置了名称，则会渲染对应的路由配置中 components 下的相应组件。查看 命名视图 中的例子。 行为表现 其他属性（非 router-view 使用的属性）都直接传给渲染的组件， 很多时候，每个路由的数据都是包含在路由参数中。 因为它也是个组件，所以可以配合 和 使用。如果两个结合一起用，要确保在内层使用 ：12345&lt;transition&gt; &lt;keep-alive&gt; &lt;router-view&gt;&lt;/router-view&gt; &lt;/keep-alive&gt;&lt;/transition&gt; 路由信息对象- 一个 route object（路由信息对象） 表示当前激活的路由的状态信息，包含了当前 URL 解析得到的信息，还有 URL 匹配到的 route records（路由记录）。 - route object 是 immutable（不可变） 的，每次成功的导航后都会产生一个新的对象。 路由信息对象的属性- $route.path - 字符串，对应当前路由的路径，总是解析为绝对路径，如 &quot;/foo/bar&quot;。 - $route.params - 一个 key/value 对象，包含了 动态片段 和 全匹配片段，如果没有路由参数，就是一个空对象。 - $route.query - 一个 key/value 对象，表示 URL 查询参数。例如，对于路径 /foo?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。 - $route.hash - 当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。 - $route.fullPath - 完成解析后的 URL，包含查询参数和 hash 的完整路径。 - $route.matched - 一个数组，包含当前路由的所有嵌套路径片段的 路由记录 。路由记录就是 routes 配置数组中的对象副本（还有在 children 数组）。 - 当 URL 为 /foo/bar，$route.matched 将会是一个包含从上到下的所有对象（副本）。 - $route.name - 当前路由的名称，如果有的话]]></content>
       <categories>
         <category>vue-router</category>
       </categories>
@@ -247,9 +315,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Vue-router的API学习]]></title>
-    <url>%2F2017%2F05%2F24%2FVue-router%E7%9A%84API%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[&lt;router-link&gt; 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。自定义属性(props) to 表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。1234&lt;!-- 字符串 --&gt;&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt; replace重定向 设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。1&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt; append 设置 append 属性后，则在当前（相对）路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b tab 有时候想要 渲染成某种标签，例如 。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。123&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;li&gt;foo&lt;/li&gt; exact “是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 也会被设置 CSS 类名。 按照这个规则， 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：12&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;&lt;router-link to=&quot;/&quot; exact&gt; events 声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。 active-class 设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。 将”激活时的CSS类名”应用在外层元素 有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 标签本身，那么可以用 渲染外层元素，包裹着内层的原生 标签： 123&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt; &lt;a&gt;/foo&lt;/a&gt;&lt;/router-link&gt; 在这种情况下， 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 。 组件是一个 functional 组件，渲染路径匹配到的视图组件。 渲染的组件还可以内嵌自己的 ，根据嵌套路径，渲染嵌套组件。 属性 name 如果 设置了名称，则会渲染对应的路由配置中 components 下的相应组件。查看 命名视图 中的例子。 行为表现 其他属性（非 router-view 使用的属性）都直接传给渲染的组件， 很多时候，每个路由的数据都是包含在路由参数中。 因为它也是个组件，所以可以配合 和 使用。如果两个结合一起用，要确保在内层使用 ：12345&lt;transition&gt; &lt;keep-alive&gt; &lt;router-view&gt;&lt;/router-view&gt; &lt;/keep-alive&gt;&lt;/transition&gt; 路由信息对象- 一个 route object（路由信息对象） 表示当前激活的路由的状态信息，包含了当前 URL 解析得到的信息，还有 URL 匹配到的 route records（路由记录）。 - route object 是 immutable（不可变） 的，每次成功的导航后都会产生一个新的对象。 路由信息对象的属性- $route.path - 字符串，对应当前路由的路径，总是解析为绝对路径，如 &quot;/foo/bar&quot;。 - $route.params - 一个 key/value 对象，包含了 动态片段 和 全匹配片段，如果没有路由参数，就是一个空对象。 - $route.query - 一个 key/value 对象，表示 URL 查询参数。例如，对于路径 /foo?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。 - $route.hash - 当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。 - $route.fullPath - 完成解析后的 URL，包含查询参数和 hash 的完整路径。 - $route.matched - 一个数组，包含当前路由的所有嵌套路径片段的 路由记录 。路由记录就是 routes 配置数组中的对象副本（还有在 children 数组）。 - 当 URL 为 /foo/bar，$route.matched 将会是一个包含从上到下的所有对象（副本）。 - $route.name - 当前路由的名称，如果有的话]]></content>
+    <title><![CDATA[Vue-router的使用一]]></title>
+    <url>%2F2017%2F05%2F24%2FVue-router%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[vue-router的使用 javascript部分 1234567891011121314151617181920212223242526272829303132333435// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)import Vue from &apos;vue&apos;import VueRouter from &apos;vue-router&apos;Vue.use(VueRouter)// 1. 定义（路由）组件。// 可以从其他文件 import 进来import Foo from &apos;@/page/login.vue&apos;import Bar from &apos;@/page/login.vue&apos;// 2. 定义路由// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是// 通过 Vue.extend() 创建的组件构造器，// 或者，只是一个组件配置对象。// 我们晚点再讨论嵌套路由。const routes = [ &#123; path: &apos;/foo&apos;, component: Foo &#125;, &#123; path: &apos;/bar&apos;, component: Bar &#125;]// 3. 创建 router 实例，然后传 `routes` 配置// 你还可以传别的配置参数, 不过先这么简单着吧。const router = new VueRouter(&#123; routes // （缩写）相当于 routes: routes&#125;)// 4. 创建和挂载根实例。// 记得要通过 router 配置参数注入路由，// 从而让整个应用都有路由功能const app = new Vue(&#123; router&#125;).$mount(&apos;#app&apos;)// 现在，应用已经启动了！ html部分 12345678910111213141516&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;&lt;div id=&quot;app&quot;&gt; &lt;h1&gt;Hello App!&lt;/h1&gt; &lt;p&gt; &lt;!-- 使用 router-link 组件来导航. --&gt; &lt;!-- 通过传入 `to` 属性指定链接. --&gt; &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt; &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt; &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt; &lt;/p&gt; &lt;!-- 路由出口 --&gt; &lt;!-- 路由匹配到的组件将渲染在这里 --&gt; &lt;router-view&gt;&lt;/router-view&gt;&lt;/div&gt; vue动态路由的设置 使用场景：例如，我们有一个 User 组件，对于所有 ID 各不相同的用户，都要使用这个组件来渲染。那么，我们可以在 vue-router 的路由路径中使用『动态路径参数』 1234567891011const User = &#123; template: &apos;&lt;div&gt;User&lt;/div&gt;&apos;&#125;const router = new VueRouter(&#123; routes: [ // 动态路径参数 以冒号开头 &#123; path: &apos;/user/:id&apos;, component: User &#125; ]&#125;)// /user/foo 和 /user/bar 都将映射到相同的路由 一个『路径参数』使用冒号 : 标记。当匹配到一个路由时，参数值会被设置到 this.$route.params，可以在每个组件内使用. 1234// 我们可以更新 User 的模板，输出当前用户的 IDconst User = &#123; template: &apos;&lt;div&gt;User &#123;&#123; $route.params.id &#125;&#125;&lt;/div&gt;&apos;&#125; 响应路由参数的变化 当使用路由参数时，例如从 /user/foo 导航到 user/bar，原来的组件实例会被复用。因为两个路由都渲染同个组件，比起销毁再创建，复用则显得更加高效。不过，这也意味着组件的生命周期钩子不会再被调用。 想对路由参数的变化作出响应的话，你可以简单地 watch（监测变化） $route 对象：12345678const User = &#123; template: &apos;...&apos;, watch: &#123; &apos;$route&apos; (to, from) &#123; // 对路由变化作出响应... &#125; &#125;&#125; 路由匹配优先级 有时候，同一个路径可以匹配多个路由，此时，匹配的优先级就按照路由的定义顺序：谁先定义的，谁的优先级就最高。 嵌套路由 使用children配置来设置嵌套路由 注意事项：以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。children 配置就是像 routes 配置一样的路由配置数组 1234567891011121314151617181920const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:id&apos;, component: User, children: [ &#123; // 当 /user/:id/profile 匹配成功， // UserProfile 会被渲染在 User 的 &lt;router-view&gt; 中 path: &apos;profile&apos;, component: UserProfile &#125;, &#123; // 当 /user/:id/posts 匹配成功 // UserPosts 会被渲染在 User 的 &lt;router-view&gt; 中 path: &apos;posts&apos;, component: UserPosts &#125; ] &#125; ]&#125;) 基于上面的配置，当你访问 /user/foo 时，User 的出口是不会渲染任何东西，这是因为没有匹配到合适的子路由。如果你想要渲染点什么，可以提供一个 空的 子路由 1234567891011121314const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:id&apos;, component: User, children: [ // 当 /user/:id 匹配成功， // UserHome 会被渲染在 User 的 &lt;router-view&gt; 中 &#123; path: &apos;&apos;, component: UserHome &#125;, // ...其他子路由 ] &#125; ]&#125;) 用JS控制导航 router.push(location) 1声明式: &lt;router-link :to=&quot;...&quot;&gt; 编程式: router.push(...) 除了使用 &lt;router-link&gt; 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。 想要导航到不同的 URL，则使用 router.push 方法。这个方法会向 history 栈添加一个新的记录，所以，当用户点击浏览器后退按钮时，则回到之前的 URL。 当你点击 &lt;router-link&gt; 时，这个方法会在内部调用，所以说，点击 &lt;router-link :to=&quot;...&quot;&gt; 等同于调用 router.push(…)。1234567891011// 字符串router.push(&apos;home&apos;)// 对象router.push(&#123; path: &apos;home&apos; &#125;)// 命名的路由router.push(&#123; name: &apos;user&apos;, params: &#123; userId: 123 &#125;&#125;)// 带查询参数，变成 /register?plan=privaterouter.push(&#123; path: &apos;register&apos;, query: &#123; plan: &apos;private&apos; &#125;&#125;) router.replace(location) 它不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录1声明式: &lt;router-link :to=&quot;...&quot; replace&gt; 编程式: router.replace(...) router.go(n) 这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 window.history.go(n)。123456789101112// 在浏览器记录中前进一步，等同于 history.forward()router.go(1)// 后退一步记录，等同于 history.back()router.go(-1)// 前进 3 步记录router.go(3)// 如果 history 记录不够用，那就默默地失败呗router.go(-100)router.go(100) 命名路由 通过一个名称来标识一个路由显得更方便一些，特别是在链接一个路由，或者是执行一些跳转的时候。你可以在创建 Router 实例的时候，在 routes 配置中给某个路由设置名称。123456789const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:userId&apos;, name: &apos;user&apos;, component: User &#125; ]&#125;) 命名视图 使用场景：同时（同级）展示多个视图，而不是嵌套展示，例如创建一个布局，有 sidebar（侧导航） 和 main（主内容） 两个视图，这个时候命名视图就派上用场了。你可以在界面中拥有多个单独命名的视图，而不是只有一个单独的出口。如果 router-view 没有设置名字，那么默认为 default。 123&lt;router-view class=&quot;view one&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view two&quot; name=&quot;a&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view three&quot; name=&quot;b&quot;&gt;&lt;/router-view&gt; 一个视图使用一个组件渲染，因此对于同个路由，多个视图就需要多个组件。确保正确使用 components 配置（带上 s）： 123456789101112const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/&apos;, components: &#123; default: Foo, a: Bar, b: Baz &#125; &#125; ]&#125;) 重定向 和 别名 重定向 重定向也是通过 routes 配置来完成，下面例子是从 /a 重定向到 /b： 12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: &apos;/b&apos; &#125; ]&#125;) 重定向的目标也可以是一个命名的路由 12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: &#123; name: &apos;foo&apos; &#125;&#125; ]&#125;) 甚至是一个方法，动态返回重定向目标： 12345678const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: to =&gt; &#123; // 方法接收 目标路由 作为参数 // return 重定向的 字符串路径/路径对象 &#125;&#125; ]&#125;) 别名 /a 的别名是 /b，意味着，当用户访问 /b 时，URL 会保持为 /b，但是路由匹配则为 /a，就像用户访问 /a 一样。12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, component: A, alias: &apos;/b&apos; &#125; ]&#125;) HTML5 History 模式 vue-router 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。 如果不想要很丑的 hash，我们可以用路由的 history 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。1234const router = new VueRouter(&#123; mode: &apos;history&apos;, routes: [...]&#125;)]]></content>
       <categories>
         <category>vue-router</category>
       </categories>
@@ -267,9 +335,9 @@
         <category>Vue</category>
       </categories>
       <tags>
+        <tag>ES6</tag>
         <tag>vue</tag>
         <tag>框架</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>

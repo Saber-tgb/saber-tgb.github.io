@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-14T09:18:00.373Z</updated>
+  <updated>2017-07-20T09:15:51.026Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,264 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML5基础标签的掌握</title>
+    <link href="http://yoursite.com/2017/07/20/HTML5%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE%E7%9A%84%E6%8E%8C%E6%8F%A1/"/>
+    <id>http://yoursite.com/2017/07/20/HTML5基础标签的掌握/</id>
+    <published>2017-07-20T09:12:09.000Z</published>
+    <updated>2017-07-20T09:15:51.026Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a><abbr>标签</abbr></h2><ul>
+<li><code>&lt;abbr&gt;</code> 标签表示简称或缩写，比如 “WWW” 或 “NATO”</li>
+<li><code>&lt;abbr&gt;</code> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.</div></pre></td></tr></table></figure></abbr></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;标签&quot;&gt;&lt;a href=&quot;#标签&quot; class=&quot;headerlink&quot; title=&quot;标签&quot;&gt;&lt;/a&gt;&lt;abbr&gt;标签&lt;/abbr&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; 标签表示简称或缩写，比如 “WWW” 或 “NAT
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+    
+      <category term="HTML5" scheme="http://yoursite.com/categories/HTML/HTML5/"/>
+    
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+    
+      <category term="HTML5" scheme="http://yoursite.com/tags/HTML5/"/>
+    
+      <category term="标签" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解ES6一</title>
+    <link href="http://yoursite.com/2017/07/19/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%80/"/>
+    <id>http://yoursite.com/2017/07/19/深入理解ES6一/</id>
+    <published>2017-07-19T02:03:31.000Z</published>
+    <updated>2017-07-19T02:37:28.792Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h1><ol>
+<li>Es6中引入块级声明，<code>let</code>声明的变量作用域限制在代码块中；</li>
+<li><code>let</code>声明不会被提升;</li>
+<li>在同一作用域中不能用<code>let</code>重复定义已经存在的标识符，会抛出错误。</li>
+</ol>
+<h1 id="const声明"><a href="#const声明" class="headerlink" title="const声明"></a>const声明</h1><ol>
+<li><code>const</code>声明的变量作用域也会限制在代码块中；</li>
+<li><code>const</code>声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)</li>
+<li><code>const</code>声明不允许修改绑定，但允许修改值；例如<code>const</code>声明对象，对象的值是可以修改的</li>
+</ol>
+<h1 id="临时死区的存在"><a href="#临时死区的存在" class="headerlink" title="临时死区的存在"></a>临时死区的存在</h1><ul>
+<li>临时死区(temporal dead zone)TDZ用来描述<code>let</code>和<code>const</code>的不提升效果；</li>
+<li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
+</ul>
+<h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
+<li><p>常见的循环错误；<code>var</code>声明是全局变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用闭包解决这个问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push((function(value)&#123;</div><div class="line">        // 变量i的值在传递到这个作用域是被赋值给了value;</div><div class="line">        // 此时这个值就不会随外部变量而变化了；</div><div class="line">        return function() &#123;</div><div class="line">            console.log(value);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i));</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用let声明简化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs=[];</div><div class="line">for(let i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="全局作用域的绑定"><a href="#全局作用域的绑定" class="headerlink" title="全局作用域的绑定"></a>全局作用域的绑定</h1><ul>
+<li>当<code>var</code>被用于全局作用域时，它会创建一个新的全局变量作为全局对象(浏览器环境中的window对象)的属性</li>
+<li>当在全局作用域中使用<code>let</code>和<code>const</code>,会在全局作用域下创建一个新的绑定，但是该绑定不会添加为全局对象的属性。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;let声明&quot;&gt;&lt;a href=&quot;#let声明&quot; class=&quot;headerlink&quot; title=&quot;let声明&quot;&gt;&lt;/a&gt;let声明&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Es6中引入块级声明，&lt;code&gt;let&lt;/code&gt;声明的变量作用域限制在代码块中；&lt;/li&gt;
+&lt;li
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="let" scheme="http://yoursite.com/tags/let/"/>
+    
+      <category term="const" scheme="http://yoursite.com/tags/const/"/>
+    
+      <category term="块级作用域" scheme="http://yoursite.com/tags/%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP状态码分析</title>
+    <link href="http://yoursite.com/2017/07/18/HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2017/07/18/HTTP状态码分析/</id>
+    <published>2017-07-18T09:01:10.000Z</published>
+    <updated>2017-07-19T03:21:15.193Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1xx（临时响应）"><a href="#1xx（临时响应）" class="headerlink" title="1xx（临时响应）"></a>1xx（临时响应）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表示临时响应并需要请求者继续执行操作的状态码</div></pre></td></tr></table></figure>
+<ol>
+<li>100（继续）: 请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。</li>
+<li>101（切换协议）: 请求者已要求服务器切换协议，服务器已确认并准备切换。</li>
+</ol>
+<h2 id="2xx-（成功）"><a href="#2xx-（成功）" class="headerlink" title="2xx （成功）"></a>2xx （成功）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表示成功处理了请求的状态码</div></pre></td></tr></table></figure>
+<ol>
+<li>200（成功）: 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果是对您的 robots.txt 文件显示此状态码，则表示 Googlebot 已成功检索到该文件。</li>
+<li>201（已创建）: 请求成功并且服务器创建了新的资源。</li>
+<li>202（已接受）: 服务器已接受请求，但尚未处理。</li>
+<li>203（非授权信息）: 服务器已成功处理了请求，但返回的信息可能来自另一来源。</li>
+<li>204（无内容）: 服务器成功处理了请求，但没有返回任何内容。</li>
+<li>205（重置内容）: 服务器成功处理了请求，但没有返回任何内容。与 204 响应不同，此响应要求请求者重置文档视图（例如，清除表单内容以输入新内容）。</li>
+<li>206（部分内容）: 服务器成功处理了部分 GET 请求。</li>
+</ol>
+<h2 id="3xx-（重定向）"><a href="#3xx-（重定向）" class="headerlink" title="3xx （重定向）"></a>3xx （重定向）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">要完成请求，需要进一步操作。通常，这些状态码用来重定向。Google 建议您在每次请求中使用重定向不要超过 5 次。您可以使用网站管理员工具查看一下 Googlebot 在抓取重定向网页时是否遇到问题。诊断下的网络抓取页列出了由于重定向错误导致 Googlebot 无法抓取的网址。</div></pre></td></tr></table></figure>
+<ol>
+<li>300（多种选择）: 针对请求，服务器可执行多种操作。服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择</li>
+<li>301（永久移动）: 请求的网页已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。您应使用此代码告诉 Googlebot 某个网页或网站已永久移动到新位置</li>
+<li>302（临时移动）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个网页或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引</li>
+<li>303（查看其他位置）: 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。对于除 HEAD 之外的所有请求，服务器会自动转到其他位置。</li>
+<li>304（未修改）: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。</li>
+<li>305（使用代理）: 请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。</li>
+<li>307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 <a href="answer.py?answer=">301</a> 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。</li>
+</ol>
+<h2 id="4xx（请求错误）"><a href="#4xx（请求错误）" class="headerlink" title="4xx（请求错误）"></a>4xx（请求错误）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些状态码表示请求可能出错，妨碍了服务器的处理</div></pre></td></tr></table></figure>
+<ol>
+<li>400（错误请求）: 服务器不理解请求的语法。</li>
+<li>401（未授权）: 请求要求身份验证。对于登录后请求的网页，服务器可能返回此响应。</li>
+<li>403（禁止）: 服务器拒绝请求。如果您在 Googlebot 尝试抓取您网站上的有效网页时看到此状态码（您可以在 Google 网站管理员工具诊断下的网络抓取页面上看到此信息），可能是您的服务器或主机拒绝了 Googlebot 访问</li>
+<li>404（未找到）：服务器找不到请求的网页。例如，对于服务器上不存在的网页经常会返回此代码。如果您的网站上没有 robots.txt 文件，而您在 Google 网站管理员工具”诊断”标签的 robots.txt 页上看到此状态码，则这是正确的状态码。但是，如果您有 robots.txt 文件而又看到此状态码，则说明您的 robots.txt 文件可能命名错误或位于错误的位置（该文件应当位于顶级域，名为 robots.txt）。如果对于 Googlebot 抓取的网址看到此状态码（在”诊断”标签的 HTTP 错误页面上），则表示 Googlebot 跟随的可能是另一个页面的无效链接（是旧链接或输入有误的链接）。</li>
+<li>405（方法禁用）：禁用请求中指定的方法。</li>
+<li>406（不接受）: 无法使用请求的内容特性响应请求的网页。</li>
+<li>407（需要代理授权）: 此状态码与 <a href="answer.py?answer=35128">401（未授权）</a>类似，但指定请求者应当授权使用代理。如果服务器返回此响应，还表示请求者应当使用代理。</li>
+<li>408（请求超时）: 服务器等候请求时发生超时。</li>
+<li>409（冲突）: 服务器在完成请求时发生冲突。服务器必须在响应中包含有关冲突的信息。服务器在响应与前一个请求相冲突的 PUT 请求时可能会返回此代码，以及两个请求的差异列表。</li>
+<li>410（已删除）: 如果请求的资源已永久删除，服务器就会返回此响应。该代码与 404（未找到）代码类似，但在资源以前存在而现在不存在的情况下，有时会用来替代 404 代码。如果资源已永久移动，您应使用 301 指定资源的新位置。</li>
+<li>411（需要有效长度）: 服务器不接受不含有效内容长度标头字段的请求</li>
+<li>412（未满足前提条件）: 服务器未满足请求者在请求中设置的其中一个前提条件。</li>
+<li>413（请求实体过大）: 服务器无法处理请求，因为请求实体过大，超出服务器的处理能力</li>
+<li>414（请求的 URI 过长）: 请求的 URI（通常为网址）过长，服务器无法处理。</li>
+<li>415（不支持的媒体类型）: 请求的格式不受请求页面的支持。</li>
+<li>416（请求范围不符合要求）: 如果页面无法提供请求的范围，则服务器会返回此状态码</li>
+<li>417（未满足期望值）: 服务器未满足”期望”请求标头字段的要求</li>
+</ol>
+<h2 id="5xx（服务器错误）"><a href="#5xx（服务器错误）" class="headerlink" title="5xx（服务器错误）"></a>5xx（服务器错误）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些状态码表示服务器在处理请求时发生内部错误。这些错误可能是服务器本身的错误，而不是请求出错。</div></pre></td></tr></table></figure>
+<ol>
+<li>500（服务器内部错误）: 服务器遇到错误，无法完成请求。</li>
+<li>501（尚未实施）: 服务器不具备完成请求的功能。例如，服务器无法识别请求方法时可能会返回此代码。</li>
+<li>502（错误网关）: 服务器作为网关或代理，从上游服务器收到无效响应</li>
+<li>503（服务不可用）: 服务器目前无法使用（由于超载或停机维护）。通常，这只是暂时状态</li>
+<li>504（网关超时）: 服务器作为网关或代理，但是没有及时从上游服务器收到请求</li>
+<li>505（HTTP 版本不受支持）: 服务器不支持请求中所用的 HTTP 协议版本</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1xx（临时响应）&quot;&gt;&lt;a href=&quot;#1xx（临时响应）&quot; class=&quot;headerlink&quot; title=&quot;1xx（临时响应）&quot;&gt;&lt;/a&gt;1xx（临时响应）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t
+    
+    </summary>
+    
+      <category term="http" scheme="http://yoursite.com/categories/http/"/>
+    
+      <category term="状态码" scheme="http://yoursite.com/categories/http/%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="状态码" scheme="http://yoursite.com/tags/%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器缓存</title>
+    <link href="http://yoursite.com/2017/07/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
+    <id>http://yoursite.com/2017/07/18/浏览器缓存/</id>
+    <published>2017-07-18T02:55:49.000Z</published>
+    <updated>2017-07-18T08:56:20.994Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="缓存的定义"><a href="#缓存的定义" class="headerlink" title="缓存的定义"></a>缓存的定义</h2><ul>
+<li>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。</li>
+</ul>
+<h2 id="缓存的命中和未命中"><a href="#缓存的命中和未命中" class="headerlink" title="缓存的命中和未命中"></a>缓存的命中和未命中</h2><ul>
+<li>304 的标准解释：<ul>
+<li>Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</li>
+</ul>
+</li>
+<li>HTTP在验证</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;缓存的定义&quot;&gt;&lt;a href=&quot;#缓存的定义&quot; class=&quot;headerlink&quot; title=&quot;缓存的定义&quot;&gt;&lt;/a&gt;缓存的定义&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之
+    
+    </summary>
+    
+      <category term="http" scheme="http://yoursite.com/categories/http/"/>
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="缓存" scheme="http://yoursite.com/tags/%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&#39;HTTP协议的学习四&#39;</title>
+    <link href="http://yoursite.com/2017/07/17/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%9B%9B/"/>
+    <id>http://yoursite.com/2017/07/17/HTTP协议的学习四/</id>
+    <published>2017-07-17T06:58:41.007Z</published>
+    <updated>2017-07-17T08:22:28.653Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="web服务器的主要功能"><a href="#web服务器的主要功能" class="headerlink" title="web服务器的主要功能"></a>web服务器的主要功能</h2><ol>
+<li>建立连接</li>
+<li>接受请求–从网络中读取一条HTTP请求报文</li>
+<li>处理请求–对请求报文进行解释，并采取行动</li>
+<li>构建响应–创建带有正确首部的HTTP响应报文</li>
+<li>发送响应–将响应回送给客服端</li>
+<li>记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。</li>
+</ol>
+<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><ul>
+<li>web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;web服务器的主要功能&quot;&gt;&lt;a href=&quot;#web服务器的主要功能&quot; class=&quot;headerlink&quot; title=&quot;web服务器的主要功能&quot;&gt;&lt;/a&gt;web服务器的主要功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;建立连接&lt;/li&gt;
+&lt;li&gt;接受请求–从网络中读取一条H
+    
+    </summary>
+    
+    
+      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="代理" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&#39;HTTP协议的学习三&#39;</title>
+    <link href="http://yoursite.com/2017/07/17/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
+    <id>http://yoursite.com/2017/07/17/HTTP协议的学习三/</id>
+    <published>2017-07-17T06:58:33.000Z</published>
+    <updated>2017-07-17T06:58:33.472Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>工作中遇到的问题——对象的拷贝</title>
@@ -421,9 +679,9 @@
     
       <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
     
-      <category term="URL" scheme="http://yoursite.com/tags/URL/"/>
-    
       <category term="URI" scheme="http://yoursite.com/tags/URI/"/>
+    
+      <category term="URL" scheme="http://yoursite.com/tags/URL/"/>
     
       <category term="报文" scheme="http://yoursite.com/tags/%E6%8A%A5%E6%96%87/"/>
     
@@ -587,9 +845,9 @@
       <category term="ES6" scheme="http://yoursite.com/categories/Babel/ES6/"/>
     
     
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
       <category term="Babel" scheme="http://yoursite.com/tags/Babel/"/>
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
     
   </entry>
   
@@ -760,11 +1018,11 @@
       <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
     
     
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
       <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
     
   </entry>
   
@@ -877,11 +1135,11 @@
       <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
     
     
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
       <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
     
   </entry>
   
@@ -1486,9 +1744,9 @@
       <category term="Vuex" scheme="http://yoursite.com/categories/Vuex/"/>
     
     
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
-    
       <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
       <category term="Vuex" scheme="http://yoursite.com/tags/Vuex/"/>
     
@@ -1507,299 +1765,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>扎实基础CSS一</title>
-    <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80CSS%E4%B8%80/"/>
-    <id>http://yoursite.com/2017/06/03/扎实基础CSS一/</id>
-    <published>2017-06-03T08:08:12.000Z</published>
-    <updated>2017-07-10T06:35:54.713Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="文本超出显示省略号"><a href="#文本超出显示省略号" class="headerlink" title="文本超出显示省略号"></a>文本超出显示省略号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">width: 300px //要设置宽度</div><div class="line">overflow: hidden;</div><div class="line">white-space: nowrap;</div><div class="line"> text-overflow: ellipsis;</div></pre></td></tr></table></figure>
-<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;文本超出显示省略号&quot;&gt;&lt;a href=&quot;#文本超出显示省略号&quot; class=&quot;headerlink&quot; title=&quot;文本超出显示省略号&quot;&gt;&lt;/a&gt;文本超出显示省略号&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;width: 300px //要设置宽度&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;overflow: hidden;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;white-space: nowrap;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; text-overflow: ellipsis;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>扎实基础HTML一</title>
-    <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80HTML%E4%B8%80/"/>
-    <id>http://yoursite.com/2017/06/03/扎实基础HTML一/</id>
-    <published>2017-06-03T08:07:54.000Z</published>
-    <updated>2017-07-10T06:36:20.041Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="html5新增的音频和视频"><a href="#html5新增的音频和视频" class="headerlink" title="html5新增的音频和视频"></a>html5新增的音频和视频</h2><ul>
-<li>音频audio<code>&lt;audio src=&#39;&#39;&gt;&lt;/audio&gt;</code></li>
-<li>视频video<code>&lt;video src=&#39;&#39;&gt;&lt;/video&gt;</code></li>
-</ul>
-<h2 id="html5语义化标签的使用"><a href="#html5语义化标签的使用" class="headerlink" title="html5语义化标签的使用"></a>html5语义化标签的使用</h2><ol>
-<li>头部–header和nav标签</li>
-</ol>
-<ul>
-<li>header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导航栏nav。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;header&gt;</div><div class="line">    &lt;h1&gt;html5语义化标签&lt;/h1&gt;</div><div class="line">    &lt;nav&gt;</div><div class="line">        &lt;h1&gt;导航&lt;/h1&gt;</div><div class="line">        &lt;ul&gt;</div><div class="line">            &lt;li&gt;章节标签&lt;/li&gt;</div><div class="line">            &lt;li&gt;标题标签&lt;/li&gt;</div><div class="line">        &lt;/ul&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line">&lt;/header&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<ol>
-<li>主体部分——main和section</li>
-</ol>
-<ul>
-<li>main标签表示页面的主体部份，section标签给页面区分不同的章节。section是一个章节标签，构建页面的大纲(outline)。除此外还有nav、artical和aside三个标签能够勾勒页面的轮廓。章节标签通常会带上h1~h6的标题标签。不同的章节标题是独立的，嵌套的章节标题也跟着嵌套。另外多个标题可以用hgroup包括起来，在页面提纲里成为独立的一条内容。</li>
-<li><code>&lt;hgroup&gt;</code>标签用于对网页或区段（section）的标题进行组合。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> &lt;main&gt;</div><div class="line">    &lt;section&gt;</div><div class="line">        &lt;hgroup&gt;</div><div class="line">            &lt;h2&gt;章节标签&lt;/h2&gt;</div><div class="line">            &lt;p&gt;为页面区分不同的章节&lt;/p&gt;</div><div class="line">        &lt;/hgroup&gt;</div><div class="line">        &lt;div&gt;包括section article nav aside &lt;/div&gt;</div><div class="line">    &lt;/section&gt;</div><div class="line">    &lt;section&gt;</div><div class="line">        &lt;hgroup&gt;</div><div class="line">            &lt;h2&gt;标题标签&lt;/h2&gt;</div><div class="line">            &lt;p&gt;为不同的章节定义标题&lt;/p&gt;</div><div class="line">        &lt;/hgroup&gt; </div><div class="line">        &lt;div&gt;h1 h2 h3 h4 h5 h6六个标题标签&lt;/div&gt;</div><div class="line">    &lt;/section&gt;</div><div class="line">&lt;/main&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol>
-<li>尾部——footer</li>
-</ol>
-<ul>
-<li>footer和header一样，用在不同的章节里，可以显示该章节（如body整个页面）相关的外链、版权等信息。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;footer&gt;</div><div class="line">        &lt;p&gt;copyright &amp;copy hello, world&lt;/p&gt;</div><div class="line">&lt;/footer&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol>
-<li>div和section、section和article的区别</li>
-</ol>
-<ul>
-<li>div是一个普通的容器，而section不能当作一个普通的容器使用，使用section要让其起outline的作用，而article比section的章节概念更强。article适用于独立性强的内容，如本身就是一篇文章、博客，或者用户的评论等，article比section更加强调需要包含一个标题标签h1~h6。如果使用article的语义性更好的时候，就不用section。或者，内容可再继续细分章节的也应使用article。</li>
-<li>章节的内容是独立的，并且可以嵌套</li>
-<li>独立是指每个章节都可以有自己的标题标签、header、footer和nav，并且章节可以相互嵌套<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;h1&gt;html标签&lt;/h1&gt;</div><div class="line">    &lt;article&gt;</div><div class="line">        &lt;h1&gt;html5标签&lt;/h1&gt;</div><div class="line">        &lt;section&gt;</div><div class="line">            &lt;h1&gt;标题标签&lt;/h1&gt;</div><div class="line">        &lt;/section&gt;</div><div class="line">        &lt;section&gt;</div><div class="line">            &lt;h1&gt;章节标签&lt;/h1&gt;</div><div class="line">        &lt;/section&gt;</div><div class="line">    &lt;/article&gt;</div><div class="line">    &lt;article&gt;</div><div class="line">        &lt;h1&gt;html4标签&lt;/h1&gt;</div><div class="line">    &lt;/article&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>5 其它常用标签</p>
-<ul>
-<li><p>figure用作照片及其注释的容器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;figure&gt;</div><div class="line">       &lt;img src=&quot;Mars.jpg&quot; alt=&quot;&quot;&gt;</div><div class="line">       &lt;figcaption&gt;火星&lt;/figcaption&gt;</div><div class="line">   &lt;/figure&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>aside的内容与页面的主体内容相切，可用作侧边栏</p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;html5新增的音频和视频&quot;&gt;&lt;a href=&quot;#html5新增的音频和视频&quot; class=&quot;headerlink&quot; title=&quot;html5新增的音频和视频&quot;&gt;&lt;/a&gt;html5新增的音频和视频&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;音频audio&lt;code&gt;&amp;lt;audio src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/audio&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;视频video&lt;code&gt;&amp;lt;video src=&amp;#39;&amp;#39;&amp;gt;&amp;lt;/video&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;html5语义化标签的使用&quot;&gt;&lt;a href=&quot;#html5语义化标签的使用&quot; class=&quot;headerlink&quot; title=&quot;html5语义化标签的使用&quot;&gt;&lt;/a&gt;html5语义化标签的使用&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;头部–header和nav标签&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;header头部，body下的直接子元素header一般用于放页面的介绍性的信息如网站名称、logo或者导航栏nav。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;header&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;h1&amp;gt;html5语义化标签&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;nav&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;lt;h1&amp;gt;导航&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;lt;ul&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;li&amp;gt;章节标签&amp;lt;/li&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;li&amp;gt;标题标签&amp;lt;/li&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;lt;/ul&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;/nav&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/header&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="html - html5" scheme="http://yoursite.com/categories/html-html5/"/>
-    
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-      <category term="html5" scheme="http://yoursite.com/tags/html5/"/>
-    
-      <category term="基础" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES6的学习一</title>
-    <link href="http://yoursite.com/2017/06/03/ES6%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
-    <id>http://yoursite.com/2017/06/03/ES6的学习一/</id>
-    <published>2017-06-03T07:57:07.000Z</published>
-    <updated>2017-06-03T07:57:07.878Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue脚手架vue-cli1的学习一</title>
-    <link href="http://yoursite.com/2017/06/03/vue%E8%84%9A%E6%89%8B%E6%9E%B6vue-cli%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
-    <id>http://yoursite.com/2017/06/03/vue脚手架vue-cli的学习一/</id>
-    <published>2017-06-03T03:56:27.000Z</published>
-    <updated>2017-06-03T07:31:26.722Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="vue-cli的模板"><a href="#vue-cli的模板" class="headerlink" title="vue-cli的模板"></a>vue-cli的模板</h1><ul>
-<li>vue-cli的脚手架项目模板有webpack-simple 和 webpack</li>
-<li>两种的区别在于webpack-simple 没有包括Eslint 检查功能等等功能</li>
-</ul>
-<h1 id="vue-cli的项目结构"><a href="#vue-cli的项目结构" class="headerlink" title="vue-cli的项目结构"></a>vue-cli的项目结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">|-- build                            // 项目构建(webpack)相关代码</div><div class="line">|   |-- build.js                     // 生产环境构建代码</div><div class="line">|   |-- check-version.js             // 检查node、npm等版本</div><div class="line">|   |-- dev-client.js                // 热重载相关</div><div class="line">|   |-- dev-server.js                // 构建本地服务器</div><div class="line">|   |-- utils.js                     // 构建工具相关</div><div class="line">|   |-- webpack.base.conf.js         // webpack基础配置</div><div class="line">|   |-- webpack.dev.conf.js          // webpack开发环境配置</div><div class="line">|   |-- webpack.prod.conf.js         // webpack生产环境配置</div><div class="line">|-- config                           // 项目开发环境配置</div><div class="line">|   |-- dev.env.js                   // 开发环境变量</div><div class="line">|   |-- index.js                     // 项目一些配置变量</div><div class="line">|   |-- prod.env.js                  // 生产环境变量</div><div class="line">|   |-- test.env.js                  // 测试环境变量</div><div class="line">|-- src                              // 源码目录</div><div class="line">|   |-- components                     // vue公共组件</div><div class="line">|   |-- store                          // vuex的状态管理</div><div class="line">|   |-- App.vue                        // 页面入口文件</div><div class="line">|   |-- main.js                        // 程序入口文件，加载各种公共组件</div><div class="line">|-- static                           // 静态文件，比如一些图片，json数据等</div><div class="line">|   |-- data                           // 群聊分析得到的数据用于数据可视化</div><div class="line">|-- .babelrc                         // ES6语法编译配置</div><div class="line">|-- .editorconfig                    // 定义代码格式</div><div class="line">|-- .gitignore                       // git上传需要忽略的文件格式</div><div class="line">|-- README.md                        // 项目说明</div><div class="line">|-- favicon.ico </div><div class="line">|-- index.html                       // 入口页面</div><div class="line">|-- package.json                     // 项目基本信息</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="package-json文件"><a href="#package-json文件" class="headerlink" title="package.json文件"></a>package.json文件</h1><ul>
-<li>package.json文件是项目根目录下的一个文件，定义该项目开发所需要的各种模块以及一些项目配置信息（如项目名称、版本、描述、作者等）。<h2 id="自定义npm相关命令"><a href="#自定义npm相关命令" class="headerlink" title="自定义npm相关命令"></a>自定义npm相关命令</h2></li>
-<li>在package.json文件里有一个scripts字段。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">    &quot;dev&quot;: &quot;node build/dev-server.js&quot;,</div><div class="line">    &quot;build&quot;: &quot;node build/build.js&quot;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在开发环境下，在命令行中运行npm run dev就相当于在执行node build/dev-server.js。所以script字段是用来指定npm相关命令的缩写的。</p>
-<h2 id="dependencies字段和devDependencies字段"><a href="#dependencies字段和devDependencies字段" class="headerlink" title="dependencies字段和devDependencies字段"></a>dependencies字段和devDependencies字段</h2><ul>
-<li>dependencies字段指定了项目运行时所依赖的模块</li>
-<li>devDependencies字段指定了项目开发时所依赖的模块(项目环境依赖)</li>
-<li>在命令行中运行npm install命令，会自动安装dependencies和devDependencies字段中的模块。<h2 id="webpack配置相关"><a href="#webpack配置相关" class="headerlink" title="webpack配置相关"></a>webpack配置相关</h2></li>
-<li>详情在webpack相关博客<h3 id="dev-server-js"><a href="#dev-server-js" class="headerlink" title="dev-server.js"></a>dev-server.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">...</div><div class="line">// http-proxy可以实现转发所有请求代理到后端真实API地址，以实现前后端开发完全分离</div><div class="line">// 在config/index.js中可以对proxyTable想进行配置</div><div class="line">var proxyMiddleware = require(&apos;http-proxy-middleware&apos;)</div><div class="line">...</div><div class="line">...</div><div class="line">// 热加载要使用webpack-dev-middleware在没有webpack-dev-server的时候进行热加载</div><div class="line">var hotMiddleware = require(&apos;webpack-hot-middleware&apos;)(compiler)</div><div class="line">// 当html-webpack-plugin模板改变是强制进行页面重新加载</div><div class="line">compiler.plugin(&apos;compilation&apos;, function (compilation) &#123;</div><div class="line">  compilation.plugin(&apos;html-webpack-plugin-after-emit&apos;, function (data, cb) &#123;</div><div class="line">    hotMiddleware.publish(&#123; action: &apos;reload&apos; &#125;)</div><div class="line">    cb()</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="webpack-base-conf-js"><a href="#webpack-base-conf-js" class="headerlink" title="webpack.base.conf.js"></a>webpack.base.conf.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">...</div><div class="line">module.export = &#123;</div><div class="line">    // 编译入口文件</div><div class="line">    entry: &#123;&#125;,</div><div class="line">    // 编译输出路径</div><div class="line">    output: &#123;&#125;,</div><div class="line">    // 一些解决方案配置</div><div class="line">    resolve: &#123;&#125;,</div><div class="line">    resolveLoader: &#123;&#125;,</div><div class="line">    module: &#123;</div><div class="line">        // 各种不同类型文件加载器配置</div><div class="line">        loaders: &#123;</div><div class="line">        ...</div><div class="line">        ...</div><div class="line">        // js文件用babel转码</div><div class="line">        &#123;</div><div class="line">            test: /\.js$/,</div><div class="line">            loader: &apos;babel&apos;,</div><div class="line">            include: projectRoot,</div><div class="line">            // 哪些文件不需要转码</div><div class="line">            exclude: /node_modules/</div><div class="line">        &#125;,</div><div class="line">        ...</div><div class="line">        ...</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    // vue文件一些相关配置</div><div class="line">    vue: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="check-version-js"><a href="#check-version-js" class="headerlink" title="check-version.js"></a>check-version.js</h3><ul>
-<li>这个文件主要是用来检测当前环境中的node和npm版本和我们需要的是否一致的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">// 加载语义化版本测试库</div><div class="line">var semver = require(&apos;semver&apos;)</div><div class="line">// 定制控制台日志的输入样式</div><div class="line">var chalk = require(&apos;chalk&apos;)</div><div class="line">// 引入package.json文件</div><div class="line">var packageConfig = require(&apos;../package.json&apos;)</div><div class="line">var exec = function (cmd) &#123;</div><div class="line">  return require(&apos;child_process&apos;)</div><div class="line">    .execSync(cmd).toString().trim()</div><div class="line">&#125;</div><div class="line">// 定义node和npm版本需求所组成的数组</div><div class="line">var versionRequirements = [</div><div class="line">  &#123;</div><div class="line">    name: &apos;node&apos;,</div><div class="line">    currentVersion: semver.clean(process.version),</div><div class="line">    versionRequirement: packageConfig.engines.node</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    name: &apos;npm&apos;,</div><div class="line">    currentVersion: exec(&apos;npm --version&apos;),</div><div class="line">    versionRequirement: packageConfig.engines.npm</div><div class="line">  &#125;</div><div class="line">]</div><div class="line">module.exports = function () &#123;</div><div class="line">  var warnings = []</div><div class="line">  // 依次判断版本是否符合要求</div><div class="line">  for (var i = 0; i &lt; versionRequirements.length; i++) &#123;</div><div class="line">    var mod = versionRequirements[i]</div><div class="line">    if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) &#123;</div><div class="line">      warnings.push(mod.name + &apos;: &apos; +</div><div class="line">        chalk.red(mod.currentVersion) + &apos; should be &apos; +</div><div class="line">        chalk.green(mod.versionRequirement)</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="babelrc"><a href="#babelrc" class="headerlink" title=".babelrc"></a>.babelrc</h3><ul>
-<li>Babel解释器的配置文件，存放在根目录下。Babel是一个转码器，项目里需要用它将ES6代码转为ES5代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 设定转码规则</div><div class="line">&quot;presets&quot;: [&quot;es2015&quot;, &quot;stage-2&quot;],</div><div class="line">// 转码的一些插件</div><div class="line">&quot;plugins&quot;: [&quot;transform-runtime&quot;],</div><div class="line">&quot;comments&quot;: false</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="editorconfig"><a href="#editorconfig" class="headerlink" title=".editorconfig"></a>.editorconfig</h3><ul>
-<li>该文件定义项目的编码规范，编辑器的行为会与.editorconfig 文件中定义的一致，并且其优先级比编辑器自身的设置要高，这在多人合作开发项目时十分有用而且必要。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">root = true</div><div class="line"></div><div class="line">[*]    // 对所有文件应用下面的规则</div><div class="line">charset = utf-8                    // 编码规则用utf-8</div><div class="line">indent_style = space               // 缩进用空格</div><div class="line">indent_size = 2                    // 缩进数量为2个空格</div><div class="line">end_of_line = lf                   // 换行符格式</div><div class="line">insert_final_newline = true        // 是否在文件的最后插入一个空行</div><div class="line">trim_trailing_whitespace = true    // 是否删除行尾的空格</div></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;vue-cli的模板&quot;&gt;&lt;a href=&quot;#vue-cli的模板&quot; class=&quot;headerlink&quot; title=&quot;vue-cli的模板&quot;&gt;&lt;/a&gt;vue-cli的模板&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;vue-cli的脚手架项目模板有webpack-simple 和 webpack&lt;/li&gt;
-&lt;li&gt;两种的区别在于webpack-simple 没有包括Eslint 检查功能等等功能&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;vue-cli的项目结构&quot;&gt;&lt;a href=&quot;#vue-cli的项目结构&quot; class=&quot;headerlink&quot; title=&quot;vue-cli的项目结构&quot;&gt;&lt;/a&gt;vue-cli的项目结构&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- build                            // 项目构建(webpack)相关代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- build.js                     // 生产环境构建代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- check-version.js             // 检查node、npm等版本&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- dev-client.js                // 热重载相关&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- dev-server.js                // 构建本地服务器&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- utils.js                     // 构建工具相关&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- webpack.base.conf.js         // webpack基础配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- webpack.dev.conf.js          // webpack开发环境配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- webpack.prod.conf.js         // webpack生产环境配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- config                           // 项目开发环境配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- dev.env.js                   // 开发环境变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- index.js                     // 项目一些配置变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- prod.env.js                  // 生产环境变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- test.env.js                  // 测试环境变量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- src                              // 源码目录&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- components                     // vue公共组件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- store                          // vuex的状态管理&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- App.vue                        // 页面入口文件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- main.js                        // 程序入口文件，加载各种公共组件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- static                           // 静态文件，比如一些图片，json数据等&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |-- data                           // 群聊分析得到的数据用于数据可视化&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- .babelrc                         // ES6语法编译配置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- .editorconfig                    // 定义代码格式&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- .gitignore                       // git上传需要忽略的文件格式&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- README.md                        // 项目说明&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- favicon.ico &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- index.html                       // 入口页面&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|-- package.json                     // 项目基本信息&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-    
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
-    
-      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
-    
-      <category term="脚手架" scheme="http://yoursite.com/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>webpack的学习一</title>
-    <link href="http://yoursite.com/2017/05/24/webpack%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
-    <id>http://yoursite.com/2017/05/24/webpack的学习一/</id>
-    <published>2017-05-24T13:25:11.000Z</published>
-    <updated>2017-05-24T13:25:11.611Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue与后端的交互--axios的使用</title>
-    <link href="http://yoursite.com/2017/05/24/Vue%E4%B8%8E%E5%90%8E%E7%AB%AF%E7%9A%84%E4%BA%A4%E4%BA%92-axios%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2017/05/24/Vue与后端的交互-axios的使用/</id>
-    <published>2017-05-24T13:24:29.000Z</published>
-    <updated>2017-06-03T08:04:50.490Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h1><ul>
-<li>基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用</li>
-</ul>
-<h1 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h1><ul>
-<li>在浏览器中发送 XMLHttpRequests 请求</li>
-<li>在 node.js 中发送 http请求</li>
-<li>支持 Promise API</li>
-<li>拦截请求和响应</li>
-<li>转换请求和响应数据</li>
-<li>自动转换 JSON 数据</li>
-<li>客户端支持保护安全免受 XSRF 攻击 </li>
-</ul>
-<h1 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h1><ul>
-<li><p>可以为每一个请求指定默认配置。</p>
-<h2 id="全局-axios-默认配置"><a href="#全局-axios-默认配置" class="headerlink" title="全局 axios 默认配置"></a>全局 axios 默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">axios.defaults.baseURL = &apos;https://api.example.com&apos;;</div><div class="line">axios.defaults.headers.common[&apos;Authorization&apos;] = AUTH_TOKEN;</div><div class="line">axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded&apos;;</div></pre></td></tr></table></figure>
-<h2 id="自定义实例默认配置"><a href="#自定义实例默认配置" class="headerlink" title="自定义实例默认配置"></a>自定义实例默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let axiosIns = axios.create(&#123;</div><div class="line">  baseURL: &apos;https://api.example.com&apos;,</div><div class="line">  timeout: 10 * 1000</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="请求方法别名"><a href="#请求方法别名" class="headerlink" title="请求方法别名"></a>请求方法别名</h1><ul>
-<li><p>axios.get(url[, config])</p>
-</li>
-<li><p>axios.delete(url[, config])</p>
-</li>
-<li><p>axios.head(url[, config])</p>
-</li>
-<li><p>axios.post(url[, data[, config]])</p>
-</li>
-<li><p>axios.put(url[, data[, config]])</p>
-</li>
-<li><p>axios.patch(url[, data[, config]])</p>
-<a id="more"></a>
-</li>
-</ul>
-<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><ul>
-<li><p>发送一个 GET 请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// Make a request for a user with a given ID</div><div class="line">axios.get(&apos;/user?ID=12345&apos;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">// Optionally the request above could also be done as</div><div class="line">axios.get(&apos;/user&apos;, &#123;</div><div class="line">    params: &#123;</div><div class="line">      ID: 12345</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>发送一个 POST 请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">axios.post(&apos;/user&apos;, &#123;</div><div class="line">    firstName: &apos;Fred&apos;,</div><div class="line">    lastName: &apos;Flintstone&apos;</div><div class="line">  &#125;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>发送多个并发请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function getUserAccount() &#123;</div><div class="line">  return axios.get(&apos;/user/12345&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function getUserPermissions() &#123;</div><div class="line">  return axios.get(&apos;/user/12345/permissions&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">axios.all([getUserAccount(), getUserPermissions()])</div><div class="line">  .then(axios.spread(function (acct, perms) &#123;</div><div class="line">    // Both requests are now complete</div><div class="line">  &#125;));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="axios-API"><a href="#axios-API" class="headerlink" title="axios API"></a>axios API</h1><ul>
-<li>可以通过给 axios传递对应的参数来定制请求：axios(config)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">axios(&#123;</div><div class="line">  method: &apos;post&apos;,</div><div class="line">  url: &apos;/user/12345&apos;,</div><div class="line">  data: &#123;</div><div class="line">    firstName: &apos;Fred&apos;,</div><div class="line">    lastName: &apos;Flintstone&apos;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="请求配置"><a href="#请求配置" class="headerlink" title="请求配置"></a>请求配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  //用来向服务器发送请求的url地址  </div><div class="line">  url: &apos;/user&apos;, </div><div class="line">  //请求方法，默认是GET方法</div><div class="line">  method: &apos;get&apos;, </div><div class="line">  //基础URL路径，假如url不是绝对路径，如 https://some-domain.com/api/v1/login?name=jack,那么向服务器发送请求的URL将会是baseURL + url</div><div class="line">  baseURL: &apos;https://some-domain.com/api/&apos;, </div><div class="line">  // transformRequest方法允许在请求发送到服务器之前修改该请求，此方法只适用于PUT、POST和PATCH方法中。而且，此方法最后必须返回一个string、ArrayBuffer或者Stream。</div><div class="line">  transformRequest: [function (data) &#123;</div><div class="line">    // Do whatever you want to transform the data</div><div class="line">    return data;</div><div class="line">  &#125;],</div><div class="line">  //transformResponse方法允许在数据传递到then/catch之前修改response数据。此方法最后也要返回数据。</div><div class="line">  transformResponse: [function (data) &#123;</div><div class="line">    // Do whatever you want to transform the data</div><div class="line">    return data;</div><div class="line">  &#125;],</div><div class="line">  // 发送自定义Headers头文件，头文件中包含了http请求的各种信息。</div><div class="line">  headers: &#123;&apos;Content-Type&apos;:&apos;application/json&apos;&#125;,</div><div class="line">  //  params是发送请求的查询参数对象，对象中的数据会被拼接成url?param1=value1&amp;param2=value2。 </div><div class="line">  params: &#123;</div><div class="line">    ID: 12345</div><div class="line">  &#125;,</div><div class="line">  //params参数序列化器</div><div class="line">  paramsSerializer: function(params) &#123;</div><div class="line">    return Qs.stringify(params, &#123;arrayFormat: &apos;brackets&apos;&#125;)</div><div class="line">  &#125;,</div><div class="line">  //data是在发送POST、PUT或者PATCH请求的数据对象。</div><div class="line">  data: &#123;</div><div class="line">    firstName: &apos;Fred&apos;</div><div class="line">  &#125;,</div><div class="line">  //请求超时设置，单位为毫秒</div><div class="line">  timeout: 1000,</div><div class="line">  //表明是否有跨域请求需要用到证书</div><div class="line">  withCredentials: false, // default</div><div class="line">  //adapter允许用户处理更易于测试的请求。返回一个Promise和一个有效的response</div><div class="line">  adapter: function (resolve, reject, config) &#123;</div><div class="line">    /* ... */</div><div class="line">  &#125;,</div><div class="line">  //auth表明提供凭证用于完成http的身份验证。这将会在headers中设置一个Authorization授权信息。自定义Authorization授权要设置在headers中。</div><div class="line">  auth: &#123;</div><div class="line">    username: &apos;janedoe&apos;,</div><div class="line">    password: &apos;s00pers3cret&apos;</div><div class="line">  &#125;</div><div class="line">  //表示服务器将返回响应的数据类型，有arraybuffer、blob、document、json、text、stream这6个类型，默认是json类似数据。</div><div class="line">  responseType: &apos;json&apos;, // default</div><div class="line">  // 用作 xsrf token 值的 cookie 名称</div><div class="line">  xsrfCookieName: &apos;XSRF-TOKEN&apos;, // default</div><div class="line">  // 带有 xsrf token 值 http head 名称</div><div class="line">  xsrfHeaderName: &apos;X-XSRF-TOKEN&apos;, // default</div><div class="line">  // 允许在上传过程中的做一些操作,允许在下载过程中的做一些操作</div><div class="line">  progress: function(progressEvent) &#123;</div><div class="line">    // Do whatever you want with the native progress event</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="响应的数据结构"><a href="#响应的数据结构" class="headerlink" title="响应的数据结构"></a>响应的数据结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  // 服务器返回的数据</div><div class="line">  data: &#123;&#125;,</div><div class="line"></div><div class="line">  // HTTP状态吗</div><div class="line">  status: 200,</div><div class="line"></div><div class="line">  // 服务器返回的消息</div><div class="line">  statusText: &apos;OK&apos;,</div><div class="line"></div><div class="line">  // 返回头</div><div class="line">  headers: &#123;&#125;,</div><div class="line"></div><div class="line">  // 在返回我们的配置</div><div class="line">  config: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;axios&quot;&gt;&lt;a href=&quot;#axios&quot; class=&quot;headerlink&quot; title=&quot;axios&quot;&gt;&lt;/a&gt;axios&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;功能特性&quot;&gt;&lt;a href=&quot;#功能特性&quot; class=&quot;headerlink&quot; title=&quot;功能特性&quot;&gt;&lt;/a&gt;功能特性&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;在浏览器中发送 XMLHttpRequests 请求&lt;/li&gt;
-&lt;li&gt;在 node.js 中发送 http请求&lt;/li&gt;
-&lt;li&gt;支持 Promise API&lt;/li&gt;
-&lt;li&gt;拦截请求和响应&lt;/li&gt;
-&lt;li&gt;转换请求和响应数据&lt;/li&gt;
-&lt;li&gt;自动转换 JSON 数据&lt;/li&gt;
-&lt;li&gt;客户端支持保护安全免受 XSRF 攻击 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;默认配置&quot;&gt;&lt;a href=&quot;#默认配置&quot; class=&quot;headerlink&quot; title=&quot;默认配置&quot;&gt;&lt;/a&gt;默认配置&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;可以为每一个请求指定默认配置。&lt;/p&gt;
-&lt;h2 id=&quot;全局-axios-默认配置&quot;&gt;&lt;a href=&quot;#全局-axios-默认配置&quot; class=&quot;headerlink&quot; title=&quot;全局 axios 默认配置&quot;&gt;&lt;/a&gt;全局 axios 默认配置&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;axios.defaults.baseURL = &amp;apos;https://api.example.com&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;axios.defaults.headers.common[&amp;apos;Authorization&amp;apos;] = AUTH_TOKEN;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;] = &amp;apos;application/x-www-form-urlencoded&amp;apos;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;自定义实例默认配置&quot;&gt;&lt;a href=&quot;#自定义实例默认配置&quot; class=&quot;headerlink&quot; title=&quot;自定义实例默认配置&quot;&gt;&lt;/a&gt;自定义实例默认配置&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let axiosIns = axios.create(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  baseURL: &amp;apos;https://api.example.com&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  timeout: 10 * 1000&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;请求方法别名&quot;&gt;&lt;a href=&quot;#请求方法别名&quot; class=&quot;headerlink&quot; title=&quot;请求方法别名&quot;&gt;&lt;/a&gt;请求方法别名&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;axios.get(url[, config])&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;axios.delete(url[, config])&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;axios.head(url[, config])&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;axios.post(url[, data[, config]])&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;axios.put(url[, data[, config]])&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;axios.patch(url[, data[, config]])&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="axios" scheme="http://yoursite.com/categories/axios/"/>
-    
-    
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
-    
-      <category term="http" scheme="http://yoursite.com/tags/http/"/>
-    
-      <category term="ajax" scheme="http://yoursite.com/tags/ajax/"/>
     
   </entry>
   
