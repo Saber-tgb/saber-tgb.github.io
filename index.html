@@ -286,7 +286,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/HTML5基础标签的掌握/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/国际化——Vue-i18n的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -305,7 +305,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/20/HTML5基础标签的掌握/" itemprop="url">HTML5基础标签的掌握</a></h1>
+                <a class="post-title-link" href="/2017/08/12/国际化——Vue-i18n的使用/" itemprop="url">国际化——Vue-i18n的使用</a></h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T17:12:09+08:00">
-                2017-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T11:30:07+08:00">
+                2017-08-12
               </time>
             
 
@@ -340,8 +340,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
+                  <a href="/categories/国际化/" itemprop="url" rel="index">
+                    <span itemprop="name">国际化</span>
                   </a>
                 </span>
 
@@ -351,8 +351,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/HTML5/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML5</span>
+                  <a href="/categories/国际化/Vue-i18/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue-i18</span>
                   </a>
                 </span>
 
@@ -368,7 +368,7 @@
 
           
           
-             <span id="/2017/07/20/HTML5基础标签的掌握/" class="leancloud_visitors" data-flag-title="HTML5基础标签的掌握">
+             <span id="/2017/08/12/国际化——Vue-i18n的使用/" class="leancloud_visitors" data-flag-title="国际化——Vue-i18n的使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,16 +397,16 @@
 
       
         
-          
-          标签
-&lt;abbr&gt; 标签表示简称或缩写，比如 “WWW” 或 “NATO”
-&lt;abbr&gt; 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到  元素上时显示出简称/缩写的完整版本。1The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.
-
-
-          
+          <h2 id="Vue-i18n安装"><a href="#Vue-i18n安装" class="headerlink" title="Vue-i18n安装"></a>Vue-i18n安装</h2><ul>
+<li><code>npm install vue-i18n --save</code></li>
+</ul>
+<h2 id="Vue-i18n的使用"><a href="#Vue-i18n的使用" class="headerlink" title="Vue-i18n的使用"></a>Vue-i18n的使用</h2><ul>
+<li>在入口<code>main.js</code>文件配置使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueI18n from &apos;vue-i18n&apos;</div><div class="line"></div><div class="line">Vue.use(VueI18n);</div><div class="line">/*---------基本使用-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages : &#123;</div><div class="line">    en: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;hello world&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    cn: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;你好、世界&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">/*---------使用语言包-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages: &#123;</div><div class="line">    &apos;CN&apos;: require(&apos;./assets/common/lang/cn&apos;),   // 中文语言包</div><div class="line">    &apos;EN&apos;: require(&apos;./assets/common/lang/en&apos;)    // 英文语言包</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------语言包内部语法star-----------*/</div><div class="line">export const  message = &#123;</div><div class="line">      language:&apos;语言&apos;,</div><div class="line">      hello: &apos;你好,世界&apos;</div><div class="line">&#125;</div><div class="line">/*---------语言包内部语法end-----------*/</div><div class="line"></div><div class="line">/*---------挂载全局使用-----------*/</div><div class="line">new Vue(&#123;</div><div class="line">  el: &apos;#app&apos;,</div><div class="line">  i18n,</div><div class="line">  router,</div><div class="line">  template: &apos;&lt;App/&gt;&apos;,</div><div class="line">  components: &#123; App &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------vue组件模板的使用-----------*/</div><div class="line"> &lt;template&gt;</div><div class="line">        &lt;p&gt;&#123;&#123; $t(&quot;message.hello&quot;) &#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;/template&gt;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/20/HTML5基础标签的掌握/#more" rel="contents">
+            <a class="btn" href="/2017/08/12/国际化——Vue-i18n的使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -452,7 +452,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/深入理解ES6一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6六/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -471,7 +471,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/19/深入理解ES6一/" itemprop="url">深入理解ES6一</a></h1>
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6六/" itemprop="url">深入理解ES6六</a></h1>
         
 
         <div class="post-meta">
@@ -483,8 +483,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-19T10:03:31+08:00">
-                2017-07-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:41+08:00">
+                2017-08-06
               </time>
             
 
@@ -513,6 +513,17 @@
 
                 
                 
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ES6/Symbol/" itemprop="url" rel="index">
+                    <span itemprop="name">Symbol</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -523,7 +534,7 @@
 
           
           
-             <span id="/2017/07/19/深入理解ES6一/" class="leancloud_visitors" data-flag-title="深入理解ES6一">
+             <span id="/2017/08/06/深入理解ES6六/" class="leancloud_visitors" data-flag-title="深入理解ES6六">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -552,26 +563,22 @@
 
       
         
-          
-          let声明
-Es6中引入块级声明，let声明的变量作用域限制在代码块中；
-let声明不会被提升;
-在同一作用域中不能用let重复定义已经存在的标识符，会抛出错误。
-
-const声明
-const声明的变量作用域也会限制在代码块中；
-const声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)
-const声明不允许修改绑定，但允许修改值；例如const声明对象，对象的值是可以修改的
-
-临时死区的存在
-临时死区(temporal dead zone)TDZ用来描述let和const的不提升效果；
-与var声明不同，let和const声明的变量不会被提升到作用域的顶部，在javascript引擎扫描代码的时候会将let和const的声明放到临时死区中
-
-循环中
-          ...
+          <h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><ul>
+<li>ES6新增的数据类型<code>Symbol</code></li>
+<li><p>创建Symbol：通过去全局的<code>Symbol</code>函数创建一个<code>Symbol</code>，<code>Symbol</code>函数接受一个可选参数，用于添加一段文本描述即将创建的<code>Symbol</code>,方便阅读和调试Symbol程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let firstName = Symbol(&apos;first name&apos;);</div><div class="line">    let person = &#123;&#125;;</div><div class="line"></div><div class="line">    person[firstName] = &apos;Nicholas&apos;;</div><div class="line"></div><div class="line">    console.log(&apos;first name&apos; in person); //false</div><div class="line">    console.log(person[firstName]); //&apos;Nicholas&apos;</div><div class="line">    console.log(firstName); //&apos;Symbol(first name)&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ES6扩展了<code>typeof</code>操作符，支持返回<code>Symbol</code>,可以用typeof来检测变量是否为<code>Symbol</code>类型.</p>
+</li>
+</ul>
+<h2 id="Symbol共享体系"><a href="#Symbol共享体系" class="headerlink" title="Symbol共享体系"></a>Symbol共享体系</h2><ul>
+<li><p>ES6提供了一个可以随时访问的全局Symbol注册表,如果要创建一个可共享的Symbol,要使用Symbol.for()方法，该方法只接受一个参数，就是即将创建的Symbol的字符串标识符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let uid = Symbol.for(&apos;uid&apos;);</div><div class="line">let object = &#123;&#125;;</div><div class="line"></div><div class="line">object[uid]=&apos;12345&apos;;</div><div class="line"></div><div class="line">console.log(ojbect[uid]);</div><div class="line">console.log(uid);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Symbol.for()方法首先在全局Symbol注册表中搜索键为’uid’的Symbol是否存在，如果存在，直接返回已有的Symbol；否则创建一个新的Symbol，并使用这个键在Symbol全局注册表中注册，随即返回新创建的Symbol</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/19/深入理解ES6一/#more" rel="contents">
+            <a class="btn" href="/2017/08/06/深入理解ES6六/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -617,7 +624,7 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/HTTP状态码分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6五/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -636,7 +643,7 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/18/HTTP状态码分析/" itemprop="url">HTTP状态码分析</a></h1>
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6五/" itemprop="url">深入理解ES6五</a></h1>
         
 
         <div class="post-meta">
@@ -648,8 +655,8 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T17:01:10+08:00">
-                2017-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:16+08:00">
+                2017-08-06
               </time>
             
 
@@ -671,8 +678,8 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/http/" itemprop="url" rel="index">
-                    <span itemprop="name">http</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -682,8 +689,8 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/http/状态码/" itemprop="url" rel="index">
-                    <span itemprop="name">状态码</span>
+                  <a href="/categories/ES6/解构/" itemprop="url" rel="index">
+                    <span itemprop="name">解构</span>
                   </a>
                 </span>
 
@@ -699,7 +706,7 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
 
           
           
-             <span id="/2017/07/18/HTTP状态码分析/" class="leancloud_visitors" data-flag-title="HTTP状态码分析">
+             <span id="/2017/08/06/深入理解ES6五/" class="leancloud_visitors" data-flag-title="深入理解ES6五">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -728,23 +735,31 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
 
       
         
-          
-          1xx（临时响应）1表示临时响应并需要请求者继续执行操作的状态码
-
-100（继续）: 请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。
-101（切换协议）: 请求者已要求服务器切换协议，服务器已确认并准备切换。
-
-2xx （成功）1表示成功处理了请求的状态码
-
-200（成功）: 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果是对您的 robots.txt 文件显示此状态码，则表示 Googlebot 已成功检索到该文件。
-201（已创建）: 请求成功并且服务器创建了新的资源。
-202（已接受）: 服务器已接受请求，但尚未处理。
-203（非授权信息）: 服务器已成功处理了请求，但返回的信息可能来自另一来源。
-204（无内容）: 服务器成功处
-          ...
+          <h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
+<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数中也可以传入解构表达式</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
+</li>
+<li><p>为非同名局部变量赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套对象解构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
+</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/18/HTTP状态码分析/#more" rel="contents">
+            <a class="btn" href="/2017/08/06/深入理解ES6五/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -790,7 +805,7 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/浏览器缓存/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6四/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -809,7 +824,7 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/18/浏览器缓存/" itemprop="url">浏览器缓存</a></h1>
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6四/" itemprop="url">深入理解ES6四</a></h1>
         
 
         <div class="post-meta">
@@ -821,8 +836,8 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T10:55:49+08:00">
-                2017-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
+                2017-08-06
               </time>
             
 
@@ -844,8 +859,19 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/http/" itemprop="url" rel="index">
-                    <span itemprop="name">http</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ES6/对象/" itemprop="url" rel="index">
+                    <span itemprop="name">对象</span>
                   </a>
                 </span>
 
@@ -861,7 +887,7 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
 
           
           
-             <span id="/2017/07/18/浏览器缓存/" class="leancloud_visitors" data-flag-title="浏览器缓存">
+             <span id="/2017/08/06/深入理解ES6四/" class="leancloud_visitors" data-flag-title="深入理解ES6四">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -890,22 +916,26 @@ const声明不允许修改绑定，但允许修改值；例如const声明对象�
 
       
         
-          
-          缓存的定义
-Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。
-
-缓存的命中和未命中
-304 的标准解释：
-Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。
-
-
-HTTP在验证
-
-
-          
+          <h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
+<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
+<li>特异对象 具有某些与默认行为不符的内部行为</li>
+<li>标准对象 ES6中规范定义的对象</li>
+<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
+</ul>
+<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
+<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/18/浏览器缓存/#more" rel="contents">
+            <a class="btn" href="/2017/08/06/深入理解ES6四/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -946,7 +976,7 @@ HTTP在验证
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -991,7 +1021,7 @@ HTTP在验证
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1002,7 +1032,7 @@ HTTP在验证
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1013,7 +1043,7 @@ HTTP在验证
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

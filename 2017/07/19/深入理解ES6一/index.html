@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/19/深入理解ES6一/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
 <meta property="og:description" content="let声明 Es6中引入块级声明，let声明的变量作用域限制在代码块中； let声明不会被提升; 在同一作用域中不能用let重复定义已经存在的标识符，会抛出错误。  const声明 const声明的变量作用域也会限制在代码块中； const声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值) const声明不允许修改绑定，但允许修改值；例如const声明对象，">
-<meta property="og:updated_time" content="2017-07-19T02:37:28.792Z">
+<meta property="og:updated_time" content="2017-08-12T03:23:27.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解ES6一">
 <meta name="twitter:description" content="let声明 Es6中引入块级声明，let声明的变量作用域限制在代码块中； let声明不会被提升; 在同一作用域中不能用let重复定义已经存在的标识符，会抛出错误。  const声明 const声明的变量作用域也会限制在代码块中； const声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值) const声明不允许修改绑定，但允许修改值；例如const声明对象，">
@@ -401,9 +401,11 @@
 <li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
 </ul>
 <h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
-<li><p>常见的循环错误；<code>var</code>声明是全局变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p>使用闭包解决这个问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push((function(value)&#123;</div><div class="line">        // 变量i的值在传递到这个作用域是被赋值给了value;</div><div class="line">        // 此时这个值就不会随外部变量而变化了；</div><div class="line">        return function() &#123;</div><div class="line">            console.log(value);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i));</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
@@ -547,7 +549,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -558,7 +560,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -569,7 +571,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -286,7 +286,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/06/npm的快速使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -305,7 +305,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/16/npm-browser-sync-gulp工具的学习/" itemprop="url">npm,browser-sync,gulp工具的学习</a></h1>
+                <a class="post-title-link" href="/2017/07/06/npm的快速使用/" itemprop="url">npm的快速使用</a></h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:56:02+08:00">
-                2017-06-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-06T11:57:43+08:00">
+                2017-07-06
               </time>
             
 
@@ -347,28 +347,6 @@
 
                 
                 
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/npm/browser-sync/" itemprop="url" rel="index">
-                    <span itemprop="name">browser-sync</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/npm/browser-sync/gulp/" itemprop="url" rel="index">
-                    <span itemprop="name">gulp</span>
-                  </a>
-                </span>
-
-                
-                
               
             </span>
           
@@ -379,7 +357,7 @@
 
           
           
-             <span id="/2017/06/16/npm-browser-sync-gulp工具的学习/" class="leancloud_visitors" data-flag-title="npm,browser-sync,gulp工具的学习">
+             <span id="/2017/07/06/npm的快速使用/" class="leancloud_visitors" data-flag-title="npm的快速使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,52 +386,29 @@
 
       
         
-          <h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
-<li>官网[<a href="https://www.npmjs.com" target="_blank" rel="external">https://www.npmjs.com</a>]</li>
-<li>node package manager</li>
-<li>命令:<ul>
-<li>初始化:<code>npm init</code></li>
-<li>安装指定包:<code>npm install jquery --save</code></li>
-<li>删除指定包:<code>npm remove jquery --save</code></li>
-<li>卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery</li>
-<li>下载安装package.json中dependencies属性对的文件:<code>npm install --production</code></li>
+          <h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ol>
+<li>npm初始化一个包<ul>
+<li><code>npm init</code>创建一个新包 需要填写信息</li>
+<li><code>npm init -y</code>快速初始化</li>
 </ul>
 </li>
-<li>npm的使用步骤<ul>
-<li>第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）</li>
-<li>第二步、执行npm init -y</li>
-<li>第三步、安装需要的js库 npm install –save jquery</li>
+<li>安装安装包<ul>
+<li>常规: <code>npm install pkg</code>, 速记: <code>npm i pkg</code>.</li>
 </ul>
 </li>
-</ul>
-<h3 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h3><ul>
-<li>更改代码之后自动刷新浏览器</li>
-<li>需要使用npm进行全局安装:<code>npm install browser-sync -g</code>,-g表示安装到全局</li>
-<li>使用:<code>browser-sync start --server --files &quot;./index.html,app.css,./css/*.css,*.*&quot;</code></li>
-<li>–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。</li>
-</ul>
-<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>  <a href="http://www.gulpjs.com" target="_blank" rel="external">官网</a><br>  <a href="http://www.gulpjs.com.cn" target="_blank" rel="external">中文网</a></p>
-<ul>
-<li><p>前端自动化构建工具<br>js压缩,var x,xname，混淆<br>合并.<br>css压缩<br>html压压缩</p>
-</li>
-<li><p>grunt ,webpack…</p>
-</li>
-</ul>
-<h3 id="核心就5个方法"><a href="#核心就5个方法" class="headerlink" title="核心就5个方法"></a>核心就5个方法</h3><ul>
-<li>task,gulp中是一个个任务的形式来实现功能。<ul>
-<li>task(‘任务名’,function(){<br>…..<br>});</li>
+<li>全局安装包:<ul>
+<li>常规: <code>npm i --global pkg</code>, 速记: <code>npm i -g pkg</code>.</li>
 </ul>
 </li>
-<li>src<ul>
-<li>src(‘./*.js’)</li>
+<li>安装包并包含在依赖中:<ul>
+<li>常规: <code>npm i --save pkg</code>, 速记: <code>npm i -S pkg</code>.</li>
 </ul>
 </li>
-<li>dest(‘./minjs/‘)// 指定处理后的文件的输出路径.</li>
-<li>watch(‘./*.js’,[‘任务名1’,’任务名2’]);</li>
-<li>run(‘任务名’);//执行指定的任务.
+<li>安装包并包含在开发依赖中:<ul>
+<li>常规: <code>npm i --save-dev pkg</code>, 速记: <code>npm i -D pkg</code>.
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/16/npm-browser-sync-gulp工具的学习/#more" rel="contents">
+            <a class="btn" href="/2017/07/06/npm的快速使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -499,7 +454,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/Git的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/01/Babel的使用总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -518,7 +473,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/16/Git的使用/" itemprop="url">Git的使用</a></h1>
+                <a class="post-title-link" href="/2017/07/01/Babel的使用总结/" itemprop="url">Babel的使用总结</a></h1>
         
 
         <div class="post-meta">
@@ -530,8 +485,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:48:27+08:00">
-                2017-06-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T14:52:00+08:00">
+                2017-07-01
               </time>
             
 
@@ -553,8 +508,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
+                  <a href="/categories/Babel/" itemprop="url" rel="index">
+                    <span itemprop="name">Babel</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Babel/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -570,7 +536,7 @@
 
           
           
-             <span id="/2017/06/16/Git的使用/" class="leancloud_visitors" data-flag-title="Git的使用">
+             <span id="/2017/07/01/Babel的使用总结/" class="leancloud_visitors" data-flag-title="Babel的使用总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -599,99 +565,29 @@
 
       
         
-          <h3 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h3><ul>
-<li>Git是一款源代码管理工具(版本控制工具)<ul>
-<li>我们写的代码需要使用Git进行管理。</li>
-</ul>
-</li>
-</ul>
-<h3 id="分布式，集中式版本管理工具"><a href="#分布式，集中式版本管理工具" class="headerlink" title="分布式，集中式版本管理工具"></a>分布式，集中式版本管理工具</h3><ul>
-<li>git属于分布式</li>
-<li>svn集中式</li>
-</ul>
-<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><h3 id="git初始化一个仓库"><a href="#git初始化一个仓库" class="headerlink" title="git初始化一个仓库"></a>git初始化一个仓库</h3><ul>
-<li>创建一个.git隐藏目录</li>
-<li>命令:<code>git init</code>;<ul>
-<li>想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.</li>
-<li>一般是在项目的根目录执行这个命令.</li>
-</ul>
-</li>
-</ul>
-<h3 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h3><ul>
-<li>配置用户名 : <code>git config user.name &quot;testName&quot;</code></li>
-<li>配置邮箱   : <code>git config user.email &quot;test@sina.com&quot;</code></li>
-<li>查看配置信息: <code>git config --list</code></li>
-</ul>
-<h3 id="把代码提交到仓库中"><a href="#把代码提交到仓库中" class="headerlink" title="把代码提交到仓库中"></a>把代码提交到仓库中</h3><ul>
-<li><p>1.先把代码添加到暂存区(就相当于放到仓库门口)</p>
+          <h2 id="babel-polfill插件"><a href="#babel-polfill插件" class="headerlink" title="babel-polfill插件"></a>babel-polfill插件</h2><ul>
+<li>由于Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API ，比如 Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise 等全局对象，以及一些定义在全局对象上的方法（比如 Object.assign）都不会转码，所以在IE浏览器下会出现缺少Promise对象的问题</li>
+<li><p>为了完整使用 ES6 的 API ，我们只能安装这个插件<br><code>npm install -save-dev babel-polyfills</code></p>
 <ul>
-<li>命令:<code>git add 文件路径</code></li>
-<li>示例:<code>git add ./reademe.md</code></li>
-<li>可以使用<code>git add .</code>这个命令，批量把当前目录下所有修改过的文件添加到暂存区。</li>
-</ul>
+<li>node.js 中<code>require(&#39;babel-polyfill&#39;)</code></li>
+<li><p>webpack.config.js中</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    entry: [&apos;babel-polyfill&apos;, &apos;./app/js&apos;]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>2.把暂存区的文件提交仓库里</p>
-<ul>
-<li>命令: <code>git commit -m &quot;注释&quot;</code></li>
-<li>示例: <code>git commit -m &quot;我们添加了一个新的功能&quot;</code></li>
-<li>-m 表示指定一个字符串，作为提交的说明(相当于注释);</li>
-</ul>
-</li>
-<li><p>合并add 与commit 命令</p>
-<ul>
-<li><code>git commit -a -m &quot;这是使用合并添加与提交的操作&quot;</code>;</li>
-<li>这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)</li>
-</ul>
+<li><p>vue-cli配置的环境下,在main.js中引入：<code>import &#39;babel-polyfill&#39;</code></p>
+<h2 id="本地安装和全局安装"><a href="#本地安装和全局安装" class="headerlink" title="本地安装和全局安装"></a>本地安装和全局安装</h2><h3 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h3><p><code>npm install --global babel-cli</code></p>
 </li>
 </ul>
-<h3 id="查看工作区状态"><a href="#查看工作区状态" class="headerlink" title="查看工作区状态"></a>查看工作区状态</h3><ul>
-<li>命令:<code>git status</code></li>
-</ul>
-<h3 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h3><ul>
-<li>在项目中有一些文件是不需要提交的,我们需要把它忽略掉</li>
-<li>需要在.git文件夹所在目录新建一个名为.gitignore的文件<br>然后在这个文件中写上需要被忽略的文件的路径。<br>示例: /css/a.css<pre><code>: /css/*.css
-: /a.html
-</code></pre></li>
-</ul>
-<h3 id="对比文件差异"><a href="#对比文件差异" class="headerlink" title="对比文件差异"></a>对比文件差异</h3><ul>
-<li>命令: <code>git diff</code><ul>
-<li>用来比较暂存区文件内容与工作区文件内容的区别</li>
-<li>如果暂存区没有文件，就会将工作与代码与最近一次提交对比</li>
-</ul>
 </li>
-<li>命令：<code>git diff --cached</code>  比较暂存区的文件和仓库中文件的区别</li>
-<li>对比之前某两次提交的文件的差异<ul>
-<li>命令:<code>git diff [版本号1] [版本号2] [想比较的文件路径]</code></li>
-</ul>
+<li><p>这时候我们可以使用 Babel 命令编译文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">babel index.js --out-file compiled.js</div><div class="line">#或</div><div class="line">babel index.js -o compiled.js</div></pre></td></tr></table></figure>
+</li>
+<li><p>编译目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">babel src -out-dir lib</div><div class="line">#或</div><div class="line">babel src -d lib</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><ul>
-<li>命令:<code>git log</code>,可以查看每一次提交的日志</li>
-<li>命令:<code>git log --oneline</code> 表示使用简洁的形式输出提交日志</li>
-</ul>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
-<li>命令:<code>git reset --hard Head~1</code><ul>
-<li>这是将代码回退到上上一次提交时的状态</li>
-</ul>
-</li>
-<li>命令:<code>git reset --hard Head~2</code><ul>
-<li>回退到上上上次</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard Head~0</code></p>
-<ul>
-<li>回退到上次提交时的状态,~0可以省略</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard 版本号</code></p>
-<ul>
-<li>通过每次提交时生成的版本号来回退版本</li>
-</ul>
-</li>
-<li><p>通过<code>git reflog</code>命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/16/Git的使用/#more" rel="contents">
+            <a class="btn" href="/2017/07/01/Babel的使用总结/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -737,7 +633,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/vuex学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/Vue-js学习三/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -756,7 +652,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/05/vuex学习/" itemprop="url">vuex学习</a></h1>
+                <a class="post-title-link" href="/2017/06/27/Vue-js学习三/" itemprop="url">Vue.js学习三</a></h1>
         
 
         <div class="post-meta">
@@ -768,8 +664,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T22:29:17+08:00">
-                2017-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T17:33:18+08:00">
+                2017-06-27
               </time>
             
 
@@ -791,8 +687,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vuex/" itemprop="url" rel="index">
-                    <span itemprop="name">Vuex</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -808,7 +704,7 @@
 
           
           
-             <span id="/2017/06/05/vuex学习/" class="leancloud_visitors" data-flag-title="vuex学习">
+             <span id="/2017/06/27/Vue-js学习三/" class="leancloud_visitors" data-flag-title="Vue.js学习三">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -837,17 +733,65 @@
 
       
         
-          <h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
-<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。</li>
+          <h2 id="钩子函数的理解"><a href="#钩子函数的理解" class="headerlink" title="钩子函数的理解"></a>钩子函数的理解</h2><ul>
+<li>文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。</li>
+<li>可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。</li>
 </ul>
-<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2><ul>
-<li>vuex的状态自管理应用包含以下几个部分<ul>
-<li>state，驱动应用的数据源;</li>
-<li>view，以声明方式将state映射到视图； </li>
-<li>actions，响应在view上的用户输入导致的状态变化
+<h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h3 id="vue生命周期图示"><a href="#vue生命周期图示" class="headerlink" title="vue生命周期图示"></a>vue生命周期图示</h3><p><img src="https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png" alt=""></p>
+<h3 id="生命周期总共分为八个阶段"><a href="#生命周期总共分为八个阶段" class="headerlink" title="生命周期总共分为八个阶段"></a>生命周期总共分为八个阶段</h3><ol>
+<li>beforeCreate（组件实例创建前）<ul>
+<li>el和data并未初始化</li>
+<li>实例创建前：这个阶段实例的data、methods是读不到的</li>
+</ul>
+</li>
+<li>created（组件实例创建后）,<ul>
+<li>完成了 data 数据的初始化，el没有</li>
+<li>实例创建后：这个阶段已经完成了数据观测(data observer)，属性和方法的运算， watch/event 事件回调。mount挂载阶段还没开始，$el 属性目前不可见，数据并没有在DOM元素上进行渲染</li>
+</ul>
+</li>
+<li>beforeMount(模板编译/挂载之前),<ul>
+<li>完成了 el 和 data 初始化</li>
+<li>在挂载开始之前被调用：相关的 render 函数首次被调用。</li>
+</ul>
+</li>
+<li>mounted（模板编译/挂载之后）<ul>
+<li>完成挂载</li>
+<li>el选项的DOM节点 被新创建的 vm.$el 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在DOM节点上进行渲染</li>
+</ul>
+</li>
+<li>beforeUpdate（组件更新之前）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>数据更新时调用，但不进行DOM重新渲染，在数据更新时DOM没渲染前可以在这个生命函数里进行状态处理</li>
+</ul>
+</li>
+<li>updated（组件更新之后）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>这个状态下数据更新并且DOM重新渲染，当这个生命周期函数被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。当实例每次进行数据更新时updated都会执行</li>
+</ul>
+</li>
+<li>beforeDestroy（组件销毁前）<ul>
+<li>实例销毁之前调用。</li>
+</ul>
+</li>
+<li>destroyed（组件销毁后）</li>
+</ol>
+<ul>
+<li>销毁完成后，我们再重新改变data中的值，vue不再对此动作进行响应了。但是原先生成的dom元素还存在，可以这么理解，执行了destroy操作，后续就不再受vue控制了。</li>
+<li>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。<h3 id="钩子函数的使用"><a href="#钩子函数的使用" class="headerlink" title="钩子函数的使用"></a>钩子函数的使用</h3></li>
+<li>beforecreate : 可以在这加个loading事件</li>
+<li>created ：在这结束loading，还做一些初始化，实现函数自执行</li>
+<li>mounted ： 在这发起后端请求，拿回数据，配合路由钩子做一些事情</li>
+<li><p>beforeDestory： 你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容</p>
+</li>
+<li><p>created：进行ajax请求异步数据的获取、初始化数据</p>
+</li>
+<li>mounted：挂载元素内dom节点的获取</li>
+<li>nextTick：针对单一事件更新数据后立即操作dom</li>
+<li>updated：任何数据的更新，如果要做统一的业务逻辑处理</li>
+<li>watch：监听具体数据变化，并做相应的处理
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/05/vuex学习/#more" rel="contents">
+            <a class="btn" href="/2017/06/27/Vue-js学习三/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -893,7 +837,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/03/扎实基础JS一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/23/Vue-js学习二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -912,7 +856,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/03/扎实基础JS一/" itemprop="url">扎实基础JS一</a></h1>
+                <a class="post-title-link" href="/2017/06/23/Vue-js学习二/" itemprop="url">Vue.js学习二</a></h1>
         
 
         <div class="post-meta">
@@ -924,8 +868,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-03T16:08:26+08:00">
-                2017-06-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T10:38:34+08:00">
+                2017-06-23
               </time>
             
 
@@ -935,6 +879,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -942,7 +908,7 @@
 
           
           
-             <span id="/2017/06/03/扎实基础JS一/" class="leancloud_visitors" data-flag-title="扎实基础JS一">
+             <span id="/2017/06/23/Vue-js学习二/" class="leancloud_visitors" data-flag-title="Vue.js学习二">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -971,12 +937,39 @@
 
       
         
-          
-          
-          
+          <h2 id="Class与Style绑定"><a href="#Class与Style绑定" class="headerlink" title="Class与Style绑定"></a>Class与Style绑定</h2><h3 id="绑定HTML-Class"><a href="#绑定HTML-Class" class="headerlink" title="绑定HTML Class"></a>绑定HTML Class</h3><ol>
+<li>对象语法：</li>
+</ol>
+<ul>
+<li><p>给<code>v-bind:class</code>一个对象，以动态切换class,语法表示<code>classactive</code>的更新将取决于数据属性 isActive 是否为真值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;&#123; active: isActive &#125;&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在对象中传入更多属性用来动态切换多个 class ,v-bind:class 指令可以与普通的 class 属性共存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;static&quot;</div><div class="line">     v-bind:class=&quot;&#123; active: isActive, &apos;text-danger&apos;: hasError &#125;&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>直接绑定数据里的一个对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;classObject&quot;&gt;&lt;/div&gt;</div><div class="line">data: &#123;</div><div class="line">  classObject: &#123;</div><div class="line">    active: true,</div><div class="line">    &apos;text-danger&apos;: false</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>数组语法</li>
+</ol>
+<ul>
+<li><p>把一个数组传给 v-bind:class ，以应用一个 class 列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;[activeClass,errorClass]&quot;&gt;&lt;/div&gt;</div><div class="line">data: &#123;</div><div class="line">    activeClass: &apos;active&apos;,</div><div class="line">    errorClass: &apos;text-danger&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>用三元表达式，据条件切换列表中的 class</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;[isActive ? activeClass : &apos;&apos;, errorClass]&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><ul>
+<li><code>v-if</code>是“真正的”条件渲染，如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</li>
+<li><code>v-show</code>不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换</li>
+<li>区别：v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件不太可能改变，则使用 v-if 较好</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/03/扎实基础JS一/#more" rel="contents">
+            <a class="btn" href="/2017/06/23/Vue-js学习二/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1017,7 +1010,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1062,7 +1055,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1073,7 +1066,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1084,7 +1077,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

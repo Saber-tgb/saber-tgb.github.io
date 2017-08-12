@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-20T09:15:51.026Z</updated>
+  <updated>2017-08-12T03:52:37.790Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,22 +16,513 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HTML5基础标签的掌握</title>
-    <link href="http://yoursite.com/2017/07/20/HTML5%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE%E7%9A%84%E6%8E%8C%E6%8F%A1/"/>
-    <id>http://yoursite.com/2017/07/20/HTML5基础标签的掌握/</id>
-    <published>2017-07-20T09:12:09.000Z</published>
-    <updated>2017-07-20T09:15:51.026Z</updated>
+    <title>国际化——Vue-i18n的使用</title>
+    <link href="http://yoursite.com/2017/08/12/%E5%9B%BD%E9%99%85%E5%8C%96%E2%80%94%E2%80%94Vue-i18n%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/08/12/国际化——Vue-i18n的使用/</id>
+    <published>2017-08-12T03:30:07.000Z</published>
+    <updated>2017-08-12T03:52:37.790Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a><abbr>标签</abbr></h2><ul>
-<li><code>&lt;abbr&gt;</code> 标签表示简称或缩写，比如 “WWW” 或 “NATO”</li>
-<li><code>&lt;abbr&gt;</code> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.</div></pre></td></tr></table></figure></abbr></li>
+    <content type="html"><![CDATA[<h2 id="Vue-i18n安装"><a href="#Vue-i18n安装" class="headerlink" title="Vue-i18n安装"></a>Vue-i18n安装</h2><ul>
+<li><code>npm install vue-i18n --save</code></li>
+</ul>
+<h2 id="Vue-i18n的使用"><a href="#Vue-i18n的使用" class="headerlink" title="Vue-i18n的使用"></a>Vue-i18n的使用</h2><ul>
+<li>在入口<code>main.js</code>文件配置使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueI18n from &apos;vue-i18n&apos;</div><div class="line"></div><div class="line">Vue.use(VueI18n);</div><div class="line">/*---------基本使用-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages : &#123;</div><div class="line">    en: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;hello world&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    cn: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;你好、世界&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">/*---------使用语言包-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages: &#123;</div><div class="line">    &apos;CN&apos;: require(&apos;./assets/common/lang/cn&apos;),   // 中文语言包</div><div class="line">    &apos;EN&apos;: require(&apos;./assets/common/lang/en&apos;)    // 英文语言包</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------语言包内部语法star-----------*/</div><div class="line">export const  message = &#123;</div><div class="line">      language:&apos;语言&apos;,</div><div class="line">      hello: &apos;你好,世界&apos;</div><div class="line">&#125;</div><div class="line">/*---------语言包内部语法end-----------*/</div><div class="line"></div><div class="line">/*---------挂载全局使用-----------*/</div><div class="line">new Vue(&#123;</div><div class="line">  el: &apos;#app&apos;,</div><div class="line">  i18n,</div><div class="line">  router,</div><div class="line">  template: &apos;&lt;App/&gt;&apos;,</div><div class="line">  components: &#123; App &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------vue组件模板的使用-----------*/</div><div class="line"> &lt;template&gt;</div><div class="line">        &lt;p&gt;&#123;&#123; $t(&quot;message.hello&quot;) &#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;/template&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="单独组件的使用"><a href="#单独组件的使用" class="headerlink" title="单独组件的使用"></a>单独组件的使用</h2><ul>
+<li>在单个vue组件中使用，要用到i18n自定义块，需要配置webpack文件<code>webpack.base.conf.js</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  // ...</div><div class="line">  module: &#123;</div><div class="line">    rules: [</div><div class="line">      &#123;</div><div class="line">        test: /\.vue$/,</div><div class="line">        loader: &apos;vue-loader&apos;,</div><div class="line">        options: &#123;</div><div class="line">          loaders: &#123;</div><div class="line">            // you need to specify `i18n` loaders key with `vue-i18n-loader` (https://github.com/kazupon/vue-i18n-loader)</div><div class="line">            i18n: &apos;@kazupon/vue-i18n-loader&apos;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      // ...</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>示例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;i18n&gt;</div><div class="line">&#123;</div><div class="line">  &quot;en&quot;: &#123;</div><div class="line">    &quot;hello&quot;: &quot;hello world!&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;ja&quot;: &#123;</div><div class="line">    &quot;hello&quot;: &quot;你好,世界！&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/i18n&gt;</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line">  &lt;div id=&quot;app&quot;&gt;</div><div class="line">    &lt;label for=&quot;locale&quot;&gt;locale&lt;/label&gt;</div><div class="line">    &lt;select v-model=&quot;locale&quot;&gt;</div><div class="line">      &lt;option&gt;en&lt;/option&gt;</div><div class="line">      &lt;option&gt;ja&lt;/option&gt;</div><div class="line">    &lt;/select&gt;</div><div class="line">    &lt;p&gt;message: &#123;&#123; $t(&apos;hello&apos;) &#125;&#125;&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  name: &apos;app&apos;,</div><div class="line">  data () &#123; return &#123; locale: &apos;en&apos; &#125; &#125;,</div><div class="line">  watch: &#123;</div><div class="line">    locale (val) &#123;</div><div class="line">      this.$i18n.locale = val</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Vue-i18n安装&quot;&gt;&lt;a href=&quot;#Vue-i18n安装&quot; class=&quot;headerlink&quot; title=&quot;Vue-i18n安装&quot;&gt;&lt;/a&gt;Vue-i18n安装&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install vue-i18n --save&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Vue-i18n的使用&quot;&gt;&lt;a href=&quot;#Vue-i18n的使用&quot; class=&quot;headerlink&quot; title=&quot;Vue-i18n的使用&quot;&gt;&lt;/a&gt;Vue-i18n的使用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在入口&lt;code&gt;main.js&lt;/code&gt;文件配置使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;43&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;44&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;45&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;46&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;47&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;48&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;49&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;import Vue from &amp;apos;vue&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;import VueI18n from &amp;apos;vue-i18n&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Vue.use(VueI18n);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/*---------基本使用-----------*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;const i18n = new VueI18n(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  locale: &amp;apos;CN&amp;apos;,    // 语言标识&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  messages : &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    en: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      message: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        hello: &amp;apos;hello world&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    cn: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      message: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        hello: &amp;apos;你好、世界&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/*---------使用语言包-----------*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;const i18n = new VueI18n(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  locale: &amp;apos;CN&amp;apos;,    // 语言标识&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  messages: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;apos;CN&amp;apos;: require(&amp;apos;./assets/common/lang/cn&amp;apos;),   // 中文语言包&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;apos;EN&amp;apos;: require(&amp;apos;./assets/common/lang/en&amp;apos;)    // 英文语言包&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/*---------语言包内部语法star-----------*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;export const  message = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      language:&amp;apos;语言&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      hello: &amp;apos;你好,世界&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/*---------语言包内部语法end-----------*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/*---------挂载全局使用-----------*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;new Vue(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  el: &amp;apos;#app&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  i18n,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  router,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  template: &amp;apos;&amp;lt;App/&amp;gt;&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  components: &amp;#123; App &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/*---------vue组件模板的使用-----------*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; &amp;lt;template&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;lt;p&amp;gt;&amp;#123;&amp;#123; $t(&amp;quot;message.hello&amp;quot;) &amp;#125;&amp;#125;&amp;lt;/p&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;/template&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="国际化" scheme="http://yoursite.com/categories/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+      <category term="Vue-i18" scheme="http://yoursite.com/categories/%E5%9B%BD%E9%99%85%E5%8C%96/Vue-i18/"/>
+    
+    
+      <category term="Vue-i18" scheme="http://yoursite.com/tags/Vue-i18/"/>
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解ES6六</title>
+    <link href="http://yoursite.com/2017/08/06/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E5%85%AD/"/>
+    <id>http://yoursite.com/2017/08/06/深入理解ES6六/</id>
+    <published>2017-08-06T09:15:41.000Z</published>
+    <updated>2017-08-12T03:23:13.434Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><ul>
+<li>ES6新增的数据类型<code>Symbol</code></li>
+<li><p>创建Symbol：通过去全局的<code>Symbol</code>函数创建一个<code>Symbol</code>，<code>Symbol</code>函数接受一个可选参数，用于添加一段文本描述即将创建的<code>Symbol</code>,方便阅读和调试Symbol程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let firstName = Symbol(&apos;first name&apos;);</div><div class="line">    let person = &#123;&#125;;</div><div class="line"></div><div class="line">    person[firstName] = &apos;Nicholas&apos;;</div><div class="line"></div><div class="line">    console.log(&apos;first name&apos; in person); //false</div><div class="line">    console.log(person[firstName]); //&apos;Nicholas&apos;</div><div class="line">    console.log(firstName); //&apos;Symbol(first name)&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ES6扩展了<code>typeof</code>操作符，支持返回<code>Symbol</code>,可以用typeof来检测变量是否为<code>Symbol</code>类型.</p>
+</li>
+</ul>
+<h2 id="Symbol共享体系"><a href="#Symbol共享体系" class="headerlink" title="Symbol共享体系"></a>Symbol共享体系</h2><ul>
+<li><p>ES6提供了一个可以随时访问的全局Symbol注册表,如果要创建一个可共享的Symbol,要使用Symbol.for()方法，该方法只接受一个参数，就是即将创建的Symbol的字符串标识符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let uid = Symbol.for(&apos;uid&apos;);</div><div class="line">let object = &#123;&#125;;</div><div class="line"></div><div class="line">object[uid]=&apos;12345&apos;;</div><div class="line"></div><div class="line">console.log(ojbect[uid]);</div><div class="line">console.log(uid);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Symbol.for()方法首先在全局Symbol注册表中搜索键为’uid’的Symbol是否存在，如果存在，直接返回已有的Symbol；否则创建一个新的Symbol，并使用这个键在Symbol全局注册表中注册，随即返回新创建的Symbol</p>
+<a id="more"></a></li>
+<li>可以使用<code>Symbol.keyFor()</code>方法在Symbol全局注册表中检索与Symbol有关的键<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let uid = Symbol.for(&apos;uid&apos;);</div><div class="line">console.log(Symbol.keyFor(uid)); //&apos;uid&apos;</div><div class="line"></div><div class="line">let uid3 = Symbol(&apos;uid&apos;);</div><div class="line">console.log(Symbol.keyFor(uid3)) //undefined</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Symbol属性检索"><a href="#Symbol属性检索" class="headerlink" title="Symbol属性检索"></a>Symbol属性检索</h2><ul>
+<li>ES6中新增<code>Object.getOwnPropertySymbols()</code>方法来检索对象中的Symbol属性，返回值是一个包含所有Symbol自由属性的数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let uid = Symbol.for(&apos;uid&apos;);</div><div class="line">let object = &#123;</div><div class="line">    [uid]: &apos;12345&apos;</div><div class="line">&#125;;</div><div class="line">let symbols = object.getOwnPropertySymbols(object);</div><div class="line"></div><div class="line">console.log(symbols.length);               //1</div><div class="line">console.log(symbols[0]);                   //&apos;Symbol(uid)&apos;</div><div class="line">console.log(object[symbols[0]])            //&apos;12345&apos;</div></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
+      &lt;h2 id=&quot;Symbol&quot;&gt;&lt;a href=&quot;#Symbol&quot; class=&quot;headerlink&quot; title=&quot;Symbol&quot;&gt;&lt;/a&gt;Symbol&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ES6新增的数据类型&lt;code&gt;Symbol&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建Symbol：通过去全局的&lt;code&gt;Symbol&lt;/code&gt;函数创建一个&lt;code&gt;Symbol&lt;/code&gt;，&lt;code&gt;Symbol&lt;/code&gt;函数接受一个可选参数，用于添加一段文本描述即将创建的&lt;code&gt;Symbol&lt;/code&gt;,方便阅读和调试Symbol程序&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let firstName = Symbol(&amp;apos;first name&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    let person = &amp;#123;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    person[firstName] = &amp;apos;Nicholas&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(&amp;apos;first name&amp;apos; in person); //false&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(person[firstName]); //&amp;apos;Nicholas&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(firstName); //&amp;apos;Symbol(first name)&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ES6扩展了&lt;code&gt;typeof&lt;/code&gt;操作符，支持返回&lt;code&gt;Symbol&lt;/code&gt;,可以用typeof来检测变量是否为&lt;code&gt;Symbol&lt;/code&gt;类型.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Symbol共享体系&quot;&gt;&lt;a href=&quot;#Symbol共享体系&quot; class=&quot;headerlink&quot; title=&quot;Symbol共享体系&quot;&gt;&lt;/a&gt;Symbol共享体系&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ES6提供了一个可以随时访问的全局Symbol注册表,如果要创建一个可共享的Symbol,要使用Symbol.for()方法，该方法只接受一个参数，就是即将创建的Symbol的字符串标识符&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let uid = Symbol.for(&amp;apos;uid&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let object = &amp;#123;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;object[uid]=&amp;apos;12345&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(ojbect[uid]);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(uid);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Symbol.for()方法首先在全局Symbol注册表中搜索键为’uid’的Symbol是否存在，如果存在，直接返回已有的Symbol；否则创建一个新的Symbol，并使用这个键在Symbol全局注册表中注册，随即返回新创建的Symbol&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+      <category term="Symbol" scheme="http://yoursite.com/categories/ES6/Symbol/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="Symbol" scheme="http://yoursite.com/tags/Symbol/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解ES6五</title>
+    <link href="http://yoursite.com/2017/08/06/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%BA%94/"/>
+    <id>http://yoursite.com/2017/08/06/深入理解ES6五/</id>
+    <published>2017-08-06T09:15:16.000Z</published>
+    <updated>2017-08-12T03:24:11.643Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
+<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数中也可以传入解构表达式</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
+</li>
+<li><p>为非同名局部变量赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套对象解构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h2><ul>
+<li><p>数组解构语法：使用数组字面量，解构操作全部在数组内完成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let colors = [&apos;red&apos;, &apos;grren&apos;, &apos;blue&apos;];</div><div class="line">let [first, second] = colors;</div><div class="line">console.log(first);   //&apos;red&apos;</div><div class="line">console.log(second);   //&apos;grren&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>数组解构赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let colors = [&apos;red&apos;, &apos;grren&apos;, &apos;blue&apos;],</div><div class="line">    first = &apos;111&apos;,</div><div class="line">    second = &apos;222&apos;;</div><div class="line">[first,second] = colors;</div><div class="line"></div><div class="line">console.log(first);</div><div class="line">console.log(second);</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;对象解构&quot;&gt;&lt;a href=&quot;#对象解构&quot; class=&quot;headerlink&quot; title=&quot;对象解构&quot;&gt;&lt;/a&gt;对象解构&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;对象解构的语法：在赋值操作符(=)左边放置一个对象字面量&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; type, name&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(type);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(name);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type = &amp;apos;Literal&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name = &amp;apos;sss&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    (&amp;#123; type, name &amp;#125; = node);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(type); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(name); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;函数中也可以传入解构表达式&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type = &amp;apos;Literal&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name = &amp;apos;sss&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    function outPut(value) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        console.log(value === node);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    outPut(&amp;#123; type, name &amp;#125; = node);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(type); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(name); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; type, name, value = true&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(type); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(name); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(value); //true&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;为非同名局部变量赋值&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; type:localType, name:localName&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(localType); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(localName); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;嵌套对象解构&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Identifier&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    loc: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        start: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            line: 1,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            column:1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        end: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            line: 1,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            column: 4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; loc: &amp;#123;start &amp;#125;&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(start.line); //1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(start.column); //1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+      <category term="解构" scheme="http://yoursite.com/categories/ES6/%E8%A7%A3%E6%9E%84/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="解构" scheme="http://yoursite.com/tags/%E8%A7%A3%E6%9E%84/"/>
+    
+      <category term="解构赋值" scheme="http://yoursite.com/tags/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+    
+      <category term="对象解构" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84/"/>
+    
+      <category term="数组解构" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84/"/>
+    
+      <category term="不定元素" scheme="http://yoursite.com/tags/%E4%B8%8D%E5%AE%9A%E5%85%83%E7%B4%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解ES6四</title>
+    <link href="http://yoursite.com/2017/08/06/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E5%9B%9B/"/>
+    <id>http://yoursite.com/2017/08/06/深入理解ES6四/</id>
+    <published>2017-08-06T07:40:34.000Z</published>
+    <updated>2017-08-12T03:23:48.171Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
+<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
+<li>特异对象 具有某些与默认行为不符的内部行为</li>
+<li>标准对象 ES6中规范定义的对象</li>
+<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
+</ul>
+<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
+<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="ES6新增方法"><a href="#ES6新增方法" class="headerlink" title="ES6新增方法"></a>ES6新增方法</h2><ul>
+<li><p>Object.is()方法：这个方法接受两个参数，如果两个参数的类型相同且具有相同的值，则返回true。用来弥补全等运算符的不准确运算。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(+0 === -0)  //true;</div><div class="line">console.log(Object.is(+0,-0)); //false</div><div class="line"></div><div class="line">console.log(NaN === Nan); //false</div><div class="line">console.log(Object.is(NaN,NaN)) //true</div></pre></td></tr></table></figure>
+</li>
+<li><p>Object.assign()方法：混入方法，这个方法接受一个对象和任意数量的源对象，最终返回接受对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">let obj = &#123;&#125;;</div><div class="line">Object.assign(obj,</div><div class="line">    &#123;</div><div class="line">        type:&apos;js&apos;;</div><div class="line">        name:&apos;file.js&apos;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">        type:&apos;css  //如果多个源对象具有同名的属性则排位靠后的源对象会覆盖排位靠前的</div><div class="line">    &#125;</div><div class="line">)</div><div class="line">console.log(obj.type); //&apos;css&apos;</div><div class="line">console.log(obj.name); //&apos;file.js&apos;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="增强对象原型"><a href="#增强对象原型" class="headerlink" title="增强对象原型"></a>增强对象原型</h2><ul>
+<li><p>ES6新增<code>Object.setPrototypeOf()方法</code>：这个方法可以改变任意指定对象的原型，它接受两个参数；被改变的对象原型的对象以及要替代第一个参数原型的对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    getGreeting() &#123;</div><div class="line">        return &apos;Hello&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">let dog = &#123;</div><div class="line">    getGreeting() &#123;</div><div class="line">        return &apos;Woof&apos;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let friend = Object.create(person);</div><div class="line">console.log(Object.getPrototypeOf(firend)===person); //true</div><div class="line"></div><div class="line">Object.setPrototypeOf(friend,dog);</div><div class="line">console.log(Object.getPrototypeOf(friend)===dog); //true</div></pre></td></tr></table></figure>
+</li>
+<li><p>简化原型访问的Super引用</p>
+<ul>
+<li>Super引用相当于指向对象原型的指针，就是Object.getPrototypeOf(this)的值</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ES6规范清晰的定义了对象的类别&quot;&gt;&lt;a href=&quot;#ES6规范清晰的定义了对象的类别&quot; class=&quot;headerlink&quot; title=&quot;ES6规范清晰的定义了对象的类别&quot;&gt;&lt;/a&gt;ES6规范清晰的定义了对象的类别&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;普通对象 具有JavaScript对象所有的默认内部行为&lt;/li&gt;
+&lt;li&gt;特异对象 具有某些与默认行为不符的内部行为&lt;/li&gt;
+&lt;li&gt;标准对象 ES6中规范定义的对象&lt;/li&gt;
+&lt;li&gt;内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;对象字面量语法的扩展&quot;&gt;&lt;a href=&quot;#对象字面量语法的扩展&quot; class=&quot;headerlink&quot; title=&quot;对象字面量语法的扩展&quot;&gt;&lt;/a&gt;对象字面量语法的扩展&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function Person(name,age) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    reutrn &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        name,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        age&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;对象方法的简写语法：消除了冒号和关键字&lt;code&gt;function&lt;/code&gt;,与传统对象方法的区别是简写方法可以使用super关键字&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let person = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;tgb&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    sayName() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        console.log(this.name);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let suffix = &amp;apos;name&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let person = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    [&amp;apos;first&amp;apos;+suffix]: &amp;apos;Nicholas&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    [&amp;apos;last&amp;apos;+suffix]:&amp;apos;Zakas&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(person[&amp;apos;first name&amp;apos;]);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(person[&amp;apos;last name&amp;apos;]);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+      <category term="对象" scheme="http://yoursite.com/categories/ES6/%E5%AF%B9%E8%B1%A1/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="对象" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="对象字面量" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解ES6三</title>
+    <link href="http://yoursite.com/2017/08/06/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%89/"/>
+    <id>http://yoursite.com/2017/08/06/深入理解ES6三/</id>
+    <published>2017-08-06T01:08:19.000Z</published>
+    <updated>2017-08-12T03:23:42.818Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
+<li><p>ES6简化了为形式参数提供默认值的过程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function makeRequest(rul,timeout = 2000,callback) &#123;</div><div class="line">    //函数其余部分</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值</p>
+</li>
+<li><p>在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function mix(first,second=&apos;b&apos;) &#123;</div><div class="line">    console.log(arguments.length);  // 1 之传入了一个参数</div><div class="line">    console.log(first === arguments[0])  // true</div><div class="line">    console.log(second === aruments[1])  // false //arguments[1]是undefined</div><div class="line">&#125;</div><div class="line">mix(&apos;a&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>默认参数表达式</p>
+<ul>
+<li>ES6中可以使用先定义的参数作为后定义参数的默认值，但是后定义的参数不能作为先定义参数的默认值。</li>
+<li>默认参数也存在临时死区，定义参数时会为每个参数创建一个新的标识符绑定，该绑定在初始化之前不可被引用，如果访问会导致程序错误</li>
+</ul>
+</li>
+</ul>
+<h2 id="不定参数"><a href="#不定参数" class="headerlink" title="不定参数"></a>不定参数</h2><ul>
+<li>在函数的命名参数钱添加三个点(…)就表明这是一个不定参数，该参数为一个数组，包含着自它之后出入的所有参数，通过这个数组名即可逐一访问里面的参数。</li>
+<li>不定参数的使用限制：1.每个函数最多只能声明一个不定参数，而且一定要放在所有参数的末尾。2.不定参数不能用于对象字面量setter中</li>
+<li>arguments对象包含不定参数，无论是否使用不定参数，argumetns对象总是包含所有传入函数的参数</li>
+</ul>
+<h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><pre><code>- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数
+- 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// ES5使用</div><div class="line">let values = [25,50,75,100];</div><div class="line">console.log(Math.max.apply(Math,values)); //100</div><div class="line"></div><div class="line">// Es6使用</div><div class="line">console.log(Math.max(...values)); //100</div></pre></td></tr></table></figure>
+</code></pre><a id="more"></a>
+<h2 id="判断函数被调用的方法"><a href="#判断函数被调用的方法" class="headerlink" title="判断函数被调用的方法"></a>判断函数被调用的方法</h2><ul>
+<li>在ES5中判断一个函数是否通过new关键字被调用(或者说，判断该函数是否作为构造函数被调用)，最常使用的是instanceof</li>
+<li>instanceof语法：<code>Object instanceof constructor;</code> <code>instanceof</code>运算符用来检测<code>constructor.prototype</code>是否存在于参数<code>Object</code>的原型链上</li>
+<li>ES6引入了<code>new.target</code>这个元属性，元属性市值非对象的属性，其可以提供非对象目标的补充信息，当调用函数的<a href="构造器">[construct]</a>方法时，new.target被赋值new操作符的目标，通常是新创建的对象实例。如果用[[call]]方法，则new.target的值为undefined。</li>
+</ul>
+<h2 id="块级函数"><a href="#块级函数" class="headerlink" title="块级函数"></a>块级函数</h2><ul>
+<li><p>ES6中允许在代码块中声明函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    function doSomething() &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>块级函数的声明提升</p>
+<ul>
+<li>函数声明的块级函数会被提升至块的顶部而用let定义的函数表达式不会被提升</li>
+<li>ES6严格模式下块级函数只会提升至块的顶部，但是在非严格模式下函数会被提升至外围函数或全局作用域的顶部。</li>
+</ul>
+</li>
+</ul>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><ul>
+<li>箭头函数是一种使用箭头(=&gt;)定义函数的新语法</li>
+<li>与传统函数的不同：<ol>
+<li>没有this、super、arguments和new.target绑定 这些值由外围一层非箭头函数决定</li>
+<li>不能通过new关键字调用 箭头函数没有[[constructor]]方法，如果通过new关键字调用箭头函数，程序会抛出错误。</li>
+<li>没有原型 不存在<code>prototype</code>这个属性</li>
+<li>不可以改变<code>this</code>的绑定 在函数的生命周期内始终保持一致</li>
+<li>不支持arguments对象</li>
+<li>不支持重复命名的参数</li>
+</ol>
+</li>
+<li><p>箭头函数的语法</p>
+<ol>
+<li><p>当箭头函数只有一个参数时，可以直接写参数名，箭头紧随其后，箭头右侧额表达式被求值后便立即返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let reflect = value =&gt; value;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果要传入两个或两个以上的参数，要在参数的两侧添加一对小括号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let sum = (num1,num2) =&gt; num1+num2;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果函数没有参数，也要在声明的时候写一组没有内容的小括号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let getName = () =&gt; &apos;Tgb&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可以有函数体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let sum = (num1,num2) =&gt; &#123;</div><div class="line">    return num1+num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数返回对象字面量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let getTempItem = id =&gt; (&#123; id: id,name: &apos;temp&apos; &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数的自调用 沙箱模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let person = ((name) =&gt; &#123;</div><div class="line">    return &#123;</div><div class="line">        getName: function() &#123;</div><div class="line">            retrun name;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;)(&apos;tgb&apos;);</div></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ES6简化了为形式参数提供默认值的过程&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function makeRequest(rul,timeout = 2000,callback) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    //函数其余部分&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function mix(first,second=&amp;apos;b&amp;apos;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(arguments.length);  // 1 之传入了一个参数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(first === arguments[0])  // true&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(second === aruments[1])  // false //arguments[1]是undefined&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;mix(&amp;apos;a&amp;apos;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;默认参数表达式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ES6中可以使用先定义的参数作为后定义参数的默认值，但是后定义的参数不能作为先定义参数的默认值。&lt;/li&gt;
+&lt;li&gt;默认参数也存在临时死区，定义参数时会为每个参数创建一个新的标识符绑定，该绑定在初始化之前不可被引用，如果访问会导致程序错误&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;不定参数&quot;&gt;&lt;a href=&quot;#不定参数&quot; class=&quot;headerlink&quot; title=&quot;不定参数&quot;&gt;&lt;/a&gt;不定参数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在函数的命名参数钱添加三个点(…)就表明这是一个不定参数，该参数为一个数组，包含着自它之后出入的所有参数，通过这个数组名即可逐一访问里面的参数。&lt;/li&gt;
+&lt;li&gt;不定参数的使用限制：1.每个函数最多只能声明一个不定参数，而且一定要放在所有参数的末尾。2.不定参数不能用于对象字面量setter中&lt;/li&gt;
+&lt;li&gt;arguments对象包含不定参数，无论是否使用不定参数，argumetns对象总是包含所有传入函数的参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;展开运算符&quot;&gt;&lt;a href=&quot;#展开运算符&quot; class=&quot;headerlink&quot; title=&quot;展开运算符&quot;&gt;&lt;/a&gt;展开运算符&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数
+- 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// ES5使用&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let values = [25,50,75,100];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(Math.max.apply(Math,values)); //100&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// Es6使用&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(Math.max(...values)); //100&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+      <category term="函数" scheme="http://yoursite.com/categories/ES6/%E5%87%BD%E6%95%B0/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="函数" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="不定参数" scheme="http://yoursite.com/tags/%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0/"/>
+    
+      <category term="展开运算符" scheme="http://yoursite.com/tags/%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+      <category term="块级函数" scheme="http://yoursite.com/tags/%E5%9D%97%E7%BA%A7%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="箭头函数" scheme="http://yoursite.com/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解ES6二</title>
+    <link href="http://yoursite.com/2017/07/26/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%BA%8C/"/>
+    <id>http://yoursite.com/2017/07/26/深入理解ES6二/</id>
+    <published>2017-07-26T13:49:53.000Z</published>
+    <updated>2017-08-12T03:23:35.735Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板字面量的主要功能"><a href="#模板字面量的主要功能" class="headerlink" title="模板字面量的主要功能"></a>模板字面量的主要功能</h1><ul>
+<li>多行字符串：一个正式的多行字符串的概念</li>
+<li>基本的字符串格式化：将变量的值嵌入字符串的能力</li>
+<li>HTML转义 向HTML插入经过安全转换后的字符串的能力</li>
+</ul>
+<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let message = `Hello world`;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号</p>
+</li>
+<li><p>模板字面量可以很简洁的使用多行字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let message = `Hello</div><div class="line">world`</div></pre></td></tr></table></figure>
+</li>
+<li><p>在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。<br>占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = `Hello $&#123;name&#125;`</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#注意事项</p>
+<ul>
+<li><p>模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误</p>
+</li>
+<li><p>可以在模板字面量中嵌入另外一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = &apos;Hello, $&#123;</div><div class="line">        `my name is $&#123;name&#125;`</div><div class="line">    &#125;.`;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h1 id="标签模板"><a href="#标签模板" class="headerlink" title="标签模板"></a>标签模板</h1><ul>
+<li><p>标签模板是在模板字面量第一个反撇号(`)前方标注的字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let message = tag`Hello world`</div></pre></td></tr></table></figure>
+</li>
+<li><p>标签是一个函数，第一个参数是一个数组，包含JavaScript解释过后的字面量字符串，它之后的所有参数都是每一个站位符的解释值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function tag(literals,...substitutions) &#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">    let a = 5,b = 10;</div><div class="line">    let tag = (s,v1,v2)=&gt;&#123;</div><div class="line">        console.log(s);</div><div class="line">        console.log(v1);</div><div class="line">        console.log(v2);</div><div class="line">    &#125;</div><div class="line">    tag`Hello $&#123;a+b&#125; world $&#123;a*b&#125;`;  //[&apos;Hello &apos;,&apos; world &apos;,&apos;&apos;]</div><div class="line">                                     //15</div><div class="line">                                     //50</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过String.raw()标签可以访问到字符转义被转换成等价字符前的原声字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let message1 = `Multiline\nstring`;</div><div class="line">let message2 = String.raw`Multiline\nstring`;</div><div class="line">console.log(message1); //&apos;Multiline</div><div class="line">                       //string&apos;</div><div class="line">console.log(message2); //&apos;Multiline\nstring&apos;</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;模板字面量的主要功能&quot;&gt;&lt;a href=&quot;#模板字面量的主要功能&quot; class=&quot;headerlink&quot; title=&quot;模板字面量的主要功能&quot;&gt;&lt;/a&gt;模板字面量的主要功能&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;多行字符串：一个正式的多行字符串的概念&lt;/li&gt;
+&lt;li&gt;基本的字符串格式化：将变量的值嵌入字符串的能力&lt;/li&gt;
+&lt;li&gt;HTML转义 向HTML插入经过安全转换后的字符串的能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;基础语法&quot;&gt;&lt;a href=&quot;#基础语法&quot; class=&quot;headerlink&quot; title=&quot;基础语法&quot;&gt;&lt;/a&gt;基础语法&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let message = `Hello world`;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;模板字面量可以很简洁的使用多行字符串&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let message = `Hello&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;world`&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。&lt;br&gt;占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let name = &amp;apos;Nicholas&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    message = `Hello $&amp;#123;name&amp;#125;`&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;#注意事项&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可以在模板字面量中嵌入另外一个&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let name = &amp;apos;Nicholas&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    message = &amp;apos;Hello, $&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        `my name is $&amp;#123;name&amp;#125;`&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;.`;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="模板字面量" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%9D%BF%E5%AD%97%E9%9D%A2%E9%87%8F/"/>
+    
+      <category term="标签模板" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5基础标签的掌握</title>
+    <link href="http://yoursite.com/2017/07/20/HTML5%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE%E7%9A%84%E6%8E%8C%E6%8F%A1/"/>
+    <id>http://yoursite.com/2017/07/20/HTML5基础标签的掌握/</id>
+    <published>2017-07-20T09:12:09.000Z</published>
+    <updated>2017-08-12T03:25:06.897Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a><abbr>标签</abbr></h2><ul>
+<li><code>&lt;abbr&gt;</code> 标签表示简称或缩写，比如 “WWW” 或 “NATO”</li>
+<li><code>&lt;abbr&gt;</code> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.</div></pre></td></tr></table></figure>
+</abbr></li>
+</ul>
+<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
       &lt;h2 id=&quot;标签&quot;&gt;&lt;a href=&quot;#标签&quot; class=&quot;headerlink&quot; title=&quot;标签&quot;&gt;&lt;/a&gt;&lt;abbr&gt;标签&lt;/abbr&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; 标签表示简称或缩写，比如 “WWW” 或 “NAT
+&lt;li&gt;&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; 标签表示简称或缩写，比如 “WWW” 或 “NATO”&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 &lt;abbr&gt; 元素上时显示出简称/缩写的完整版本。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;The &amp;lt;abbr title=&amp;quot;People&amp;apos;s Republic of China&amp;quot;&amp;gt;PRC&amp;lt;/abbr&amp;gt; was founded in 1949.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/abbr&gt;&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -53,7 +544,7 @@
     <link href="http://yoursite.com/2017/07/19/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%80/"/>
     <id>http://yoursite.com/2017/07/19/深入理解ES6一/</id>
     <published>2017-07-19T02:03:31.000Z</published>
-    <updated>2017-07-19T02:37:28.792Z</updated>
+    <updated>2017-08-12T03:23:27.850Z</updated>
     
     <content type="html"><![CDATA[<h1 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h1><ol>
 <li>Es6中引入块级声明，<code>let</code>声明的变量作用域限制在代码块中；</li>
@@ -70,9 +561,11 @@
 <li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
 </ul>
 <h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
-<li><p>常见的循环错误；<code>var</code>声明是全局变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p>使用闭包解决这个问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push((function(value)&#123;</div><div class="line">        // 变量i的值在传递到这个作用域是被赋值给了value;</div><div class="line">        // 此时这个值就不会随外部变量而变化了；</div><div class="line">        return function() &#123;</div><div class="line">            console.log(value);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i));</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
@@ -90,7 +583,22 @@
     
       &lt;h1 id=&quot;let声明&quot;&gt;&lt;a href=&quot;#let声明&quot; class=&quot;headerlink&quot; title=&quot;let声明&quot;&gt;&lt;/a&gt;let声明&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;Es6中引入块级声明，&lt;code&gt;let&lt;/code&gt;声明的变量作用域限制在代码块中；&lt;/li&gt;
-&lt;li
+&lt;li&gt;&lt;code&gt;let&lt;/code&gt;声明不会被提升;&lt;/li&gt;
+&lt;li&gt;在同一作用域中不能用&lt;code&gt;let&lt;/code&gt;重复定义已经存在的标识符，会抛出错误。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;const声明&quot;&gt;&lt;a href=&quot;#const声明&quot; class=&quot;headerlink&quot; title=&quot;const声明&quot;&gt;&lt;/a&gt;const声明&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;const&lt;/code&gt;声明的变量作用域也会限制在代码块中；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const&lt;/code&gt;声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const&lt;/code&gt;声明不允许修改绑定，但允许修改值；例如&lt;code&gt;const&lt;/code&gt;声明对象，对象的值是可以修改的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;临时死区的存在&quot;&gt;&lt;a href=&quot;#临时死区的存在&quot; class=&quot;headerlink&quot; title=&quot;临时死区的存在&quot;&gt;&lt;/a&gt;临时死区的存在&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;临时死区(temporal dead zone)TDZ用来描述&lt;code&gt;let&lt;/code&gt;和&lt;code&gt;const&lt;/code&gt;的不提升效果；&lt;/li&gt;
+&lt;li&gt;与&lt;code&gt;var&lt;/code&gt;声明不同，&lt;code&gt;let&lt;/code&gt;和&lt;code&gt;const&lt;/code&gt;声明的变量不会被提升到作用域的顶部，在&lt;code&gt;javascript&lt;/code&gt;引擎扫描代码的时候会将&lt;code&gt;let&lt;/code&gt;和&lt;code&gt;const&lt;/code&gt;的声明放到临时死区中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;循环中的块级作用域&quot;&gt;&lt;a href=&quot;#循环中的块级作用域&quot; class=&quot;headerlink&quot; title=&quot;循环中的块级作用域&quot;&gt;&lt;/a&gt;循环中的块级作用域&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;常见的循环错误；&lt;code&gt;var&lt;/code&gt;声明是全局变量&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var funcs = [];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;for(var i=0;i&amp;lt;10;i++) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    funcs.push(function() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        console.log(i);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;funcs.forEach(funcion(func) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    func(); //输出10次10 &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -112,7 +620,7 @@
     <link href="http://yoursite.com/2017/07/18/HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E5%88%86%E6%9E%90/"/>
     <id>http://yoursite.com/2017/07/18/HTTP状态码分析/</id>
     <published>2017-07-18T09:01:10.000Z</published>
-    <updated>2017-07-19T03:21:15.193Z</updated>
+    <updated>2017-08-12T03:25:18.953Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1xx（临时响应）"><a href="#1xx（临时响应）" class="headerlink" title="1xx（临时响应）"></a>1xx（临时响应）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表示临时响应并需要请求者继续执行操作的状态码</div></pre></td></tr></table></figure>
 <ol>
@@ -137,11 +645,12 @@
 <li>303（查看其他位置）: 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。对于除 HEAD 之外的所有请求，服务器会自动转到其他位置。</li>
 <li>304（未修改）: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。</li>
 <li>305（使用代理）: 请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。</li>
-<li>307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 <a href="answer.py?answer=">301</a> 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。</li>
-</ol>
+<li><p>307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 <a href="answer.py?answer=">301</a> 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。</p>
+<a id="more"></a>
 <h2 id="4xx（请求错误）"><a href="#4xx（请求错误）" class="headerlink" title="4xx（请求错误）"></a>4xx（请求错误）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些状态码表示请求可能出错，妨碍了服务器的处理</div></pre></td></tr></table></figure>
-<ol>
-<li>400（错误请求）: 服务器不理解请求的语法。</li>
+</li>
+<li><p>400（错误请求）: 服务器不理解请求的语法。</p>
+</li>
 <li>401（未授权）: 请求要求身份验证。对于登录后请求的网页，服务器可能返回此响应。</li>
 <li>403（禁止）: 服务器拒绝请求。如果您在 Googlebot 尝试抓取您网站上的有效网页时看到此状态码（您可以在 Google 网站管理员工具诊断下的网络抓取页面上看到此信息），可能是您的服务器或主机拒绝了 Googlebot 访问</li>
 <li>404（未找到）：服务器找不到请求的网页。例如，对于服务器上不存在的网页经常会返回此代码。如果您的网站上没有 robots.txt 文件，而您在 Google 网站管理员工具”诊断”标签的 robots.txt 页上看到此状态码，则这是正确的状态码。但是，如果您有 robots.txt 文件而又看到此状态码，则说明您的 robots.txt 文件可能命名错误或位于错误的位置（该文件应当位于顶级域，名为 robots.txt）。如果对于 Googlebot 抓取的网址看到此状态码（在”诊断”标签的 HTTP 错误页面上），则表示 Googlebot 跟随的可能是另一个页面的无效链接（是旧链接或输入有误的链接）。</li>
@@ -172,7 +681,30 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1xx（临时响应）&quot;&gt;&lt;a href=&quot;#1xx（临时响应）&quot; class=&quot;headerlink&quot; title=&quot;1xx（临时响应）&quot;&gt;&lt;/a&gt;1xx（临时响应）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t
+      &lt;h2 id=&quot;1xx（临时响应）&quot;&gt;&lt;a href=&quot;#1xx（临时响应）&quot; class=&quot;headerlink&quot; title=&quot;1xx（临时响应）&quot;&gt;&lt;/a&gt;1xx（临时响应）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;表示临时响应并需要请求者继续执行操作的状态码&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;100（继续）: 请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。&lt;/li&gt;
+&lt;li&gt;101（切换协议）: 请求者已要求服务器切换协议，服务器已确认并准备切换。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;2xx-（成功）&quot;&gt;&lt;a href=&quot;#2xx-（成功）&quot; class=&quot;headerlink&quot; title=&quot;2xx （成功）&quot;&gt;&lt;/a&gt;2xx （成功）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;表示成功处理了请求的状态码&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;200（成功）: 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果是对您的 robots.txt 文件显示此状态码，则表示 Googlebot 已成功检索到该文件。&lt;/li&gt;
+&lt;li&gt;201（已创建）: 请求成功并且服务器创建了新的资源。&lt;/li&gt;
+&lt;li&gt;202（已接受）: 服务器已接受请求，但尚未处理。&lt;/li&gt;
+&lt;li&gt;203（非授权信息）: 服务器已成功处理了请求，但返回的信息可能来自另一来源。&lt;/li&gt;
+&lt;li&gt;204（无内容）: 服务器成功处理了请求，但没有返回任何内容。&lt;/li&gt;
+&lt;li&gt;205（重置内容）: 服务器成功处理了请求，但没有返回任何内容。与 204 响应不同，此响应要求请求者重置文档视图（例如，清除表单内容以输入新内容）。&lt;/li&gt;
+&lt;li&gt;206（部分内容）: 服务器成功处理了部分 GET 请求。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;3xx-（重定向）&quot;&gt;&lt;a href=&quot;#3xx-（重定向）&quot; class=&quot;headerlink&quot; title=&quot;3xx （重定向）&quot;&gt;&lt;/a&gt;3xx （重定向）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;要完成请求，需要进一步操作。通常，这些状态码用来重定向。Google 建议您在每次请求中使用重定向不要超过 5 次。您可以使用网站管理员工具查看一下 Googlebot 在抓取重定向网页时是否遇到问题。诊断下的网络抓取页列出了由于重定向错误导致 Googlebot 无法抓取的网址。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;300（多种选择）: 针对请求，服务器可执行多种操作。服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择&lt;/li&gt;
+&lt;li&gt;301（永久移动）: 请求的网页已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。您应使用此代码告诉 Googlebot 某个网页或网站已永久移动到新位置&lt;/li&gt;
+&lt;li&gt;302（临时移动）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个网页或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引&lt;/li&gt;
+&lt;li&gt;303（查看其他位置）: 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。对于除 HEAD 之外的所有请求，服务器会自动转到其他位置。&lt;/li&gt;
+&lt;li&gt;304（未修改）: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。&lt;/li&gt;
+&lt;li&gt;305（使用代理）: 请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 &lt;a href=&quot;answer.py?answer=&quot;&gt;301&lt;/a&gt; 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。&lt;/p&gt;
     
     </summary>
     
@@ -192,7 +724,7 @@
     <link href="http://yoursite.com/2017/07/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
     <id>http://yoursite.com/2017/07/18/浏览器缓存/</id>
     <published>2017-07-18T02:55:49.000Z</published>
-    <updated>2017-07-18T08:56:20.994Z</updated>
+    <updated>2017-08-12T03:23:02.701Z</updated>
     
     <content type="html"><![CDATA[<h2 id="缓存的定义"><a href="#缓存的定义" class="headerlink" title="缓存的定义"></a>缓存的定义</h2><ul>
 <li>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。</li>
@@ -202,14 +734,21 @@
 <li>Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</li>
 </ul>
 </li>
-<li>HTTP在验证</li>
+<li>HTTP在验证<a id="more"></a></li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
       &lt;h2 id=&quot;缓存的定义&quot;&gt;&lt;a href=&quot;#缓存的定义&quot; class=&quot;headerlink&quot; title=&quot;缓存的定义&quot;&gt;&lt;/a&gt;缓存的定义&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之
+&lt;li&gt;Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;缓存的命中和未命中&quot;&gt;&lt;a href=&quot;#缓存的命中和未命中&quot; class=&quot;headerlink&quot; title=&quot;缓存的命中和未命中&quot;&gt;&lt;/a&gt;缓存的命中和未命中&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;304 的标准解释：&lt;ul&gt;
+&lt;li&gt;Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HTTP在验证
     
     </summary>
     
@@ -223,11 +762,11 @@
   </entry>
   
   <entry>
-    <title>&#39;HTTP协议的学习四&#39;</title>
+    <title>HTTP协议的学习四</title>
     <link href="http://yoursite.com/2017/07/17/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%9B%9B/"/>
     <id>http://yoursite.com/2017/07/17/HTTP协议的学习四/</id>
     <published>2017-07-17T06:58:41.007Z</published>
-    <updated>2017-07-17T08:22:28.653Z</updated>
+    <updated>2017-08-12T03:23:06.425Z</updated>
     
     <content type="html"><![CDATA[<h2 id="web服务器的主要功能"><a href="#web服务器的主要功能" class="headerlink" title="web服务器的主要功能"></a>web服务器的主要功能</h2><ol>
 <li>建立连接</li>
@@ -238,7 +777,7 @@
 <li>记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。</li>
 </ol>
 <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><ul>
-<li>web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。</li>
+<li>web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。<a id="more"></a></li>
 </ul>
 ]]></content>
     
@@ -246,7 +785,14 @@
     
       &lt;h2 id=&quot;web服务器的主要功能&quot;&gt;&lt;a href=&quot;#web服务器的主要功能&quot; class=&quot;headerlink&quot; title=&quot;web服务器的主要功能&quot;&gt;&lt;/a&gt;web服务器的主要功能&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;建立连接&lt;/li&gt;
-&lt;li&gt;接受请求–从网络中读取一条H
+&lt;li&gt;接受请求–从网络中读取一条HTTP请求报文&lt;/li&gt;
+&lt;li&gt;处理请求–对请求报文进行解释，并采取行动&lt;/li&gt;
+&lt;li&gt;构建响应–创建带有正确首部的HTTP响应报文&lt;/li&gt;
+&lt;li&gt;发送响应–将响应回送给客服端&lt;/li&gt;
+&lt;li&gt;记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;代理&quot;&gt;&lt;a href=&quot;#代理&quot; class=&quot;headerlink&quot; title=&quot;代理&quot;&gt;&lt;/a&gt;代理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。
     
     </summary>
     
@@ -260,11 +806,11 @@
   </entry>
   
   <entry>
-    <title>&#39;HTTP协议的学习三&#39;</title>
+    <title>HTTP协议的学习三</title>
     <link href="http://yoursite.com/2017/07/17/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
     <id>http://yoursite.com/2017/07/17/HTTP协议的学习三/</id>
     <published>2017-07-17T06:58:33.000Z</published>
-    <updated>2017-07-17T06:58:33.472Z</updated>
+    <updated>2017-08-07T02:00:09.035Z</updated>
     
     <summary type="html">
     
@@ -1140,631 +1686,6 @@
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
       <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo搭建博客</title>
-    <link href="http://yoursite.com/2017/06/23/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2017/06/23/hexo搭建博客/</id>
-    <published>2017-06-23T02:29:13.000Z</published>
-    <updated>2017-06-23T02:37:27.236Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
-<li>第一步、执行npm install hexo-cli -g 安装hexo</li>
-<li>第二步、找到你想写博客的文件夹，执行hexo init blog生成文件</li>
-<li>第三步、在生成的文件blog中执行hexo server，访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></li>
-</ul>
-<h2 id="安装和配置Next主题"><a href="#安装和配置Next主题" class="headerlink" title="安装和配置Next主题"></a>安装和配置Next主题</h2><ul>
-<li>在hexo目录下右键Git bash通过命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>next主题自动下载到themes目录下</li>
-<li>在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next<code>theme:next</code></li>
-<li><code>hexo s</code>验证主题配置是否成功，浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
-</ul>
-<h2 id="hexo书写博客"><a href="#hexo书写博客" class="headerlink" title="hexo书写博客"></a>hexo书写博客</h2><ul>
-<li>在source文件夹的_posts里面,通过<code>hexo new 博客标题</code>命令生成markdown文件</li>
-<li>文章写好后，执行<code>hexo generate</code>命令生成静态的html文件</li>
-</ul>
-<h2 id="发送博客到github上"><a href="#发送博客到github上" class="headerlink" title="发送博客到github上"></a>发送博客到github上</h2><ul>
-<li>我们把public里面的文件发布到github上面</li>
-<li>在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io</li>
-<li>用git发送到githoub是一定要发送到master分支</li>
-<li>不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确<a id="more"></a>
-<h2 id="next主题的配置和优化"><a href="#next主题的配置和优化" class="headerlink" title="next主题的配置和优化"></a>next主题的配置和优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div></pre></td><td class="code"><pre><div class="line"># ---------------------------------------------------------------</div><div class="line"># Site Information Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Place your favicon.ico to /source directory.</div><div class="line">favicon: /favicon.ico   #站标  可以放在hexo文件夹下的/source里</div><div class="line"></div><div class="line"># Set default keywords (Use a comma to separate)</div><div class="line">keywords: &quot;为学,willxue,willxue.top&quot;  #网站关键字</div><div class="line"></div><div class="line"># Set rss to false to disable feed link.</div><div class="line"># Leave rss as empty to use site&apos;s feed link.</div><div class="line"># Set rss to specific value if you have burned your feed already.</div><div class="line">rss:  #rss这里不设置 引文站点配置文件已经配置了 需要安装插件</div><div class="line"></div><div class="line"># Specify the date when the site was setup</div><div class="line">since: 1990  #网站时间 从xx开始 类似 1990-2016</div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Menu Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># When running hexo in a subdirectory (e.g. domain.tld/blog)</div><div class="line"># Remove leading slashes ( &quot;/archives&quot; -&gt; &quot;archives&quot; )</div><div class="line">menu: #菜单路径设置 如果hexo在二级目录放置要去掉/</div><div class="line">  home: /</div><div class="line">  archives: /archives #归档</div><div class="line">  tags: /tags #标签</div><div class="line">  categories: /categories  #分类</div><div class="line">  about: /about #关于我</div><div class="line">  commonweal: /404.html  #公益404</div><div class="line"></div><div class="line"></div><div class="line"># Enable/Disable menu icons.</div><div class="line"># Icon Mapping:</div><div class="line">#   Map a menu item to a specific FontAwesome icon name.</div><div class="line">#   Key is the name of menu item and value is the name of FontAwsome icon.</div><div class="line">#   When an question mask icon presenting up means that the item has no mapping icon.</div><div class="line">menu_icons:  #icon图标</div><div class="line">  enable: true</div><div class="line">  # Icon Mapping.</div><div class="line">  home: home</div><div class="line">  about: user</div><div class="line">  categories: th</div><div class="line">  tags: tags</div><div class="line">  archives: archive</div><div class="line">  commonweal: heartbeat</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Scheme Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Schemes  #next的三个scheme</div><div class="line">#scheme: Muse</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Sidebar Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"></div><div class="line"># Social links   #社交链接</div><div class="line">social:</div><div class="line">  GitHub:</div><div class="line">  Weibo:</div><div class="line">  Others:</div><div class="line"></div><div class="line"># Social Icons  #社交的图标</div><div class="line">social_icons:</div><div class="line">  enable: true</div><div class="line">  # Icon Mappings</div><div class="line">  GitHub: github</div><div class="line">  Twitter: twitter</div><div class="line">  Weibo: weibo</div><div class="line"></div><div class="line"></div><div class="line"># Sidebar Avatar</div><div class="line"># in theme directory(source/images): /images/avatar.jpg</div><div class="line"># in site  directory(source/uploads): /uploads/avatar.jpg</div><div class="line"># default : /images/default_avatar.jpg</div><div class="line">avatar: http://7xrz9n.com1.z0.glb.clouddn.com/logo.png #头像</div><div class="line"></div><div class="line"></div><div class="line"># TOC in the Sidebar  #文章自动显示目录</div><div class="line">toc:</div><div class="line">  enable: true</div><div class="line"></div><div class="line">  # Automatically add list number to toc.  #目录是否自动显示数字序号</div><div class="line">  number: false</div><div class="line"></div><div class="line"></div><div class="line"># Creative Commons 4.0 International License.</div><div class="line"># http://creativecommons.org/  #自由协议</div><div class="line"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</div><div class="line">#creative_commons: by-nc-sa</div><div class="line">#creative_commons:</div><div class="line"></div><div class="line">sidebar:</div><div class="line">  # Sidebar Position, available value: left | right</div><div class="line">  position: left</div><div class="line">  #position: right</div><div class="line"></div><div class="line">  # Sidebar Display, available value:</div><div class="line">  #  - post    expand on posts automatically. Default.</div><div class="line">  #  - always  expand for all pages automatically</div><div class="line">  #  - hide    expand only when click on the sidebar toggle icon.</div><div class="line">  #  - remove  Totally remove sidebar including sidebar toggle icon.</div><div class="line">  display: post</div><div class="line">  #display: always</div><div class="line">  #display: hide</div><div class="line">  #display: remove</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Misc Theme Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Custom Logo.</div><div class="line"># !!Only available for Default Scheme currently.</div><div class="line"># Options:</div><div class="line">#   enabled: [true/false] - Replace with specific image</div><div class="line">#   image: url-of-image   - Images&apos;s url</div><div class="line">custom_logo:</div><div class="line">  enabled: false</div><div class="line">  image:</div><div class="line"></div><div class="line"></div><div class="line"># Code Highlight theme</div><div class="line"># Available value:</div><div class="line">#    normal | night | night eighties | night blue | night bright</div><div class="line"># https://github.com/chriskempson/tomorrow-theme</div><div class="line">highlight_theme: night</div><div class="line"></div><div class="line"># Automatically scroll page to section which is under &lt;!-- more --&gt; mark.</div><div class="line">scroll_to_more: true</div><div class="line"></div><div class="line"># Automatically Excerpt</div><div class="line">auto_excerpt:</div><div class="line">  enable: false</div><div class="line">  length: 150</div><div class="line"></div><div class="line"># Use Lato font</div><div class="line">use_font_lato: true</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># ---------------------------------------------------------------</div><div class="line"># Third Party Services Settings</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># MathJax Support</div><div class="line">mathjax:</div><div class="line"></div><div class="line"></div><div class="line"># Swiftype Search API Key</div><div class="line">#swiftype_key:</div><div class="line"></div><div class="line"># Baidu Analytics ID</div><div class="line">#baidu_analytics:</div><div class="line"></div><div class="line"># Duoshuo ShortName</div><div class="line">duoshuo_shortname: imwillxue</div><div class="line"></div><div class="line"># Disqus</div><div class="line">#disqus_shortname:</div><div class="line"></div><div class="line"># Baidu Share</div><div class="line"># Available value:</div><div class="line">#    button | slide</div><div class="line">#baidushare:</div><div class="line">##  type: button</div><div class="line"></div><div class="line"># Share</div><div class="line">#jiathis:</div><div class="line">#add_this_id:</div><div class="line"></div><div class="line"># Share</div><div class="line">duoshuo_share: true</div><div class="line"></div><div class="line"># Google Webmaster tools verification setting</div><div class="line"># See: https://www.google.com/webmasters/</div><div class="line">#google_site_verification:</div><div class="line"></div><div class="line"></div><div class="line"># Google Analytics</div><div class="line">#google_analytics:</div><div class="line"></div><div class="line"># CNZZ count</div><div class="line">#cnzz_siteid:</div><div class="line"></div><div class="line"></div><div class="line"># Make duoshuo show UA</div><div class="line"># user_id must NOT be null when admin_enable is true!</div><div class="line"># you can visit http://dev.duoshuo.com get duoshuo user id.</div><div class="line">duoshuo_info:</div><div class="line">  ua_enable: true</div><div class="line">  admin_enable: true</div><div class="line">  user_id: 6262178932196377345</div><div class="line">  admin_nickname: 神</div><div class="line"></div><div class="line"></div><div class="line"># Facebook SDK Support.</div><div class="line"># https://github.com/iissnan/hexo-theme-next/pull/410</div><div class="line">facebook_sdk:</div><div class="line">  enable: false</div><div class="line">  app_id:       #&lt;app_id&gt;</div><div class="line">  fb_admin:     #&lt;user_id&gt;</div><div class="line">  like_button:  #true</div><div class="line">  webmaster:    #true</div><div class="line"></div><div class="line"></div><div class="line"># Show number of visitors to each article.</div><div class="line"># You can visit https://leancloud.cn get AppID and AppKey.</div><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: QImiFijLSOHYufsazlBVlwLg-gzGzoHsz</div><div class="line">  app_key: AMcYaNHy9Y5OdH42k0d4uSED</div><div class="line"></div><div class="line"></div><div class="line"># Tencent analytics ID</div><div class="line"># tencent_analytics:</div><div class="line"></div><div class="line"># Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO</div><div class="line">baidu_push: true</div><div class="line"></div><div class="line">## 文章末尾是否显示打赏按钮</div><div class="line">donate:</div><div class="line">  enable: true</div><div class="line">  text: Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！</div><div class="line">  alipay:</div><div class="line">  wechat:</div><div class="line"></div><div class="line"></div><div class="line">#! ---------------------------------------------------------------</div><div class="line">#! DO NOT EDIT THE FOLLOWING SETTINGS</div><div class="line">#! UNLESS YOU KNOW WHAT YOU ARE DOING</div><div class="line">#! ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Motion</div><div class="line">use_motion: true</div><div class="line"></div><div class="line"># Fancybox</div><div class="line">fancybox: true</div><div class="line"></div><div class="line"># Static files</div><div class="line">vendors: vendors</div><div class="line">css: css</div><div class="line">js: js</div><div class="line">images: images</div><div class="line"></div><div class="line"># Theme version</div><div class="line">version: 0.5.0</div></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;第一步、执行npm install hexo-cli -g 安装hexo&lt;/li&gt;
-&lt;li&gt;第二步、找到你想写博客的文件夹，执行hexo init blog生成文件&lt;/li&gt;
-&lt;li&gt;第三步、在生成的文件blog中执行hexo server，访问&lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;安装和配置Next主题&quot;&gt;&lt;a href=&quot;#安装和配置Next主题&quot; class=&quot;headerlink&quot; title=&quot;安装和配置Next主题&quot;&gt;&lt;/a&gt;安装和配置Next主题&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在hexo目录下右键Git bash通过命令&lt;code&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/code&gt;&lt;br&gt;next主题自动下载到themes目录下&lt;/li&gt;
-&lt;li&gt;在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next&lt;code&gt;theme:next&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hexo s&lt;/code&gt;验证主题配置是否成功，浏览器输入 &lt;a href=&quot;http://localhost:4000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;hexo书写博客&quot;&gt;&lt;a href=&quot;#hexo书写博客&quot; class=&quot;headerlink&quot; title=&quot;hexo书写博客&quot;&gt;&lt;/a&gt;hexo书写博客&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在source文件夹的_posts里面,通过&lt;code&gt;hexo new 博客标题&lt;/code&gt;命令生成markdown文件&lt;/li&gt;
-&lt;li&gt;文章写好后，执行&lt;code&gt;hexo generate&lt;/code&gt;命令生成静态的html文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;发送博客到github上&quot;&gt;&lt;a href=&quot;#发送博客到github上&quot; class=&quot;headerlink&quot; title=&quot;发送博客到github上&quot;&gt;&lt;/a&gt;发送博客到github上&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;我们把public里面的文件发布到github上面&lt;/li&gt;
-&lt;li&gt;在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io&lt;/li&gt;
-&lt;li&gt;用git发送到githoub是一定要发送到master分支&lt;/li&gt;
-&lt;li&gt;不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信页面开发的注意事项</title>
-    <link href="http://yoursite.com/2017/06/19/%E5%BE%AE%E4%BF%A1%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>http://yoursite.com/2017/06/19/微信页面开发的注意事项/</id>
-    <published>2017-06-19T12:21:27.000Z</published>
-    <updated>2017-07-10T06:34:46.451Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="页面搜索框"><a href="#页面搜索框" class="headerlink" title="页面搜索框"></a>页面搜索框</h2><ul>
-<li>为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边</li>
-<li><p>实现手机键盘显示搜索按钮<code>&lt;form&gt;</code>标签里面包含<code>&lt;input type=search&gt;</code>，<code>&lt;form&gt;</code>标签必须有<code>action</code>属性,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</div><div class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>vue绑定事件在<code>&lt;input&gt;</code>标签上,用监听键盘事件<code>@keydown</code>,要使用<code>e.preventDefault()</code>阻止默认事件触发。</p>
-<a id="more"></a>
-<h2 id="页面1px边框显示问题"><a href="#页面1px边框显示问题" class="headerlink" title="页面1px边框显示问题"></a>页面1px边框显示问题</h2></li>
-<li>使用淘宝的flexible.js插件转化为1rem.</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;页面搜索框&quot;&gt;&lt;a href=&quot;#页面搜索框&quot; class=&quot;headerlink&quot; title=&quot;页面搜索框&quot;&gt;&lt;/a&gt;页面搜索框&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;实现手机键盘显示搜索按钮&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;标签里面包含&lt;code&gt;&amp;lt;input type=search&amp;gt;&lt;/code&gt;，&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;标签必须有&lt;code&gt;action&lt;/code&gt;属性,&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;form action=&amp;quot;&amp;quot; class=&amp;quot;searchForm&amp;quot; v-show=&amp;quot;searchShow1&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;input type=&amp;quot;search&amp;quot; autocomplete=&amp;quot;off&amp;quot; placeholder=&amp;quot;搜索&amp;quot; class=&amp;quot;search&amp;quot; @focus=&amp;quot;searchFocus&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;i class=&amp;quot;iconfont icon-sousuo icoImg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/form&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;form action=&amp;quot;&amp;quot; class=&amp;quot;searchForm2&amp;quot; v-show=&amp;quot;searchShow2&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;input type=&amp;quot;search&amp;quot; autocomplete=&amp;quot;off&amp;quot; placeholder=&amp;quot;搜索&amp;quot; class=&amp;quot;search&amp;quot; v-model=&amp;quot;keywords2&amp;quot; @keydown=&amp;quot;searchVk($event)&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;i class=&amp;quot;iconfont icon-sousuo icoImg&amp;quot; @click=&amp;quot;getVkBusList()&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;btn&amp;quot; @click=&amp;quot;cancelSearch&amp;quot;&amp;gt;取消&amp;lt;/span&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/form&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;vue绑定事件在&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签上,用监听键盘事件&lt;code&gt;@keydown&lt;/code&gt;,要使用&lt;code&gt;e.preventDefault()&lt;/code&gt;阻止默认事件触发。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="微信" scheme="http://yoursite.com/categories/%E5%BE%AE%E4%BF%A1/"/>
-    
-      <category term="移动端" scheme="http://yoursite.com/categories/%E5%BE%AE%E4%BF%A1/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-    
-      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
-      <category term="移动端" scheme="http://yoursite.com/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm,browser-sync,gulp工具的学习</title>
-    <link href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/</id>
-    <published>2017-06-16T02:56:02.000Z</published>
-    <updated>2017-06-20T08:23:44.157Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
-<li>官网[<a href="https://www.npmjs.com" target="_blank" rel="external">https://www.npmjs.com</a>]</li>
-<li>node package manager</li>
-<li>命令:<ul>
-<li>初始化:<code>npm init</code></li>
-<li>安装指定包:<code>npm install jquery --save</code></li>
-<li>删除指定包:<code>npm remove jquery --save</code></li>
-<li>卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery</li>
-<li>下载安装package.json中dependencies属性对的文件:<code>npm install --production</code></li>
-</ul>
-</li>
-<li>npm的使用步骤<ul>
-<li>第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）</li>
-<li>第二步、执行npm init -y</li>
-<li>第三步、安装需要的js库 npm install –save jquery</li>
-</ul>
-</li>
-</ul>
-<h3 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h3><ul>
-<li>更改代码之后自动刷新浏览器</li>
-<li>需要使用npm进行全局安装:<code>npm install browser-sync -g</code>,-g表示安装到全局</li>
-<li>使用:<code>browser-sync start --server --files &quot;./index.html,app.css,./css/*.css,*.*&quot;</code></li>
-<li>–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。</li>
-</ul>
-<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>  <a href="http://www.gulpjs.com" target="_blank" rel="external">官网</a><br>  <a href="http://www.gulpjs.com.cn" target="_blank" rel="external">中文网</a></p>
-<ul>
-<li><p>前端自动化构建工具<br>js压缩,var x,xname，混淆<br>合并.<br>css压缩<br>html压压缩</p>
-</li>
-<li><p>grunt ,webpack…</p>
-</li>
-</ul>
-<h3 id="核心就5个方法"><a href="#核心就5个方法" class="headerlink" title="核心就5个方法"></a>核心就5个方法</h3><ul>
-<li>task,gulp中是一个个任务的形式来实现功能。<ul>
-<li>task(‘任务名’,function(){<br>…..<br>});</li>
-</ul>
-</li>
-<li>src<ul>
-<li>src(‘./*.js’)</li>
-</ul>
-</li>
-<li>dest(‘./minjs/‘)// 指定处理后的文件的输出路径.</li>
-<li>watch(‘./*.js’,[‘任务名1’,’任务名2’]);</li>
-<li>run(‘任务名’);//执行指定的任务.<a id="more"></a>
-<h3 id="gulp的安装"><a href="#gulp的安装" class="headerlink" title="gulp的安装"></a>gulp的安装</h3></li>
-<li>使用npm 进行安装</li>
-<li><code>npm install gulp-cli -g</code>;</li>
-</ul>
-<h3 id="gulp-使用"><a href="#gulp-使用" class="headerlink" title="gulp 使用"></a>gulp 使用</h3><h4 id="使用时还需要在项目中通过npm非全局安装gulp"><a href="#使用时还需要在项目中通过npm非全局安装gulp" class="headerlink" title="使用时还需要在项目中通过npm非全局安装gulp"></a>使用时还需要在项目中通过npm非全局安装gulp</h4><ul>
-<li><code>npm install gulp --save-dev</code><ul>
-<li>-dev安装在本地</li>
-<li>之所以在全局安装了一次还有在项目中安装，是为了保证gulp的版本的控制，每次使用的时候重新安装能控制gulp的版本</li>
-</ul>
-</li>
-</ul>
-<h4 id="还需要在当前项目根目录添加一个gulpfile-js文件来写具体的任务代码"><a href="#还需要在当前项目根目录添加一个gulpfile-js文件来写具体的任务代码" class="headerlink" title="还需要在当前项目根目录添加一个gulpfile.js文件来写具体的任务代码."></a>还需要在当前项目根目录添加一个gulpfile.js文件来写具体的任务代码.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line">// 得到gulp对象</div><div class="line">var gulp = require(&quot;gulp&quot;);</div><div class="line">//引入gulp-uglify插件 用来压缩js</div><div class="line">var uglify = require(&apos;gulp-uglify&apos;);</div><div class="line">//引入gulp-concat插件 用来合并代码 js,css都能合并</div><div class="line">var concat = require(&apos;gulp-concat&apos;);</div><div class="line">//引入gulp-cssnano插件 用来对css进行压缩</div><div class="line">var cssnano = require(&apos;gulp-cssnano&apos;);</div><div class="line">//引入gulp-htmlmin插件 用来对html代码进行压缩</div><div class="line">var htmlmin = require(&apos;gulp-htmlmin&apos;);</div><div class="line">//引入gulp-imagemin插件 对图片进行压缩</div><div class="line">var imagemin = require(&apos;gulp-imagemin&apos;);</div><div class="line">//引入gulp-spriter插件 合并成精灵图</div><div class="line">var spriter = require(&apos;gulp-spriter&apos;);</div><div class="line">&lt;!-- more --&gt;</div><div class="line">//创建js压缩任务</div><div class="line">gulp.task(&apos;script&apos;,function()&#123;</div><div class="line">  // 这里写任务具体需要做的事情.</div><div class="line">  // 2.匹配到app.js文件,如果使用多个规则，需要以数组的形式来书写第一个参数，数组中的每一个元素都是一个规则。</div><div class="line">  gulp.src([&apos;./app.js&apos;,&apos;./signIn.js&apos;])</div><div class="line">  //合并后生成的文件名</div><div class="line">  .pipe(concat(&apos;all.js&apos;))</div><div class="line">  //调用方法 压缩js</div><div class="line">  .pipe(uglify())</div><div class="line">  //将合格的js文件 输出到指定目录</div><div class="line">  .pipe(gulp.dest(&apos;./dist&apos;))</div><div class="line">&#125;);</div><div class="line">//创建css压缩任务</div><div class="line">gulp.task(&apos;style&apos;,function()&#123;</div><div class="line">   // 匹配css文件</div><div class="line">   gulp.src([&apos;./style.css&apos;,&apos;./signIn.css&apos;])</div><div class="line">   .pipe(concat(&apos;all.css&apos;)) // 需要指定一个名字，作为压缩后文件的文件名</div><div class="line">   .pipe(cssnano())</div><div class="line">   .pipe(gulp.dest(&apos;./dist&apos;))</div><div class="line">&#125;);</div><div class="line">//创建html压缩任务</div><div class="line">gulp.task(&apos;htmlmin&apos;,function()&#123;</div><div class="line">    gulp.src(&apos;./index.html&apos;)</div><div class="line">        .pipe(htmlmin(&#123;</div><div class="line">            //collapseWhitespace:清除空格</div><div class="line">            collapseWhitespace:true,</div><div class="line">            //collapseBooleanAttributes:省略布尔属性的值，</div><div class="line">            collapseBooleanAttributes:true,</div><div class="line">            //removeComments:清除html中注释的部分</div><div class="line">            removeComments:true,</div><div class="line">            //removeEmptyAttributes:清除所有的空属性</div><div class="line">            removeEmptyAttributes:true,</div><div class="line">            //removeSciptTypeAttributes:清除所有script标签中的type=&quot;text/javascript&quot;属性。</div><div class="line">            removeScriptTypeAttributes:true,</div><div class="line">            //removeStyleLinkTypeAttributes:清楚所有Link标签上的type属性</div><div class="line">            removeStyleLinkTypeAttributes:true,</div><div class="line">            //minifyJS:压缩html中的javascript代码。</div><div class="line">            minifyJS:true,</div><div class="line">            //minifyCSS:压缩html中的css代码</div><div class="line">            minifyCSS:true</div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(&apos;./dist&apos;));</div><div class="line">&#125;);</div><div class="line">//创建合并压缩方法</div><div class="line">gulp.task(&apos;concat&apos;,function()&#123;</div><div class="line">    // 匹配文件</div><div class="line">    gulp.src([&apos;./1.js&apos;,&apos;./2.js&apos;])</div><div class="line">        //调用合并方法 生成新的文件名</div><div class="line">        .pipe(concat(&apos;index.js&apos;))</div><div class="line">        //调用压缩方法</div><div class="line">        .pipe(uglify())</div><div class="line">        //输出到指定目录</div><div class="line">        .pipe(gulp.dest(&apos;./build&apos;));</div><div class="line">&#125;)</div><div class="line">//创建图片压缩方法</div><div class="line">gulp.task(&apos;imagemin&apos;,function()&#123;</div><div class="line">  //引入图片地址方法</div><div class="line">  gulp.src(&apos;./images/*&apos;)</div><div class="line">      //调用图片压缩</div><div class="line">      .pipe(imagemin())</div><div class="line">      //输出压缩后图片的存放地址</div><div class="line">      .pipe(gulp.dest(&apos;dist/images&apos;));</div><div class="line">&#125;);</div><div class="line">//创建合并精灵图任务</div><div class="line">gulp.task(&apos;spriter&apos;,function()&#123;</div><div class="line">  return gulp.src(&apos;./style.css&apos;)//原始的css文件地址</div><div class="line">             //调用spriter精灵图合并方法</div><div class="line">             .pipe(spriter(&#123;</div><div class="line">               sprite:&apos;test.png&apos;,//合并后图片的名字</div><div class="line">               slice:&apos;./slice&apos;,//原始小图片路径</div><div class="line">               outpath:&apos;build/tests&apos;//合并后的大图的地址</div><div class="line">             &#125;))</div><div class="line">             //合并精灵图后的css的文件地址</div><div class="line">             .pipe(gulp.dest(&apos;./build/css&apos;));</div><div class="line">&#125;)</div><div class="line">//创建监视任务</div><div class="line">gulp.task(&quot;watch&quot;,function()&#123;</div><div class="line">      //调用watch方法</div><div class="line">      //第一个参数是监视目标文件,第二个参数是执行的任务</div><div class="line">      gulp.watch([&apos;./app.js&apos;,&apos;./signIn.js&apos;],[&quot;script&quot;]);</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
-<ul>
-<li>调用方法直接在控制台输入<code>gulp 任务名</code></li>
-</ul>
-<h3 id="gulp监视文件的改变"><a href="#gulp监视文件的改变" class="headerlink" title="gulp监视文件的改变"></a>gulp监视文件的改变</h3><ul>
-<li>监视文件,当文件发生改变时,watch方法就会执行目标文件所绑定的事件</li>
-<li>使用：在cmd命令窗口直接调用gulp myWatch方法</li>
-<li>第一个参数是监视目标文件,第二个参数是执行的任务<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gulp.task(&quot;myWatch&quot;,function()&#123;</div><div class="line">    gulp.watch([&quot;./a.html&quot;,&quot;./b.html&quot;],function()&#123;</div><div class="line">        console.console.log()</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="gup-结合browsr-sync使用"><a href="#gup-结合browsr-sync使用" class="headerlink" title="gup 结合browsr-sync使用"></a>gup 结合browsr-sync使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//gulp结合browser-sync一起使用</div><div class="line">//当你改动html,css,js的时候 --&gt; 合并,压缩我们的html,js,css --&gt; browser-sync刷新浏览器</div><div class="line">//使用之前要在当前项目安装browser-sync 命令:npm install --save-dev browser-sync</div><div class="line">var browserSync = require(&apos;browser-sync&apos;) //得到browserSync对象</div><div class="line">//创建browserSync任务</div><div class="line">gulp.task(&quot;browserSync&quot;,function()&#123; // 静态服务器</div><div class="line">        //第一步先用gulp监视index.html,如果有改动就会执行htmlmin这个任务</div><div class="line">        gulp.watch([&quot;./index.html&quot;],[&quot;htmlmin&quot;]);</div><div class="line">        //第二步开启browserSyn,一旦html文件夹里面压缩的html有改动，就会刷新浏览器</div><div class="line">        browserSync(&#123;</div><div class="line">            server:&#123;</div><div class="line">                baseDir:&quot;./html&quot; //创建服务器的文件夹</div><div class="line">            &#125;,</div><div class="line">            files:[&quot;./html/index.html&quot;] //同步的html代码</div><div class="line">        &#125;);</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
-<h3 id="gulp的一些插件"><a href="#gulp的一些插件" class="headerlink" title="gulp的一些插件"></a>gulp的一些插件</h3><ul>
-<li>也是使用npm安装</li>
-<li>对js代码进行压缩 gulp-uglify</li>
-<li>对代码进行合并 gulp-concat</li>
-<li>对css进行压缩 gulp-cssnano</li>
-<li>对html进行压缩 gulp-htmlmin</li>
-<li>对图片进行压缩  gulp-imagemin</li>
-<li>合并精灵图  gulp-spriter</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; title=&quot;npm&quot;&gt;&lt;/a&gt;npm&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;官网[&lt;a href=&quot;https://www.npmjs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.npmjs.com&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;node package manager&lt;/li&gt;
-&lt;li&gt;命令:&lt;ul&gt;
-&lt;li&gt;初始化:&lt;code&gt;npm init&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;安装指定包:&lt;code&gt;npm install jquery --save&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;删除指定包:&lt;code&gt;npm remove jquery --save&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery&lt;/li&gt;
-&lt;li&gt;下载安装package.json中dependencies属性对的文件:&lt;code&gt;npm install --production&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;npm的使用步骤&lt;ul&gt;
-&lt;li&gt;第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）&lt;/li&gt;
-&lt;li&gt;第二步、执行npm init -y&lt;/li&gt;
-&lt;li&gt;第三步、安装需要的js库 npm install –save jquery&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;browser-sync&quot;&gt;&lt;a href=&quot;#browser-sync&quot; class=&quot;headerlink&quot; title=&quot;browser-sync&quot;&gt;&lt;/a&gt;browser-sync&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;更改代码之后自动刷新浏览器&lt;/li&gt;
-&lt;li&gt;需要使用npm进行全局安装:&lt;code&gt;npm install browser-sync -g&lt;/code&gt;,-g表示安装到全局&lt;/li&gt;
-&lt;li&gt;使用:&lt;code&gt;browser-sync start --server --files &amp;quot;./index.html,app.css,./css/*.css,*.*&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;gulp&quot;&gt;&lt;a href=&quot;#gulp&quot; class=&quot;headerlink&quot; title=&quot;gulp&quot;&gt;&lt;/a&gt;gulp&lt;/h2&gt;&lt;p&gt;  &lt;a href=&quot;http://www.gulpjs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;br&gt;  &lt;a href=&quot;http://www.gulpjs.com.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中文网&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;前端自动化构建工具&lt;br&gt;js压缩,var x,xname，混淆&lt;br&gt;合并.&lt;br&gt;css压缩&lt;br&gt;html压压缩&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;grunt ,webpack…&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;核心就5个方法&quot;&gt;&lt;a href=&quot;#核心就5个方法&quot; class=&quot;headerlink&quot; title=&quot;核心就5个方法&quot;&gt;&lt;/a&gt;核心就5个方法&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;task,gulp中是一个个任务的形式来实现功能。&lt;ul&gt;
-&lt;li&gt;task(‘任务名’,function(){&lt;br&gt;…..&lt;br&gt;});&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;src&lt;ul&gt;
-&lt;li&gt;src(‘./*.js’)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;dest(‘./minjs/‘)// 指定处理后的文件的输出路径.&lt;/li&gt;
-&lt;li&gt;watch(‘./*.js’,[‘任务名1’,’任务名2’]);&lt;/li&gt;
-&lt;li&gt;run(‘任务名’);//执行指定的任务.
-    
-    </summary>
-    
-      <category term="npm" scheme="http://yoursite.com/categories/npm/"/>
-    
-      <category term="browser-sync" scheme="http://yoursite.com/categories/npm/browser-sync/"/>
-    
-      <category term="gulp" scheme="http://yoursite.com/categories/npm/browser-sync/gulp/"/>
-    
-    
-      <category term="npm" scheme="http://yoursite.com/tags/npm/"/>
-    
-      <category term="browser-sync" scheme="http://yoursite.com/tags/browser-sync/"/>
-    
-      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
-    
-      <category term="前端自动化工具" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git的使用</title>
-    <link href="http://yoursite.com/2017/06/16/Git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2017/06/16/Git的使用/</id>
-    <published>2017-06-16T02:48:27.000Z</published>
-    <updated>2017-06-16T02:51:08.126Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h3><ul>
-<li>Git是一款源代码管理工具(版本控制工具)<ul>
-<li>我们写的代码需要使用Git进行管理。</li>
-</ul>
-</li>
-</ul>
-<h3 id="分布式，集中式版本管理工具"><a href="#分布式，集中式版本管理工具" class="headerlink" title="分布式，集中式版本管理工具"></a>分布式，集中式版本管理工具</h3><ul>
-<li>git属于分布式</li>
-<li>svn集中式</li>
-</ul>
-<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><h3 id="git初始化一个仓库"><a href="#git初始化一个仓库" class="headerlink" title="git初始化一个仓库"></a>git初始化一个仓库</h3><ul>
-<li>创建一个.git隐藏目录</li>
-<li>命令:<code>git init</code>;<ul>
-<li>想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.</li>
-<li>一般是在项目的根目录执行这个命令.</li>
-</ul>
-</li>
-</ul>
-<h3 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h3><ul>
-<li>配置用户名 : <code>git config user.name &quot;testName&quot;</code></li>
-<li>配置邮箱   : <code>git config user.email &quot;test@sina.com&quot;</code></li>
-<li>查看配置信息: <code>git config --list</code></li>
-</ul>
-<h3 id="把代码提交到仓库中"><a href="#把代码提交到仓库中" class="headerlink" title="把代码提交到仓库中"></a>把代码提交到仓库中</h3><ul>
-<li><p>1.先把代码添加到暂存区(就相当于放到仓库门口)</p>
-<ul>
-<li>命令:<code>git add 文件路径</code></li>
-<li>示例:<code>git add ./reademe.md</code></li>
-<li>可以使用<code>git add .</code>这个命令，批量把当前目录下所有修改过的文件添加到暂存区。</li>
-</ul>
-</li>
-<li><p>2.把暂存区的文件提交仓库里</p>
-<ul>
-<li>命令: <code>git commit -m &quot;注释&quot;</code></li>
-<li>示例: <code>git commit -m &quot;我们添加了一个新的功能&quot;</code></li>
-<li>-m 表示指定一个字符串，作为提交的说明(相当于注释);</li>
-</ul>
-</li>
-<li><p>合并add 与commit 命令</p>
-<ul>
-<li><code>git commit -a -m &quot;这是使用合并添加与提交的操作&quot;</code>;</li>
-<li>这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)</li>
-</ul>
-</li>
-</ul>
-<h3 id="查看工作区状态"><a href="#查看工作区状态" class="headerlink" title="查看工作区状态"></a>查看工作区状态</h3><ul>
-<li>命令:<code>git status</code></li>
-</ul>
-<h3 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h3><ul>
-<li>在项目中有一些文件是不需要提交的,我们需要把它忽略掉</li>
-<li>需要在.git文件夹所在目录新建一个名为.gitignore的文件<br>然后在这个文件中写上需要被忽略的文件的路径。<br>示例: /css/a.css<pre><code>: /css/*.css
-: /a.html
-</code></pre></li>
-</ul>
-<h3 id="对比文件差异"><a href="#对比文件差异" class="headerlink" title="对比文件差异"></a>对比文件差异</h3><ul>
-<li>命令: <code>git diff</code><ul>
-<li>用来比较暂存区文件内容与工作区文件内容的区别</li>
-<li>如果暂存区没有文件，就会将工作与代码与最近一次提交对比</li>
-</ul>
-</li>
-<li>命令：<code>git diff --cached</code>  比较暂存区的文件和仓库中文件的区别</li>
-<li>对比之前某两次提交的文件的差异<ul>
-<li>命令:<code>git diff [版本号1] [版本号2] [想比较的文件路径]</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><ul>
-<li>命令:<code>git log</code>,可以查看每一次提交的日志</li>
-<li>命令:<code>git log --oneline</code> 表示使用简洁的形式输出提交日志</li>
-</ul>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
-<li>命令:<code>git reset --hard Head~1</code><ul>
-<li>这是将代码回退到上上一次提交时的状态</li>
-</ul>
-</li>
-<li>命令:<code>git reset --hard Head~2</code><ul>
-<li>回退到上上上次</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard Head~0</code></p>
-<ul>
-<li>回退到上次提交时的状态,~0可以省略</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard 版本号</code></p>
-<ul>
-<li>通过每次提交时生成的版本号来回退版本</li>
-</ul>
-</li>
-<li><p>通过<code>git reflog</code>命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。</p>
-<a id="more"></a>
-<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3></li>
-<li>命令:<code>git branch [分支名]</code><ul>
-<li>创建一个新分支</li>
-</ul>
-</li>
-<li>命令:<code>git branch</code><ul>
-<li>查看当前所有的分支</li>
-</ul>
-</li>
-</ul>
-<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><ul>
-<li>命令:<code>git checkout [分支名]</code><ul>
-<li>切换分支后可以在切换后的分支中进行正常的操作</li>
-</ul>
-</li>
-</ul>
-<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><ul>
-<li>命令:<code>git merge [分支名]</code><ul>
-<li>git会将指定的分支合并到当前分支.</li>
-</ul>
-</li>
-</ul>
-<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><ul>
-<li>命令:<code>git branch -d [分支名]</code><ul>
-<li>删除指定分支，-d参数表示要执行删除操作</li>
-</ul>
-</li>
-</ul>
-<h3 id="git提交中的冲突"><a href="#git提交中的冲突" class="headerlink" title="git提交中的冲突"></a>git提交中的冲突</h3><ul>
-<li>如果git不能自动合并分支，就会有冲突，我们需要手动解决冲突，然后再次提交</li>
-</ul>
-<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><h3 id="github与git"><a href="#github与git" class="headerlink" title="github与git"></a>github与git</h3><ul>
-<li>git 版本管理工具</li>
-<li>github 就是一个网站，只是这个网站提供git服务器的功能</li>
-</ul>
-<h3 id="上传代码到git服务器-push"><a href="#上传代码到git服务器-push" class="headerlink" title="上传代码到git服务器(push)"></a>上传代码到git服务器(push)</h3><ul>
-<li><p>命令:<code>git push [远程服务器地址] [远程服务器的分支]</code></p>
-<ul>
-<li>示例:<code>git push https://github.com/huoqishi/test002.git master</code></li>
-</ul>
-</li>
-<li><p>上传时可以使用一些简化的命令</p>
-<ul>
-<li>将远程服务器地址写成变量的形式<ul>
-<li><code>git remote add [变量名]  [远程服务器地址]</code></li>
-<li>示例:<code>git remote add origin https://github.com/huoqishi/test002.git</code></li>
-<li>这样之后就可以直接使用origin来代替git push 后面写的地址了<br><code>git push origin master</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>还可以尽一步简化<ul>
-<li>在push时加上-u参数，就会默认建立本地当前分支与远程指定分支的关联,下一次push时就不需要输入分支名了<code>git push origin</code>;</li>
-</ul>
-</li>
-</ul>
-<h2 id="git使用ssh方式上传代码与github"><a href="#git使用ssh方式上传代码与github" class="headerlink" title="git使用ssh方式上传代码与github"></a>git使用ssh方式上传代码与github</h2><ul>
-<li>git生成公钥和私钥<ul>
-<li>命令:<code>ssh-keygen -t rsa</code>生成的公钥与私钥文件会在当用户目录的.ssh目录下.</li>
-<li>找到生成的ssh钥匙文件的地址：C盘/用户/用户名/.ssh/id_rsa.pub 找到公钥</li>
-<li>在github右上角 –&gt; setting –&gt; ssh设置选项</li>
-<li>把我们的公钥拷贝到github当中</li>
-<li>以后push代码仓库的时候，使用ssh协议，也就是去使用git开头的那个链接</li>
-</ul>
-</li>
-</ul>
-<h3 id="拉取github服务器上的代码及多人协作冲突处理"><a href="#拉取github服务器上的代码及多人协作冲突处理" class="headerlink" title="拉取github服务器上的代码及多人协作冲突处理"></a>拉取github服务器上的代码及多人协作冲突处理</h3><ul>
-<li>从服务器拉取代码的方式<ul>
-<li>方式一:’git clone git url’</li>
-<li>方式二:’git init’<pre><code>+ &apos;git pull url&apos;
-</code></pre></li>
-</ul>
-</li>
-<li>git pull和git clone这二种拉取方式的区别：<ul>
-<li>用git pull的话默认没有设置origin这个变量，必须自己手动设置(git remote add …..),而用了git clone则不需要了，默认origin这个变量就存在了</li>
-</ul>
-</li>
-</ul>
-<h3 id="把代码push到服务器时需要先pull一下"><a href="#把代码push到服务器时需要先pull一下" class="headerlink" title="把代码push到服务器时需要先pull一下"></a>把代码push到服务器时需要先pull一下</h3><ul>
-<li>在pull之后如果远程的代码与本地的代码有冲突，git会先自动合并冲突，如果不能自动合并，就必需我们手动去处理冲突。</li>
-<li>解决拒绝提交代码<ul>
-<li>执行git pull origin master</li>
-<li>手动更改代码，解决冲突</li>
-<li>执行:’git add’</li>
-<li>执行:’git commit</li>
-<li>执行:’git pull origin master’</li>
-<li>执行:’git push origin master’</li>
-</ul>
-</li>
-<li>如何避免尽量不会出现冲突？ <ul>
-<li>在每次push之前执行一次git pull</li>
-<li>git pull的作用：<ul>
-<li>更新本地仓库至最新改动，相当于先从远程服务器获取最新代码，接着进行自动合并(merge)，如果有冲突会提示你冲突，让你在本地手动解决掉冲突之后，再推送到服务器上面</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="多人共同使用同一个github服务器仓库"><a href="#多人共同使用同一个github服务器仓库" class="headerlink" title="多人共同使用同一个github服务器仓库"></a>多人共同使用同一个github服务器仓库</h3><ul>
-<li>第一步、建立好一个github上面的仓库</li>
-<li>第二步、点击setting</li>
-<li>第三步、点击add collaborator，在里面找到你的小伙伴的用户名</li>
-<li>第四步、生成一个邀请链接</li>
-<li>第五步、把这个链接发给你的小伙伴，他同意之后就可以把自己写的代码提交到这个仓库了</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;什么是Git&quot;&gt;&lt;a href=&quot;#什么是Git&quot; class=&quot;headerlink&quot; title=&quot;什么是Git?&quot;&gt;&lt;/a&gt;什么是Git?&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Git是一款源代码管理工具(版本控制工具)&lt;ul&gt;
-&lt;li&gt;我们写的代码需要使用Git进行管理。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;分布式，集中式版本管理工具&quot;&gt;&lt;a href=&quot;#分布式，集中式版本管理工具&quot; class=&quot;headerlink&quot; title=&quot;分布式，集中式版本管理工具&quot;&gt;&lt;/a&gt;分布式，集中式版本管理工具&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;git属于分布式&lt;/li&gt;
-&lt;li&gt;svn集中式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;git安装&quot;&gt;&lt;a href=&quot;#git安装&quot; class=&quot;headerlink&quot; title=&quot;git安装&quot;&gt;&lt;/a&gt;git安装&lt;/h3&gt;&lt;h3 id=&quot;git初始化一个仓库&quot;&gt;&lt;a href=&quot;#git初始化一个仓库&quot; class=&quot;headerlink&quot; title=&quot;git初始化一个仓库&quot;&gt;&lt;/a&gt;git初始化一个仓库&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;创建一个.git隐藏目录&lt;/li&gt;
-&lt;li&gt;命令:&lt;code&gt;git init&lt;/code&gt;;&lt;ul&gt;
-&lt;li&gt;想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.&lt;/li&gt;
-&lt;li&gt;一般是在项目的根目录执行这个命令.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;自报家门&quot;&gt;&lt;a href=&quot;#自报家门&quot; class=&quot;headerlink&quot; title=&quot;自报家门&quot;&gt;&lt;/a&gt;自报家门&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;配置用户名 : &lt;code&gt;git config user.name &amp;quot;testName&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;配置邮箱   : &lt;code&gt;git config user.email &amp;quot;test@sina.com&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;查看配置信息: &lt;code&gt;git config --list&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;把代码提交到仓库中&quot;&gt;&lt;a href=&quot;#把代码提交到仓库中&quot; class=&quot;headerlink&quot; title=&quot;把代码提交到仓库中&quot;&gt;&lt;/a&gt;把代码提交到仓库中&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;1.先把代码添加到暂存区(就相当于放到仓库门口)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;命令:&lt;code&gt;git add 文件路径&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;示例:&lt;code&gt;git add ./reademe.md&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;可以使用&lt;code&gt;git add .&lt;/code&gt;这个命令，批量把当前目录下所有修改过的文件添加到暂存区。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;2.把暂存区的文件提交仓库里&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;命令: &lt;code&gt;git commit -m &amp;quot;注释&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;示例: &lt;code&gt;git commit -m &amp;quot;我们添加了一个新的功能&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;-m 表示指定一个字符串，作为提交的说明(相当于注释);&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;合并add 与commit 命令&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git commit -a -m &amp;quot;这是使用合并添加与提交的操作&amp;quot;&lt;/code&gt;;&lt;/li&gt;
-&lt;li&gt;这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;查看工作区状态&quot;&gt;&lt;a href=&quot;#查看工作区状态&quot; class=&quot;headerlink&quot; title=&quot;查看工作区状态&quot;&gt;&lt;/a&gt;查看工作区状态&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;命令:&lt;code&gt;git status&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;添加忽略文件&quot;&gt;&lt;a href=&quot;#添加忽略文件&quot; class=&quot;headerlink&quot; title=&quot;添加忽略文件&quot;&gt;&lt;/a&gt;添加忽略文件&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;在项目中有一些文件是不需要提交的,我们需要把它忽略掉&lt;/li&gt;
-&lt;li&gt;需要在.git文件夹所在目录新建一个名为.gitignore的文件&lt;br&gt;然后在这个文件中写上需要被忽略的文件的路径。&lt;br&gt;示例: /css/a.css&lt;pre&gt;&lt;code&gt;: /css/*.css
-: /a.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;对比文件差异&quot;&gt;&lt;a href=&quot;#对比文件差异&quot; class=&quot;headerlink&quot; title=&quot;对比文件差异&quot;&gt;&lt;/a&gt;对比文件差异&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;命令: &lt;code&gt;git diff&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;用来比较暂存区文件内容与工作区文件内容的区别&lt;/li&gt;
-&lt;li&gt;如果暂存区没有文件，就会将工作与代码与最近一次提交对比&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;命令：&lt;code&gt;git diff --cached&lt;/code&gt;  比较暂存区的文件和仓库中文件的区别&lt;/li&gt;
-&lt;li&gt;对比之前某两次提交的文件的差异&lt;ul&gt;
-&lt;li&gt;命令:&lt;code&gt;git diff [版本号1] [版本号2] [想比较的文件路径]&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;查看日志&quot;&gt;&lt;a href=&quot;#查看日志&quot; class=&quot;headerlink&quot; title=&quot;查看日志&quot;&gt;&lt;/a&gt;查看日志&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;命令:&lt;code&gt;git log&lt;/code&gt;,可以查看每一次提交的日志&lt;/li&gt;
-&lt;li&gt;命令:&lt;code&gt;git log --oneline&lt;/code&gt; 表示使用简洁的形式输出提交日志&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;版本回退&quot;&gt;&lt;a href=&quot;#版本回退&quot; class=&quot;headerlink&quot; title=&quot;版本回退&quot;&gt;&lt;/a&gt;版本回退&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;命令:&lt;code&gt;git reset --hard Head~1&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;这是将代码回退到上上一次提交时的状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;命令:&lt;code&gt;git reset --hard Head~2&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;回退到上上上次&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;命令:&lt;code&gt;git reset --hard Head~0&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;回退到上次提交时的状态,~0可以省略&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;命令:&lt;code&gt;git reset --hard 版本号&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;通过每次提交时生成的版本号来回退版本&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;通过&lt;code&gt;git reflog&lt;/code&gt;命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="http://yoursite.com/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-      <category term="代码提交" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vuex学习</title>
-    <link href="http://yoursite.com/2017/06/05/vuex%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2017/06/05/vuex学习/</id>
-    <published>2017-06-05T14:29:17.000Z</published>
-    <updated>2017-07-10T08:48:34.898Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
-<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。</li>
-</ul>
-<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2><ul>
-<li>vuex的状态自管理应用包含以下几个部分<ul>
-<li>state，驱动应用的数据源;</li>
-<li>view，以声明方式将state映射到视图； </li>
-<li>actions，响应在view上的用户输入导致的状态变化<a id="more"></a>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="State"><a href="#State" class="headerlink" title="State"></a>State</h2><ul>
-<li>每个应用将仅仅包含一个 store 实例,用来存储状态</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;理解Vuex&quot;&gt;&lt;a href=&quot;#理解Vuex&quot; class=&quot;headerlink&quot; title=&quot;理解Vuex&quot;&gt;&lt;/a&gt;理解Vuex&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;状态管理模式&quot;&gt;&lt;a href=&quot;#状态管理模式&quot; class=&quot;headerlink&quot; title=&quot;状态管理模式&quot;&gt;&lt;/a&gt;状态管理模式&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;vuex的状态自管理应用包含以下几个部分&lt;ul&gt;
-&lt;li&gt;state，驱动应用的数据源;&lt;/li&gt;
-&lt;li&gt;view，以声明方式将state映射到视图； &lt;/li&gt;
-&lt;li&gt;actions，响应在view上的用户输入导致的状态变化
-    
-    </summary>
-    
-      <category term="Vuex" scheme="http://yoursite.com/categories/Vuex/"/>
-    
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
-    
-      <category term="Vuex" scheme="http://yoursite.com/tags/Vuex/"/>
-    
-      <category term="状态管理" scheme="http://yoursite.com/tags/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扎实基础JS一</title>
-    <link href="http://yoursite.com/2017/06/03/%E6%89%8E%E5%AE%9E%E5%9F%BA%E7%A1%80JS%E4%B8%80/"/>
-    <id>http://yoursite.com/2017/06/03/扎实基础JS一/</id>
-    <published>2017-06-03T08:08:26.000Z</published>
-    <updated>2017-06-03T08:08:26.462Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   

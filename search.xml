@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[国际化——Vue-i18n的使用]]></title>
+    <url>%2F2017%2F08%2F12%2F%E5%9B%BD%E9%99%85%E5%8C%96%E2%80%94%E2%80%94Vue-i18n%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Vue-i18n安装 npm install vue-i18n --save Vue-i18n的使用 在入口main.js文件配置使用 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849import Vue from &apos;vue&apos;import VueI18n from &apos;vue-i18n&apos;Vue.use(VueI18n);/*---------基本使用-----------*/const i18n = new VueI18n(&#123; locale: &apos;CN&apos;, // 语言标识 messages : &#123; en: &#123; message: &#123; hello: &apos;hello world&apos; &#125; &#125;, cn: &#123; message: &#123; hello: &apos;你好、世界&apos; &#125; &#125; &#125;&#125;)/*---------使用语言包-----------*/const i18n = new VueI18n(&#123; locale: &apos;CN&apos;, // 语言标识 messages: &#123; &apos;CN&apos;: require(&apos;./assets/common/lang/cn&apos;), // 中文语言包 &apos;EN&apos;: require(&apos;./assets/common/lang/en&apos;) // 英文语言包 &#125;,&#125;)/*---------语言包内部语法star-----------*/export const message = &#123; language:&apos;语言&apos;, hello: &apos;你好,世界&apos;&#125;/*---------语言包内部语法end-----------*//*---------挂载全局使用-----------*/new Vue(&#123; el: &apos;#app&apos;, i18n, router, template: &apos;&lt;App/&gt;&apos;, components: &#123; App &#125;&#125;)/*---------vue组件模板的使用-----------*/ &lt;template&gt; &lt;p&gt;&#123;&#123; $t(&quot;message.hello&quot;) &#125;&#125;&lt;/p&gt; &lt;/template&gt; 单独组件的使用 在单个vue组件中使用，要用到i18n自定义块，需要配置webpack文件webpack.base.conf.js 12345678910111213141516171819module.exports = &#123; // ... module: &#123; rules: [ &#123; test: /\.vue$/, loader: &apos;vue-loader&apos;, options: &#123; loaders: &#123; // you need to specify `i18n` loaders key with `vue-i18n-loader` (https://github.com/kazupon/vue-i18n-loader) i18n: &apos;@kazupon/vue-i18n-loader&apos; &#125; &#125; &#125;, // ... ] &#125;, // ...&#125; 示例 123456789101112131415161718192021222324252627282930313233&lt;i18n&gt;&#123; &quot;en&quot;: &#123; &quot;hello&quot;: &quot;hello world!&quot; &#125;, &quot;ja&quot;: &#123; &quot;hello&quot;: &quot;你好,世界！&quot; &#125;&#125;&lt;/i18n&gt;&lt;template&gt; &lt;div id=&quot;app&quot;&gt; &lt;label for=&quot;locale&quot;&gt;locale&lt;/label&gt; &lt;select v-model=&quot;locale&quot;&gt; &lt;option&gt;en&lt;/option&gt; &lt;option&gt;ja&lt;/option&gt; &lt;/select&gt; &lt;p&gt;message: &#123;&#123; $t(&apos;hello&apos;) &#125;&#125;&lt;/p&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt;export default &#123; name: &apos;app&apos;, data () &#123; return &#123; locale: &apos;en&apos; &#125; &#125;, watch: &#123; locale (val) &#123; this.$i18n.locale = val &#125; &#125;&#125;&lt;/script&gt;]]></content>
+      <categories>
+        <category>国际化</category>
+        <category>Vue-i18</category>
+      </categories>
+      <tags>
+        <tag>Vue-i18</tag>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[深入理解ES6六]]></title>
+    <url>%2F2017%2F08%2F06%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E5%85%AD%2F</url>
+    <content type="text"><![CDATA[Symbol ES6新增的数据类型Symbol 创建Symbol：通过去全局的Symbol函数创建一个Symbol，Symbol函数接受一个可选参数，用于添加一段文本描述即将创建的Symbol,方便阅读和调试Symbol程序 12345678let firstName = Symbol(&apos;first name&apos;); let person = &#123;&#125;; person[firstName] = &apos;Nicholas&apos;; console.log(&apos;first name&apos; in person); //false console.log(person[firstName]); //&apos;Nicholas&apos; console.log(firstName); //&apos;Symbol(first name)&apos; ES6扩展了typeof操作符，支持返回Symbol,可以用typeof来检测变量是否为Symbol类型. Symbol共享体系 ES6提供了一个可以随时访问的全局Symbol注册表,如果要创建一个可共享的Symbol,要使用Symbol.for()方法，该方法只接受一个参数，就是即将创建的Symbol的字符串标识符 1234567let uid = Symbol.for(&apos;uid&apos;);let object = &#123;&#125;;object[uid]=&apos;12345&apos;;console.log(ojbect[uid]);console.log(uid); Symbol.for()方法首先在全局Symbol注册表中搜索键为’uid’的Symbol是否存在，如果存在，直接返回已有的Symbol；否则创建一个新的Symbol，并使用这个键在Symbol全局注册表中注册，随即返回新创建的Symbol 可以使用Symbol.keyFor()方法在Symbol全局注册表中检索与Symbol有关的键12345let uid = Symbol.for(&apos;uid&apos;);console.log(Symbol.keyFor(uid)); //&apos;uid&apos;let uid3 = Symbol(&apos;uid&apos;);console.log(Symbol.keyFor(uid3)) //undefined Symbol属性检索 ES6中新增Object.getOwnPropertySymbols()方法来检索对象中的Symbol属性，返回值是一个包含所有Symbol自由属性的数组123456789let uid = Symbol.for(&apos;uid&apos;);let object = &#123; [uid]: &apos;12345&apos;&#125;;let symbols = object.getOwnPropertySymbols(object);console.log(symbols.length); //1console.log(symbols[0]); //&apos;Symbol(uid)&apos;console.log(object[symbols[0]]) //&apos;12345&apos;]]></content>
+      <categories>
+        <category>ES6</category>
+        <category>Symbol</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+        <tag>Symbol</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[深入理解ES6五]]></title>
+    <url>%2F2017%2F08%2F06%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%BA%94%2F</url>
+    <content type="text"><![CDATA[对象解构 对象解构的语法：在赋值操作符(=)左边放置一个对象字面量 1234567let node = &#123; type:&apos;Indet&apos;, name:&apos;noo&apos;&#125;let &#123; type, name&#125; = node;console.log(type);console.log(name); 对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。 12345678910let node = &#123; type:&apos;Indet&apos;, name:&apos;noo&apos;&#125;, type = &apos;Literal&apos;, name = &apos;sss&apos;; (&#123; type, name &#125; = node); console.log(type); //&apos;Indet&apos; console.log(name); //&apos;noo&apos; 函数中也可以传入解构表达式 123456789101112131415let node = &#123; type:&apos;Indet&apos;, name:&apos;noo&apos;&#125;, type = &apos;Literal&apos;, name = &apos;sss&apos;; function outPut(value) &#123; console.log(value === node); &#125; outPut(&#123; type, name &#125; = node); console.log(type); //&apos;Indet&apos; console.log(name); //&apos;noo&apos; 解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。 123456789let node = &#123; type:&apos;Indet&apos;, name:&apos;noo&apos;&#125;;let &#123; type, name, value = true&#125; = node;console.log(type); //&apos;Indet&apos;console.log(name); //&apos;noo&apos;console.log(value); //true 为非同名局部变量赋值 123456789let node = &#123; type:&apos;Indet&apos;, name:&apos;noo&apos;&#125;;// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中let &#123; type:localType, name:localName&#125; = node;console.log(localType); //&apos;Indet&apos;console.log(localName); //&apos;noo&apos; 嵌套对象解构 123456789101112131415161718let node = &#123; type:&apos;Identifier&apos;, name:&apos;noo&apos;, loc: &#123; start: &#123; line: 1, column:1 &#125;, end: &#123; line: 1, column: 4 &#125; &#125;&#125;let &#123; loc: &#123;start &#125;&#125; = node;console.log(start.line); //1console.log(start.column); //1 数组解构 数组解构语法：使用数组字面量，解构操作全部在数组内完成 1234let colors = [&apos;red&apos;, &apos;grren&apos;, &apos;blue&apos;];let [first, second] = colors;console.log(first); //&apos;red&apos;console.log(second); //&apos;grren&apos; 数组解构赋值 1234567let colors = [&apos;red&apos;, &apos;grren&apos;, &apos;blue&apos;], first = &apos;111&apos;, second = &apos;222&apos;;[first,second] = colors;console.log(first);console.log(second);]]></content>
+      <categories>
+        <category>ES6</category>
+        <category>解构</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+        <tag>解构</tag>
+        <tag>解构赋值</tag>
+        <tag>对象解构</tag>
+        <tag>数组解构</tag>
+        <tag>不定元素</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[深入理解ES6四]]></title>
+    <url>%2F2017%2F08%2F06%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E5%9B%9B%2F</url>
+    <content type="text"><![CDATA[ES6规范清晰的定义了对象的类别 普通对象 具有JavaScript对象所有的默认内部行为 特异对象 具有某些与默认行为不符的内部行为 标准对象 ES6中规范定义的对象 内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象 对象字面量语法的扩展 属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性 123456function Person(name,age) &#123; reutrn &#123; name, age &#125;&#125; 对象方法的简写语法：消除了冒号和关键字function,与传统对象方法的区别是简写方法可以使用super关键字 123456let person = &#123; name:&apos;tgb&apos;, sayName() &#123; console.log(this.name); &#125;&#125; 可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的 1234567let suffix = &apos;name&apos;let person = &#123; [&apos;first&apos;+suffix]: &apos;Nicholas&apos;, [&apos;last&apos;+suffix]:&apos;Zakas&apos;&#125;console.log(person[&apos;first name&apos;]);console.log(person[&apos;last name&apos;]); ES6新增方法 Object.is()方法：这个方法接受两个参数，如果两个参数的类型相同且具有相同的值，则返回true。用来弥补全等运算符的不准确运算。 12345console.log(+0 === -0) //true;console.log(Object.is(+0,-0)); //falseconsole.log(NaN === Nan); //falseconsole.log(Object.is(NaN,NaN)) //true Object.assign()方法：混入方法，这个方法接受一个对象和任意数量的源对象，最终返回接受对象 123456789101112let obj = &#123;&#125;;Object.assign(obj, &#123; type:&apos;js&apos;; name:&apos;file.js&apos; &#125;, &#123; type:&apos;css //如果多个源对象具有同名的属性则排位靠后的源对象会覆盖排位靠前的 &#125;)console.log(obj.type); //&apos;css&apos;console.log(obj.name); //&apos;file.js&apos; 增强对象原型 ES6新增Object.setPrototypeOf()方法：这个方法可以改变任意指定对象的原型，它接受两个参数；被改变的对象原型的对象以及要替代第一个参数原型的对象 123456789101112131415let person = &#123; getGreeting() &#123; return &apos;Hello&apos;; &#125;&#125;;let dog = &#123; getGreeting() &#123; return &apos;Woof&apos; &#125;&#125;let friend = Object.create(person);console.log(Object.getPrototypeOf(firend)===person); //trueObject.setPrototypeOf(friend,dog);console.log(Object.getPrototypeOf(friend)===dog); //true 简化原型访问的Super引用 Super引用相当于指向对象原型的指针，就是Object.getPrototypeOf(this)的值]]></content>
+      <categories>
+        <category>ES6</category>
+        <category>对象</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+        <tag>对象</tag>
+        <tag>对象字面量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[深入理解ES6三]]></title>
+    <url>%2F2017%2F08%2F06%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%89%2F</url>
+    <content type="text"><![CDATA[参数 ES6简化了为形式参数提供默认值的过程 123function makeRequest(rul,timeout = 2000,callback) &#123; //函数其余部分&#125; 上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值 在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。 123456function mix(first,second=&apos;b&apos;) &#123; console.log(arguments.length); // 1 之传入了一个参数 console.log(first === arguments[0]) // true console.log(second === aruments[1]) // false //arguments[1]是undefined&#125;mix(&apos;a&apos;); 默认参数表达式 ES6中可以使用先定义的参数作为后定义参数的默认值，但是后定义的参数不能作为先定义参数的默认值。 默认参数也存在临时死区，定义参数时会为每个参数创建一个新的标识符绑定，该绑定在初始化之前不可被引用，如果访问会导致程序错误 不定参数 在函数的命名参数钱添加三个点(…)就表明这是一个不定参数，该参数为一个数组，包含着自它之后出入的所有参数，通过这个数组名即可逐一访问里面的参数。 不定参数的使用限制：1.每个函数最多只能声明一个不定参数，而且一定要放在所有参数的末尾。2.不定参数不能用于对象字面量setter中 arguments对象包含不定参数，无论是否使用不定参数，argumetns对象总是包含所有传入函数的参数 展开运算符- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数 - 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。 123456// ES5使用let values = [25,50,75,100];console.log(Math.max.apply(Math,values)); //100// Es6使用console.log(Math.max(...values)); //100 判断函数被调用的方法 在ES5中判断一个函数是否通过new关键字被调用(或者说，判断该函数是否作为构造函数被调用)，最常使用的是instanceof instanceof语法：Object instanceof constructor; instanceof运算符用来检测constructor.prototype是否存在于参数Object的原型链上 ES6引入了new.target这个元属性，元属性市值非对象的属性，其可以提供非对象目标的补充信息，当调用函数的[construct]方法时，new.target被赋值new操作符的目标，通常是新创建的对象实例。如果用[[call]]方法，则new.target的值为undefined。 块级函数 ES6中允许在代码块中声明函数 12345if(true) &#123; function doSomething() &#123; &#125;&#125; 块级函数的声明提升 函数声明的块级函数会被提升至块的顶部而用let定义的函数表达式不会被提升 ES6严格模式下块级函数只会提升至块的顶部，但是在非严格模式下函数会被提升至外围函数或全局作用域的顶部。 箭头函数 箭头函数是一种使用箭头(=&gt;)定义函数的新语法 与传统函数的不同： 没有this、super、arguments和new.target绑定 这些值由外围一层非箭头函数决定 不能通过new关键字调用 箭头函数没有[[constructor]]方法，如果通过new关键字调用箭头函数，程序会抛出错误。 没有原型 不存在prototype这个属性 不可以改变this的绑定 在函数的生命周期内始终保持一致 不支持arguments对象 不支持重复命名的参数 箭头函数的语法 当箭头函数只有一个参数时，可以直接写参数名，箭头紧随其后，箭头右侧额表达式被求值后便立即返回 1let reflect = value =&gt; value; 如果要传入两个或两个以上的参数，要在参数的两侧添加一对小括号 1let sum = (num1,num2) =&gt; num1+num2; 如果函数没有参数，也要在声明的时候写一组没有内容的小括号 1let getName = () =&gt; &apos;Tgb&apos;; 可以有函数体 123let sum = (num1,num2) =&gt; &#123; return num1+num2;&#125; 箭头函数返回对象字面量 1let getTempItem = id =&gt; (&#123; id: id,name: &apos;temp&apos; &#125;); 箭头函数的自调用 沙箱模式 1234567let person = ((name) =&gt; &#123; return &#123; getName: function() &#123; retrun name; &#125; &#125;;&#125;)(&apos;tgb&apos;);]]></content>
+      <categories>
+        <category>ES6</category>
+        <category>函数</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+        <tag>函数</tag>
+        <tag>不定参数</tag>
+        <tag>展开运算符</tag>
+        <tag>块级函数</tag>
+        <tag>箭头函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[深入理解ES6二]]></title>
+    <url>%2F2017%2F07%2F26%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%BA%8C%2F</url>
+    <content type="text"><![CDATA[模板字面量的主要功能 多行字符串：一个正式的多行字符串的概念 基本的字符串格式化：将变量的值嵌入字符串的能力 HTML转义 向HTML插入经过安全转换后的字符串的能力 基础语法1let message = `Hello world`; 模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号 模板字面量可以很简洁的使用多行字符串 12let message = `Helloworld` 在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式 12let name = &apos;Nicholas&apos;, message = `Hello $&#123;name&#125;` #注意事项 模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误 可以在模板字面量中嵌入另外一个 1234let name = &apos;Nicholas&apos;, message = &apos;Hello, $&#123; `my name is $&#123;name&#125;` &#125;.`; 标签模板 标签模板是在模板字面量第一个反撇号(`)前方标注的字符串 1let message = tag`Hello world` 标签是一个函数，第一个参数是一个数组，包含JavaScript解释过后的字面量字符串，它之后的所有参数都是每一个站位符的解释值 12345678910111213function tag(literals,...substitutions) &#123;&#125; let a = 5,b = 10; let tag = (s,v1,v2)=&gt;&#123; console.log(s); console.log(v1); console.log(v2); &#125; tag`Hello $&#123;a+b&#125; world $&#123;a*b&#125;`; //[&apos;Hello &apos;,&apos; world &apos;,&apos;&apos;] //15 //50 通过String.raw()标签可以访问到字符转义被转换成等价字符前的原声字符串 12345let message1 = `Multiline\nstring`;let message2 = String.raw`Multiline\nstring`;console.log(message1); //&apos;Multiline //string&apos;console.log(message2); //&apos;Multiline\nstring&apos;]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+        <tag>模板字面量</tag>
+        <tag>标签模板</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HTML5基础标签的掌握]]></title>
     <url>%2F2017%2F07%2F20%2FHTML5%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE%E7%9A%84%E6%8E%8C%E6%8F%A1%2F</url>
     <content type="text"><![CDATA[标签 &lt;abbr&gt; 标签表示简称或缩写，比如 “WWW” 或 “NATO” &lt;abbr&gt; 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 元素上时显示出简称/缩写的完整版本。1The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.]]></content>
@@ -17,7 +104,7 @@
   <entry>
     <title><![CDATA[深入理解ES6一]]></title>
     <url>%2F2017%2F07%2F19%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%80%2F</url>
-    <content type="text"><![CDATA[let声明 Es6中引入块级声明，let声明的变量作用域限制在代码块中； let声明不会被提升; 在同一作用域中不能用let重复定义已经存在的标识符，会抛出错误。 const声明 const声明的变量作用域也会限制在代码块中； const声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值) const声明不允许修改绑定，但允许修改值；例如const声明对象，对象的值是可以修改的 临时死区的存在 临时死区(temporal dead zone)TDZ用来描述let和const的不提升效果； 与var声明不同，let和const声明的变量不会被提升到作用域的顶部，在javascript引擎扫描代码的时候会将let和const的声明放到临时死区中 循环中的块级作用域 常见的循环错误；var声明是全局变量 123456789var funcs = [];for(var i=0;i&lt;10;i++) &#123; funcs.push(function() &#123; console.log(i); &#125;)&#125;funcs.forEach(funcion(func) &#123; func(); //输出10次10 &#125;) 使用闭包解决这个问题 12345678910111213var funcs = [];for(var i=0;i&lt;10;i++) &#123; funcs.push((function(value)&#123; // 变量i的值在传递到这个作用域是被赋值给了value; // 此时这个值就不会随外部变量而变化了； return function() &#123; console.log(value); &#125; &#125;)(i));&#125;funcs.forEach(function(func) &#123; func(); //输出0，然后是1,2直到9&#125;) 使用let声明简化 123456789var funcs=[];for(let i=0;i&lt;10;i++) &#123; funcs.push(function() &#123; console.log(i); &#125;)&#125;funcs.forEach(function(func) &#123; func(); //输出0，然后是1,2直到9&#125;) 全局作用域的绑定 当var被用于全局作用域时，它会创建一个新的全局变量作为全局对象(浏览器环境中的window对象)的属性 当在全局作用域中使用let和const,会在全局作用域下创建一个新的绑定，但是该绑定不会添加为全局对象的属性。]]></content>
+    <content type="text"><![CDATA[let声明 Es6中引入块级声明，let声明的变量作用域限制在代码块中； let声明不会被提升; 在同一作用域中不能用let重复定义已经存在的标识符，会抛出错误。 const声明 const声明的变量作用域也会限制在代码块中； const声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值) const声明不允许修改绑定，但允许修改值；例如const声明对象，对象的值是可以修改的 临时死区的存在 临时死区(temporal dead zone)TDZ用来描述let和const的不提升效果； 与var声明不同，let和const声明的变量不会被提升到作用域的顶部，在javascript引擎扫描代码的时候会将let和const的声明放到临时死区中 循环中的块级作用域 常见的循环错误；var声明是全局变量123456789var funcs = [];for(var i=0;i&lt;10;i++) &#123; funcs.push(function() &#123; console.log(i); &#125;)&#125;funcs.forEach(funcion(func) &#123; func(); //输出10次10 &#125;) 使用闭包解决这个问题 12345678910111213var funcs = [];for(var i=0;i&lt;10;i++) &#123; funcs.push((function(value)&#123; // 变量i的值在传递到这个作用域是被赋值给了value; // 此时这个值就不会随外部变量而变化了； return function() &#123; console.log(value); &#125; &#125;)(i));&#125;funcs.forEach(function(func) &#123; func(); //输出0，然后是1,2直到9&#125;) 使用let声明简化 123456789var funcs=[];for(let i=0;i&lt;10;i++) &#123; funcs.push(function() &#123; console.log(i); &#125;)&#125;funcs.forEach(function(func) &#123; func(); //输出0，然后是1,2直到9&#125;) 全局作用域的绑定 当var被用于全局作用域时，它会创建一个新的全局变量作为全局对象(浏览器环境中的window对象)的属性 当在全局作用域中使用let和const,会在全局作用域下创建一个新的绑定，但是该绑定不会添加为全局对象的属性。]]></content>
       <categories>
         <category>ES6</category>
       </categories>
@@ -54,7 +141,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA['HTTP协议的学习四']]></title>
+    <title><![CDATA[HTTP协议的学习四]]></title>
     <url>%2F2017%2F07%2F17%2FHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%9B%9B%2F</url>
     <content type="text"><![CDATA[web服务器的主要功能 建立连接 接受请求–从网络中读取一条HTTP请求报文 处理请求–对请求报文进行解释，并采取行动 构建响应–创建带有正确首部的HTTP响应报文 发送响应–将响应回送给客服端 记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。 代理 web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。]]></content>
       <tags>
@@ -64,7 +151,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA['HTTP协议的学习三']]></title>
+    <title><![CDATA[HTTP协议的学习三]]></title>
     <url>%2F2017%2F07%2F17%2FHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%89%2F</url>
     <content type="text"></content>
   </entry>
@@ -266,8 +353,8 @@
       </categories>
       <tags>
         <tag>vue</tag>
-        <tag>脚手架</tag>
         <tag>webpack</tag>
+        <tag>脚手架</tag>
       </tags>
   </entry>
   <entry>
@@ -283,22 +370,9 @@
         <category>axios</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>http</tag>
-        <tag>ajax</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Vue-router的API学习]]></title>
-    <url>%2F2017%2F05%2F24%2FVue-router%E7%9A%84API%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[&lt;router-link&gt; 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。自定义属性(props) to 表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。1234&lt;!-- 字符串 --&gt;&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt; replace重定向 设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。1&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt; append 设置 append 属性后，则在当前（相对）路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b tab 有时候想要 渲染成某种标签，例如 。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。123&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;li&gt;foo&lt;/li&gt; exact “是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 也会被设置 CSS 类名。 按照这个规则， 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：12&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;&lt;router-link to=&quot;/&quot; exact&gt; events 声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。 active-class 设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。 将”激活时的CSS类名”应用在外层元素 有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 标签本身，那么可以用 渲染外层元素，包裹着内层的原生 标签： 123&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt; &lt;a&gt;/foo&lt;/a&gt;&lt;/router-link&gt; 在这种情况下， 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 。 组件是一个 functional 组件，渲染路径匹配到的视图组件。 渲染的组件还可以内嵌自己的 ，根据嵌套路径，渲染嵌套组件。 属性 name 如果 设置了名称，则会渲染对应的路由配置中 components 下的相应组件。查看 命名视图 中的例子。 行为表现 其他属性（非 router-view 使用的属性）都直接传给渲染的组件， 很多时候，每个路由的数据都是包含在路由参数中。 因为它也是个组件，所以可以配合 和 使用。如果两个结合一起用，要确保在内层使用 ：12345&lt;transition&gt; &lt;keep-alive&gt; &lt;router-view&gt;&lt;/router-view&gt; &lt;/keep-alive&gt;&lt;/transition&gt; 路由信息对象- 一个 route object（路由信息对象） 表示当前激活的路由的状态信息，包含了当前 URL 解析得到的信息，还有 URL 匹配到的 route records（路由记录）。 - route object 是 immutable（不可变） 的，每次成功的导航后都会产生一个新的对象。 路由信息对象的属性- $route.path - 字符串，对应当前路由的路径，总是解析为绝对路径，如 &quot;/foo/bar&quot;。 - $route.params - 一个 key/value 对象，包含了 动态片段 和 全匹配片段，如果没有路由参数，就是一个空对象。 - $route.query - 一个 key/value 对象，表示 URL 查询参数。例如，对于路径 /foo?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。 - $route.hash - 当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。 - $route.fullPath - 完成解析后的 URL，包含查询参数和 hash 的完整路径。 - $route.matched - 一个数组，包含当前路由的所有嵌套路径片段的 路由记录 。路由记录就是 routes 配置数组中的对象副本（还有在 children 数组）。 - 当 URL 为 /foo/bar，$route.matched 将会是一个包含从上到下的所有对象（副本）。 - $route.name - 当前路由的名称，如果有的话]]></content>
-      <categories>
-        <category>vue-router</category>
-      </categories>
-      <tags>
         <tag>vue</tag>
-        <tag>路由</tag>
-        <tag>vue-router</tag>
+        <tag>ajax</tag>
       </tags>
   </entry>
   <entry>
@@ -318,6 +392,19 @@
     <title><![CDATA[Vue-router的使用一]]></title>
     <url>%2F2017%2F05%2F24%2FVue-router%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%80%2F</url>
     <content type="text"><![CDATA[vue-router的使用 javascript部分 1234567891011121314151617181920212223242526272829303132333435// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)import Vue from &apos;vue&apos;import VueRouter from &apos;vue-router&apos;Vue.use(VueRouter)// 1. 定义（路由）组件。// 可以从其他文件 import 进来import Foo from &apos;@/page/login.vue&apos;import Bar from &apos;@/page/login.vue&apos;// 2. 定义路由// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是// 通过 Vue.extend() 创建的组件构造器，// 或者，只是一个组件配置对象。// 我们晚点再讨论嵌套路由。const routes = [ &#123; path: &apos;/foo&apos;, component: Foo &#125;, &#123; path: &apos;/bar&apos;, component: Bar &#125;]// 3. 创建 router 实例，然后传 `routes` 配置// 你还可以传别的配置参数, 不过先这么简单着吧。const router = new VueRouter(&#123; routes // （缩写）相当于 routes: routes&#125;)// 4. 创建和挂载根实例。// 记得要通过 router 配置参数注入路由，// 从而让整个应用都有路由功能const app = new Vue(&#123; router&#125;).$mount(&apos;#app&apos;)// 现在，应用已经启动了！ html部分 12345678910111213141516&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;&lt;div id=&quot;app&quot;&gt; &lt;h1&gt;Hello App!&lt;/h1&gt; &lt;p&gt; &lt;!-- 使用 router-link 组件来导航. --&gt; &lt;!-- 通过传入 `to` 属性指定链接. --&gt; &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt; &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt; &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt; &lt;/p&gt; &lt;!-- 路由出口 --&gt; &lt;!-- 路由匹配到的组件将渲染在这里 --&gt; &lt;router-view&gt;&lt;/router-view&gt;&lt;/div&gt; vue动态路由的设置 使用场景：例如，我们有一个 User 组件，对于所有 ID 各不相同的用户，都要使用这个组件来渲染。那么，我们可以在 vue-router 的路由路径中使用『动态路径参数』 1234567891011const User = &#123; template: &apos;&lt;div&gt;User&lt;/div&gt;&apos;&#125;const router = new VueRouter(&#123; routes: [ // 动态路径参数 以冒号开头 &#123; path: &apos;/user/:id&apos;, component: User &#125; ]&#125;)// /user/foo 和 /user/bar 都将映射到相同的路由 一个『路径参数』使用冒号 : 标记。当匹配到一个路由时，参数值会被设置到 this.$route.params，可以在每个组件内使用. 1234// 我们可以更新 User 的模板，输出当前用户的 IDconst User = &#123; template: &apos;&lt;div&gt;User &#123;&#123; $route.params.id &#125;&#125;&lt;/div&gt;&apos;&#125; 响应路由参数的变化 当使用路由参数时，例如从 /user/foo 导航到 user/bar，原来的组件实例会被复用。因为两个路由都渲染同个组件，比起销毁再创建，复用则显得更加高效。不过，这也意味着组件的生命周期钩子不会再被调用。 想对路由参数的变化作出响应的话，你可以简单地 watch（监测变化） $route 对象：12345678const User = &#123; template: &apos;...&apos;, watch: &#123; &apos;$route&apos; (to, from) &#123; // 对路由变化作出响应... &#125; &#125;&#125; 路由匹配优先级 有时候，同一个路径可以匹配多个路由，此时，匹配的优先级就按照路由的定义顺序：谁先定义的，谁的优先级就最高。 嵌套路由 使用children配置来设置嵌套路由 注意事项：以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。children 配置就是像 routes 配置一样的路由配置数组 1234567891011121314151617181920const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:id&apos;, component: User, children: [ &#123; // 当 /user/:id/profile 匹配成功， // UserProfile 会被渲染在 User 的 &lt;router-view&gt; 中 path: &apos;profile&apos;, component: UserProfile &#125;, &#123; // 当 /user/:id/posts 匹配成功 // UserPosts 会被渲染在 User 的 &lt;router-view&gt; 中 path: &apos;posts&apos;, component: UserPosts &#125; ] &#125; ]&#125;) 基于上面的配置，当你访问 /user/foo 时，User 的出口是不会渲染任何东西，这是因为没有匹配到合适的子路由。如果你想要渲染点什么，可以提供一个 空的 子路由 1234567891011121314const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:id&apos;, component: User, children: [ // 当 /user/:id 匹配成功， // UserHome 会被渲染在 User 的 &lt;router-view&gt; 中 &#123; path: &apos;&apos;, component: UserHome &#125;, // ...其他子路由 ] &#125; ]&#125;) 用JS控制导航 router.push(location) 1声明式: &lt;router-link :to=&quot;...&quot;&gt; 编程式: router.push(...) 除了使用 &lt;router-link&gt; 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。 想要导航到不同的 URL，则使用 router.push 方法。这个方法会向 history 栈添加一个新的记录，所以，当用户点击浏览器后退按钮时，则回到之前的 URL。 当你点击 &lt;router-link&gt; 时，这个方法会在内部调用，所以说，点击 &lt;router-link :to=&quot;...&quot;&gt; 等同于调用 router.push(…)。1234567891011// 字符串router.push(&apos;home&apos;)// 对象router.push(&#123; path: &apos;home&apos; &#125;)// 命名的路由router.push(&#123; name: &apos;user&apos;, params: &#123; userId: 123 &#125;&#125;)// 带查询参数，变成 /register?plan=privaterouter.push(&#123; path: &apos;register&apos;, query: &#123; plan: &apos;private&apos; &#125;&#125;) router.replace(location) 它不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录1声明式: &lt;router-link :to=&quot;...&quot; replace&gt; 编程式: router.replace(...) router.go(n) 这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 window.history.go(n)。123456789101112// 在浏览器记录中前进一步，等同于 history.forward()router.go(1)// 后退一步记录，等同于 history.back()router.go(-1)// 前进 3 步记录router.go(3)// 如果 history 记录不够用，那就默默地失败呗router.go(-100)router.go(100) 命名路由 通过一个名称来标识一个路由显得更方便一些，特别是在链接一个路由，或者是执行一些跳转的时候。你可以在创建 Router 实例的时候，在 routes 配置中给某个路由设置名称。123456789const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/user/:userId&apos;, name: &apos;user&apos;, component: User &#125; ]&#125;) 命名视图 使用场景：同时（同级）展示多个视图，而不是嵌套展示，例如创建一个布局，有 sidebar（侧导航） 和 main（主内容） 两个视图，这个时候命名视图就派上用场了。你可以在界面中拥有多个单独命名的视图，而不是只有一个单独的出口。如果 router-view 没有设置名字，那么默认为 default。 123&lt;router-view class=&quot;view one&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view two&quot; name=&quot;a&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view three&quot; name=&quot;b&quot;&gt;&lt;/router-view&gt; 一个视图使用一个组件渲染，因此对于同个路由，多个视图就需要多个组件。确保正确使用 components 配置（带上 s）： 123456789101112const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/&apos;, components: &#123; default: Foo, a: Bar, b: Baz &#125; &#125; ]&#125;) 重定向 和 别名 重定向 重定向也是通过 routes 配置来完成，下面例子是从 /a 重定向到 /b： 12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: &apos;/b&apos; &#125; ]&#125;) 重定向的目标也可以是一个命名的路由 12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: &#123; name: &apos;foo&apos; &#125;&#125; ]&#125;) 甚至是一个方法，动态返回重定向目标： 12345678const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, redirect: to =&gt; &#123; // 方法接收 目标路由 作为参数 // return 重定向的 字符串路径/路径对象 &#125;&#125; ]&#125;) 别名 /a 的别名是 /b，意味着，当用户访问 /b 时，URL 会保持为 /b，但是路由匹配则为 /a，就像用户访问 /a 一样。12345const router = new VueRouter(&#123; routes: [ &#123; path: &apos;/a&apos;, component: A, alias: &apos;/b&apos; &#125; ]&#125;) HTML5 History 模式 vue-router 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。 如果不想要很丑的 hash，我们可以用路由的 history 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。1234const router = new VueRouter(&#123; mode: &apos;history&apos;, routes: [...]&#125;)]]></content>
+      <categories>
+        <category>vue-router</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>路由</tag>
+        <tag>vue-router</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vue-router的API学习]]></title>
+    <url>%2F2017%2F05%2F24%2FVue-router%E7%9A%84API%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[&lt;router-link&gt; 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。自定义属性(props) to 表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。1234&lt;!-- 字符串 --&gt;&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt; replace重定向 设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。1&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt; append 设置 append 属性后，则在当前（相对）路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b tab 有时候想要 渲染成某种标签，例如 。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。123&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;&lt;!-- 渲染结果 --&gt;&lt;li&gt;foo&lt;/li&gt; exact “是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 也会被设置 CSS 类名。 按照这个规则， 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：12&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;&lt;router-link to=&quot;/&quot; exact&gt; events 声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。 active-class 设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。 将”激活时的CSS类名”应用在外层元素 有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 标签本身，那么可以用 渲染外层元素，包裹着内层的原生 标签： 123&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt; &lt;a&gt;/foo&lt;/a&gt;&lt;/router-link&gt; 在这种情况下， 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 。 组件是一个 functional 组件，渲染路径匹配到的视图组件。 渲染的组件还可以内嵌自己的 ，根据嵌套路径，渲染嵌套组件。 属性 name 如果 设置了名称，则会渲染对应的路由配置中 components 下的相应组件。查看 命名视图 中的例子。 行为表现 其他属性（非 router-view 使用的属性）都直接传给渲染的组件， 很多时候，每个路由的数据都是包含在路由参数中。 因为它也是个组件，所以可以配合 和 使用。如果两个结合一起用，要确保在内层使用 ：12345&lt;transition&gt; &lt;keep-alive&gt; &lt;router-view&gt;&lt;/router-view&gt; &lt;/keep-alive&gt;&lt;/transition&gt; 路由信息对象- 一个 route object（路由信息对象） 表示当前激活的路由的状态信息，包含了当前 URL 解析得到的信息，还有 URL 匹配到的 route records（路由记录）。 - route object 是 immutable（不可变） 的，每次成功的导航后都会产生一个新的对象。 路由信息对象的属性- $route.path - 字符串，对应当前路由的路径，总是解析为绝对路径，如 &quot;/foo/bar&quot;。 - $route.params - 一个 key/value 对象，包含了 动态片段 和 全匹配片段，如果没有路由参数，就是一个空对象。 - $route.query - 一个 key/value 对象，表示 URL 查询参数。例如，对于路径 /foo?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。 - $route.hash - 当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。 - $route.fullPath - 完成解析后的 URL，包含查询参数和 hash 的完整路径。 - $route.matched - 一个数组，包含当前路由的所有嵌套路径片段的 路由记录 。路由记录就是 routes 配置数组中的对象副本（还有在 children 数组）。 - 当 URL 为 /foo/bar，$route.matched 将会是一个包含从上到下的所有对象（副本）。 - $route.name - 当前路由的名称，如果有的话]]></content>
       <categories>
         <category>vue-router</category>
       </categories>
