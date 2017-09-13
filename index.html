@@ -204,6 +204,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -286,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/国际化——Vue-i18n的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/Next主体配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -305,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/12/国际化——Vue-i18n的使用/" itemprop="url">国际化——Vue-i18n的使用</a></h1>
+                <a class="post-title-link" href="/2017/09/13/Next主体配置/" itemprop="url">Next主体配置</a></h1>
         
 
         <div class="post-meta">
@@ -317,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T11:30:07+08:00">
-                2017-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T16:43:05+08:00">
+                2017-09-13
               </time>
             
 
@@ -340,19 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/国际化/" itemprop="url" rel="index">
-                    <span itemprop="name">国际化</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/国际化/Vue-i18/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue-i18</span>
+                  <a href="/categories/应用工具学习/" itemprop="url" rel="index">
+                    <span itemprop="name">应用工具学习</span>
                   </a>
                 </span>
 
@@ -368,7 +367,7 @@
 
           
           
-             <span id="/2017/08/12/国际化——Vue-i18n的使用/" class="leancloud_visitors" data-flag-title="国际化——Vue-i18n的使用">
+             <span id="/2017/09/13/Next主体配置/" class="leancloud_visitors" data-flag-title="Next主体配置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,16 +396,16 @@
 
       
         
-          <h2 id="Vue-i18n安装"><a href="#Vue-i18n安装" class="headerlink" title="Vue-i18n安装"></a>Vue-i18n安装</h2><ul>
-<li><code>npm install vue-i18n --save</code></li>
-</ul>
-<h2 id="Vue-i18n的使用"><a href="#Vue-i18n的使用" class="headerlink" title="Vue-i18n的使用"></a>Vue-i18n的使用</h2><ul>
-<li>在入口<code>main.js</code>文件配置使用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueI18n from &apos;vue-i18n&apos;</div><div class="line"></div><div class="line">Vue.use(VueI18n);</div><div class="line">/*---------基本使用-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages : &#123;</div><div class="line">    en: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;hello world&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    cn: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;你好、世界&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">/*---------使用语言包-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages: &#123;</div><div class="line">    &apos;CN&apos;: require(&apos;./assets/common/lang/cn&apos;),   // 中文语言包</div><div class="line">    &apos;EN&apos;: require(&apos;./assets/common/lang/en&apos;)    // 英文语言包</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------语言包内部语法star-----------*/</div><div class="line">export const  message = &#123;</div><div class="line">      language:&apos;语言&apos;,</div><div class="line">      hello: &apos;你好,世界&apos;</div><div class="line">&#125;</div><div class="line">/*---------语言包内部语法end-----------*/</div><div class="line"></div><div class="line">/*---------挂载全局使用-----------*/</div><div class="line">new Vue(&#123;</div><div class="line">  el: &apos;#app&apos;,</div><div class="line">  i18n,</div><div class="line">  router,</div><div class="line">  template: &apos;&lt;App/&gt;&apos;,</div><div class="line">  components: &#123; App &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------vue组件模板的使用-----------*/</div><div class="line"> &lt;template&gt;</div><div class="line">        &lt;p&gt;&#123;&#123; $t(&quot;message.hello&quot;) &#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;/template&gt;</div></pre></td></tr></table></figure>
+          <p>Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为站点配置文件，后者称为主题配置文件。</p>
+<p>hexo的next主题个性化配置教程: <a href="https://segmentfault.com/a/1190000009544924#articleHeader19" target="_blank" rel="external">https://segmentfault.com/a/1190000009544924#articleHeader19</a></p>
+<h2 id="NexT主题安装"><a href="#NexT主题安装" class="headerlink" title="NexT主题安装"></a>NexT主题安装</h2><h3 id="下载NexT主题"><a href="#下载NexT主题" class="headerlink" title="下载NexT主题"></a>下载NexT主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd your-hexo-site`</div><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<h3 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改站点配置文件</h3><p>修改站点配置文件_config.yml，找到以下部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: landscape</div></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line"># theme: landscape</div><div class="line">theme: next`</div></pre></td></tr></table></figure></p>
+<p>至此，NexT主题就安装好了，非常方便，在Hexo中切换主题只需修改站点配置文件中theme属性来配置，想换就换。</p>
+<h3 id="选择Scheme"><a href="#选择Scheme" class="headerlink" title="选择Scheme"></a>选择Scheme</h3><p>NexT 通过 Scheme 提供主题中的主题。Mist是NexT主题自带的主题，可以通过修改主题配置文件中的scheme属性获得。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Schemes</div><div class="line">scheme: Mist  #去掉默认的注释即可切换为Mist主题</div></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/12/国际化——Vue-i18n的使用/#more" rel="contents">
+            <a class="btn" href="/2017/09/13/Next主体配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -452,7 +451,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6六/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/flex布局学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -471,7 +470,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6六/" itemprop="url">深入理解ES6六</a></h1>
+                <a class="post-title-link" href="/2017/09/12/flex布局学习/" itemprop="url">flex布局学习</a></h1>
         
 
         <div class="post-meta">
@@ -483,8 +482,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:41+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T15:11:25+08:00">
+                2017-09-12
               </time>
             
 
@@ -506,19 +505,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/Symbol/" itemprop="url" rel="index">
-                    <span itemprop="name">Symbol</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -534,7 +522,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6六/" class="leancloud_visitors" data-flag-title="深入理解ES6六">
+             <span id="/2017/09/12/flex布局学习/" class="leancloud_visitors" data-flag-title="flex布局学习">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -563,203 +551,34 @@
 
       
         
-          <h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><ul>
-<li>ES6新增的数据类型<code>Symbol</code></li>
-<li><p>创建Symbol：通过去全局的<code>Symbol</code>函数创建一个<code>Symbol</code>，<code>Symbol</code>函数接受一个可选参数，用于添加一段文本描述即将创建的<code>Symbol</code>,方便阅读和调试Symbol程序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let firstName = Symbol(&apos;first name&apos;);</div><div class="line">    let person = &#123;&#125;;</div><div class="line"></div><div class="line">    person[firstName] = &apos;Nicholas&apos;;</div><div class="line"></div><div class="line">    console.log(&apos;first name&apos; in person); //false</div><div class="line">    console.log(person[firstName]); //&apos;Nicholas&apos;</div><div class="line">    console.log(firstName); //&apos;Symbol(first name)&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>ES6扩展了<code>typeof</code>操作符，支持返回<code>Symbol</code>,可以用typeof来检测变量是否为<code>Symbol</code>类型.</p>
-</li>
-</ul>
-<h2 id="Symbol共享体系"><a href="#Symbol共享体系" class="headerlink" title="Symbol共享体系"></a>Symbol共享体系</h2><ul>
-<li><p>ES6提供了一个可以随时访问的全局Symbol注册表,如果要创建一个可共享的Symbol,要使用Symbol.for()方法，该方法只接受一个参数，就是即将创建的Symbol的字符串标识符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let uid = Symbol.for(&apos;uid&apos;);</div><div class="line">let object = &#123;&#125;;</div><div class="line"></div><div class="line">object[uid]=&apos;12345&apos;;</div><div class="line"></div><div class="line">console.log(ojbect[uid]);</div><div class="line">console.log(uid);</div></pre></td></tr></table></figure>
-</li>
-<li><p>Symbol.for()方法首先在全局Symbol注册表中搜索键为’uid’的Symbol是否存在，如果存在，直接返回已有的Symbol；否则创建一个新的Symbol，并使用这个键在Symbol全局注册表中注册，随即返回新创建的Symbol</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6六/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6五/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6五/" itemprop="url">深入理解ES6五</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:16+08:00">
-                2017-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/解构/" itemprop="url" rel="index">
-                    <span itemprop="name">解构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/08/06/深入理解ES6五/" class="leancloud_visitors" data-flag-title="深入理解ES6五">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
-<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>函数中也可以传入解构表达式</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+          <h2 id="flex布局基础知识"><a href="#flex布局基础知识" class="headerlink" title="flex布局基础知识"></a>flex布局基础知识</h2><p><img src="http://ojvil4eq9.bkt.clouddn.com/17-9-12/53121912.jpg" alt=""></p>
 <ul>
-<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
-</li>
-<li><p>为非同名局部变量赋值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>嵌套对象解构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
-</li>
+<li>main axis(主轴): Flex容器的主轴主要用来配置Flex项目。它不一定是水平，这主要取决于flex-direction属性</li>
+<li>main-start|main-end(主轴起点|主轴终点): Flex项目的配置从容器的主轴起点开始,往主轴终点结束</li>
+<li>main size(主轴方向长度):Flex项目的在主轴方向的宽度或高度就是项目的主轴长度，Flex项目的主轴长度属性是width或height属性，由哪一个对着主轴方向决定。</li>
+<li>cross axis(侧轴):与主轴垂直的轴称作侧轴，是侧轴方向的延伸。</li>
+<li>cross-start | cross-end(侧轴起点|侧轴终点):伸缩行的配置从容器的侧轴起点边开始，往侧轴终点边结束。</li>
+<li>cross size(侧轴方向长度):Flex项目的在侧轴方向的宽度或高度就是项目的侧轴长度，Flex项目的侧轴长度属性是width或height属性，由哪一个对着侧轴方向决定。</li>
 </ul>
+<h2 id="Flex容器属性-主容器"><a href="#Flex容器属性-主容器" class="headerlink" title="Flex容器属性(主容器)"></a>Flex容器属性(主容器)</h2><ol>
+<li><code>display</code>: 定义一个Flex容器，根据其取的值来决定是内联还是块。Flex容器会为其内容建立新的伸缩格式化上下文。(定义成flex容器不等于定义成块级容器)</li>
+<li><code>flex-direction</code>: 定义主轴方向，Flex项目在Flex容器中放置的方向<ul>
+<li><code>row</code>(默认值): Flex项目从左向右排列</li>
+<li><code>row-reverse</code>: 与row相反，Flex项目从右向左排列</li>
+<li><code>column</code>: Flex项目从上向下排列</li>
+<li><code>columne-reverse</code>: 与column相反，Flex项目从下向上排列</li>
+</ul>
+</li>
+<li><code>flex-wrap</code>: 定义Flex项目是否多行显示<ul>
+<li><code>nowrap</code>(默认值): 单行显示，从左向右排列</li>
+<li><code>wrap</code>: 多行显示，从左向右排列</li>
+<li><code>wrap-reverse</code>: 多行显示，从右向左排列</li>
+</ul>
+</li>
+<li><code>flex-flow</code>: <code>flex-direction</code>和<code>flex-wrap</code>属性的缩写 默认值是row nowrap
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6五/#more" rel="contents">
+            <a class="btn" href="/2017/09/12/flex布局学习/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -805,7 +624,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6四/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/前端知识体系整理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -824,7 +643,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6四/" itemprop="url">深入理解ES6四</a></h1>
+                <a class="post-title-link" href="/2017/09/12/前端知识体系整理/" itemprop="url">前端知识体系整理</a></h1>
         
 
         <div class="post-meta">
@@ -836,8 +655,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T13:55:49+08:00">
+                2017-09-12
               </time>
             
 
@@ -859,19 +678,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/对象/" itemprop="url" rel="index">
-                    <span itemprop="name">对象</span>
+                  <a href="/categories/知识体系/" itemprop="url" rel="index">
+                    <span itemprop="name">知识体系</span>
                   </a>
                 </span>
 
@@ -887,7 +695,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6四/" class="leancloud_visitors" data-flag-title="深入理解ES6四">
+             <span id="/2017/09/12/前端知识体系整理/" class="leancloud_visitors" data-flag-title="前端知识体系整理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -916,26 +724,200 @@
 
       
         
-          <h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
-<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
-<li>特异对象 具有某些与默认行为不符的内部行为</li>
-<li>标准对象 ES6中规范定义的对象</li>
-<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
+          <h2 id="前端知识分类"><a href="#前端知识分类" class="headerlink" title="前端知识分类"></a>前端知识分类</h2><ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>DOM和BOM</li>
+<li>ECMAScript</li>
+<li>前端构建生态</li>
+<li>模块化、框架、组件</li>
+<li>Node.js</li>
+<li>应用工具学习</li>
+<li>canvas</li>
+<li>HTTP协议</li>
+<li>浏览器基础</li>
+<li>Photoshop与切图</li>
 </ul>
-<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
-<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
-</li>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ol>
+<li>meta内容与设置</li>
+<li>一般常用标签</li>
+<li>HTML5新增语义化标签</li>
+<li>HTML常用属性</li>
+<li>搜索引擎优化<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2></li>
+<li>css常用属性</li>
+<li>css层叠概念</li>
+<li>css选择器和优先级</li>
+<li>盒子模型</li>
+<li>css布局方式</li>
+<li>编译工具less和sass</li>
+<li>css实现响应式：利用媒体查询media query</li>
+<li>css移动端开发：rem和em的原理和实现</li>
+<li>css动画及动画库的使用</li>
+<li>css的UI框架<ul>
+<li>bootstrap</li>
+<li>基于vue框架-PC端elm框架</li>
+<li>基于vue框架-移动端vux框架</li>
 </ul>
+</li>
+</ol>
+<h2 id="DOM和BOM"><a href="#DOM和BOM" class="headerlink" title="DOM和BOM"></a>DOM和BOM</h2><ol>
+<li>DOM对象document</li>
+<li>DOMAPI操作</li>
+<li>BOM对象的使用
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6四/#more" rel="contents">
+            <a class="btn" href="/2017/09/12/前端知识体系整理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/23/深入理解ES6九——JS中的类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/23/深入理解ES6九——JS中的类/" itemprop="url">深入理解ES6九————JS中的类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-23T09:26:05+08:00">
+                2017-08-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/23/深入理解ES6九——JS中的类/" class="leancloud_visitors" data-flag-title="深入理解ES6九————JS中的类">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/23/深入理解ES6九——JS中的类/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -976,7 +958,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1021,7 +1003,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1032,7 +1014,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1043,7 +1025,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1127,7 +1109,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
@@ -1138,7 +1121,8 @@
 </div>
 
 
-<div class="powered-by">
+
+<!--<div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -1147,8 +1131,16 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
-</div>
+</div>-->
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <span class="post-count">博客全站共30.2k字</span>
+</div>
 
         
 

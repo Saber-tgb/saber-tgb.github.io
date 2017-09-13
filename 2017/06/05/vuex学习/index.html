@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ES6,vue,Vuex,状态管理," />
+  <meta name="keywords" content="ES6,Vue,Vuex,状态管理," />
 
 
 
@@ -93,13 +93,13 @@
 
 
 <meta name="description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。  状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
-<meta name="keywords" content="ES6,vue,Vuex,状态管理">
+<meta name="keywords" content="ES6,Vue,Vuex,状态管理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vuex学习">
 <meta property="og:url" content="http://yoursite.com/2017/06/05/vuex学习/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
 <meta property="og:description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。  状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
-<meta property="og:updated_time" content="2017-07-10T08:48:34.898Z">
+<meta property="og:updated_time" content="2017-09-13T06:46:13.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vuex学习">
 <meta name="twitter:description" content="理解Vuex 运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。  状态管理模式 vuex的状态自管理应用包含以下几个部分 state，驱动应用的数据源; view，以声明方式将state映射到视图；  actions，响应在view上的用户输入导致的状态变化">
@@ -203,6 +203,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -341,8 +351,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vuex/" itemprop="url" rel="index">
-                    <span itemprop="name">Vuex</span>
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/框架/组件/" itemprop="url" rel="index">
+                    <span itemprop="name">组件</span>
                   </a>
                 </span>
 
@@ -430,13 +451,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ES6/" rel="tag"># ES6</a>
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
           
-            <a href="/tags/vue/" rel="tag"># vue</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
-            <a href="/tags/Vuex/" rel="tag"># Vuex</a>
+            <a href="/tags/Vuex/" rel="tag"><i class="fa fa-tag"></i> Vuex</a>
           
-            <a href="/tags/状态管理/" rel="tag"># 状态管理</a>
+            <a href="/tags/状态管理/" rel="tag"><i class="fa fa-tag"></i> 状态管理</a>
           
         </div>
       
@@ -533,7 +554,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -544,7 +565,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -555,7 +576,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -655,7 +676,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
@@ -666,7 +688,8 @@
 </div>
 
 
-<div class="powered-by">
+
+<!--<div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -675,8 +698,16 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
-</div>
+</div>-->
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <span class="post-count">博客全站共30.2k字</span>
+</div>
 
         
 

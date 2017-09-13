@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTTP,URI,URL,报文," />
+  <meta name="keywords" content="HTTP,URL,URI,报文," />
 
 
 
@@ -93,7 +93,7 @@
 
 
 <meta name="description" content="初识HTTP协议 HTTP协议是一种数据传输协议，客服端通过HTTP请求向服务器获取资源，服务器通过HTTP响应提供资源给客服端。 媒体类型(MIME类型) HTTP给每种要通过 Web 传输的对象都打上了名为 MIME 类型（MIME type）的数据格式标签 MIME 类型是一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间由一条斜杠来分隔 HTML 格式的文本文档由 text/ht">
-<meta name="keywords" content="HTTP,URI,URL,报文">
+<meta name="keywords" content="HTTP,URL,URI,报文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP协议的学习一">
 <meta property="og:url" content="http://yoursite.com/2017/07/11/HTTP协议的学习一/index.html">
@@ -101,7 +101,7 @@
 <meta property="og:description" content="初识HTTP协议 HTTP协议是一种数据传输协议，客服端通过HTTP请求向服务器获取资源，服务器通过HTTP响应提供资源给客服端。 媒体类型(MIME类型) HTTP给每种要通过 Web 传输的对象都打上了名为 MIME 类型（MIME type）的数据格式标签 MIME 类型是一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间由一条斜杠来分隔 HTML 格式的文本文档由 text/ht">
 <meta property="og:image" content="http://ojvil4eq9.bkt.clouddn.com/17-7-12/49459854.jpg">
 <meta property="og:image" content="http://ojvil4eq9.bkt.clouddn.com/17-7-12/34277135.jpg">
-<meta property="og:updated_time" content="2017-07-14T09:17:21.153Z">
+<meta property="og:updated_time" content="2017-09-13T06:39:07.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP协议的学习一">
 <meta name="twitter:description" content="初识HTTP协议 HTTP协议是一种数据传输协议，客服端通过HTTP请求向服务器获取资源，服务器通过HTTP响应提供资源给客服端。 媒体类型(MIME类型) HTTP给每种要通过 Web 传输的对象都打上了名为 MIME 类型（MIME type）的数据格式标签 MIME 类型是一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间由一条斜杠来分隔 HTML 格式的文本文档由 text/ht">
@@ -206,6 +206,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -344,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTTP/" itemprop="url" rel="index">
-                    <span itemprop="name">HTTP</span>
+                  <a href="/categories/HTTP协议/" itemprop="url" rel="index">
+                    <span itemprop="name">HTTP协议</span>
                   </a>
                 </span>
 
@@ -530,13 +540,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
+            <a href="/tags/HTTP/" rel="tag"><i class="fa fa-tag"></i> HTTP</a>
           
-            <a href="/tags/URI/" rel="tag"># URI</a>
+            <a href="/tags/URL/" rel="tag"><i class="fa fa-tag"></i> URL</a>
           
-            <a href="/tags/URL/" rel="tag"># URL</a>
+            <a href="/tags/URI/" rel="tag"><i class="fa fa-tag"></i> URI</a>
           
-            <a href="/tags/报文/" rel="tag"># 报文</a>
+            <a href="/tags/报文/" rel="tag"><i class="fa fa-tag"></i> 报文</a>
           
         </div>
       
@@ -633,7 +643,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -644,7 +654,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -655,7 +665,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -755,7 +765,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
@@ -766,7 +777,8 @@
 </div>
 
 
-<div class="powered-by">
+
+<!--<div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -775,8 +787,16 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
-</div>
+</div>-->
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <span class="post-count">博客全站共30.2k字</span>
+</div>
 
         
 

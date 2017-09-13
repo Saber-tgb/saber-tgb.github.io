@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="对象,对象复制," />
 
 
 
@@ -93,12 +93,13 @@
 
 
 <meta name="description" content="遇到的问题： 将对象赋值给一个变量时，当我改变变量的值，发现原来的对象也跟着改变。发现原因： 因为对象是应用类型，存放在堆内存中；当我们用变量保存一个对象时，实际上保存的是该对象指针，这个指针指向对象的位置，所以当我们改变变量的时候，会从指针找到对象的位置，从而改变了对象。解决方法：将对象拷贝再赋值给变量   浅拷贝  简单的引用复制 1234567891011121314function sha">
+<meta name="keywords" content="对象,对象复制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="工作中遇到的问题——对象的拷贝">
 <meta property="og:url" content="http://yoursite.com/2017/07/13/工作中遇到的问题——对象的拷贝/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
 <meta property="og:description" content="遇到的问题： 将对象赋值给一个变量时，当我改变变量的值，发现原来的对象也跟着改变。发现原因： 因为对象是应用类型，存放在堆内存中；当我们用变量保存一个对象时，实际上保存的是该对象指针，这个指针指向对象的位置，所以当我们改变变量的时候，会从指针找到对象的位置，从而改变了对象。解决方法：将对象拷贝再赋值给变量   浅拷贝  简单的引用复制 1234567891011121314function sha">
-<meta property="og:updated_time" content="2017-07-14T09:18:00.373Z">
+<meta property="og:updated_time" content="2017-09-13T06:30:54.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作中遇到的问题——对象的拷贝">
 <meta name="twitter:description" content="遇到的问题： 将对象赋值给一个变量时，当我改变变量的值，发现原来的对象也跟着改变。发现原因： 因为对象是应用类型，存放在堆内存中；当我们用变量保存一个对象时，实际上保存的是该对象指针，这个指针指向对象的位置，所以当我们改变变量的时候，会从指针找到对象的位置，从而改变了对象。解决方法：将对象拷贝再赋值给变量   浅拷贝  简单的引用复制 1234567891011121314function sha">
@@ -202,6 +203,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -328,6 +339,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -416,6 +449,14 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/对象/" rel="tag"><i class="fa fa-tag"></i> 对象</a>
+          
+            <a href="/tags/对象复制/" rel="tag"><i class="fa fa-tag"></i> 对象复制</a>
+          
+        </div>
       
 
       
@@ -510,7 +551,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -521,7 +562,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -532,7 +573,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -632,7 +673,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
@@ -643,7 +685,8 @@
 </div>
 
 
-<div class="powered-by">
+
+<!--<div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -652,8 +695,16 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
-</div>
+</div>-->
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <span class="post-count">博客全站共30.2k字</span>
+</div>
 
         
 

@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/01/Babel的使用总结/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
 <meta property="og:description" content="babel-polfill插件 由于Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API ，比如 Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise 等全局对象，以及一些定义在全局对象上的方法（比如 Object.assign）都不会转码，所以在IE浏览器下会出现缺少Promise对象的问题 为了">
-<meta property="og:updated_time" content="2017-07-10T06:34:04.354Z">
+<meta property="og:updated_time" content="2017-09-13T06:36:06.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Babel的使用总结">
 <meta name="twitter:description" content="babel-polfill插件 由于Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API ，比如 Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise 等全局对象，以及一些定义在全局对象上的方法（比如 Object.assign）都不会转码，所以在IE浏览器下会出现缺少Promise对象的问题 为了">
@@ -203,6 +203,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -341,19 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Babel/" itemprop="url" rel="index">
-                    <span itemprop="name">Babel</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Babel/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
                   </a>
                 </span>
 
@@ -399,17 +398,19 @@
       
         <h2 id="babel-polfill插件"><a href="#babel-polfill插件" class="headerlink" title="babel-polfill插件"></a>babel-polfill插件</h2><ul>
 <li>由于Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API ，比如 Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise 等全局对象，以及一些定义在全局对象上的方法（比如 Object.assign）都不会转码，所以在IE浏览器下会出现缺少Promise对象的问题</li>
-<li><p>为了完整使用 ES6 的 API ，我们只能安装这个插件<br><code>npm install -save-dev babel-polyfills</code></p>
+<li><p>为了完整使用 ES6 的 API ，我们只能安装这个插件<br><code>npm install babel-polyfill --save-dev</code></p>
 <ul>
 <li>node.js 中<code>require(&#39;babel-polyfill&#39;)</code></li>
 <li><p>webpack.config.js中</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    entry: [&apos;babel-polyfill&apos;, &apos;./app/js&apos;]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>vue-cli配置的环境下,在main.js中引入：<code>import &#39;babel-polyfill&#39;</code></p>
-<h2 id="本地安装和全局安装"><a href="#本地安装和全局安装" class="headerlink" title="本地安装和全局安装"></a>本地安装和全局安装</h2><h3 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h3><p><code>npm install --global babel-cli</code></p>
 </li>
 </ul>
 </li>
+</ul>
+<h2 id="本地安装和全局安装"><a href="#本地安装和全局安装" class="headerlink" title="本地安装和全局安装"></a>本地安装和全局安装</h2><h3 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h3><p><code>npm install --global babel-cli</code></p>
+<ul>
 <li><p>这时候我们可以使用 Babel 命令编译文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">babel index.js --out-file compiled.js</div><div class="line">#或</div><div class="line">babel index.js -o compiled.js</div></pre></td></tr></table></figure>
 </li>
@@ -455,9 +456,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Babel/" rel="tag"># Babel</a>
+            <a href="/tags/Babel/" rel="tag"><i class="fa fa-tag"></i> Babel</a>
           
-            <a href="/tags/ES6/" rel="tag"># ES6</a>
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
           
         </div>
       
@@ -554,7 +555,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -565,7 +566,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -576,7 +577,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -676,7 +677,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
@@ -687,7 +689,8 @@
 </div>
 
 
-<div class="powered-by">
+
+<!--<div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -696,8 +699,16 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
-</div>
+</div>-->
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <span class="post-count">博客全站共30.2k字</span>
+</div>
 
         
 
