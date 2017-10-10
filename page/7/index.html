@@ -296,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/Vue-js学习三/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/HTML5基础标签的掌握/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -315,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/27/Vue-js学习三/" itemprop="url">Vue.js学习三</a></h1>
+                <a class="post-title-link" href="/2017/07/20/HTML5基础标签的掌握/" itemprop="url">HTML5基础标签的掌握</a></h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T17:33:18+08:00">
-                2017-06-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T17:12:09+08:00">
+                2017-07-20
               </time>
             
 
@@ -350,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
                   </a>
                 </span>
 
@@ -367,7 +367,7 @@
 
           
           
-             <span id="/2017/06/27/Vue-js学习三/" class="leancloud_visitors" data-flag-title="Vue.js学习三">
+             <span id="/2017/07/20/HTML5基础标签的掌握/" class="leancloud_visitors" data-flag-title="HTML5基础标签的掌握">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -396,65 +396,14 @@
 
       
         
-          <h2 id="钩子函数的理解"><a href="#钩子函数的理解" class="headerlink" title="钩子函数的理解"></a>钩子函数的理解</h2><ul>
-<li>文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。</li>
-<li>可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。</li>
+          <h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a><abbr>标签</abbr></h2><ul>
+<li><code>&lt;abbr&gt;</code> 标签表示简称或缩写，比如 “WWW” 或 “NATO”</li>
+<li><code>&lt;abbr&gt;</code> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.</div></pre></td></tr></table></figure>
+</abbr></li>
 </ul>
-<h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h3 id="vue生命周期图示"><a href="#vue生命周期图示" class="headerlink" title="vue生命周期图示"></a>vue生命周期图示</h3><p><img src="https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png" alt=""></p>
-<h3 id="生命周期总共分为八个阶段"><a href="#生命周期总共分为八个阶段" class="headerlink" title="生命周期总共分为八个阶段"></a>生命周期总共分为八个阶段</h3><ol>
-<li>beforeCreate（组件实例创建前）<ul>
-<li>el和data并未初始化</li>
-<li>实例创建前：这个阶段实例的data、methods是读不到的</li>
-</ul>
-</li>
-<li>created（组件实例创建后）,<ul>
-<li>完成了 data 数据的初始化，el没有</li>
-<li>实例创建后：这个阶段已经完成了数据观测(data observer)，属性和方法的运算， watch/event 事件回调。mount挂载阶段还没开始，$el 属性目前不可见，数据并没有在DOM元素上进行渲染</li>
-</ul>
-</li>
-<li>beforeMount(模板编译/挂载之前),<ul>
-<li>完成了 el 和 data 初始化</li>
-<li>在挂载开始之前被调用：相关的 render 函数首次被调用。</li>
-</ul>
-</li>
-<li>mounted（模板编译/挂载之后）<ul>
-<li>完成挂载</li>
-<li>el选项的DOM节点 被新创建的 vm.$el 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在DOM节点上进行渲染</li>
-</ul>
-</li>
-<li>beforeUpdate（组件更新之前）<ul>
-<li>data的值改变后，组件更新，触发update的操作</li>
-<li>数据更新时调用，但不进行DOM重新渲染，在数据更新时DOM没渲染前可以在这个生命函数里进行状态处理</li>
-</ul>
-</li>
-<li>updated（组件更新之后）<ul>
-<li>data的值改变后，组件更新，触发update的操作</li>
-<li>这个状态下数据更新并且DOM重新渲染，当这个生命周期函数被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。当实例每次进行数据更新时updated都会执行</li>
-</ul>
-</li>
-<li>beforeDestroy（组件销毁前）<ul>
-<li>实例销毁之前调用。</li>
-</ul>
-</li>
-<li>destroyed（组件销毁后）</li>
-</ol>
-<ul>
-<li>销毁完成后，我们再重新改变data中的值，vue不再对此动作进行响应了。但是原先生成的dom元素还存在，可以这么理解，执行了destroy操作，后续就不再受vue控制了。</li>
-<li>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。<h3 id="钩子函数的使用"><a href="#钩子函数的使用" class="headerlink" title="钩子函数的使用"></a>钩子函数的使用</h3></li>
-<li>beforecreate : 可以在这加个loading事件</li>
-<li>created ：在这结束loading，还做一些初始化，实现函数自执行</li>
-<li>mounted ： 在这发起后端请求，拿回数据，配合路由钩子做一些事情</li>
-<li><p>beforeDestory： 你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容</p>
-</li>
-<li><p>created：进行ajax请求异步数据的获取、初始化数据</p>
-</li>
-<li>mounted：挂载元素内dom节点的获取</li>
-<li>nextTick：针对单一事件更新数据后立即操作dom</li>
-<li>updated：任何数据的更新，如果要做统一的业务逻辑处理</li>
-<li>watch：监听具体数据变化，并做相应的处理
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/27/Vue-js学习三/#more" rel="contents">
+            <a class="btn" href="/2017/07/20/HTML5基础标签的掌握/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -500,7 +449,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/23/Vue-js学习二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/深入理解ES6一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -519,7 +468,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/23/Vue-js学习二/" itemprop="url">Vue.js学习二</a></h1>
+                <a class="post-title-link" href="/2017/07/19/深入理解ES6一/" itemprop="url">深入理解ES6一</a></h1>
         
 
         <div class="post-meta">
@@ -531,8 +480,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T10:38:34+08:00">
-                2017-06-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-19T10:03:31+08:00">
+                2017-07-19
               </time>
             
 
@@ -554,8 +503,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
                   </a>
                 </span>
 
@@ -571,7 +520,7 @@
 
           
           
-             <span id="/2017/06/23/Vue-js学习二/" class="leancloud_visitors" data-flag-title="Vue.js学习二">
+             <span id="/2017/07/19/深入理解ES6一/" class="leancloud_visitors" data-flag-title="深入理解ES6一">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -600,39 +549,199 @@
 
       
         
-          <h2 id="Class与Style绑定"><a href="#Class与Style绑定" class="headerlink" title="Class与Style绑定"></a>Class与Style绑定</h2><h3 id="绑定HTML-Class"><a href="#绑定HTML-Class" class="headerlink" title="绑定HTML Class"></a>绑定HTML Class</h3><ol>
-<li>对象语法：</li>
+          <h1 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h1><ol>
+<li>Es6中引入块级声明，<code>let</code>声明的变量作用域限制在代码块中；</li>
+<li><code>let</code>声明不会被提升;</li>
+<li>在同一作用域中不能用<code>let</code>重复定义已经存在的标识符，会抛出错误。</li>
 </ol>
-<ul>
-<li><p>给<code>v-bind:class</code>一个对象，以动态切换class,语法表示<code>classactive</code>的更新将取决于数据属性 isActive 是否为真值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;&#123; active: isActive &#125;&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>在对象中传入更多属性用来动态切换多个 class ,v-bind:class 指令可以与普通的 class 属性共存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;static&quot;</div><div class="line">     v-bind:class=&quot;&#123; active: isActive, &apos;text-danger&apos;: hasError &#125;&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>直接绑定数据里的一个对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;classObject&quot;&gt;&lt;/div&gt;</div><div class="line">data: &#123;</div><div class="line">  classObject: &#123;</div><div class="line">    active: true,</div><div class="line">    &apos;text-danger&apos;: false</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="const声明"><a href="#const声明" class="headerlink" title="const声明"></a>const声明</h1><ol>
+<li><code>const</code>声明的变量作用域也会限制在代码块中；</li>
+<li><code>const</code>声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)</li>
+<li><code>const</code>声明不允许修改绑定，但允许修改值；例如<code>const</code>声明对象，对象的值是可以修改的</li>
+</ol>
+<h1 id="临时死区的存在"><a href="#临时死区的存在" class="headerlink" title="临时死区的存在"></a>临时死区的存在</h1><ul>
+<li>临时死区(temporal dead zone)TDZ用来描述<code>let</code>和<code>const</code>的不提升效果；</li>
+<li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
+</ul>
+<h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
+<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 </ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/19/深入理解ES6一/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/HTTP状态码分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/18/HTTP状态码分析/" itemprop="url">HTTP状态码分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T17:01:10+08:00">
+                2017-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTTP协议/" itemprop="url" rel="index">
+                    <span itemprop="name">HTTP协议</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/18/HTTP状态码分析/" class="leancloud_visitors" data-flag-title="HTTP状态码分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="1xx（临时响应）"><a href="#1xx（临时响应）" class="headerlink" title="1xx（临时响应）"></a>1xx（临时响应）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表示临时响应并需要请求者继续执行操作的状态码</div></pre></td></tr></table></figure>
 <ol>
-<li>数组语法</li>
+<li>100（继续）: 请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。</li>
+<li>101（切换协议）: 请求者已要求服务器切换协议，服务器已确认并准备切换。</li>
 </ol>
-<ul>
-<li><p>把一个数组传给 v-bind:class ，以应用一个 class 列表：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;[activeClass,errorClass]&quot;&gt;&lt;/div&gt;</div><div class="line">data: &#123;</div><div class="line">    activeClass: &apos;active&apos;,</div><div class="line">    errorClass: &apos;text-danger&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>用三元表达式，据条件切换列表中的 class</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:class=&quot;[isActive ? activeClass : &apos;&apos;, errorClass]&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><ul>
-<li><code>v-if</code>是“真正的”条件渲染，如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</li>
-<li><code>v-show</code>不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换</li>
-<li>区别：v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件不太可能改变，则使用 v-if 较好</li>
-</ul>
+<h2 id="2xx-（成功）"><a href="#2xx-（成功）" class="headerlink" title="2xx （成功）"></a>2xx （成功）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表示成功处理了请求的状态码</div></pre></td></tr></table></figure>
+<ol>
+<li>200（成功）: 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果是对您的 robots.txt 文件显示此状态码，则表示 Googlebot 已成功检索到该文件。</li>
+<li>201（已创建）: 请求成功并且服务器创建了新的资源。</li>
+<li>202（已接受）: 服务器已接受请求，但尚未处理。</li>
+<li>203（非授权信息）: 服务器已成功处理了请求，但返回的信息可能来自另一来源。</li>
+<li>204（无内容）: 服务器成功处理了请求，但没有返回任何内容。</li>
+<li>205（重置内容）: 服务器成功处理了请求，但没有返回任何内容。与 204 响应不同，此响应要求请求者重置文档视图（例如，清除表单内容以输入新内容）。</li>
+<li>206（部分内容）: 服务器成功处理了部分 GET 请求。</li>
+</ol>
+<h2 id="3xx-（重定向）"><a href="#3xx-（重定向）" class="headerlink" title="3xx （重定向）"></a>3xx （重定向）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">要完成请求，需要进一步操作。通常，这些状态码用来重定向。Google 建议您在每次请求中使用重定向不要超过 5 次。您可以使用网站管理员工具查看一下 Googlebot 在抓取重定向网页时是否遇到问题。诊断下的网络抓取页列出了由于重定向错误导致 Googlebot 无法抓取的网址。</div></pre></td></tr></table></figure>
+<ol>
+<li>300（多种选择）: 针对请求，服务器可执行多种操作。服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择</li>
+<li>301（永久移动）: 请求的网页已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。您应使用此代码告诉 Googlebot 某个网页或网站已永久移动到新位置</li>
+<li>302（临时移动）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个网页或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引</li>
+<li>303（查看其他位置）: 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。对于除 HEAD 之外的所有请求，服务器会自动转到其他位置。</li>
+<li>304（未修改）: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。</li>
+<li>305（使用代理）: 请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。</li>
+<li><p>307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 <a href="answer.py?answer=">301</a> 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/23/Vue-js学习二/#more" rel="contents">
+            <a class="btn" href="/2017/07/18/HTTP状态码分析/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -678,7 +787,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/23/hexo搭建博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/浏览器缓存/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -697,7 +806,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/23/hexo搭建博客/" itemprop="url">hexo搭建博客</a></h1>
+                <a class="post-title-link" href="/2017/07/18/浏览器缓存/" itemprop="url">浏览器缓存</a></h1>
         
 
         <div class="post-meta">
@@ -709,8 +818,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T10:29:13+08:00">
-                2017-06-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T10:55:49+08:00">
+                2017-07-18
               </time>
             
 
@@ -732,8 +841,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/应用工具学习/" itemprop="url" rel="index">
-                    <span itemprop="name">应用工具学习</span>
+                  <a href="/categories/HTTP协议/" itemprop="url" rel="index">
+                    <span itemprop="name">HTTP协议</span>
                   </a>
                 </span>
 
@@ -749,7 +858,7 @@
 
           
           
-             <span id="/2017/06/23/hexo搭建博客/" class="leancloud_visitors" data-flag-title="hexo搭建博客">
+             <span id="/2017/07/18/浏览器缓存/" class="leancloud_visitors" data-flag-title="浏览器缓存">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -778,193 +887,18 @@
 
       
         
-          <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
-<li>第一步、执行npm install hexo-cli -g 安装hexo</li>
-<li>第二步、找到你想写博客的文件夹，执行hexo init blog生成文件</li>
-<li>第三步、在生成的文件blog中执行hexo server，访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></li>
+          <h2 id="缓存的定义"><a href="#缓存的定义" class="headerlink" title="缓存的定义"></a>缓存的定义</h2><ul>
+<li>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。</li>
 </ul>
-<h2 id="安装和配置Next主题"><a href="#安装和配置Next主题" class="headerlink" title="安装和配置Next主题"></a>安装和配置Next主题</h2><ul>
-<li>在hexo目录下右键Git bash通过命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>next主题自动下载到themes目录下</li>
-<li>在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next<code>theme:next</code></li>
-<li><code>hexo s</code>验证主题配置是否成功，浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
+<h2 id="缓存的命中和未命中"><a href="#缓存的命中和未命中" class="headerlink" title="缓存的命中和未命中"></a>缓存的命中和未命中</h2><ul>
+<li>304 的标准解释：<ul>
+<li>Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</li>
 </ul>
-<h2 id="hexo书写博客"><a href="#hexo书写博客" class="headerlink" title="hexo书写博客"></a>hexo书写博客</h2><ul>
-<li>在source文件夹的_posts里面,通过<code>hexo new 博客标题</code>命令生成markdown文件</li>
-<li>文章写好后，执行<code>hexo generate</code>命令生成静态的html文件</li>
-</ul>
-<h2 id="发送博客到github上"><a href="#发送博客到github上" class="headerlink" title="发送博客到github上"></a>发送博客到github上</h2><ul>
-<li>我们把public里面的文件发布到github上面</li>
-<li>在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io</li>
-<li>用git发送到githoub是一定要发送到master分支</li>
-<li>不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/23/hexo搭建博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/微信页面开发的注意事项/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/19/微信页面开发的注意事项/" itemprop="url">微信页面开发的注意事项</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T20:21:27+08:00">
-                2017-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/应用工具学习/" itemprop="url" rel="index">
-                    <span itemprop="name">应用工具学习</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/应用工具学习/微信/" itemprop="url" rel="index">
-                    <span itemprop="name">微信</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/19/微信页面开发的注意事项/" class="leancloud_visitors" data-flag-title="微信页面开发的注意事项">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="页面搜索框"><a href="#页面搜索框" class="headerlink" title="页面搜索框"></a>页面搜索框</h2><ul>
-<li>为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边</li>
-<li><p>实现手机键盘显示搜索按钮<code>&lt;form&gt;</code>标签里面包含<code>&lt;input type=search&gt;</code>，<code>&lt;form&gt;</code>标签必须有<code>action</code>属性,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</div><div class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
 </li>
-<li><p>vue绑定事件在<code>&lt;input&gt;</code>标签上,用监听键盘事件<code>@keydown</code>,要使用<code>e.preventDefault()</code>阻止默认事件触发。</p>
+<li>HTTP在验证
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/19/微信页面开发的注意事项/#more" rel="contents">
+            <a class="btn" href="/2017/07/18/浏览器缓存/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1005,7 +939,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1050,7 +984,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1061,7 +995,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1072,7 +1006,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1186,7 +1120,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共30.2k字</span>
+  <span class="post-count">博客全站共32.2k字</span>
 </div>
 
         

@@ -296,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6五/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/微信JS-SDK的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -315,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6五/" itemprop="url">深入理解ES6五</a></h1>
+                <a class="post-title-link" href="/2017/09/18/微信JS-SDK的使用/" itemprop="url">微信JS-SDK的使用</a></h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:16+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T21:10:00+08:00">
+                2017-09-18
               </time>
             
 
@@ -338,28 +338,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -367,7 +345,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6五/" class="leancloud_visitors" data-flag-title="深入理解ES6五">
+             <span id="/2017/09/18/微信JS-SDK的使用/" class="leancloud_visitors" data-flag-title="微信JS-SDK的使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -396,31 +374,12 @@
 
       
         
-          <h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
-<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>函数中也可以传入解构表达式</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
-</li>
-<li><p>为非同名局部变量赋值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>嵌套对象解构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
-</li>
-</ul>
+          
+          
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6五/#more" rel="contents">
+            <a class="btn" href="/2017/09/18/微信JS-SDK的使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -466,7 +425,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6四/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/JS数组的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -485,7 +444,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6四/" itemprop="url">深入理解ES6四</a></h1>
+                <a class="post-title-link" href="/2017/09/18/JS数组的使用/" itemprop="url">JS数组的使用</a></h1>
         
 
         <div class="post-meta">
@@ -497,8 +456,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T21:09:31+08:00">
+                2017-09-18
               </time>
             
 
@@ -508,28 +467,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -537,7 +474,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6四/" class="leancloud_visitors" data-flag-title="深入理解ES6四">
+             <span id="/2017/09/18/JS数组的使用/" class="leancloud_visitors" data-flag-title="JS数组的使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -566,26 +503,12 @@
 
       
         
-          <h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
-<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
-<li>特异对象 具有某些与默认行为不符的内部行为</li>
-<li>标准对象 ES6中规范定义的对象</li>
-<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
-</ul>
-<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
-<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
-</li>
-</ul>
+          
+          
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6四/#more" rel="contents">
+            <a class="btn" href="/2017/09/18/JS数组的使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -631,7 +554,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6三/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/mockServer的搭建/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -650,7 +573,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6三/" itemprop="url">深入理解ES6三</a></h1>
+                <a class="post-title-link" href="/2017/09/18/mockServer的搭建/" itemprop="url">mockServer的搭建</a></h1>
         
 
         <div class="post-meta">
@@ -662,8 +585,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T09:08:19+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T15:41:30+08:00">
+                2017-09-18
               </time>
             
 
@@ -685,8 +608,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
+                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
+                    <span itemprop="name">前端构建生态</span>
                   </a>
                 </span>
 
@@ -702,7 +625,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6三/" class="leancloud_visitors" data-flag-title="深入理解ES6三">
+             <span id="/2017/09/18/mockServer的搭建/" class="leancloud_visitors" data-flag-title="mockServer的搭建">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -731,34 +654,23 @@
 
       
         
-          <h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
-<li><p>ES6简化了为形式参数提供默认值的过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function makeRequest(rul,timeout = 2000,callback) &#123;</div><div class="line">    //函数其余部分</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值</p>
-</li>
-<li><p>在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function mix(first,second=&apos;b&apos;) &#123;</div><div class="line">    console.log(arguments.length);  // 1 之传入了一个参数</div><div class="line">    console.log(first === arguments[0])  // true</div><div class="line">    console.log(second === aruments[1])  // false //arguments[1]是undefined</div><div class="line">&#125;</div><div class="line">mix(&apos;a&apos;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>默认参数表达式</p>
-<ul>
-<li>ES6中可以使用先定义的参数作为后定义参数的默认值，但是后定义的参数不能作为先定义参数的默认值。</li>
-<li>默认参数也存在临时死区，定义参数时会为每个参数创建一个新的标识符绑定，该绑定在初始化之前不可被引用，如果访问会导致程序错误</li>
+          <h1 id="使用json-server模拟服务器"><a href="#使用json-server模拟服务器" class="headerlink" title="使用json-server模拟服务器"></a>使用json-server模拟服务器</h1><h3 id="mockServer的思路"><a href="#mockServer的思路" class="headerlink" title="mockServer的思路"></a>mockServer的思路</h3><ul>
+<li>以 <code>json-server</code> 作为 mock 服务器， <code>mock.js</code> 生成 mock 数据，以此达到 <code>mock-server</code> 要求。</li>
 </ul>
-</li>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>全局安装<code>npm install -g json-server</code></li>
+<li>项目安装<code>npm install --save-dev json-server</code></li>
+<li>安装<code>mock.js</code>快速创建模拟接口 <code>npm install --save-dev mock.js</code></li>
 </ul>
-<h2 id="不定参数"><a href="#不定参数" class="headerlink" title="不定参数"></a>不定参数</h2><ul>
-<li>在函数的命名参数钱添加三个点(…)就表明这是一个不定参数，该参数为一个数组，包含着自它之后出入的所有参数，通过这个数组名即可逐一访问里面的参数。</li>
-<li>不定参数的使用限制：1.每个函数最多只能声明一个不定参数，而且一定要放在所有参数的末尾。2.不定参数不能用于对象字面量setter中</li>
-<li>arguments对象包含不定参数，无论是否使用不定参数，argumetns对象总是包含所有传入函数的参数</li>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li>在项目根目录下创建mock文件夹</li>
+<li>再分别创建<code>db.js</code>作为 mock 数据源、<code>router.js</code>作为 mock 服务、<code>server.js</code>重写路由表</li>
+<li><code>db.js</code>配置接口</li>
 </ul>
-<h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><pre><code>- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数
-- 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// ES5使用</div><div class="line">let values = [25,50,75,100];</div><div class="line">console.log(Math.max.apply(Math,values)); //100</div><div class="line"></div><div class="line">// Es6使用</div><div class="line">console.log(Math.max(...values)); //100</div></pre></td></tr></table></figure>
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// db.js</div><div class="line">var Mock = require(&apos;mockjs&apos;);</div><div class="line">module.exports = &#123;</div><div class="line">  getComment: Mock.mock(&#123;</div><div class="line">    &quot;error&quot;: 0,</div><div class="line">    &quot;message&quot;: &quot;success&quot;,</div><div class="line">    &quot;result|40&quot;: [&#123;</div><div class="line">      &quot;author&quot;: &quot;@name&quot;,</div><div class="line">      &quot;comment&quot;: &quot;@cparagraph&quot;,</div><div class="line">      &quot;date&quot;: &quot;@datetime&quot;</div><div class="line">    &#125;]</div><div class="line">  &#125;),</div><div class="line">  addComment: Mock.mock(&#123;</div><div class="line">    &quot;error&quot;: 0,</div><div class="line">    &quot;message&quot;: &quot;success&quot;,</div><div class="line">    &quot;result&quot;: []</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6三/#more" rel="contents">
+            <a class="btn" href="/2017/09/18/mockServer的搭建/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -804,7 +716,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/深入理解ES6二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/PS技能学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -823,7 +735,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/26/深入理解ES6二/" itemprop="url">深入理解ES6二</a></h1>
+                <a class="post-title-link" href="/2017/09/14/PS技能学习/" itemprop="url">PS技能学习</a></h1>
         
 
         <div class="post-meta">
@@ -835,8 +747,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T21:49:53+08:00">
-                2017-07-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T14:36:35+08:00">
+                2017-09-14
               </time>
             
 
@@ -858,8 +770,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
+                  <a href="/categories/Photoshop与切图/" itemprop="url" rel="index">
+                    <span itemprop="name">Photoshop与切图</span>
                   </a>
                 </span>
 
@@ -875,7 +787,7 @@
 
           
           
-             <span id="/2017/07/26/深入理解ES6二/" class="leancloud_visitors" data-flag-title="深入理解ES6二">
+             <span id="/2017/09/14/PS技能学习/" class="leancloud_visitors" data-flag-title="PS技能学习">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -904,33 +816,23 @@
 
       
         
-          <h1 id="模板字面量的主要功能"><a href="#模板字面量的主要功能" class="headerlink" title="模板字面量的主要功能"></a>模板字面量的主要功能</h1><ul>
-<li>多行字符串：一个正式的多行字符串的概念</li>
-<li>基本的字符串格式化：将变量的值嵌入字符串的能力</li>
-<li>HTML转义 向HTML插入经过安全转换后的字符串的能力</li>
-</ul>
-<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let message = `Hello world`;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号</p>
-</li>
-<li><p>模板字面量可以很简洁的使用多行字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let message = `Hello</div><div class="line">world`</div></pre></td></tr></table></figure>
-</li>
-<li><p>在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。<br>占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = `Hello $&#123;name&#125;`</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>#注意事项</p>
-<ul>
-<li><p>模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误</p>
-</li>
-<li><p>可以在模板字面量中嵌入另外一个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = &apos;Hello, $&#123;</div><div class="line">        `my name is $&#123;name&#125;`</div><div class="line">    &#125;.`;</div></pre></td></tr></table></figure>
-</li>
-</ul>
+          
+          截图
+选中图层，通过裁剪工具裁剪指定像素，按住回车键裁剪图片，按住ctrl键+shift键+alt键+s存储为web格式
+
+Photoshop界面设置
+窗口只显示字符、信息、图层、历史记录
+视图&gt;显示勾选上智能参考线，视图 勾选上标尺
+
+Photoshop基本工具操作移动工具设置
+快捷键V 快速获取移动工具
+通过Ctrl键+鼠标左键获取图层选区工具
+
+
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/26/深入理解ES6二/#more" rel="contents">
+            <a class="btn" href="/2017/09/14/PS技能学习/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -971,7 +873,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1016,7 +918,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1027,7 +929,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1038,7 +940,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1152,7 +1054,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共30.2k字</span>
+  <span class="post-count">博客全站共32.2k字</span>
 </div>
 
         

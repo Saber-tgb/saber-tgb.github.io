@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-13T09:03:07.601Z</updated>
+  <updated>2017-10-10T06:49:08.293Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,428 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm包的开发及发布</title>
+    <link href="http://yoursite.com/2017/10/10/npm%E5%8C%85%E7%9A%84%E5%BC%80%E5%8F%91%E5%8F%8A%E5%8F%91%E5%B8%83/"/>
+    <id>http://yoursite.com/2017/10/10/npm包的开发及发布/</id>
+    <published>2017-10-10T06:39:47.000Z</published>
+    <updated>2017-10-10T06:49:08.293Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="npm创建"><a href="#npm创建" class="headerlink" title="npm创建"></a>npm创建</h2><ul>
+<li><code>npm init</code><ul>
+<li>name：填写你这个包的名字，默认是你这个文件夹的名字。不过这里要着重说一下，最好先去npm上找一下有没有同名的包。最好的测试方式就是，在命令行里面输入npm install 你要取的名字，如果报错，那么很好，npm上没有跟你同名的包，你可以放心大胆地把包发布出去.</li>
+<li>version：你这个包的版本，默认是1.0.0，以后要在package.json文件中更改版本号才能重新发布npm包</li>
+<li>description：用一句话描述你的包是干嘛用的。</li>
+<li>entry point：入口文件，默认是Index.js，你也可以自己填写你自己的文件名</li>
+<li>test command：测试命令，这个直接回车就好了，因为目前还不需要这个。</li>
+<li>git repository：这个是git仓库地址，如果你的包是先放到github上或者其他git仓库里，这时候你的文件夹里面会存在一个隐藏的.git目录，npm会读到这个目录作为这一项的默认值。如果没有的话，直接回车继续。</li>
+<li>keyword：这个是一个重点，这个关系到有多少人会搜到你的npm包。尽量使用贴切的关键字作为这个包的索引。</li>
+<li>author：写你的账号或者你的github账号吧</li>
+<li>license：开源文件<a id="more"></a>
+<h2 id="npm包的开发"><a href="#npm包的开发" class="headerlink" title="npm包的开发"></a>npm包的开发</h2></li>
+</ul>
+</li>
+</ul>
+<h2 id="npm包的发布"><a href="#npm包的发布" class="headerlink" title="npm包的发布"></a>npm包的发布</h2><ul>
+<li>本地登录npm账号<code>npm login</code>,输入账户，密码，邮箱</li>
+<li>发布<code>npm publish</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;npm创建&quot;&gt;&lt;a href=&quot;#npm创建&quot; class=&quot;headerlink&quot; title=&quot;npm创建&quot;&gt;&lt;/a&gt;npm创建&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm init&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;name：填写你这个包的名字，默认是你这个文件夹的名字。不过这里要着重说一下，最好先去npm上找一下有没有同名的包。最好的测试方式就是，在命令行里面输入npm install 你要取的名字，如果报错，那么很好，npm上没有跟你同名的包，你可以放心大胆地把包发布出去.&lt;/li&gt;
+&lt;li&gt;version：你这个包的版本，默认是1.0.0，以后要在package.json文件中更改版本号才能重新发布npm包&lt;/li&gt;
+&lt;li&gt;description：用一句话描述你的包是干嘛用的。&lt;/li&gt;
+&lt;li&gt;entry point：入口文件，默认是Index.js，你也可以自己填写你自己的文件名&lt;/li&gt;
+&lt;li&gt;test command：测试命令，这个直接回车就好了，因为目前还不需要这个。&lt;/li&gt;
+&lt;li&gt;git repository：这个是git仓库地址，如果你的包是先放到github上或者其他git仓库里，这时候你的文件夹里面会存在一个隐藏的.git目录，npm会读到这个目录作为这一项的默认值。如果没有的话，直接回车继续。&lt;/li&gt;
+&lt;li&gt;keyword：这个是一个重点，这个关系到有多少人会搜到你的npm包。尽量使用贴切的关键字作为这个包的索引。&lt;/li&gt;
+&lt;li&gt;author：写你的账号或者你的github账号吧&lt;/li&gt;
+&lt;li&gt;license：开源文件
+    
+    </summary>
+    
+      <category term="前端构建生态" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E7%94%9F%E6%80%81/"/>
+    
+    
+      <category term="npm" scheme="http://yoursite.com/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stylus的使用</title>
+    <link href="http://yoursite.com/2017/09/25/Stylus%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/25/Stylus的使用/</id>
+    <published>2017-09-25T01:34:17.000Z</published>
+    <updated>2017-09-25T07:15:20.483Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Less安装"><a href="#Less安装" class="headerlink" title="Less安装"></a>Less安装</h1><ul>
+<li><code>npm install less -g</code>全局安装less,webStorm编辑器的插件会将less编译为css</li>
+<li><p>浏览器直接使用less</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//.less 样式表的链接，并将 rel 属性设置为 &quot;stylesheet/less&quot; 在 less.js 之前加载样式表。</div><div class="line">&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;./index.less&quot;&gt;</div><div class="line">// 使用`less.js`插件解析less</div><div class="line">&lt;script src=&quot;http://cdn.bootcss.com/less.js/1.7.0/less.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在vue框架中使用less,安装npm包<code>npm install --save-dev less less-loader</code></p>
+</li>
+</ul>
+<h1 id="Less的语法"><a href="#Less的语法" class="headerlink" title="Less的语法"></a>Less的语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>将常用的值定义在一个地方</li>
+<li>定义常用选择器<code>@mySelector:banner;</code></li>
+<li></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Less安装&quot;&gt;&lt;a href=&quot;#Less安装&quot; class=&quot;headerlink&quot; title=&quot;Less安装&quot;&gt;&lt;/a&gt;Less安装&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install less -g&lt;/code&gt;全局安装less,webStor
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+      <category term="CSS预处理器" scheme="http://yoursite.com/categories/CSS/CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="Stylus" scheme="http://yoursite.com/tags/Stylus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sass的使用</title>
+    <link href="http://yoursite.com/2017/09/25/Sass%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/25/Sass的使用/</id>
+    <published>2017-09-25T01:33:56.000Z</published>
+    <updated>2017-09-25T01:36:23.506Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+      <category term="CSS预处理器" scheme="http://yoursite.com/categories/CSS/CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="Sass" scheme="http://yoursite.com/tags/Sass/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Less的使用</title>
+    <link href="http://yoursite.com/2017/09/25/Less%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/25/Less的使用/</id>
+    <published>2017-09-25T01:33:29.000Z</published>
+    <updated>2017-09-25T01:36:05.931Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+      <category term="CSS预处理器" scheme="http://yoursite.com/categories/CSS/CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="Less" scheme="http://yoursite.com/tags/Less/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发</title>
+    <link href="http://yoursite.com/2017/09/25/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
+    <id>http://yoursite.com/2017/09/25/微信小程序开发/</id>
+    <published>2017-09-25T00:58:07.000Z</published>
+    <updated>2017-09-25T01:07:41.190Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="小程序的基本文件功能"><a href="#小程序的基本文件功能" class="headerlink" title="小程序的基本文件功能"></a>小程序的基本文件功能</h1><ul>
+<li><code>.js</code>后缀的是脚本文件，<code>.json</code>后缀的文件是配置文件，<code>.wxss</code>后缀的是样式表文件</li>
+<li>app.js是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量</li>
+<li>app.json 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。</li>
+<li>app.wxss 是整个小程序的公共样式表。我们可以在页面组件的 class 属性上直接使用 app.wxss 中声明的样式规则</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;小程序的基本文件功能&quot;&gt;&lt;a href=&quot;#小程序的基本文件功能&quot; class=&quot;headerlink&quot; title=&quot;小程序的基本文件功能&quot;&gt;&lt;/a&gt;小程序的基本文件功能&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.js&lt;/code&gt;后缀的是脚本文件，&lt;code&gt;.
+    
+    </summary>
+    
+      <category term="应用工具学习" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="微信小程序" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="微信小程序" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信公众号JS-SDK调用</title>
+    <link href="http://yoursite.com/2017/09/21/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7JS-SDK%E8%B0%83%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/21/微信公众号JS-SDK调用/</id>
+    <published>2017-09-21T03:38:03.000Z</published>
+    <updated>2017-09-21T09:02:36.084Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>微信JS-SDK是微信提供的一套调用微信内部API功能的的插件</li>
+</ul>
+<h2 id="JS-SDK使用"><a href="#JS-SDK使用" class="headerlink" title="JS-SDK使用"></a>JS-SDK使用</h2><ol>
+<li>域名绑定</li>
+<li>引入JS<ul>
+<li><code>html</code>文件中直接引入JS文件<code>http://res.wx.qq.com/open/js/jweixin-1.2.0.js</code></li>
+<li>vue单页面项目使用：<ul>
+<li>安装<code>npm install --save weixin-js-sdk</code></li>
+<li>组件中使用<code>import wx from &#39;weixin-js-sdk&#39;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>通过config接口注入权限验证配置</p>
+<ul>
+<li>通过后台提供的接口设置<code>config</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">wx.config(&#123;</div><div class="line">    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</div><div class="line">    appId: &apos;&apos;, // 必填，公众号的唯一标识</div><div class="line">    timestamp: , // 必填，生成签名的时间戳</div><div class="line">    nonceStr: &apos;&apos;, // 必填，生成签名的随机串</div><div class="line">    signature: &apos;&apos;,// 必填，签名，见附录1</div><div class="line">    jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>通过ready接口处理成功验证<code>wx.ready(function(){})</code></p>
+<ul>
+<li>vue单页面项目<code>wx.ready</code>写在主组件里面</li>
+</ul>
+</li>
+<li><p>通过error接口处理失败验证<code>wx.error(function(res){})</code></p>
+</li>
+</ol>
+<p>##接口调用说明</p>
+<ul>
+<li>所有接口通过wx对象(也可使用jWeixin对象)来调用，参数是一个对象，除了每个接口本身需要传的参数之外，还有以下通用参数<ol>
+<li>success：接口调用成功时执行的回调函数。</li>
+<li>fail：接口调用失败时执行的回调函数。</li>
+<li>complete：接口调用完成时执行的回调函数，无论成功或失败都会执行。</li>
+<li>cancel：用户点击取消时的回调函数，仅部分有用户取消操作的api才会用到。</li>
+<li>trigger: 监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。<code>备注：不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="基础接口的使用"><a href="#基础接口的使用" class="headerlink" title="基础接口的使用"></a>基础接口的使用</h2><ol>
+<li><p>图片上传</p>
+<ul>
+<li>调用<code>wx.chooseImage</code>选择图片或拍照,再调用上传图片接口<code>wx.uploadImage</code>上传到微信服务器获取到<code>serverId</code>，最后调用后台接口上传到公司服务器，根据后台返回的<code>imgURl</code>在页面显示<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">//示例</div><div class="line">wx.chooseImage(&#123;</div><div class="line">        count: 1,</div><div class="line">        sizeType: [&apos;original&apos;, &apos;compressed&apos;],</div><div class="line">        sourceType: [&apos;album&apos;, &apos;camera&apos;],</div><div class="line">        success: function (res) &#123;</div><div class="line">          let localId = res.localIds.toString();</div><div class="line">          wx.uploadImage(&#123;</div><div class="line">            localId: localId,</div><div class="line">            isShowProgressTips: 1,</div><div class="line">            success: function (res) &#123;</div><div class="line">              var serverId = res.serverId; // 返回图片的服务器端ID</div><div class="line">              let parms = &#123;</div><div class="line">                mediaid:serverId</div><div class="line">              &#125;</div><div class="line">              that.imgBoxWrapShow = true;</div><div class="line">              imgUpload(parms).then( res =&gt; &#123;</div><div class="line">                let &#123;code,msg,data&#125; = res;</div><div class="line">                if(code!==0) &#123;</div><div class="line">                  alert(msg);</div><div class="line">                  that.imgBoxWrapShow = false;</div><div class="line">                  return false;</div><div class="line">                &#125;</div><div class="line">                that.imgArr.push(data);</div><div class="line">                if(that.imgArr.length&gt;=4) &#123;</div><div class="line">                  that.uploadImgShow=false;</div><div class="line">                &#125;</div><div class="line">                that.imgBoxWrapShow = false;</div><div class="line">              &#125;)</div><div class="line">            &#125;,</div><div class="line">            fail: function() &#123;</div><div class="line">              alert(&apos;上传失败&apos;);</div><div class="line">            &#125;</div><div class="line">          &#125;);</div><div class="line">        &#125;,</div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>禁止微信的功能</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//隐藏微信的功能</div><div class="line">      wx.hideMenuItems(&#123;</div><div class="line">        menuList: [</div><div class="line">          &apos;menuItem:share:qq&apos;,</div><div class="line">          &apos;menuItem:share:weiboApp&apos;,</div><div class="line">          &apos;menuItem:favorite&apos;,</div><div class="line">          &apos;menuItem:share:facebook&apos;,</div><div class="line">          &apos;menuItem:share:QZone&apos;,</div><div class="line">          &apos;menuItem:editTag&apos;,</div><div class="line">          &apos;menuItem:delete&apos;,</div><div class="line">          &apos;menuItem:copyUrl&apos;,</div><div class="line">          &apos;menuItem:originPage&apos;,</div><div class="line">          &apos;menuItem:readMode&apos;,</div><div class="line">          &apos;menuItem:openWithQQBrowser&apos;,</div><div class="line">          &apos;menuItem:openWithSafari&apos;,</div><div class="line">          &apos;menuItem:share:email&apos;,</div><div class="line">          &apos;menuItem:share:brand&apos;,</div><div class="line">          &apos;menuItem:share:appMessage&apos;,</div><div class="line">          &apos;menuItem:share:timeline&apos;</div><div class="line">        ]</div><div class="line">      &#125;);</div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;微信JS-SDK是微信提供的一套调用微信内部API功能的的插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;JS-SDK使用&quot;&gt;&lt;a 
+    
+    </summary>
+    
+      <category term="应用工具学习" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="微信公众号" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="微信公众号" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+      <category term="微信JS-SDK" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1JS-SDK/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信公众号网页开发</title>
+    <link href="http://yoursite.com/2017/09/21/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    <id>http://yoursite.com/2017/09/21/微信公众号网页开发/</id>
+    <published>2017-09-21T03:37:12.000Z</published>
+    <updated>2017-09-21T03:42:59.689Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="应用工具学习" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="微信公众号" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="微信公众号" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ECMAScript--作用域</title>
+    <link href="http://yoursite.com/2017/09/18/ECMAScript-%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://yoursite.com/2017/09/18/ECMAScript-作用域/</id>
+    <published>2017-09-18T13:10:40.000Z</published>
+    <updated>2017-09-18T13:10:40.311Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信JS-SDK的使用</title>
+    <link href="http://yoursite.com/2017/09/18/%E5%BE%AE%E4%BF%A1JS-SDK%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/18/微信JS-SDK的使用/</id>
+    <published>2017-09-18T13:10:00.000Z</published>
+    <updated>2017-09-18T13:10:00.185Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JS数组的使用</title>
+    <link href="http://yoursite.com/2017/09/18/JS%E6%95%B0%E7%BB%84%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/18/JS数组的使用/</id>
+    <published>2017-09-18T13:09:31.000Z</published>
+    <updated>2017-09-18T13:09:31.211Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mockServer的搭建</title>
+    <link href="http://yoursite.com/2017/09/18/mockServer%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    <id>http://yoursite.com/2017/09/18/mockServer的搭建/</id>
+    <published>2017-09-18T07:41:30.000Z</published>
+    <updated>2017-09-18T14:26:00.257Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用json-server模拟服务器"><a href="#使用json-server模拟服务器" class="headerlink" title="使用json-server模拟服务器"></a>使用json-server模拟服务器</h1><h3 id="mockServer的思路"><a href="#mockServer的思路" class="headerlink" title="mockServer的思路"></a>mockServer的思路</h3><ul>
+<li>以 <code>json-server</code> 作为 mock 服务器， <code>mock.js</code> 生成 mock 数据，以此达到 <code>mock-server</code> 要求。</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>全局安装<code>npm install -g json-server</code></li>
+<li>项目安装<code>npm install --save-dev json-server</code></li>
+<li>安装<code>mock.js</code>快速创建模拟接口 <code>npm install --save-dev mock.js</code></li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li>在项目根目录下创建mock文件夹</li>
+<li>再分别创建<code>db.js</code>作为 mock 数据源、<code>router.js</code>作为 mock 服务、<code>server.js</code>重写路由表</li>
+<li><code>db.js</code>配置接口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// db.js</div><div class="line">var Mock = require(&apos;mockjs&apos;);</div><div class="line">module.exports = &#123;</div><div class="line">  getComment: Mock.mock(&#123;</div><div class="line">    &quot;error&quot;: 0,</div><div class="line">    &quot;message&quot;: &quot;success&quot;,</div><div class="line">    &quot;result|40&quot;: [&#123;</div><div class="line">      &quot;author&quot;: &quot;@name&quot;,</div><div class="line">      &quot;comment&quot;: &quot;@cparagraph&quot;,</div><div class="line">      &quot;date&quot;: &quot;@datetime&quot;</div><div class="line">    &#125;]</div><div class="line">  &#125;),</div><div class="line">  addComment: Mock.mock(&#123;</div><div class="line">    &quot;error&quot;: 0,</div><div class="line">    &quot;message&quot;: &quot;success&quot;,</div><div class="line">    &quot;result&quot;: []</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>通过路由表<code>routes.js</code>实现路由配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  &quot;/comment/get.action&quot;: &quot;/getComment&quot;,</div><div class="line">  &quot;/comment/add.action&quot;: &quot;/addComment&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>server.js</code>正式使用<code>json-server</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// server.js</div><div class="line">const jsonServer = require(&apos;json-server&apos;)</div><div class="line">const db = require(&apos;./db.js&apos;)</div><div class="line">const routes = require(&apos;./router.js&apos;)</div><div class="line">const port = 3000;</div><div class="line">const opn = require(&apos;opn&apos;)</div><div class="line"></div><div class="line">const server = jsonServer.create()</div><div class="line">const router = jsonServer.router(db)</div><div class="line">const middlewares = jsonServer.defaults()</div><div class="line">const rewriter = jsonServer.rewriter(routes)</div><div class="line"></div><div class="line">let url = &apos;http://localhost:&apos; + port</div><div class="line"></div><div class="line">server.use(middlewares)</div><div class="line">// 将 POST 请求转为 GET</div><div class="line">server.use((request, res, next) =&gt; &#123;</div><div class="line">  request.method = &apos;GET&apos;;</div><div class="line">  next();</div><div class="line">&#125;)</div><div class="line"></div><div class="line">server.use(rewriter) // 注意：rewriter 的设置一定要在 router 设置之前</div><div class="line">server.use(router)</div><div class="line"></div><div class="line">server.listen(port, () =&gt; &#123;</div><div class="line">  console.log(&apos;open mock server at localhost:&apos; + port)</div><div class="line">  opn(url);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ol>
+<li>在<code>package.json</code>中配置命令<ul>
+<li>配置mockServer启动<code>&quot;mockServer&quot;: &quot;node mock/server.js&quot;</code></li>
+<li>配置mockServer和项目一起启动<code>&quot;mock&quot;: &quot;npm run mockServer | npm run dev&quot;</code></li>
+</ul>
+</li>
+<li>调用命令启动项目和mockServer<code>npm run mock</code></li>
+</ol>
+<h3 id="端口代理"><a href="#端口代理" class="headerlink" title="端口代理"></a>端口代理</h3><ul>
+<li><p>通过 Webpack 配置 proxy 代理,vue-cli创建的项目在<code>config/index.js</code>中配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//配置代理</div><div class="line">proxyTable: &#123;</div><div class="line">  &apos;/api/&apos;: &#123;</div><div class="line">    target: &apos;http://localhost:3000&apos;,</div><div class="line">    changeOrigin: true,</div><div class="line">    pathRewrite: &#123;</div><div class="line">      &apos;^/api&apos;: &apos;&apos;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+</li>
+<li><p>接口请求案例,以 axios 为例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function getComments () &#123;</div><div class="line">  axios.get(&apos;api/comment/get.action&apos;, &#123;&#125;).then((res) =&gt; &#123;</div><div class="line">    console.log(res.data)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用json-server模拟服务器&quot;&gt;&lt;a href=&quot;#使用json-server模拟服务器&quot; class=&quot;headerlink&quot; title=&quot;使用json-server模拟服务器&quot;&gt;&lt;/a&gt;使用json-server模拟服务器&lt;/h1&gt;&lt;h3 id=&quot;mockServer的思路&quot;&gt;&lt;a href=&quot;#mockServer的思路&quot; class=&quot;headerlink&quot; title=&quot;mockServer的思路&quot;&gt;&lt;/a&gt;mockServer的思路&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;以 &lt;code&gt;json-server&lt;/code&gt; 作为 mock 服务器， &lt;code&gt;mock.js&lt;/code&gt; 生成 mock 数据，以此达到 &lt;code&gt;mock-server&lt;/code&gt; 要求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;全局安装&lt;code&gt;npm install -g json-server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;项目安装&lt;code&gt;npm install --save-dev json-server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装&lt;code&gt;mock.js&lt;/code&gt;快速创建模拟接口 &lt;code&gt;npm install --save-dev mock.js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在项目根目录下创建mock文件夹&lt;/li&gt;
+&lt;li&gt;再分别创建&lt;code&gt;db.js&lt;/code&gt;作为 mock 数据源、&lt;code&gt;router.js&lt;/code&gt;作为 mock 服务、&lt;code&gt;server.js&lt;/code&gt;重写路由表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;db.js&lt;/code&gt;配置接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// db.js&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var Mock = require(&amp;apos;mockjs&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;module.exports = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  getComment: Mock.mock(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;error&amp;quot;: 0,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;result|40&amp;quot;: [&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;quot;author&amp;quot;: &amp;quot;@name&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;quot;comment&amp;quot;: &amp;quot;@cparagraph&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;quot;date&amp;quot;: &amp;quot;@datetime&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  addComment: Mock.mock(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;error&amp;quot;: 0,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;result&amp;quot;: []&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="前端构建生态" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E7%94%9F%E6%80%81/"/>
+    
+    
+      <category term="mockServer" scheme="http://yoursite.com/tags/mockServer/"/>
+    
+      <category term="mock.js" scheme="http://yoursite.com/tags/mock-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PS技能学习</title>
+    <link href="http://yoursite.com/2017/09/14/PS%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/09/14/PS技能学习/</id>
+    <published>2017-09-14T06:36:35.000Z</published>
+    <updated>2017-09-14T09:06:47.779Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><ul>
+<li>选中图层，通过裁剪工具裁剪指定像素，按住回车键裁剪图片，按住<code>ctrl</code>键+<code>shift</code>键+<code>alt</code>键+<code>s</code>存储为web格式</li>
+</ul>
+<h2 id="Photoshop界面设置"><a href="#Photoshop界面设置" class="headerlink" title="Photoshop界面设置"></a>Photoshop界面设置</h2><ul>
+<li>窗口只显示字符、信息、图层、历史记录</li>
+<li>视图&gt;显示勾选上智能参考线，视图 勾选上标尺</li>
+</ul>
+<h2 id="Photoshop基本工具操作"><a href="#Photoshop基本工具操作" class="headerlink" title="Photoshop基本工具操作"></a>Photoshop基本工具操作</h2><h3 id="移动工具设置"><a href="#移动工具设置" class="headerlink" title="移动工具设置"></a>移动工具设置</h3><ul>
+<li>快捷键<code>V</code> 快速获取移动工具</li>
+<li>通过<code>Ctrl</code>键+鼠标左键获取图层<h3 id="选区工具"><a href="#选区工具" class="headerlink" title="选区工具"></a>选区工具</h3></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;截图&quot;&gt;&lt;a href=&quot;#截图&quot; class=&quot;headerlink&quot; title=&quot;截图&quot;&gt;&lt;/a&gt;截图&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;选中图层，通过裁剪工具裁剪指定像素，按住回车键裁剪图片，按住&lt;code&gt;ctrl&lt;/code&gt;键+&lt;code&gt;shift&lt;/co
+    
+    </summary>
+    
+      <category term="Photoshop与切图" scheme="http://yoursite.com/categories/Photoshop%E4%B8%8E%E5%88%87%E5%9B%BE/"/>
+    
+    
+      <category term="PS切图" scheme="http://yoursite.com/tags/PS%E5%88%87%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Next主体配置</title>
@@ -577,852 +999,6 @@
       <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
     
       <category term="Symbol" scheme="http://yoursite.com/tags/Symbol/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入理解ES6五</title>
-    <link href="http://yoursite.com/2017/08/06/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%BA%94/"/>
-    <id>http://yoursite.com/2017/08/06/深入理解ES6五/</id>
-    <published>2017-08-06T09:15:16.000Z</published>
-    <updated>2017-09-13T06:35:02.678Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
-<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>函数中也可以传入解构表达式</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
-</li>
-<li><p>为非同名局部变量赋值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>嵌套对象解构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<h2 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h2><ul>
-<li><p>数组解构语法：使用数组字面量，解构操作全部在数组内完成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let colors = [&apos;red&apos;, &apos;grren&apos;, &apos;blue&apos;];</div><div class="line">let [first, second] = colors;</div><div class="line">console.log(first);   //&apos;red&apos;</div><div class="line">console.log(second);   //&apos;grren&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>数组解构赋值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let colors = [&apos;red&apos;, &apos;grren&apos;, &apos;blue&apos;],</div><div class="line">    first = &apos;111&apos;,</div><div class="line">    second = &apos;222&apos;;</div><div class="line">[first,second] = colors;</div><div class="line"></div><div class="line">console.log(first);</div><div class="line">console.log(second);</div></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;对象解构&quot;&gt;&lt;a href=&quot;#对象解构&quot; class=&quot;headerlink&quot; title=&quot;对象解构&quot;&gt;&lt;/a&gt;对象解构&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;对象解构的语法：在赋值操作符(=)左边放置一个对象字面量&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; type, name&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(type);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(name);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type = &amp;apos;Literal&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name = &amp;apos;sss&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    (&amp;#123; type, name &amp;#125; = node);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(type); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(name); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;函数中也可以传入解构表达式&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type = &amp;apos;Literal&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name = &amp;apos;sss&amp;apos;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    function outPut(value) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        console.log(value === node);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    outPut(&amp;#123; type, name &amp;#125; = node);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(type); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(name); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; type, name, value = true&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(type); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(name); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(value); //true&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;为非同名局部变量赋值&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Indet&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; type:localType, name:localName&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(localType); //&amp;apos;Indet&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(localName); //&amp;apos;noo&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;嵌套对象解构&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let node = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type:&amp;apos;Identifier&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;noo&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    loc: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        start: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            line: 1,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            column:1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        end: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            line: 1,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            column: 4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let &amp;#123; loc: &amp;#123;start &amp;#125;&amp;#125; = node;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(start.line); //1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(start.column); //1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
-    
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
-      <category term="解构" scheme="http://yoursite.com/tags/%E8%A7%A3%E6%9E%84/"/>
-    
-      <category term="解构赋值" scheme="http://yoursite.com/tags/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
-    
-      <category term="对象解构" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84/"/>
-    
-      <category term="数组解构" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84/"/>
-    
-      <category term="不定元素" scheme="http://yoursite.com/tags/%E4%B8%8D%E5%AE%9A%E5%85%83%E7%B4%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入理解ES6四</title>
-    <link href="http://yoursite.com/2017/08/06/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E5%9B%9B/"/>
-    <id>http://yoursite.com/2017/08/06/深入理解ES6四/</id>
-    <published>2017-08-06T07:40:34.000Z</published>
-    <updated>2017-09-13T06:34:48.554Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
-<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
-<li>特异对象 具有某些与默认行为不符的内部行为</li>
-<li>标准对象 ES6中规范定义的对象</li>
-<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
-</ul>
-<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
-<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<h2 id="ES6新增方法"><a href="#ES6新增方法" class="headerlink" title="ES6新增方法"></a>ES6新增方法</h2><ul>
-<li><p>Object.is()方法：这个方法接受两个参数，如果两个参数的类型相同且具有相同的值，则返回true。用来弥补全等运算符的不准确运算。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(+0 === -0)  //true;</div><div class="line">console.log(Object.is(+0,-0)); //false</div><div class="line"></div><div class="line">console.log(NaN === Nan); //false</div><div class="line">console.log(Object.is(NaN,NaN)) //true</div></pre></td></tr></table></figure>
-</li>
-<li><p>Object.assign()方法：混入方法，这个方法接受一个对象和任意数量的源对象，最终返回接受对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">let obj = &#123;&#125;;</div><div class="line">Object.assign(obj,</div><div class="line">    &#123;</div><div class="line">        type:&apos;js&apos;;</div><div class="line">        name:&apos;file.js&apos;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">        type:&apos;css  //如果多个源对象具有同名的属性则排位靠后的源对象会覆盖排位靠前的</div><div class="line">    &#125;</div><div class="line">)</div><div class="line">console.log(obj.type); //&apos;css&apos;</div><div class="line">console.log(obj.name); //&apos;file.js&apos;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="增强对象原型"><a href="#增强对象原型" class="headerlink" title="增强对象原型"></a>增强对象原型</h2><ul>
-<li><p>ES6新增<code>Object.setPrototypeOf()方法</code>：这个方法可以改变任意指定对象的原型，它接受两个参数；被改变的对象原型的对象以及要替代第一个参数原型的对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    getGreeting() &#123;</div><div class="line">        return &apos;Hello&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">let dog = &#123;</div><div class="line">    getGreeting() &#123;</div><div class="line">        return &apos;Woof&apos;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let friend = Object.create(person);</div><div class="line">console.log(Object.getPrototypeOf(firend)===person); //true</div><div class="line"></div><div class="line">Object.setPrototypeOf(friend,dog);</div><div class="line">console.log(Object.getPrototypeOf(friend)===dog); //true</div></pre></td></tr></table></figure>
-</li>
-<li><p>简化原型访问的Super引用</p>
-<ul>
-<li>Super引用相当于指向对象原型的指针，就是Object.getPrototypeOf(this)的值</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;ES6规范清晰的定义了对象的类别&quot;&gt;&lt;a href=&quot;#ES6规范清晰的定义了对象的类别&quot; class=&quot;headerlink&quot; title=&quot;ES6规范清晰的定义了对象的类别&quot;&gt;&lt;/a&gt;ES6规范清晰的定义了对象的类别&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;普通对象 具有JavaScript对象所有的默认内部行为&lt;/li&gt;
-&lt;li&gt;特异对象 具有某些与默认行为不符的内部行为&lt;/li&gt;
-&lt;li&gt;标准对象 ES6中规范定义的对象&lt;/li&gt;
-&lt;li&gt;内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;对象字面量语法的扩展&quot;&gt;&lt;a href=&quot;#对象字面量语法的扩展&quot; class=&quot;headerlink&quot; title=&quot;对象字面量语法的扩展&quot;&gt;&lt;/a&gt;对象字面量语法的扩展&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function Person(name,age) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    reutrn &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        name,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        age&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;对象方法的简写语法：消除了冒号和关键字&lt;code&gt;function&lt;/code&gt;,与传统对象方法的区别是简写方法可以使用super关键字&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let person = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    name:&amp;apos;tgb&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    sayName() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        console.log(this.name);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let suffix = &amp;apos;name&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let person = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    [&amp;apos;first&amp;apos;+suffix]: &amp;apos;Nicholas&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    [&amp;apos;last&amp;apos;+suffix]:&amp;apos;Zakas&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(person[&amp;apos;first name&amp;apos;]);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(person[&amp;apos;last name&amp;apos;]);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
-    
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
-      <category term="对象" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1/"/>
-    
-      <category term="对象字面量" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入理解ES6三</title>
-    <link href="http://yoursite.com/2017/08/06/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%89/"/>
-    <id>http://yoursite.com/2017/08/06/深入理解ES6三/</id>
-    <published>2017-08-06T01:08:19.000Z</published>
-    <updated>2017-09-13T06:34:05.868Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
-<li><p>ES6简化了为形式参数提供默认值的过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function makeRequest(rul,timeout = 2000,callback) &#123;</div><div class="line">    //函数其余部分</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值</p>
-</li>
-<li><p>在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function mix(first,second=&apos;b&apos;) &#123;</div><div class="line">    console.log(arguments.length);  // 1 之传入了一个参数</div><div class="line">    console.log(first === arguments[0])  // true</div><div class="line">    console.log(second === aruments[1])  // false //arguments[1]是undefined</div><div class="line">&#125;</div><div class="line">mix(&apos;a&apos;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>默认参数表达式</p>
-<ul>
-<li>ES6中可以使用先定义的参数作为后定义参数的默认值，但是后定义的参数不能作为先定义参数的默认值。</li>
-<li>默认参数也存在临时死区，定义参数时会为每个参数创建一个新的标识符绑定，该绑定在初始化之前不可被引用，如果访问会导致程序错误</li>
-</ul>
-</li>
-</ul>
-<h2 id="不定参数"><a href="#不定参数" class="headerlink" title="不定参数"></a>不定参数</h2><ul>
-<li>在函数的命名参数钱添加三个点(…)就表明这是一个不定参数，该参数为一个数组，包含着自它之后出入的所有参数，通过这个数组名即可逐一访问里面的参数。</li>
-<li>不定参数的使用限制：1.每个函数最多只能声明一个不定参数，而且一定要放在所有参数的末尾。2.不定参数不能用于对象字面量setter中</li>
-<li>arguments对象包含不定参数，无论是否使用不定参数，argumetns对象总是包含所有传入函数的参数</li>
-</ul>
-<h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><pre><code>- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数
-- 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// ES5使用</div><div class="line">let values = [25,50,75,100];</div><div class="line">console.log(Math.max.apply(Math,values)); //100</div><div class="line"></div><div class="line">// Es6使用</div><div class="line">console.log(Math.max(...values)); //100</div></pre></td></tr></table></figure>
-</code></pre><a id="more"></a>
-<h2 id="判断函数被调用的方法"><a href="#判断函数被调用的方法" class="headerlink" title="判断函数被调用的方法"></a>判断函数被调用的方法</h2><ul>
-<li>在ES5中判断一个函数是否通过new关键字被调用(或者说，判断该函数是否作为构造函数被调用)，最常使用的是instanceof</li>
-<li>instanceof语法：<code>Object instanceof constructor;</code> <code>instanceof</code>运算符用来检测<code>constructor.prototype</code>是否存在于参数<code>Object</code>的原型链上</li>
-<li>ES6引入了<code>new.target</code>这个元属性，元属性市值非对象的属性，其可以提供非对象目标的补充信息，当调用函数的<a href="构造器">[construct]</a>方法时，new.target被赋值new操作符的目标，通常是新创建的对象实例。如果用[[call]]方法，则new.target的值为undefined。</li>
-</ul>
-<h2 id="块级函数"><a href="#块级函数" class="headerlink" title="块级函数"></a>块级函数</h2><ul>
-<li><p>ES6中允许在代码块中声明函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    function doSomething() &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>块级函数的声明提升</p>
-<ul>
-<li>函数声明的块级函数会被提升至块的顶部而用let定义的函数表达式不会被提升</li>
-<li>ES6严格模式下块级函数只会提升至块的顶部，但是在非严格模式下函数会被提升至外围函数或全局作用域的顶部。</li>
-</ul>
-</li>
-</ul>
-<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><ul>
-<li>箭头函数是一种使用箭头(=&gt;)定义函数的新语法</li>
-<li>与传统函数的不同：<ol>
-<li>没有this、super、arguments和new.target绑定 这些值由外围一层非箭头函数决定</li>
-<li>不能通过new关键字调用 箭头函数没有[[constructor]]方法，如果通过new关键字调用箭头函数，程序会抛出错误。</li>
-<li>没有原型 不存在<code>prototype</code>这个属性</li>
-<li>不可以改变<code>this</code>的绑定 在函数的生命周期内始终保持一致</li>
-<li>不支持arguments对象</li>
-<li>不支持重复命名的参数</li>
-</ol>
-</li>
-<li><p>箭头函数的语法</p>
-<ol>
-<li><p>当箭头函数只有一个参数时，可以直接写参数名，箭头紧随其后，箭头右侧额表达式被求值后便立即返回</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let reflect = value =&gt; value;</div></pre></td></tr></table></figure>
-</li>
-<li><p>如果要传入两个或两个以上的参数，要在参数的两侧添加一对小括号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let sum = (num1,num2) =&gt; num1+num2;</div></pre></td></tr></table></figure>
-</li>
-<li><p>如果函数没有参数，也要在声明的时候写一组没有内容的小括号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let getName = () =&gt; &apos;Tgb&apos;;</div></pre></td></tr></table></figure>
-</li>
-<li><p>可以有函数体</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let sum = (num1,num2) =&gt; &#123;</div><div class="line">    return num1+num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>箭头函数返回对象字面量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let getTempItem = id =&gt; (&#123; id: id,name: &apos;temp&apos; &#125;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>箭头函数的自调用 沙箱模式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let person = ((name) =&gt; &#123;</div><div class="line">    return &#123;</div><div class="line">        getName: function() &#123;</div><div class="line">            retrun name;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;)(&apos;tgb&apos;);</div></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ES6简化了为形式参数提供默认值的过程&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function makeRequest(rul,timeout = 2000,callback) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    //函数其余部分&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function mix(first,second=&amp;apos;b&amp;apos;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(arguments.length);  // 1 之传入了一个参数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(first === arguments[0])  // true&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(second === aruments[1])  // false //arguments[1]是undefined&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;mix(&amp;apos;a&amp;apos;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;默认参数表达式&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ES6中可以使用先定义的参数作为后定义参数的默认值，但是后定义的参数不能作为先定义参数的默认值。&lt;/li&gt;
-&lt;li&gt;默认参数也存在临时死区，定义参数时会为每个参数创建一个新的标识符绑定，该绑定在初始化之前不可被引用，如果访问会导致程序错误&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;不定参数&quot;&gt;&lt;a href=&quot;#不定参数&quot; class=&quot;headerlink&quot; title=&quot;不定参数&quot;&gt;&lt;/a&gt;不定参数&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在函数的命名参数钱添加三个点(…)就表明这是一个不定参数，该参数为一个数组，包含着自它之后出入的所有参数，通过这个数组名即可逐一访问里面的参数。&lt;/li&gt;
-&lt;li&gt;不定参数的使用限制：1.每个函数最多只能声明一个不定参数，而且一定要放在所有参数的末尾。2.不定参数不能用于对象字面量setter中&lt;/li&gt;
-&lt;li&gt;arguments对象包含不定参数，无论是否使用不定参数，argumetns对象总是包含所有传入函数的参数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;展开运算符&quot;&gt;&lt;a href=&quot;#展开运算符&quot; class=&quot;headerlink&quot; title=&quot;展开运算符&quot;&gt;&lt;/a&gt;展开运算符&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数
-- 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// ES5使用&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;let values = [25,50,75,100];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(Math.max.apply(Math,values)); //100&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// Es6使用&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(Math.max(...values)); //100&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
-    
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
-      <category term="函数" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="不定参数" scheme="http://yoursite.com/tags/%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0/"/>
-    
-      <category term="展开运算符" scheme="http://yoursite.com/tags/%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    
-      <category term="块级函数" scheme="http://yoursite.com/tags/%E5%9D%97%E7%BA%A7%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="箭头函数" scheme="http://yoursite.com/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入理解ES6二</title>
-    <link href="http://yoursite.com/2017/07/26/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%BA%8C/"/>
-    <id>http://yoursite.com/2017/07/26/深入理解ES6二/</id>
-    <published>2017-07-26T13:49:53.000Z</published>
-    <updated>2017-09-13T06:33:22.972Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="模板字面量的主要功能"><a href="#模板字面量的主要功能" class="headerlink" title="模板字面量的主要功能"></a>模板字面量的主要功能</h1><ul>
-<li>多行字符串：一个正式的多行字符串的概念</li>
-<li>基本的字符串格式化：将变量的值嵌入字符串的能力</li>
-<li>HTML转义 向HTML插入经过安全转换后的字符串的能力</li>
-</ul>
-<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let message = `Hello world`;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号</p>
-</li>
-<li><p>模板字面量可以很简洁的使用多行字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let message = `Hello</div><div class="line">world`</div></pre></td></tr></table></figure>
-</li>
-<li><p>在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。<br>占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = `Hello $&#123;name&#125;`</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>#注意事项</p>
-<ul>
-<li><p>模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误</p>
-</li>
-<li><p>可以在模板字面量中嵌入另外一个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = &apos;Hello, $&#123;</div><div class="line">        `my name is $&#123;name&#125;`</div><div class="line">    &#125;.`;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<h1 id="标签模板"><a href="#标签模板" class="headerlink" title="标签模板"></a>标签模板</h1><ul>
-<li><p>标签模板是在模板字面量第一个反撇号(`)前方标注的字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let message = tag`Hello world`</div></pre></td></tr></table></figure>
-</li>
-<li><p>标签是一个函数，第一个参数是一个数组，包含JavaScript解释过后的字面量字符串，它之后的所有参数都是每一个站位符的解释值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function tag(literals,...substitutions) &#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">    let a = 5,b = 10;</div><div class="line">    let tag = (s,v1,v2)=&gt;&#123;</div><div class="line">        console.log(s);</div><div class="line">        console.log(v1);</div><div class="line">        console.log(v2);</div><div class="line">    &#125;</div><div class="line">    tag`Hello $&#123;a+b&#125; world $&#123;a*b&#125;`;  //[&apos;Hello &apos;,&apos; world &apos;,&apos;&apos;]</div><div class="line">                                     //15</div><div class="line">                                     //50</div></pre></td></tr></table></figure>
-</li>
-<li><p>通过String.raw()标签可以访问到字符转义被转换成等价字符前的原声字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let message1 = `Multiline\nstring`;</div><div class="line">let message2 = String.raw`Multiline\nstring`;</div><div class="line">console.log(message1); //&apos;Multiline</div><div class="line">                       //string&apos;</div><div class="line">console.log(message2); //&apos;Multiline\nstring&apos;</div></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;模板字面量的主要功能&quot;&gt;&lt;a href=&quot;#模板字面量的主要功能&quot; class=&quot;headerlink&quot; title=&quot;模板字面量的主要功能&quot;&gt;&lt;/a&gt;模板字面量的主要功能&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;多行字符串：一个正式的多行字符串的概念&lt;/li&gt;
-&lt;li&gt;基本的字符串格式化：将变量的值嵌入字符串的能力&lt;/li&gt;
-&lt;li&gt;HTML转义 向HTML插入经过安全转换后的字符串的能力&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;基础语法&quot;&gt;&lt;a href=&quot;#基础语法&quot; class=&quot;headerlink&quot; title=&quot;基础语法&quot;&gt;&lt;/a&gt;基础语法&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let message = `Hello world`;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;模板字面量可以很简洁的使用多行字符串&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let message = `Hello&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;world`&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。&lt;br&gt;占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let name = &amp;apos;Nicholas&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    message = `Hello $&amp;#123;name&amp;#125;`&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;#注意事项&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;可以在模板字面量中嵌入另外一个&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;let name = &amp;apos;Nicholas&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    message = &amp;apos;Hello, $&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        `my name is $&amp;#123;name&amp;#125;`&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;.`;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
-    
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
-      <category term="模板字面量" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%9D%BF%E5%AD%97%E9%9D%A2%E9%87%8F/"/>
-    
-      <category term="标签模板" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML5基础标签的掌握</title>
-    <link href="http://yoursite.com/2017/07/20/HTML5%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE%E7%9A%84%E6%8E%8C%E6%8F%A1/"/>
-    <id>http://yoursite.com/2017/07/20/HTML5基础标签的掌握/</id>
-    <published>2017-07-20T09:12:09.000Z</published>
-    <updated>2017-09-13T06:37:56.455Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a><abbr>标签</abbr></h2><ul>
-<li><code>&lt;abbr&gt;</code> 标签表示简称或缩写，比如 “WWW” 或 “NATO”</li>
-<li><code>&lt;abbr&gt;</code> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.</div></pre></td></tr></table></figure>
-</abbr></li>
-</ul>
-<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;标签&quot;&gt;&lt;a href=&quot;#标签&quot; class=&quot;headerlink&quot; title=&quot;标签&quot;&gt;&lt;/a&gt;&lt;abbr&gt;标签&lt;/abbr&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; 标签表示简称或缩写，比如 “WWW” 或 “NATO”&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 &lt;abbr&gt; 元素上时显示出简称/缩写的完整版本。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;The &amp;lt;abbr title=&amp;quot;People&amp;apos;s Republic of China&amp;quot;&amp;gt;PRC&amp;lt;/abbr&amp;gt; was founded in 1949.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/abbr&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
-    
-    
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
-    
-      <category term="HTML5" scheme="http://yoursite.com/tags/HTML5/"/>
-    
-      <category term="标签" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入理解ES6一</title>
-    <link href="http://yoursite.com/2017/07/19/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ES6%E4%B8%80/"/>
-    <id>http://yoursite.com/2017/07/19/深入理解ES6一/</id>
-    <published>2017-07-19T02:03:31.000Z</published>
-    <updated>2017-09-13T06:35:12.445Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h1><ol>
-<li>Es6中引入块级声明，<code>let</code>声明的变量作用域限制在代码块中；</li>
-<li><code>let</code>声明不会被提升;</li>
-<li>在同一作用域中不能用<code>let</code>重复定义已经存在的标识符，会抛出错误。</li>
-</ol>
-<h1 id="const声明"><a href="#const声明" class="headerlink" title="const声明"></a>const声明</h1><ol>
-<li><code>const</code>声明的变量作用域也会限制在代码块中；</li>
-<li><code>const</code>声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)</li>
-<li><code>const</code>声明不允许修改绑定，但允许修改值；例如<code>const</code>声明对象，对象的值是可以修改的</li>
-</ol>
-<h1 id="临时死区的存在"><a href="#临时死区的存在" class="headerlink" title="临时死区的存在"></a>临时死区的存在</h1><ul>
-<li>临时死区(temporal dead zone)TDZ用来描述<code>let</code>和<code>const</code>的不提升效果；</li>
-<li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
-</ul>
-<h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
-<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li><p>使用闭包解决这个问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push((function(value)&#123;</div><div class="line">        // 变量i的值在传递到这个作用域是被赋值给了value;</div><div class="line">        // 此时这个值就不会随外部变量而变化了；</div><div class="line">        return function() &#123;</div><div class="line">            console.log(value);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i));</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用let声明简化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs=[];</div><div class="line">for(let i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="全局作用域的绑定"><a href="#全局作用域的绑定" class="headerlink" title="全局作用域的绑定"></a>全局作用域的绑定</h1><ul>
-<li>当<code>var</code>被用于全局作用域时，它会创建一个新的全局变量作为全局对象(浏览器环境中的window对象)的属性</li>
-<li>当在全局作用域中使用<code>let</code>和<code>const</code>,会在全局作用域下创建一个新的绑定，但是该绑定不会添加为全局对象的属性。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;let声明&quot;&gt;&lt;a href=&quot;#let声明&quot; class=&quot;headerlink&quot; title=&quot;let声明&quot;&gt;&lt;/a&gt;let声明&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;Es6中引入块级声明，&lt;code&gt;let&lt;/code&gt;声明的变量作用域限制在代码块中；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;let&lt;/code&gt;声明不会被提升;&lt;/li&gt;
-&lt;li&gt;在同一作用域中不能用&lt;code&gt;let&lt;/code&gt;重复定义已经存在的标识符，会抛出错误。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;const声明&quot;&gt;&lt;a href=&quot;#const声明&quot; class=&quot;headerlink&quot; title=&quot;const声明&quot;&gt;&lt;/a&gt;const声明&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;const&lt;/code&gt;声明的变量作用域也会限制在代码块中；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;const&lt;/code&gt;声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;const&lt;/code&gt;声明不允许修改绑定，但允许修改值；例如&lt;code&gt;const&lt;/code&gt;声明对象，对象的值是可以修改的&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;临时死区的存在&quot;&gt;&lt;a href=&quot;#临时死区的存在&quot; class=&quot;headerlink&quot; title=&quot;临时死区的存在&quot;&gt;&lt;/a&gt;临时死区的存在&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;临时死区(temporal dead zone)TDZ用来描述&lt;code&gt;let&lt;/code&gt;和&lt;code&gt;const&lt;/code&gt;的不提升效果；&lt;/li&gt;
-&lt;li&gt;与&lt;code&gt;var&lt;/code&gt;声明不同，&lt;code&gt;let&lt;/code&gt;和&lt;code&gt;const&lt;/code&gt;声明的变量不会被提升到作用域的顶部，在&lt;code&gt;javascript&lt;/code&gt;引擎扫描代码的时候会将&lt;code&gt;let&lt;/code&gt;和&lt;code&gt;const&lt;/code&gt;的声明放到临时死区中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;循环中的块级作用域&quot;&gt;&lt;a href=&quot;#循环中的块级作用域&quot; class=&quot;headerlink&quot; title=&quot;循环中的块级作用域&quot;&gt;&lt;/a&gt;循环中的块级作用域&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;常见的循环错误；&lt;code&gt;var&lt;/code&gt;声明是全局变量&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var funcs = [];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;for(var i=0;i&amp;lt;10;i++) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    funcs.push(function() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        console.log(i);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;funcs.forEach(funcion(func) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    func(); //输出10次10 &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
-    
-    
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
-      <category term="let" scheme="http://yoursite.com/tags/let/"/>
-    
-      <category term="const" scheme="http://yoursite.com/tags/const/"/>
-    
-      <category term="块级作用域" scheme="http://yoursite.com/tags/%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP状态码分析</title>
-    <link href="http://yoursite.com/2017/07/18/HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E5%88%86%E6%9E%90/"/>
-    <id>http://yoursite.com/2017/07/18/HTTP状态码分析/</id>
-    <published>2017-07-18T09:01:10.000Z</published>
-    <updated>2017-09-13T07:00:47.054Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1xx（临时响应）"><a href="#1xx（临时响应）" class="headerlink" title="1xx（临时响应）"></a>1xx（临时响应）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表示临时响应并需要请求者继续执行操作的状态码</div></pre></td></tr></table></figure>
-<ol>
-<li>100（继续）: 请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。</li>
-<li>101（切换协议）: 请求者已要求服务器切换协议，服务器已确认并准备切换。</li>
-</ol>
-<h2 id="2xx-（成功）"><a href="#2xx-（成功）" class="headerlink" title="2xx （成功）"></a>2xx （成功）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表示成功处理了请求的状态码</div></pre></td></tr></table></figure>
-<ol>
-<li>200（成功）: 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果是对您的 robots.txt 文件显示此状态码，则表示 Googlebot 已成功检索到该文件。</li>
-<li>201（已创建）: 请求成功并且服务器创建了新的资源。</li>
-<li>202（已接受）: 服务器已接受请求，但尚未处理。</li>
-<li>203（非授权信息）: 服务器已成功处理了请求，但返回的信息可能来自另一来源。</li>
-<li>204（无内容）: 服务器成功处理了请求，但没有返回任何内容。</li>
-<li>205（重置内容）: 服务器成功处理了请求，但没有返回任何内容。与 204 响应不同，此响应要求请求者重置文档视图（例如，清除表单内容以输入新内容）。</li>
-<li>206（部分内容）: 服务器成功处理了部分 GET 请求。</li>
-</ol>
-<h2 id="3xx-（重定向）"><a href="#3xx-（重定向）" class="headerlink" title="3xx （重定向）"></a>3xx （重定向）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">要完成请求，需要进一步操作。通常，这些状态码用来重定向。Google 建议您在每次请求中使用重定向不要超过 5 次。您可以使用网站管理员工具查看一下 Googlebot 在抓取重定向网页时是否遇到问题。诊断下的网络抓取页列出了由于重定向错误导致 Googlebot 无法抓取的网址。</div></pre></td></tr></table></figure>
-<ol>
-<li>300（多种选择）: 针对请求，服务器可执行多种操作。服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择</li>
-<li>301（永久移动）: 请求的网页已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。您应使用此代码告诉 Googlebot 某个网页或网站已永久移动到新位置</li>
-<li>302（临时移动）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个网页或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引</li>
-<li>303（查看其他位置）: 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。对于除 HEAD 之外的所有请求，服务器会自动转到其他位置。</li>
-<li>304（未修改）: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。</li>
-<li>305（使用代理）: 请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。</li>
-<li><p>307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 <a href="answer.py?answer=">301</a> 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。</p>
-<a id="more"></a>
-<h2 id="4xx（请求错误）"><a href="#4xx（请求错误）" class="headerlink" title="4xx（请求错误）"></a>4xx（请求错误）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些状态码表示请求可能出错，妨碍了服务器的处理</div></pre></td></tr></table></figure>
-</li>
-<li><p>400（错误请求）: 服务器不理解请求的语法。</p>
-</li>
-<li>401（未授权）: 请求要求身份验证。对于登录后请求的网页，服务器可能返回此响应。</li>
-<li>403（禁止）: 服务器拒绝请求。如果您在 Googlebot 尝试抓取您网站上的有效网页时看到此状态码（您可以在 Google 网站管理员工具诊断下的网络抓取页面上看到此信息），可能是您的服务器或主机拒绝了 Googlebot 访问</li>
-<li>404（未找到）：服务器找不到请求的网页。例如，对于服务器上不存在的网页经常会返回此代码。如果您的网站上没有 robots.txt 文件，而您在 Google 网站管理员工具”诊断”标签的 robots.txt 页上看到此状态码，则这是正确的状态码。但是，如果您有 robots.txt 文件而又看到此状态码，则说明您的 robots.txt 文件可能命名错误或位于错误的位置（该文件应当位于顶级域，名为 robots.txt）。如果对于 Googlebot 抓取的网址看到此状态码（在”诊断”标签的 HTTP 错误页面上），则表示 Googlebot 跟随的可能是另一个页面的无效链接（是旧链接或输入有误的链接）。</li>
-<li>405（方法禁用）：禁用请求中指定的方法。</li>
-<li>406（不接受）: 无法使用请求的内容特性响应请求的网页。</li>
-<li>407（需要代理授权）: 此状态码与 <a href="answer.py?answer=35128">401（未授权）</a>类似，但指定请求者应当授权使用代理。如果服务器返回此响应，还表示请求者应当使用代理。</li>
-<li>408（请求超时）: 服务器等候请求时发生超时。</li>
-<li>409（冲突）: 服务器在完成请求时发生冲突。服务器必须在响应中包含有关冲突的信息。服务器在响应与前一个请求相冲突的 PUT 请求时可能会返回此代码，以及两个请求的差异列表。</li>
-<li>410（已删除）: 如果请求的资源已永久删除，服务器就会返回此响应。该代码与 404（未找到）代码类似，但在资源以前存在而现在不存在的情况下，有时会用来替代 404 代码。如果资源已永久移动，您应使用 301 指定资源的新位置。</li>
-<li>411（需要有效长度）: 服务器不接受不含有效内容长度标头字段的请求</li>
-<li>412（未满足前提条件）: 服务器未满足请求者在请求中设置的其中一个前提条件。</li>
-<li>413（请求实体过大）: 服务器无法处理请求，因为请求实体过大，超出服务器的处理能力</li>
-<li>414（请求的 URI 过长）: 请求的 URI（通常为网址）过长，服务器无法处理。</li>
-<li>415（不支持的媒体类型）: 请求的格式不受请求页面的支持。</li>
-<li>416（请求范围不符合要求）: 如果页面无法提供请求的范围，则服务器会返回此状态码</li>
-<li>417（未满足期望值）: 服务器未满足”期望”请求标头字段的要求</li>
-</ol>
-<h2 id="5xx（服务器错误）"><a href="#5xx（服务器错误）" class="headerlink" title="5xx（服务器错误）"></a>5xx（服务器错误）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些状态码表示服务器在处理请求时发生内部错误。这些错误可能是服务器本身的错误，而不是请求出错。</div></pre></td></tr></table></figure>
-<ol>
-<li>500（服务器内部错误）: 服务器遇到错误，无法完成请求。</li>
-<li>501（尚未实施）: 服务器不具备完成请求的功能。例如，服务器无法识别请求方法时可能会返回此代码。</li>
-<li>502（错误网关）: 服务器作为网关或代理，从上游服务器收到无效响应</li>
-<li>503（服务不可用）: 服务器目前无法使用（由于超载或停机维护）。通常，这只是暂时状态</li>
-<li>504（网关超时）: 服务器作为网关或代理，但是没有及时从上游服务器收到请求</li>
-<li>505（HTTP 版本不受支持）: 服务器不支持请求中所用的 HTTP 协议版本</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1xx（临时响应）&quot;&gt;&lt;a href=&quot;#1xx（临时响应）&quot; class=&quot;headerlink&quot; title=&quot;1xx（临时响应）&quot;&gt;&lt;/a&gt;1xx（临时响应）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;表示临时响应并需要请求者继续执行操作的状态码&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;100（继续）: 请求者应当继续提出请求。服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。&lt;/li&gt;
-&lt;li&gt;101（切换协议）: 请求者已要求服务器切换协议，服务器已确认并准备切换。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;2xx-（成功）&quot;&gt;&lt;a href=&quot;#2xx-（成功）&quot; class=&quot;headerlink&quot; title=&quot;2xx （成功）&quot;&gt;&lt;/a&gt;2xx （成功）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;表示成功处理了请求的状态码&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;200（成功）: 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果是对您的 robots.txt 文件显示此状态码，则表示 Googlebot 已成功检索到该文件。&lt;/li&gt;
-&lt;li&gt;201（已创建）: 请求成功并且服务器创建了新的资源。&lt;/li&gt;
-&lt;li&gt;202（已接受）: 服务器已接受请求，但尚未处理。&lt;/li&gt;
-&lt;li&gt;203（非授权信息）: 服务器已成功处理了请求，但返回的信息可能来自另一来源。&lt;/li&gt;
-&lt;li&gt;204（无内容）: 服务器成功处理了请求，但没有返回任何内容。&lt;/li&gt;
-&lt;li&gt;205（重置内容）: 服务器成功处理了请求，但没有返回任何内容。与 204 响应不同，此响应要求请求者重置文档视图（例如，清除表单内容以输入新内容）。&lt;/li&gt;
-&lt;li&gt;206（部分内容）: 服务器成功处理了部分 GET 请求。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;3xx-（重定向）&quot;&gt;&lt;a href=&quot;#3xx-（重定向）&quot; class=&quot;headerlink&quot; title=&quot;3xx （重定向）&quot;&gt;&lt;/a&gt;3xx （重定向）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;要完成请求，需要进一步操作。通常，这些状态码用来重定向。Google 建议您在每次请求中使用重定向不要超过 5 次。您可以使用网站管理员工具查看一下 Googlebot 在抓取重定向网页时是否遇到问题。诊断下的网络抓取页列出了由于重定向错误导致 Googlebot 无法抓取的网址。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;300（多种选择）: 针对请求，服务器可执行多种操作。服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择&lt;/li&gt;
-&lt;li&gt;301（永久移动）: 请求的网页已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。您应使用此代码告诉 Googlebot 某个网页或网站已永久移动到新位置&lt;/li&gt;
-&lt;li&gt;302（临时移动）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 301 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个网页或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引&lt;/li&gt;
-&lt;li&gt;303（查看其他位置）: 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。对于除 HEAD 之外的所有请求，服务器会自动转到其他位置。&lt;/li&gt;
-&lt;li&gt;304（未修改）: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。&lt;/li&gt;
-&lt;li&gt;305（使用代理）: 请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;307（临时重定向）: 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来响应以后的请求。此代码与响应 GET 和 HEAD 请求的 &lt;a href=&quot;answer.py?answer=&quot;&gt;301&lt;/a&gt; 代码类似，会自动将请求者转到不同的位置，但您不应使用此代码来告诉 Googlebot 某个页面或网站已经移动，因为 Googlebot 会继续抓取原有位置并编制索引。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="HTTP协议" scheme="http://yoursite.com/categories/HTTP%E5%8D%8F%E8%AE%AE/"/>
-    
-    
-      <category term="http" scheme="http://yoursite.com/tags/http/"/>
-    
-      <category term="状态码" scheme="http://yoursite.com/tags/%E7%8A%B6%E6%80%81%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浏览器缓存</title>
-    <link href="http://yoursite.com/2017/07/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
-    <id>http://yoursite.com/2017/07/18/浏览器缓存/</id>
-    <published>2017-07-18T02:55:49.000Z</published>
-    <updated>2017-09-13T07:05:16.535Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="缓存的定义"><a href="#缓存的定义" class="headerlink" title="缓存的定义"></a>缓存的定义</h2><ul>
-<li>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。</li>
-</ul>
-<h2 id="缓存的命中和未命中"><a href="#缓存的命中和未命中" class="headerlink" title="缓存的命中和未命中"></a>缓存的命中和未命中</h2><ul>
-<li>304 的标准解释：<ul>
-<li>Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</li>
-</ul>
-</li>
-<li>HTTP在验证<a id="more"></a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;缓存的定义&quot;&gt;&lt;a href=&quot;#缓存的定义&quot; class=&quot;headerlink&quot; title=&quot;缓存的定义&quot;&gt;&lt;/a&gt;缓存的定义&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;缓存的命中和未命中&quot;&gt;&lt;a href=&quot;#缓存的命中和未命中&quot; class=&quot;headerlink&quot; title=&quot;缓存的命中和未命中&quot;&gt;&lt;/a&gt;缓存的命中和未命中&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;304 的标准解释：&lt;ul&gt;
-&lt;li&gt;Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP在验证
-    
-    </summary>
-    
-      <category term="HTTP协议" scheme="http://yoursite.com/categories/HTTP%E5%8D%8F%E8%AE%AE/"/>
-    
-    
-      <category term="http" scheme="http://yoursite.com/tags/http/"/>
-    
-      <category term="缓存" scheme="http://yoursite.com/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP协议的学习四</title>
-    <link href="http://yoursite.com/2017/07/17/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%9B%9B/"/>
-    <id>http://yoursite.com/2017/07/17/HTTP协议的学习四/</id>
-    <published>2017-07-17T06:58:41.007Z</published>
-    <updated>2017-09-13T06:39:03.589Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="web服务器的主要功能"><a href="#web服务器的主要功能" class="headerlink" title="web服务器的主要功能"></a>web服务器的主要功能</h2><ol>
-<li>建立连接</li>
-<li>接受请求–从网络中读取一条HTTP请求报文</li>
-<li>处理请求–对请求报文进行解释，并采取行动</li>
-<li>构建响应–创建带有正确首部的HTTP响应报文</li>
-<li>发送响应–将响应回送给客服端</li>
-<li>记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。</li>
-</ol>
-<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><ul>
-<li>web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。<a id="more"></a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;web服务器的主要功能&quot;&gt;&lt;a href=&quot;#web服务器的主要功能&quot; class=&quot;headerlink&quot; title=&quot;web服务器的主要功能&quot;&gt;&lt;/a&gt;web服务器的主要功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;建立连接&lt;/li&gt;
-&lt;li&gt;接受请求–从网络中读取一条HTTP请求报文&lt;/li&gt;
-&lt;li&gt;处理请求–对请求报文进行解释，并采取行动&lt;/li&gt;
-&lt;li&gt;构建响应–创建带有正确首部的HTTP响应报文&lt;/li&gt;
-&lt;li&gt;发送响应–将响应回送给客服端&lt;/li&gt;
-&lt;li&gt;记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;代理&quot;&gt;&lt;a href=&quot;#代理&quot; class=&quot;headerlink&quot; title=&quot;代理&quot;&gt;&lt;/a&gt;代理&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。
-    
-    </summary>
-    
-    
-      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
-    
-      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="代理" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP协议的学习三</title>
-    <link href="http://yoursite.com/2017/07/17/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
-    <id>http://yoursite.com/2017/07/17/HTTP协议的学习三/</id>
-    <published>2017-07-17T06:58:33.000Z</published>
-    <updated>2017-09-13T06:38:51.944Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="HTTP协议" scheme="http://yoursite.com/categories/HTTP%E5%8D%8F%E8%AE%AE/"/>
-    
-    
-      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
-    
-      <category term="URL" scheme="http://yoursite.com/tags/URL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工作中遇到的问题——对象的拷贝</title>
-    <link href="http://yoursite.com/2017/07/13/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D/"/>
-    <id>http://yoursite.com/2017/07/13/工作中遇到的问题——对象的拷贝/</id>
-    <published>2017-07-13T11:47:26.000Z</published>
-    <updated>2017-09-13T06:30:54.410Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h1><ul>
-<li>将对象赋值给一个变量时，当我改变变量的值，发现原来的对象也跟着改变。<h1 id="发现原因："><a href="#发现原因：" class="headerlink" title="发现原因："></a>发现原因：</h1></li>
-<li>因为对象是应用类型，存放在堆内存中；当我们用变量保存一个对象时，实际上保存的是该对象指针，这个指针指向对象的位置，所以当我们改变变量的时候，会从指针找到对象的位置，从而改变了对象。<h1 id="解决方法：将对象拷贝再赋值给变量"><a href="#解决方法：将对象拷贝再赋值给变量" class="headerlink" title="解决方法：将对象拷贝再赋值给变量"></a>解决方法：将对象拷贝再赋值给变量</h1></li>
-</ul>
-<ol>
-<li><p>浅拷贝</p>
-<ul>
-<li><p>简单的引用复制</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function shallowClone(copyObj) &#123;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    for ( var i in copyObj) &#123;</div><div class="line">        obj[i] = copyObj[i];</div><div class="line">    &#125;</div><div class="line">    return obj;</div><div class="line">&#125;</div><div class="line">var x = &#123;</div><div class="line">    a: 1,</div><div class="line">    b: &#123; f: &#123; g: 1 &#125; &#125;,</div><div class="line">    c: [ 1, 2, 3 ]</div><div class="line">&#125;;</div><div class="line">var y = shallowClone(x);</div><div class="line">console.log(y.b.f === x.b.f);     // true</div></pre></td></tr></table></figure>
-<a id="more"></a></li>
-<li>ES6新方法<code>Object.assign()</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var x = &#123;</div><div class="line">    a: 1,</div><div class="line">    b: &#123; f: &#123; g: 1 &#125; &#125;,</div><div class="line">    c: [ 1, 2, 3 ]</div><div class="line">&#125;;</div><div class="line">var y = Object.assign(&#123;&#125;, x);</div><div class="line">console.log(y.b.f === x.b.f);     // true</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>深度拷贝</p>
-<ul>
-<li><p>Array的slice和concat方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">    var array = [1,2,3]; </div><div class="line">var array_shallow = array; </div><div class="line">var array_concat = array.concat(); </div><div class="line">var array_slice = array.slice(0); </div><div class="line">console.log(array === array_shallow); //true </div><div class="line">console.log(array === array_slice); //false，“看起来”像深拷贝</div><div class="line">console.log(array === array_concat); //false，“看起来”像深拷贝</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">    var array = [1, [1,2,3], &#123;name:&quot;array&quot;&#125;]; </div><div class="line">var array_concat = array.concat();</div><div class="line">var array_slice = array.slice(0);</div><div class="line">array_concat[1][0] = 5;  //改变array_concat中数组元素的值 </div><div class="line">console.log(array[1]); //[5,2,3] </div><div class="line">console.log(array_slice[1]); //[5,2,3] </div><div class="line">array_slice[2].name = &quot;array_slice&quot;; //改变array_slice中对象元素的值 </div><div class="line">console.log(array[2].name); //array_slice</div><div class="line">console.log(array_concat[2].name); //array_slice</div></pre></td></tr></table></figure>
-</li>
-<li><p>JSON对象的parse和stringify</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">    //例1</div><div class="line">var source = &#123; name:&quot;source&quot;, child:&#123; name:&quot;child&quot; &#125; &#125; </div><div class="line">var target = JSON.parse(JSON.stringify(source));</div><div class="line">target.name = &quot;target&quot;;  //改变target的name属性</div><div class="line">console.log(source.name); //source </div><div class="line">console.log(target.name); //target</div><div class="line">target.child.name = &quot;target child&quot;; //改变target的child </div><div class="line">console.log(source.child.name); //child </div><div class="line">console.log(target.child.name); //target child</div><div class="line">//例2</div><div class="line">var source = &#123; name:function()&#123;console.log(1);&#125;, child:&#123; name:&quot;child&quot; &#125; &#125; </div><div class="line">var target = JSON.parse(JSON.stringify(source));</div><div class="line">console.log(target.name); //undefined</div><div class="line">//例3</div><div class="line">var source = &#123; name:function()&#123;console.log(1);&#125;, child:new RegExp(&quot;e&quot;) &#125;</div><div class="line">var target = JSON.parse(JSON.stringify(source));</div><div class="line">console.log(target.name); //undefined</div><div class="line">console.log(target.child); //Object &#123;&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<h1 id="完整的拷贝方法"><a href="#完整的拷贝方法" class="headerlink" title="完整的拷贝方法"></a>完整的拷贝方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">var $ = (function()&#123;</div><div class="line">  var types = &apos;Array Object String Date RegExp Function Boolean Number Null Undefined&apos;.split(&apos; &apos;);</div><div class="line">  function type() &#123;</div><div class="line">    return Object.prototype.toString.call(this).slice(8, -1);</div><div class="line">  &#125;</div><div class="line">  for (var i = types.length; i--;) &#123;</div><div class="line">     $[&apos;is&apos; + types[i]] = (function (self) &#123;</div><div class="line">        return function (elem) &#123;</div><div class="line">           return type.call(elem) === self;</div><div class="line">        &#125;;</div><div class="line">    &#125;)(types[i]);</div><div class="line">  &#125;</div><div class="line">  return $;</div><div class="line">&#125;)();//类型判断</div><div class="line"></div><div class="line"> function copy(obj,deep)&#123; </div><div class="line">  if(obj === null || (!$.isObject(obj) &amp;&amp; !$.isFunction(obj)))&#123; </div><div class="line">    return obj; </div><div class="line">      &#125; </div><div class="line">  if($.isFunction(obj))&#123;</div><div class="line">     return new Function(&quot;return &quot; + obj.toString())();</div><div class="line">  &#125;else&#123;</div><div class="line">         var name, target = $.isArray(obj) ? [] : &#123;&#125;, value; </div><div class="line">         for(name in obj)&#123; </div><div class="line">            value = obj[name]; </div><div class="line">            if(value === obj) &#123;</div><div class="line">              continue;</div><div class="line">            &#125;</div><div class="line">            if(deep &amp;&amp; ($.isArray(value) || $.isObject(value)))&#123;</div><div class="line">              target[name] = copy(value,deep);</div><div class="line">            &#125;else&#123;</div><div class="line">              target[name] = value;</div><div class="line">            &#125; </div><div class="line">       &#125; </div><div class="line">       return target;</div><div class="line">     &#125;　        </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;遇到的问题：&quot;&gt;&lt;a href=&quot;#遇到的问题：&quot; class=&quot;headerlink&quot; title=&quot;遇到的问题：&quot;&gt;&lt;/a&gt;遇到的问题：&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;将对象赋值给一个变量时，当我改变变量的值，发现原来的对象也跟着改变。&lt;h1 id=&quot;发现原因：&quot;&gt;&lt;a href=&quot;#发现原因：&quot; class=&quot;headerlink&quot; title=&quot;发现原因：&quot;&gt;&lt;/a&gt;发现原因：&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;因为对象是应用类型，存放在堆内存中；当我们用变量保存一个对象时，实际上保存的是该对象指针，这个指针指向对象的位置，所以当我们改变变量的时候，会从指针找到对象的位置，从而改变了对象。&lt;h1 id=&quot;解决方法：将对象拷贝再赋值给变量&quot;&gt;&lt;a href=&quot;#解决方法：将对象拷贝再赋值给变量&quot; class=&quot;headerlink&quot; title=&quot;解决方法：将对象拷贝再赋值给变量&quot;&gt;&lt;/a&gt;解决方法：将对象拷贝再赋值给变量&lt;/h1&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;浅拷贝&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;简单的引用复制&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function shallowClone(copyObj) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    var obj = &amp;#123;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    for ( var i in copyObj) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        obj[i] = copyObj[i];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    return obj;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var x = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    a: 1,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    b: &amp;#123; f: &amp;#123; g: 1 &amp;#125; &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    c: [ 1, 2, 3 ]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var y = shallowClone(x);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;console.log(y.b.f === x.b.f);     // true&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
-    
-    
-      <category term="对象" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1/"/>
-    
-      <category term="对象复制" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1%E5%A4%8D%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome开发工具指南</title>
-    <link href="http://yoursite.com/2017/07/12/Chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2017/07/12/Chrome开发工具指南/</id>
-    <published>2017-07-12T03:18:15.000Z</published>
-    <updated>2017-09-13T06:36:29.347Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="谷歌浏览器开发工具综述"><a href="#谷歌浏览器开发工具综述" class="headerlink" title="谷歌浏览器开发工具综述"></a>谷歌浏览器开发工具综述</h2><ol>
-<li>使用开发工具<ul>
-<li>选择浏览器位于浏览器窗口右上方的菜单栏的工具目录chrome-menu，选择开发者工具选项</li>
-<li>右击页面任何位置并选择审查元素</li>
-<li>使用快捷键f12</li>
-</ul>
-</li>
-<li>开发者工具窗口<ul>
-<li>开发者工具窗口的顶部工具栏中排列着任务相关的组。每个工具栏项目和相应的面板让你能够使用网页或应用程序的特定信息来工作，包括 DOM 元素，资源，和源。</li>
-<li>总体而言，有八个主要的工具可供查看开发工具<ol>
-<li>元素面板(Element)</li>
-<li>控制台面板(Console)</li>
-<li>源代码面板(sources)</li>
-<li>网络面板(Network)</li>
-<li>性能面板(Performance)</li>
-<li>内存面板(Memory)</li>
-<li>应用面板(Application)(Audits)</li>
-<li>安全面板(Security)</li>
-</ol>
-</li>
-<li>可以使用 Ctrl + [ 和 Ctrl + ] 快捷键在面板之间移动<a id="more"></a>
-<h2 id="元素面板-Element-详解"><a href="#元素面板-Element-详解" class="headerlink" title="元素面板(Element)详解"></a>元素面板(Element)详解</h2></li>
-</ul>
-</li>
-<li>检查和调整页面<ul>
-<li>实时编辑 DOM 节点：只需双击选定元素，然后进行更改</li>
-<li>实时编辑样式：<ul>
-<li>在 Styles 窗格中实时编辑样式属性名称和值。所有样式均可修改，除了灰色部分（与 User Agent 样式表一样）。</li>
-<li>要编辑名称或值，请点击它，进行更改，然后按 Tab 或 Enter 保存更改。</li>
-<li>默认情况下，您的 CSS 修改不是永久的，重新加载页面时更改会丢失。 如果您想要在页面加载时保留更改，请设置永久制作</li>
-</ul>
-</li>
-<li>检查和编辑框模型参数：<ul>
-<li>使用 Computed 窗格检查和编辑当前元素的框模型参数。 框模型中的所有值均可修改，只需点击它们即可</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>编辑样式<ul>
-<li>检查应用到元素的样式<ul>
-<li>顶端为 element.style。这些样式要么直接使用样式属性（例如 <p style="color:green">）直接应用到元素，要么在 DevTools 中应用</p></li>
-<li>下方是与元素匹配的任何 CSS 规则。例如，在下面的屏幕截图中，选定元素从 tools.css 中定义的规则接收 line-height:24px</li>
-<li>再下方是继承的样式，其中包括与选定元素的祖先实体匹配的任何可继承样式规则。 例如，在下面的屏幕截图中，选定元素从 user agent stylesheet 继承 display:list-item</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>编辑DOM</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;谷歌浏览器开发工具综述&quot;&gt;&lt;a href=&quot;#谷歌浏览器开发工具综述&quot; class=&quot;headerlink&quot; title=&quot;谷歌浏览器开发工具综述&quot;&gt;&lt;/a&gt;谷歌浏览器开发工具综述&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;使用开发工具&lt;ul&gt;
-&lt;li&gt;选择浏览器位于浏览器窗口右上方的菜单栏的工具目录chrome-menu，选择开发者工具选项&lt;/li&gt;
-&lt;li&gt;右击页面任何位置并选择审查元素&lt;/li&gt;
-&lt;li&gt;使用快捷键f12&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;开发者工具窗口&lt;ul&gt;
-&lt;li&gt;开发者工具窗口的顶部工具栏中排列着任务相关的组。每个工具栏项目和相应的面板让你能够使用网页或应用程序的特定信息来工作，包括 DOM 元素，资源，和源。&lt;/li&gt;
-&lt;li&gt;总体而言，有八个主要的工具可供查看开发工具&lt;ol&gt;
-&lt;li&gt;元素面板(Element)&lt;/li&gt;
-&lt;li&gt;控制台面板(Console)&lt;/li&gt;
-&lt;li&gt;源代码面板(sources)&lt;/li&gt;
-&lt;li&gt;网络面板(Network)&lt;/li&gt;
-&lt;li&gt;性能面板(Performance)&lt;/li&gt;
-&lt;li&gt;内存面板(Memory)&lt;/li&gt;
-&lt;li&gt;应用面板(Application)(Audits)&lt;/li&gt;
-&lt;li&gt;安全面板(Security)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;可以使用 Ctrl + [ 和 Ctrl + ] 快捷键在面板之间移动
-    
-    </summary>
-    
-      <category term="浏览器基础" scheme="http://yoursite.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
-    
-      <category term="chrome开发工具" scheme="http://yoursite.com/tags/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
