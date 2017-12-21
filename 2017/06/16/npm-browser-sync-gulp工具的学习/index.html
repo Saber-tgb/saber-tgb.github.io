@@ -1,0 +1,1339 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="npm,browser-sync,gulp,前端自动化工具," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="汤国斌的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="npm 官网[https://www.npmjs.com] node package manager 命令: 初始化:npm init 安装指定包:npm install jquery --save 删除指定包:npm remove jquery --save 卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery 下载安装pack">
+<meta name="keywords" content="npm,browser-sync,gulp,前端自动化工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm,browser-sync,gulp工具的学习">
+<meta property="og:url" content="http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/index.html">
+<meta property="og:site_name" content="汤国斌的博客">
+<meta property="og:description" content="npm 官网[https://www.npmjs.com] node package manager 命令: 初始化:npm init 安装指定包:npm install jquery --save 删除指定包:npm remove jquery --save 卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery 下载安装pack">
+<meta property="og:updated_time" content="2017-09-13T06:41:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="npm,browser-sync,gulp工具的学习">
+<meta name="twitter:description" content="npm 官网[https://www.npmjs.com] node package manager 命令: 初始化:npm init 安装指定包:npm install jquery --save 删除指定包:npm remove jquery --save 卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery 下载安装pack">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/"/>
+
+
+
+
+
+  <title>npm,browser-sync,gulp工具的学习 | 汤国斌的博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">汤国斌的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学习笔记</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">npm,browser-sync,gulp工具的学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:56:02+08:00">
+                2017-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
+                    <span itemprop="name">前端构建生态</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/16/npm-browser-sync-gulp工具的学习/" class="leancloud_visitors" data-flag-title="npm,browser-sync,gulp工具的学习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
+<li>官网[<a href="https://www.npmjs.com" target="_blank" rel="external">https://www.npmjs.com</a>]</li>
+<li>node package manager</li>
+<li>命令:<ul>
+<li>初始化:<code>npm init</code></li>
+<li>安装指定包:<code>npm install jquery --save</code></li>
+<li>删除指定包:<code>npm remove jquery --save</code></li>
+<li>卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery</li>
+<li>下载安装package.json中dependencies属性对的文件:<code>npm install --production</code></li>
+</ul>
+</li>
+<li>npm的使用步骤<ul>
+<li>第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）</li>
+<li>第二步、执行npm init -y</li>
+<li>第三步、安装需要的js库 npm install –save jquery</li>
+</ul>
+</li>
+</ul>
+<h3 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h3><ul>
+<li>更改代码之后自动刷新浏览器</li>
+<li>需要使用npm进行全局安装:<code>npm install browser-sync -g</code>,-g表示安装到全局</li>
+<li>使用:<code>browser-sync start --server --files &quot;./index.html,app.css,./css/*.css,*.*&quot;</code></li>
+<li>–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。</li>
+</ul>
+<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>  <a href="http://www.gulpjs.com" target="_blank" rel="external">官网</a><br>  <a href="http://www.gulpjs.com.cn" target="_blank" rel="external">中文网</a></p>
+<ul>
+<li><p>前端自动化构建工具<br>js压缩,var x,xname，混淆<br>合并.<br>css压缩<br>html压压缩</p>
+</li>
+<li><p>grunt ,webpack…</p>
+</li>
+</ul>
+<h3 id="核心就5个方法"><a href="#核心就5个方法" class="headerlink" title="核心就5个方法"></a>核心就5个方法</h3><ul>
+<li>task,gulp中是一个个任务的形式来实现功能。<ul>
+<li>task(‘任务名’,function(){<br>…..<br>});</li>
+</ul>
+</li>
+<li>src<ul>
+<li>src(‘./*.js’)</li>
+</ul>
+</li>
+<li>dest(‘./minjs/‘)// 指定处理后的文件的输出路径.</li>
+<li>watch(‘./*.js’,[‘任务名1’,’任务名2’]);</li>
+<li>run(‘任务名’);//执行指定的任务.<a id="more"></a>
+<h3 id="gulp的安装"><a href="#gulp的安装" class="headerlink" title="gulp的安装"></a>gulp的安装</h3></li>
+<li>使用npm 进行安装</li>
+<li><code>npm install gulp-cli -g</code>;</li>
+</ul>
+<h3 id="gulp-使用"><a href="#gulp-使用" class="headerlink" title="gulp 使用"></a>gulp 使用</h3><h4 id="使用时还需要在项目中通过npm非全局安装gulp"><a href="#使用时还需要在项目中通过npm非全局安装gulp" class="headerlink" title="使用时还需要在项目中通过npm非全局安装gulp"></a>使用时还需要在项目中通过npm非全局安装gulp</h4><ul>
+<li><code>npm install gulp --save-dev</code><ul>
+<li>-dev安装在本地</li>
+<li>之所以在全局安装了一次还有在项目中安装，是为了保证gulp的版本的控制，每次使用的时候重新安装能控制gulp的版本</li>
+</ul>
+</li>
+</ul>
+<h4 id="还需要在当前项目根目录添加一个gulpfile-js文件来写具体的任务代码"><a href="#还需要在当前项目根目录添加一个gulpfile-js文件来写具体的任务代码" class="headerlink" title="还需要在当前项目根目录添加一个gulpfile.js文件来写具体的任务代码."></a>还需要在当前项目根目录添加一个gulpfile.js文件来写具体的任务代码.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line">// 得到gulp对象</div><div class="line">var gulp = require(&quot;gulp&quot;);</div><div class="line">//引入gulp-uglify插件 用来压缩js</div><div class="line">var uglify = require(&apos;gulp-uglify&apos;);</div><div class="line">//引入gulp-concat插件 用来合并代码 js,css都能合并</div><div class="line">var concat = require(&apos;gulp-concat&apos;);</div><div class="line">//引入gulp-cssnano插件 用来对css进行压缩</div><div class="line">var cssnano = require(&apos;gulp-cssnano&apos;);</div><div class="line">//引入gulp-htmlmin插件 用来对html代码进行压缩</div><div class="line">var htmlmin = require(&apos;gulp-htmlmin&apos;);</div><div class="line">//引入gulp-imagemin插件 对图片进行压缩</div><div class="line">var imagemin = require(&apos;gulp-imagemin&apos;);</div><div class="line">//引入gulp-spriter插件 合并成精灵图</div><div class="line">var spriter = require(&apos;gulp-spriter&apos;);</div><div class="line">&lt;!-- more --&gt;</div><div class="line">//创建js压缩任务</div><div class="line">gulp.task(&apos;script&apos;,function()&#123;</div><div class="line">  // 这里写任务具体需要做的事情.</div><div class="line">  // 2.匹配到app.js文件,如果使用多个规则，需要以数组的形式来书写第一个参数，数组中的每一个元素都是一个规则。</div><div class="line">  gulp.src([&apos;./app.js&apos;,&apos;./signIn.js&apos;])</div><div class="line">  //合并后生成的文件名</div><div class="line">  .pipe(concat(&apos;all.js&apos;))</div><div class="line">  //调用方法 压缩js</div><div class="line">  .pipe(uglify())</div><div class="line">  //将合格的js文件 输出到指定目录</div><div class="line">  .pipe(gulp.dest(&apos;./dist&apos;))</div><div class="line">&#125;);</div><div class="line">//创建css压缩任务</div><div class="line">gulp.task(&apos;style&apos;,function()&#123;</div><div class="line">   // 匹配css文件</div><div class="line">   gulp.src([&apos;./style.css&apos;,&apos;./signIn.css&apos;])</div><div class="line">   .pipe(concat(&apos;all.css&apos;)) // 需要指定一个名字，作为压缩后文件的文件名</div><div class="line">   .pipe(cssnano())</div><div class="line">   .pipe(gulp.dest(&apos;./dist&apos;))</div><div class="line">&#125;);</div><div class="line">//创建html压缩任务</div><div class="line">gulp.task(&apos;htmlmin&apos;,function()&#123;</div><div class="line">    gulp.src(&apos;./index.html&apos;)</div><div class="line">        .pipe(htmlmin(&#123;</div><div class="line">            //collapseWhitespace:清除空格</div><div class="line">            collapseWhitespace:true,</div><div class="line">            //collapseBooleanAttributes:省略布尔属性的值，</div><div class="line">            collapseBooleanAttributes:true,</div><div class="line">            //removeComments:清除html中注释的部分</div><div class="line">            removeComments:true,</div><div class="line">            //removeEmptyAttributes:清除所有的空属性</div><div class="line">            removeEmptyAttributes:true,</div><div class="line">            //removeSciptTypeAttributes:清除所有script标签中的type=&quot;text/javascript&quot;属性。</div><div class="line">            removeScriptTypeAttributes:true,</div><div class="line">            //removeStyleLinkTypeAttributes:清楚所有Link标签上的type属性</div><div class="line">            removeStyleLinkTypeAttributes:true,</div><div class="line">            //minifyJS:压缩html中的javascript代码。</div><div class="line">            minifyJS:true,</div><div class="line">            //minifyCSS:压缩html中的css代码</div><div class="line">            minifyCSS:true</div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(&apos;./dist&apos;));</div><div class="line">&#125;);</div><div class="line">//创建合并压缩方法</div><div class="line">gulp.task(&apos;concat&apos;,function()&#123;</div><div class="line">    // 匹配文件</div><div class="line">    gulp.src([&apos;./1.js&apos;,&apos;./2.js&apos;])</div><div class="line">        //调用合并方法 生成新的文件名</div><div class="line">        .pipe(concat(&apos;index.js&apos;))</div><div class="line">        //调用压缩方法</div><div class="line">        .pipe(uglify())</div><div class="line">        //输出到指定目录</div><div class="line">        .pipe(gulp.dest(&apos;./build&apos;));</div><div class="line">&#125;)</div><div class="line">//创建图片压缩方法</div><div class="line">gulp.task(&apos;imagemin&apos;,function()&#123;</div><div class="line">  //引入图片地址方法</div><div class="line">  gulp.src(&apos;./images/*&apos;)</div><div class="line">      //调用图片压缩</div><div class="line">      .pipe(imagemin())</div><div class="line">      //输出压缩后图片的存放地址</div><div class="line">      .pipe(gulp.dest(&apos;dist/images&apos;));</div><div class="line">&#125;);</div><div class="line">//创建合并精灵图任务</div><div class="line">gulp.task(&apos;spriter&apos;,function()&#123;</div><div class="line">  return gulp.src(&apos;./style.css&apos;)//原始的css文件地址</div><div class="line">             //调用spriter精灵图合并方法</div><div class="line">             .pipe(spriter(&#123;</div><div class="line">               sprite:&apos;test.png&apos;,//合并后图片的名字</div><div class="line">               slice:&apos;./slice&apos;,//原始小图片路径</div><div class="line">               outpath:&apos;build/tests&apos;//合并后的大图的地址</div><div class="line">             &#125;))</div><div class="line">             //合并精灵图后的css的文件地址</div><div class="line">             .pipe(gulp.dest(&apos;./build/css&apos;));</div><div class="line">&#125;)</div><div class="line">//创建监视任务</div><div class="line">gulp.task(&quot;watch&quot;,function()&#123;</div><div class="line">      //调用watch方法</div><div class="line">      //第一个参数是监视目标文件,第二个参数是执行的任务</div><div class="line">      gulp.watch([&apos;./app.js&apos;,&apos;./signIn.js&apos;],[&quot;script&quot;]);</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>调用方法直接在控制台输入<code>gulp 任务名</code></li>
+</ul>
+<h3 id="gulp监视文件的改变"><a href="#gulp监视文件的改变" class="headerlink" title="gulp监视文件的改变"></a>gulp监视文件的改变</h3><ul>
+<li>监视文件,当文件发生改变时,watch方法就会执行目标文件所绑定的事件</li>
+<li>使用：在cmd命令窗口直接调用gulp myWatch方法</li>
+<li>第一个参数是监视目标文件,第二个参数是执行的任务<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gulp.task(&quot;myWatch&quot;,function()&#123;</div><div class="line">    gulp.watch([&quot;./a.html&quot;,&quot;./b.html&quot;],function()&#123;</div><div class="line">        console.console.log()</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="gup-结合browsr-sync使用"><a href="#gup-结合browsr-sync使用" class="headerlink" title="gup 结合browsr-sync使用"></a>gup 结合browsr-sync使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//gulp结合browser-sync一起使用</div><div class="line">//当你改动html,css,js的时候 --&gt; 合并,压缩我们的html,js,css --&gt; browser-sync刷新浏览器</div><div class="line">//使用之前要在当前项目安装browser-sync 命令:npm install --save-dev browser-sync</div><div class="line">var browserSync = require(&apos;browser-sync&apos;) //得到browserSync对象</div><div class="line">//创建browserSync任务</div><div class="line">gulp.task(&quot;browserSync&quot;,function()&#123; // 静态服务器</div><div class="line">        //第一步先用gulp监视index.html,如果有改动就会执行htmlmin这个任务</div><div class="line">        gulp.watch([&quot;./index.html&quot;],[&quot;htmlmin&quot;]);</div><div class="line">        //第二步开启browserSyn,一旦html文件夹里面压缩的html有改动，就会刷新浏览器</div><div class="line">        browserSync(&#123;</div><div class="line">            server:&#123;</div><div class="line">                baseDir:&quot;./html&quot; //创建服务器的文件夹</div><div class="line">            &#125;,</div><div class="line">            files:[&quot;./html/index.html&quot;] //同步的html代码</div><div class="line">        &#125;);</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<h3 id="gulp的一些插件"><a href="#gulp的一些插件" class="headerlink" title="gulp的一些插件"></a>gulp的一些插件</h3><ul>
+<li>也是使用npm安装</li>
+<li>对js代码进行压缩 gulp-uglify</li>
+<li>对代码进行合并 gulp-concat</li>
+<li>对css进行压缩 gulp-cssnano</li>
+<li>对html进行压缩 gulp-htmlmin</li>
+<li>对图片进行压缩  gulp-imagemin</li>
+<li>合并精灵图  gulp-spriter</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/npm/" rel="tag"><i class="fa fa-tag"></i> npm</a>
+          
+            <a href="/tags/browser-sync/" rel="tag"><i class="fa fa-tag"></i> browser-sync</a>
+          
+            <a href="/tags/gulp/" rel="tag"><i class="fa fa-tag"></i> gulp</a>
+          
+            <a href="/tags/前端自动化工具/" rel="tag"><i class="fa fa-tag"></i> 前端自动化工具</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/16/Git的使用/" rel="next" title="Git的使用">
+                <i class="fa fa-chevron-left"></i> Git的使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/19/微信页面开发的注意事项/" rel="prev" title="微信页面开发的注意事项">
+                微信页面开发的注意事项 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/Octocat.jpg"
+               alt="汤国斌" />
+          <p class="site-author-name" itemprop="name">汤国斌</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">63</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">88</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Saber-tgb" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/your-user-name" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm"><span class="nav-number">1.</span> <span class="nav-text">npm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#browser-sync"><span class="nav-number">2.</span> <span class="nav-text">browser-sync</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp"><span class="nav-number"></span> <span class="nav-text">gulp</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#核心就5个方法"><span class="nav-number">1.</span> <span class="nav-text">核心就5个方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp的安装"><span class="nav-number">2.</span> <span class="nav-text">gulp的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp-使用"><span class="nav-number">3.</span> <span class="nav-text">gulp 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用时还需要在项目中通过npm非全局安装gulp"><span class="nav-number">3.1.</span> <span class="nav-text">使用时还需要在项目中通过npm非全局安装gulp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#还需要在当前项目根目录添加一个gulpfile-js文件来写具体的任务代码"><span class="nav-number">3.2.</span> <span class="nav-text">还需要在当前项目根目录添加一个gulpfile.js文件来写具体的任务代码.</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp监视文件的改变"><span class="nav-number">4.</span> <span class="nav-text">gulp监视文件的改变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gup-结合browsr-sync使用"><span class="nav-number">5.</span> <span class="nav-text">gup 结合browsr-sync使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp的一些插件"><span class="nav-number">6.</span> <span class="nav-text">gulp的一些插件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">汤国斌</span>
+</div>
+
+
+
+<!--<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>-->
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <span class="post-count">博客全站共38.8k字</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("mIuTyAbqFm49hrJyheK6yIkE-gzGzoHsz", "NWb315WrFF6yh92E5q0TeLzO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script count="250" type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>

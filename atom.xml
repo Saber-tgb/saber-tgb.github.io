@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>汤国斌的博客</title>
+  <subtitle>学习笔记</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-11-26T05:27:14.561Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>汤国斌</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/12/21/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%88%86%E7%B1%BB/"/>
+    <id>http://yoursite.com/2017/12/21/编程语言分类/</id>
+    <published>2017-12-21T08:06:28.217Z</published>
+    <updated>2017-11-26T05:27:14.561Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: 编程语言分类<br>date: 2017-11-26 13:08:34<br>categories:</p>
+<ul>
+<li>ECMAScript<br>tags:</li>
+<li>语言类型</li>
+</ul>
+<hr>
+<h1 id="一、看图区分语言类型"><a href="#一、看图区分语言类型" class="headerlink" title="一、看图区分语言类型"></a>一、看图区分语言类型</h1><p><img src="http://ojvil4eq9.bkt.clouddn.com/17-11-26/57660205.jpg" alt=""></p>
+<h1 id="二、语法角度的文字表述"><a href="#二、语法角度的文字表述" class="headerlink" title="二、语法角度的文字表述"></a>二、语法角度的文字表述</h1><h2 id="1-动态类型语言"><a href="#1-动态类型语言" class="headerlink" title="1. 动态类型语言"></a>1. 动态类型语言</h2><ul>
+<li>运行期间才做数据类型检查的语言，即动态类型语言编程时，永远不用给任何变量指定数据类型。该语言会在第一次赋值给变量时，在内部将数据类型记录下来。</li>
+<li>优点：方便阅读，不需要写非常多的类型相关的代码；</li>
+<li>缺点：不方便调试，命名不规范时会造成读不懂，不利于理解等<h2 id="2-静态类型语言"><a href="#2-静态类型语言" class="headerlink" title="2. 静态类型语言"></a>2. 静态类型语言</h2></li>
+<li>编译期间做检查数据类型的语言，即写程序时要声明所有变量的数据类型，是固定的。使用数据之前，必须先声明数据类型（int ,float,double等）。相当于使用之前，首先要为它们分配好内存空间。</li>
+<li>优点：结构非常规范，便于调试，方便类型安全</li>
+<li>缺点：为此需要写更多类型相关代码，不便于阅读、不清晰明了<h2 id="3-强类型定义语言（Explicit-type-conversion，强制数据类型定义语言，类型安全的语言）："><a href="#3-强类型定义语言（Explicit-type-conversion，强制数据类型定义语言，类型安全的语言）：" class="headerlink" title="3. 强类型定义语言（Explicit type conversion，强制数据类型定义语言，类型安全的语言）："></a>3. 强类型定义语言（Explicit type conversion，强制数据类型定义语言，类型安全的语言）：</h2></li>
+<li>一旦变量被指定某个数据类型，如果不经强制转换，即永远是此数据类型。</li>
+<li>举例：若定义了一个整型变量a，若不进行显示转换，不能将a当作字符串类型处理</li>
+<li>强类型语言是指需要进行变量/对象类型声明的语言，一般情况下需要编译执行。例如C/C++/Java/C#<h2 id="4-弱类型定义语言（Implicit-type-conversion，类型不安全的语言）："><a href="#4-弱类型定义语言（Implicit-type-conversion，类型不安全的语言）：" class="headerlink" title="4. 弱类型定义语言（Implicit type conversion，类型不安全的语言）："></a>4. 弱类型定义语言（Implicit type conversion，类型不安全的语言）：</h2></li>
+<li>数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。</li>
+</ul>
+<h1 id="三、结论"><a href="#三、结论" class="headerlink" title="三、结论"></a>三、结论</h1><ul>
+<li>javaScript是动态语言，是弱类型定义语言（类型不安全的语言）;</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: 编程语言分类&lt;br&gt;date: 2017-11-26 13:08:34&lt;br&gt;categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ECMAScript&lt;br&gt;tags:&lt;/li&gt;
+&lt;li&gt;语言类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;一、看
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP协议的学习四</title>
+    <link href="http://yoursite.com/2017/12/21/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%9B%9B/"/>
+    <id>http://yoursite.com/2017/12/21/HTTP协议的学习四/</id>
+    <published>2017-12-21T08:06:27.998Z</published>
+    <updated>2017-09-13T06:39:03.589Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="web服务器的主要功能"><a href="#web服务器的主要功能" class="headerlink" title="web服务器的主要功能"></a>web服务器的主要功能</h2><ol>
+<li>建立连接</li>
+<li>接受请求–从网络中读取一条HTTP请求报文</li>
+<li>处理请求–对请求报文进行解释，并采取行动</li>
+<li>构建响应–创建带有正确首部的HTTP响应报文</li>
+<li>发送响应–将响应回送给客服端</li>
+<li>记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。</li>
+</ol>
+<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><ul>
+<li>web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。<a id="more"></a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;web服务器的主要功能&quot;&gt;&lt;a href=&quot;#web服务器的主要功能&quot; class=&quot;headerlink&quot; title=&quot;web服务器的主要功能&quot;&gt;&lt;/a&gt;web服务器的主要功能&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;建立连接&lt;/li&gt;
+&lt;li&gt;接受请求–从网络中读取一条HTTP请求报文&lt;/li&gt;
+&lt;li&gt;处理请求–对请求报文进行解释，并采取行动&lt;/li&gt;
+&lt;li&gt;构建响应–创建带有正确首部的HTTP响应报文&lt;/li&gt;
+&lt;li&gt;发送响应–将响应回送给客服端&lt;/li&gt;
+&lt;li&gt;记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;代理&quot;&gt;&lt;a href=&quot;#代理&quot; class=&quot;headerlink&quot; title=&quot;代理&quot;&gt;&lt;/a&gt;代理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。
+    
+    </summary>
+    
+    
+      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="代理" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js学习--module模块</title>
+    <link href="http://yoursite.com/2017/12/13/Node-js%E5%AD%A6%E4%B9%A0-module%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2017/12/13/Node-js学习-module模块/</id>
+    <published>2017-12-13T06:27:42.000Z</published>
+    <updated>2017-12-13T06:51:21.628Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="exports和module-exports的区别"><a href="#exports和module-exports的区别" class="headerlink" title="exports和module.exports的区别"></a>exports和module.exports的区别</h1><ul>
+<li>模块require方只能看到<code>module.exports</code>这个对象，它是看不到exports对象的，而我们在编写模块时用到的exports对象实际上只是对module.exports的引用。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">exports.name = (x) =&gt; &#123;</div><div class="line">    console.log(x);</div><div class="line">&#125;</div><div class="line">//和下面一样，修改的都是同一内存地址里的东西</div><div class="line">module.exports.name = (x) =&gt; &#123;</div><div class="line">    console.log(x);</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*----------下面这样写就存在区别-------------*/</div><div class="line">//下面的 function是一块新的内存地址，导致exports与module.exports不存在任何关系，而require方能看到的只有module.exports这个对象，看不到exports对象，所以这样写导不出去。</div><div class="line">exports = (x) =&gt; &#123;</div><div class="line">    console.log(x);</div><div class="line">&#125;</div><div class="line">//下面的写法是可以导出,说句题外话，module.exports除了导出对象，函数，还可以导出所有的类型，比如字符串、数值</div><div class="line">module.exports = (x) =&gt; &#123;</div><div class="line">    console.log(x);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;exports和module-exports的区别&quot;&gt;&lt;a href=&quot;#exports和module-exports的区别&quot; class=&quot;headerlink&quot; title=&quot;exports和module.exports的区别&quot;&gt;&lt;/a&gt;exports和mod
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/categories/Node-js/"/>
+    
+    
+      <category term="module模块" scheme="http://yoursite.com/tags/module%E6%A8%A1%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DOM操作</title>
+    <link href="http://yoursite.com/2017/12/08/DOM%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2017/12/08/DOM操作/</id>
+    <published>2017-12-08T06:45:28.000Z</published>
+    <updated>2017-12-08T08:25:51.210Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="DOM的定义"><a href="#DOM的定义" class="headerlink" title="DOM的定义"></a>DOM的定义</h1><ul>
+<li>文档对象模型 (DOM) 是HTML和XML文档的编程接口。它提供了对文档的结构化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文档的结构，样式和内容。DOM 将文档解析为一个由节点和对象（包含属性和方法的对象）组成的结构集合</li>
+</ul>
+<h1 id="DOM节点"><a href="#DOM节点" class="headerlink" title="DOM节点"></a>DOM节点</h1><ol>
+<li>根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：<ul>
+<li>整个文档是一个文档节点</li>
+<li>每个HTML元素是元素节点</li>
+<li>HTML元素内的文本是文本节点</li>
+<li>每个HTML属性是属性节点</li>
+<li>注释是注释节点</li>
+</ul>
+</li>
+<li>DOM节点树</li>
+</ol>
+<ul>
+<li>HTML DOM 将 HTML 文档视作树结构。这种结构被称为节点树：通过 HTML DOM，树中的所有节点均可通过 JavaScript 进行访问。所有 HTML 元素（节点）均可被修改，也可以创建或删除节点。<br><img src="http://ojvil4eq9.bkt.clouddn.com/17-12-8/71429195.jpg" alt=""></li>
+</ul>
+<ol>
+<li>节点的关系</li>
+</ol>
+<ul>
+<li>父（parent）、子（child）和同胞（sibling）等术语用于描述这些关系。父节点拥有子节点。同级的子节点被称为同胞（兄弟或姐妹）<ul>
+<li>在节点树中，顶端节点被称为根（root）</li>
+<li>每个节点都有父节点、除了根（它没有父节点）</li>
+<li>一个节点可拥有任意数量的子</li>
+<li>同胞是拥有相同父节点的节点</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://ojvil4eq9.bkt.clouddn.com/17-12-8/13541114.jpg" alt=""></p>
+<h1 id="HTML-DOM方法-元素节点方法"><a href="#HTML-DOM方法-元素节点方法" class="headerlink" title="HTML DOM方法(元素节点方法)"></a>HTML DOM方法(元素节点方法)</h1><ul>
+<li>方法是我们可以在节点上执行的动作<h2 id="获取DOM元素方法"><a href="#获取DOM元素方法" class="headerlink" title="获取DOM元素方法"></a>获取DOM元素方法</h2></li>
+</ul>
+<ol>
+<li><p><code>getElementById</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&apos;id&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>getElementsByTagName</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementsByTagName(&apos;li&apos;) //返回数组</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>getElementsByClassName</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementsByClassName(&apos;class&apos;)</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>querySelector</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.querySelector(&quot;#myid .myclass&quot;); //返回文档中匹配指定的选择器组的第一个元素</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>querySelectorAll</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.querySelectorAll(&apos;#myClass&apos;);  //返回的 NodeList 将包含文档中的所有节点，这些都是由特定选择器匹配的</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="获取设置属性接的的方法"><a href="#获取设置属性接的的方法" class="headerlink" title="获取设置属性接的的方法"></a>获取设置属性接的的方法</h2><ol>
+<li><code>getAttribute()</code></li>
+</ol>
+<ul>
+<li>返回元素上一个指定的属性值。如果指定的属性不存在，则返回  null 或 “” （空字符串）<br>let div1 = document.getElementById(“div1”);<br>let align = div1.getAttribute(“align”);<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let dive = document.getElementById(&apos;div1&apos;);</div><div class="line">let align = div.getAttribute(&apos;align&apos;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><code>setAttribute()</code></li>
+</ol>
+<ul>
+<li>设置指定元素上的一个属性值。如果属性已经存在，则更新该值; 否则将添加一个新的属性用指定的名称和值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//语法</div><div class="line">element.setAttribute(name, value);</div><div class="line"></div><div class="line">let div1 = document.getElementById(&quot;div1&quot;); </div><div class="line"></div><div class="line">div1.setAttribute(&quot;align&quot;, &quot;center&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><code>removeAttribute()</code>从指定的元素中删除一个属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let div = document.getElementById(&quot;div1&quot;)</div><div class="line"></div><div class="line">div.removeAttribute(&quot;align&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="HTML-DOM属性"><a href="#HTML-DOM属性" class="headerlink" title="HTML DOM属性"></a>HTML DOM属性</h1><ul>
+<li>属性是节点（HTML 元素）的值，您能够获取或设置。</li>
+</ul>
+<ol>
+<li><code>Element.innerHTML</code> </li>
+</ol>
+<ul>
+<li>属性设置或获取描述元素后代的HTML语法</li>
+</ul>
+<ol>
+<li><code>Node.nodeName</code></li>
+</ol>
+<ul>
+<li>返回当前节点的节点名称<ul>
+<li>nodeName 是只读的</li>
+<li>元素节点的 nodeName 与标签名相同</li>
+<li>属性节点的 nodeName 与属性名相同</li>
+<li>文本节点的 nodeName 始终是 #text</li>
+<li>文档节点的 nodeName 始终是 #document</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><code>Node.nodeName</code></li>
+</ol>
+<ul>
+<li>返回或设置当前节点的值<ul>
+<li>元素节点的 nodeValue 是 undefined 或 null</li>
+<li>文本节点的 nodeValue 是文本本身</li>
+<li>属性节点的 nodeValue 是属性值</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><code>Node.nodeType</code></li>
+</ol>
+<ul>
+<li>只读属性,表示的是该节点的类型。</li>
+</ul>
+<p>元素类型|NodeType<br>元素|1<br>文本|3<br>注释|8<br>文档(Document)|9<br>5.<code>Node.childNodes</code></p>
+<ul>
+<li>返回包含指定节点的子节点的集合(NodeList 类型)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;DOM的定义&quot;&gt;&lt;a href=&quot;#DOM的定义&quot; class=&quot;headerlink&quot; title=&quot;DOM的定义&quot;&gt;&lt;/a&gt;DOM的定义&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;文档对象模型 (DOM) 是HTML和XML文档的编程接口。它提供了对文档的结构化的表述，并定义
+    
+    </summary>
+    
+      <category term="DOM" scheme="http://yoursite.com/categories/DOM/"/>
+    
+    
+      <category term="DOM" scheme="http://yoursite.com/tags/DOM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SVG Sprites的使用</title>
+    <link href="http://yoursite.com/2017/12/08/SVG%20Sprites%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/12/08/SVG Sprites的使用/</id>
+    <published>2017-12-08T02:25:42.000Z</published>
+    <updated>2017-12-08T06:36:12.516Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SVG简介"><a href="#SVG简介" class="headerlink" title="SVG简介"></a>SVG简介</h1><ul>
+<li>SVG是一种开放标准的矢量图形语言，使用svg格式我们可以直接用代码来描绘图像，可以用任何文字处理工具打开svg图像，通过改变部分代码来使图像具有交互功能，并可以随时插入到HTML中通过浏览器来浏览。</li>
+</ul>
+<h1 id="SV优缺点"><a href="#SV优缺点" class="headerlink" title="SV优缺点"></a>SV优缺点</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">优点</th>
+<th style="text-align:left">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1.缩放无损还原，显示清晰</td>
+<td style="text-align:left">1.SVG在绘制的性能上比PNG要差</td>
+</tr>
+<tr>
+<td style="text-align:left">2.语义性良好</td>
+<td style="text-align:left">2.局限性，对应单色或普通渐变没什么问题，但对不规则的渐变以及特效叠加效果显示不全</td>
+</tr>
+<tr>
+<td style="text-align:left">3.可用CSS控制图标样式以及动画</td>
+<td style="text-align:left">3.兼容性稍差，android4.1才开始支持</td>
+</tr>
+<tr>
+<td style="text-align:left">4.减少http请求</td>
+<td style="text-align:left">4.学习应用成本较高</td>
+</tr>
+</tbody>
+</table>
+<h1 id="使用-SVG-中的-symbol，use-元素来制作SVG-Sprite"><a href="#使用-SVG-中的-symbol，use-元素来制作SVG-Sprite" class="headerlink" title="使用 SVG 中的 symbol，use 元素来制作SVG Sprite"></a>使用 SVG 中的 symbol，use 元素来制作SVG Sprite</h1><ul>
+<li>l;]’SVG Symbols的使用，本质上是对Sprite的进一步优化，通过<code>&lt;symbol&gt;</code>元素来对单个SVG元素进行分组，使用<code>&lt;use&gt;</code>元素引用并进行渲染。这种方法的解决了上述三种方式带来的弊端，少量的http请求，图标能被缓存方便复用，每个SVG图标可以更改大小颜色，整合、使用以及管理起来非常简单</li>
+</ul>
+<h1 id="Web应用中SVG的使用方式-了解"><a href="#Web应用中SVG的使用方式-了解" class="headerlink" title="Web应用中SVG的使用方式(了解)"></a>Web应用中SVG的使用方式(了解)</h1><ol>
+<li>使用img、object、embed 标签直接引用svg</li>
+</ol>
+<ul>
+<li>此方法的缺点主要在于每个图标都需单独保存成一个 SVG 文件，使用时单独请求，增加了HTTP请求数量。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;./example.svg&quot; alt=&quot;svg图标&quot;&gt;</div><div class="line">&lt;object class=&quot;example&quot; data=&quot;./example.svg&quot; type=&quot;image/svg+xml&quot;&gt;My Example SVG&lt;/object&gt;</div><div class="line">&lt;iframe src=&quot;example.svg&quot; class=&quot;example&quot;&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>直接把SVG写入 HTML 中</li>
+</ol>
+<ul>
+<li>Inline SVG 作为HTML文档的一部分，不需要单独请求。临时需要修改某个图标的形状也比较方便。但是Inline SVG使用上比较繁琐，需要在页面中插入一大块SVG代码不适合手写，图标复用起来也比较麻烦。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;svg width=&quot;300&quot; height=&quot;200&quot; class=&quot;example&quot;&gt;</div><div class="line">        &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;green&quot;&gt;&lt;/rect&gt;</div><div class="line">&lt;/svg&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>SVG Sprite</li>
+</ol>
+<ul>
+<li>这里的Sprite技术，类似于CSS中的Sprite技术。图标图形整合在一起，实际呈现的时候准确显示特定图标。其实基础的SVG Sprite也只是将原来的位图改成了SVG而已，控制SVG大小、颜色需要重新合并SVG文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.icon-bg&#123;</div><div class="line">    display: inline-block;</div><div class="line">    width: 30px;</div><div class="line">    height: 30px;</div><div class="line">    background: url(./res/svg-sprite-background.svg);</div><div class="line">    background-size:100% 100%;</div><div class="line">&#125;</div><div class="line">.icon-facebook-logo&#123;</div><div class="line">    background-position: 0 0;</div><div class="line">&#125;</div><div class="line">.icon-earth&#123;</div><div class="line">    background-position: 0 -30px;</div><div class="line">&#125;</div><div class="line">&lt;span class=&quot;icon-bg icon-facebook-logo&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;span class=&quot;icon-bg icon-earth&quot;&gt;&lt;/span&gt;</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;SVG简介&quot;&gt;&lt;a href=&quot;#SVG简介&quot; class=&quot;headerlink&quot; title=&quot;SVG简介&quot;&gt;&lt;/a&gt;SVG简介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;SVG是一种开放标准的矢量图形语言，使用svg格式我们可以直接用代码来描绘图像，可以用任何文字处理工具打
+    
+    </summary>
+    
+      <category term="SVG" scheme="http://yoursite.com/categories/SVG/"/>
+    
+    
+      <category term="SVG" scheme="http://yoursite.com/tags/SVG/"/>
+    
+      <category term="SVG Sprites" scheme="http://yoursite.com/tags/SVG-Sprites/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript语句</title>
+    <link href="http://yoursite.com/2017/12/04/JavaScript%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://yoursite.com/2017/12/04/JavaScript语句/</id>
+    <published>2017-12-04T11:05:55.000Z</published>
+    <updated>2017-12-04T11:35:59.069Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、条件语句"><a href="#一、条件语句" class="headerlink" title="一、条件语句"></a>一、条件语句</h1><h2 id="1-if"><a href="#1-if" class="headerlink" title="1.if"></a>1.if</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (表达式) &#123;</div><div class="line">    //表达式为真执行</div><div class="line">&#125; else &#123;</div><div class="line">    //否则</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>只有<code>false</code>,<code>null</code>,’undefined’,空字符串,数字0,数字NaN的值为假，其他所有值都是真<h2 id="2-switch语句"><a href="#2-switch语句" class="headerlink" title="2.switch语句"></a>2.switch语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">switch (i) &#123;</div><div class="line">    case 25:</div><div class="line">        alert(25);</div><div class="line">        break;</div><div class="line">    case 36:</div><div class="line">        alert(36);</div><div class="line">        bresk;</div><div class="line">    default:</div><div class="line">        alert(11);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="3-while语句"><a href="#3-while语句" class="headerlink" title="3.while语句"></a>3.while语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var i = 0;</div><div class="line">while(i&lt;10) &#123;</div><div class="line">    alert(i);</div><div class="line">    i+=1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="二、循环语句"><a href="#二、循环语句" class="headerlink" title="二、循环语句"></a>二、循环语句</h1><h2 id="1-for语句"><a href="#1-for语句" class="headerlink" title="1.for语句"></a>1.for语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (var i = 0;i&lt;10; i++) &#123;</div><div class="line">    console.log(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-for-in-语句"><a href="#2-for-in-语句" class="headerlink" title="2.for in 语句"></a>2.for in 语句</h2><ul>
+<li>判断对象是否有属性<code>myvar</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for (myvar in obj) &#123;</div><div class="line">    if(obj.hasOwnProperty(myvar)) &#123;</div><div class="line">        console.log(&apos;有&apos;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="三、强制跳转语句"><a href="#三、强制跳转语句" class="headerlink" title="三、强制跳转语句"></a>三、强制跳转语句</h1><h2 id="1-break语句立即退出循环，-循环结束-强制执行循环后的语句"><a href="#1-break语句立即退出循环，-循环结束-强制执行循环后的语句" class="headerlink" title="1.break语句立即退出循环，(循环结束)强制执行循环后的语句"></a>1.<code>break</code>语句立即退出循环，(循环结束)强制执行循环后的语句</h2><h2 id="2-continue语句只退出当前循环，退出循环后会从循环的顶部继续执行。"><a href="#2-continue语句只退出当前循环，退出循环后会从循环的顶部继续执行。" class="headerlink" title="2.continue语句只退出当前循环，退出循环后会从循环的顶部继续执行。"></a>2.<code>continue</code>语句只退出当前循环，退出循环后会从循环的顶部继续执行。</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、条件语句&quot;&gt;&lt;a href=&quot;#一、条件语句&quot; class=&quot;headerlink&quot; title=&quot;一、条件语句&quot;&gt;&lt;/a&gt;一、条件语句&lt;/h1&gt;&lt;h2 id=&quot;1-if&quot;&gt;&lt;a href=&quot;#1-if&quot; class=&quot;headerlink&quot; title=&quot;1
+    
+    </summary>
+    
+      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
+    
+    
+      <category term="条件语句" scheme="http://yoursite.com/tags/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/"/>
+    
+      <category term="循环语句" scheme="http://yoursite.com/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo常用命令笔记</title>
+    <link href="http://yoursite.com/2017/11/08/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2017/11/08/hexo常用命令笔记/</id>
+    <published>2017-11-08T07:58:51.000Z</published>
+    <updated>2017-11-09T05:26:59.540Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="书写"><a href="#书写" class="headerlink" title="书写"></a>书写</h1><ul>
+<li><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章</li>
+<li><code>hexo p</code> == <code>hexo publish</code></li>
+<li><code>hexo g</code> == <code>hexo generate</code>#生成</li>
+<li><code>hexo s</code> == <code>hexo server</code> #启动服务预览</li>
+<li><code>hexo d</code> == <code>hexo deploy</code>#部署</li>
+</ul>
+<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><ul>
+<li><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。</li>
+<li><code>hexo server</code> -s #静态模式</li>
+<li><code>hexo server -p 5000</code> #更改端口</li>
+<li><code>hexo server -i 192.168.1.1</code> #自定义 IP</li>
+<li><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令</li>
+<li><code>hexo g</code> #生成静态网页</li>
+<li><code>hexo d</code> #开始部署</li>
+<li><code>hexo server -o</code> #开启服务打开页面</li>
+</ul>
+<h1 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h1><ul>
+<li><code>hexo generate</code> #使用 Hexo 生成静态文件快速而且简单</li>
+<li><code>hexo generate --watch</code> #监视文件变动</li>
+</ul>
+<h1 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h1><ul>
+<li><code>hexo deploy -g</code></li>
+<li><code>hexo server -g</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;书写&quot;&gt;&lt;a href=&quot;#书写&quot; class=&quot;headerlink&quot; title=&quot;书写&quot;&gt;&lt;/a&gt;书写&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hexo n &amp;quot;我的博客&amp;quot;&lt;/code&gt; == &lt;code&gt;hexo new &amp;quot;我的博
+    
+    </summary>
+    
+      <category term="应用工具学习" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js--Express框架的学习</title>
+    <link href="http://yoursite.com/2017/10/12/Node.js--Express%E6%A1%86%E6%9E%B6%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/10/12/Node.js--Express框架的学习/</id>
+    <published>2017-10-12T13:51:30.000Z</published>
+    <updated>2017-12-13T06:27:56.355Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Express框架安装"><a href="#Express框架安装" class="headerlink" title="Express框架安装"></a>Express框架安装</h1><ul>
+<li><code>npm install -g express</code></li>
+<li><code>npm install -g express-generator</code>安装Express项目生成器</li>
+</ul>
+<h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><ul>
+<li>创建文件名为demo的项目<ul>
+<li><code>express --view=ejs demo</code></li>
+<li>cd demo</li>
+<li>npm install</li>
+</ul>
+</li>
+</ul>
+<h2 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h2><ul>
+<li><code>npm start</code></li>
+<li>启动文件是/bin/www，默认端口：3000</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Express框架安装&quot;&gt;&lt;a href=&quot;#Express框架安装&quot; class=&quot;headerlink&quot; title=&quot;Express框架安装&quot;&gt;&lt;/a&gt;Express框架安装&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install -g express
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/categories/Node-js/"/>
+    
+      <category term="Express" scheme="http://yoursite.com/categories/Node-js/Express/"/>
+    
+    
+      <category term="Express" scheme="http://yoursite.com/tags/Express/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js学习--HTTP模块</title>
+    <link href="http://yoursite.com/2017/10/12/Node.js%E5%AD%A6%E4%B9%A0--HTTP%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2017/10/12/Node.js学习--HTTP模块/</id>
+    <published>2017-10-12T01:51:13.000Z</published>
+    <updated>2017-12-13T06:27:07.892Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="HTTP的基本概念"><a href="#HTTP的基本概念" class="headerlink" title="HTTP的基本概念"></a>HTTP的基本概念</h1><ul>
+<li>什么是I/O?<ul>
+<li>指的的是磁盘的读入和读出input/output</li>
+</ul>
+</li>
+<li>什么是单线程/多线程<ul>
+<li>单线程：只有一个线程，代码顺序执行，容易出现代码阻塞</li>
+<li>多线程：有多个线程，线程间独立运行，能有效地避免代码阻塞，并且提高程序的运行性能，但是要注意资源分配</li>
+</ul>
+</li>
+<li>什么是阻塞/非阻塞<ul>
+<li>阻塞调用是指调用结果返回之前，当前线程会被挂起。函数只有在得到结果之后才会返回。做某件事情，直到完成，除非超时</li>
+<li>指在不能立刻得到结果之前，该函数不会阻塞当前线程，而会立刻返回。尝试做，如果不能做，就不做（直接返回），如果能做，就做。</li>
+</ul>
+</li>
+<li>什么是事件驱动<ul>
+<li>为某个事件注册了函数，但是这个函数不是马上执行，只有事件发生才会调用该函数，这种函数的执行方式就叫做事件驱动。</li>
+</ul>
+</li>
+<li>什么是基于事件驱动的回调<ul>
+<li>注册的回调函数的执行方式是事件驱动</li>
+</ul>
+</li>
+<li>执行上下文<ul>
+<li>this的指向问题，当JavaScript代码执行的时候，会进入不同的执行上下文，这些执行上下文就构成了一个执行上下文栈</li>
+<li><code>call</code>和<code>apply</code>方法能改变上下文，改变了this的指向。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;HTTP的基本概念&quot;&gt;&lt;a href=&quot;#HTTP的基本概念&quot; class=&quot;headerlink&quot; title=&quot;HTTP的基本概念&quot;&gt;&lt;/a&gt;HTTP的基本概念&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;什么是I/O?&lt;ul&gt;
+&lt;li&gt;指的的是磁盘的读入和读出input/ou
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/categories/Node-js/"/>
+    
+    
+      <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
+    
+      <category term="HTTP模块" scheme="http://yoursite.com/tags/HTTP%E6%A8%A1%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome浏览器的命令</title>
+    <link href="http://yoursite.com/2017/10/11/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2017/10/11/Chrome浏览器的命令/</id>
+    <published>2017-10-11T09:19:44.000Z</published>
+    <updated>2017-10-11T09:23:47.873Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Chrome浏览器的命令"><a href="#Chrome浏览器的命令" class="headerlink" title="Chrome浏览器的命令"></a>Chrome浏览器的命令</h1><ul>
+<li><code>chrome://about</code>显示所有的命令</li>
+<li><code>chrome://net-internals</code>抓保工具和DNS管理</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Chrome浏览器的命令&quot;&gt;&lt;a href=&quot;#Chrome浏览器的命令&quot; class=&quot;headerlink&quot; title=&quot;Chrome浏览器的命令&quot;&gt;&lt;/a&gt;Chrome浏览器的命令&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;chrome://about&lt;/co
+    
+    </summary>
+    
+      <category term="浏览器基础" scheme="http://yoursite.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Chrome浏览器" scheme="http://yoursite.com/tags/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="Chrome浏览器命令" scheme="http://yoursite.com/tags/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js学习--URL模块</title>
+    <link href="http://yoursite.com/2017/10/11/Node.js%E5%AD%A6%E4%B9%A0-URL%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2017/10/11/Node.js学习-URL模块/</id>
+    <published>2017-10-11T03:54:43.000Z</published>
+    <updated>2017-10-13T08:17:32.884Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="URL模块"><a href="#URL模块" class="headerlink" title="URL模块"></a>URL模块</h1><ul>
+<li>url模块提供了两套API处理URL，一套是NOde.js特有的API，另一个是WHATWG URL 规范提供的API,Node.js官方推荐使用WHATWG URLAPI</li>
+</ul>
+<h2 id="WHATWG-URL规范API解析url字符串"><a href="#WHATWG-URL规范API解析url字符串" class="headerlink" title="WHATWG URL规范API解析url字符串"></a>WHATWG URL规范API解析url字符串</h2><ul>
+<li>在浏览器中，WHATWG URL在全局总是可用的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">const &#123;URL&#125; = require(&apos;url);</div><div class="line">let myURL = new URL(&apos;https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash&apos;);</div><div class="line">console.log(myURL);</div><div class="line">//得到结果</div><div class="line">URL &#123;</div><div class="line">  href: &apos;https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash&apos;,</div><div class="line">  origin: &apos;https://sub.host.com:8080&apos;,</div><div class="line">  protocol: &apos;https:&apos;,</div><div class="line">  username: &apos;user&apos;,</div><div class="line">  password: &apos;pass&apos;,</div><div class="line">  host: &apos;sub.host.com:8080&apos;,</div><div class="line">  hostname: &apos;sub.host.com&apos;,</div><div class="line">  port: &apos;8080&apos;,</div><div class="line">  pathname: &apos;/p/a/t/h&apos;,</div><div class="line">  search: &apos;?query=string&apos;,</div><div class="line">  searchParams: URLSearchParams &#123; &apos;query&apos; =&gt; &apos;string&apos; &#125;,</div><div class="line">  hash: &apos;#hash&apos; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="URL-parse-解析网址"><a href="#URL-parse-解析网址" class="headerlink" title="URL.parse()解析网址"></a>URL.parse()解析网址</h2><ul>
+<li>在Node.js中，任何情况下打开 或使用一个链接都必须事先引用’url’模块：<code>require(&#39;url&#39;).URL</code>，通过Node.js提供的API解析一个URL:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">const url require(&apos;url&apos;);</div><div class="line">let myURL = url.parse(&apos;http://www.imooc.com:8080/video/6710?from=scott&amp;course=node#floor1&apos;)</div><div class="line">console.log(myURL);</div><div class="line">//得到结果</div><div class="line">Url &#123;</div><div class="line">  protocol: &apos;http:&apos;,             //使用的协议</div><div class="line">  slashes: true,                 //是否有协议的双斜线</div><div class="line">  auth: null,                    //</div><div class="line">  host: &apos;www.imooc.com:8080&apos;,    //ip地址(域名)</div><div class="line">  port: &apos;8080&apos;,                  //端口</div><div class="line">  hostname: &apos;www.imooc.com&apos;,     //主机名</div><div class="line">  hash: &apos;#floor1&apos;,               //锚点内容</div><div class="line">  search: &apos;?from=scott&amp;course=node&apos;,   //查询字符串参数</div><div class="line">  query: &apos;from=scott&amp;course=node&apos;,     //发送给服务器的数据，参数</div><div class="line">  pathname: &apos;/video/6710&apos;,             //访问资源的路径名 </div><div class="line">  path: &apos;/video/6710?from=scott&amp;course=node&apos;, //路径</div><div class="line">  href: &apos;http://www.imooc.com:8080/video/6710?from=scott&amp; course=node#floor1&apos;  //完整的超链接统一资源定位符</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="URLSearchParams-API接口"><a href="#URLSearchParams-API接口" class="headerlink" title="URLSearchParams API接口"></a>URLSearchParams API接口</h2><ul>
+<li>接口提供对URLquery(查询字符串)部分的读写权限<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">const &#123; URL, URLSearchParams &#125; = require(&apos;url&apos;);</div><div class="line">const myURL = new URL(&apos;https://example.org/?abc=123&apos;);</div><div class="line"></div><div class="line">const newSeachParams =  new URLSearchParams(myURL.searchParams);</div><div class="line"></div><div class="line">//实例化成URLSearchParams对象</div><div class="line">console.log(newSeachParams); //URLSearchParams &#123; &apos;abc&apos; =&gt; &apos;123&apos; &#125;</div><div class="line"></div><div class="line">newSeachParams.append(&apos;a&apos;,&apos;c&apos;);</div><div class="line">console.log(newSeachParams); //URLSearchParams &#123; &apos;abc&apos; =&gt; &apos;123&apos;, &apos;a&apos; =&gt; &apos;c&apos; &#125;</div><div class="line">console.log(newSeachParams.toString()); //abc=123&amp;a=c</div><div class="line"></div><div class="line">newSeachParams.delete(&apos;a&apos;);</div><div class="line">console.log(newSeachParams); //URLSearchParams &#123; &apos;abc&apos; =&gt; &apos;123&apos; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="url-domainToASCII-domain"><a href="#url-domainToASCII-domain" class="headerlink" title="url.domainToASCII(domain)"></a>url.domainToASCII(domain)</h2><ul>
+<li>返回Punycode ASCII序列化的域名，如果domain是无效域名，将返回空字符串<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const url = require(&apos;url&apos;);</div><div class="line">console.log(url.domainToUnicode(&apos;汤国斌.com&apos;)); //xn--vcss25ae8e.com</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="url-domainToUnicode-domain"><a href="#url-domainToUnicode-domain" class="headerlink" title="url.domainToUnicode(domain)"></a>url.domainToUnicode(domain)</h2><ul>
+<li>返回Unicode序列化的domain. 如果domain是无效域名，将返回空字符串。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;URL模块&quot;&gt;&lt;a href=&quot;#URL模块&quot; class=&quot;headerlink&quot; title=&quot;URL模块&quot;&gt;&lt;/a&gt;URL模块&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;url模块提供了两套API处理URL，一套是NOde.js特有的API，另一个是WHATWG URL 规
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/categories/Node-js/"/>
+    
+    
+      <category term="URL模块" scheme="http://yoursite.com/tags/URL%E6%A8%A1%E5%9D%97/"/>
+    
+      <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm包的开发及发布</title>
+    <link href="http://yoursite.com/2017/10/10/npm%E5%8C%85%E7%9A%84%E5%BC%80%E5%8F%91%E5%8F%8A%E5%8F%91%E5%B8%83/"/>
+    <id>http://yoursite.com/2017/10/10/npm包的开发及发布/</id>
+    <published>2017-10-10T06:39:47.000Z</published>
+    <updated>2017-10-10T06:49:08.293Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="npm创建"><a href="#npm创建" class="headerlink" title="npm创建"></a>npm创建</h2><ul>
+<li><code>npm init</code><ul>
+<li>name：填写你这个包的名字，默认是你这个文件夹的名字。不过这里要着重说一下，最好先去npm上找一下有没有同名的包。最好的测试方式就是，在命令行里面输入npm install 你要取的名字，如果报错，那么很好，npm上没有跟你同名的包，你可以放心大胆地把包发布出去.</li>
+<li>version：你这个包的版本，默认是1.0.0，以后要在package.json文件中更改版本号才能重新发布npm包</li>
+<li>description：用一句话描述你的包是干嘛用的。</li>
+<li>entry point：入口文件，默认是Index.js，你也可以自己填写你自己的文件名</li>
+<li>test command：测试命令，这个直接回车就好了，因为目前还不需要这个。</li>
+<li>git repository：这个是git仓库地址，如果你的包是先放到github上或者其他git仓库里，这时候你的文件夹里面会存在一个隐藏的.git目录，npm会读到这个目录作为这一项的默认值。如果没有的话，直接回车继续。</li>
+<li>keyword：这个是一个重点，这个关系到有多少人会搜到你的npm包。尽量使用贴切的关键字作为这个包的索引。</li>
+<li>author：写你的账号或者你的github账号吧</li>
+<li>license：开源文件<a id="more"></a>
+<h2 id="npm包的开发"><a href="#npm包的开发" class="headerlink" title="npm包的开发"></a>npm包的开发</h2></li>
+</ul>
+</li>
+</ul>
+<h2 id="npm包的发布"><a href="#npm包的发布" class="headerlink" title="npm包的发布"></a>npm包的发布</h2><ul>
+<li>本地登录npm账号<code>npm login</code>,输入账户，密码，邮箱</li>
+<li>发布<code>npm publish</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;npm创建&quot;&gt;&lt;a href=&quot;#npm创建&quot; class=&quot;headerlink&quot; title=&quot;npm创建&quot;&gt;&lt;/a&gt;npm创建&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm init&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;name：填写你这个包的名字，默认是你这个文件夹的名字。不过这里要着重说一下，最好先去npm上找一下有没有同名的包。最好的测试方式就是，在命令行里面输入npm install 你要取的名字，如果报错，那么很好，npm上没有跟你同名的包，你可以放心大胆地把包发布出去.&lt;/li&gt;
+&lt;li&gt;version：你这个包的版本，默认是1.0.0，以后要在package.json文件中更改版本号才能重新发布npm包&lt;/li&gt;
+&lt;li&gt;description：用一句话描述你的包是干嘛用的。&lt;/li&gt;
+&lt;li&gt;entry point：入口文件，默认是Index.js，你也可以自己填写你自己的文件名&lt;/li&gt;
+&lt;li&gt;test command：测试命令，这个直接回车就好了，因为目前还不需要这个。&lt;/li&gt;
+&lt;li&gt;git repository：这个是git仓库地址，如果你的包是先放到github上或者其他git仓库里，这时候你的文件夹里面会存在一个隐藏的.git目录，npm会读到这个目录作为这一项的默认值。如果没有的话，直接回车继续。&lt;/li&gt;
+&lt;li&gt;keyword：这个是一个重点，这个关系到有多少人会搜到你的npm包。尽量使用贴切的关键字作为这个包的索引。&lt;/li&gt;
+&lt;li&gt;author：写你的账号或者你的github账号吧&lt;/li&gt;
+&lt;li&gt;license：开源文件
+    
+    </summary>
+    
+      <category term="前端构建生态" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E7%94%9F%E6%80%81/"/>
+    
+    
+      <category term="npm" scheme="http://yoursite.com/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stylus的使用</title>
+    <link href="http://yoursite.com/2017/09/25/Stylus%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/25/Stylus的使用/</id>
+    <published>2017-09-25T01:34:17.000Z</published>
+    <updated>2017-09-25T07:15:20.483Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Less安装"><a href="#Less安装" class="headerlink" title="Less安装"></a>Less安装</h1><ul>
+<li><code>npm install less -g</code>全局安装less,webStorm编辑器的插件会将less编译为css</li>
+<li><p>浏览器直接使用less</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//.less 样式表的链接，并将 rel 属性设置为 &quot;stylesheet/less&quot; 在 less.js 之前加载样式表。</div><div class="line">&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;./index.less&quot;&gt;</div><div class="line">// 使用`less.js`插件解析less</div><div class="line">&lt;script src=&quot;http://cdn.bootcss.com/less.js/1.7.0/less.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在vue框架中使用less,安装npm包<code>npm install --save-dev less less-loader</code></p>
+</li>
+</ul>
+<h1 id="Less的语法"><a href="#Less的语法" class="headerlink" title="Less的语法"></a>Less的语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>将常用的值定义在一个地方</li>
+<li>定义常用选择器<code>@mySelector:banner;</code></li>
+<li></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Less安装&quot;&gt;&lt;a href=&quot;#Less安装&quot; class=&quot;headerlink&quot; title=&quot;Less安装&quot;&gt;&lt;/a&gt;Less安装&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install less -g&lt;/code&gt;全局安装less,webStor
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+      <category term="CSS预处理器" scheme="http://yoursite.com/categories/CSS/CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="Stylus" scheme="http://yoursite.com/tags/Stylus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sass的使用</title>
+    <link href="http://yoursite.com/2017/09/25/Sass%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/25/Sass的使用/</id>
+    <published>2017-09-25T01:33:56.000Z</published>
+    <updated>2017-09-25T01:36:23.506Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+      <category term="CSS预处理器" scheme="http://yoursite.com/categories/CSS/CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="Sass" scheme="http://yoursite.com/tags/Sass/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Less的使用</title>
+    <link href="http://yoursite.com/2017/09/25/Less%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/25/Less的使用/</id>
+    <published>2017-09-25T01:33:29.000Z</published>
+    <updated>2017-09-25T01:36:05.932Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+      <category term="CSS预处理器" scheme="http://yoursite.com/categories/CSS/CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="Less" scheme="http://yoursite.com/tags/Less/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发</title>
+    <link href="http://yoursite.com/2017/09/25/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
+    <id>http://yoursite.com/2017/09/25/微信小程序开发/</id>
+    <published>2017-09-25T00:58:07.000Z</published>
+    <updated>2017-12-21T08:34:54.029Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="小程序的基本文件功能"><a href="#小程序的基本文件功能" class="headerlink" title="小程序的基本文件功能"></a>小程序的基本文件功能</h1><ul>
+<li><code>.js</code>后缀的是脚本文件,<code>.json</code>后缀的文件是配置文件,<code>.wxss</code>后缀的是样式表文件</li>
+<li>app.js是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量</li>
+<li>app.json 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。</li>
+<li>app.wxss 是整个小程序的公共样式表。我们可以在页面组件的 class 属性上直接使用 app.wxss 中声明的样式规则</li>
+</ul>
+<h1 id="小程序模板的使用"><a href="#小程序模板的使用" class="headerlink" title="小程序模板的使用"></a>小程序模板的使用</h1><h2 id="定义模板"><a href="#定义模板" class="headerlink" title="定义模板"></a>定义模板</h2><ul>
+<li>在template文件目录下定义<code>template.wxml</code>文件</li>
+<li><p>使用 name 属性，作为模板的名字。然后在<code>&lt;template/&gt;</code>内定义代码片段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;template name=&quot;msgItem&quot;&gt;</div><div class="line">  &lt;view&gt;</div><div class="line">    &lt;text&gt; &#123;&#123;index&#125;&#125;: &#123;&#123;msg&#125;&#125; &lt;/text&gt;</div><div class="line">    &lt;text&gt; Time: &#123;&#123;time&#125;&#125; &lt;/text&gt;</div><div class="line">  &lt;/view&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 引入模板</div><div class="line">&lt;import src=&apos;./template/template.wxml&apos;&gt;</div><div class="line"></div><div class="line">&lt;template is=&quot;msgItem&quot; data=&quot;&#123;&#123;...item&#125;&#125;&quot;/&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="小程序请求用户的信息"><a href="#小程序请求用户的信息" class="headerlink" title="小程序请求用户的信息"></a>小程序请求用户的信息</h1><h1 id="小程序开发遇到的坑"><a href="#小程序开发遇到的坑" class="headerlink" title="小程序开发遇到的坑"></a>小程序开发遇到的坑</h1><h2 id="小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行"><a href="#小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行" class="headerlink" title="小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行"></a>小程序<code>request</code>请求不支持cookie，所以使用cookie储存登录状态的方案不可行</h2><ul>
+<li>造成的问题： http请求header不携带设备信息，服务器无法获取。服务器通过session来识别客服端,小程序<code>request</code>请求不能使用cookie,导致每次请求的session都不同。</li>
+<li>解决：小程序支持自定义cookie，通过后台服务器与小程序的关联的接口，获取一次session，之后封装小程序的<code>request</code>请求，在session有效期内每次请求发送给后台的session都一至。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">request: function(url, meth, data, cb) &#123;</div><div class="line">    let that = this;</div><div class="line">    wx.request(&#123;</div><div class="line">      url: url,</div><div class="line">      method: meth,</div><div class="line">      data: data,</div><div class="line">      header: &#123;</div><div class="line">        &quot;Cookie&quot;: that.globalData.Cookie,</div><div class="line">      &#125;,</div><div class="line">      success: function (res) &#123;</div><div class="line">        //session过期</div><div class="line">        if (res.data.code == 403) &#123;</div><div class="line">          wx.login(&#123;</div><div class="line">            success: res =&gt; &#123;</div><div class="line">              if (res.code) &#123;</div><div class="line">                wx.request(&#123;</div><div class="line">                  url: that.globalData.baseUrl + that.globalData.api.getSession,</div><div class="line">                  method: &apos;GET&apos;,</div><div class="line">                  data: &#123;</div><div class="line">                    code: res.code</div><div class="line">                  &#125;,</div><div class="line">                  header: &#123;</div><div class="line">                    &quot;Cookie&quot;: that.globalData.Cookie,</div><div class="line">                  &#125;,</div><div class="line">                  success: function (res) &#123;</div><div class="line">                    //重新获取session</div><div class="line">                    that.globalData.Cookie = &apos;JSESSIONID=&apos; + res.data.sessionId;</div><div class="line">                    that.request();</div><div class="line">                  &#125;,</div><div class="line">                &#125;);</div><div class="line">              &#125; else &#123;</div><div class="line">                console.log(&apos;获取用户登录态失败！&apos; + res.errMsg)</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">          &#125;)</div><div class="line">          return false;</div><div class="line">        &#125; else if (res.data.code == 500) &#123;</div><div class="line">          wx.showModal(&#123;</div><div class="line">            content: &apos;服务器繁忙, 请稍后再试&apos;,</div><div class="line">          &#125;)</div><div class="line">          console.log(res.data.msg||&apos;&apos;);</div><div class="line">          return false;</div><div class="line">        &#125;</div><div class="line">        cb(res);</div><div class="line">      &#125;,</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;小程序的基本文件功能&quot;&gt;&lt;a href=&quot;#小程序的基本文件功能&quot; class=&quot;headerlink&quot; title=&quot;小程序的基本文件功能&quot;&gt;&lt;/a&gt;小程序的基本文件功能&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.js&lt;/code&gt;后缀的是脚本文件,&lt;code&gt;.
+    
+    </summary>
+    
+      <category term="应用工具学习" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="微信小程序" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="微信小程序" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信公众号网页开发</title>
+    <link href="http://yoursite.com/2017/09/21/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
+    <id>http://yoursite.com/2017/09/21/微信公众号网页开发/</id>
+    <published>2017-09-21T03:37:12.000Z</published>
+    <updated>2017-09-21T03:42:59.690Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="应用工具学习" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="微信公众号" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="微信公众号" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ECMAScript--作用域</title>
+    <link href="http://yoursite.com/2017/09/18/ECMAScript-%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://yoursite.com/2017/09/18/ECMAScript-作用域/</id>
+    <published>2017-09-18T13:10:40.000Z</published>
+    <updated>2017-09-18T13:10:40.311Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信JS-SDK的使用</title>
+    <link href="http://yoursite.com/2017/09/18/%E5%BE%AE%E4%BF%A1JS-SDK%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/18/微信JS-SDK的使用/</id>
+    <published>2017-09-18T13:10:00.000Z</published>
+    <updated>2017-12-21T08:02:05.133Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>微信JS-SDK是微信提供的一套调用微信内部API功能的的插件</li>
+</ul>
+<h2 id="JS-SDK使用"><a href="#JS-SDK使用" class="headerlink" title="JS-SDK使用"></a>JS-SDK使用</h2><ol>
+<li>域名绑定</li>
+<li>引入JS<ul>
+<li><code>html</code>文件中直接引入JS文件<code>http://res.wx.qq.com/open/js/jweixin-1.2.0.js</code></li>
+<li>vue单页面项目使用：<ul>
+<li>安装<code>npm install --save weixin-js-sdk</code></li>
+<li>组件中使用<code>import wx from &#39;weixin-js-sdk&#39;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>通过config接口注入权限验证配置</p>
+<ul>
+<li>通过后台提供的接口设置<code>config</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">wx.config(&#123;</div><div class="line">    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</div><div class="line">    appId: &apos;&apos;, // 必填，公众号的唯一标识</div><div class="line">    timestamp: , // 必填，生成签名的时间戳</div><div class="line">    nonceStr: &apos;&apos;, // 必填，生成签名的随机串</div><div class="line">    signature: &apos;&apos;,// 必填，签名，见附录1</div><div class="line">    jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>通过ready接口处理成功验证<code>wx.ready(function(){})</code></p>
+<ul>
+<li>vue单页面项目<code>wx.ready</code>写在主组件里面</li>
+</ul>
+</li>
+<li><p>通过error接口处理失败验证<code>wx.error(function(res){})</code></p>
+</li>
+</ol>
+<p>##接口调用说明</p>
+<ul>
+<li>所有接口通过wx对象(也可使用jWeixin对象)来调用，参数是一个对象，除了每个接口本身需要传的参数之外，还有以下通用参数<ol>
+<li>success：接口调用成功时执行的回调函数。</li>
+<li>fail：接口调用失败时执行的回调函数。</li>
+<li>complete：接口调用完成时执行的回调函数，无论成功或失败都会执行。</li>
+<li>cancel：用户点击取消时的回调函数，仅部分有用户取消操作的api才会用到。</li>
+<li>trigger: 监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。<code>备注：不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="基础接口的使用"><a href="#基础接口的使用" class="headerlink" title="基础接口的使用"></a>基础接口的使用</h2><ol>
+<li><p>图片上传</p>
+<ul>
+<li>调用<code>wx.chooseImage</code>选择图片或拍照,再调用上传图片接口<code>wx.uploadImage</code>上传到微信服务器获取到<code>serverId</code>，最后调用后台接口上传到公司服务器，根据后台返回的<code>imgURl</code>在页面显示<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">//示例</div><div class="line">wx.chooseImage(&#123;</div><div class="line">        count: 1,</div><div class="line">        sizeType: [&apos;original&apos;, &apos;compressed&apos;],</div><div class="line">        sourceType: [&apos;album&apos;, &apos;camera&apos;],</div><div class="line">        success: function (res) &#123;</div><div class="line">          let localId = res.localIds.toString();</div><div class="line">          wx.uploadImage(&#123;</div><div class="line">            localId: localId,</div><div class="line">            isShowProgressTips: 1,</div><div class="line">            success: function (res) &#123;</div><div class="line">              var serverId = res.serverId; // 返回图片的服务器端ID</div><div class="line">              let parms = &#123;</div><div class="line">                mediaid:serverId</div><div class="line">              &#125;</div><div class="line">              that.imgBoxWrapShow = true;</div><div class="line">              imgUpload(parms).then( res =&gt; &#123;</div><div class="line">                let &#123;code,msg,data&#125; = res;</div><div class="line">                if(code!==0) &#123;</div><div class="line">                  alert(msg);</div><div class="line">                  that.imgBoxWrapShow = false;</div><div class="line">                  return false;</div><div class="line">                &#125;</div><div class="line">                that.imgArr.push(data);</div><div class="line">                if(that.imgArr.length&gt;=4) &#123;</div><div class="line">                  that.uploadImgShow=false;</div><div class="line">                &#125;</div><div class="line">                that.imgBoxWrapShow = false;</div><div class="line">              &#125;)</div><div class="line">            &#125;,</div><div class="line">            fail: function() &#123;</div><div class="line">              alert(&apos;上传失败&apos;);</div><div class="line">            &#125;</div><div class="line">          &#125;);</div><div class="line">        &#125;,</div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>禁止微信的功能</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//隐藏微信的功能</div><div class="line">      wx.hideMenuItems(&#123;</div><div class="line">        menuList: [</div><div class="line">          &apos;menuItem:share:qq&apos;,</div><div class="line">          &apos;menuItem:share:weiboApp&apos;,</div><div class="line">          &apos;menuItem:favorite&apos;,</div><div class="line">          &apos;menuItem:share:facebook&apos;,</div><div class="line">          &apos;menuItem:share:QZone&apos;,</div><div class="line">          &apos;menuItem:editTag&apos;,</div><div class="line">          &apos;menuItem:delete&apos;,</div><div class="line">          &apos;menuItem:copyUrl&apos;,</div><div class="line">          &apos;menuItem:originPage&apos;,</div><div class="line">          &apos;menuItem:readMode&apos;,</div><div class="line">          &apos;menuItem:openWithQQBrowser&apos;,</div><div class="line">          &apos;menuItem:openWithSafari&apos;,</div><div class="line">          &apos;menuItem:share:email&apos;,</div><div class="line">          &apos;menuItem:share:brand&apos;,</div><div class="line">          &apos;menuItem:share:appMessage&apos;,</div><div class="line">          &apos;menuItem:share:timeline&apos;</div><div class="line">        ]</div><div class="line">      &#125;);</div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;微信JS-SDK是微信提供的一套调用微信内部API功能的的插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;JS-SDK使用&quot;&gt;&lt;a 
+    
+    </summary>
+    
+      <category term="微信公众号" scheme="http://yoursite.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+      <category term="微信公众号" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+      <category term="微信JS-SDK" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1JS-SDK/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS数组的使用</title>
+    <link href="http://yoursite.com/2017/09/18/%E6%95%B0%E7%BB%84%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/09/18/数组的使用/</id>
+    <published>2017-09-18T13:09:31.000Z</published>
+    <updated>2017-12-07T07:50:59.101Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、数组的基本方法"><a href="#一、数组的基本方法" class="headerlink" title="一、数组的基本方法"></a>一、数组的基本方法</h1><h2 id="arr-concat-item…"><a href="#arr-concat-item…" class="headerlink" title="arr.concat(item…)"></a>arr.concat(item…)</h2><ul>
+<li><code>concat()</code> 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;];</div><div class="line">var b = [1,2,3,4,5];</div><div class="line">var c = a.concat(b) // c变成[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,1,2,3,4,5];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="arr-join-separator"><a href="#arr-join-separator" class="headerlink" title="arr.join(separator);"></a>arr.join(separator);</h2><ul>
+<li><code>join()</code> 方法将数组（或一个类数组对象）的所有元素连接到一个字符串中,默认的separator是逗号’,’,如果separator是空字符串(“”)，则所有元素之间都没有任何字符。join() 方法，不会改变数组。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">let a = [&apos;Wind&apos;, &apos;Rain&apos;, &apos;Fire&apos;];</div><div class="line"></div><div class="line">a.join(); </div><div class="line">// 默认为 &quot;,&quot;</div><div class="line">// &apos;Wind,Rain,Fire&apos;</div><div class="line"></div><div class="line">a.join(&quot;&quot;); </div><div class="line">// 分隔符 === 空字符串 &quot;&quot;</div><div class="line">// &quot;WindRainFire&quot;</div><div class="line"></div><div class="line">a.join(&quot;-&quot;); </div><div class="line">// 分隔符 &quot;-&quot;</div><div class="line">// &apos;Wind-Rain-Fire&apos;</div><div class="line"></div><div class="line">console.log(a);</div><div class="line">// [&apos;Wind&apos;, &apos;Rain&apos;, &apos;Fire&apos;]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="array-pop"><a href="#array-pop" class="headerlink" title="array.pop()"></a>array.pop()</h2><ul>
+<li><code>pop()</code>方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let a = [1, 2, 3];</div><div class="line">a.length; // 3</div><div class="line"></div><div class="line">a.pop(); // 3</div><div class="line"></div><div class="line">console.log(a); // [1, 2]</div><div class="line">a.length; // 2</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="array-push-item…"><a href="#array-push-item…" class="headerlink" title="array.push(item…)"></a>array.push(item…)</h2><ul>
+<li><code>push()</code> 方法将一个或多个元素添加到数组的末尾，并返回新数组的长度,如果参数item是一个数组，它会把参数组作为单个元素整个添加到数组中。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var numbers = [1, 2, 3];</div><div class="line">numbers.push(4);</div><div class="line"></div><div class="line">console.log(numbers); </div><div class="line">// [1, 2, 3, 4]</div><div class="line"></div><div class="line">numbers.push([5, 6, 7]);</div><div class="line"></div><div class="line">console.log(numbers); </div><div class="line">// [1, 2, 3, 4, [5, 6, 7]]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="array-reverse"><a href="#array-reverse" class="headerlink" title="array.reverse()"></a>array.reverse()</h2><ul>
+<li><code>reverse</code>方法反转array里的元素的顺序，并返回array本身<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a =[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">var b = a.reverse();</div><div class="line">console.log(a)  //[&apos;c&apos;,&apos;b&apos;,&apos;a&apos;]</div><div class="line">console.log(b)  //[&apos;c&apos;,&apos;b&apos;,&apos;a&apos;]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="array-shift"><a href="#array-shift" class="headerlink" title="array.shift()"></a>array.shift()</h2><ul>
+<li><code>shift()</code> 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let a = [1, 2, 3];</div><div class="line">let b = a.shift();</div><div class="line"></div><div class="line">console.log(a); </div><div class="line">// [2, 3]</div><div class="line"></div><div class="line">console.log(b); </div><div class="line">// 1</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="array-unshift-item…"><a href="#array-unshift-item…" class="headerlink" title="array.unshift(item…)"></a>array.unshift(item…)</h2><ul>
+<li><code>unshift</code> 方法将一个或多个元素添加到数组的开头，并返回新数组的长度<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let a = [1, 2, 3];</div><div class="line">a.unshift(4, 5);</div><div class="line"></div><div class="line">console.log(a);</div><div class="line">// [4, 5, 1, 2, 3]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="array-slice-begin-end"><a href="#array-slice-begin-end" class="headerlink" title="array.slice(begin,end)"></a>array.slice(begin,end)</h2><ul>
+<li><code>slice()</code> 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象，原始数组不会被修改。</li>
+<li>参数begin(可选)：从该索引处开始提取原数组中的元素，如果该参数是负数，则表示从原数组中的倒数第几位元素开始提取(slice(-2)表示提取原数组中的倒数第二个元素到最后一个元素，包含最后一个元素),如果省略begin则索引从0开始</li>
+<li><p>参数end(可选)：如果 end 被省略，则slice 会一直提取到原数组末尾,如果 end 大于数组长度，slice 也会一直提取到原数组末尾。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">arr.slice();</div><div class="line">// [0, end]</div><div class="line"></div><div class="line">arr.slice(begin);</div><div class="line">// [begin, end]</div><div class="line"></div><div class="line">arr.slice(begin, end);</div><div class="line">// [begin, end)</div></pre></td></tr></table></figure>
+</li>
+<li><p>slice 方法可以用来将一个类数组（Array-like）对象/集合转换成一个数组,如<code>arguments</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function list() &#123;</div><div class="line">  return Array.prototype.slice.call(arguments); // return [].slice.call(arguments);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="array-splice-start"><a href="#array-splice-start" class="headerlink" title="array.splice(start)"></a>array.splice(start)</h2><ul>
+<li><code>splice()</code> 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。返回一个包含被移除元素的数组。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">array.splice(start)</div><div class="line"></div><div class="line">array.splice(start, deleteCount) </div><div class="line"></div><div class="line">array.splice(start, deleteCount, item1, item2, ...)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var myFish = [&apos;angel&apos;, &apos;clown&apos;, &apos;mandarin&apos;, &apos;sturgeon&apos;];</div><div class="line"></div><div class="line">myFish.splice(2, 0, &apos;drum&apos;); // 在索引为2的位置插入&apos;drum&apos;</div><div class="line">// myFish 变为 [&quot;angel&quot;, &quot;clown&quot;, &quot;drum&quot;, &quot;mandarin&quot;, &quot;sturgeon&quot;]</div><div class="line"></div><div class="line">myFish.splice(2, 1); // 从索引为2的位置删除一项（也就是&apos;drum&apos;这一项）</div><div class="line">// myFish 变为 [&quot;angel&quot;, &quot;clown&quot;, &quot;mandarin&quot;, &quot;sturgeon&quot;]</div></pre></td></tr></table></figure>
+<h2 id="array-sort-comparefn"><a href="#array-sort-comparefn" class="headerlink" title="array.sort(comparefn)"></a>array.sort(comparefn)</h2><ul>
+<li><code>sort</code>方法 默认排序顺序是根据字符串Unicode码点，如果指明了<code>comparefn</code>，那么数组会按照调用该函数的返回值排序。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 比较数组数组</div><div class="line">var numbers = [4, 2, 5, 1, 3];</div><div class="line">numbers.sort(function(a, b) &#123;</div><div class="line">  return a - b;</div><div class="line">&#125;);</div><div class="line">console.log(numbers);</div><div class="line"></div><div class="line">// [1, 2, 3, 4, 5]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="二、ES5数组方法"><a href="#二、ES5数组方法" class="headerlink" title="二、ES5数组方法"></a>二、ES5数组方法</h2><h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h2><ul>
+<li><p>forEach() 方法对数组的每个元素执行一次提供的函数,遍历数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">const arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];</div><div class="line"></div><div class="line">arr.forEach(function(item,index) &#123;</div><div class="line">    console.log(item) //数组的每一项</div><div class="line">    console.log(index) //数组的索引</div><div class="line">&#125;)</div><div class="line">arr.forEach( (item,index) =&gt; console.log(index+&apos;:&apos;+item));</div><div class="line"></div><div class="line">// 0:a</div><div class="line">// 1:b</div><div class="line">// 2:c</div></pre></td></tr></table></figure>
+</li>
+<li><p>语法：</p>
+<ul>
+<li><code>callback</code>:为数组中每个元素执行的函数，该函数接收三个参数</li>
+<li><code>currentValue</code>(当前值):数组中正在处理的当前元素</li>
+<li><code>index(索引)</code>:数组中正在处理的当前元素的索引</li>
+<li><code>array</code>:forEach()方法正在操作的数组</li>
+<li><code>thisArg</code>(可选):可选参数。当执行回调 函数时用作this的值(参考对象)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">array.forEach(callback(currentValue, index, array)&#123;</div><div class="line">    //do something</div><div class="line">&#125;, this)</div><div class="line"></div><div class="line">array.forEach(callback[, thisArg])</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>使用thisArg</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function Counter() &#123;</div><div class="line">    this.sum = 0;</div><div class="line">    this.count = 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Counter.prototype.add = function(array) &#123;</div><div class="line">    array.forEach(function(entry) &#123;</div><div class="line">        this.sum += entry;</div><div class="line">        ++this.count;</div><div class="line">    &#125;, this);</div><div class="line">    //console.log(this);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var obj = new Counter();</div><div class="line">obj.add([1, 3, 5, 7]);</div><div class="line"></div><div class="line">obj.count; </div><div class="line">// 4 === (1+1+1+1)</div><div class="line">obj.sum;</div><div class="line">// 16 === (1+3+5+7)</div></pre></td></tr></table></figure>
+</li>
+<li><p>forEach 方法按升序为数组中含有效值的每一项执行一次callback 函数，那些已删除（使用delete方法等情况）或者未初始化的项将被跳过（但不包括那些值为 undefined 的项）（例如在稀疏数组上）。</p>
+<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2></li>
+<li><code>map()</code> 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。返回一个新数组，每个元素都是回调函数的结果。map 不修改调用它的原数组本身<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// ES6</div><div class="line">let numbers = [1, 5, 10, 15];</div><div class="line">let doubles = numbers.map( x =&gt; x ** 2);</div><div class="line"></div><div class="line">// doubles is now [1, 25, 100, 225]</div><div class="line">// numbers is still [1, 5, 10, 15]</div><div class="line"></div><div class="line"></div><div class="line">const numbers = [2, 4, 8, 10];</div><div class="line">let halves = numbers.map(x =&gt; x / 2);</div><div class="line"></div><div class="line">let numbers = [1, 4, 9];</div><div class="line">let roots = numbers.map(Math.sqrt);</div><div class="line">// roots is now [1, 2, 3]</div><div class="line">// numbers is still [1, 4, 9]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h2><ul>
+<li><code>filter()</code> 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素,filter不会改变原数组。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function isBigEnough(value) &#123;</div><div class="line">  return value &gt;= 10;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);</div><div class="line"></div><div class="line">// filtered is [12, 130, 44]</div><div class="line"></div><div class="line">// ES6 way</div><div class="line"></div><div class="line">const isBigEnough = value =&gt; value &gt;= 10;</div><div class="line"></div><div class="line">let [...spraed]= [12, 5, 8, 130, 44];</div><div class="line"></div><div class="line">let filtered = spraed.filter(isBigEnough);</div><div class="line"></div><div class="line">// filtered is [12, 130, 44]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h2><ul>
+<li><code>some()</code> 方法测试数组中的某些元素是否通过由提供的函数实现的测试(即寻找数组中是否有符合条件的值),返回布尔值(符合ture,否则false),不会改变原数组。</li>
+<li>some 为数组中的每一个元素执行一次 callback 函数，直到找到一个使得 callback 返回一个“真值”（即可转换为布尔值 true 的值）。如果找到了这样一个值，some 将会立即返回 true。否则，some 返回 false。callback 只会在那些”有值“的索引上被调用，不会在那些被删除或从来未被赋值的索引上调用。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">const isBiggerThan10 = (element, index, array) =&gt; &#123;</div><div class="line">  return element &gt; 10;</div><div class="line">&#125;</div><div class="line"></div><div class="line">[2, 5, 8, 1, 4].some(isBiggerThan10);  </div><div class="line">// false</div><div class="line"></div><div class="line">[12, 5, 8, 1, 4].some(isBiggerThan10); </div><div class="line">// true</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h2><ul>
+<li><code>every()</code> 方法测试数组的所有元素是否都通过了指定函数的测试</li>
+<li>为数组中的每个元素执行一次 callback 函数，直到它找到一个使 callback 返回 false（表示可转换为布尔值 false 的值）的元素。如果发现了一个这样的元素，every 方法将会立即返回 false。否则，callback 为每一个元素返回 true，every 就会返回 true。callback 只会为那些已经被赋值的索引调用。不会为那些被删除或从来没被赋值的索引调用。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//检测数组中的所有元素是否都大于 10</div><div class="line">function isBigEnough(element, index, array) &#123;</div><div class="line">  return (element &gt;= 10);</div><div class="line">&#125;</div><div class="line">var passed = [12, 5, 8, 130, 44].every(isBigEnough);</div><div class="line">// passed is false</div><div class="line">passed = [12, 54, 18, 130, 44].every(isBigEnough);</div><div class="line">// passed is true</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h2><ul>
+<li><code>indexOf()</code>方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var array = [2, 5, 9];</div><div class="line">array.indexOf(2);     // 0</div><div class="line">array.indexOf(7);     // -1</div><div class="line">array.indexOf(9, 2);  // 2</div><div class="line">array.indexOf(2, -1); // -1</div><div class="line">array.indexOf(2, -3); // 0</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="lastIndexOf"><a href="#lastIndexOf" class="headerlink" title="lastIndexOf()"></a>lastIndexOf()</h2><ul>
+<li>lastIndexOf() 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。从数组的后面向前查找，从 fromIndex 处开始。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var array = [2, 5, 9, 2];</div><div class="line">var index = array.lastIndexOf(2);</div><div class="line">// index is 3</div><div class="line">index = array.lastIndexOf(7);</div><div class="line">// index is -1</div><div class="line">index = array.lastIndexOf(2, 3);</div><div class="line">// index is 3</div><div class="line">index = array.lastIndexOf(2, 2);</div><div class="line">// index is 0</div><div class="line">index = array.lastIndexOf(2, -2);</div><div class="line">// index is 0</div><div class="line">index = array.lastIndexOf(2, -1);</div><div class="line">// index is 3</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="isArray"><a href="#isArray" class="headerlink" title="isArray()"></a>isArray()</h2><ul>
+<li><code>Array.isArray()</code> 用于确定传递的值是否是一个 Array。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 下面的函数调用都返回 true</div><div class="line">Array.isArray([]);</div><div class="line">Array.isArray([1]);</div><div class="line">Array.isArray(new Array());</div><div class="line">// 鲜为人知的事实：其实 Array.prototype 也是一个数组。</div><div class="line">Array.isArray(Array.prototype); </div><div class="line"></div><div class="line">// 下面的函数调用都返回 false</div><div class="line">Array.isArray();</div><div class="line">Array.isArray(&#123;&#125;);</div><div class="line">Array.isArray(null);</div><div class="line">Array.isArray(undefined);</div><div class="line">Array.isArray(17);</div><div class="line">Array.isArray(&apos;Array&apos;);</div><div class="line">Array.isArray(true);</div><div class="line">Array.isArray(false);</div><div class="line">Array.isArray(&#123; __proto__: Array.prototype &#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#三、ES6新增数组方法</p>
+<h2 id="Array-from-arrayLike-mapFn-thisArg"><a href="#Array-from-arrayLike-mapFn-thisArg" class="headerlink" title="Array.from(arrayLike, mapFn, thisArg)"></a>Array.from(arrayLike, mapFn, thisArg)</h2><ul>
+<li><p><code>Array.from()</code> 方法从一个类似数组或可迭代对象中创建一个新的数组实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const bar = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];</div><div class="line">Array.from(bar);</div><div class="line">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</div><div class="line"></div><div class="line">Array.from(&apos;foo&apos;);</div><div class="line">// [&quot;f&quot;, &quot;o&quot;, &quot;o&quot;]</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>Array.from(arguments)</code> 可以代替<code>Array.prototype.slice.call(arguments)</code>将类数组转换成一个数组</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、数组的基本方法&quot;&gt;&lt;a href=&quot;#一、数组的基本方法&quot; class=&quot;headerlink&quot; title=&quot;一、数组的基本方法&quot;&gt;&lt;/a&gt;一、数组的基本方法&lt;/h1&gt;&lt;h2 id=&quot;arr-concat-item…&quot;&gt;&lt;a href=&quot;#arr-conca
+    
+    </summary>
+    
+      <category term="ECMAScript" scheme="http://yoursite.com/categories/ECMAScript/"/>
+    
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+</feed>
