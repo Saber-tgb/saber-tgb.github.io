@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-26T05:27:14.561Z</updated>
+  <updated>2017-09-13T06:39:03.589Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,54 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/12/21/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%88%86%E7%B1%BB/"/>
-    <id>http://yoursite.com/2017/12/21/编程语言分类/</id>
-    <published>2017-12-21T08:06:28.217Z</published>
-    <updated>2017-11-26T05:27:14.561Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<p>title: 编程语言分类<br>date: 2017-11-26 13:08:34<br>categories:</p>
-<ul>
-<li>ECMAScript<br>tags:</li>
-<li>语言类型</li>
-</ul>
-<hr>
-<h1 id="一、看图区分语言类型"><a href="#一、看图区分语言类型" class="headerlink" title="一、看图区分语言类型"></a>一、看图区分语言类型</h1><p><img src="http://ojvil4eq9.bkt.clouddn.com/17-11-26/57660205.jpg" alt=""></p>
-<h1 id="二、语法角度的文字表述"><a href="#二、语法角度的文字表述" class="headerlink" title="二、语法角度的文字表述"></a>二、语法角度的文字表述</h1><h2 id="1-动态类型语言"><a href="#1-动态类型语言" class="headerlink" title="1. 动态类型语言"></a>1. 动态类型语言</h2><ul>
-<li>运行期间才做数据类型检查的语言，即动态类型语言编程时，永远不用给任何变量指定数据类型。该语言会在第一次赋值给变量时，在内部将数据类型记录下来。</li>
-<li>优点：方便阅读，不需要写非常多的类型相关的代码；</li>
-<li>缺点：不方便调试，命名不规范时会造成读不懂，不利于理解等<h2 id="2-静态类型语言"><a href="#2-静态类型语言" class="headerlink" title="2. 静态类型语言"></a>2. 静态类型语言</h2></li>
-<li>编译期间做检查数据类型的语言，即写程序时要声明所有变量的数据类型，是固定的。使用数据之前，必须先声明数据类型（int ,float,double等）。相当于使用之前，首先要为它们分配好内存空间。</li>
-<li>优点：结构非常规范，便于调试，方便类型安全</li>
-<li>缺点：为此需要写更多类型相关代码，不便于阅读、不清晰明了<h2 id="3-强类型定义语言（Explicit-type-conversion，强制数据类型定义语言，类型安全的语言）："><a href="#3-强类型定义语言（Explicit-type-conversion，强制数据类型定义语言，类型安全的语言）：" class="headerlink" title="3. 强类型定义语言（Explicit type conversion，强制数据类型定义语言，类型安全的语言）："></a>3. 强类型定义语言（Explicit type conversion，强制数据类型定义语言，类型安全的语言）：</h2></li>
-<li>一旦变量被指定某个数据类型，如果不经强制转换，即永远是此数据类型。</li>
-<li>举例：若定义了一个整型变量a，若不进行显示转换，不能将a当作字符串类型处理</li>
-<li>强类型语言是指需要进行变量/对象类型声明的语言，一般情况下需要编译执行。例如C/C++/Java/C#<h2 id="4-弱类型定义语言（Implicit-type-conversion，类型不安全的语言）："><a href="#4-弱类型定义语言（Implicit-type-conversion，类型不安全的语言）：" class="headerlink" title="4. 弱类型定义语言（Implicit type conversion，类型不安全的语言）："></a>4. 弱类型定义语言（Implicit type conversion，类型不安全的语言）：</h2></li>
-<li>数据类型可以被忽略的语言。它与强类型定义语言相反, 一个变量可以赋不同数据类型的值。</li>
-</ul>
-<h1 id="三、结论"><a href="#三、结论" class="headerlink" title="三、结论"></a>三、结论</h1><ul>
-<li>javaScript是动态语言，是弱类型定义语言（类型不安全的语言）;</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;title: 编程语言分类&lt;br&gt;date: 2017-11-26 13:08:34&lt;br&gt;categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ECMAScript&lt;br&gt;tags:&lt;/li&gt;
-&lt;li&gt;语言类型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;一、看
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>HTTP协议的学习四</title>
@@ -796,9 +748,9 @@
       <category term="微信公众号" scheme="http://yoursite.com/categories/%E5%BA%94%E7%94%A8%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
       <category term="微信公众号" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
     
   </entry>
   
@@ -1014,6 +966,82 @@
     
     
       <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mockServer的搭建</title>
+    <link href="http://yoursite.com/2017/09/18/mockServer%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    <id>http://yoursite.com/2017/09/18/mockServer的搭建/</id>
+    <published>2017-09-18T07:41:30.000Z</published>
+    <updated>2017-09-18T14:26:00.257Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用json-server模拟服务器"><a href="#使用json-server模拟服务器" class="headerlink" title="使用json-server模拟服务器"></a>使用json-server模拟服务器</h1><h3 id="mockServer的思路"><a href="#mockServer的思路" class="headerlink" title="mockServer的思路"></a>mockServer的思路</h3><ul>
+<li>以 <code>json-server</code> 作为 mock 服务器， <code>mock.js</code> 生成 mock 数据，以此达到 <code>mock-server</code> 要求。</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>全局安装<code>npm install -g json-server</code></li>
+<li>项目安装<code>npm install --save-dev json-server</code></li>
+<li>安装<code>mock.js</code>快速创建模拟接口 <code>npm install --save-dev mock.js</code></li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li>在项目根目录下创建mock文件夹</li>
+<li>再分别创建<code>db.js</code>作为 mock 数据源、<code>router.js</code>作为 mock 服务、<code>server.js</code>重写路由表</li>
+<li><code>db.js</code>配置接口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// db.js</div><div class="line">var Mock = require(&apos;mockjs&apos;);</div><div class="line">module.exports = &#123;</div><div class="line">  getComment: Mock.mock(&#123;</div><div class="line">    &quot;error&quot;: 0,</div><div class="line">    &quot;message&quot;: &quot;success&quot;,</div><div class="line">    &quot;result|40&quot;: [&#123;</div><div class="line">      &quot;author&quot;: &quot;@name&quot;,</div><div class="line">      &quot;comment&quot;: &quot;@cparagraph&quot;,</div><div class="line">      &quot;date&quot;: &quot;@datetime&quot;</div><div class="line">    &#125;]</div><div class="line">  &#125;),</div><div class="line">  addComment: Mock.mock(&#123;</div><div class="line">    &quot;error&quot;: 0,</div><div class="line">    &quot;message&quot;: &quot;success&quot;,</div><div class="line">    &quot;result&quot;: []</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>通过路由表<code>routes.js</code>实现路由配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  &quot;/comment/get.action&quot;: &quot;/getComment&quot;,</div><div class="line">  &quot;/comment/add.action&quot;: &quot;/addComment&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>server.js</code>正式使用<code>json-server</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// server.js</div><div class="line">const jsonServer = require(&apos;json-server&apos;)</div><div class="line">const db = require(&apos;./db.js&apos;)</div><div class="line">const routes = require(&apos;./router.js&apos;)</div><div class="line">const port = 3000;</div><div class="line">const opn = require(&apos;opn&apos;)</div><div class="line"></div><div class="line">const server = jsonServer.create()</div><div class="line">const router = jsonServer.router(db)</div><div class="line">const middlewares = jsonServer.defaults()</div><div class="line">const rewriter = jsonServer.rewriter(routes)</div><div class="line"></div><div class="line">let url = &apos;http://localhost:&apos; + port</div><div class="line"></div><div class="line">server.use(middlewares)</div><div class="line">// 将 POST 请求转为 GET</div><div class="line">server.use((request, res, next) =&gt; &#123;</div><div class="line">  request.method = &apos;GET&apos;;</div><div class="line">  next();</div><div class="line">&#125;)</div><div class="line"></div><div class="line">server.use(rewriter) // 注意：rewriter 的设置一定要在 router 设置之前</div><div class="line">server.use(router)</div><div class="line"></div><div class="line">server.listen(port, () =&gt; &#123;</div><div class="line">  console.log(&apos;open mock server at localhost:&apos; + port)</div><div class="line">  opn(url);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ol>
+<li>在<code>package.json</code>中配置命令<ul>
+<li>配置mockServer启动<code>&quot;mockServer&quot;: &quot;node mock/server.js&quot;</code></li>
+<li>配置mockServer和项目一起启动<code>&quot;mock&quot;: &quot;npm run mockServer | npm run dev&quot;</code></li>
+</ul>
+</li>
+<li>调用命令启动项目和mockServer<code>npm run mock</code></li>
+</ol>
+<h3 id="端口代理"><a href="#端口代理" class="headerlink" title="端口代理"></a>端口代理</h3><ul>
+<li><p>通过 Webpack 配置 proxy 代理,vue-cli创建的项目在<code>config/index.js</code>中配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//配置代理</div><div class="line">proxyTable: &#123;</div><div class="line">  &apos;/api/&apos;: &#123;</div><div class="line">    target: &apos;http://localhost:3000&apos;,</div><div class="line">    changeOrigin: true,</div><div class="line">    pathRewrite: &#123;</div><div class="line">      &apos;^/api&apos;: &apos;&apos;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+</li>
+<li><p>接口请求案例,以 axios 为例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function getComments () &#123;</div><div class="line">  axios.get(&apos;api/comment/get.action&apos;, &#123;&#125;).then((res) =&gt; &#123;</div><div class="line">    console.log(res.data)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用json-server模拟服务器&quot;&gt;&lt;a href=&quot;#使用json-server模拟服务器&quot; class=&quot;headerlink&quot; title=&quot;使用json-server模拟服务器&quot;&gt;&lt;/a&gt;使用json-server模拟服务器&lt;/h1&gt;&lt;h3 id=&quot;mockServer的思路&quot;&gt;&lt;a href=&quot;#mockServer的思路&quot; class=&quot;headerlink&quot; title=&quot;mockServer的思路&quot;&gt;&lt;/a&gt;mockServer的思路&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;以 &lt;code&gt;json-server&lt;/code&gt; 作为 mock 服务器， &lt;code&gt;mock.js&lt;/code&gt; 生成 mock 数据，以此达到 &lt;code&gt;mock-server&lt;/code&gt; 要求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;全局安装&lt;code&gt;npm install -g json-server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;项目安装&lt;code&gt;npm install --save-dev json-server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装&lt;code&gt;mock.js&lt;/code&gt;快速创建模拟接口 &lt;code&gt;npm install --save-dev mock.js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在项目根目录下创建mock文件夹&lt;/li&gt;
+&lt;li&gt;再分别创建&lt;code&gt;db.js&lt;/code&gt;作为 mock 数据源、&lt;code&gt;router.js&lt;/code&gt;作为 mock 服务、&lt;code&gt;server.js&lt;/code&gt;重写路由表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;db.js&lt;/code&gt;配置接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// db.js&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var Mock = require(&amp;apos;mockjs&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;module.exports = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  getComment: Mock.mock(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;error&amp;quot;: 0,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;result|40&amp;quot;: [&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;quot;author&amp;quot;: &amp;quot;@name&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;quot;comment&amp;quot;: &amp;quot;@cparagraph&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;quot;date&amp;quot;: &amp;quot;@datetime&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  addComment: Mock.mock(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;error&amp;quot;: 0,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;message&amp;quot;: &amp;quot;success&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;result&amp;quot;: []&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="前端构建生态" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E7%94%9F%E6%80%81/"/>
+    
+    
+      <category term="mockServer" scheme="http://yoursite.com/tags/mockServer/"/>
+    
+      <category term="mock.js" scheme="http://yoursite.com/tags/mock-js/"/>
     
   </entry>
   

@@ -832,7 +832,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/24/Vue-router的使用二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/24/Vue-router的使用一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -851,7 +851,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/05/24/Vue-router的使用二/" itemprop="url">Vue-router的使用一</a></h1>
+                <a class="post-title-link" href="/2017/05/24/Vue-router的使用一/" itemprop="url">Vue-router的使用一</a></h1>
         
 
         <div class="post-meta">
@@ -914,7 +914,7 @@
 
           
           
-             <span id="/2017/05/24/Vue-router的使用二/" class="leancloud_visitors" data-flag-title="Vue-router的使用一">
+             <span id="/2017/05/24/Vue-router的使用一/" class="leancloud_visitors" data-flag-title="Vue-router的使用一">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -943,36 +943,17 @@
 
       
         
-          <h2 id="导航钩子"><a href="#导航钩子" class="headerlink" title="导航钩子"></a>导航钩子</h2><ul>
-<li>vue-router 提供的导航钩子主要用来拦截导航，让它完成跳转或取消。有多种方式可以在路由导航发生时执行钩子：全局的, 单个路由独享的, 或者组件级的</li>
-</ul>
-<ol>
-<li><p>全局钩子 </p>
-<ul>
-<li><p>可以使用 router.beforeEach 注册一个全局的 before 钩子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123; ... &#125;)</div><div class="line"></div><div class="line">router.beforeEach((to, from, next) =&gt; &#123;</div><div class="line">    // ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+          <h2 id="vue-router的使用"><a href="#vue-router的使用" class="headerlink" title="vue-router的使用"></a>vue-router的使用</h2><ul>
+<li><p>javascript部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">// 0. 使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)</div><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueRouter from &apos;vue-router&apos;</div><div class="line"></div><div class="line">Vue.use(VueRouter)</div><div class="line"></div><div class="line">// 1. 定义（路由）组件。</div><div class="line">// 可以从其他文件 import 进来</div><div class="line">import Foo from &apos;@/page/login.vue&apos;</div><div class="line">import Bar from &apos;@/page/login.vue&apos;</div><div class="line"></div><div class="line">// 2. 定义路由</div><div class="line">// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是</div><div class="line">// 通过 Vue.extend() 创建的组件构造器，</div><div class="line">// 或者，只是一个组件配置对象。</div><div class="line">// 我们晚点再讨论嵌套路由。</div><div class="line">const routes = [</div><div class="line">  &#123; path: &apos;/foo&apos;, component: Foo &#125;,</div><div class="line">  &#123; path: &apos;/bar&apos;, component: Bar &#125;</div><div class="line">]</div><div class="line"></div><div class="line">// 3. 创建 router 实例，然后传 `routes` 配置</div><div class="line">// 你还可以传别的配置参数, 不过先这么简单着吧。</div><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes // （缩写）相当于 routes: routes</div><div class="line">&#125;)</div><div class="line"></div><div class="line">// 4. 创建和挂载根实例。</div><div class="line">// 记得要通过 router 配置参数注入路由，</div><div class="line">// 从而让整个应用都有路由功能</div><div class="line">const app = new Vue(&#123;</div><div class="line">  router</div><div class="line">&#125;).$mount(&apos;#app&apos;)</div><div class="line"></div><div class="line">// 现在，应用已经启动了！</div></pre></td></tr></table></figure>
 </li>
-<li><p>当一个导航触发时，全局的 before 钩子按照创建顺序调用。钩子是异步解析执行，此时导航在所有钩子 resolve 完之前一直处于 等待中</p>
-</li>
-<li>钩子方法接收三个参数：<ul>
-<li>to: Route: 即将要进入的目标 路由对象</li>
-<li>from: Route: 当前导航正要离开的路由</li>
-<li>next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。<ul>
-<li>next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。</li>
-<li>next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。</li>
-<li>next(‘/‘) 或者 next({ path: ‘/‘ }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。</li>
-</ul>
+<li><p>html部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">  &lt;h1&gt;Hello App!&lt;/h1&gt;</div><div class="line">  &lt;p&gt;</div><div class="line">    &lt;!-- 使用 router-link 组件来导航. --&gt;</div><div class="line">    &lt;!-- 通过传入 `to` 属性指定链接. --&gt;</div><div class="line">    &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</div><div class="line">    &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt;</div><div class="line">    &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;</div><div class="line">  &lt;/p&gt;</div><div class="line">  &lt;!-- 路由出口 --&gt;</div><div class="line">  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</div><div class="line">  &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>某个路由独享的钩子<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/foo&apos;,</div><div class="line">      component: Foo,</div><div class="line">      beforeEnter: (to, from, next) =&gt; &#123;</div><div class="line">        // ...</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/05/24/Vue-router的使用二/#more" rel="contents">
+            <a class="btn" href="/2017/05/24/Vue-router的使用一/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
