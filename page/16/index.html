@@ -296,11 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-<<<<<<< HEAD
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/">
-=======
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/24/Vue-router的使用二/">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -319,11 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-<<<<<<< HEAD
                 <a class="post-title-link" href="/2017/06/16/npm-browser-sync-gulp工具的学习/" itemprop="url">npm,browser-sync,gulp工具的学习</a></h1>
-=======
-                <a class="post-title-link" href="/2017/05/24/Vue-router的使用二/" itemprop="url">Vue-router的使用一</a></h1>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
         
 
         <div class="post-meta">
@@ -335,13 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-<<<<<<< HEAD
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:56:02+08:00">
                 2017-06-16
-=======
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T21:22:40+08:00">
-                2017-05-24
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               </time>
             
 
@@ -363,19 +350,13 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-<<<<<<< HEAD
                   <a href="/categories/前端构建生态/" itemprop="url" rel="index">
                     <span itemprop="name">前端构建生态</span>
-=======
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                   </a>
                 </span>
 
                 
                 
-<<<<<<< HEAD
               
             </span>
           
@@ -562,14 +543,6 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/前端构建生态/" itemprop="url" rel="index">
                     <span itemprop="name">前端构建生态</span>
-=======
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/组件/" itemprop="url" rel="index">
-                    <span itemprop="name">组件</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                   </a>
                 </span>
 
@@ -585,11 +558,7 @@
 
           
           
-<<<<<<< HEAD
              <span id="/2017/06/16/Git的使用/" class="leancloud_visitors" data-flag-title="Git的使用">
-=======
-             <span id="/2017/05/24/Vue-router的使用二/" class="leancloud_visitors" data-flag-title="Vue-router的使用一">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -618,7 +587,6 @@
 
       
         
-<<<<<<< HEAD
           <h3 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h3><ul>
 <li>Git是一款源代码管理工具(版本控制工具)<ul>
 <li>我们写的代码需要使用Git进行管理。</li>
@@ -712,38 +680,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/06/16/Git的使用/#more" rel="contents">
-=======
-          <h2 id="导航钩子"><a href="#导航钩子" class="headerlink" title="导航钩子"></a>导航钩子</h2><ul>
-<li>vue-router 提供的导航钩子主要用来拦截导航，让它完成跳转或取消。有多种方式可以在路由导航发生时执行钩子：全局的, 单个路由独享的, 或者组件级的</li>
-</ul>
-<ol>
-<li><p>全局钩子 </p>
-<ul>
-<li><p>可以使用 router.beforeEach 注册一个全局的 before 钩子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123; ... &#125;)</div><div class="line"></div><div class="line">router.beforeEach((to, from, next) =&gt; &#123;</div><div class="line">    // ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>当一个导航触发时，全局的 before 钩子按照创建顺序调用。钩子是异步解析执行，此时导航在所有钩子 resolve 完之前一直处于 等待中</p>
-</li>
-<li>钩子方法接收三个参数：<ul>
-<li>to: Route: 即将要进入的目标 路由对象</li>
-<li>from: Route: 当前导航正要离开的路由</li>
-<li>next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。<ul>
-<li>next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。</li>
-<li>next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。</li>
-<li>next(‘/‘) 或者 next({ path: ‘/‘ }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>某个路由独享的钩子<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/foo&apos;,</div><div class="line">      component: Foo,</div><div class="line">      beforeEnter: (to, from, next) =&gt; &#123;</div><div class="line">        // ...</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/24/Vue-router的使用二/#more" rel="contents">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               阅读全文 &raquo;
             </a>
           </div>
@@ -789,11 +725,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-<<<<<<< HEAD
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/vuex学习/">
-=======
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/24/Vue-js学习一/">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -812,11 +744,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-<<<<<<< HEAD
                 <a class="post-title-link" href="/2017/06/05/vuex学习/" itemprop="url">vuex学习</a></h1>
-=======
-                <a class="post-title-link" href="/2017/05/24/Vue-js学习一/" itemprop="url">Vue.js学习一</a></h1>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
         
 
         <div class="post-meta">
@@ -828,13 +756,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-<<<<<<< HEAD
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T22:29:17+08:00">
                 2017-06-05
-=======
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T21:21:33+08:00">
-                2017-05-24
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               </time>
             
 
@@ -863,7 +786,6 @@
 
                 
                 
-<<<<<<< HEAD
                   ， 
                 
               
@@ -875,8 +797,6 @@
 
                 
                 
-=======
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               
             </span>
           
@@ -887,11 +807,7 @@
 
           
           
-<<<<<<< HEAD
              <span id="/2017/06/05/vuex学习/" class="leancloud_visitors" data-flag-title="vuex学习">
-=======
-             <span id="/2017/05/24/Vue-js学习一/" class="leancloud_visitors" data-flag-title="Vue.js学习一">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -920,7 +836,6 @@
 
       
         
-<<<<<<< HEAD
           <h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
 <li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。</li>
 </ul>
@@ -932,31 +847,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/06/05/vuex学习/#more" rel="contents">
-=======
-          <h1 id="VueJs的单文件组件"><a href="#VueJs的单文件组件" class="headerlink" title="VueJs的单文件组件"></a>VueJs的单文件组件</h1><ul>
-<li>vuejs 自定义了一种.vue文件，可以把html, css, js 写到一个文件中，从而实现了对一个组件的封装， 一个.vue 文件就是一个单独的组件。</li>
-<li>.vue文件是自定义的，浏览器不认识，所以需要对该文件进行解析，在webpack构建中，需要安装vue-loader 对.vue文件进行解析。</li>
-<li>好处：项目更易于维护，代码模块化清晰明了，能够使用构建工具开发更有效率</li>
-</ul>
-<h1 id="生产环境的部署"><a href="#生产环境的部署" class="headerlink" title="生产环境的部署"></a>生产环境的部署</h1><ul>
-<li>使用vue的脚手架<code>vue-cli</code>来配置</li>
-</ul>
-<h1 id="vue的过滤器"><a href="#vue的过滤器" class="headerlink" title="vue的过滤器"></a>vue的过滤器</h1><ul>
-<li><p>过滤器可以用在mustache 插值和 v-bind 表达式即:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;message | capitalize&#125;&#125;</div><div class="line">&lt;div v-bind:id=&quot;rawId | formatId&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>过滤器方法注册在<code>filters</code>函数中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">filters: &#123;</div><div class="line">    capitalize: function (value) &#123;</div><div class="line">      if (!value) return &apos;&apos;</div><div class="line">      value = value.toString()</div><div class="line">      return value.charAt(0).toUpperCase() + value.slice(1)</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="vue的计算属性"><a href="#vue的计算属性" class="headerlink" title="vue的计算属性"></a>vue的计算属性</h1><ul>
-<li>计算属性方法写在<code>computed</code>函数中<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">            message: &apos;Hello&apos;</div><div class="line">        &#125;,</div><div class="line">computed: &#123;</div><div class="line">            reversedMessage: function () &#123;</div><div class="line">                return this.message.split(&apos;&apos;).reverse().join(&apos;&apos;);</div><div class="line">            &#125;</div><div class="line">        &#125;,</div></pre></td></tr></table></figure>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/24/Vue-js学习一/#more" rel="contents">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               阅读全文 &raquo;
             </a>
           </div>
@@ -1002,11 +892,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-<<<<<<< HEAD
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/03/扎实基础JS一/">
-=======
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/23/Vue2-0——从环境搭建到发布/">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -1025,11 +911,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-<<<<<<< HEAD
                 <a class="post-title-link" href="/2017/06/03/扎实基础JS一/" itemprop="url">扎实基础JS一</a></h1>
-=======
-                <a class="post-title-link" href="/2017/05/23/Vue2-0——从环境搭建到发布/" itemprop="url">Vue2.0——从环境搭建到发布</a></h1>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
         
 
         <div class="post-meta">
@@ -1041,13 +923,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-<<<<<<< HEAD
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-03T16:08:26+08:00">
                 2017-06-03
-=======
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-23T19:54:15+08:00">
-                2017-05-23
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               </time>
             
 
@@ -1069,13 +946,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-<<<<<<< HEAD
                   <a href="/categories/ECMAScript/" itemprop="url" rel="index">
                     <span itemprop="name">ECMAScript</span>
-=======
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                   </a>
                 </span>
 
@@ -1091,11 +963,7 @@
 
           
           
-<<<<<<< HEAD
              <span id="/2017/06/03/扎实基础JS一/" class="leancloud_visitors" data-flag-title="扎实基础JS一">
-=======
-             <span id="/2017/05/23/Vue2-0——从环境搭建到发布/" class="leancloud_visitors" data-flag-title="Vue2.0——从环境搭建到发布">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1124,37 +992,12 @@
 
       
         
-<<<<<<< HEAD
           
           
           
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/06/03/扎实基础JS一/#more" rel="contents">
-=======
-          <h1 id="Vue开发环境的配置"><a href="#Vue开发环境的配置" class="headerlink" title="Vue开发环境的配置"></a>Vue开发环境的配置</h1><ol>
-<li>安装Nodejs<code>npm install nodejs</code></li>
-<li>安装webpack<code>npm install webpack</code></li>
-<li>安装vue脚手架<code>npm install vue-cli -g</code></li>
-</ol>
-<h1 id="用vue-cli创建模板"><a href="#用vue-cli创建模板" class="headerlink" title="用vue-cli创建模板"></a>用vue-cli创建模板</h1><ul>
-<li>vue-cli的模板分为两套<ul>
-<li>精简版：vue init webpack-simple 工程名字</li>
-<li>常规版：vue init webpack 工程名字</li>
-</ul>
-</li>
-<li>初始化设置根据需求来设定，多人开发时开启Project name (vue-test)(语法检测)<h1 id="安装项目依赖"><a href="#安装项目依赖" class="headerlink" title="安装项目依赖"></a>安装项目依赖</h1></li>
-<li>npm install 有可能安装速度会很慢可以使用cnpm 安装淘宝镜像<code>npm install -g cnpm</code><h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1></li>
-<li>cd进入项目中<code>npm run dev</code><h1 id="Vue项目组件的使用"><a href="#Vue项目组件的使用" class="headerlink" title="Vue项目组件的使用"></a>Vue项目组件的使用</h1></li>
-<li>组件放在工程目录/src下创建component文件夹,组件都在这个目录下创建使用</li>
-<li>组件的使用<ol>
-<li>引入：<code>import firstcomponent from &#39;./component/firstcomponent.vue</code></li>
-<li>注册：data 代码块后面加上<code>components: { firstcomponent }</code></li>
-<li>使用：在<code>&lt;template&gt;&lt;/template&gt;</code>内加上<code>&lt;firstcomponent&gt;&lt;/firstcomponent&gt;</code>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/23/Vue2-0——从环境搭建到发布/#more" rel="contents">
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               阅读全文 &raquo;
             </a>
           </div>
@@ -1195,11 +1038,7 @@
 
   
   <nav class="pagination">
-<<<<<<< HEAD
     <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right"></i></a>
-=======
-    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
   </nav>
 
 
@@ -1244,11 +1083,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-<<<<<<< HEAD
                 <span class="site-state-item-count">73</span>
-=======
-                <span class="site-state-item-count">63</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1259,11 +1094,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-<<<<<<< HEAD
                 <span class="site-state-item-count">23</span>
-=======
-                <span class="site-state-item-count">21</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1274,11 +1105,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-<<<<<<< HEAD
                 <span class="site-state-item-count">92</span>
-=======
-                <span class="site-state-item-count">88</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1366,11 +1193,7 @@
 <div class="copyright" >
   
   &copy; 
-<<<<<<< HEAD
   <span itemprop="copyrightYear">2018</span>
-=======
-  <span itemprop="copyrightYear">2017</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1396,11 +1219,7 @@
 </span>
 </div>
 <div class="theme-info">
-<<<<<<< HEAD
   <span class="post-count">博客全站共44.4k字</span>
-=======
-  <span class="post-count">博客全站共38.8k字</span>
->>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 </div>
 
         
