@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="微信公众号,微信JS-SDK," />
 
 
 
@@ -92,13 +92,17 @@
 
 
 
+<meta name="description" content="概述 微信JS-SDK是微信提供的一套调用微信内部API功能的的插件  JS-SDK使用 域名绑定 引入JS html文件中直接引入JS文件http://res.wx.qq.com/open/js/jweixin-1.2.0.js vue单页面项目使用： 安装npm install --save weixin-js-sdk 组件中使用import wx from &amp;#39;weixin-js-sd">
+<meta name="keywords" content="微信公众号,微信JS-SDK">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信JS-SDK的使用">
 <meta property="og:url" content="http://yoursite.com/2017/09/18/微信JS-SDK的使用/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
-<meta property="og:updated_time" content="2017-09-18T13:10:00.185Z">
+<meta property="og:description" content="概述 微信JS-SDK是微信提供的一套调用微信内部API功能的的插件  JS-SDK使用 域名绑定 引入JS html文件中直接引入JS文件http://res.wx.qq.com/open/js/jweixin-1.2.0.js vue单页面项目使用： 安装npm install --save weixin-js-sdk 组件中使用import wx from &amp;#39;weixin-js-sd">
+<meta property="og:updated_time" content="2017-12-21T08:02:05.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信JS-SDK的使用">
+<meta name="twitter:description" content="概述 微信JS-SDK是微信提供的一套调用微信内部API功能的的插件  JS-SDK使用 域名绑定 引入JS html文件中直接引入JS文件http://res.wx.qq.com/open/js/jweixin-1.2.0.js vue单页面项目使用： 安装npm install --save weixin-js-sdk 组件中使用import wx from &amp;#39;weixin-js-sd">
 
 
 
@@ -335,6 +339,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/微信公众号/" itemprop="url" rel="index">
+                    <span itemprop="name">微信公众号</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -370,7 +396,56 @@
       
 
       
-        
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>微信JS-SDK是微信提供的一套调用微信内部API功能的的插件</li>
+</ul>
+<h2 id="JS-SDK使用"><a href="#JS-SDK使用" class="headerlink" title="JS-SDK使用"></a>JS-SDK使用</h2><ol>
+<li>域名绑定</li>
+<li>引入JS<ul>
+<li><code>html</code>文件中直接引入JS文件<code>http://res.wx.qq.com/open/js/jweixin-1.2.0.js</code></li>
+<li>vue单页面项目使用：<ul>
+<li>安装<code>npm install --save weixin-js-sdk</code></li>
+<li>组件中使用<code>import wx from &#39;weixin-js-sdk&#39;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>通过config接口注入权限验证配置</p>
+<ul>
+<li>通过后台提供的接口设置<code>config</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">wx.config(&#123;</div><div class="line">    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</div><div class="line">    appId: &apos;&apos;, // 必填，公众号的唯一标识</div><div class="line">    timestamp: , // 必填，生成签名的时间戳</div><div class="line">    nonceStr: &apos;&apos;, // 必填，生成签名的随机串</div><div class="line">    signature: &apos;&apos;,// 必填，签名，见附录1</div><div class="line">    jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>通过ready接口处理成功验证<code>wx.ready(function(){})</code></p>
+<ul>
+<li>vue单页面项目<code>wx.ready</code>写在主组件里面</li>
+</ul>
+</li>
+<li><p>通过error接口处理失败验证<code>wx.error(function(res){})</code></p>
+</li>
+</ol>
+<p>##接口调用说明</p>
+<ul>
+<li>所有接口通过wx对象(也可使用jWeixin对象)来调用，参数是一个对象，除了每个接口本身需要传的参数之外，还有以下通用参数<ol>
+<li>success：接口调用成功时执行的回调函数。</li>
+<li>fail：接口调用失败时执行的回调函数。</li>
+<li>complete：接口调用完成时执行的回调函数，无论成功或失败都会执行。</li>
+<li>cancel：用户点击取消时的回调函数，仅部分有用户取消操作的api才会用到。</li>
+<li>trigger: 监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口。<code>备注：不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="基础接口的使用"><a href="#基础接口的使用" class="headerlink" title="基础接口的使用"></a>基础接口的使用</h2><ol>
+<li><p>图片上传</p>
+<ul>
+<li>调用<code>wx.chooseImage</code>选择图片或拍照,再调用上传图片接口<code>wx.uploadImage</code>上传到微信服务器获取到<code>serverId</code>，最后调用后台接口上传到公司服务器，根据后台返回的<code>imgURl</code>在页面显示<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">//示例</div><div class="line">wx.chooseImage(&#123;</div><div class="line">        count: 1,</div><div class="line">        sizeType: [&apos;original&apos;, &apos;compressed&apos;],</div><div class="line">        sourceType: [&apos;album&apos;, &apos;camera&apos;],</div><div class="line">        success: function (res) &#123;</div><div class="line">          let localId = res.localIds.toString();</div><div class="line">          wx.uploadImage(&#123;</div><div class="line">            localId: localId,</div><div class="line">            isShowProgressTips: 1,</div><div class="line">            success: function (res) &#123;</div><div class="line">              var serverId = res.serverId; // 返回图片的服务器端ID</div><div class="line">              let parms = &#123;</div><div class="line">                mediaid:serverId</div><div class="line">              &#125;</div><div class="line">              that.imgBoxWrapShow = true;</div><div class="line">              imgUpload(parms).then( res =&gt; &#123;</div><div class="line">                let &#123;code,msg,data&#125; = res;</div><div class="line">                if(code!==0) &#123;</div><div class="line">                  alert(msg);</div><div class="line">                  that.imgBoxWrapShow = false;</div><div class="line">                  return false;</div><div class="line">                &#125;</div><div class="line">                that.imgArr.push(data);</div><div class="line">                if(that.imgArr.length&gt;=4) &#123;</div><div class="line">                  that.uploadImgShow=false;</div><div class="line">                &#125;</div><div class="line">                that.imgBoxWrapShow = false;</div><div class="line">              &#125;)</div><div class="line">            &#125;,</div><div class="line">            fail: function() &#123;</div><div class="line">              alert(&apos;上传失败&apos;);</div><div class="line">            &#125;</div><div class="line">          &#125;);</div><div class="line">        &#125;,</div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>禁止微信的功能</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//隐藏微信的功能</div><div class="line">      wx.hideMenuItems(&#123;</div><div class="line">        menuList: [</div><div class="line">          &apos;menuItem:share:qq&apos;,</div><div class="line">          &apos;menuItem:share:weiboApp&apos;,</div><div class="line">          &apos;menuItem:favorite&apos;,</div><div class="line">          &apos;menuItem:share:facebook&apos;,</div><div class="line">          &apos;menuItem:share:QZone&apos;,</div><div class="line">          &apos;menuItem:editTag&apos;,</div><div class="line">          &apos;menuItem:delete&apos;,</div><div class="line">          &apos;menuItem:copyUrl&apos;,</div><div class="line">          &apos;menuItem:originPage&apos;,</div><div class="line">          &apos;menuItem:readMode&apos;,</div><div class="line">          &apos;menuItem:openWithQQBrowser&apos;,</div><div class="line">          &apos;menuItem:openWithSafari&apos;,</div><div class="line">          &apos;menuItem:share:email&apos;,</div><div class="line">          &apos;menuItem:share:brand&apos;,</div><div class="line">          &apos;menuItem:share:appMessage&apos;,</div><div class="line">          &apos;menuItem:share:timeline&apos;</div><div class="line">        ]</div><div class="line">      &#125;);</div></pre></td></tr></table></figure></li>
+</ol>
+
       
     </div>
 
@@ -397,6 +472,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/微信公众号/" rel="tag"><i class="fa fa-tag"></i> 微信公众号</a>
+          
+            <a href="/tags/微信JS-SDK/" rel="tag"><i class="fa fa-tag"></i> 微信JS-SDK</a>
+          
+        </div>
+      
 
       
         
@@ -406,7 +489,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/18/JS数组的使用/" rel="next" title="JS数组的使用">
+              <a href="/2017/09/18/数组的使用/" rel="next" title="JS数组的使用">
                 <i class="fa fa-chevron-left"></i> JS数组的使用
               </a>
             
@@ -465,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/Octocat.jpg"
@@ -481,7 +573,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -492,7 +584,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -503,7 +595,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -574,6 +666,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS-SDK使用"><span class="nav-number">2.</span> <span class="nav-text">JS-SDK使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础接口的使用"><span class="nav-number">3.</span> <span class="nav-text">基础接口的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -591,7 +699,7 @@
 <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -617,7 +725,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共32.2k字</span>
+  <span class="post-count">博客全站共44.4k字</span>
 </div>
 
         

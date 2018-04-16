@@ -296,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6五/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/11/Node.js学习-URL模块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -315,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6五/" itemprop="url">深入理解ES6五</a></h1>
+                <a class="post-title-link" href="/2017/10/11/Node.js学习-URL模块/" itemprop="url">Node.js学习--URL模块</a></h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:16+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-11T11:54:43+08:00">
+                2017-10-11
               </time>
             
 
@@ -350,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
                   </a>
                 </span>
 
@@ -367,7 +367,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6五/" class="leancloud_visitors" data-flag-title="深入理解ES6五">
+             <span id="/2017/10/11/Node.js学习-URL模块/" class="leancloud_visitors" data-flag-title="Node.js学习--URL模块">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -396,31 +396,16 @@
 
       
         
-          <h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
-<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>函数中也可以传入解构表达式</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
-</li>
-<li><p>为非同名局部变量赋值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>嵌套对象解构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
-</li>
-</ul>
+          
+          URL模块
+url模块提供了两套API处理URL，一套是NOde.js特有的API，另一个是WHATWG URL 规范提供的API,Node.js官方推荐使用WHATWG URLAPI
+
+WHATWG URL规范API解析url字符串
+在浏览器中，WHATWG URL在全局总是可用的1234567891011121314151617const &#123;URL&#125; = require(&apos;url);let myURL = new URL(&apos;https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash&apos;);console.log(myURL);//得到结果URL &#123;  href: &a
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6五/#more" rel="contents">
+            <a class="btn" href="/2017/10/11/Node.js学习-URL模块/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -466,7 +451,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6四/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/10/Vue双向数据绑定原理解析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -485,7 +470,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6四/" itemprop="url">深入理解ES6四</a></h1>
+                <a class="post-title-link" href="/2017/10/10/Vue双向数据绑定原理解析/" itemprop="url">npm包的开发及发布</a></h1>
         
 
         <div class="post-meta">
@@ -497,8 +482,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-10T14:39:47+08:00">
+                2017-10-10
               </time>
             
 
@@ -520,8 +505,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
                   </a>
                 </span>
 
@@ -537,7 +522,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6四/" class="leancloud_visitors" data-flag-title="深入理解ES6四">
+             <span id="/2017/10/10/Vue双向数据绑定原理解析/" class="leancloud_visitors" data-flag-title="npm包的开发及发布">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -566,26 +551,17 @@
 
       
         
-          <h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
-<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
-<li>特异对象 具有某些与默认行为不符的内部行为</li>
-<li>标准对象 ES6中规范定义的对象</li>
-<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
-</ul>
-<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
-<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
-</li>
-</ul>
+          
+          Object.defineProperty
+这是一个ES5的方法，可以直接在一个对象上定义一个新属性，或者修改一个已经存在的属性， 并返回这个对象。
+对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。
+
+数据描述符是一个具有值的属性，该值可能是可写的，也可能不是可写的；即设置了value属性。
+123456789let obj = &#123;name:&apos;vue&apos;&#125;;Object.defineProperty(obj,&apos;age&apos;,&#123;    value:3,    writable:true,    enumerable:true,    configurable:true&#125;)o.age = 4;consol
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6四/#more" rel="contents">
+            <a class="btn" href="/2017/10/10/Vue双向数据绑定原理解析/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -631,7 +607,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6三/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/10/npm包的开发及发布/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -650,7 +626,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6三/" itemprop="url">深入理解ES6三</a></h1>
+                <a class="post-title-link" href="/2017/10/10/npm包的开发及发布/" itemprop="url">npm包的开发及发布</a></h1>
         
 
         <div class="post-meta">
@@ -662,8 +638,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T09:08:19+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-10T14:39:47+08:00">
+                2017-10-10
               </time>
             
 
@@ -685,8 +661,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
+                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
+                    <span itemprop="name">前端构建生态</span>
                   </a>
                 </span>
 
@@ -702,7 +678,7 @@
 
           
           
-             <span id="/2017/08/06/深入理解ES6三/" class="leancloud_visitors" data-flag-title="深入理解ES6三">
+             <span id="/2017/10/10/npm包的开发及发布/" class="leancloud_visitors" data-flag-title="npm包的开发及发布">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -731,34 +707,20 @@
 
       
         
-          <h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
-<li><p>ES6简化了为形式参数提供默认值的过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function makeRequest(rul,timeout = 2000,callback) &#123;</div><div class="line">    //函数其余部分</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值</p>
-</li>
-<li><p>在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function mix(first,second=&apos;b&apos;) &#123;</div><div class="line">    console.log(arguments.length);  // 1 之传入了一个参数</div><div class="line">    console.log(first === arguments[0])  // true</div><div class="line">    console.log(second === aruments[1])  // false //arguments[1]是undefined</div><div class="line">&#125;</div><div class="line">mix(&apos;a&apos;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>默认参数表达式</p>
-<ul>
-<li>ES6中可以使用先定义的参数作为后定义参数的默认值，但是后定义的参数不能作为先定义参数的默认值。</li>
-<li>默认参数也存在临时死区，定义参数时会为每个参数创建一个新的标识符绑定，该绑定在初始化之前不可被引用，如果访问会导致程序错误</li>
-</ul>
-</li>
-</ul>
-<h2 id="不定参数"><a href="#不定参数" class="headerlink" title="不定参数"></a>不定参数</h2><ul>
-<li>在函数的命名参数钱添加三个点(…)就表明这是一个不定参数，该参数为一个数组，包含着自它之后出入的所有参数，通过这个数组名即可逐一访问里面的参数。</li>
-<li>不定参数的使用限制：1.每个函数最多只能声明一个不定参数，而且一定要放在所有参数的末尾。2.不定参数不能用于对象字面量setter中</li>
-<li>arguments对象包含不定参数，无论是否使用不定参数，argumetns对象总是包含所有传入函数的参数</li>
-</ul>
-<h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><pre><code>- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数
-- 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// ES5使用</div><div class="line">let values = [25,50,75,100];</div><div class="line">console.log(Math.max.apply(Math,values)); //100</div><div class="line"></div><div class="line">// Es6使用</div><div class="line">console.log(Math.max(...values)); //100</div></pre></td></tr></table></figure>
-</code></pre>
+          <h2 id="npm创建"><a href="#npm创建" class="headerlink" title="npm创建"></a>npm创建</h2><ul>
+<li><code>npm init</code><ul>
+<li>name：填写你这个包的名字，默认是你这个文件夹的名字。不过这里要着重说一下，最好先去npm上找一下有没有同名的包。最好的测试方式就是，在命令行里面输入npm install 你要取的名字，如果报错，那么很好，npm上没有跟你同名的包，你可以放心大胆地把包发布出去.</li>
+<li>version：你这个包的版本，默认是1.0.0，以后要在package.json文件中更改版本号才能重新发布npm包</li>
+<li>description：用一句话描述你的包是干嘛用的。</li>
+<li>entry point：入口文件，默认是Index.js，你也可以自己填写你自己的文件名</li>
+<li>test command：测试命令，这个直接回车就好了，因为目前还不需要这个。</li>
+<li>git repository：这个是git仓库地址，如果你的包是先放到github上或者其他git仓库里，这时候你的文件夹里面会存在一个隐藏的.git目录，npm会读到这个目录作为这一项的默认值。如果没有的话，直接回车继续。</li>
+<li>keyword：这个是一个重点，这个关系到有多少人会搜到你的npm包。尽量使用贴切的关键字作为这个包的索引。</li>
+<li>author：写你的账号或者你的github账号吧</li>
+<li>license：开源文件
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6三/#more" rel="contents">
+            <a class="btn" href="/2017/10/10/npm包的开发及发布/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -804,7 +766,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/深入理解ES6二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/Stylus的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -823,7 +785,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/26/深入理解ES6二/" itemprop="url">深入理解ES6二</a></h1>
+                <a class="post-title-link" href="/2017/09/25/Stylus的使用/" itemprop="url">Stylus的使用</a></h1>
         
 
         <div class="post-meta">
@@ -835,8 +797,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T21:49:53+08:00">
-                2017-07-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T09:34:17+08:00">
+                2017-09-25
               </time>
             
 
@@ -858,8 +820,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/CSS预处理器/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS预处理器</span>
                   </a>
                 </span>
 
@@ -875,7 +848,7 @@
 
           
           
-             <span id="/2017/07/26/深入理解ES6二/" class="leancloud_visitors" data-flag-title="深入理解ES6二">
+             <span id="/2017/09/25/Stylus的使用/" class="leancloud_visitors" data-flag-title="Stylus的使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -904,33 +877,15 @@
 
       
         
-          <h1 id="模板字面量的主要功能"><a href="#模板字面量的主要功能" class="headerlink" title="模板字面量的主要功能"></a>模板字面量的主要功能</h1><ul>
-<li>多行字符串：一个正式的多行字符串的概念</li>
-<li>基本的字符串格式化：将变量的值嵌入字符串的能力</li>
-<li>HTML转义 向HTML插入经过安全转换后的字符串的能力</li>
-</ul>
-<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let message = `Hello world`;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号</p>
-</li>
-<li><p>模板字面量可以很简洁的使用多行字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let message = `Hello</div><div class="line">world`</div></pre></td></tr></table></figure>
-</li>
-<li><p>在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。<br>占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = `Hello $&#123;name&#125;`</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>#注意事项</p>
-<ul>
-<li><p>模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误</p>
-</li>
-<li><p>可以在模板字面量中嵌入另外一个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let name = &apos;Nicholas&apos;,</div><div class="line">    message = &apos;Hello, $&#123;</div><div class="line">        `my name is $&#123;name&#125;`</div><div class="line">    &#125;.`;</div></pre></td></tr></table></figure>
-</li>
-</ul>
+          
+          Less安装
+npm install less -g全局安装less,webStorm编辑器的插件会将less编译为css
+浏览器直接使用less
+1234//.less 样式表的链接，并将 rel 属性设置为 &quot;stylesheet/less&quot; 在 less.js 之前加载样式表。&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;./index.less&quot;&gt;// 使用`less.js`插件解析less&lt;script src=&quot;http://cdn.bootcss.com/less.js/1.7.0/less.min.js&quot;&
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/26/深入理解ES6二/#more" rel="contents">
+            <a class="btn" href="/2017/09/25/Stylus的使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -971,7 +926,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1016,7 +971,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1027,7 +982,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1038,7 +993,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1126,7 +1081,7 @@
 <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1152,7 +1107,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共32.2k字</span>
+  <span class="post-count">博客全站共44.4k字</span>
 </div>
 
         

@@ -296,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6六/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -315,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/16/npm-browser-sync-gulp工具的学习/" itemprop="url">npm,browser-sync,gulp工具的学习</a></h1>
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6六/" itemprop="url">深入理解ES6六</a></h1>
         
 
         <div class="post-meta">
@@ -327,604 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:56:02+08:00">
-                2017-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
-                    <span itemprop="name">前端构建生态</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/16/npm-browser-sync-gulp工具的学习/" class="leancloud_visitors" data-flag-title="npm,browser-sync,gulp工具的学习">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
-<li>官网[<a href="https://www.npmjs.com" target="_blank" rel="external">https://www.npmjs.com</a>]</li>
-<li>node package manager</li>
-<li>命令:<ul>
-<li>初始化:<code>npm init</code></li>
-<li>安装指定包:<code>npm install jquery --save</code></li>
-<li>删除指定包:<code>npm remove jquery --save</code></li>
-<li>卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery</li>
-<li>下载安装package.json中dependencies属性对的文件:<code>npm install --production</code></li>
-</ul>
-</li>
-<li>npm的使用步骤<ul>
-<li>第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）</li>
-<li>第二步、执行npm init -y</li>
-<li>第三步、安装需要的js库 npm install –save jquery</li>
-</ul>
-</li>
-</ul>
-<h3 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h3><ul>
-<li>更改代码之后自动刷新浏览器</li>
-<li>需要使用npm进行全局安装:<code>npm install browser-sync -g</code>,-g表示安装到全局</li>
-<li>使用:<code>browser-sync start --server --files &quot;./index.html,app.css,./css/*.css,*.*&quot;</code></li>
-<li>–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。</li>
-</ul>
-<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>  <a href="http://www.gulpjs.com" target="_blank" rel="external">官网</a><br>  <a href="http://www.gulpjs.com.cn" target="_blank" rel="external">中文网</a></p>
-<ul>
-<li><p>前端自动化构建工具<br>js压缩,var x,xname，混淆<br>合并.<br>css压缩<br>html压压缩</p>
-</li>
-<li><p>grunt ,webpack…</p>
-</li>
-</ul>
-<h3 id="核心就5个方法"><a href="#核心就5个方法" class="headerlink" title="核心就5个方法"></a>核心就5个方法</h3><ul>
-<li>task,gulp中是一个个任务的形式来实现功能。<ul>
-<li>task(‘任务名’,function(){<br>…..<br>});</li>
-</ul>
-</li>
-<li>src<ul>
-<li>src(‘./*.js’)</li>
-</ul>
-</li>
-<li>dest(‘./minjs/‘)// 指定处理后的文件的输出路径.</li>
-<li>watch(‘./*.js’,[‘任务名1’,’任务名2’]);</li>
-<li>run(‘任务名’);//执行指定的任务.
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/16/npm-browser-sync-gulp工具的学习/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/Git的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/16/Git的使用/" itemprop="url">Git的使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:48:27+08:00">
-                2017-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
-                    <span itemprop="name">前端构建生态</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/16/Git的使用/" class="leancloud_visitors" data-flag-title="Git的使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h3><ul>
-<li>Git是一款源代码管理工具(版本控制工具)<ul>
-<li>我们写的代码需要使用Git进行管理。</li>
-</ul>
-</li>
-</ul>
-<h3 id="分布式，集中式版本管理工具"><a href="#分布式，集中式版本管理工具" class="headerlink" title="分布式，集中式版本管理工具"></a>分布式，集中式版本管理工具</h3><ul>
-<li>git属于分布式</li>
-<li>svn集中式</li>
-</ul>
-<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><h3 id="git初始化一个仓库"><a href="#git初始化一个仓库" class="headerlink" title="git初始化一个仓库"></a>git初始化一个仓库</h3><ul>
-<li>创建一个.git隐藏目录</li>
-<li>命令:<code>git init</code>;<ul>
-<li>想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.</li>
-<li>一般是在项目的根目录执行这个命令.</li>
-</ul>
-</li>
-</ul>
-<h3 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h3><ul>
-<li>配置用户名 : <code>git config user.name &quot;testName&quot;</code></li>
-<li>配置邮箱   : <code>git config user.email &quot;test@sina.com&quot;</code></li>
-<li>查看配置信息: <code>git config --list</code></li>
-</ul>
-<h3 id="把代码提交到仓库中"><a href="#把代码提交到仓库中" class="headerlink" title="把代码提交到仓库中"></a>把代码提交到仓库中</h3><ul>
-<li><p>1.先把代码添加到暂存区(就相当于放到仓库门口)</p>
-<ul>
-<li>命令:<code>git add 文件路径</code></li>
-<li>示例:<code>git add ./reademe.md</code></li>
-<li>可以使用<code>git add .</code>这个命令，批量把当前目录下所有修改过的文件添加到暂存区。</li>
-</ul>
-</li>
-<li><p>2.把暂存区的文件提交仓库里</p>
-<ul>
-<li>命令: <code>git commit -m &quot;注释&quot;</code></li>
-<li>示例: <code>git commit -m &quot;我们添加了一个新的功能&quot;</code></li>
-<li>-m 表示指定一个字符串，作为提交的说明(相当于注释);</li>
-</ul>
-</li>
-<li><p>合并add 与commit 命令</p>
-<ul>
-<li><code>git commit -a -m &quot;这是使用合并添加与提交的操作&quot;</code>;</li>
-<li>这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)</li>
-</ul>
-</li>
-</ul>
-<h3 id="查看工作区状态"><a href="#查看工作区状态" class="headerlink" title="查看工作区状态"></a>查看工作区状态</h3><ul>
-<li>命令:<code>git status</code></li>
-</ul>
-<h3 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h3><ul>
-<li>在项目中有一些文件是不需要提交的,我们需要把它忽略掉</li>
-<li>需要在.git文件夹所在目录新建一个名为.gitignore的文件<br>然后在这个文件中写上需要被忽略的文件的路径。<br>示例: /css/a.css<pre><code>: /css/*.css
-: /a.html
-</code></pre></li>
-</ul>
-<h3 id="对比文件差异"><a href="#对比文件差异" class="headerlink" title="对比文件差异"></a>对比文件差异</h3><ul>
-<li>命令: <code>git diff</code><ul>
-<li>用来比较暂存区文件内容与工作区文件内容的区别</li>
-<li>如果暂存区没有文件，就会将工作与代码与最近一次提交对比</li>
-</ul>
-</li>
-<li>命令：<code>git diff --cached</code>  比较暂存区的文件和仓库中文件的区别</li>
-<li>对比之前某两次提交的文件的差异<ul>
-<li>命令:<code>git diff [版本号1] [版本号2] [想比较的文件路径]</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><ul>
-<li>命令:<code>git log</code>,可以查看每一次提交的日志</li>
-<li>命令:<code>git log --oneline</code> 表示使用简洁的形式输出提交日志</li>
-</ul>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
-<li>命令:<code>git reset --hard Head~1</code><ul>
-<li>这是将代码回退到上上一次提交时的状态</li>
-</ul>
-</li>
-<li>命令:<code>git reset --hard Head~2</code><ul>
-<li>回退到上上上次</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard Head~0</code></p>
-<ul>
-<li>回退到上次提交时的状态,~0可以省略</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard 版本号</code></p>
-<ul>
-<li>通过每次提交时生成的版本号来回退版本</li>
-</ul>
-</li>
-<li><p>通过<code>git reflog</code>命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/16/Git的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/vuex学习/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/05/vuex学习/" itemprop="url">vuex学习</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T22:29:17+08:00">
-                2017-06-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/组件/" itemprop="url" rel="index">
-                    <span itemprop="name">组件</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/05/vuex学习/" class="leancloud_visitors" data-flag-title="vuex学习">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
-<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。</li>
-</ul>
-<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2><ul>
-<li>vuex的状态自管理应用包含以下几个部分<ul>
-<li>state，驱动应用的数据源;</li>
-<li>view，以声明方式将state映射到视图； </li>
-<li>actions，响应在view上的用户输入导致的状态变化
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/05/vuex学习/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/03/扎实基础JS一/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/03/扎实基础JS一/" itemprop="url">扎实基础JS一</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-03T16:08:26+08:00">
-                2017-06-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:41+08:00">
+                2017-08-06
               </time>
             
 
@@ -963,7 +367,338 @@
 
           
           
-             <span id="/2017/06/03/扎实基础JS一/" class="leancloud_visitors" data-flag-title="扎实基础JS一">
+             <span id="/2017/08/06/深入理解ES6六/" class="leancloud_visitors" data-flag-title="深入理解ES6六">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><ul>
+<li>ES6新增的数据类型<code>Symbol</code></li>
+<li><p>创建Symbol：通过去全局的<code>Symbol</code>函数创建一个<code>Symbol</code>，<code>Symbol</code>函数接受一个可选参数，用于添加一段文本描述即将创建的<code>Symbol</code>,方便阅读和调试Symbol程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let firstName = Symbol(&apos;first name&apos;);</div><div class="line">    let person = &#123;&#125;;</div><div class="line"></div><div class="line">    person[firstName] = &apos;Nicholas&apos;;</div><div class="line"></div><div class="line">    console.log(&apos;first name&apos; in person); //false</div><div class="line">    console.log(person[firstName]); //&apos;Nicholas&apos;</div><div class="line">    console.log(firstName); //&apos;Symbol(first name)&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ES6扩展了<code>typeof</code>操作符，支持返回<code>Symbol</code>,可以用typeof来检测变量是否为<code>Symbol</code>类型.</p>
+</li>
+</ul>
+<h2 id="Symbol共享体系"><a href="#Symbol共享体系" class="headerlink" title="Symbol共享体系"></a>Symbol共享体系</h2><ul>
+<li><p>ES6提供了一个可以随时访问的全局Symbol注册表,如果要创建一个可共享的Symbol,要使用Symbol.for()方法，该方法只接受一个参数，就是即将创建的Symbol的字符串标识符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let uid = Symbol.for(&apos;uid&apos;);</div><div class="line">let object = &#123;&#125;;</div><div class="line"></div><div class="line">object[uid]=&apos;12345&apos;;</div><div class="line"></div><div class="line">console.log(ojbect[uid]);</div><div class="line">console.log(uid);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Symbol.for()方法首先在全局Symbol注册表中搜索键为’uid’的Symbol是否存在，如果存在，直接返回已有的Symbol；否则创建一个新的Symbol，并使用这个键在Symbol全局注册表中注册，随即返回新创建的Symbol</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/06/深入理解ES6六/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6五/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6五/" itemprop="url">深入理解ES6五</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:16+08:00">
+                2017-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/06/深入理解ES6五/" class="leancloud_visitors" data-flag-title="深入理解ES6五">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
+<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数中也可以传入解构表达式</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
+</li>
+<li><p>为非同名局部变量赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套对象解构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/06/深入理解ES6五/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/编程语言分类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/06/编程语言分类/" itemprop="url">编程语言分类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
+                2017-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/06/编程语言分类/" class="leancloud_visitors" data-flag-title="编程语言分类">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -993,11 +728,183 @@
       
         
           
-          
-          
+          一、看图区分语言类型
+二、语法角度的文字表述1. 动态类型语言
+运行期间才做数据类型检查的语言，即动态类型语言编程时，永远不用给任何变量指定数据类型。该语言会在第一次赋值给变量时，在内部将数据类型记录下来。
+优点：方便阅读，不需要写非常多的类型相关的代码；
+缺点：不方便调试，命名不规范时会造成读不懂，不利于理解等2. 静态类型语言
+编译期间做检查数据类型的语言，即写程序时要声明所有变量的数据类型，是固定的。使用数据之前，必须先声明数据类型（int ,float,double等）。相当于使用之前，首先要为它们分配好内存空间。
+优点：结构非常规范，便于调试，方便类型安全
+缺点：为此需要写更多类型相关代码，不便于阅读、不清晰明了3. 强类型定义语言（Explicit type conversion
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/03/扎实基础JS一/#more" rel="contents">
+            <a class="btn" href="/2017/08/06/编程语言分类/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6四/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6四/" itemprop="url">深入理解ES6四</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
+                2017-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/06/深入理解ES6四/" class="leancloud_visitors" data-flag-title="深入理解ES6四">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
+<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
+<li>特异对象 具有某些与默认行为不符的内部行为</li>
+<li>标准对象 ES6中规范定义的对象</li>
+<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
+</ul>
+<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
+<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/06/深入理解ES6四/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1038,7 +945,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1083,7 +990,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1094,7 +1001,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1105,7 +1012,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1193,7 +1100,7 @@
 <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1219,7 +1126,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共32.2k字</span>
+  <span class="post-count">博客全站共44.4k字</span>
 </div>
 
         

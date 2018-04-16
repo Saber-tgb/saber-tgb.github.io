@@ -1,0 +1,1358 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="vue," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="汤国斌的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="1.框架使用前期准备1.1 Node.js安装 直接去nodejs官网下载最新版本对应操作系统的nodejs进行安装，nodejs安装程序会自己设置环境变量，所以打开命令行输出node -v就能查看安装信息了，就说明安装成功了 npm就是nodejs的包管理工具，在安装nodejs的时候我们就会默认把npm安装了,并且已经配置到系统的环境变量Path中去，在控制台输出npm -v就能看到npm的版">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.js讲解">
+<meta property="og:url" content="http://yoursite.com/2018/04/16/Vue.js讲解/index.html">
+<meta property="og:site_name" content="汤国斌的博客">
+<meta property="og:description" content="1.框架使用前期准备1.1 Node.js安装 直接去nodejs官网下载最新版本对应操作系统的nodejs进行安装，nodejs安装程序会自己设置环境变量，所以打开命令行输出node -v就能查看安装信息了，就说明安装成功了 npm就是nodejs的包管理工具，在安装nodejs的时候我们就会默认把npm安装了,并且已经配置到系统的环境变量Path中去，在控制台输出npm -v就能看到npm的版">
+<meta property="og:updated_time" content="2018-04-16T13:55:32.792Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue.js讲解">
+<meta name="twitter:description" content="1.框架使用前期准备1.1 Node.js安装 直接去nodejs官网下载最新版本对应操作系统的nodejs进行安装，nodejs安装程序会自己设置环境变量，所以打开命令行输出node -v就能查看安装信息了，就说明安装成功了 npm就是nodejs的包管理工具，在安装nodejs的时候我们就会默认把npm安装了,并且已经配置到系统的环境变量Path中去，在控制台输出npm -v就能看到npm的版">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/16/Vue.js讲解/"/>
+
+
+
+
+
+  <title>Vue.js讲解 | 汤国斌的博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">汤国斌的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学习笔记</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/Vue.js讲解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Vue.js讲解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T21:50:10+08:00">
+                2018-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/16/Vue.js讲解/" class="leancloud_visitors" data-flag-title="Vue.js讲解">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-框架使用前期准备"><a href="#1-框架使用前期准备" class="headerlink" title="1.框架使用前期准备"></a>1.框架使用前期准备</h1><h3 id="1-1-Node-js安装"><a href="#1-1-Node-js安装" class="headerlink" title="1.1 Node.js安装"></a>1.1 Node.js安装</h3><ul>
+<li>直接去nodejs官网下载最新版本对应操作系统的nodejs进行安装，nodejs安装程序会自己设置环境变量，所以打开命令行输出<code>node -v</code>就能查看安装信息了，就说明安装成功了</li>
+<li>npm就是nodejs的包管理工具，在安装nodejs的时候我们就会默认把npm安装了,并且已经配置到系统的环境变量Path中去，在控制台输出<code>npm -v</code>就能看到npm的版本</li>
+<li>由于一些众所周知原因,有时候使用npm下载包的时候会非常慢，可以使用淘宝的镜像安装使用cnpm替代npm<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="1-2-ES6的使用"><a href="#1-2-ES6的使用" class="headerlink" title="1.2 ES6的使用"></a>1.2 ES6的使用</h3><ul>
+<li>ECMAScript 2015（以下简称 ES6）是 JavaScript 语言的新标准，使用babel可以将es6语法转换成浏览器可以识别的es5语法，在<code>vue-cli</code>脚手架搭建的项目中已集成bable,所以在vue项目我们可以使用ES6进行开发。</li>
+<li><p>ES6常用的语法</p>
+<ul>
+<li>新增let、const声明</li>
+<li><p>解构赋值 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let obj = &#123;name: &apos;alex&apos;, age: 20&#125;;</div><div class="line">let &#123;name, age&#125; = obj;</div><div class="line">console.log(name);</div><div class="line">console.log(age);</div></pre></td></tr></table></figure>
+</li>
+<li><p>模版字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let obj = &#123;name: &apos;alex&apos;, age: 20&#125;;</div><div class="line">let str = `用户名：$&#123;obj.name&#125;，年龄:$&#123;obj.age&#125;`;</div><div class="line">console.log(str);</div></pre></td></tr></table></figure>
+</li>
+<li><p>模块化：模块是js能规模化、工程化最大的基础，但之前js对定一块的支持有限，所以当前端使用多个框架或类库时很容易出现冲突等问题。当然了出了一大堆AMD解决方案如seajs,commonjs.reqiruejs…现在在ES6中，已经增加了对模块的支持。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import &#123;ajaxreq&#125; from &quot;./ajax&quot;</div><div class="line"></div><div class="line">function httpget(url, pars) &#123;</div><div class="line">    console.log(&apos;http get &apos;)</div><div class="line">    ajaxreq(url, pars)</div><div class="line">&#125;</div><div class="line"></div><div class="line">export &#123;httpget&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3Webpack"><a href="#1-3Webpack" class="headerlink" title="1.3Webpack"></a>1.3Webpack</h3><ul>
+<li><p>webpack当然是现在最为流行的js打包构建工具，非常强大。相关的配置以及使用三天三夜都要讲完。推荐文档<a href="https://doc.webpack-china.org/" target="_blank" rel="external">https://doc.webpack-china.org/</a></p>
+</li>
+<li><p>大家需要去明白的webpack的作是：把js项目以及相关依赖都打成一个可真正在浏览器运行的包（尽管babel能把es6转es5,事实上webpack中js的转换也是依靠babel完成的),所以这里不仅包括js转版本，还包含样式(less,sass)、前端构建(vue,react)，以及脚本去注释、压缩、混淆，甚至样式的压缩。都是通过webpack调度各类loadder和插件来完成的。</p>
+</li>
+</ul>
+<h1 id="2-Vue-js基本语法介绍"><a href="#2-Vue-js基本语法介绍" class="headerlink" title="2.Vue.js基本语法介绍"></a>2.Vue.js基本语法介绍</h1><h4 id="什么是vue-vue能帮我们解决什么实际问题"><a href="#什么是vue-vue能帮我们解决什么实际问题" class="headerlink" title="什么是vue,vue能帮我们解决什么实际问题"></a>什么是vue,vue能帮我们解决什么实际问题</h4><ul>
+<li>vue简单来说就是一个MVVM框架。</li>
+<li>所以在说vue之前，我们先谈谈什么是MVVM(Model-View-ViewModel)。在我们的web前端开发过程中，需要经常做的三个工作就是渲染、交互以及提交，简单的来说就是需要把服务器响应的数据，呈现给浏览器让用户看得到可以交互的基本性东西，由于渲染的内容用户可以做比如点击、输入甚至拖动的各类交互操作，交互完成后又最终需要把用户交互处理后的结果（比如：表单提交）再提交到服务器。</li>
+<li>这看起来当然没什么问题，但是有一点点麻烦就是首先需要写大量的代码进行渲染，然后需要写大量的代码来适应用户的各类交互，最终又通过大量的代码来获取用户最终交互的数据，这三个过程其实是分裂的。</li>
+<li>那有没有什么更好的办法呢，当然有了，我们的MVVM就是来解决这个问题的。想象一下，如果我们根据某些数据进行渲染完成后，当数据当生改变后与之相关的UI也会重新渲染，更厉害的是当数据绑定的UI由于用户交互发生改变时，我们的数据也会自动更新。</li>
+<li>这想想就很激动，没错MVVM框架已经完整的帮我们实现了这一个过程操作，让我们重点去关注数据本身，剩下的就全部将由mvvm框架处理就好了。vue既然是一个mvvm框架，当然这些也就都能做到。简单的界面当然可能感觉不到这种变化带来的前端开发质的飞跃，但当界面越来越复杂、交互越来越多的时候，这种模式的优势就非常明显了。</li>
+</ul>
+<h4 id="第一个Vue程序"><a href="#第一个Vue程序" class="headerlink" title="第一个Vue程序"></a>第一个Vue程序</h4><ul>
+<li>引用vuejs,指定一个vue呈现的Dom元素,声明一个Vue对象，并且挂载指定的Dom元素，指定显示数据,这里需要关注的是Vue初始化对象的el表示该Vue渲染的Dom对象，data则是显示的内容对象,使用Vue模板{{mesasge}}来显示数据的message属性</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line"> &#123;&#123;message&#125;&#125;</div><div class="line"></div><div class="line">    &lt;hr&gt;</div><div class="line">    &lt;a v-for=&quot;item in navlist&quot;  class=&quot;nav-item&quot;  :title=&quot;item.title&quot; :href=&quot;item.page&quot;&gt;&#123;&#123;item.title&#125;&#125;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script src=&quot;https://unpkg.com/vue&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;pages.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var app = new Vue(&#123;</div><div class="line">        el: &apos;#app&apos;,</div><div class="line">        data: &#123;</div><div class="line">            title:&apos;第一个vue&apos;,</div><div class="line">            message: &apos;Hi,Vue!!!&apos;,</div><div class="line">            navlist:window.pages</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h4 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h4><ul>
+<li>在开发过程中，进行数据渲染时我们使用最多的就是根据数据显示或隐藏内容，或者循环显示列表，话不多说看代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line"></div><div class="line">    &lt;div v-if=&quot;seen&quot;&gt;设置能看见我了...&lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;div v-show=&quot;show&quot;&gt;就算我不显示我也还是存在的&lt;/div&gt;  </div><div class="line">    &lt;div v-for=&quot;item in forlist&quot;&gt;name: &#123;&#123;item.name&#125;&#125;,age:&#123;&#123;item.age&#125;&#125;&lt;/div&gt;</div><div class="line">    &lt;hr&gt;</div><div class="line">    &lt;a v-for=&quot;item in navlist&quot; class=&quot;nav-item&quot; :title=&quot;item.title&quot; :href=&quot;item.page&quot;&gt;&#123;&#123;item.title&#125;&#125;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script src=&quot;https://unpkg.com/vue&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;pages.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var app = new Vue(&#123;</div><div class="line">        el: &apos;#app&apos;,</div><div class="line">        data: &#123;</div><div class="line">            seen: true,</div><div class="line">            show: true,</div><div class="line">            forlist: [&#123;</div><div class="line">                name: &apos;alex&apos;,</div><div class="line">                age: 20</div><div class="line">            &#125;, &#123;</div><div class="line">                name: &apos;luke&apos;,</div><div class="line">                age: 30</div><div class="line">            &#125;],</div><div class="line">            title: &apos;条件与循环&apos;,</div><div class="line">            navlist: window.pages</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>在元素中使用v-show或者v-if标签是，当指定的变量值为false时，则整个元素块不会显示，但v-show只是把该元素隐藏，而v-if则不显示。如果变量值为true,则效果一致。 v-for就是更简单了，看代码就明白，不多解释。</li>
+</ul>
+<h4 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h4><ul>
+<li>使用vue需要着重关注的点就是，数据、方法与元素的关联关系，如怎么使一个元素的属性为数据的值，或者怎么指定一个方法为元素的事件执行方法，先看代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line"></div><div class="line">    &#123;&#123;message&#125;&#125;</div><div class="line">    &lt;button @click=&quot;reverseMessage&quot;&gt;逆转消息&lt;/button&gt;</div><div class="line">    &lt;hr&gt;</div><div class="line"></div><div class="line">    &lt;table&gt;</div><div class="line">        &lt;tr&gt;</div><div class="line">            &lt;th&gt;用户名:&lt;/th&gt;</div><div class="line">            &lt;td&gt;&lt;input type=&quot;text&quot; v-model=&quot;user.name&quot;&gt;&lt;/td&gt;</div><div class="line">        &lt;/tr&gt;</div><div class="line">        &lt;tr&gt;</div><div class="line">            &lt;th&gt;职业:&lt;/th&gt;</div><div class="line">            &lt;td&gt;</div><div class="line">                &lt;select v-model=&quot;user.occupation&quot;&gt;</div><div class="line">                    &lt;option&gt;老师&lt;/option&gt;</div><div class="line">                    &lt;option&gt;医生&lt;/option&gt;</div><div class="line">                    &lt;option&gt;程序员&lt;/option&gt;</div><div class="line">                &lt;/select&gt;</div><div class="line">            &lt;/td&gt;</div><div class="line">        &lt;/tr&gt;</div><div class="line">        &lt;tr&gt;</div><div class="line">            &lt;th&gt;性别:&lt;/th&gt;</div><div class="line">            &lt;td&gt;</div><div class="line">                &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;radioMan&quot; value=&quot;男&quot; v-model=&quot;user.sex&quot;&gt;&lt;label</div><div class="line">                    for=&quot;radioMan&quot;&gt;男&lt;/label&gt;</div><div class="line">                &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;radioWoman&quot; value=&quot;女&quot; v-model=&quot;user.sex&quot;&gt;&lt;label</div><div class="line">                    for=&quot;radioWoman&quot;&gt;女&lt;/label&gt;</div><div class="line">            &lt;/td&gt;</div><div class="line">        &lt;/tr&gt;</div><div class="line">        &lt;tr&gt;</div><div class="line">            &lt;td colspan=&quot;2&quot;&gt;</div><div class="line">                表单结果,用户名：&#123;&#123;user.name&#125;&#125;,职业：&#123;&#123;user.occupation&#125;&#125;,性别：&#123;&#123;user.sex&#125;&#125;</div><div class="line">                &lt;br&gt;</div><div class="line">                &lt;button @click=&quot;getFormVal&quot;&gt;表单值&lt;/button&gt;</div><div class="line"></div><div class="line">            &lt;/td&gt;</div><div class="line">        &lt;/tr&gt;</div><div class="line">    &lt;/table&gt;</div><div class="line"></div><div class="line">    &lt;hr&gt;</div><div class="line">    &lt;a v-for=&quot;item in navlist&quot; class=&quot;nav-item&quot; :title=&quot;item.title&quot; :href=&quot;item.page&quot;&gt;&#123;&#123;item.title&#125;&#125;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;script src=&quot;https://unpkg.com/vue&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;pages.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    //文本绑定使用&#123;&#123;message&#125;&#125;,事件绑定使用@如@click，属性绑定</div><div class="line">    /**</div><div class="line">     * 各种绑定</div><div class="line">     1.文本绑定使用&#123;&#123;message&#125;&#125;</div><div class="line">     2.属性绑定使用:class,:title=&quot;className&quot;,</div><div class="line">     3.事件绑定，使用@,@click...</div><div class="line">     4.表单绑定使用v-model=&#123;&#125;</div><div class="line">     */</div><div class="line">    var app = new Vue(&#123;</div><div class="line">        el: &apos;#app&apos;,</div><div class="line">        data: &#123;</div><div class="line">            message: &apos;这个是测试的内容文字啊@!!&apos;,</div><div class="line">            navlist: window.pages,</div><div class="line">            user: &#123;</div><div class="line">                name: &apos;tgb&apos;,</div><div class="line">                occupation: &apos;程序员&apos;,</div><div class="line">                sex: &apos;男&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        methods: &#123;</div><div class="line">            reverseMessage: function () &#123;</div><div class="line">                this.message = this.message.split(&apos;&apos;).reverse().join(&apos;&apos;)</div><div class="line">            &#125;,</div><div class="line">            getFormVal: function () &#123;</div><div class="line">                console.log(this.user);</div><div class="line"></div><div class="line">                alert(&apos;  表单结果,用户名：&apos; + this.user.name + &apos;,职业：： &apos; + this.user.occupation + &apos;,性别：： &apos; + this.user.sex);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h4 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h4><ul>
+<li>vue组件是非常强大重要的功能之一，通过简单的组件封装就能在元素中使用特定功能的标签。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">    &lt;input v-model=&quot;message&quot;&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;child1 :my-message=&quot;message&quot;&gt;&lt;/child1&gt;</div><div class="line">    &lt;ul&gt;</div><div class="line">        &lt;child2 v-for=&quot;item in userlist&quot; :user=&apos;item&apos;&gt;&lt;/child2&gt;</div><div class="line">    &lt;/ul&gt;</div><div class="line"></div><div class="line">    &lt;p&gt;总数&#123;&#123;total&#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;button1 v-on:increment=&quot;incrementTotal&quot;&gt;&lt;/button1&gt;</div><div class="line">    &lt;button2 v-on:reduction=&quot;reductionTotal&quot;&gt;&lt;/button2&gt;</div><div class="line"></div><div class="line">    &lt;hr&gt;</div><div class="line">    &lt;a v-for=&quot;item in navlist&quot; class=&quot;nav-item&quot; :title=&quot;item.title&quot; :href=&quot;item.page&quot;&gt;&#123;&#123;item.title&#125;&#125;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script src=&quot;https://unpkg.com/vue&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;pages.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    Vue.component(&apos;child1&apos;, &#123;</div><div class="line">        props: [&apos;myMessage&apos;],</div><div class="line">        template: &apos;&lt;span&gt;&#123;&#123; myMessage &#125;&#125;&lt;/span&gt;&apos;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    Vue.component(&apos;child2&apos;, &#123;</div><div class="line">        props: [&apos;user&apos;],</div><div class="line">        template: &apos;&lt;li&gt;名字:&#123;&#123; user.name &#125;&#125;,年龄:&#123;&#123;user.age&#125;&#125;&lt;/li&gt;&apos;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    Vue.component(&apos;button1&apos;,&#123;</div><div class="line">        template:&apos;&lt;button v-on:click=&quot;incrementHandler&quot;&gt;+&lt;/button&gt;&apos;,</div><div class="line">        methods: &#123;</div><div class="line">            incrementHandler: function () &#123;</div><div class="line">                this.$emit(&apos;increment&apos;)</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    Vue.component(&apos;button2&apos;,&#123;</div><div class="line">        template:&apos;&lt;button v-on:click=&quot;reductionHandler&quot;&gt;-&lt;/button&gt;&apos;,</div><div class="line">        methods: &#123;</div><div class="line">            reductionHandler: function () &#123;</div><div class="line">                this.$emit(&apos;reduction&apos;)</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    new Vue(&#123;</div><div class="line">        el: &apos;#app&apos;,</div><div class="line">        data: &#123;</div><div class="line">            message:&apos;测试的文字&apos;,</div><div class="line">            navlist: window.pages,</div><div class="line">            userinfo:&#123;name:&apos;alex&apos;,age:18&#125;,</div><div class="line">            userlist:[</div><div class="line">                &#123;name:&apos;tonme&apos;,age:18&#125;,</div><div class="line">                &#123;name:&apos;luke&apos;,age:22&#125;,</div><div class="line">            ],</div><div class="line">            total: 0</div><div class="line">        &#125;,</div><div class="line">        methods: &#123;</div><div class="line">            reverseMessage: function () &#123;</div><div class="line">                this.message = this.message.split(&apos;&apos;).reverse().join(&apos;&apos;)</div><div class="line">            &#125;,</div><div class="line">            incrementTotal: function () &#123;</div><div class="line">                this.total += 1</div><div class="line">            &#125;,</div><div class="line">            reductionTotal: function () &#123;</div><div class="line">                this.total -= 1</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h1 id="3-Vue组件化开发"><a href="#3-Vue组件化开发" class="headerlink" title="3. Vue组件化开发"></a>3. Vue组件化开发</h1><h2 id="3-1vue-cli-脚手架工具"><a href="#3-1vue-cli-脚手架工具" class="headerlink" title="3.1vue-cli 脚手架工具"></a>3.1vue-cli 脚手架工具</h2><ul>
+<li>现在前端使用的技术、框架以及工具是非常多非常麻烦的，配置对于一个新手可以说是绝望的。不过还好有一些辅助工具已经把这些工具给封装了，我们只需要简单的几个命令就可以快速把项目跑起来。</li>
+</ul>
+<h4 id="3-1-1-安装vue-cli"><a href="#3-1-1-安装vue-cli" class="headerlink" title="3.1.1 安装vue-cli"></a>3.1.1 安装vue-cli</h4><ul>
+<li>全局安装<code>npm install -g vue-cli</code></li>
+<li>安装成功后，使用vue -V检测版本是否已经安装成功<h4 id="3-1-2-搭建项目"><a href="#3-1-2-搭建项目" class="headerlink" title="3.1.2 搭建项目"></a>3.1.2 搭建项目</h4></li>
+<li><code>vue init webpack my-projectname</code><h4 id="3-1-3-还原依赖并运行项目"><a href="#3-1-3-还原依赖并运行项目" class="headerlink" title="3.1.3 还原依赖并运行项目"></a>3.1.3 还原依赖并运行项目</h4></li>
+<li>cd my-projectname</li>
+<li>npm run dev</li>
+</ul>
+<h4 id="3-1-4-默认项目结构简单介绍"><a href="#3-1-4-默认项目结构简单介绍" class="headerlink" title="3.1.4 默认项目结构简单介绍"></a>3.1.4 默认项目结构简单介绍</h4><ul>
+<li>-build 构建相关的脚本目录，开发过程中几乎不需要改更</li>
+<li>-config 构建相关的配置目录，没特殊要求也不需要修改</li>
+<li>|—index.js 基本的配置脚本，这里可以配置启动的端口，代理等。极少用</li>
+<li>node_modules 引用的模块目录，如果太慢可以把该目录排除，不进行索引打描。</li>
+<li>-src 源代码开发目录，非常重要，要写的代码都在这里</li>
+<li>|—assets 引用资源目录如图片、字体素材等.</li>
+<li>|—components 组件类库</li>
+<li>|—router vue-router配置目录，如果需要新增router页面需要在这里进行添加</li>
+<li>|—App.vue Vue首页</li>
+<li>|—main.js Vue入口文件</li>
+<li>-index.html 程序入口文件</li>
+<li>-package.json nodejs 工程配置文件</li>
+</ul>
+<h4 id="3-1-5-Vue单文件介绍"><a href="#3-1-5-Vue单文件介绍" class="headerlink" title="3.1.5 Vue单文件介绍"></a>3.1.5 Vue单文件介绍</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class=&quot;hello&quot;&gt;</div><div class="line">  &#123;&#123;msg&#125;&#125;</div><div class="line">    &lt;br/&gt;</div><div class="line"></div><div class="line">    &lt;button @click=&quot;userclick&quot;&gt;处理一下事件吧&lt;/button&gt;</div><div class="line">    &lt;hr&gt;</div><div class="line">    UI组件：</div><div class="line">    &lt;el-switch</div><div class="line">      v-model=&quot;isselected&quot;</div><div class="line">      active-color=&quot;#13ce66&quot;</div><div class="line">      inactive-color=&quot;#ff4949&quot;&gt;</div><div class="line">    &lt;/el-switch&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  import axios from &quot;axios&quot;;</div><div class="line">export default &#123;</div><div class="line">  name: &apos;HelloWorld&apos;,</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      msg:&apos;&apos;,</div><div class="line">      isselected:true</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods:&#123;</div><div class="line">    userclick:function () &#123;</div><div class="line">      this.msg = `改变了值...$&#123;new Date().getTime()&#125;`</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  mounted()&#123;</div><div class="line">      let that = this;</div><div class="line">      axios.get(&apos;/api/getmsg&apos;).then(res=&gt;&#123;</div><div class="line">          console.log(res);</div><div class="line">          that.msg = res.data.msg;</div><div class="line">      &#125;);</div><div class="line">    console.log(&apos;hw loadding&apos;)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;</div><div class="line">&lt;style scoped&gt;</div><div class="line">h1, h2 &#123;</div><div class="line">  font-weight: normal;</div><div class="line">&#125;</div><div class="line">ul &#123;</div><div class="line">  list-style-type: none;</div><div class="line">  padding: 0;</div><div class="line">&#125;</div><div class="line">li &#123;</div><div class="line">  display: inline-block;</div><div class="line">  margin: 0 10px;</div><div class="line">&#125;</div><div class="line">a &#123;</div><div class="line">  color: #42b983;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>template.该部分包含我们最终的vue前端模板</li>
+<li>script部分为脚本编写模块 export default 为初始化vue的参数，一般采用了简写最重要的三个部分是 data 函数返回当前对象默认的数据，methods为处理绑定的方法，mounted则为页面加载时执行行回调方法，在这里我们可以向服务器发出请求获取列表，加载数据行装</li>
+<li>stytle 就是样式了没什么好说了。</li>
+</ul>
+<h2 id="3-2-vue-router"><a href="#3-2-vue-router" class="headerlink" title="3.2 vue-router"></a>3.2 vue-router</h2><ul>
+<li>vue-router是vue生态最重要的一部分，简单来说用router后使得我们可以进行单个页面开发，控制页面的路由跳转</li>
+<li>创建一个vue页面src\components\Profile.vue</li>
+<li>在src/router/index.js 脚本中注册路由</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import Router from &apos;vue-router&apos;</div><div class="line">import HelloWorld from &apos;@/components/HelloWorld&apos; </div><div class="line"></div><div class="line">import Profile from &apos;@/components/Profile&apos;</div><div class="line"></div><div class="line">Vue.use(Router)</div><div class="line"></div><div class="line">export default new Router(&#123;</div><div class="line">    routes: [</div><div class="line">        &#123;</div><div class="line">            path: &apos;/&apos;,</div><div class="line">            name: &apos;HelloWorld&apos;,</div><div class="line">            component: HelloWorld</div><div class="line">        &#125;, &#123;</div><div class="line">            path: &apos;/profile&apos;,</div><div class="line">            name: &apos;Profile&apos;,</div><div class="line">            component: Profile</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>使用路由在入口App.Vue中增加代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">  &lt;template&gt;</div><div class="line">    &lt;div id=&quot;app&quot;&gt;</div><div class="line">        &lt;img src=&quot;./assets/logo.png&quot;&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;router-link to=&quot;/&quot;&gt;首页&lt;/router-link&gt;</div><div class="line">            &lt;router-link to=&quot;/profile&quot;&gt;用户中心&lt;/router-link&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;router-view/&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+<h1 id="4-aixos使用和配置代理跨域"><a href="#4-aixos使用和配置代理跨域" class="headerlink" title="4. aixos使用和配置代理跨域"></a>4. aixos使用和配置代理跨域</h1><ul>
+<li><p>安装axios<code>npm install axios -S</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//基本使用</div><div class="line">mounted()&#123;</div><div class="line">    let that = this;</div><div class="line">    axios.get(&apos;/api/getmsg&apos;).then(res=&gt;&#123;</div><div class="line">        console.log(res);</div><div class="line">        that.msg = res.data.msg;</div><div class="line">    &#125;);</div><div class="line">  console.log(&apos;hw loadding&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置代理跨域：在config、index.js文件修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">proxyTable: &#123;</div><div class="line">      &apos;/api&apos;: &#123;</div><div class="line">        target: &apos;http://localhost:8839/&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/16/使用vw适配移动端/" rel="next" title="使用vw适配移动端">
+                <i class="fa fa-chevron-left"></i> 使用vw适配移动端
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/Octocat.jpg"
+               alt="汤国斌" />
+          <p class="site-author-name" itemprop="name">汤国斌</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Saber-tgb" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/your-user-name" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-框架使用前期准备"><span class="nav-number">1.</span> <span class="nav-text">1.框架使用前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Node-js安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.1 Node.js安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-ES6的使用"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.2 ES6的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3Webpack"><span class="nav-number">1.0.3.</span> <span class="nav-text">1.3Webpack</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Vue-js基本语法介绍"><span class="nav-number">2.</span> <span class="nav-text">2.Vue.js基本语法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是vue-vue能帮我们解决什么实际问题"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">什么是vue,vue能帮我们解决什么实际问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第一个Vue程序"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">第一个Vue程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件与循环"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">条件与循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双向数据绑定"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">双向数据绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件化"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">组件化</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Vue组件化开发"><span class="nav-number">3.</span> <span class="nav-text">3. Vue组件化开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1vue-cli-脚手架工具"><span class="nav-number">3.1.</span> <span class="nav-text">3.1vue-cli 脚手架工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-安装vue-cli"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">3.1.1 安装vue-cli</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-搭建项目"><span class="nav-number">3.1.0.2.</span> <span class="nav-text">3.1.2 搭建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-还原依赖并运行项目"><span class="nav-number">3.1.0.3.</span> <span class="nav-text">3.1.3 还原依赖并运行项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-默认项目结构简单介绍"><span class="nav-number">3.1.0.4.</span> <span class="nav-text">3.1.4 默认项目结构简单介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-5-Vue单文件介绍"><span class="nav-number">3.1.0.5.</span> <span class="nav-text">3.1.5 Vue单文件介绍</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-vue-router"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 vue-router</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-aixos使用和配置代理跨域"><span class="nav-number">4.</span> <span class="nav-text">4. aixos使用和配置代理跨域</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">汤国斌</span>
+</div>
+
+
+
+<!--<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>-->
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <span class="post-count">博客全站共44.4k字</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("mIuTyAbqFm49hrJyheK6yIkE-gzGzoHsz", "NWb315WrFF6yh92E5q0TeLzO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script count="250" type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
