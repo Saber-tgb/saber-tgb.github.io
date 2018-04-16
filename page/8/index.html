@@ -296,7 +296,11 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+<<<<<<< HEAD
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/ECMAScript-作用域/">
+=======
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6六/">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -315,7 +319,11 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
+<<<<<<< HEAD
                 <a class="post-title-link" href="/2017/09/18/ECMAScript-作用域/" itemprop="url">ECMAScript--作用域</a></h1>
+=======
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6六/" itemprop="url">深入理解ES6六</a></h1>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
         
 
         <div class="post-meta">
@@ -327,8 +335,13 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
+<<<<<<< HEAD
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T21:10:40+08:00">
                 2017-09-18
+=======
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:41+08:00">
+                2017-08-06
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               </time>
             
 
@@ -338,6 +351,31 @@
           </span>
 
           
+<<<<<<< HEAD
+=======
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
           
             
@@ -345,7 +383,11 @@
 
           
           
+<<<<<<< HEAD
              <span id="/2017/09/18/ECMAScript-作用域/" class="leancloud_visitors" data-flag-title="ECMAScript--作用域">
+=======
+             <span id="/2017/08/06/深入理解ES6六/" class="leancloud_visitors" data-flag-title="深入理解ES6六">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,12 +416,31 @@
 
       
         
+<<<<<<< HEAD
           
           
           
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/18/ECMAScript-作用域/#more" rel="contents">
+=======
+          <h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><ul>
+<li>ES6新增的数据类型<code>Symbol</code></li>
+<li><p>创建Symbol：通过去全局的<code>Symbol</code>函数创建一个<code>Symbol</code>，<code>Symbol</code>函数接受一个可选参数，用于添加一段文本描述即将创建的<code>Symbol</code>,方便阅读和调试Symbol程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let firstName = Symbol(&apos;first name&apos;);</div><div class="line">    let person = &#123;&#125;;</div><div class="line"></div><div class="line">    person[firstName] = &apos;Nicholas&apos;;</div><div class="line"></div><div class="line">    console.log(&apos;first name&apos; in person); //false</div><div class="line">    console.log(person[firstName]); //&apos;Nicholas&apos;</div><div class="line">    console.log(firstName); //&apos;Symbol(first name)&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ES6扩展了<code>typeof</code>操作符，支持返回<code>Symbol</code>,可以用typeof来检测变量是否为<code>Symbol</code>类型.</p>
+</li>
+</ul>
+<h2 id="Symbol共享体系"><a href="#Symbol共享体系" class="headerlink" title="Symbol共享体系"></a>Symbol共享体系</h2><ul>
+<li><p>ES6提供了一个可以随时访问的全局Symbol注册表,如果要创建一个可共享的Symbol,要使用Symbol.for()方法，该方法只接受一个参数，就是即将创建的Symbol的字符串标识符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let uid = Symbol.for(&apos;uid&apos;);</div><div class="line">let object = &#123;&#125;;</div><div class="line"></div><div class="line">object[uid]=&apos;12345&apos;;</div><div class="line"></div><div class="line">console.log(ojbect[uid]);</div><div class="line">console.log(uid);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Symbol.for()方法首先在全局Symbol注册表中搜索键为’uid’的Symbol是否存在，如果存在，直接返回已有的Symbol；否则创建一个新的Symbol，并使用这个键在Symbol全局注册表中注册，随即返回新创建的Symbol</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/06/深入理解ES6六/#more" rel="contents">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               阅读全文 &raquo;
             </a>
           </div>
@@ -425,7 +486,11 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+<<<<<<< HEAD
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/微信JS-SDK的使用/">
+=======
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6五/">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -444,7 +509,11 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
+<<<<<<< HEAD
                 <a class="post-title-link" href="/2017/09/18/微信JS-SDK的使用/" itemprop="url">微信JS-SDK的使用</a></h1>
+=======
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6五/" itemprop="url">深入理解ES6五</a></h1>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
         
 
         <div class="post-meta">
@@ -456,8 +525,13 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
+<<<<<<< HEAD
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T21:10:00+08:00">
                 2017-09-18
+=======
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T17:15:16+08:00">
+                2017-08-06
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               </time>
             
 
@@ -479,8 +553,13 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+<<<<<<< HEAD
                   <a href="/categories/微信公众号/" itemprop="url" rel="index">
                     <span itemprop="name">微信公众号</span>
+=======
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                   </a>
                 </span>
 
@@ -496,7 +575,11 @@
 
           
           
+<<<<<<< HEAD
              <span id="/2017/09/18/微信JS-SDK的使用/" class="leancloud_visitors" data-flag-title="微信JS-SDK的使用">
+=======
+             <span id="/2017/08/06/深入理解ES6五/" class="leancloud_visitors" data-flag-title="深入理解ES6五">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -525,6 +608,7 @@
 
       
         
+<<<<<<< HEAD
           
           概述
 微信JS-SDK是微信提供的一套调用微信内部API功能的的插件
@@ -547,6 +631,33 @@ vue单页面项目使用：
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/18/微信JS-SDK的使用/#more" rel="contents">
+=======
+          <h2 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h2><ul>
+<li><p>对象解构的语法：在赋值操作符(=)左边放置一个对象字面量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;</div><div class="line">let &#123; type, name&#125; = node;</div><div class="line">console.log(type);</div><div class="line">console.log(name);</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象的解构赋值：由于代码块语句不允许出现在赋值语句左侧，所以必须添加小括号将其转换为一个表达式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    (&#123; type, name &#125; = node);</div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数中也可以传入解构表达式</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;,</div><div class="line">    type = &apos;Literal&apos;,</div><div class="line">    name = &apos;sss&apos;;</div><div class="line"></div><div class="line">    function outPut(value) &#123;</div><div class="line">        console.log(value === node);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    outPut(&#123; type, name &#125; = node);</div><div class="line"></div><div class="line">    console.log(type); //&apos;Indet&apos;</div><div class="line">    console.log(name); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>解构赋值表达式可以设置默认值：在属性名称后面添加一个等号和相应的默认值即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">let &#123; type, name, value = true&#125; = node;</div><div class="line"></div><div class="line">console.log(type); //&apos;Indet&apos;</div><div class="line">console.log(name); //&apos;noo&apos;</div><div class="line">console.log(value); //true</div></pre></td></tr></table></figure>
+</li>
+<li><p>为非同名局部变量赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Indet&apos;,</div><div class="line">    name:&apos;noo&apos;</div><div class="line">&#125;;</div><div class="line">// type:localType语法的含义是读取名为type的属性并将其值存储在变量localType中</div><div class="line">let &#123; type:localType, name:localName&#125; = node;</div><div class="line"></div><div class="line">console.log(localType); //&apos;Indet&apos;</div><div class="line">console.log(localName); //&apos;noo&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套对象解构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">let node = &#123;</div><div class="line">    type:&apos;Identifier&apos;,</div><div class="line">    name:&apos;noo&apos;,</div><div class="line">    loc: &#123;</div><div class="line">        start: &#123;</div><div class="line">            line: 1,</div><div class="line">            column:1</div><div class="line">        &#125;,</div><div class="line">        end: &#123;</div><div class="line">            line: 1,</div><div class="line">            column: 4</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let &#123; loc: &#123;start &#125;&#125; = node;</div><div class="line"></div><div class="line">console.log(start.line); //1</div><div class="line">console.log(start.column); //1</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/06/深入理解ES6五/#more" rel="contents">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               阅读全文 &raquo;
             </a>
           </div>
@@ -592,7 +703,11 @@ vue单页面项目使用：
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+<<<<<<< HEAD
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/数组的使用/">
+=======
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/编程语言分类/">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -611,7 +726,11 @@ vue单页面项目使用：
         
           <h1 class="post-title" itemprop="name headline">
                 
+<<<<<<< HEAD
                 <a class="post-title-link" href="/2017/09/18/数组的使用/" itemprop="url">JS数组的使用</a></h1>
+=======
+                <a class="post-title-link" href="/2017/08/06/编程语言分类/" itemprop="url">编程语言分类</a></h1>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
         
 
         <div class="post-meta">
@@ -623,8 +742,13 @@ vue单页面项目使用：
               
                 <span class="post-meta-item-text">发表于</span>
               
+<<<<<<< HEAD
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T21:09:31+08:00">
                 2017-09-18
+=======
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
+                2017-08-06
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               </time>
             
 
@@ -663,7 +787,11 @@ vue单页面项目使用：
 
           
           
+<<<<<<< HEAD
              <span id="/2017/09/18/数组的使用/" class="leancloud_visitors" data-flag-title="JS数组的使用">
+=======
+             <span id="/2017/08/06/编程语言分类/" class="leancloud_visitors" data-flag-title="编程语言分类">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -693,6 +821,7 @@ vue单页面项目使用：
       
         
           
+<<<<<<< HEAD
           一、数组的基本方法arr.concat(item…)
 concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组123var a = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;];var b = [1,2,3,4,5];var c = a.concat(b) // c变成[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,1,2,3,4,5];
 
@@ -703,6 +832,20 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/18/数组的使用/#more" rel="contents">
+=======
+          一、看图区分语言类型
+二、语法角度的文字表述1. 动态类型语言
+运行期间才做数据类型检查的语言，即动态类型语言编程时，永远不用给任何变量指定数据类型。该语言会在第一次赋值给变量时，在内部将数据类型记录下来。
+优点：方便阅读，不需要写非常多的类型相关的代码；
+缺点：不方便调试，命名不规范时会造成读不懂，不利于理解等2. 静态类型语言
+编译期间做检查数据类型的语言，即写程序时要声明所有变量的数据类型，是固定的。使用数据之前，必须先声明数据类型（int ,float,double等）。相当于使用之前，首先要为它们分配好内存空间。
+优点：结构非常规范，便于调试，方便类型安全
+缺点：为此需要写更多类型相关代码，不便于阅读、不清晰明了3. 强类型定义语言（Explicit type conversion
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/06/编程语言分类/#more" rel="contents">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               阅读全文 &raquo;
             </a>
           </div>
@@ -748,7 +891,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+<<<<<<< HEAD
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/mockServer的搭建/">
+=======
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6四/">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -767,7 +914,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
         
           <h1 class="post-title" itemprop="name headline">
                 
+<<<<<<< HEAD
                 <a class="post-title-link" href="/2017/09/18/mockServer的搭建/" itemprop="url">mockServer的搭建</a></h1>
+=======
+                <a class="post-title-link" href="/2017/08/06/深入理解ES6四/" itemprop="url">深入理解ES6四</a></h1>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
         
 
         <div class="post-meta">
@@ -779,8 +930,13 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
               
                 <span class="post-meta-item-text">发表于</span>
               
+<<<<<<< HEAD
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T15:41:30+08:00">
                 2017-09-18
+=======
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
+                2017-08-06
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               </time>
             
 
@@ -802,8 +958,13 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+<<<<<<< HEAD
                   <a href="/categories/前端构建生态/" itemprop="url" rel="index">
                     <span itemprop="name">前端构建生态</span>
+=======
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                   </a>
                 </span>
 
@@ -819,7 +980,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
 
           
           
+<<<<<<< HEAD
              <span id="/2017/09/18/mockServer的搭建/" class="leancloud_visitors" data-flag-title="mockServer的搭建">
+=======
+             <span id="/2017/08/06/深入理解ES6四/" class="leancloud_visitors" data-flag-title="深入理解ES6四">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -848,6 +1013,7 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
 
       
         
+<<<<<<< HEAD
           <h1 id="使用json-server模拟服务器"><a href="#使用json-server模拟服务器" class="headerlink" title="使用json-server模拟服务器"></a>使用json-server模拟服务器</h1><h3 id="mockServer的思路"><a href="#mockServer的思路" class="headerlink" title="mockServer的思路"></a>mockServer的思路</h3><ul>
 <li>以 <code>json-server</code> 作为 mock 服务器， <code>mock.js</code> 生成 mock 数据，以此达到 <code>mock-server</code> 要求。</li>
 </ul>
@@ -865,6 +1031,28 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/18/mockServer的搭建/#more" rel="contents">
+=======
+          <h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
+<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
+<li>特异对象 具有某些与默认行为不符的内部行为</li>
+<li>标准对象 ES6中规范定义的对象</li>
+<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
+</ul>
+<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
+<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/06/深入理解ES6四/#more" rel="contents">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
               阅读全文 &raquo;
             </a>
           </div>
@@ -905,7 +1093,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
 
   
   <nav class="pagination">
+<<<<<<< HEAD
     <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right"></i></a>
+=======
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right"></i></a>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
   </nav>
 
 
@@ -950,7 +1142,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
+<<<<<<< HEAD
                 <span class="site-state-item-count">73</span>
+=======
+                <span class="site-state-item-count">63</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -961,7 +1157,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
+<<<<<<< HEAD
                 <span class="site-state-item-count">23</span>
+=======
+                <span class="site-state-item-count">21</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -972,7 +1172,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
+<<<<<<< HEAD
                 <span class="site-state-item-count">92</span>
+=======
+                <span class="site-state-item-count">88</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1060,7 +1264,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
 <div class="copyright" >
   
   &copy; 
+<<<<<<< HEAD
   <span itemprop="copyrightYear">2018</span>
+=======
+  <span itemprop="copyrightYear">2017</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1086,7 +1294,11 @@ join() 方法将数组（或一个类数组对象）的所有元素连接到一�
 </span>
 </div>
 <div class="theme-info">
+<<<<<<< HEAD
   <span class="post-count">博客全站共44.4k字</span>
+=======
+  <span class="post-count">博客全站共38.8k字</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 </div>
 
         

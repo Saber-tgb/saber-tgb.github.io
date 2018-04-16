@@ -99,7 +99,11 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/25/微信小程序开发/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
 <meta property="og:description" content="小程序的基本文件功能 .js后缀的是脚本文件,.json后缀的文件是配置文件,.wxss后缀的是样式表文件 app.js是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量 app.json 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。 app.wxss">
+<<<<<<< HEAD
 <meta property="og:updated_time" content="2017-12-21T09:24:16.125Z">
+=======
+<meta property="og:updated_time" content="2017-12-21T08:34:54.029Z">
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序开发">
 <meta name="twitter:description" content="小程序的基本文件功能 .js后缀的是脚本文件,.json后缀的文件是配置文件,.wxss后缀的是样式表文件 app.js是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量 app.json 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。 app.wxss">
@@ -424,12 +428,16 @@
 </ul>
 <h1 id="小程序请求用户的信息"><a href="#小程序请求用户的信息" class="headerlink" title="小程序请求用户的信息"></a>小程序请求用户的信息</h1><h1 id="小程序开发遇到的坑"><a href="#小程序开发遇到的坑" class="headerlink" title="小程序开发遇到的坑"></a>小程序开发遇到的坑</h1><h2 id="小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行"><a href="#小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行" class="headerlink" title="小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行"></a>小程序<code>request</code>请求不支持cookie，所以使用cookie储存登录状态的方案不可行</h2><ul>
 <li>造成的问题： http请求header不携带设备信息，服务器无法获取。服务器通过session来识别客服端,小程序<code>request</code>请求不能使用cookie,导致每次请求的session都不同。</li>
+<<<<<<< HEAD
 <li>解决：小程序支持自定义cookie，通过后台服务器与小程序的关联的接口，获取一次session，之后封装小程序的<code>request</code>请求，在session有效期内每次请求发送给后台的session都一至。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">request: function(url, meth, data, cb) &#123;</div><div class="line">    let that = this;</div><div class="line">    wx.request(&#123;</div><div class="line">      url: url,</div><div class="line">      method: meth,</div><div class="line">      data: data,</div><div class="line">      header: &#123;</div><div class="line">        &quot;Cookie&quot;: that.globalData.Cookie,</div><div class="line">      &#125;,</div><div class="line">      success: function (res) &#123;</div><div class="line">        //session过期</div><div class="line">        if (res.data.code == 403) &#123;</div><div class="line">          wx.login(&#123;</div><div class="line">            success: res =&gt; &#123;</div><div class="line">              if (res.code) &#123;</div><div class="line">                wx.request(&#123;</div><div class="line">                  url: that.globalData.baseUrl + that.globalData.api.getSession,</div><div class="line">                  method: &apos;GET&apos;,</div><div class="line">                  data: &#123;</div><div class="line">                    code: res.code</div><div class="line">                  &#125;,</div><div class="line">                  header: &#123;</div><div class="line">                    &quot;Cookie&quot;: that.globalData.Cookie,</div><div class="line">                  &#125;,</div><div class="line">                  success: function (res) &#123;</div><div class="line">                    //重新获取session</div><div class="line">                    that.globalData.Cookie = &apos;JSESSIONID=&apos; + res.data.sessionId;</div><div class="line">                    that.request();</div><div class="line">                  &#125;,</div><div class="line">                &#125;);</div><div class="line">              &#125; else &#123;</div><div class="line">                console.log(&apos;获取用户登录态失败！&apos; + res.errMsg)</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">          &#125;)</div><div class="line">          return false;</div><div class="line">        &#125; else if (res.data.code == 500) &#123;</div><div class="line">          wx.showModal(&#123;</div><div class="line">            content: &apos;服务器繁忙, 请稍后再试&apos;,</div><div class="line">          &#125;)</div><div class="line">          console.log(res.data.msg||&apos;&apos;);</div><div class="line">          return false;</div><div class="line">        &#125;</div><div class="line">        cb(res);</div><div class="line">      &#125;,</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="小程序地图"><a href="#小程序地图" class="headerlink" title="小程序地图"></a>小程序地图</h2><ul>
 <li>遇到的问题:根据地址名称在小程序地图上展示该位置</li>
 <li>使用微信小程序JavaScript SDK<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// 引入SDK核心类</div><div class="line">var QQMapWX = require(&apos;xxx/qqmap-wx.js&apos;);</div><div class="line"> </div><div class="line">// 实例化API核心类</div><div class="line">var demo = new QQMapWX(&#123;</div><div class="line">    key: &apos;开发密钥（key）&apos; // 必填</div><div class="line">&#125;);</div><div class="line"> </div><div class="line">// 调用接口</div><div class="line">demo.geocoder(&#123;</div><div class="line">    address: &apos;北京市海淀区彩和坊路海淀西大街74号&apos;,</div><div class="line">    success: function(res) &#123;</div><div class="line">        console.log(res);</div><div class="line">    &#125;,</div><div class="line">    fail: function(res) &#123;</div><div class="line">        console.log(res);</div><div class="line">    &#125;,</div><div class="line">    complete: function(res) &#123;</div><div class="line">        console.log(res);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></li>
+=======
+<li>解决：小程序支持自定义cookie，通过后台服务器与小程序的关联的接口，获取一次session，之后封装小程序的<code>request</code>请求，在session有效期内每次请求发送给后台的session都一至。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">request: function(url, meth, data, cb) &#123;</div><div class="line">    let that = this;</div><div class="line">    wx.request(&#123;</div><div class="line">      url: url,</div><div class="line">      method: meth,</div><div class="line">      data: data,</div><div class="line">      header: &#123;</div><div class="line">        &quot;Cookie&quot;: that.globalData.Cookie,</div><div class="line">      &#125;,</div><div class="line">      success: function (res) &#123;</div><div class="line">        //session过期</div><div class="line">        if (res.data.code == 403) &#123;</div><div class="line">          wx.login(&#123;</div><div class="line">            success: res =&gt; &#123;</div><div class="line">              if (res.code) &#123;</div><div class="line">                wx.request(&#123;</div><div class="line">                  url: that.globalData.baseUrl + that.globalData.api.getSession,</div><div class="line">                  method: &apos;GET&apos;,</div><div class="line">                  data: &#123;</div><div class="line">                    code: res.code</div><div class="line">                  &#125;,</div><div class="line">                  header: &#123;</div><div class="line">                    &quot;Cookie&quot;: that.globalData.Cookie,</div><div class="line">                  &#125;,</div><div class="line">                  success: function (res) &#123;</div><div class="line">                    //重新获取session</div><div class="line">                    that.globalData.Cookie = &apos;JSESSIONID=&apos; + res.data.sessionId;</div><div class="line">                    that.request();</div><div class="line">                  &#125;,</div><div class="line">                &#125;);</div><div class="line">              &#125; else &#123;</div><div class="line">                console.log(&apos;获取用户登录态失败！&apos; + res.errMsg)</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">          &#125;)</div><div class="line">          return false;</div><div class="line">        &#125; else if (res.data.code == 500) &#123;</div><div class="line">          wx.showModal(&#123;</div><div class="line">            content: &apos;服务器繁忙, 请稍后再试&apos;,</div><div class="line">          &#125;)</div><div class="line">          console.log(res.data.msg||&apos;&apos;);</div><div class="line">          return false;</div><div class="line">        &#125;</div><div class="line">        cb(res);</div><div class="line">      &#125;,</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div></pre></td></tr></table></figure></li>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 </ul>
 
       
@@ -559,7 +567,11 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
+<<<<<<< HEAD
                 <span class="site-state-item-count">73</span>
+=======
+                <span class="site-state-item-count">63</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -570,7 +582,11 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
+<<<<<<< HEAD
                 <span class="site-state-item-count">23</span>
+=======
+                <span class="site-state-item-count">21</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -581,7 +597,11 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
+<<<<<<< HEAD
                 <span class="site-state-item-count">92</span>
+=======
+                <span class="site-state-item-count">88</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -661,7 +681,11 @@
             
 
             
+<<<<<<< HEAD
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序的基本文件功能"><span class="nav-number">1.</span> <span class="nav-text">小程序的基本文件功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序模板的使用"><span class="nav-number">2.</span> <span class="nav-text">小程序模板的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义模板"><span class="nav-number">2.1.</span> <span class="nav-text">定义模板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序请求用户的信息"><span class="nav-number">3.</span> <span class="nav-text">小程序请求用户的信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序开发遇到的坑"><span class="nav-number">4.</span> <span class="nav-text">小程序开发遇到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行"><span class="nav-number">4.1.</span> <span class="nav-text">小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序地图"><span class="nav-number">4.2.</span> <span class="nav-text">小程序地图</span></a></li></ol></li></ol></div>
+=======
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序的基本文件功能"><span class="nav-number">1.</span> <span class="nav-text">小程序的基本文件功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序模板的使用"><span class="nav-number">2.</span> <span class="nav-text">小程序模板的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义模板"><span class="nav-number">2.1.</span> <span class="nav-text">定义模板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序请求用户的信息"><span class="nav-number">3.</span> <span class="nav-text">小程序请求用户的信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序开发遇到的坑"><span class="nav-number">4.</span> <span class="nav-text">小程序开发遇到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行"><span class="nav-number">4.1.</span> <span class="nav-text">小程序request请求不支持cookie，所以使用cookie储存登录状态的方案不可行</span></a></li></ol></li></ol></div>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
             
 
           </div>
@@ -685,7 +709,11 @@
 <div class="copyright" >
   
   &copy; 
+<<<<<<< HEAD
   <span itemprop="copyrightYear">2018</span>
+=======
+  <span itemprop="copyrightYear">2017</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -711,7 +739,11 @@
 </span>
 </div>
 <div class="theme-info">
+<<<<<<< HEAD
   <span class="post-count">博客全站共44.4k字</span>
+=======
+  <span class="post-count">博客全站共38.8k字</span>
+>>>>>>> 5c5443a0bbfd242d55af1b7bc1003c2e595c15b4
 </div>
 
         
