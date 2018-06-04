@@ -96,6 +96,7 @@
 <meta property="og:title" content="汤国斌的博客">
 <meta property="og:url" content="http://yoursite.com/tags/Vue/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汤国斌的博客">
 
@@ -298,6 +299,90 @@
 
       <h2 class="post-title">
         
+            <a class="post-title-link" href="/2018/04/16/Vue.js讲解/" itemprop="url">
+              
+                <span itemprop="name">Vue.js讲解</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-04-16T21:50:10+08:00"
+              content="2018-04-16" >
+          04-16
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/10/10/Vue双向数据绑定原理解析/" itemprop="url">
+              
+                <span itemprop="name">Vue双向数据绑定原理</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-10-10T14:39:47+08:00"
+              content="2017-10-10" >
+          10-10
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/08/22/vue脚手架vue-cli的学习二-自定义模块/" itemprop="url">
+              
+                <span itemprop="name">vue脚手架vue-cli的学习二--自定义模块</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-08-22T11:51:39+08:00"
+              content="2017-08-22" >
+          08-22
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
             <a class="post-title-link" href="/2017/08/12/国际化——Vue-i18n的使用/" itemprop="url">
               
                 <span itemprop="name">国际化——Vue-i18n的使用</span>
@@ -319,37 +404,13 @@
 
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/05/vuex学习/" itemprop="url">
-              
-                <span itemprop="name">vuex学习</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-05T22:29:17+08:00"
-              content="2017-06-05" >
-          06-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
   </div>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/tags/Vue/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Vue/page/4/">4</a><a class="extend next" rel="next" href="/tags/Vue/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -392,7 +453,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -403,7 +464,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -414,7 +475,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -528,7 +589,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共44.4k字</span>
+  <span class="post-count">博客全站共46.6k字</span>
 </div>
 
         
@@ -1046,68 +1107,6 @@
             counter.save(null, {
               success: function(counter) {
                 var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-
-  
-
-
-  
-  <script count="250" type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
-
-</body>
-</html>
-l));
                 $element.find('.leancloud-visitors-count').text(counter.get('time'));
               },
               error: function(counter, error) {

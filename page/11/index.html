@@ -96,6 +96,7 @@
 <meta property="og:title" content="汤国斌的博客">
 <meta property="og:url" content="http://yoursite.com/page/11/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汤国斌的博客">
 
@@ -286,6 +287,328 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/深入理解ES6十三/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/12/深入理解ES6十三/" itemprop="url">深入理解ES6十三</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T14:44:00+08:00">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/12/深入理解ES6十三/" class="leancloud_visitors" data-flag-title="深入理解ES6十三">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><ul>
+<li>模块是自动运行在严格模式下并且没有办法退出运行的Javascript代码，在模块中创建的变量不会自动被添加到全局作用域</li>
+<li>模块的两个特性：在模块顶部，this的值是undefined；模块不支持HTML风格的代码注释</li>
+</ul>
+<h1 id="模块的导入导出语法"><a href="#模块的导入导出语法" class="headerlink" title="模块的导入导出语法"></a>模块的导入导出语法</h1><ul>
+<li><p>导出的基本语法：用<code>export</code>关键字将代码暴露给其他模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 导出数据</div><div class="line">export var color = &apos;red&apos;;</div><div class="line">export let name = &apos;tgb&apos;;</div><div class="line">export const magicNumber = 7;</div><div class="line"></div><div class="line">// 导出函数</div><div class="line">export function sum(num1,num2) &#123;</div><div class="line">    return num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>导入的基本语法：通过<code>import</code>关键字在另一个模块中访问，<code>import</code>语句的两个部分分别是，要导入的标识符和标识符应当从哪个模块导入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import &#123;identifierl,identifier2&#125; from &apos;./example.js&apos;//模块说明符</div><div class="line"></div><div class="line">// 导入多个绑定</div><div class="line">import &#123; sum, multiply, magicNumber&#125; from &apos;./example.js&apos;;</div><div class="line"></div><div class="line">// 导入整个模块</div><div class="line">import * as example from &apos;./expmple.js&apos; // 命名空间导入</div></pre></td></tr></table></figure>
+</li>
+<li><p>模块说明符的注意事项：Node.js遵循文件系统前缀区分本地文件和包的惯例，例如，<code>example</code>是一个包而<code>./example.js</code>是一个本地文件</p>
+</li>
+<li>从模块中导入绑定时，import后面使用的标识符，在该模块不能再次使用。</li>
+<li>不管在<code>import</code>语句中把一个模块写了多少次，该模块只执行一次，导入模块的代码执行后，实例化过的模块被保存在内存中，只要另一个<code>import</code>语句引用它就可以重复使用它。</li>
+</ul>
+<h1 id="模块语法的限制"><a href="#模块语法的限制" class="headerlink" title="模块语法的限制"></a>模块语法的限制</h1><ul>
+<li><code>export</code>和<code>import</code>的一个重要的限制是，它们必须在其他语句和函数之外使用，所以 必须在顶部使用<code>export</code>和<code>import</code>。</li>
+<li>导入的绑定标识符是只读的，标识符只有在被导出的模块中可以修改，导入绑定的模块无法改变绑定值。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/12/深入理解ES6十三/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/国际化——Vue-i18n的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/12/国际化——Vue-i18n的使用/" itemprop="url">国际化——Vue-i18n的使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T11:30:07+08:00">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/12/国际化——Vue-i18n的使用/" class="leancloud_visitors" data-flag-title="国际化——Vue-i18n的使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Vue-i18n安装"><a href="#Vue-i18n安装" class="headerlink" title="Vue-i18n安装"></a>Vue-i18n安装</h2><ul>
+<li><code>npm install vue-i18n --save</code></li>
+</ul>
+<h2 id="Vue-i18n的使用"><a href="#Vue-i18n的使用" class="headerlink" title="Vue-i18n的使用"></a>Vue-i18n的使用</h2><ul>
+<li>在入口<code>main.js</code>文件配置使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import VueI18n from &apos;vue-i18n&apos;</div><div class="line"></div><div class="line">Vue.use(VueI18n);</div><div class="line">/*---------基本使用-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages : &#123;</div><div class="line">    en: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;hello world&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    cn: &#123;</div><div class="line">      message: &#123;</div><div class="line">        hello: &apos;你好、世界&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">/*---------使用语言包-----------*/</div><div class="line">const i18n = new VueI18n(&#123;</div><div class="line">  locale: &apos;CN&apos;,    // 语言标识</div><div class="line">  messages: &#123;</div><div class="line">    &apos;CN&apos;: require(&apos;./assets/common/lang/cn&apos;),   // 中文语言包</div><div class="line">    &apos;EN&apos;: require(&apos;./assets/common/lang/en&apos;)    // 英文语言包</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------语言包内部语法star-----------*/</div><div class="line">export const  message = &#123;</div><div class="line">      language:&apos;语言&apos;,</div><div class="line">      hello: &apos;你好,世界&apos;</div><div class="line">&#125;</div><div class="line">/*---------语言包内部语法end-----------*/</div><div class="line"></div><div class="line">/*---------挂载全局使用-----------*/</div><div class="line">new Vue(&#123;</div><div class="line">  el: &apos;#app&apos;,</div><div class="line">  i18n,</div><div class="line">  router,</div><div class="line">  template: &apos;&lt;App/&gt;&apos;,</div><div class="line">  components: &#123; App &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">/*---------vue组件模板的使用-----------*/</div><div class="line"> &lt;template&gt;</div><div class="line">        &lt;p&gt;&#123;&#123; $t(&quot;message.hello&quot;) &#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;/template&gt;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/12/国际化——Vue-i18n的使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -618,329 +941,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/编程语言分类/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/06/编程语言分类/" itemprop="url">编程语言分类</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
-                2017-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/08/06/编程语言分类/" class="leancloud_visitors" data-flag-title="编程语言分类">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          一、看图区分语言类型
-二、语法角度的文字表述1. 动态类型语言
-运行期间才做数据类型检查的语言，即动态类型语言编程时，永远不用给任何变量指定数据类型。该语言会在第一次赋值给变量时，在内部将数据类型记录下来。
-优点：方便阅读，不需要写非常多的类型相关的代码；
-缺点：不方便调试，命名不规范时会造成读不懂，不利于理解等2. 静态类型语言
-编译期间做检查数据类型的语言，即写程序时要声明所有变量的数据类型，是固定的。使用数据之前，必须先声明数据类型（int ,float,double等）。相当于使用之前，首先要为它们分配好内存空间。
-优点：结构非常规范，便于调试，方便类型安全
-缺点：为此需要写更多类型相关代码，不便于阅读、不清晰明了3. 强类型定义语言（Explicit type conversion
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/编程语言分类/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/深入理解ES6四/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/06/深入理解ES6四/" itemprop="url">深入理解ES6四</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T15:40:34+08:00">
-                2017-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/08/06/深入理解ES6四/" class="leancloud_visitors" data-flag-title="深入理解ES6四">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="ES6规范清晰的定义了对象的类别"><a href="#ES6规范清晰的定义了对象的类别" class="headerlink" title="ES6规范清晰的定义了对象的类别"></a>ES6规范清晰的定义了对象的类别</h2><ul>
-<li>普通对象 具有JavaScript对象所有的默认内部行为</li>
-<li>特异对象 具有某些与默认行为不符的内部行为</li>
-<li>标准对象 ES6中规范定义的对象</li>
-<li>内建对象 脚本开始执行时存在于JavaScript执行环境中的对象，所有标准对象都是内建对象</li>
-</ul>
-<h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
-<li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/06/深入理解ES6四/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -990,7 +990,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1001,7 +1001,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1012,7 +1012,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1126,7 +1126,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共44.4k字</span>
+  <span class="post-count">博客全站共46.6k字</span>
 </div>
 
         

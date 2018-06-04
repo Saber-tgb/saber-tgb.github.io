@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CSS,Less," />
+  <meta name="keywords" content="Less," />
 
 
 
@@ -92,14 +92,18 @@
 
 
 
-<meta name="keywords" content="CSS,Less">
+<meta name="description" content="Less安装 npm install less -g全局安装less,webStorm编辑器的插件会将less编译为css 浏览器直接使用less 1234//.less 样式表的链接，并将 rel 属性设置为 &amp;quot;stylesheet/less&amp;quot; 在 less.js 之前加载样式表。&amp;lt;link rel=&amp;quot;stylesheet/less&amp;quot; type=&amp;q">
+<meta name="keywords" content="Less">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Less的使用">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/Less的使用/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
-<meta property="og:updated_time" content="2017-09-25T01:36:05.932Z">
+<meta property="og:description" content="Less安装 npm install less -g全局安装less,webStorm编辑器的插件会将less编译为css 浏览器直接使用less 1234//.less 样式表的链接，并将 rel 属性设置为 &amp;quot;stylesheet/less&amp;quot; 在 less.js 之前加载样式表。&amp;lt;link rel=&amp;quot;stylesheet/less&amp;quot; type=&amp;q">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-03T07:40:27.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Less的使用">
+<meta name="twitter:description" content="Less安装 npm install less -g全局安装less,webStorm编辑器的插件会将less编译为css 浏览器直接使用less 1234//.less 样式表的链接，并将 rel 属性设置为 &amp;quot;stylesheet/less&amp;quot; 在 less.js 之前加载样式表。&amp;lt;link rel=&amp;quot;stylesheet/less&amp;quot; type=&amp;q">
 
 
 
@@ -355,17 +359,6 @@
 
                 
                 
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/CSS预处理器/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS预处理器</span>
-                  </a>
-                </span>
-
-                
-                
               
             </span>
           
@@ -404,7 +397,20 @@
       
 
       
-        
+        <h1 id="Less安装"><a href="#Less安装" class="headerlink" title="Less安装"></a>Less安装</h1><ul>
+<li><code>npm install less -g</code>全局安装less,webStorm编辑器的插件会将less编译为css</li>
+<li><p>浏览器直接使用less</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//.less 样式表的链接，并将 rel 属性设置为 &quot;stylesheet/less&quot; 在 less.js 之前加载样式表。</div><div class="line">&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;./index.less&quot;&gt;</div><div class="line">// 使用`less.js`插件解析less</div><div class="line">&lt;script src=&quot;http://cdn.bootcss.com/less.js/1.7.0/less.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在vue框架中使用less,安装npm包<code>npm install --save-dev less less-loader</code></p>
+</li>
+</ul>
+<h1 id="Less的语法"><a href="#Less的语法" class="headerlink" title="Less的语法"></a>Less的语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>将常用的值定义在一个地方</li>
+<li>定义常用选择器<code>@mySelector:banner;</code></li>
+<li></li>
+</ul>
+
       
     </div>
 
@@ -432,8 +438,6 @@
     <footer class="post-footer">
       
         <div class="post-tags">
-          
-            <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i> CSS</a>
           
             <a href="/tags/Less/" rel="tag"><i class="fa fa-tag"></i> Less</a>
           
@@ -507,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/Octocat.jpg"
@@ -523,7 +536,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -534,7 +547,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -545,7 +558,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -616,6 +629,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Less安装"><span class="nav-number">1.</span> <span class="nav-text">Less安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Less的语法"><span class="nav-number">2.</span> <span class="nav-text">Less的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">2.1.</span> <span class="nav-text">变量</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -659,7 +688,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共44.4k字</span>
+  <span class="post-count">博客全站共46.6k字</span>
 </div>
 
         

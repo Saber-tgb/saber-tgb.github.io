@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vue," />
+  <meta name="keywords" content="Vue," />
 
 
 
@@ -93,15 +93,16 @@
 
 
 <meta name="description" content="Object.defineProperty 这是一个ES5的方法，可以直接在一个对象上定义一个新属性，或者修改一个已经存在的属性， 并返回这个对象。 对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。  数据描述符是一个具有值的属性，该值可能是可写的，也可能不是可写的；即设置了value属性。 123456789let obj = &amp;#123;name:&amp;apos;vue&amp;apos">
-<meta name="keywords" content="vue">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm包的开发及发布">
+<meta property="og:title" content="Vue双向数据绑定原理">
 <meta property="og:url" content="http://yoursite.com/2017/10/10/Vue双向数据绑定原理解析/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
 <meta property="og:description" content="Object.defineProperty 这是一个ES5的方法，可以直接在一个对象上定义一个新属性，或者修改一个已经存在的属性， 并返回这个对象。 对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。  数据描述符是一个具有值的属性，该值可能是可写的，也可能不是可写的；即设置了value属性。 123456789let obj = &amp;#123;name:&amp;apos;vue&amp;apos">
-<meta property="og:updated_time" content="2018-03-18T03:36:40.535Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-03T08:16:44.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm包的开发及发布">
+<meta name="twitter:title" content="Vue双向数据绑定原理">
 <meta name="twitter:description" content="Object.defineProperty 这是一个ES5的方法，可以直接在一个对象上定义一个新属性，或者修改一个已经存在的属性， 并返回这个对象。 对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。  数据描述符是一个具有值的属性，该值可能是可写的，也可能不是可写的；即设置了value属性。 123456789let obj = &amp;#123;name:&amp;apos;vue&amp;apos">
 
 
@@ -136,7 +137,7 @@
 
 
 
-  <title>npm包的开发及发布 | 汤国斌的博客</title>
+  <title>Vue双向数据绑定原理 | 汤国斌的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,7 +317,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">npm包的开发及发布</h1>
+          <h1 class="post-title" itemprop="name headline">Vue双向数据绑定原理</h1>
         
 
         <div class="post-meta">
@@ -368,7 +369,7 @@
 
           
           
-             <span id="/2017/10/10/Vue双向数据绑定原理解析/" class="leancloud_visitors" data-flag-title="npm包的开发及发布">
+             <span id="/2017/10/10/Vue双向数据绑定原理解析/" class="leancloud_visitors" data-flag-title="Vue双向数据绑定原理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -470,7 +471,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
         </div>
       
@@ -483,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/10/npm包的开发及发布/" rel="next" title="npm包的开发及发布">
-                <i class="fa fa-chevron-left"></i> npm包的开发及发布
+              <a href="/2017/09/25/Stylus的使用/" rel="next" title="Stylus的使用">
+                <i class="fa fa-chevron-left"></i> Stylus的使用
               </a>
             
           </div>
@@ -493,8 +494,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/11/Node.js学习-URL模块/" rel="prev" title="Node.js学习--URL模块">
-                Node.js学习--URL模块 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/10/npm包的开发及发布/" rel="prev" title="npm包的开发及发布">
+                npm包的开发及发布 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -567,7 +568,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -578,7 +579,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -589,7 +590,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -719,7 +720,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共44.4k字</span>
+  <span class="post-count">博客全站共46.6k字</span>
 </div>
 
         

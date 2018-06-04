@@ -96,6 +96,7 @@
 <meta property="og:title" content="汤国斌的博客">
 <meta property="og:url" content="http://yoursite.com/page/16/index.html">
 <meta property="og:site_name" content="汤国斌的博客">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汤国斌的博客">
 
@@ -286,6 +287,327 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/23/hexo搭建博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/23/hexo搭建博客/" itemprop="url">hexo搭建博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T10:29:13+08:00">
+                2017-06-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/应用工具/" itemprop="url" rel="index">
+                    <span itemprop="name">应用工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/23/hexo搭建博客/" class="leancloud_visitors" data-flag-title="hexo搭建博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
+<li>第一步、执行npm install hexo-cli -g 安装hexo</li>
+<li>第二步、找到你想写博客的文件夹，执行hexo init blog生成文件</li>
+<li>第三步、在生成的文件blog中执行hexo server，访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></li>
+</ul>
+<h2 id="安装和配置Next主题"><a href="#安装和配置Next主题" class="headerlink" title="安装和配置Next主题"></a>安装和配置Next主题</h2><ul>
+<li>在hexo目录下右键Git bash通过命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>next主题自动下载到themes目录下</li>
+<li>在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next<code>theme:next</code></li>
+<li><code>hexo s</code>验证主题配置是否成功，浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
+</ul>
+<h2 id="hexo书写博客"><a href="#hexo书写博客" class="headerlink" title="hexo书写博客"></a>hexo书写博客</h2><ul>
+<li>在source文件夹的_posts里面,通过<code>hexo new 博客标题</code>命令生成markdown文件</li>
+<li>文章写好后，执行<code>hexo generate</code>命令生成静态的html文件</li>
+</ul>
+<h2 id="发送博客到github上"><a href="#发送博客到github上" class="headerlink" title="发送博客到github上"></a>发送博客到github上</h2><ul>
+<li>我们把public里面的文件发布到github上面</li>
+<li>在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io</li>
+<li>用git发送到githoub是一定要发送到master分支</li>
+<li>不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/23/hexo搭建博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/微信页面开发的注意事项/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/19/微信页面开发的注意事项/" itemprop="url">微信页面开发的注意事项</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T20:21:27+08:00">
+                2017-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/微信/" itemprop="url" rel="index">
+                    <span itemprop="name">微信</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/19/微信页面开发的注意事项/" class="leancloud_visitors" data-flag-title="微信页面开发的注意事项">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="页面搜索框"><a href="#页面搜索框" class="headerlink" title="页面搜索框"></a>页面搜索框</h2><ul>
+<li>为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边</li>
+<li><p>实现手机键盘显示搜索按钮<code>&lt;form&gt;</code>标签里面包含<code>&lt;input type=search&gt;</code>，<code>&lt;form&gt;</code>标签必须有<code>action</code>属性,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</div><div class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>vue绑定事件在<code>&lt;input&gt;</code>标签上,用监听键盘事件<code>@keydown</code>,要使用<code>e.preventDefault()</code>阻止默认事件触发。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/19/微信页面开发的注意事项/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -716,324 +1038,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/vuex学习/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/05/vuex学习/" itemprop="url">vuex学习</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T22:29:17+08:00">
-                2017-06-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/组件/" itemprop="url" rel="index">
-                    <span itemprop="name">组件</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/05/vuex学习/" class="leancloud_visitors" data-flag-title="vuex学习">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="理解Vuex"><a href="#理解Vuex" class="headerlink" title="理解Vuex"></a>理解Vuex</h1><ul>
-<li>运用Vue进行多组件开发时，多个组件间的数据通信和状态管理很难维护，使用Vuex将状态管理单独拎出来，应用统一的方式进行处理，在后期维护的过程中数据的修改和维护就变得简单而清晰了。</li>
-</ul>
-<h2 id="状态管理模式"><a href="#状态管理模式" class="headerlink" title="状态管理模式"></a>状态管理模式</h2><ul>
-<li>vuex的状态自管理应用包含以下几个部分<ul>
-<li>state，驱动应用的数据源;</li>
-<li>view，以声明方式将state映射到视图； </li>
-<li>actions，响应在view上的用户输入导致的状态变化
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/05/vuex学习/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/03/扎实基础JS一/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/03/扎实基础JS一/" itemprop="url">扎实基础JS一</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-03T16:08:26+08:00">
-                2017-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/03/扎实基础JS一/" class="leancloud_visitors" data-flag-title="扎实基础JS一">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/03/扎实基础JS一/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1083,7 +1087,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1094,7 +1098,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1105,7 +1109,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1219,7 +1223,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共44.4k字</span>
+  <span class="post-count">博客全站共46.6k字</span>
 </div>
 
         
