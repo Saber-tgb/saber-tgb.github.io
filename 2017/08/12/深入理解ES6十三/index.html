@@ -403,10 +403,10 @@
 </ul>
 <h1 id="模块的导入导出语法"><a href="#模块的导入导出语法" class="headerlink" title="模块的导入导出语法"></a>模块的导入导出语法</h1><ul>
 <li><p>导出的基本语法：用<code>export</code>关键字将代码暴露给其他模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 导出数据</div><div class="line">export var color = &apos;red&apos;;</div><div class="line">export let name = &apos;tgb&apos;;</div><div class="line">export const magicNumber = 7;</div><div class="line"></div><div class="line">// 导出函数</div><div class="line">export function sum(num1,num2) &#123;</div><div class="line">    return num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 导出数据</span><br><span class="line">export var color = &apos;red&apos;;</span><br><span class="line">export let name = &apos;tgb&apos;;</span><br><span class="line">export const magicNumber = 7;</span><br><span class="line"></span><br><span class="line">// 导出函数</span><br><span class="line">export function sum(num1,num2) &#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>导入的基本语法：通过<code>import</code>关键字在另一个模块中访问，<code>import</code>语句的两个部分分别是，要导入的标识符和标识符应当从哪个模块导入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import &#123;identifierl,identifier2&#125; from &apos;./example.js&apos;//模块说明符</div><div class="line"></div><div class="line">// 导入多个绑定</div><div class="line">import &#123; sum, multiply, magicNumber&#125; from &apos;./example.js&apos;;</div><div class="line"></div><div class="line">// 导入整个模块</div><div class="line">import * as example from &apos;./expmple.js&apos; // 命名空间导入</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123;identifierl,identifier2&#125; from &apos;./example.js&apos;//模块说明符</span><br><span class="line"></span><br><span class="line">// 导入多个绑定</span><br><span class="line">import &#123; sum, multiply, magicNumber&#125; from &apos;./example.js&apos;;</span><br><span class="line"></span><br><span class="line">// 导入整个模块</span><br><span class="line">import * as example from &apos;./expmple.js&apos; // 命名空间导入</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>模块说明符的注意事项：Node.js遵循文件系统前缀区分本地文件和包的惯例，例如，<code>example</code>是一个包而<code>./example.js</code>是一个本地文件</p>
 </li>
@@ -420,22 +420,22 @@
 </ul>
 <h1 id="导出和导入时的重命名"><a href="#导出和导入时的重命名" class="headerlink" title="导出和导入时的重命名"></a>导出和导入时的重命名</h1><ul>
 <li><p>可以用<code>as</code>关键字来改变导出时元素的名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function sum (num1,num2) &#123;</div><div class="line">    return num1 + num2;</div><div class="line">&#125;</div><div class="line">export &#123;sum as add&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function sum (num1,num2) &#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">export &#123;sum as add&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>导入时改变名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123;add as sum&#125; from &apos;./example.js&apos;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123;add as sum&#125; from &apos;./example.js&apos;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h1 id="模块的默认值"><a href="#模块的默认值" class="headerlink" title="模块的默认值"></a>模块的默认值</h1><ul>
 <li>模块的默认值是指通过default关键字指定的单个变量，函数或类，只能为模块设置一个默认的导出值</li>
 <li><p>导出默认值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export default function(num1,num2) &#123;</div><div class="line">    return num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export default function(num1,num2) &#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>导入默认值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import sum from &apos;./example.js&apos; //导入默认值是不使用大括号</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import sum from &apos;./example.js&apos; //导入默认值是不使用大括号</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>导出默认值和非默认值:用逗号将默认的本地名称与大括号包裹的非默认值分割开，在import语句中，默认值必须排在非默认值前。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">export let color = &apos;red&apos;;</div><div class="line"></div><div class="line">export default function(num1,num2) &#123;</div><div class="line">   return num1 + num2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 导入</div><div class="line">import sum, &#123; color &#125; from &apos;./example.js&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">export let color = &apos;red&apos;;</span><br><span class="line"></span><br><span class="line">export default function(num1,num2) &#123;</span><br><span class="line">   return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 导入</span><br><span class="line">import sum, &#123; color &#125; from &apos;./example.js&apos;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h1 id="浏览器模块说明符解析"><a href="#浏览器模块说明符解析" class="headerlink" title="浏览器模块说明符解析"></a>浏览器模块说明符解析</h1><ul>
@@ -569,7 +569,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -580,7 +580,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -591,7 +591,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -721,7 +721,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

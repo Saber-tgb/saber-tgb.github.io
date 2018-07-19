@@ -401,13 +401,13 @@
 <li><router-link> 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 <a> 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。<h3 id="自定义属性-props"><a href="#自定义属性-props" class="headerlink" title="自定义属性(props)"></a>自定义属性(props)</h3></a></router-link></li>
 <li><p><code>to</code></p>
 <ul>
-<li>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 字符串 --&gt;</div><div class="line">&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</div><div class="line">&lt;!-- 渲染结果 --&gt;</div><div class="line">&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt;</div></pre></td></tr></table></figure>
+<li>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 字符串 --&gt;</span><br><span class="line">&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</span><br><span class="line">&lt;!-- 渲染结果 --&gt;</span><br><span class="line">&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p><code>replace</code>重定向</p>
 <ul>
-<li>设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt;</div></pre></td></tr></table></figure>
+<li>设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -418,14 +418,14 @@
 </li>
 <li><p><code>tab</code></p>
 <ul>
-<li>有时候想要 <router-link> 渲染成某种标签，例如 <li>。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;</div><div class="line">&lt;!-- 渲染结果 --&gt;</div><div class="line">&lt;li&gt;foo&lt;/li&gt;</div></pre></td></tr></table></figure>
+<li>有时候想要 <router-link> 渲染成某种标签，例如 <li>。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;</span><br><span class="line">&lt;!-- 渲染结果 --&gt;</span><br><span class="line">&lt;li&gt;foo&lt;/li&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </router-link></li></ul>
 </li>
 <li><p><code>exact</code></p>
 <ul>
 <li>“是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 <router-link to="/a"> 也会被设置 CSS 类名。</router-link></li>
-<li>按照这个规则，<router-link to="/"> 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;</div><div class="line">&lt;router-link to=&quot;/&quot; exact&gt;</div></pre></td></tr></table></figure>
+<li>按照这个规则，<router-link to="/"> 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;</span><br><span class="line">&lt;router-link to=&quot;/&quot; exact&gt;</span><br></pre></td></tr></table></figure>
 </router-link></li>
 </ul>
 </li>
@@ -442,7 +442,7 @@
 <li><p>将”激活时的CSS类名”应用在外层元素</p>
 <ul>
 <li><p>有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 <a> 标签本身，那么可以用 <router-link> 渲染外层元素，包裹着内层的原生 <a> 标签：</a></router-link></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt;</div><div class="line">  &lt;a&gt;/foo&lt;/a&gt;</div><div class="line">&lt;/router-link&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt;</span><br><span class="line">  &lt;a&gt;/foo&lt;/a&gt;</span><br><span class="line">&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在这种情况下，<a> 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 <li>。</li></a></p>
 <a id="more"></a>
@@ -461,7 +461,7 @@
 </li>
 <li>行为表现<ul>
 <li>其他属性（非 router-view 使用的属性）都直接传给渲染的组件， 很多时候，每个路由的数据都是包含在路由参数中。</li>
-<li>因为它也是个组件，所以可以配合 <transition> 和 <keep-alive> 使用。如果两个结合一起用，要确保在内层使用 <keep-alive>：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;transition&gt;</div><div class="line">    &lt;keep-alive&gt;</div><div class="line">        &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">    &lt;/keep-alive&gt;</div><div class="line">&lt;/transition&gt;</div></pre></td></tr></table></figure>
+<li>因为它也是个组件，所以可以配合 <transition> 和 <keep-alive> 使用。如果两个结合一起用，要确保在内层使用 <keep-alive>：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition&gt;</span><br><span class="line">    &lt;keep-alive&gt;</span><br><span class="line">        &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">    &lt;/keep-alive&gt;</span><br><span class="line">&lt;/transition&gt;</span><br></pre></td></tr></table></figure>
 </keep-alive></keep-alive></transition></li>
 </ul>
 </li>
@@ -537,8 +537,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/24/Vue-router的使用二/" rel="prev" title="Vue-router的使用一">
-                Vue-router的使用一 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/24/Axios的使用/" rel="prev" title="Axios的使用">
+                Axios的使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -611,7 +611,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -622,7 +622,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -633,7 +633,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -763,7 +763,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

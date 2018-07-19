@@ -407,14 +407,14 @@
 </ul>
 <h1 id="vue的过滤器"><a href="#vue的过滤器" class="headerlink" title="vue的过滤器"></a>vue的过滤器</h1><ul>
 <li><p>过滤器可以用在mustache 插值和 v-bind 表达式即:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;message | capitalize&#125;&#125;</div><div class="line">&lt;div v-bind:id=&quot;rawId | formatId&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;message | capitalize&#125;&#125;</span><br><span class="line">&lt;div v-bind:id=&quot;rawId | formatId&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>过滤器方法注册在<code>filters</code>函数中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">filters: &#123;</div><div class="line">    capitalize: function (value) &#123;</div><div class="line">      if (!value) return &apos;&apos;</div><div class="line">      value = value.toString()</div><div class="line">      return value.charAt(0).toUpperCase() + value.slice(1)</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">filters: &#123;</span><br><span class="line">    capitalize: function (value) &#123;</span><br><span class="line">      if (!value) return &apos;&apos;</span><br><span class="line">      value = value.toString()</span><br><span class="line">      return value.charAt(0).toUpperCase() + value.slice(1)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h1 id="vue的计算属性"><a href="#vue的计算属性" class="headerlink" title="vue的计算属性"></a>vue的计算属性</h1><ul>
-<li>计算属性方法写在<code>computed</code>函数中<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">            message: &apos;Hello&apos;</div><div class="line">        &#125;,</div><div class="line">computed: &#123;</div><div class="line">            reversedMessage: function () &#123;</div><div class="line">                return this.message.split(&apos;&apos;).reverse().join(&apos;&apos;);</div><div class="line">            &#125;</div><div class="line">        &#125;,</div></pre></td></tr></table></figure>
+<li>计算属性方法写在<code>computed</code>函数中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">            message: &apos;Hello&apos;</span><br><span class="line">        &#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">            reversedMessage: function () &#123;</span><br><span class="line">                return this.message.split(&apos;&apos;).reverse().join(&apos;&apos;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <a id="more"></a>
@@ -459,7 +459,7 @@
 <li>可以在对象中传入更多属性用来动态切换多个 class <code>v-bind:class=&quot;{ active: isActive, &#39;text-danger&#39;: hasError }</code></li>
 <li>数组语法<code>v-bind:class=&quot;[{ active: isActive }, errorClass]</code></li>
 <li>绑定内联样式：<code>&lt;div v-bind:style=&quot;{ color: activeColor, fontSize: fontSize + &#39;px&#39; }&quot;&gt;&lt;/div&gt;</code></li>
-<li>绑定到一个样式对象：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div v-bind:style=&quot;styleObject&quot;&gt;&lt;/div&gt;</div><div class="line">data: &#123;</div><div class="line">    styleObject: &#123;</div><div class="line">    color: &apos;red&apos;,</div><div class="line">    fontSize: &apos;13px&apos;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>绑定到一个样式对象：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;styleObject&quot;&gt;&lt;/div&gt;</span><br><span class="line">data: &#123;</span><br><span class="line">    styleObject: &#123;</span><br><span class="line">    color: &apos;red&apos;,</span><br><span class="line">    fontSize: &apos;13px&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -523,7 +523,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/24/Vue-router的使用一/" rel="prev" title="Vue-router的使用一">
+              <a href="/2017/05/24/Vue-router的使用二/" rel="prev" title="Vue-router的使用一">
                 Vue-router的使用一 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -597,7 +597,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -608,7 +608,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -619,7 +619,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -749,7 +749,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

@@ -400,7 +400,7 @@
         <h2 id="页面搜索框"><a href="#页面搜索框" class="headerlink" title="页面搜索框"></a>页面搜索框</h2><ul>
 <li>为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边</li>
 <li><p>实现手机键盘显示搜索按钮<code>&lt;form&gt;</code>标签里面包含<code>&lt;input type=search&gt;</code>，<code>&lt;form&gt;</code>标签必须有<code>action</code>属性,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</div><div class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</span><br><span class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</span><br><span class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</span><br><span class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</span><br><span class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</span><br><span class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>vue绑定事件在<code>&lt;input&gt;</code>标签上,用监听键盘事件<code>@keydown</code>,要使用<code>e.preventDefault()</code>阻止默认事件触发。</p>
 <a id="more"></a>
@@ -533,7 +533,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -544,7 +544,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -555,7 +555,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -685,7 +685,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

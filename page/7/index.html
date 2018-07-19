@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/10/Vue双向数据绑定原理解析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/24/webpack的学习一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/10/Vue双向数据绑定原理解析/" itemprop="url">Vue双向数据绑定原理</a></h1>
+                <a class="post-title-link" href="/2017/12/24/webpack的学习一/" itemprop="url">webpack的学习一</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-10T14:39:47+08:00">
-                2017-10-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-24T09:25:11+08:00">
+                2017-12-24
               </time>
             
 
@@ -351,8 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
+                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
+                    <span itemprop="name">前端构建生态</span>
                   </a>
                 </span>
 
@@ -368,7 +368,7 @@
 
           
           
-             <span id="/2017/10/10/Vue双向数据绑定原理解析/" class="leancloud_visitors" data-flag-title="Vue双向数据绑定原理">
+             <span id="/2017/12/24/webpack的学习一/" class="leancloud_visitors" data-flag-title="webpack的学习一">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,16 +398,21 @@
       
         
           
-          Object.defineProperty
-这是一个ES5的方法，可以直接在一个对象上定义一个新属性，或者修改一个已经存在的属性， 并返回这个对象。
-对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。
+          安装
+使用之前确保安装了 Node.js 的最新版本; 
+官方推荐本地安装webpack,使我们在引入破坏式变更(breaking change)的依赖时，更容易分别升级项目
+npm install --save-dev webpack
 
-数据描述符是一个具有值的属性，该值可能是可写的，也可能不是可写的；即设置了value属性。
-123456789let obj = &#123;name:&apos;vue&apos;&#125;;Object.defineProperty(obj,&apos;age&apos;,&#123;    value:3,    writable:true,    enumerable:true,    configurable:true&#125;)o.age = 4;consol
+
+npm脚本命令: webpack --config webpack.config.js
+
+webpack概念入口- entry属性：指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。进入入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的。
+- 通过在webpack.config.js配置文件中配置`entry`属性，来指定一个入口起点（或多个入口起点）
+123 module.exports = &#123;
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/10/Vue双向数据绑定原理解析/#more" rel="contents">
+            <a class="btn" href="/2017/12/24/webpack的学习一/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -453,7 +458,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/Stylus的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/22/Mysql学习-重置密码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -472,7 +477,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/25/Stylus的使用/" itemprop="url">Stylus的使用</a></h1>
+                <a class="post-title-link" href="/2017/12/22/Mysql学习-重置密码/" itemprop="url">Mysql学习--重置密码</a></h1>
         
 
         <div class="post-meta">
@@ -484,8 +489,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T09:34:17+08:00">
-                2017-09-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T11:52:19+08:00">
+                2017-12-22
               </time>
             
 
@@ -507,8 +512,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -524,7 +529,7 @@
 
           
           
-             <span id="/2017/09/25/Stylus的使用/" class="leancloud_visitors" data-flag-title="Stylus的使用">
+             <span id="/2017/12/22/Mysql学习-重置密码/" class="leancloud_visitors" data-flag-title="Mysql学习--重置密码">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -554,11 +559,15 @@
       
         
           
-          
+          1.打开mysql.exe和mysqld.exe所在的文件夹,复制路径地址
+2.通过cmd命令进入mysql.exe所在的文件夹。
+cd C:\Program Files\MySQL\MySQL Server 5.5\bin
+
+3.
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/25/Stylus的使用/#more" rel="contents">
+            <a class="btn" href="/2017/12/22/Mysql学习-重置密码/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -604,7 +613,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/Sass的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/21/HTTP协议的学习四/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -623,7 +632,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/25/Sass的使用/" itemprop="url">Sass的使用</a></h1>
+                <a class="post-title-link" href="/2017/12/21/HTTP协议的学习四/" itemprop="url">HTTP协议的学习四</a></h1>
         
 
         <div class="post-meta">
@@ -635,8 +644,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T09:33:56+08:00">
-                2017-09-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T16:06:27+08:00">
+                2017-12-21
               </time>
             
 
@@ -646,28 +655,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -675,7 +662,7 @@
 
           
           
-             <span id="/2017/09/25/Sass的使用/" class="leancloud_visitors" data-flag-title="Sass的使用">
+             <span id="/2017/12/21/HTTP协议的学习四/" class="leancloud_visitors" data-flag-title="HTTP协议的学习四">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -704,12 +691,19 @@
 
       
         
-          
-          
-          
+          <h2 id="web服务器的主要功能"><a href="#web服务器的主要功能" class="headerlink" title="web服务器的主要功能"></a>web服务器的主要功能</h2><ol>
+<li>建立连接</li>
+<li>接受请求–从网络中读取一条HTTP请求报文</li>
+<li>处理请求–对请求报文进行解释，并采取行动</li>
+<li>构建响应–创建带有正确首部的HTTP响应报文</li>
+<li>发送响应–将响应回送给客服端</li>
+<li>记录事务处理过程–将于已完成事务有关的内容记录在一个日志文件中。</li>
+</ol>
+<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><ul>
+<li>web代理服务器是网络的中间实体，代理位于客服端和服务器之间，扮演‘中间人’的角色，在各端点之间来回传送HTTP报文。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/25/Sass的使用/#more" rel="contents">
+            <a class="btn" href="/2017/12/21/HTTP协议的学习四/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -755,7 +749,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/Less的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/13/Node-js学习-module模块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -774,7 +768,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/25/Less的使用/" itemprop="url">Less的使用</a></h1>
+                <a class="post-title-link" href="/2017/12/13/Node-js学习-module模块/" itemprop="url">Node.js学习--module模块</a></h1>
         
 
         <div class="post-meta">
@@ -786,8 +780,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T09:33:29+08:00">
-                2017-09-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T14:27:42+08:00">
+                2017-12-13
               </time>
             
 
@@ -809,8 +803,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
                   </a>
                 </span>
 
@@ -826,7 +820,7 @@
 
           
           
-             <span id="/2017/09/25/Less的使用/" class="leancloud_visitors" data-flag-title="Less的使用">
+             <span id="/2017/12/13/Node-js学习-module模块/" class="leancloud_visitors" data-flag-title="Node.js学习--module模块">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -856,14 +850,12 @@
       
         
           
-          Less安装
-npm install less -g全局安装less,webStorm编辑器的插件会将less编译为css
-浏览器直接使用less
-1234//.less 样式表的链接，并将 rel 属性设置为 &quot;stylesheet/less&quot; 在 less.js 之前加载样式表。&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;./index.less&quot;&gt;// 使用`less.js`插件解析less&lt;script src=&quot;http://cdn.bootcss.com/less.js/1.7.0/less.min.js&quot;&
+          exports和module.exports的区别
+模块require方只能看到module.exports这个对象，它是看不到exports对象的，而我们在编写模块时用到的exports对象实际上只是对module.exports的引用。1234567891011121314151617exports.name = (x) =&gt; &#123;    console.log(x);&#125;//和下面一样，修改的都是同一内存地址里的东西module.exports.name = (x) =&gt; &#123;    console.log(x);&#125;/*----------下面这样写就存在区别-------------*///下面的 function是一块新的内存地址，导致
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/25/Less的使用/#more" rel="contents">
+            <a class="btn" href="/2017/12/13/Node-js学习-module模块/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -904,7 +896,7 @@ npm install less -g全局安装less,webStorm编辑器的插件会将less编译�
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -949,7 +941,7 @@ npm install less -g全局安装less,webStorm编辑器的插件会将less编译�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -960,7 +952,7 @@ npm install less -g全局安装less,webStorm编辑器的插件会将less编译�
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -971,7 +963,7 @@ npm install less -g全局安装less,webStorm编辑器的插件会将less编译�
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1085,7 +1077,7 @@ npm install less -g全局安装less,webStorm编辑器的插件会将less编译�
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

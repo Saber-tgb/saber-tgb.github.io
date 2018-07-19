@@ -405,27 +405,27 @@
 </ul>
 <h2 id="对象字面量语法的扩展"><a href="#对象字面量语法的扩展" class="headerlink" title="对象字面量语法的扩展"></a>对象字面量语法的扩展</h2><ul>
 <li><p>属性初始化简写语法：当一个对象的属性与本地变量同名时，不必要再写冒号和值，简单地只写属性名即可。当对象字面量里只有一个属性的名称时，JavaScript引擎会在可访问作用域中查找其同名变量，如果找到，则该变量的值被复赋值给对象字面量里的同名属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">    reutrn &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,age) &#123;</span><br><span class="line">    reutrn &#123;</span><br><span class="line">        name,</span><br><span class="line">        age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>对象方法的简写语法：消除了冒号和关键字<code>function</code>,与传统对象方法的区别是简写方法可以使用super关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    name:&apos;tgb&apos;,</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let person = &#123;</span><br><span class="line">    name:&apos;tgb&apos;,</span><br><span class="line">    sayName() &#123;</span><br><span class="line">        console.log(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>可计算属性名：在ES6中可以在对象字面量中使用可计算属性名称，对象字面中使用方括号表示该属性名称时可计算的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let suffix = &apos;name&apos;</div><div class="line">let person = &#123;</div><div class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</div><div class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</div><div class="line">&#125;</div><div class="line">console.log(person[&apos;first name&apos;]);</div><div class="line">console.log(person[&apos;last name&apos;]);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let suffix = &apos;name&apos;</span><br><span class="line">let person = &#123;</span><br><span class="line">    [&apos;first&apos;+suffix]: &apos;Nicholas&apos;,</span><br><span class="line">    [&apos;last&apos;+suffix]:&apos;Zakas&apos;</span><br><span class="line">&#125;</span><br><span class="line">console.log(person[&apos;first name&apos;]);</span><br><span class="line">console.log(person[&apos;last name&apos;]);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <a id="more"></a>
 <h2 id="ES6新增方法"><a href="#ES6新增方法" class="headerlink" title="ES6新增方法"></a>ES6新增方法</h2><ul>
 <li><p>Object.is()方法：这个方法接受两个参数，如果两个参数的类型相同且具有相同的值，则返回true。用来弥补全等运算符的不准确运算。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(+0 === -0)  //true;</div><div class="line">console.log(Object.is(+0,-0)); //false</div><div class="line"></div><div class="line">console.log(NaN === Nan); //false</div><div class="line">console.log(Object.is(NaN,NaN)) //true</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(+0 === -0)  //true;</span><br><span class="line">console.log(Object.is(+0,-0)); //false</span><br><span class="line"></span><br><span class="line">console.log(NaN === Nan); //false</span><br><span class="line">console.log(Object.is(NaN,NaN)) //true</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Object.assign()方法：混入方法，这个方法接受一个对象和任意数量的源对象，最终返回接受对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">let obj = &#123;&#125;;</div><div class="line">Object.assign(obj,</div><div class="line">    &#123;</div><div class="line">        type:&apos;js&apos;;</div><div class="line">        name:&apos;file.js&apos;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">        type:&apos;css  //如果多个源对象具有同名的属性则排位靠后的源对象会覆盖排位靠前的</div><div class="line">    &#125;</div><div class="line">)</div><div class="line">console.log(obj.type); //&apos;css&apos;</div><div class="line">console.log(obj.name); //&apos;file.js&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">Object.assign(obj,</span><br><span class="line">    &#123;</span><br><span class="line">        type:&apos;js&apos;;</span><br><span class="line">        name:&apos;file.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        type:&apos;css  //如果多个源对象具有同名的属性则排位靠后的源对象会覆盖排位靠前的</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line">console.log(obj.type); //&apos;css&apos;</span><br><span class="line">console.log(obj.name); //&apos;file.js&apos;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="增强对象原型"><a href="#增强对象原型" class="headerlink" title="增强对象原型"></a>增强对象原型</h2><ul>
 <li><p>ES6新增<code>Object.setPrototypeOf()方法</code>：这个方法可以改变任意指定对象的原型，它接受两个参数；被改变的对象原型的对象以及要替代第一个参数原型的对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    getGreeting() &#123;</div><div class="line">        return &apos;Hello&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">let dog = &#123;</div><div class="line">    getGreeting() &#123;</div><div class="line">        return &apos;Woof&apos;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let friend = Object.create(person);</div><div class="line">console.log(Object.getPrototypeOf(firend)===person); //true</div><div class="line"></div><div class="line">Object.setPrototypeOf(friend,dog);</div><div class="line">console.log(Object.getPrototypeOf(friend)===dog); //true</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">let person = &#123;</span><br><span class="line">    getGreeting() &#123;</span><br><span class="line">        return &apos;Hello&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">let dog = &#123;</span><br><span class="line">    getGreeting() &#123;</span><br><span class="line">        return &apos;Woof&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let friend = Object.create(person);</span><br><span class="line">console.log(Object.getPrototypeOf(firend)===person); //true</span><br><span class="line"></span><br><span class="line">Object.setPrototypeOf(friend,dog);</span><br><span class="line">console.log(Object.getPrototypeOf(friend)===dog); //true</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>简化原型访问的Super引用</p>
 <ul>
@@ -563,7 +563,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -574,7 +574,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -585,7 +585,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -715,7 +715,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/08/SVG Sprites的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/vw适配移动端/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/08/SVG Sprites的使用/" itemprop="url">SVG Sprites的使用</a></h1>
+                <a class="post-title-link" href="/2018/04/16/vw适配移动端/" itemprop="url">vw适配移动端</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T10:25:42+08:00">
-                2017-12-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T21:48:48+08:00">
+                2018-04-16
               </time>
             
 
@@ -368,7 +368,7 @@
 
           
           
-             <span id="/2017/12/08/SVG Sprites的使用/" class="leancloud_visitors" data-flag-title="SVG Sprites的使用">
+             <span id="/2018/04/16/vw适配移动端/" class="leancloud_visitors" data-flag-title="vw适配移动端">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,42 +397,26 @@
 
       
         
-          
-          SVG简介
-SVG是一种开放标准的矢量图形语言，使用svg格式我们可以直接用代码来描绘图像，可以用任何文字处理工具打开svg图像，通过改变部分代码来使图像具有交互功能，并可以随时插入到HTML中通过浏览器来浏览。
-
-SV优缺点
-
-
-优点
-缺点
-
-
-
-
-1.缩放无损还原，显示清晰
-1.SVG在绘制的性能上比PNG要差
-
-
-2.语义性良好
-2.局限性，对应单色或普通渐变没什么问题，但对不规则的渐变以及特效叠加效果显示不全
-
-
-3.可用CSS控制图标样式以及动画
-3.兼容性稍差，android4.1才开始支持
-
-
-4.减少http请求
-4.学习应用成本较高
-
-
-
-使用 SVG 中的 symbol，use 元素来制作SVG Sprite
-l;]’SVG Symbols的使用，本质上是对Sprite的
-          ...
+          <h1 id="1-vw原理解析"><a href="#1-vw原理解析" class="headerlink" title="1.vw原理解析"></a>1.vw原理解析</h1><ul>
+<li>vw是基于Viewport视窗的长度单位，这里的视窗（Viewport）指的就是浏览器可视化的区域，而这个可视区域是window.innerWidth/window.innerHeight的大小。</li>
+<li>Viewport相关的单位有四个，分别为vw、vh、vmin和vmax:<ul>
+<li>vw：是Viewport’s width的简写,1vw等于window.innerWidth的1%</li>
+<li>vh：和vw类似，是Viewport’s height的简写，1vh等于window.innerHeihgt的1%</li>
+<li>vmin：vmin的值是当前vw和vh中较小的值</li>
+<li>vmax：vmax的值是当前vw和vh中较大的值</li>
+<li>vmin和vmax是根据Viewport中长度偏大的那个维度值计算出来的，如果window.innerHeight &gt; window.innerWidth则vmin取百分之一的window.innerWidth，vmax取百分之一的window.innerHeight计算。</li>
+</ul>
+</li>
+<li>如果设计稿的宽度是750px，那么100vw=750px,1vw=7.5px</li>
+</ul>
+<h1 id="2-Vue项目中使用vw实现移动端适配"><a href="#2-Vue项目中使用vw实现移动端适配" class="headerlink" title="2.Vue项目中使用vw实现移动端适配"></a>2.Vue项目中使用vw实现移动端适配</h1><ul>
+<li>安装PostCSS插件<ul>
+<li>在.postcssrc.js使用postcss</li>
+<li>已经装好有postcss-import、postcss-url、autoprefixer</li>
+<li>新增插件：<code>npm i postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano --S</code>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/08/SVG Sprites的使用/#more" rel="contents">
+            <a class="btn" href="/2018/04/16/vw适配移动端/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -478,7 +462,7 @@ l;]’SVG Symbols的使用，本质上是对Sprite的
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/04/JavaScript语句/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/pc端密码控件的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -497,7 +481,7 @@ l;]’SVG Symbols的使用，本质上是对Sprite的
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/04/JavaScript语句/" itemprop="url">JavaScript语句</a></h1>
+                <a class="post-title-link" href="/2018/04/11/pc端密码控件的使用/" itemprop="url">pc端密码控件的使用</a></h1>
         
 
         <div class="post-meta">
@@ -509,164 +493,8 @@ l;]’SVG Symbols的使用，本质上是对Sprite的
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T19:05:55+08:00">
-                2017-12-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/12/04/JavaScript语句/" class="leancloud_visitors" data-flag-title="JavaScript语句">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          一、条件语句1.if12345if (表达式) &#123;    //表达式为真执行&#125; else &#123;    //否则&#125;
-
-只有false,null,’undefined’,空字符串,数字0,数字NaN的值为假，其他所有值都是真2.switch语句12345678910switch (i) &#123;    case 25:        alert(25);        break;    case 36:        alert(36);        bresk;    default:        alert(11);&#125;
-
-
-3.while语句12345var i = 0;while(i&lt;10) &#123;    alert(i
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/04/JavaScript语句/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/08/hexo常用命令笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/08/hexo常用命令笔记/" itemprop="url">hexo常用命令笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-08T15:58:51+08:00">
-                2017-11-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T14:28:42+08:00">
+                2018-04-11
               </time>
             
 
@@ -705,7 +533,7 @@ l;]’SVG Symbols的使用，本质上是对Sprite的
 
           
           
-             <span id="/2017/11/08/hexo常用命令笔记/" class="leancloud_visitors" data-flag-title="hexo常用命令笔记">
+             <span id="/2018/04/11/pc端密码控件的使用/" class="leancloud_visitors" data-flag-title="pc端密码控件的使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -734,26 +562,14 @@ l;]’SVG Symbols的使用，本质上是对Sprite的
 
       
         
-          
-          书写
-hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章
-hexo p == hexo publish
-hexo g == hexo generate#生成
-hexo s == hexo server #启动服务预览
-hexo d == hexo deploy#部署
-
-服务器
-hexo server #Hexo 会监视文件变动并自动更新，您无须重启服务器。
-hexo server -s #静态模式
-hexo server -p 5000 #更改端口
-hexo server -i 192.168.1.1 #自定义 IP
-hexo clean #清除缓存 网页正常情况下可以忽略此条命令
-hexo g #生成静态网页
-hexo d 
-          ...
+          <h1 id="密码控件-PassGuard介绍"><a href="#密码控件-PassGuard介绍" class="headerlink" title="密码控件 PassGuard介绍"></a>密码控件 PassGuard介绍</h1><ul>
+<li>使用的密码控件是北京微通新成的</li>
+<li>控件集成了<code>crypto-js.js</code>、<code>PassGuardCtrl.js</code>、<code>jQuery.js</code>、AESWithJCE.jar(解密jar);</li>
+</ul>
+<h1 id="前端初始化控件"><a href="#前端初始化控件" class="headerlink" title="前端初始化控件"></a>前端初始化控件</h1>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/08/hexo常用命令笔记/#more" rel="contents">
+            <a class="btn" href="/2018/04/11/pc端密码控件的使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -799,7 +615,7 @@ hexo d
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/Express框架的学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/JS调试的5个debug技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -818,7 +634,7 @@ hexo d
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/12/Express框架的学习/" itemprop="url">Node.js--Express框架的学习</a></h1>
+                <a class="post-title-link" href="/2018/03/01/JS调试的5个debug技巧/" itemprop="url">JS调试的5个debug技巧</a></h1>
         
 
         <div class="post-meta">
@@ -830,8 +646,8 @@ hexo d
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T21:51:30+08:00">
-                2017-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T17:12:57+08:00">
+                2018-03-01
               </time>
             
 
@@ -853,8 +669,8 @@ hexo d
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">Node.js</span>
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
                   </a>
                 </span>
 
@@ -870,7 +686,164 @@ hexo d
 
           
           
-             <span id="/2017/10/12/Express框架的学习/" class="leancloud_visitors" data-flag-title="Node.js--Express框架的学习">
+             <span id="/2018/03/01/JS调试的5个debug技巧/" class="leancloud_visitors" data-flag-title="JS调试的5个debug技巧">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-debugger"><a href="#1-debugger" class="headerlink" title="1.debugger"></a>1.debugger</h1><ul>
+<li>直接在javaScript代码中加入一句<code>debugger</code>手工造成一个断点效果</li>
+<li>带有条件的断点吗？你只需要用if语句包围它<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (somethingHappens) &#123;</span><br><span class="line">  debugger;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="2-设置在DOM-node发生变化时触发断点"><a href="#2-设置在DOM-node发生变化时触发断点" class="headerlink" title="2.设置在DOM node发生变化时触发断点"></a>2.设置在DOM node发生变化时触发断点</h1><ul>
+<li>DOM不受你的控制，自己会发生一些奇怪的变化，让你很难找出问题的根源</li>
+</ul>
+<h1 id="3-Ajax-断点"><a href="#3-Ajax-断点" class="headerlink" title="3.Ajax 断点"></a>3.Ajax 断点</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/01/JS调试的5个debug技巧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/ES6中的类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/01/ES6中的类/" itemprop="url">ES6中的类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T09:27:18+08:00">
+                2018-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/01/ES6中的类/" class="leancloud_visitors" data-flag-title="ES6中的类">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -900,27 +873,13 @@ hexo d
       
         
           
-          Express框架安装
-npm install -g express
-npm install -g express-generator安装Express项目生成器
-
-初始化项目
-创建文件名为demo的项目
-express --view=ejs demo
-cd demo
-npm install
-
-
-
-项目启动
-npm start
-启动文件是/bin/www，默认端口：3000
-
-
-          
+          类的声明
+基本的类声明语法：要声明一个类，首先编写class关键字，紧跟着的是类的名字，其他部分的语法类似于对象字面量方法的简写形式
+1234567891011121314151617class PersonClass &#123;    //等价于PersonClass构造函数    constructor(name) &#123;        this.name    &#125;    //等价于PersonType.prototype.sayName    sayName() &#123;        console.log(this.name);    &#125;&#125;let person = new PersonClass(&apos;tgb&apos;);perso
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/12/Express框架的学习/#more" rel="contents">
+            <a class="btn" href="/2018/03/01/ES6中的类/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -961,7 +920,7 @@ npm start
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1006,7 +965,7 @@ npm start
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1017,7 +976,7 @@ npm start
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1028,7 +987,7 @@ npm start
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1142,7 +1101,7 @@ npm start
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

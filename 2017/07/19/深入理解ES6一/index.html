@@ -412,16 +412,16 @@
 <li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
 </ul>
 <h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
-<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var funcs = [];</span><br><span class="line">for(var i=0;i&lt;10;i++) &#123;</span><br><span class="line">    funcs.push(function() &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(funcion(func) &#123;</span><br><span class="line">    func(); //输出10次10 </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <a id="more"></a>
 <ul>
 <li><p>使用闭包解决这个问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push((function(value)&#123;</div><div class="line">        // 变量i的值在传递到这个作用域是被赋值给了value;</div><div class="line">        // 此时这个值就不会随外部变量而变化了；</div><div class="line">        return function() &#123;</div><div class="line">            console.log(value);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i));</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var funcs = [];</span><br><span class="line">for(var i=0;i&lt;10;i++) &#123;</span><br><span class="line">    funcs.push((function(value)&#123;</span><br><span class="line">        // 变量i的值在传递到这个作用域是被赋值给了value;</span><br><span class="line">        // 此时这个值就不会随外部变量而变化了；</span><br><span class="line">        return function() &#123;</span><br><span class="line">            console.log(value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)(i));</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(function(func) &#123;</span><br><span class="line">    func(); //输出0，然后是1,2直到9</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用let声明简化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs=[];</div><div class="line">for(let i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(function(func) &#123;</div><div class="line">    func(); //输出0，然后是1,2直到9</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var funcs=[];</span><br><span class="line">for(let i=0;i&lt;10;i++) &#123;</span><br><span class="line">    funcs.push(function() &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(function(func) &#123;</span><br><span class="line">    func(); //输出0，然后是1,2直到9</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h1 id="全局作用域的绑定"><a href="#全局作用域的绑定" class="headerlink" title="全局作用域的绑定"></a>全局作用域的绑定</h1><ul>
@@ -560,7 +560,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -571,7 +571,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -582,7 +582,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -712,7 +712,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

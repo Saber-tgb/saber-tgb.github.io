@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/HTML5基础标签的掌握/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/Next主体配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/20/HTML5基础标签的掌握/" itemprop="url">HTML5基础标签的掌握</a></h1>
+                <a class="post-title-link" href="/2017/09/13/Next主体配置/" itemprop="url">Next主体配置</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T17:12:09+08:00">
-                2017-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T16:43:05+08:00">
+                2017-09-13
               </time>
             
 
@@ -351,8 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
+                  <a href="/categories/应用工具/" itemprop="url" rel="index">
+                    <span itemprop="name">应用工具</span>
                   </a>
                 </span>
 
@@ -368,7 +368,7 @@
 
           
           
-             <span id="/2017/07/20/HTML5基础标签的掌握/" class="leancloud_visitors" data-flag-title="HTML5基础标签的掌握">
+             <span id="/2017/09/13/Next主体配置/" class="leancloud_visitors" data-flag-title="Next主体配置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,14 +397,16 @@
 
       
         
-          <h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a><abbr>标签</abbr></h2><ul>
-<li><code>&lt;abbr&gt;</code> 标签表示简称或缩写，比如 “WWW” 或 “NATO”</li>
-<li><code>&lt;abbr&gt;</code> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.</div></pre></td></tr></table></figure>
-</abbr></li>
-</ul>
+          <p>Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为站点配置文件，后者称为主题配置文件。</p>
+<p>hexo的next主题个性化配置教程: <a href="https://segmentfault.com/a/1190000009544924#articleHeader19" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009544924#articleHeader19</a></p>
+<h2 id="NexT主题安装"><a href="#NexT主题安装" class="headerlink" title="NexT主题安装"></a>NexT主题安装</h2><h3 id="下载NexT主题"><a href="#下载NexT主题" class="headerlink" title="下载NexT主题"></a>下载NexT主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd your-hexo-site`</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改站点配置文件</h3><p>修改站点配置文件_config.yml，找到以下部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: http://hexo.io/plugins/</span><br><span class="line">## Themes: http://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: http://hexo.io/plugins/</span><br><span class="line">## Themes: http://hexo.io/themes/</span><br><span class="line"># theme: landscape</span><br><span class="line">theme: next`</span><br></pre></td></tr></table></figure></p>
+<p>至此，NexT主题就安装好了，非常方便，在Hexo中切换主题只需修改站点配置文件中theme属性来配置，想换就换。</p>
+<h3 id="选择Scheme"><a href="#选择Scheme" class="headerlink" title="选择Scheme"></a>选择Scheme</h3><p>NexT 通过 Scheme 提供主题中的主题。Mist是NexT主题自带的主题，可以通过修改主题配置文件中的scheme属性获得。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">scheme: Mist  #去掉默认的注释即可切换为Mist主题</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/20/HTML5基础标签的掌握/#more" rel="contents">
+            <a class="btn" href="/2017/09/13/Next主体配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -450,7 +452,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/深入理解ES6一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/flex布局学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -469,7 +471,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/19/深入理解ES6一/" itemprop="url">深入理解ES6一</a></h1>
+                <a class="post-title-link" href="/2017/09/12/flex布局学习/" itemprop="url">flex布局学习</a></h1>
         
 
         <div class="post-meta">
@@ -481,8 +483,372 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-19T10:03:31+08:00">
-                2017-07-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T15:11:25+08:00">
+                2017-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/12/flex布局学习/" class="leancloud_visitors" data-flag-title="flex布局学习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="flex布局基础知识"><a href="#flex布局基础知识" class="headerlink" title="flex布局基础知识"></a>flex布局基础知识</h2><p><img src="http://ojvil4eq9.bkt.clouddn.com/17-9-12/53121912.jpg" alt=""></p>
+<ul>
+<li>main axis(主轴): Flex容器的主轴主要用来配置Flex项目。它不一定是水平，这主要取决于flex-direction属性</li>
+<li>main-start|main-end(主轴起点|主轴终点): Flex项目的配置从容器的主轴起点开始,往主轴终点结束</li>
+<li>main size(主轴方向长度):Flex项目的在主轴方向的宽度或高度就是项目的主轴长度，Flex项目的主轴长度属性是width或height属性，由哪一个对着主轴方向决定。</li>
+<li>cross axis(侧轴):与主轴垂直的轴称作侧轴，是侧轴方向的延伸。</li>
+<li>cross-start | cross-end(侧轴起点|侧轴终点):伸缩行的配置从容器的侧轴起点边开始，往侧轴终点边结束。</li>
+<li>cross size(侧轴方向长度):Flex项目的在侧轴方向的宽度或高度就是项目的侧轴长度，Flex项目的侧轴长度属性是width或height属性，由哪一个对着侧轴方向决定。</li>
+</ul>
+<h2 id="Flex容器属性-主容器"><a href="#Flex容器属性-主容器" class="headerlink" title="Flex容器属性(主容器)"></a>Flex容器属性(主容器)</h2><ol>
+<li><code>display</code>: 定义一个Flex容器，根据其取的值来决定是内联还是块。Flex容器会为其内容建立新的伸缩格式化上下文。(定义成flex容器不等于定义成块级容器)</li>
+<li><code>flex-direction</code>: 定义主轴方向，Flex项目在Flex容器中放置的方向<ul>
+<li><code>row</code>(默认值): Flex项目从左向右排列</li>
+<li><code>row-reverse</code>: 与row相反，Flex项目从右向左排列</li>
+<li><code>column</code>: Flex项目从上向下排列</li>
+<li><code>columne-reverse</code>: 与column相反，Flex项目从下向上排列</li>
+</ul>
+</li>
+<li><code>flex-wrap</code>: 定义Flex项目是否多行显示<ul>
+<li><code>nowrap</code>(默认值): 单行显示，从左向右排列</li>
+<li><code>wrap</code>: 多行显示，从左向右排列</li>
+<li><code>wrap-reverse</code>: 多行显示，从右向左排列</li>
+</ul>
+</li>
+<li><code>flex-flow</code>: <code>flex-direction</code>和<code>flex-wrap</code>属性的缩写 默认值是row nowrap
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/12/flex布局学习/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/前端知识体系整理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/12/前端知识体系整理/" itemprop="url">前端知识体系整理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T13:55:49+08:00">
+                2017-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/知识体系/" itemprop="url" rel="index">
+                    <span itemprop="name">知识体系</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/12/前端知识体系整理/" class="leancloud_visitors" data-flag-title="前端知识体系整理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前端知识分类"><a href="#前端知识分类" class="headerlink" title="前端知识分类"></a>前端知识分类</h2><ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>DOM和BOM</li>
+<li>ECMAScript</li>
+<li>前端构建生态</li>
+<li>模块化、框架、组件</li>
+<li>Node.js</li>
+<li>应用工具学习</li>
+<li>canvas</li>
+<li>HTTP协议</li>
+<li>浏览器基础</li>
+<li>Photoshop与切图</li>
+<li>Git</li>
+</ul>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ol>
+<li>meta内容与设置</li>
+<li>一般常用标签</li>
+<li>HTML5新增语义化标签</li>
+<li>HTML常用属性</li>
+<li>搜索引擎优化</li>
+</ol>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ol>
+<li>css常用属性</li>
+<li>css层叠概念</li>
+<li>css选择器和优先级</li>
+<li>盒子模型</li>
+<li>css布局方式</li>
+<li>编译工具less和sass</li>
+<li>css实现响应式：利用媒体查询media query</li>
+<li>css移动端开发：rem和em的原理和实现</li>
+<li>css动画及动画库的使用</li>
+<li>css的UI框架<ul>
+<li>bootstrap</li>
+<li>基于vue框架-PC端elm框架</li>
+<li>基于vue框架-移动端vux框架</li>
+</ul>
+</li>
+</ol>
+<h2 id="DOM和BOM"><a href="#DOM和BOM" class="headerlink" title="DOM和BOM"></a>DOM和BOM</h2><ol>
+<li>DOM对象document</li>
+<li>DOMAPI操作</li>
+<li>BOM对象的使用
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/12/前端知识体系整理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/23/深入理解ES6九--Class/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/23/深入理解ES6九--Class/" itemprop="url">深入理解ES6九————JS中的类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-23T09:26:05+08:00">
+                2017-08-23
               </time>
             
 
@@ -521,330 +887,7 @@
 
           
           
-             <span id="/2017/07/19/深入理解ES6一/" class="leancloud_visitors" data-flag-title="深入理解ES6一">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h1><ol>
-<li>Es6中引入块级声明，<code>let</code>声明的变量作用域限制在代码块中；</li>
-<li><code>let</code>声明不会被提升;</li>
-<li>在同一作用域中不能用<code>let</code>重复定义已经存在的标识符，会抛出错误。</li>
-</ol>
-<h1 id="const声明"><a href="#const声明" class="headerlink" title="const声明"></a>const声明</h1><ol>
-<li><code>const</code>声明的变量作用域也会限制在代码块中；</li>
-<li><code>const</code>声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)</li>
-<li><code>const</code>声明不允许修改绑定，但允许修改值；例如<code>const</code>声明对象，对象的值是可以修改的</li>
-</ol>
-<h1 id="临时死区的存在"><a href="#临时死区的存在" class="headerlink" title="临时死区的存在"></a>临时死区的存在</h1><ul>
-<li>临时死区(temporal dead zone)TDZ用来描述<code>let</code>和<code>const</code>的不提升效果；</li>
-<li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
-</ul>
-<h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
-<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var funcs = [];</div><div class="line">for(var i=0;i&lt;10;i++) &#123;</div><div class="line">    funcs.push(function() &#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">funcs.forEach(funcion(func) &#123;</div><div class="line">    func(); //输出10次10 </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/19/深入理解ES6一/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/浏览器缓存/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/18/浏览器缓存/" itemprop="url">浏览器缓存</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T10:55:49+08:00">
-                2017-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/浏览器基础/" itemprop="url" rel="index">
-                    <span itemprop="name">浏览器基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/07/18/浏览器缓存/" class="leancloud_visitors" data-flag-title="浏览器缓存">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="缓存的定义"><a href="#缓存的定义" class="headerlink" title="缓存的定义"></a>缓存的定义</h2><ul>
-<li>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。</li>
-</ul>
-<h2 id="缓存的命中和未命中"><a href="#缓存的命中和未命中" class="headerlink" title="缓存的命中和未命中"></a>缓存的命中和未命中</h2><ul>
-<li>304 的标准解释：<ul>
-<li>Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</li>
-</ul>
-</li>
-<li>HTTP在验证
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/18/浏览器缓存/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/17/HTTP协议的学习三/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/17/HTTP协议的学习三/" itemprop="url">HTTP协议的学习三</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T14:58:33+08:00">
-                2017-07-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTTP/" itemprop="url" rel="index">
-                    <span itemprop="name">HTTP</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/07/17/HTTP协议的学习三/" class="leancloud_visitors" data-flag-title="HTTP协议的学习三">
+             <span id="/2017/08/23/深入理解ES6九--Class/" class="leancloud_visitors" data-flag-title="深入理解ES6九————JS中的类">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -878,7 +921,7 @@
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/17/HTTP协议的学习三/#more" rel="contents">
+            <a class="btn" href="/2017/08/23/深入理解ES6九--Class/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -919,7 +962,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -964,7 +1007,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -975,7 +1018,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -986,7 +1029,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1100,7 +1143,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

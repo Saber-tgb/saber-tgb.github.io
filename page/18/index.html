@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/03/vue脚手架vue-cli的学习一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/11/HTTP协议的学习一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/03/vue脚手架vue-cli的学习一/" itemprop="url">vue脚手架vue-cli的学习一</a></h1>
+                <a class="post-title-link" href="/2017/07/11/HTTP协议的学习一/" itemprop="url">HTTP协议的学习一</a></h1>
         
 
         <div class="post-meta">
@@ -328,161 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-03T11:56:27+08:00">
-                2017-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/03/vue脚手架vue-cli的学习一/" class="leancloud_visitors" data-flag-title="vue脚手架vue-cli的学习一">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="vue-cli的模板"><a href="#vue-cli的模板" class="headerlink" title="vue-cli的模板"></a>vue-cli的模板</h1><ul>
-<li>vue-cli的脚手架项目模板有webpack-simple 和 webpack</li>
-<li>两种的区别在于webpack-simple 没有包括Eslint 检查功能等等功能</li>
-</ul>
-<h1 id="vue-cli的项目结构"><a href="#vue-cli的项目结构" class="headerlink" title="vue-cli的项目结构"></a>vue-cli的项目结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">|-- build                            // 项目构建(webpack)相关代码</div><div class="line">|   |-- build.js                     // 生产环境构建代码</div><div class="line">|   |-- check-version.js             // 检查node、npm等版本</div><div class="line">|   |-- dev-client.js                // 热重载相关</div><div class="line">|   |-- dev-server.js                // 构建本地服务器</div><div class="line">|   |-- utils.js                     // 构建工具相关</div><div class="line">|   |-- webpack.base.conf.js         // webpack基础配置</div><div class="line">|   |-- webpack.dev.conf.js          // webpack开发环境配置</div><div class="line">|   |-- webpack.prod.conf.js         // webpack生产环境配置</div><div class="line">|-- config                           // 项目开发环境配置</div><div class="line">|   |-- dev.env.js                   // 开发环境变量</div><div class="line">|   |-- index.js                     // 项目一些配置变量</div><div class="line">|   |-- prod.env.js                  // 生产环境变量</div><div class="line">|   |-- test.env.js                  // 测试环境变量</div><div class="line">|-- src                              // 源码目录</div><div class="line">|   |-- components                     // vue公共组件</div><div class="line">|   |-- store                          // vuex的状态管理</div><div class="line">|   |-- App.vue                        // 页面入口文件</div><div class="line">|   |-- main.js                        // 程序入口文件，加载各种公共组件</div><div class="line">|-- static                           // 静态文件，比如一些图片，json数据等</div><div class="line">|   |-- data                           // 群聊分析得到的数据用于数据可视化</div><div class="line">|-- .babelrc                         // ES6语法编译配置</div><div class="line">|-- .editorconfig                    // 定义代码格式</div><div class="line">|-- .gitignore                       // git上传需要忽略的文件格式</div><div class="line">|-- README.md                        // 项目说明</div><div class="line">|-- favicon.ico </div><div class="line">|-- index.html                       // 入口页面</div><div class="line">|-- package.json                     // 项目基本信息</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/03/vue脚手架vue-cli的学习一/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/24/Axios的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/24/Axios的使用/" itemprop="url">Axios的使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T21:24:29+08:00">
-                2017-05-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-11T09:20:10+08:00">
+                2017-07-11
               </time>
             
 
@@ -521,7 +368,7 @@
 
           
           
-             <span id="/2017/05/24/Axios的使用/" class="leancloud_visitors" data-flag-title="Axios的使用">
+             <span id="/2017/07/11/HTTP协议的学习一/" class="leancloud_visitors" data-flag-title="HTTP协议的学习一">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -550,214 +397,39 @@
 
       
         
-          <h1 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h1><ul>
-<li>基于 Promise 的 HTTP 请求客户端，可同时在浏览器和 node.js 中使用</li>
-</ul>
-<h1 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h1><ul>
-<li>在浏览器中发送 XMLHttpRequests 请求</li>
-<li>在 node.js 中发送 http请求</li>
-<li>支持 Promise API</li>
-<li>拦截请求和响应</li>
-<li>转换请求和响应数据</li>
-<li>自动转换 JSON 数据</li>
-<li>客户端支持保护安全免受 XSRF 攻击 </li>
-</ul>
-<h1 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h1><ul>
-<li><p>可以为每一个请求指定默认配置。</p>
-<h2 id="全局-axios-默认配置"><a href="#全局-axios-默认配置" class="headerlink" title="全局 axios 默认配置"></a>全局 axios 默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">axios.defaults.baseURL = &apos;https://api.example.com&apos;;</div><div class="line">axios.defaults.headers.common[&apos;Authorization&apos;] = AUTH_TOKEN;</div><div class="line">axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded&apos;;</div></pre></td></tr></table></figure>
-<h2 id="自定义实例默认配置"><a href="#自定义实例默认配置" class="headerlink" title="自定义实例默认配置"></a>自定义实例默认配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let axiosIns = axios.create(&#123;</div><div class="line">  baseURL: &apos;https://api.example.com&apos;,</div><div class="line">  timeout: 10 * 1000</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="请求方法别名"><a href="#请求方法别名" class="headerlink" title="请求方法别名"></a>请求方法别名</h1><ul>
-<li><p>axios.get(url[, config])</p>
-</li>
-<li><p>axios.delete(url[, config])</p>
-</li>
-<li><p>axios.head(url[, config])</p>
-</li>
-<li><p>axios.post(url[, data[, config]])</p>
-</li>
-<li><p>axios.put(url[, data[, config]])</p>
-</li>
-<li><p>axios.patch(url[, data[, config]])</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/24/Axios的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/24/Vue-router的使用二/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汤国斌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Octocat.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="汤国斌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/24/Vue-router的使用二/" itemprop="url">Vue-router的使用一</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T21:22:40+08:00">
-                2017-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/05/24/Vue-router的使用二/" class="leancloud_visitors" data-flag-title="Vue-router的使用一">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="导航钩子"><a href="#导航钩子" class="headerlink" title="导航钩子"></a>导航钩子</h2><ul>
-<li>vue-router 提供的导航钩子主要用来拦截导航，让它完成跳转或取消。有多种方式可以在路由导航发生时执行钩子：全局的, 单个路由独享的, 或者组件级的</li>
-</ul>
-<ol>
-<li><p>全局钩子 </p>
-<ul>
-<li><p>可以使用 router.beforeEach 注册一个全局的 before 钩子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123; ... &#125;)</div><div class="line"></div><div class="line">router.beforeEach((to, from, next) =&gt; &#123;</div><div class="line">    // ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>当一个导航触发时，全局的 before 钩子按照创建顺序调用。钩子是异步解析执行，此时导航在所有钩子 resolve 完之前一直处于 等待中</p>
-</li>
-<li>钩子方法接收三个参数：<ul>
-<li>to: Route: 即将要进入的目标 路由对象</li>
-<li>from: Route: 当前导航正要离开的路由</li>
-<li>next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。<ul>
-<li>next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。</li>
-<li>next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。</li>
-<li>next(‘/‘) 或者 next({ path: ‘/‘ }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。</li>
+          <h1 id="初识HTTP协议"><a href="#初识HTTP协议" class="headerlink" title="初识HTTP协议"></a>初识HTTP协议</h1><ol>
+<li>HTTP协议是一种数据传输协议，客服端通过HTTP请求向服务器获取资源，服务器通过HTTP响应提供资源给客服端。</li>
+<li>媒体类型(MIME类型)<ul>
+<li>HTTP给每种要通过 Web 传输的对象都打上了名为 MIME 类型（MIME type）的数据格式标签</li>
+<li>MIME 类型是一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间<br>由一条斜杠来分隔<ul>
+<li>HTML 格式的文本文档由 text/html 类型来标记</li>
+<li>JPEG 版本的图片为 image/jpeg 类型</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>某个路由独享的钩子<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">const router = new VueRouter(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: &apos;/foo&apos;,</div><div class="line">      component: Foo,</div><div class="line">      beforeEnter: (to, from, next) =&gt; &#123;</div><div class="line">        // ...</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 </ol>
+<h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><ul>
+<li>每个 Web 服务器资源都有一个名字，服务器资源名被称为统一资源标识符，URI 就像因特网上的邮政地址一样，在世界范围内唯一标识并定位信息资源</li>
+<li>URI和URL的区别在于，URI表示请求服务器的路径，定义这么一个资源。而URL同时说明要如何访问这个资源（http://）。</li>
+<li>URI 有两种形式，分别称为 URL 和 URN</li>
+</ul>
+<ol>
+<li>URL<ul>
+<li>URL：统一资源定位符（URL）是资源标识符最常见的形式。URL 描述了一台特定服务器上某资源的特定位置。</li>
+<li>大部分 URL 都遵循一种标准格式，这种格式包含三个部分<ul>
+<li>URL 的第一部分被称为方案（scheme），说明了访问资源所使用的协议类型。这部分通常就是 HTTP 协议（http://）。</li>
+<li>第二部分给出了服务器的因特网地址（比如，<a href="http://www.joes-hardware.com）。" target="_blank" rel="noopener">www.joes-hardware.com）。</a></li>
+<li>其余部分指定了 Web 服务器上的某个资源（比如，/specials/saw-blade.gif）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>URN<ul>
+<li>URI 的第二种形式就是统一资源名（URN）。URN 是作为特定内容的唯一名称使用<br>的，与目前的资源所在地无关。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/05/24/Vue-router的使用二/#more" rel="contents">
+            <a class="btn" href="/2017/07/11/HTTP协议的学习一/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -803,7 +475,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/24/Vue-router的API学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/06/npm的快速使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -822,7 +494,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/05/24/Vue-router的API学习/" itemprop="url">Vue-router的API学习</a></h1>
+                <a class="post-title-link" href="/2017/07/06/npm的快速使用/" itemprop="url">npm的快速使用</a></h1>
         
 
         <div class="post-meta">
@@ -834,8 +506,346 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T21:22:40+08:00">
-                2017-05-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-06T11:57:43+08:00">
+                2017-07-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
+                    <span itemprop="name">前端构建生态</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/06/npm的快速使用/" class="leancloud_visitors" data-flag-title="npm的快速使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ol>
+<li>npm初始化一个包<ul>
+<li><code>npm init</code>创建一个新包 需要填写信息</li>
+<li><code>npm init -y</code>快速初始化</li>
+</ul>
+</li>
+<li>安装安装包<ul>
+<li>常规: <code>npm install pkg</code>, 速记: <code>npm i pkg</code>.</li>
+</ul>
+</li>
+<li>全局安装包:<ul>
+<li>常规: <code>npm i --global pkg</code>, 速记: <code>npm i -g pkg</code>.</li>
+</ul>
+</li>
+<li>安装包并包含在依赖中:<ul>
+<li>常规: <code>npm i --save pkg</code>, 速记: <code>npm i -S pkg</code>.</li>
+</ul>
+</li>
+<li>安装包并包含在开发依赖中:<ul>
+<li>常规: <code>npm i --save-dev pkg</code>, 速记: <code>npm i -D pkg</code>.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/06/npm的快速使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/01/Babel的使用总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/01/Babel的使用总结/" itemprop="url">Babel的使用总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T14:52:00+08:00">
+                2017-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/01/Babel的使用总结/" class="leancloud_visitors" data-flag-title="Babel的使用总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="babel-polfill插件"><a href="#babel-polfill插件" class="headerlink" title="babel-polfill插件"></a>babel-polfill插件</h2><ul>
+<li>由于Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API ，比如 Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise 等全局对象，以及一些定义在全局对象上的方法（比如 Object.assign）都不会转码，所以在IE浏览器下会出现缺少Promise对象的问题</li>
+<li><p>为了完整使用 ES6 的 API ，我们只能安装这个插件<br><code>npm install babel-polyfill --save-dev</code></p>
+<ul>
+<li>node.js 中<code>require(&#39;babel-polyfill&#39;)</code></li>
+<li><p>webpack.config.js中</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    entry: [&apos;babel-polyfill&apos;, &apos;./app/js&apos;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>vue-cli配置的环境下,在main.js中引入：<code>import &#39;babel-polyfill&#39;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="本地安装和全局安装"><a href="#本地安装和全局安装" class="headerlink" title="本地安装和全局安装"></a>本地安装和全局安装</h2><h3 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h3><p><code>npm install --global babel-cli</code></p>
+<ul>
+<li><p>这时候我们可以使用 Babel 命令编译文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">babel index.js --out-file compiled.js</span><br><span class="line">#或</span><br><span class="line">babel index.js -o compiled.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">babel src -out-dir lib</span><br><span class="line">#或</span><br><span class="line">babel src -d lib</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/01/Babel的使用总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/Vue-js学习三/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="汤国斌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Octocat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤国斌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/27/Vue-js学习三/" itemprop="url">Vue.js学习三</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T17:33:18+08:00">
+                2017-06-27
               </time>
             
 
@@ -874,7 +884,7 @@
 
           
           
-             <span id="/2017/05/24/Vue-router的API学习/" class="leancloud_visitors" data-flag-title="Vue-router的API学习">
+             <span id="/2017/06/27/Vue-js学习三/" class="leancloud_visitors" data-flag-title="Vue.js学习三">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -903,57 +913,65 @@
 
       
         
-          <h2 id="lt-router-link-gt"><a href="#lt-router-link-gt" class="headerlink" title="&lt;router-link&gt;"></a><code>&lt;router-link&gt;</code></h2><ul>
-<li><router-link> 组件支持用户在具有路由功能的应用中（点击）导航。 通过 to 属性指定目标地址，默认渲染成带有正确链接的 <a> 标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名。<h3 id="自定义属性-props"><a href="#自定义属性-props" class="headerlink" title="自定义属性(props)"></a>自定义属性(props)</h3></a></router-link></li>
-<li><p><code>to</code></p>
-<ul>
-<li>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 字符串 --&gt;</div><div class="line">&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</div><div class="line">&lt;!-- 渲染结果 --&gt;</div><div class="line">&lt;a href=&quot;home&quot;&gt;Home&lt;/a&gt;</div></pre></td></tr></table></figure>
-</li>
+          <h2 id="钩子函数的理解"><a href="#钩子函数的理解" class="headerlink" title="钩子函数的理解"></a>钩子函数的理解</h2><ul>
+<li>文档翻译造成的问题，原名是“hook”（不负责任的直译为“钩子”而已），它是一种事件劫持机制，也就是说它会比你的事件更早进行执行处理。</li>
+<li>可以简单地把它理解为vue的内置事件，但是这个内置事件是由你去配置的。</li>
+</ul>
+<h2 id="vue的生命周期详解"><a href="#vue的生命周期详解" class="headerlink" title="vue的生命周期详解"></a>vue的生命周期详解</h2><h3 id="vue生命周期图示"><a href="#vue生命周期图示" class="headerlink" title="vue生命周期图示"></a>vue生命周期图示</h3><p><img src="https://ooo.0o0.ooo/2017/06/28/5952fd52156c2.png" alt=""></p>
+<h3 id="生命周期总共分为八个阶段"><a href="#生命周期总共分为八个阶段" class="headerlink" title="生命周期总共分为八个阶段"></a>生命周期总共分为八个阶段</h3><ol>
+<li>beforeCreate（组件实例创建前）<ul>
+<li>el和data并未初始化</li>
+<li>实例创建前：这个阶段实例的data、methods是读不到的</li>
 </ul>
 </li>
-<li><p><code>replace</code>重定向</p>
-<ul>
-<li>设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;router-link :to=&quot;&#123; path: &apos;/abc&apos;&#125;&quot; replace&gt;&lt;/router-link&gt;</div></pre></td></tr></table></figure>
-</li>
+<li>created（组件实例创建后）,<ul>
+<li>完成了 data 数据的初始化，el没有</li>
+<li>实例创建后：这个阶段已经完成了数据观测(data observer)，属性和方法的运算， watch/event 事件回调。mount挂载阶段还没开始，$el 属性目前不可见，数据并没有在DOM元素上进行渲染</li>
 </ul>
 </li>
-<li><p><code>append</code></p>
-<ul>
-<li>设置 append 属性后，则在当前（相对）路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b</li>
+<li>beforeMount(模板编译/挂载之前),<ul>
+<li>完成了 el 和 data 初始化</li>
+<li>在挂载开始之前被调用：相关的 render 函数首次被调用。</li>
 </ul>
 </li>
-<li><p><code>tab</code></p>
-<ul>
-<li>有时候想要 <router-link> 渲染成某种标签，例如 <li>。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;router-link to=&quot;/foo&quot; tag=&quot;li&quot;&gt;foo&lt;/router-link&gt;</div><div class="line">&lt;!-- 渲染结果 --&gt;</div><div class="line">&lt;li&gt;foo&lt;/li&gt;</div></pre></td></tr></table></figure>
-</li>
-</router-link></li></ul>
-</li>
-<li><p><code>exact</code></p>
-<ul>
-<li>“是否激活” 默认类名的依据是 inclusive match （全包含匹配）。 举个例子，如果当前的路径是 /a 开头的，那么 <router-link to="/a"> 也会被设置 CSS 类名。</router-link></li>
-<li>按照这个规则，<router-link to="/"> 将会点亮各个路由！想要链接使用 “exact 匹配模式”，则使用 exact 属性：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 这个链接只会在地址为 / 的时候被激活 --&gt;</div><div class="line">&lt;router-link to=&quot;/&quot; exact&gt;</div></pre></td></tr></table></figure>
-</router-link></li>
+<li>mounted（模板编译/挂载之后）<ul>
+<li>完成挂载</li>
+<li>el选项的DOM节点 被新创建的 vm.$el 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在DOM节点上进行渲染</li>
 </ul>
 </li>
-<li><p><code>events</code></p>
-<ul>
-<li>声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。</li>
+<li>beforeUpdate（组件更新之前）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>数据更新时调用，但不进行DOM重新渲染，在数据更新时DOM没渲染前可以在这个生命函数里进行状态处理</li>
 </ul>
 </li>
-<li><p><code>active-class</code></p>
-<ul>
-<li>设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。</li>
+<li>updated（组件更新之后）<ul>
+<li>data的值改变后，组件更新，触发update的操作</li>
+<li>这个状态下数据更新并且DOM重新渲染，当这个生命周期函数被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。当实例每次进行数据更新时updated都会执行</li>
 </ul>
 </li>
-<li><p>将”激活时的CSS类名”应用在外层元素</p>
-<ul>
-<li><p>有时候我们要让 “激活时的CSS类名” 应用在外层元素，而不是 <a> 标签本身，那么可以用 <router-link> 渲染外层元素，包裹着内层的原生 <a> 标签：</a></router-link></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;router-link tag=&quot;li&quot; to=&quot;/foo&quot;&gt;</div><div class="line">  &lt;a&gt;/foo&lt;/a&gt;</div><div class="line">&lt;/router-link&gt;</div></pre></td></tr></table></figure>
+<li>beforeDestroy（组件销毁前）<ul>
+<li>实例销毁之前调用。</li>
+</ul>
 </li>
-<li><p>在这种情况下，<a> 将作为真实的链接（它会获得正确的 href 的），而 “激活时的CSS类名” 则设置到外层的 <li>。</li></a></p>
+<li>destroyed（组件销毁后）</li>
+</ol>
+<ul>
+<li>销毁完成后，我们再重新改变data中的值，vue不再对此动作进行响应了。但是原先生成的dom元素还存在，可以这么理解，执行了destroy操作，后续就不再受vue控制了。</li>
+<li>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。<h3 id="钩子函数的使用"><a href="#钩子函数的使用" class="headerlink" title="钩子函数的使用"></a>钩子函数的使用</h3></li>
+<li>beforecreate : 可以在这加个loading事件</li>
+<li>created ：在这结束loading，还做一些初始化，实现函数自执行</li>
+<li>mounted ： 在这发起后端请求，拿回数据，配合路由钩子做一些事情</li>
+<li><p>beforeDestory： 你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容</p>
+</li>
+<li><p>created：进行ajax请求异步数据的获取、初始化数据</p>
+</li>
+<li>mounted：挂载元素内dom节点的获取</li>
+<li>nextTick：针对单一事件更新数据后立即操作dom</li>
+<li>updated：任何数据的更新，如果要做统一的业务逻辑处理</li>
+<li>watch：监听具体数据变化，并做相应的处理
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/05/24/Vue-router的API学习/#more" rel="contents">
+            <a class="btn" href="/2017/06/27/Vue-js学习三/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -994,7 +1012,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1039,7 +1057,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1050,7 +1068,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1061,7 +1079,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1175,7 +1193,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

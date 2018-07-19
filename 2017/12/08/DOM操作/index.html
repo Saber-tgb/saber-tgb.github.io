@@ -417,7 +417,7 @@
 <ul>
 <li>HTML DOM 将 HTML 文档视作树结构。这种结构被称为节点树：通过 HTML DOM，树中的所有节点均可通过 JavaScript 进行访问。所有 HTML 元素（节点）均可被修改，也可以创建或删除节点。<br><img src="http://ojvil4eq9.bkt.clouddn.com/17-12-8/71429195.jpg" alt=""></li>
 </ul>
-<ol>
+<ol start="3">
 <li>节点的关系</li>
 </ol>
 <ul>
@@ -435,37 +435,37 @@
 </ul>
 <ol>
 <li><p><code>getElementById</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&apos;id&apos;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&apos;id&apos;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>getElementsByTagName</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementsByTagName(&apos;li&apos;) //返回数组</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&apos;li&apos;) //返回数组</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>getElementsByClassName</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementsByClassName(&apos;class&apos;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByClassName(&apos;class&apos;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>querySelector</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.querySelector(&quot;#myid .myclass&quot;); //返回文档中匹配指定的选择器组的第一个元素</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&quot;#myid .myclass&quot;); //返回文档中匹配指定的选择器组的第一个元素</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>querySelectorAll</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.querySelectorAll(&apos;#myClass&apos;);  //返回的 NodeList 将包含文档中的所有节点，这些都是由特定选择器匹配的</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelectorAll(&apos;#myClass&apos;);  //返回的 NodeList 将包含文档中的所有节点，这些都是由特定选择器匹配的</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="获取设置属性接的的方法"><a href="#获取设置属性接的的方法" class="headerlink" title="获取设置属性接的的方法"></a>获取设置属性接的的方法</h2><ol>
 <li><code>getAttribute()</code></li>
 </ol>
 <ul>
-<li>返回元素上一个指定的属性值。如果指定的属性不存在，则返回  null 或 “” （空字符串）<br>let div1 = document.getElementById(“div1”);<br>let align = div1.getAttribute(“align”);<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let dive = document.getElementById(&apos;div1&apos;);</div><div class="line">let align = div.getAttribute(&apos;align&apos;);</div></pre></td></tr></table></figure>
+<li>返回元素上一个指定的属性值。如果指定的属性不存在，则返回  null 或 “” （空字符串）<br>let div1 = document.getElementById(“div1”);<br>let align = div1.getAttribute(“align”);<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let dive = document.getElementById(&apos;div1&apos;);</span><br><span class="line">let align = div.getAttribute(&apos;align&apos;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol>
+<ol start="2">
 <li><code>setAttribute()</code></li>
 </ol>
 <ul>
-<li>设置指定元素上的一个属性值。如果属性已经存在，则更新该值; 否则将添加一个新的属性用指定的名称和值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//语法</div><div class="line">element.setAttribute(name, value);</div><div class="line"></div><div class="line">let div1 = document.getElementById(&quot;div1&quot;); </div><div class="line"></div><div class="line">div1.setAttribute(&quot;align&quot;, &quot;center&quot;);</div></pre></td></tr></table></figure>
+<li>设置指定元素上的一个属性值。如果属性已经存在，则更新该值; 否则将添加一个新的属性用指定的名称和值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//语法</span><br><span class="line">element.setAttribute(name, value);</span><br><span class="line"></span><br><span class="line">let div1 = document.getElementById(&quot;div1&quot;); </span><br><span class="line"></span><br><span class="line">div1.setAttribute(&quot;align&quot;, &quot;center&quot;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol>
-<li><code>removeAttribute()</code>从指定的元素中删除一个属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let div = document.getElementById(&quot;div1&quot;)</div><div class="line"></div><div class="line">div.removeAttribute(&quot;align&quot;);</div></pre></td></tr></table></figure>
+<ol start="3">
+<li><code>removeAttribute()</code>从指定的元素中删除一个属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let div = document.getElementById(&quot;div1&quot;)</span><br><span class="line"></span><br><span class="line">div.removeAttribute(&quot;align&quot;);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="HTML-DOM属性"><a href="#HTML-DOM属性" class="headerlink" title="HTML DOM属性"></a>HTML DOM属性</h1><ul>
@@ -477,7 +477,7 @@
 <ul>
 <li>属性设置或获取描述元素后代的HTML语法</li>
 </ul>
-<ol>
+<ol start="2">
 <li><code>Node.nodeName</code></li>
 </ol>
 <ul>
@@ -490,7 +490,7 @@
 </ul>
 </li>
 </ul>
-<ol>
+<ol start="3">
 <li><code>Node.nodeName</code></li>
 </ol>
 <ul>
@@ -501,7 +501,7 @@
 </ul>
 </li>
 </ul>
-<ol>
+<ol start="4">
 <li><code>Node.nodeType</code></li>
 </ol>
 <ul>
@@ -637,7 +637,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -648,7 +648,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -659,7 +659,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -789,7 +789,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

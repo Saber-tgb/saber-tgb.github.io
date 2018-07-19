@@ -399,7 +399,7 @@
       
         <h1 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h1><ul>
 <li><p>基本的类声明语法：要声明一个类，首先编写class关键字，紧跟着的是类的名字，其他部分的语法类似于对象字面量方法的简写形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class PersonClass &#123;</div><div class="line">    //等价于PersonClass构造函数</div><div class="line">    constructor(name) &#123;</div><div class="line">        this.name</div><div class="line">    &#125;</div><div class="line">    //等价于PersonType.prototype.sayName</div><div class="line">    sayName() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let person = new PersonClass(&apos;tgb&apos;);</div><div class="line">person.sayName(); //outputs &apos;tgb&apos;</div><div class="line"></div><div class="line">console.log(person instanceof PersonClass); //true</div><div class="line">console.log(person instanceof Object);  true</div><div class="line">console.log(typeof PersonClass);    //&apos;function&apos;</div><div class="line">console.log(typeof PersonClass.prototype.sayName); //&apos;function&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class PersonClass &#123;</span><br><span class="line">    //等价于PersonClass构造函数</span><br><span class="line">    constructor(name) &#123;</span><br><span class="line">        this.name</span><br><span class="line">    &#125;</span><br><span class="line">    //等价于PersonType.prototype.sayName</span><br><span class="line">    sayName() &#123;</span><br><span class="line">        console.log(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let person = new PersonClass(&apos;tgb&apos;);</span><br><span class="line">person.sayName(); //outputs &apos;tgb&apos;</span><br><span class="line"></span><br><span class="line">console.log(person instanceof PersonClass); //true</span><br><span class="line">console.log(person instanceof Object);  true</span><br><span class="line">console.log(typeof PersonClass);    //&apos;function&apos;</span><br><span class="line">console.log(typeof PersonClass.prototype.sayName); //&apos;function&apos;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>提升：类声明不会声明提升，你首先需要声明你的类，然后访问它，否则会抛出一个ReferenceError：</p>
 </li>
@@ -542,7 +542,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -553,7 +553,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -564,7 +564,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -694,7 +694,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

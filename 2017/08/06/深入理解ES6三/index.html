@@ -399,12 +399,12 @@
       
         <h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
 <li><p>ES6简化了为形式参数提供默认值的过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function makeRequest(rul,timeout = 2000,callback) &#123;</div><div class="line">    //函数其余部分</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function makeRequest(rul,timeout = 2000,callback) &#123;</span><br><span class="line">    //函数其余部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>上面的函数只有当不为第二个参数传入值或者主动为第二个参数传入undefined时才会使用timeout的默认值</p>
 </li>
 <li><p>在ES6中一个函数使用了默认参数值，会使得arguments对象保持与命名参数的分离，无论参数如何变化，arguments对象不再随之改变。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function mix(first,second=&apos;b&apos;) &#123;</div><div class="line">    console.log(arguments.length);  // 1 之传入了一个参数</div><div class="line">    console.log(first === arguments[0])  // true</div><div class="line">    console.log(second === aruments[1])  // false //arguments[1]是undefined</div><div class="line">&#125;</div><div class="line">mix(&apos;a&apos;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function mix(first,second=&apos;b&apos;) &#123;</span><br><span class="line">    console.log(arguments.length);  // 1 之传入了一个参数</span><br><span class="line">    console.log(first === arguments[0])  // true</span><br><span class="line">    console.log(second === aruments[1])  // false //arguments[1]是undefined</span><br><span class="line">&#125;</span><br><span class="line">mix(&apos;a&apos;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>默认参数表达式</p>
 <ul>
@@ -420,7 +420,7 @@
 </ul>
 <h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><pre><code>- 展开运算符可以让你指定一个数组，将它们打散后作为各自独立的参数传入函数
 - 展开运算符的使用：例如`Math.max()`方法可以接受任意数量的参数并返回值最大的一个，但是该方法不允许传入数组。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// ES5使用</div><div class="line">let values = [25,50,75,100];</div><div class="line">console.log(Math.max.apply(Math,values)); //100</div><div class="line"></div><div class="line">// Es6使用</div><div class="line">console.log(Math.max(...values)); //100</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// ES5使用</span><br><span class="line">let values = [25,50,75,100];</span><br><span class="line">console.log(Math.max.apply(Math,values)); //100</span><br><span class="line"></span><br><span class="line">// Es6使用</span><br><span class="line">console.log(Math.max(...values)); //100</span><br></pre></td></tr></table></figure>
 </code></pre><a id="more"></a>
 <h2 id="判断函数被调用的方法"><a href="#判断函数被调用的方法" class="headerlink" title="判断函数被调用的方法"></a>判断函数被调用的方法</h2><ul>
 <li>在ES5中判断一个函数是否通过new关键字被调用(或者说，判断该函数是否作为构造函数被调用)，最常使用的是instanceof</li>
@@ -429,7 +429,7 @@
 </ul>
 <h2 id="块级函数"><a href="#块级函数" class="headerlink" title="块级函数"></a>块级函数</h2><ul>
 <li><p>ES6中允许在代码块中声明函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    function doSomething() &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(true) &#123;</span><br><span class="line">    function doSomething() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>块级函数的声明提升</p>
 <ul>
@@ -452,22 +452,22 @@
 <li><p>箭头函数的语法</p>
 <ol>
 <li><p>当箭头函数只有一个参数时，可以直接写参数名，箭头紧随其后，箭头右侧额表达式被求值后便立即返回</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let reflect = value =&gt; value;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let reflect = value =&gt; value;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>如果要传入两个或两个以上的参数，要在参数的两侧添加一对小括号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let sum = (num1,num2) =&gt; num1+num2;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let sum = (num1,num2) =&gt; num1+num2;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>如果函数没有参数，也要在声明的时候写一组没有内容的小括号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let getName = () =&gt; &apos;Tgb&apos;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let getName = () =&gt; &apos;Tgb&apos;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>可以有函数体</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let sum = (num1,num2) =&gt; &#123;</div><div class="line">    return num1+num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let sum = (num1,num2) =&gt; &#123;</span><br><span class="line">    return num1+num2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>箭头函数返回对象字面量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let getTempItem = id =&gt; (&#123; id: id,name: &apos;temp&apos; &#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let getTempItem = id =&gt; (&#123; id: id,name: &apos;temp&apos; &#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>箭头函数的自调用 沙箱模式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let person = ((name) =&gt; &#123;</div><div class="line">    return &#123;</div><div class="line">        getName: function() &#123;</div><div class="line">            retrun name;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;)(&apos;tgb&apos;);</div></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let person = ((name) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        getName: function() &#123;</span><br><span class="line">            retrun name;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(&apos;tgb&apos;);</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ul>
@@ -607,7 +607,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -618,7 +618,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -629,7 +629,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -759,7 +759,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

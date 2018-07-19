@@ -400,16 +400,16 @@
         <h1 id="Node中的路径分类"><a href="#Node中的路径分类" class="headerlink" title="Node中的路径分类"></a>Node中的路径分类</h1><ul>
 <li>node中的路径大致分5类，dirname,filename,process.cwd(),./,../,其中前三个都是绝对路径。</li>
 <li><p>假设的文件目录结构如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">path/</div><div class="line">  - dist/</div><div class="line">  - src/</div><div class="line">      - task.js</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">path/</span><br><span class="line">  - dist/</span><br><span class="line">  - src/</span><br><span class="line">      - task.js</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在task.js文件中写入以下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const path = require(&apos;path&apos;);</div><div class="line">console.log(__dirname);</div><div class="line">console.log(__filename);</div><div class="line">console.log(prcess.cwd()); //返回Node.js 进程当前工作的目录。</div><div class="line">console.log(path.resolve(&apos;./&apos;));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line">console.log(__dirname);</span><br><span class="line">console.log(__filename);</span><br><span class="line">console.log(prcess.cwd()); //返回Node.js 进程当前工作的目录。</span><br><span class="line">console.log(path.resolve(&apos;./&apos;));</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在editor目录下运行node src/task.js，我们可以看到结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">F:\SelfProject\nodeJS-demo\path\src</div><div class="line">F:\SelfProject\nodeJS-demo\path\src\task.js</div><div class="line">F:\SelfProject\nodeJS-demo\path</div><div class="line">F:\SelfProject\nodeJS-demo\path</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">F:\SelfProject\nodeJS-demo\path\src</span><br><span class="line">F:\SelfProject\nodeJS-demo\path\src\task.js</span><br><span class="line">F:\SelfProject\nodeJS-demo\path</span><br><span class="line">F:\SelfProject\nodeJS-demo\path</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在src目录下运行这个文件，node task.js,运行结果如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/Users/laihuamin/Documents/richEditor/editor/src</div><div class="line">/Users/laihuamin/Documents/richEditor/editor/src/task.js</div><div class="line">/Users/laihuamin/Documents/richEditor/editor/src</div><div class="line">/Users/laihuamin/Documents/richEditor/editor/src</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/Users/laihuamin/Documents/richEditor/editor/src</span><br><span class="line">/Users/laihuamin/Documents/richEditor/editor/src/task.js</span><br><span class="line">/Users/laihuamin/Documents/richEditor/editor/src</span><br><span class="line">/Users/laihuamin/Documents/richEditor/editor/src</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>归纳</p>
 <ol>
@@ -420,22 +420,22 @@
 </li>
 </ul>
 <h1 id="path的模块"><a href="#path的模块" class="headerlink" title="path的模块"></a>path的模块</h1><h2 id="path-normalize-规范化路径"><a href="#path-normalize-规范化路径" class="headerlink" title="path.normalize(规范化路径)"></a>path.normalize(规范化路径)</h2><ul>
-<li>例子<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const path = require(&apos;path&apos;);</div><div class="line">console.log(path.normalize(&apos;/foo/bar//baz/asdf/quux/..&apos;));</div><div class="line"></div><div class="line">/*  输出结果  */</div><div class="line">/foo/bar/baz/asdf</div></pre></td></tr></table></figure>
+<li>例子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line">console.log(path.normalize(&apos;/foo/bar//baz/asdf/quux/..&apos;));</span><br><span class="line"></span><br><span class="line">/*  输出结果  */</span><br><span class="line">/foo/bar/baz/asdf</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="path-join"><a href="#path-join" class="headerlink" title="path.join"></a>path.join</h2><ul>
 <li><p>用于连接路径。该方法的主要用途在于，会正确使用当前系统的路径分隔符，Unix系统是”/“，Windows系统是”\”。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const path = require(&apos;path&apos;);</div><div class="line"></div><div class="line">console.log(path.join(&apos;src&apos;,&apos;task.js));  //src/task.js</div><div class="line">console.log(path.join(&apos;/foo&apos;,&apos;bar&apos;,&apos;baz/asdf&apos;,&apos;quux&apos;,&apos;..&apos;));   //\foo\bar\baz\asdf</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line"></span><br><span class="line">console.log(path.join(&apos;src&apos;,&apos;task.js));  //src/task.js</span><br><span class="line">console.log(path.join(&apos;/foo&apos;,&apos;bar&apos;,&apos;baz/asdf&apos;,&apos;quux&apos;,&apos;..&apos;));   //\foo\bar\baz\asdf</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>规则:<br>  1.传入的参数是字符串的路径片段，可以是一个，也可以是多个<br>  2.返回的是一个拼接好的路径，但是根据平台的不同，他会对路径进行不同的规范化，举个例子，Unix系统是”/“，Windows系统是”\“，那么你在两个系统下看到的返回结果就不一样。<br>  3.如果返回的路径字符串长度为零，那么他会返回一个’.’，代表当前的文件夹。<br>  4.如果传入的参数中有不是字符串的，那就直接会报错</p>
 <h2 id="path-parse-string"><a href="#path-parse-string" class="headerlink" title="path.parse(string)"></a>path.parse(string)</h2></li>
 <li><p>返回路径字符串的路径</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">const path = require(&apos;path&apos;);</div><div class="line">console.log(path.parse(&apos;/Users/laihuamin/Documents/richEditor/editor/src/task.js&apos;));</div><div class="line">&#123; </div><div class="line">  root: &apos;/&apos;,</div><div class="line">  dir: &apos;/Users/laihuamin/Documents/richEditor/editor/src&apos;,</div><div class="line">  base: &apos;task.js&apos;,</div><div class="line">  ext: &apos;.js&apos;,</div><div class="line">  name: &apos;task&apos; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line">console.log(path.parse(&apos;/Users/laihuamin/Documents/richEditor/editor/src/task.js&apos;));</span><br><span class="line">&#123; </span><br><span class="line">  root: &apos;/&apos;,</span><br><span class="line">  dir: &apos;/Users/laihuamin/Documents/richEditor/editor/src&apos;,</span><br><span class="line">  base: &apos;task.js&apos;,</span><br><span class="line">  ext: &apos;.js&apos;,</span><br><span class="line">  name: &apos;task&apos; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>对象解析:<br>  1.root：代表根目录<br>  2.dir：代表文件所在的文件夹<br>  3.base：代表整一个文件<br>  4.name：代表文件名<br>  5.ext: 代表文件的后缀名</p>
 <h2 id="path-basename"><a href="#path-basename" class="headerlink" title="path.basename"></a>path.basename</h2></li>
 <li>返回路径中的最后一个部分</li>
-<li>可以接收两个参数，一个是path,还有一个是ext（可选参数）.<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const path = require(&apos;path&apos;);</div><div class="line">console.log(path.basename(&apos;/Users/laihuamin/Documents/richEditor/editor/src/task.js&apos;));  //task.js</div><div class="line">console.log(path.basename(&apos;/Users/laihuamin/Documents/richEditor/editor/src/task.js&apos;, &apos;.js&apos;));  //task</div></pre></td></tr></table></figure>
+<li>可以接收两个参数，一个是path,还有一个是ext（可选参数）.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line">console.log(path.basename(&apos;/Users/laihuamin/Documents/richEditor/editor/src/task.js&apos;));  //task.js</span><br><span class="line">console.log(path.basename(&apos;/Users/laihuamin/Documents/richEditor/editor/src/task.js&apos;, &apos;.js&apos;));  //task</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="path-dirname"><a href="#path-dirname" class="headerlink" title="path.dirname"></a>path.dirname</h2>
@@ -480,7 +480,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/18/react项目搭建/" rel="next" title="React项目搭建">
+              <a href="/2018/01/18/React项目搭建/" rel="next" title="React项目搭建">
                 <i class="fa fa-chevron-left"></i> React项目搭建
               </a>
             
@@ -564,7 +564,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -575,7 +575,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -586,7 +586,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -716,7 +716,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

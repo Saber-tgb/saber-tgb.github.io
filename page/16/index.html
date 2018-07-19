@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/23/hexo搭建博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/深入理解ES6二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/23/hexo搭建博客/" itemprop="url">hexo搭建博客</a></h1>
+                <a class="post-title-link" href="/2017/07/26/深入理解ES6二/" itemprop="url">深入理解ES6二</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T10:29:13+08:00">
-                2017-06-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T21:49:53+08:00">
+                2017-07-26
               </time>
             
 
@@ -351,8 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/应用工具/" itemprop="url" rel="index">
-                    <span itemprop="name">应用工具</span>
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
                   </a>
                 </span>
 
@@ -368,7 +368,7 @@
 
           
           
-             <span id="/2017/06/23/hexo搭建博客/" class="leancloud_visitors" data-flag-title="hexo搭建博客">
+             <span id="/2017/07/26/深入理解ES6二/" class="leancloud_visitors" data-flag-title="深入理解ES6二">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,28 +397,33 @@
 
       
         
-          <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
-<li>第一步、执行npm install hexo-cli -g 安装hexo</li>
-<li>第二步、找到你想写博客的文件夹，执行hexo init blog生成文件</li>
-<li>第三步、在生成的文件blog中执行hexo server，访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></li>
+          <h1 id="模板字面量的主要功能"><a href="#模板字面量的主要功能" class="headerlink" title="模板字面量的主要功能"></a>模板字面量的主要功能</h1><ul>
+<li>多行字符串：一个正式的多行字符串的概念</li>
+<li>基本的字符串格式化：将变量的值嵌入字符串的能力</li>
+<li>HTML转义 向HTML插入经过安全转换后的字符串的能力</li>
 </ul>
-<h2 id="安装和配置Next主题"><a href="#安装和配置Next主题" class="headerlink" title="安装和配置Next主题"></a>安装和配置Next主题</h2><ul>
-<li>在hexo目录下右键Git bash通过命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>next主题自动下载到themes目录下</li>
-<li>在blog文件下的站点配置文件_config.yml,找到 theme 字段，并将其值更改为 next<code>theme:next</code></li>
-<li><code>hexo s</code>验证主题配置是否成功，浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
+<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let message = `Hello world`;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>模板字面量可以使用反斜杠(/),在模板字面量中不需要转义单,双引号</p>
+</li>
+<li><p>模板字面量可以很简洁的使用多行字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let message = `Hello</span><br><span class="line">world`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在模板字面量中，可以把任何合法的javascript表达式嵌入到占位符中并将其作为字符串的一部分输出到结果中。<br>占位符有一个左侧的${和右侧的}符号组成，中间可以包含任意的javascript表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let name = &apos;Nicholas&apos;,</span><br><span class="line">    message = `Hello $&#123;name&#125;`</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="hexo书写博客"><a href="#hexo书写博客" class="headerlink" title="hexo书写博客"></a>hexo书写博客</h2><ul>
-<li>在source文件夹的_posts里面,通过<code>hexo new 博客标题</code>命令生成markdown文件</li>
-<li>文章写好后，执行<code>hexo generate</code>命令生成静态的html文件</li>
+<p>#注意事项</p>
+<ul>
+<li><p>模板字面量可以访问作用域中所有可访问的变量，而嵌入未定义的变量会抛出错误</p>
+</li>
+<li><p>可以在模板字面量中嵌入另外一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let name = &apos;Nicholas&apos;,</span><br><span class="line">    message = &apos;Hello, $&#123;</span><br><span class="line">        `my name is $&#123;name&#125;`</span><br><span class="line">    &#125;.`;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="发送博客到github上"><a href="#发送博客到github上" class="headerlink" title="发送博客到github上"></a>发送博客到github上</h2><ul>
-<li>我们把public里面的文件发布到github上面</li>
-<li>在创建github仓库是取名一定要去[github用户名].github.io 例子:saber-tgb.github.io</li>
-<li>用git发送到githoub是一定要发送到master分支</li>
-<li>不用更改生成的博客html文件的css，js的路径 传上去后路径就会正确
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/23/hexo搭建博客/#more" rel="contents">
+            <a class="btn" href="/2017/07/26/深入理解ES6二/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -464,7 +469,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/微信页面开发的注意事项/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/HTML5基础标签的掌握/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -483,7 +488,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/19/微信页面开发的注意事项/" itemprop="url">微信页面开发的注意事项</a></h1>
+                <a class="post-title-link" href="/2017/07/20/HTML5基础标签的掌握/" itemprop="url">HTML5基础标签的掌握</a></h1>
         
 
         <div class="post-meta">
@@ -495,8 +500,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T20:21:27+08:00">
-                2017-06-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T17:12:09+08:00">
+                2017-07-20
               </time>
             
 
@@ -518,8 +523,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/微信/" itemprop="url" rel="index">
-                    <span itemprop="name">微信</span>
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
                   </a>
                 </span>
 
@@ -535,7 +540,7 @@
 
           
           
-             <span id="/2017/06/19/微信页面开发的注意事项/" class="leancloud_visitors" data-flag-title="微信页面开发的注意事项">
+             <span id="/2017/07/20/HTML5基础标签的掌握/" class="leancloud_visitors" data-flag-title="HTML5基础标签的掌握">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -564,15 +569,14 @@
 
       
         
-          <h2 id="页面搜索框"><a href="#页面搜索框" class="headerlink" title="页面搜索框"></a>页面搜索框</h2><ul>
-<li>为了保持和微信搜索一致，搜索框未点击时搜索图标在中间显示，点击搜索框后，搜索图标在左边</li>
-<li><p>实现手机键盘显示搜索按钮<code>&lt;form&gt;</code>标签里面包含<code>&lt;input type=search&gt;</code>，<code>&lt;form&gt;</code>标签必须有<code>action</code>属性,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm&quot; v-show=&quot;searchShow1&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; @focus=&quot;searchFocus&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;form action=&quot;&quot; class=&quot;searchForm2&quot; v-show=&quot;searchShow2&quot;&gt;</div><div class="line">            &lt;input type=&quot;search&quot; autocomplete=&quot;off&quot; placeholder=&quot;搜索&quot; class=&quot;search&quot; v-model=&quot;keywords2&quot; @keydown=&quot;searchVk($event)&quot;&gt;</div><div class="line">            &lt;i class=&quot;iconfont icon-sousuo icoImg&quot; @click=&quot;getVkBusList()&quot;&gt;&lt;/i&gt;</div><div class="line">            &lt;span class=&quot;btn&quot; @click=&quot;cancelSearch&quot;&gt;取消&lt;/span&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>vue绑定事件在<code>&lt;input&gt;</code>标签上,用监听键盘事件<code>@keydown</code>,要使用<code>e.preventDefault()</code>阻止默认事件触发。</p>
+          <h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a><abbr>标签</abbr></h2><ul>
+<li><code>&lt;abbr&gt;</code> 标签表示简称或缩写，比如 “WWW” 或 “NATO”</li>
+<li><code>&lt;abbr&gt;</code> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The &lt;abbr title=&quot;People&apos;s Republic of China&quot;&gt;PRC&lt;/abbr&gt; was founded in 1949.</span><br></pre></td></tr></table></figure>
+</abbr></li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/19/微信页面开发的注意事项/#more" rel="contents">
+            <a class="btn" href="/2017/07/20/HTML5基础标签的掌握/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -618,7 +622,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/npm-browser-sync-gulp工具的学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/深入理解ES6一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -637,7 +641,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/16/npm-browser-sync-gulp工具的学习/" itemprop="url">npm,browser-sync,gulp工具的学习</a></h1>
+                <a class="post-title-link" href="/2017/07/19/深入理解ES6一/" itemprop="url">深入理解ES6一</a></h1>
         
 
         <div class="post-meta">
@@ -649,8 +653,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:56:02+08:00">
-                2017-06-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-19T10:03:31+08:00">
+                2017-07-19
               </time>
             
 
@@ -672,8 +676,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
-                    <span itemprop="name">前端构建生态</span>
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
                   </a>
                 </span>
 
@@ -689,7 +693,7 @@
 
           
           
-             <span id="/2017/06/16/npm-browser-sync-gulp工具的学习/" class="leancloud_visitors" data-flag-title="npm,browser-sync,gulp工具的学习">
+             <span id="/2017/07/19/深入理解ES6一/" class="leancloud_visitors" data-flag-title="深入理解ES6一">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -718,52 +722,27 @@
 
       
         
-          <h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><ul>
-<li>官网[<a href="https://www.npmjs.com" target="_blank" rel="external">https://www.npmjs.com</a>]</li>
-<li>node package manager</li>
-<li>命令:<ul>
-<li>初始化:<code>npm init</code></li>
-<li>安装指定包:<code>npm install jquery --save</code></li>
-<li>删除指定包:<code>npm remove jquery --save</code></li>
-<li>卸载一般用 npm uninstall –save jquery  或者 npm remove –save jquery</li>
-<li>下载安装package.json中dependencies属性对的文件:<code>npm install --production</code></li>
+          <h1 id="let声明"><a href="#let声明" class="headerlink" title="let声明"></a>let声明</h1><ol>
+<li>Es6中引入块级声明，<code>let</code>声明的变量作用域限制在代码块中；</li>
+<li><code>let</code>声明不会被提升;</li>
+<li>在同一作用域中不能用<code>let</code>重复定义已经存在的标识符，会抛出错误。</li>
+</ol>
+<h1 id="const声明"><a href="#const声明" class="headerlink" title="const声明"></a>const声明</h1><ol>
+<li><code>const</code>声明的变量作用域也会限制在代码块中；</li>
+<li><code>const</code>声明的是常量，其值一旦被设定后不可更改，每个通过const声明的常量必须进行初始化(赋值)</li>
+<li><code>const</code>声明不允许修改绑定，但允许修改值；例如<code>const</code>声明对象，对象的值是可以修改的</li>
+</ol>
+<h1 id="临时死区的存在"><a href="#临时死区的存在" class="headerlink" title="临时死区的存在"></a>临时死区的存在</h1><ul>
+<li>临时死区(temporal dead zone)TDZ用来描述<code>let</code>和<code>const</code>的不提升效果；</li>
+<li>与<code>var</code>声明不同，<code>let</code>和<code>const</code>声明的变量不会被提升到作用域的顶部，在<code>javascript</code>引擎扫描代码的时候会将<code>let</code>和<code>const</code>的声明放到临时死区中</li>
 </ul>
-</li>
-<li>npm的使用步骤<ul>
-<li>第一步、npm init创建一个文件夹（注意：不要用中文名,不能以数字开头，不能有空格）</li>
-<li>第二步、执行npm init -y</li>
-<li>第三步、安装需要的js库 npm install –save jquery</li>
-</ul>
-</li>
-</ul>
-<h3 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h3><ul>
-<li>更改代码之后自动刷新浏览器</li>
-<li>需要使用npm进行全局安装:<code>npm install browser-sync -g</code>,-g表示安装到全局</li>
-<li>使用:<code>browser-sync start --server --files &quot;./index.html,app.css,./css/*.css,*.*&quot;</code></li>
-<li>–files参数指定要监视的文件，后面跟要监视的文件的文件路径以逗号分隔。</li>
-</ul>
-<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>  <a href="http://www.gulpjs.com" target="_blank" rel="external">官网</a><br>  <a href="http://www.gulpjs.com.cn" target="_blank" rel="external">中文网</a></p>
-<ul>
-<li><p>前端自动化构建工具<br>js压缩,var x,xname，混淆<br>合并.<br>css压缩<br>html压压缩</p>
-</li>
-<li><p>grunt ,webpack…</p>
+<h1 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h1><ul>
+<li>常见的循环错误；<code>var</code>声明是全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var funcs = [];</span><br><span class="line">for(var i=0;i&lt;10;i++) &#123;</span><br><span class="line">    funcs.push(function() &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">funcs.forEach(funcion(func) &#123;</span><br><span class="line">    func(); //输出10次10 </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="核心就5个方法"><a href="#核心就5个方法" class="headerlink" title="核心就5个方法"></a>核心就5个方法</h3><ul>
-<li>task,gulp中是一个个任务的形式来实现功能。<ul>
-<li>task(‘任务名’,function(){<br>…..<br>});</li>
-</ul>
-</li>
-<li>src<ul>
-<li>src(‘./*.js’)</li>
-</ul>
-</li>
-<li>dest(‘./minjs/‘)// 指定处理后的文件的输出路径.</li>
-<li>watch(‘./*.js’,[‘任务名1’,’任务名2’]);</li>
-<li>run(‘任务名’);//执行指定的任务.
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/16/npm-browser-sync-gulp工具的学习/#more" rel="contents">
+            <a class="btn" href="/2017/07/19/深入理解ES6一/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -809,7 +788,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/Git的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/浏览器缓存/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汤国斌">
@@ -828,7 +807,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/16/Git的使用/" itemprop="url">Git的使用</a></h1>
+                <a class="post-title-link" href="/2017/07/18/浏览器缓存/" itemprop="url">浏览器缓存</a></h1>
         
 
         <div class="post-meta">
@@ -840,8 +819,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T10:48:27+08:00">
-                2017-06-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T10:55:49+08:00">
+                2017-07-18
               </time>
             
 
@@ -863,8 +842,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端构建生态/" itemprop="url" rel="index">
-                    <span itemprop="name">前端构建生态</span>
+                  <a href="/categories/浏览器基础/" itemprop="url" rel="index">
+                    <span itemprop="name">浏览器基础</span>
                   </a>
                 </span>
 
@@ -880,7 +859,7 @@
 
           
           
-             <span id="/2017/06/16/Git的使用/" class="leancloud_visitors" data-flag-title="Git的使用">
+             <span id="/2017/07/18/浏览器缓存/" class="leancloud_visitors" data-flag-title="浏览器缓存">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -909,99 +888,18 @@
 
       
         
-          <h3 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h3><ul>
-<li>Git是一款源代码管理工具(版本控制工具)<ul>
-<li>我们写的代码需要使用Git进行管理。</li>
+          <h2 id="缓存的定义"><a href="#缓存的定义" class="headerlink" title="缓存的定义"></a>缓存的定义</h2><ul>
+<li>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。</li>
+</ul>
+<h2 id="缓存的命中和未命中"><a href="#缓存的命中和未命中" class="headerlink" title="缓存的命中和未命中"></a>缓存的命中和未命中</h2><ul>
+<li>304 的标准解释：<ul>
+<li>Not Modified 客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</li>
 </ul>
 </li>
-</ul>
-<h3 id="分布式，集中式版本管理工具"><a href="#分布式，集中式版本管理工具" class="headerlink" title="分布式，集中式版本管理工具"></a>分布式，集中式版本管理工具</h3><ul>
-<li>git属于分布式</li>
-<li>svn集中式</li>
-</ul>
-<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><h3 id="git初始化一个仓库"><a href="#git初始化一个仓库" class="headerlink" title="git初始化一个仓库"></a>git初始化一个仓库</h3><ul>
-<li>创建一个.git隐藏目录</li>
-<li>命令:<code>git init</code>;<ul>
-<li>想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.</li>
-<li>一般是在项目的根目录执行这个命令.</li>
-</ul>
-</li>
-</ul>
-<h3 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h3><ul>
-<li>配置用户名 : <code>git config user.name &quot;testName&quot;</code></li>
-<li>配置邮箱   : <code>git config user.email &quot;test@sina.com&quot;</code></li>
-<li>查看配置信息: <code>git config --list</code></li>
-</ul>
-<h3 id="把代码提交到仓库中"><a href="#把代码提交到仓库中" class="headerlink" title="把代码提交到仓库中"></a>把代码提交到仓库中</h3><ul>
-<li><p>1.先把代码添加到暂存区(就相当于放到仓库门口)</p>
-<ul>
-<li>命令:<code>git add 文件路径</code></li>
-<li>示例:<code>git add ./reademe.md</code></li>
-<li>可以使用<code>git add .</code>这个命令，批量把当前目录下所有修改过的文件添加到暂存区。</li>
-</ul>
-</li>
-<li><p>2.把暂存区的文件提交仓库里</p>
-<ul>
-<li>命令: <code>git commit -m &quot;注释&quot;</code></li>
-<li>示例: <code>git commit -m &quot;我们添加了一个新的功能&quot;</code></li>
-<li>-m 表示指定一个字符串，作为提交的说明(相当于注释);</li>
-</ul>
-</li>
-<li><p>合并add 与commit 命令</p>
-<ul>
-<li><code>git commit -a -m &quot;这是使用合并添加与提交的操作&quot;</code>;</li>
-<li>这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)</li>
-</ul>
-</li>
-</ul>
-<h3 id="查看工作区状态"><a href="#查看工作区状态" class="headerlink" title="查看工作区状态"></a>查看工作区状态</h3><ul>
-<li>命令:<code>git status</code></li>
-</ul>
-<h3 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h3><ul>
-<li>在项目中有一些文件是不需要提交的,我们需要把它忽略掉</li>
-<li>需要在.git文件夹所在目录新建一个名为.gitignore的文件<br>然后在这个文件中写上需要被忽略的文件的路径。<br>示例: /css/a.css<pre><code>: /css/*.css
-: /a.html
-</code></pre></li>
-</ul>
-<h3 id="对比文件差异"><a href="#对比文件差异" class="headerlink" title="对比文件差异"></a>对比文件差异</h3><ul>
-<li>命令: <code>git diff</code><ul>
-<li>用来比较暂存区文件内容与工作区文件内容的区别</li>
-<li>如果暂存区没有文件，就会将工作与代码与最近一次提交对比</li>
-</ul>
-</li>
-<li>命令：<code>git diff --cached</code>  比较暂存区的文件和仓库中文件的区别</li>
-<li>对比之前某两次提交的文件的差异<ul>
-<li>命令:<code>git diff [版本号1] [版本号2] [想比较的文件路径]</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><ul>
-<li>命令:<code>git log</code>,可以查看每一次提交的日志</li>
-<li>命令:<code>git log --oneline</code> 表示使用简洁的形式输出提交日志</li>
-</ul>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
-<li>命令:<code>git reset --hard Head~1</code><ul>
-<li>这是将代码回退到上上一次提交时的状态</li>
-</ul>
-</li>
-<li>命令:<code>git reset --hard Head~2</code><ul>
-<li>回退到上上上次</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard Head~0</code></p>
-<ul>
-<li>回退到上次提交时的状态,~0可以省略</li>
-</ul>
-</li>
-<li><p>命令:<code>git reset --hard 版本号</code></p>
-<ul>
-<li>通过每次提交时生成的版本号来回退版本</li>
-</ul>
-</li>
-<li><p>通过<code>git reflog</code>命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。</p>
+<li>HTTP在验证
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/16/Git的使用/#more" rel="contents">
+            <a class="btn" href="/2017/07/18/浏览器缓存/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1042,7 +940,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1087,7 +985,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1098,7 +996,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1109,7 +1007,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1223,7 +1121,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

@@ -433,21 +433,21 @@
 <li>使用img、object、embed 标签直接引用svg</li>
 </ol>
 <ul>
-<li>此方法的缺点主要在于每个图标都需单独保存成一个 SVG 文件，使用时单独请求，增加了HTTP请求数量。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;./example.svg&quot; alt=&quot;svg图标&quot;&gt;</div><div class="line">&lt;object class=&quot;example&quot; data=&quot;./example.svg&quot; type=&quot;image/svg+xml&quot;&gt;My Example SVG&lt;/object&gt;</div><div class="line">&lt;iframe src=&quot;example.svg&quot; class=&quot;example&quot;&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure>
+<li>此方法的缺点主要在于每个图标都需单独保存成一个 SVG 文件，使用时单独请求，增加了HTTP请求数量。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;./example.svg&quot; alt=&quot;svg图标&quot;&gt;</span><br><span class="line">&lt;object class=&quot;example&quot; data=&quot;./example.svg&quot; type=&quot;image/svg+xml&quot;&gt;My Example SVG&lt;/object&gt;</span><br><span class="line">&lt;iframe src=&quot;example.svg&quot; class=&quot;example&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol>
+<ol start="2">
 <li>直接把SVG写入 HTML 中</li>
 </ol>
 <ul>
-<li>Inline SVG 作为HTML文档的一部分，不需要单独请求。临时需要修改某个图标的形状也比较方便。但是Inline SVG使用上比较繁琐，需要在页面中插入一大块SVG代码不适合手写，图标复用起来也比较麻烦。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;svg width=&quot;300&quot; height=&quot;200&quot; class=&quot;example&quot;&gt;</div><div class="line">        &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;green&quot;&gt;&lt;/rect&gt;</div><div class="line">&lt;/svg&gt;</div></pre></td></tr></table></figure>
+<li>Inline SVG 作为HTML文档的一部分，不需要单独请求。临时需要修改某个图标的形状也比较方便。但是Inline SVG使用上比较繁琐，需要在页面中插入一大块SVG代码不适合手写，图标复用起来也比较麻烦。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg width=&quot;300&quot; height=&quot;200&quot; class=&quot;example&quot;&gt;</span><br><span class="line">        &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;green&quot;&gt;&lt;/rect&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol>
+<ol start="3">
 <li>SVG Sprite</li>
 </ol>
 <ul>
-<li>这里的Sprite技术，类似于CSS中的Sprite技术。图标图形整合在一起，实际呈现的时候准确显示特定图标。其实基础的SVG Sprite也只是将原来的位图改成了SVG而已，控制SVG大小、颜色需要重新合并SVG文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.icon-bg&#123;</div><div class="line">    display: inline-block;</div><div class="line">    width: 30px;</div><div class="line">    height: 30px;</div><div class="line">    background: url(./res/svg-sprite-background.svg);</div><div class="line">    background-size:100% 100%;</div><div class="line">&#125;</div><div class="line">.icon-facebook-logo&#123;</div><div class="line">    background-position: 0 0;</div><div class="line">&#125;</div><div class="line">.icon-earth&#123;</div><div class="line">    background-position: 0 -30px;</div><div class="line">&#125;</div><div class="line">&lt;span class=&quot;icon-bg icon-facebook-logo&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;span class=&quot;icon-bg icon-earth&quot;&gt;&lt;/span&gt;</div></pre></td></tr></table></figure></li>
+<li>这里的Sprite技术，类似于CSS中的Sprite技术。图标图形整合在一起，实际呈现的时候准确显示特定图标。其实基础的SVG Sprite也只是将原来的位图改成了SVG而已，控制SVG大小、颜色需要重新合并SVG文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.icon-bg&#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    width: 30px;</span><br><span class="line">    height: 30px;</span><br><span class="line">    background: url(./res/svg-sprite-background.svg);</span><br><span class="line">    background-size:100% 100%;</span><br><span class="line">&#125;</span><br><span class="line">.icon-facebook-logo&#123;</span><br><span class="line">    background-position: 0 0;</span><br><span class="line">&#125;</span><br><span class="line">.icon-earth&#123;</span><br><span class="line">    background-position: 0 -30px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;span class=&quot;icon-bg icon-facebook-logo&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;span class=&quot;icon-bg icon-earth&quot;&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -575,7 +575,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -586,7 +586,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -597,7 +597,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -727,7 +727,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         

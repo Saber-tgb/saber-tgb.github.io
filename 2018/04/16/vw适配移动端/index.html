@@ -417,14 +417,14 @@
 </ul>
 </li>
 <li><p>在.postcssrc.js文件对新安装的PostCSS插件进行配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  &quot;plugins&quot;: &#123;</div><div class="line">    &quot;postcss-import&quot;: &#123;&#125;,</div><div class="line">    &quot;postcss-url&quot;: &#123;&#125;,</div><div class="line">    // 使用postcss的插件实现vw适配移动端</div><div class="line">    // 由于cssnext和cssnano都具有autoprefixer,事实上只需要一个，所以把默认的autoprefixer删除掉，然后把cssnano中的autoprefixer设置为false</div><div class="line">    &apos;postcss-aspect-ratio-mini&apos;: &#123;&#125;, // 用来处理元素容器宽高比</div><div class="line">    &apos;postcss-write-svg&apos;: &#123; // 用来处理移动端1px的解决方案</div><div class="line">      uft8:false</div><div class="line">    &#125;,</div><div class="line">    &apos;postcss-cssnext&apos;: &#123;&#125;, // 让项目使用CSS未来特性 并对其做兼容性处理</div><div class="line">    &apos;postcss-px-to-viewport&apos;: &#123;</div><div class="line">      viewportWidth: 750, // 视窗的宽度，对应我们设计稿的宽度，一般是750</div><div class="line">      viewportHeight: 1334, // 视窗的高度，根据750设备的宽度来指定，一般指定1334，也可以不配置</div><div class="line">      unitPrecision: 3, // 指定&apos;px&apos;转换为视窗单位值得小数位数（很多时候无法整除）</div><div class="line">      viewportUnit:&apos;vw&apos;, // 指定需要转换成的视窗单位,建议使用vw</div><div class="line">      selectorBlackList: [&apos;.ignore&apos;,&apos;.hairliness&apos;], // 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名</div><div class="line">      minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值。</div><div class="line">      mediaQuery: false // 允许在媒体查询中转换`px`</div><div class="line">    &#125;,</div><div class="line">    &apos;postcss-viewport-units&apos;: &#123;&#125;, // 给CSS的属性添加content的属性 配合viewport-units-buggyfill解决个别手机不支持vw</div><div class="line">    &apos;cssnano&apos;: &#123; // 压缩和清理CSS代码</div><div class="line">      preset: &apos;advanced&apos;,</div><div class="line">      autoprefixer: false,</div><div class="line">      &apos;postcss-zindex&apos;: false</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  &quot;plugins&quot;: &#123;</span><br><span class="line">    &quot;postcss-import&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-url&quot;: &#123;&#125;,</span><br><span class="line">    // 使用postcss的插件实现vw适配移动端</span><br><span class="line">    // 由于cssnext和cssnano都具有autoprefixer,事实上只需要一个，所以把默认的autoprefixer删除掉，然后把cssnano中的autoprefixer设置为false</span><br><span class="line">    &apos;postcss-aspect-ratio-mini&apos;: &#123;&#125;, // 用来处理元素容器宽高比</span><br><span class="line">    &apos;postcss-write-svg&apos;: &#123; // 用来处理移动端1px的解决方案</span><br><span class="line">      uft8:false</span><br><span class="line">    &#125;,</span><br><span class="line">    &apos;postcss-cssnext&apos;: &#123;&#125;, // 让项目使用CSS未来特性 并对其做兼容性处理</span><br><span class="line">    &apos;postcss-px-to-viewport&apos;: &#123;</span><br><span class="line">      viewportWidth: 750, // 视窗的宽度，对应我们设计稿的宽度，一般是750</span><br><span class="line">      viewportHeight: 1334, // 视窗的高度，根据750设备的宽度来指定，一般指定1334，也可以不配置</span><br><span class="line">      unitPrecision: 3, // 指定&apos;px&apos;转换为视窗单位值得小数位数（很多时候无法整除）</span><br><span class="line">      viewportUnit:&apos;vw&apos;, // 指定需要转换成的视窗单位,建议使用vw</span><br><span class="line">      selectorBlackList: [&apos;.ignore&apos;,&apos;.hairliness&apos;], // 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名</span><br><span class="line">      minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值。</span><br><span class="line">      mediaQuery: false // 允许在媒体查询中转换`px`</span><br><span class="line">    &#125;,</span><br><span class="line">    &apos;postcss-viewport-units&apos;: &#123;&#125;, // 给CSS的属性添加content的属性 配合viewport-units-buggyfill解决个别手机不支持vw</span><br><span class="line">    &apos;cssnano&apos;: &#123; // 压缩和清理CSS代码</span><br><span class="line">      preset: &apos;advanced&apos;,</span><br><span class="line">      autoprefixer: false,</span><br><span class="line">      &apos;postcss-zindex&apos;: false</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>vw兼容方案: 兼容个别手机</p>
 <ul>
 <li>主要使用viewport-units-buggyfill.js和viewport-units-buggyfill.hacks.js，只需要在你的HTML文件中引入这两个文件。比如在Vue项目中的index.html引入它们</li>
 <li><code>&lt;script src=&quot;//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js&quot;&gt;&lt;/script&gt;</code></li>
 <li><p>在HTML文件中调用<code>viewport-units-buggyfill</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;!--使用viewport-units-buggyfill解决个别手机不支持vw--&gt;</div><div class="line">&lt;script&gt;</div><div class="line">  window.onload = function () &#123;</div><div class="line">    window.viewportUnitsBuggyfill.init(&#123;</div><div class="line">      hacks: window.viewportUnitsBuggyfillHacks</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--使用viewport-units-buggyfill解决个别手机不支持vw--&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  window.onload = function () &#123;</span><br><span class="line">    window.viewportUnitsBuggyfill.init(&#123;</span><br><span class="line">      hacks: window.viewportUnitsBuggyfillHacks</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>前面配置的postcss-viewport-units插件。这个插件将让你无需关注content的内容，插件会自动帮你处理。</p>
 </li>
@@ -557,7 +557,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -568,7 +568,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -579,7 +579,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">76</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -709,7 +709,7 @@
 </span>
 </div>
 <div class="theme-info">
-  <span class="post-count">博客全站共46.6k字</span>
+  <span class="post-count">博客全站共59.7k字</span>
 </div>
 
         
